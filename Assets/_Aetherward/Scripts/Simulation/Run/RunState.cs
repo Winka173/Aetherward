@@ -137,6 +137,9 @@ namespace Aetherward.Sim.Run
         /// <summary>Battlefield of this run (null = default biome; unknown ids degrade to default).</summary>
         public string BiomeId;
         public GameMode Mode;
+        /// <summary>Per-run offer pools (empty = everything unlocked). Drawn once at run start, saved.</summary>
+        public readonly List<string> HeroPool = new List<string>();
+        public readonly List<string> RelicPool = new List<string>();
         public string DailyKey;                 // yyyymmdd for Daily runs
         public readonly List<string> ModeModifiers = new List<string>(); // applied to every wave (Daily)
         public string DefeatSource;

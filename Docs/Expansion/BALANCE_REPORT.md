@@ -75,3 +75,18 @@ Toàn bộ 12 lối chơi (30 seed): 26–32/360 (~8%); `--launch-pool`: 117/360
 - **Bisect đã đo**: không có hero/relic P3 nào "hỏng" riêng lẻ; sát thương từng hero mới nằm trong dải roster (đã buff nhẹ Mirel, Oriane, Isolde, Veyra). Sụt giảm là **loãng pool nhân lên** (hero và relic mỗi loại ~½ tỉ lệ thắng). Sự kiện Elemental Shrine không phải nguyên nhân.
 - Thử đảo trọng số chiêu mộ sang "cùng nguyên tố" — không đổi (10/60), đã hoàn tác.
 - Ý nghĩa: người chơi mới chỉ có hero/relic khởi đầu (mở dần) ⇒ gần cột launch; với toàn bộ nội dung, AutoPilot không xây được đội nhất quán. **Chưa giải quyết** — mục tiêu số 1 của Phase 5 (K-04, mức Cao).
+
+## Phase 5 — pass cân bằng
+Thử nghiệm đã đo (30 seed × 12 lối chơi):
+| Thay đổi | Toàn bộ nội dung | `--launch-pool` |
+|---|---|---|
+| Trước pass | 26–32/360 | 108/360 |
+| Run pool (18 hero / 45 relic mỗi lượt, có trọng số) | 32 | — |
+| Thử: +20% Công/HP cho 24 hero mở rộng (đã hoàn tác) | 39 | — |
+| `enemyHpGrowthQuad` 0.015 → 0.013 (giữ) | 41 | 122 (6 lối chơi launch: 93/180 ≈ 52%) |
+
+Kết luận đã đo:
+- Lối chơi launch hồi phục về ~52% (Phase 1: ~60%) sau khi kẻ địch/boss mới khiến khó hơn.
+- Toàn bộ nội dung với AutoPilot vẫn ~11%. Bisect cho thấy không có món nội dung hỏng; tăng sức mạnh hero mở rộng chỉ giúp ít; giới hạn đề nghị (run pool, bảo đảm liên quan) không giúp ⇒ giới hạn chủ yếu là **bot theo kế hoạch cố định** trong pool lớn. Người chơi thật thích nghi được, nhưng chưa có playtest để xác nhận (K-04).
+- Lối chơi khởi đầu bằng cặp hero mở rộng thiên khống chế/hỗ trợ (verdant_plague, thorn_doctor, arcane_void) chết rải rác ở đợt 9–19 như các đội khác nhưng thường hơn: cặp khởi đầu thiếu sát thương sớm.
+- Run pool được giữ vì lý do thiết kế (mỗi lượt khác nhau, đề nghị mạch lạc), không phải vì cải thiện số liệu.

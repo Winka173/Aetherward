@@ -149,5 +149,22 @@ namespace Aetherward.Tests
             float after = new Battle(both.BuildBattleSetup()).Heroes.Find(h => h.Def.Id == "seren").MaxHp;
             Assert.AreEqual(before * 1.1f, after, before * 0.01f);
         }
+
+        [Test]
+        public void RunPoolsAreSeededSavedAndKeepFusionsAndBondsReachable()
+        {
+            RunController a = RunController.NewRun(Db, 21, new[] { "seren", "terra" }, 0, RunUnlocks.Everything(Db));
+            RunController b = RunController.NewRun(Db, 21, new[] { "seren", "terra" }, 0, RunUnlocks.Everything(Db));
+            CollectionAssert.AreEqual(a.State.HeroPool, b.State.HeroPool);
+            Assert.LessOrEqual(a.State.HeroPool.Count, RunController.RunHeroPoolSize + 2 + Db.Bonds.Count);
+            Assert.Contains("nyxara", a.State.HeroPool, "bond partners of the starters are always in the pool");
+            foreach (FusionDef f in Db.Fusions)
+                Assert.AreEqual(a.State.RelicPool.Contains(f.A), a.State.RelicPool.Contains(f.B), "fusion halves come together: " + f.Result);
+            var saves = new SaveService(new MemoryStorage());
+            saves.SaveRun(a.State);
+            CollectionAssert.AreEqual(a.State.RelicPool, saves.LoadRun(Db).RelicPool);
+            RunController small = RunController.NewRun(Db, 21, new[] { "ignis", "terra" }, 0, MetaProfile.CreateDefault(Db).ToRunUnlocks());
+            Assert.IsEmpty(small.State.HeroPool, "small unlock sets are not trimmed");
+        }
     }
 }

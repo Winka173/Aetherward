@@ -247,7 +247,8 @@ namespace Aetherward.Sim.Meta
                 .Set("sourceCounts", IntMap(s.SourceActivations)).Set("sourceDamage", FloatMap(s.SourceDamage))
                 .Set("elements", elements).Set("seen", StringArray(s.SeenEnemies)).Set("drafts", s.DraftsTaken)
                 .Set("bosses", BossMap(s.BossChoices)).Set("blocked", s.BlockedNode).Set("biome", s.BiomeId)
-                .Set("mode", s.Mode.ToString()).Set("daily", s.DailyKey).Set("modeMods", StringArray(s.ModeModifiers));
+                .Set("mode", s.Mode.ToString()).Set("daily", s.DailyKey).Set("modeMods", StringArray(s.ModeModifiers))
+                .Set("heroPool", StringArray(s.HeroPool)).Set("relicPool", StringArray(s.RelicPool));
             WriteEnvelope("run", d);
         }
 
@@ -347,6 +348,8 @@ namespace Aetherward.Sim.Meta
                 s.Mode = Enum.TryParse(d.Str("mode") ?? "Classic", out GameMode mode) ? mode : GameMode.Classic;
                 s.DailyKey = d.Str("daily");
                 s.ModeModifiers.AddRange(d.StringList("modeMods"));
+                foreach (string h in d.StringList("heroPool")) if (db.Heroes.ContainsKey(h)) s.HeroPool.Add(h);
+                foreach (string r in d.StringList("relicPool")) if (db.Relics.ContainsKey(r)) s.RelicPool.Add(r);
                 foreach (string k in d["bosses"].Keys)
                 {
                     string boss = d["bosses"].Str(k);

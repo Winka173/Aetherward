@@ -12543,6 +12543,54 @@
   "ppu": 80,
   "sprite": true
  },
+ "Assets/_Aetherward/Resources/Art/World/bg_shattered_aether.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 4096,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 80,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/World/bg_stormspire_citadel.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 4096,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 80,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/World/bg_sunken_archive.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 4096,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 80,
+  "sprite": true
+ },
  "Assets/_Aetherward/Resources/Art/World/crystal_cracked.png": {
   "border": [
    0,

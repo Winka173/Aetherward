@@ -21,7 +21,7 @@
   "survivorHealPct": 0.25,
   "shopWaves": [4, 9, 14, 19],
   "enemyHpGrowth": 0.19,
-  "enemyHpGrowthQuad": 0.015,
+  "enemyHpGrowthQuad": 0.013,
   "enemyDamageGrowth": 0.07,
   "reactionLevelGrowth": 0.12,
   "maxActiveEnemies": 160

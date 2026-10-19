@@ -67,7 +67,7 @@ namespace Aetherward.Balance
             }
 
             Strategy[] strategies = strategyName == "all" ? Strategy.Archetypes : new[] { Strategy.Find(strategyName) };
-            var runCsv = new StringBuilder("strategy,seed,victory,wave,active_seconds,crystal_hp_pct,heroes,hero_downs,reactions,peak_enemies,peak_rps,gold_earned,gold_spent,relics,top_reaction,defeat_source,stuck_recoveries,ms\n");
+            var runCsv = new StringBuilder("strategy,seed,victory,wave,active_seconds,crystal_hp_pct,heroes,hero_downs,reactions,peak_enemies,peak_rps,gold_earned,gold_spent,relics,top_reaction,defeat_source,stuck_recoveries,ms,team\n");
             var waveCsv = new StringBuilder("strategy,seed,wave,duration,crystal_damage,crystal_hp_after,kills,leaks,reactions,hero_downs,gold,peak_enemies,peak_rps\n");
             var summary = new List<(string name, int wins, int n, double avgWave, double avgMinutes, double avgReactions, int peakEnemies, int peakRps, double avgMs, Dictionary<int, int> deaths)>();
 
@@ -101,7 +101,8 @@ namespace Aetherward.Balance
                     peakRps = Math.Max(peakRps, pr);
                     runCsv.AppendLine(string.Join(",", st.Name, seed, res.Victory ? 1 : 0, wave, F(s.ActiveSeconds), F(res.CrystalHpFraction * 100),
                         s.Heroes.Count, s.Heroes.Sum(h => h.TimesDowned), res.TotalReactions, pe, pr, F(s.GoldEarnedTotal), F(s.GoldSpentTotal),
-                        "\"" + string.Join(" ", s.Relics) + "\"", res.StrongestReaction ?? "", res.DefeatSource ?? "", 0, F(sw.Elapsed.TotalMilliseconds)));
+                        "\"" + string.Join(" ", s.Relics) + "\"", res.StrongestReaction ?? "", res.DefeatSource ?? "", 0, F(sw.Elapsed.TotalMilliseconds),
+                        "\"" + string.Join(" ", s.Heroes.Select(h => h.DefId + ":" + h.Level)) + "\""));
                     foreach (WaveRecord w in s.WaveLog)
                         waveCsv.AppendLine(string.Join(",", st.Name, seed, w.Wave, F(w.Duration), F(w.CrystalDamage), F(w.CrystalHpAfter), w.Kills, w.Leaks,
                             w.Reactions, w.HeroDowns, w.GoldEarned, w.PeakEnemies, w.PeakReactionsPerSecond));

@@ -60,6 +60,72 @@ namespace Aetherward.Sim.Run
         public float RarityShift(Rarity r) =>
             r == Rarity.Epic || r == Rarity.Legendary ? Math.Max(0.1f, 1f - Content.Difficulty.Value("rarity_shift", State.Ascension)) : 1f;
 
+        public const int RunHeroPoolSize = 18;
+        public const int RunRelicPoolSize = 45;
+
+        private bool InHeroPool(string id) => State.HeroPool.Count == 0 || State.HeroPool.Contains(id);
+        private bool InRelicPool(string id) => State.RelicPool.Count == 0 || State.RelicPool.Contains(id);
+
+        /// <summary>
+        /// Run pools keep a large catalog coherent: each run offers a seeded subset of heroes and relics,
+        /// weighted toward the starters' elements and their signature partners (bond partners always in).
+        /// Small unlock sets (new players) are left whole. Different seeds explore different subsets.
+        /// </summary>
+        internal void DrawRunPools()
+        {
+            State.HeroPool.Clear();
+            State.RelicPool.Clear();
+            Pcg32 rng = Pcg32.Derive(State.Seed, "runpool");
+            var heroes = new List<string>();
+            foreach (HeroDef h in Content.HeroList) if (Unlocks.Heroes.Contains(h.Id) && !State.HasHero(h.Id)) heroes.Add(h.Id);
+            if (heroes.Count > RunHeroPoolSize)
+            {
+                var must = new List<string>();
+                foreach (string id in heroes) if (BondFor(id) != null) must.Add(id);
+                State.HeroPool.AddRange(must);
+                var rest = heroes.FindAll(id => !must.Contains(id));
+                WeightedFill(rng, rest, State.HeroPool, RunHeroPoolSize, id =>
+                {
+                    HeroDef d = Content.Heroes[id];
+                    float w = 1f + 1.2f * Math.Min(2, SignatureCount(d.Element));
+                    foreach (HeroRunState o in State.Heroes) if (Content.Heroes[o.DefId].Element == d.Element) w += 0.8f;
+                    return w;
+                });
+                foreach (HeroRunState o in State.Heroes) State.HeroPool.Add(o.DefId);
+            }
+            var relics = new List<string>();
+            foreach (RelicDef r in Content.RelicList) if (!r.Fusion && Unlocks.Relics.Contains(r.Id)) relics.Add(r.Id);
+            if (relics.Count > RunRelicPoolSize)
+            {
+                WeightedFill(rng, relics, State.RelicPool, RunRelicPoolSize, id => ElementRelevance(Content.Relics[id]));
+                // Keep fusion recipes completable: a pooled half pulls its partner in.
+                foreach (FusionDef f in Content.Fusions)
+                {
+                    bool a = State.RelicPool.Contains(f.A), b = State.RelicPool.Contains(f.B);
+                    if (a && !b && Unlocks.Relics.Contains(f.B)) State.RelicPool.Add(f.B);
+                    if (b && !a && Unlocks.Relics.Contains(f.A)) State.RelicPool.Add(f.A);
+                }
+            }
+            State.HeroPool.Sort(string.CompareOrdinal);
+            State.RelicPool.Sort(string.CompareOrdinal);
+        }
+
+        private static void WeightedFill(Pcg32 rng, List<string> candidates, List<string> into, int size, Func<string, float> weight)
+        {
+            var pool = new List<string>(candidates);
+            while (into.Count < size && pool.Count > 0)
+            {
+                float total = 0f;
+                var w = new float[pool.Count];
+                for (int i = 0; i < pool.Count; i++) { w[i] = Math.Max(0.05f, weight(pool[i])); total += w[i]; }
+                float roll = rng.NextFloat() * total;
+                int pick = pool.Count - 1;
+                for (int i = 0; i < pool.Count; i++) { roll -= w[i]; if (roll <= 0f) { pick = i; break; } }
+                if (!into.Contains(pool[pick])) into.Add(pool[pick]);
+                pool.RemoveAt(pick);
+            }
+        }
+
         public int TotalWaves => State.Mode == GameMode.Endless ? 0 : State.Mode == GameMode.BossRush ? BossRushBosses().Count : Content.Waves.Count;
 
         public WaveDef CurrentWave => WaveAt(State.Wave);
@@ -187,6 +253,7 @@ namespace Aetherward.Sim.Run
                 h.Node = content.Heroes[starters[i]].Melee ? innerNodes[inner++ % innerNodes.Length] : outerNodes[outer++ % outerNodes.Length];
             }
             rc.RollBlockedNode();
+            rc.DrawRunPools();
             s.Trace("new run seed=" + Pcg32.FormatSeed(seed) + " starters=" + string.Join(",", starters) + " asc=" + ascension);
             return rc;
         }
@@ -754,7 +821,7 @@ namespace Aetherward.Sim.Run
         {
             var pool = new List<string>();
             foreach (HeroDef h in Content.HeroList)
-                if (Unlocks.Heroes.Contains(h.Id) && !State.HasHero(h.Id)) pool.Add(h.Id);
+                if (Unlocks.Heroes.Contains(h.Id) && !State.HasHero(h.Id) && InHeroPool(h.Id)) pool.Add(h.Id);
             // Prefer elements/roles the roster lacks so recruitment broadens options.
             var result = new List<string>();
             while (result.Count < count && pool.Count > 0)
@@ -832,7 +899,7 @@ namespace Aetherward.Sim.Run
         {
             var pool = new List<RelicDef>();
             foreach (RelicDef r in Content.RelicList)
-                if (!r.Fusion && Unlocks.Relics.Contains(r.Id) && !State.Relics.Contains(r.Id) && !FusedAway(r.Id)) pool.Add(r);
+                if (!r.Fusion && Unlocks.Relics.Contains(r.Id) && !State.Relics.Contains(r.Id) && !FusedAway(r.Id) && InRelicPool(r.Id)) pool.Add(r);
             var result = new List<string>();
             while (result.Count < count && pool.Count > 0)
             {

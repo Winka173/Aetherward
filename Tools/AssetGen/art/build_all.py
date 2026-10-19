@@ -84,7 +84,8 @@ def main():
 
     world_paths = [save(world.background(), "World/arena_background", 80, (0.5, 0.5), max_size=4096, kind="world.py")]
     # biome battlefields: inline arenas in biomes.json get their own background at their "background" path
-    biome_themes = {"molten_crater": "molten", "frostfall_bastion": "frost"}
+    biome_themes = {"molten_crater": "molten", "frostfall_bastion": "frost", "shattered_aether": "aether",
+                    "stormspire_citadel": "storm", "sunken_archive": "archive"}
     for biome in world.load_biomes():
         if not isinstance(biome.get("arena"), dict) or biome["id"] not in biome_themes:
             continue
