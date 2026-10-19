@@ -161,6 +161,15 @@ namespace Aetherward.Sim.Meta
                 .Set("modeRecords", IntMap(m.ModeRecords))
                 .Set("totalRuns", m.TotalRuns).Set("victories", m.Victories).Set("bestWave", m.BestWave)
                 .Set("totalReactions", m.TotalReactions).Set("ascension", m.MaxAscensionUnlocked).Set("tutorial", m.TutorialDone);
+            JsonNode fb = JsonNode.NewArray();
+            foreach (RunFeedback f in m.Feedback)
+            {
+                JsonNode tags = JsonNode.NewArray();
+                foreach (string t in f.Tags) tags.Add(JsonNode.From(t));
+                fb.Add(JsonNode.NewObject().Set("seed", f.Seed).Set("wave", f.Wave)
+                    .Set("victory", f.Victory).Set("rating", f.Rating).Set("tags", tags));
+            }
+            d.Set("feedback", fb);
             JsonNode hist = JsonNode.NewArray();
             foreach (RunHistoryEntry h in m.History)
             {
@@ -189,6 +198,13 @@ namespace Aetherward.Sim.Meta
             ReadIntMap(d["heroRuns"], m.HeroRuns);
             ReadIntMap(d["heroWins"], m.HeroWins);
             ReadIntMap(d["modeRecords"], m.ModeRecords);
+            foreach (JsonNode f in d["feedback"].Items)
+            {
+                string fs = f.Str("seed");
+                if (string.IsNullOrEmpty(fs)) continue;
+                RunFeedback rf = m.RecordFeedback(fs, f.Int("wave"), f.Bool("victory"), f.Int("rating"));
+                foreach (string t in f.StringList("tags")) if (!rf.Tags.Contains(t)) m.RecordFeedback(fs, 0, false, 0, t);
+            }
             m.TotalRuns = d.Int("totalRuns");
             m.Victories = d.Int("victories");
             m.BestWave = d.Int("bestWave");

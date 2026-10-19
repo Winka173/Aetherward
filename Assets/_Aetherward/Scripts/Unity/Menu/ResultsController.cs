@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using Aetherward.Sim.Content;
 using Aetherward.Sim.Core;
+using Aetherward.Sim.Meta;
 using Aetherward.Sim.Run;
 using UnityEngine;
 
@@ -54,6 +55,7 @@ namespace Aetherward.Game
             DrawRight(80 + colW * 2, 240, colW, 560);
 
             float by = Ui.H - 140;
+            DrawFeedback(by - 84);
             if (Ui.Button(Ui.W / 2 - 520, by, 500, 104, l.Get("results.replay"), Tone.Primary, true, 30))
             {
                 List<string> starters = new List<string>();
@@ -167,6 +169,34 @@ namespace Aetherward.Game
                     ix += 80;
                 }
             }
+        }
+
+        /// <summary>Optional local feedback (Phase 13): 1–5 rating + reason chips, stored only in the meta save.</summary>
+        private void DrawFeedback(float y)
+        {
+            var l = App.Loc;
+            RunFeedback f = App.Meta.Feedback.Find(x => x.Seed == _r.Seed);
+            float x = Ui.W / 2 - 640;
+            Ui.Label(x, y, 220, 64, l.Get("feedback.prompt"), 20, Ui.Muted, TextAnchor.MiddleLeft);
+            x += 230;
+            for (int i = 1; i <= 5; i++, x += 66)
+            {
+                bool on = f != null && f.Rating >= i;
+                if (Ui.Button(x, y + 4, 60, 56, "★", on ? Tone.Secondary : Tone.Ghost, true, 26)) Record(i, null);
+            }
+            x += 20;
+            foreach (string tag in RunFeedback.TagIds)
+            {
+                bool on = f != null && f.Tags.Contains(tag);
+                if (Ui.Button(x, y + 4, 150, 56, l.Get("feedback." + tag), on ? Tone.Secondary : Tone.Ghost, true, 16)) Record(0, tag);
+                x += 158;
+            }
+        }
+
+        private void Record(int rating, string tag)
+        {
+            App.Meta.RecordFeedback(_r.Seed, _r.WaveReached, _r.Victory, rating, tag);
+            App.SaveMeta();
         }
     }
 }

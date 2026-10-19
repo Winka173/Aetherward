@@ -35,9 +35,41 @@ namespace Aetherward.Sim.Meta
     /// Persistent profile. Unlocks variety only (heroes, relics, ascension, codex, cosmetics);
     /// never permanent combat stats.
     /// </summary>
+    /// <summary>Optional, local-only post-run feedback (never sent anywhere; no personal data).</summary>
+    public sealed class RunFeedback
+    {
+        public static readonly string[] TagIds = { "fun", "confusing", "unfair", "too_long", "want_again" };
+        public string Seed;                                  // formatted run seed
+        public int Wave;
+        public bool Victory;
+        public int Rating;                                   // 1..5
+        public readonly List<string> Tags = new List<string>();
+    }
+
     public sealed class MetaProfile
     {
         public const int MaxHistory = 30;
+        public const int MaxFeedback = 50;
+
+        public readonly List<RunFeedback> Feedback = new List<RunFeedback>();
+
+        /// <summary>Adds or updates the feedback for one run (keyed by seed); keeps the newest <see cref="MaxFeedback"/>.</summary>
+        public RunFeedback RecordFeedback(string seed, int wave, bool victory, int rating, string toggleTag = null)
+        {
+            RunFeedback f = Feedback.Find(x => x.Seed == seed);
+            if (f == null)
+            {
+                f = new RunFeedback { Seed = seed, Wave = wave, Victory = victory };
+                Feedback.Add(f);
+                if (Feedback.Count > MaxFeedback) Feedback.RemoveAt(0);
+            }
+            if (rating >= 1 && rating <= 5) f.Rating = rating;
+            if (toggleTag != null && Array.IndexOf(RunFeedback.TagIds, toggleTag) >= 0)
+            {
+                if (!f.Tags.Remove(toggleTag)) f.Tags.Add(toggleTag);
+            }
+            return f;
+        }
 
         public readonly HashSet<string> UnlockedHeroes = new HashSet<string>();
         public readonly HashSet<string> UnlockedRelics = new HashSet<string>();

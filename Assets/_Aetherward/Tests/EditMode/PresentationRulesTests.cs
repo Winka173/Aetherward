@@ -46,5 +46,26 @@ namespace Aetherward.Tests
             Assert.AreEqual(1f, new SettingsModel().FlashIntensity);
             Assert.IsTrue(new SettingsModel().PauseOnFocusLoss);
         }
+
+        [Test]
+        public void LocalFeedbackUpsertsByRunAndSurvivesSave()
+        {
+            var meta = new MetaProfile();
+            meta.RecordFeedback("42", 9, false, 4);
+            meta.RecordFeedback("42", 9, false, 0, "confusing");
+            meta.RecordFeedback("42", 9, false, 0, "bogus");
+            Assert.AreEqual(1, meta.Feedback.Count);
+            Assert.AreEqual(4, meta.Feedback[0].Rating);
+            CollectionAssert.AreEqual(new[] { "confusing" }, meta.Feedback[0].Tags);
+            meta.RecordFeedback("42", 9, false, 0, "confusing");
+            Assert.IsEmpty(meta.Feedback[0].Tags, "tags toggle");
+            meta.RecordFeedback("42", 9, false, 0, "fun");
+            var saves = new SaveService(new MemoryStorage());
+            saves.SaveMeta(meta);
+            MetaProfile loaded = saves.LoadMeta(TestContent.Db);
+            Assert.AreEqual(4, loaded.Feedback[0].Rating);
+            Assert.AreEqual("42", loaded.Feedback[0].Seed);
+            CollectionAssert.AreEqual(new[] { "fun" }, loaded.Feedback[0].Tags);
+        }
     }
 }
