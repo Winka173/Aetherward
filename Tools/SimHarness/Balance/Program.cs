@@ -43,6 +43,11 @@ namespace Aetherward.Balance
                 if (args[i] == "--snapshot") snapWave = int.Parse(args[i + 1]);
                 if (args[i] == "--time") snapTime = float.Parse(args[i + 1], CultureInfo.InvariantCulture);
             }
+            if (Array.IndexOf(args, "--catalog") >= 0)
+            {
+                Catalog.Write(db, Path.Combine(root, "Docs", "CONTENT_CATALOG.md"));
+                return 0;
+            }
             if (Array.IndexOf(args, "--perf") >= 0)
             {
                 Perf.Run(db, Path.Combine(outDir, "PERF.md"));

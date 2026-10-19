@@ -14,3 +14,9 @@
 | D-10 | RNG gameplay: PCG32 riêng, tách stream (combat/draft/shop/wave). Float không fixed-point → tái lập tốt nhất trên cùng nền tảng. | Đúng yêu cầu RNG độc lập `UnityEngine.Random`. |
 | D-11 | Hồi phục sau wave: hero còn sống hồi 25% HP tối đa; hero gục phải hồi sinh bằng Gold (giá tăng theo wave) ở màn Prepare. | Mặc định đề xuất trong spec, dự đoán được. |
 | D-12 | Commit thẳng lên `main` theo yêu cầu chủ dự án ("commit code on main on every major function"). | Yêu cầu trực tiếp. |
+| D-13 | Manifest giữ nguyên bộ module builtin; **không** thêm Test Framework/URP/Input System vào `Packages/manifest.json`. | Không đoán version package khi không có Editor để kiểm chứng (spec: avoid guessing package versions). Test asmdef dùng `UNITY_INCLUDE_TESTS` nên project vẫn compile khi chưa cài Test Framework. |
+| D-14 | Legacy Input Manager (`Input.mousePosition`, touch giả lập chuột) thay vì Input System package. | Có sẵn, không cần package; kéo-thả + chạm-chọn đều hoạt động với chuột và cảm ứng. Có thể chuyển sang Input System sau. |
+| D-15 | Scene chỉ chứa một marker; `GameRoot` khởi tạo bằng `RuntimeInitializeOnLoadMethod` và gắn controller theo tên scene. | Scene YAML viết tay tối giản, ít rủi ro; game chạy được cả khi scene bị thiếu (fallback đổi controller tại chỗ). Menu "Rebuild Scenes" tạo lại bằng API Editor. |
+| D-16 | Lưu lượt chơi chỉ ở ranh giới đợt; thoát giữa đợt sẽ chơi lại đợt đó. | Đúng spec (không khôi phục projectile giữa trận), tránh lưu trạng thái mô phỏng khổng lồ. |
+| D-17 | Ảnh "preview" của chiến trường là composite offline từ snapshot mô phỏng + sprite thật, luôn ghi nhãn. | Không có Unity để chụp; vẫn cần kiểm tra độ dễ đọc ở tỉ lệ camera thật. Không trình bày như ảnh chụp game. |
+| D-18 | Glass Cannon giữ vai trò lối chơi rủi ro cao (5/30 trong mô phỏng). | Spec mô tả "fragile crystal defense"; cần dữ liệu người chơi thật trước khi nâng tỉ lệ thắng. |
