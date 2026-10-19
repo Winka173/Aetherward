@@ -1,0 +1,92 @@
+{
+  // Two branches per hero. Each branch changes mechanics (skill kind/params, passive, role or
+  // targeting) - never a pure numeric upgrade. "effects" are stat ops applied to that hero only.
+  "evolutions": [
+    { "id": "ignis_meteor_archmage", "hero": "ignis",
+      "skill": { "kind": "meteor", "cooldown": 10.0, "mult": 4.2, "gauge": 2.0, "radius": 2.3, "delay": 0.9, "stun": 0.5, "rangeBonus": 2.0 },
+      "effects": [ { "op": "stat", "stat": "range", "value": 0.6 } ] },
+    { "id": "ignis_ember_weaver", "hero": "ignis",
+      "skill": { "kind": "fireball", "cooldown": 4.5, "mult": 1.2, "gauge": 2.0, "radius": 1.5, "burnSpread": 2.4 },
+      "passive": { "kind": "inferno", "bonus": 0.35 },
+      "effects": [ { "op": "stat", "stat": "reaction_bonus", "value": 0.45 }, { "op": "stat", "stat": "status_power", "value": 0.5 } ] },
+
+    { "id": "cinder_inferno_duelist", "hero": "cinder", "role": "assassin", "targeting": "elite",
+      "skill": { "kind": "duel_strike", "cooldown": 4.5, "mult": 1.3, "gauge": 1.0, "hits": 3, "haste": 0.45, "hasteDuration": 3.0 },
+      "effects": [ { "op": "stat", "stat": "attack_interval", "value": 0.35, "pct": true }, { "op": "stat", "stat": "crit_chance", "value": 0.2 }, { "op": "stat", "stat": "threat", "value": -0.8 } ] },
+    { "id": "cinder_ash_guardian", "hero": "cinder", "role": "guardian",
+      "skill": { "kind": "cleave", "cooldown": 6.0, "mult": 1.5, "gauge": 1.5, "radius": 1.9, "arc": 220, "taunt": 2.5, "tauntRadius": 2.4, "groundDuration": 3.0, "groundPower": 0.5, "shieldPct": 0.12 },
+      "effects": [ { "op": "stat", "stat": "max_hp", "value": 0.5, "pct": true }, { "op": "stat", "stat": "threat", "value": 1.4 }, { "op": "stat", "stat": "defense", "value": 14 } ] },
+
+    { "id": "marina_tide_saint", "hero": "marina",
+      "skill": { "kind": "heal_rain", "cooldown": 6.5, "mult": 1.0, "gauge": 0.5, "radius": 2.8, "duration": 3.5, "heal": 0.85, "reviveHp": 0.35, "healBelow": 0.95 },
+      "effects": [ { "op": "stat", "stat": "heal_power", "value": 0.25, "pct": true } ] },
+    { "id": "marina_torrent_caller", "hero": "marina", "role": "mage", "targeting": "cluster",
+      "skill": { "kind": "heal_rain", "cooldown": 5.5, "mult": 1.6, "gauge": 1.0, "radius": 2.4, "duration": 3.0, "heal": 0.3, "offensive": 1, "healBelow": 0.6 },
+      "effects": [ { "op": "stat", "stat": "attack", "value": 0.25, "pct": true }, { "op": "stat", "stat": "elemental_mastery", "value": 40 } ] },
+
+    { "id": "tidal_floodbreaker", "hero": "tidal",
+      "skill": { "kind": "push_wave", "cooldown": 6.0, "mult": 2.0, "gauge": 2.0, "length": 5.4, "width": 1.3, "knock": 2.6, "wetBonus": 0.6 },
+      "effects": [ { "op": "stat", "stat": "attack", "value": 0.15, "pct": true } ] },
+    { "id": "tidal_healing_spring", "hero": "tidal", "role": "healer",
+      "skill": { "kind": "push_wave", "cooldown": 6.0, "mult": 1.0, "gauge": 1.5, "length": 4.2, "width": 1.0, "knock": 1.2, "healAllies": 1.1, "crystalShield": 0.025 },
+      "effects": [ { "op": "stat", "stat": "heal_power", "value": 0.2, "pct": true } ] },
+
+    { "id": "volt_tempest_lord", "hero": "volt",
+      "skill": { "kind": "chain_lightning", "cooldown": 6.5, "mult": 1.6, "gauge": 1.0, "jumps": 7, "falloff": 0.9, "jumpRange": 3.2, "stormAtEnd": 3.0 },
+      "effects": [] },
+    { "id": "volt_circuit_conductor", "hero": "volt",
+      "skill": { "kind": "chain_lightning", "cooldown": 4.0, "mult": 1.1, "gauge": 1.5, "jumps": 5, "falloff": 0.95, "jumpRange": 3.0, "preferWet": 1, "refundOnReaction": 0.4 },
+      "effects": [ { "op": "stat", "stat": "elemental_mastery", "value": 80 }, { "op": "stat", "stat": "reaction_bonus", "value": 0.25 } ] },
+
+    { "id": "raiden_stormblade", "hero": "raiden",
+      "skill": { "kind": "dash_strike", "cooldown": 4.0, "mult": 2.4, "gauge": 1.0, "trailDuration": 3.0, "trailPower": 0.55 },
+      "effects": [ { "op": "stat", "stat": "leash_radius", "value": 0.8 } ] },
+    { "id": "raiden_static_executioner", "hero": "raiden", "targeting": "execute",
+      "skill": { "kind": "dash_strike", "cooldown": 4.5, "mult": 2.6, "gauge": 1.0, "execute": 1, "executeThreshold": 0.2, "bossBonus": 0.6 },
+      "effects": [ { "op": "stat", "stat": "crit_multiplier", "value": 0.4 } ] },
+
+    { "id": "freya_blizzard_witch", "hero": "freya",
+      "skill": { "kind": "frost_nova", "cooldown": 7.5, "mult": 1.2, "gauge": 1.5, "radius": 2.3, "slow": 0.45, "slowDuration": 3.0, "zoneDuration": 4.0, "zonePower": 0.55 },
+      "effects": [] },
+    { "id": "freya_crystalbinder", "hero": "freya", "role": "support",
+      "skill": { "kind": "frost_nova", "cooldown": 6.0, "mult": 1.3, "gauge": 2.0, "radius": 1.9, "slow": 0.35, "slowDuration": 2.0, "crystalShield": 0.035, "frozenBonus": 0.5 },
+      "effects": [ { "op": "stat", "stat": "status_power", "value": 0.3 } ] },
+
+    { "id": "glacius_permafrost_sentinel", "hero": "glacius",
+      "skill": { "kind": "ice_shield", "cooldown": 8.0, "mult": 1.0, "gauge": 1.0, "shieldPct": 0.3, "retaliate": 0.7, "duration": 5.0, "taunt": 3.0, "tauntRadius": 2.6, "allyShieldPct": 0.15, "allyRadius": 3.2 },
+      "effects": [ { "op": "stat", "stat": "max_hp", "value": 0.2, "pct": true } ] },
+    { "id": "glacius_shatter_knight", "hero": "glacius", "role": "bruiser",
+      "skill": { "kind": "ice_shield", "cooldown": 6.0, "mult": 1.0, "gauge": 1.0, "shieldPct": 0.18, "retaliate": 0.5, "duration": 4.0, "taunt": 2.0, "tauntRadius": 2.0, "shatterBurst": 2.4 },
+      "passive": { "kind": "shatter", "bonus": 1.0 },
+      "effects": [ { "op": "stat", "stat": "attack", "value": 0.45, "pct": true }, { "op": "stat", "stat": "attack_interval", "value": 0.2, "pct": true } ] },
+
+    { "id": "zephyr_cyclone_sage", "hero": "zephyr",
+      "skill": { "kind": "vortex", "cooldown": 7.0, "mult": 0.6, "gauge": 1.0, "radius": 2.8, "duration": 3.0 },
+      "effects": [ { "op": "stat", "stat": "elemental_mastery", "value": 60 } ] },
+    { "id": "zephyr_gale_tactician", "hero": "zephyr",
+      "skill": { "kind": "vortex", "cooldown": 6.0, "mult": 0.3, "gauge": 1.0, "radius": 1.8, "duration": 1.2, "teamHaste": 0.3, "hasteDuration": 4.0 },
+      "effects": [] },
+
+    { "id": "sylph_tempest_archer", "hero": "sylph",
+      "skill": { "kind": "pierce_arrow", "cooldown": 6.0, "mult": 1.5, "gauge": 1.0, "speed": 16, "width": 0.45, "arrows": 3, "spread": 14 },
+      "effects": [] },
+    { "id": "sylph_wind_dancer", "hero": "sylph",
+      "skill": { "kind": "pierce_arrow", "cooldown": 7.0, "mult": 1.4, "gauge": 1.0, "speed": 18, "width": 0.4, "arrows": 1, "basicPierceEvery": 3 },
+      "effects": [ { "op": "stat", "stat": "attack_interval", "value": 0.45, "pct": true } ] },
+
+    { "id": "terra_bedrock_warden", "hero": "terra",
+      "skill": { "kind": "stone_barrier", "cooldown": 8.0, "mult": 0.8, "gauge": 1.5, "tauntRadius": 3.0, "taunt": 3.5, "armorPct": 0.6, "shieldPct": 0.12, "duration": 4.5, "crystalReduction": 0.35 },
+      "effects": [] },
+    { "id": "terra_living_fortress", "hero": "terra",
+      "skill": { "kind": "stone_barrier", "cooldown": 7.0, "mult": 1.0, "gauge": 1.5, "tauntRadius": 2.6, "taunt": 4.0, "armorPct": 0.9, "shieldPct": 0.2, "duration": 4.0, "retaliate": 0.7 },
+      "passive": { "kind": "living_fortress", "regen": 0.012, "mult": 0.6, "gauge": 0.5, "cooldown": 0.6 },
+      "effects": [ { "op": "stat", "stat": "max_hp", "value": 0.3, "pct": true }, { "op": "stat", "stat": "leash_radius", "value": -1.2 } ] },
+
+    { "id": "magnus_quake_champion", "hero": "magnus",
+      "skill": { "kind": "ground_slam", "cooldown": 6.5, "mult": 1.6, "gauge": 1.0, "radius": 2.5, "stun": 0.5, "crackDuration": 4.0, "crackStacks": 1, "crackMax": 1, "aftershock": 0.9 },
+      "effects": [] },
+    { "id": "magnus_shardbreaker", "hero": "magnus", "targeting": "elite",
+      "skill": { "kind": "ground_slam", "cooldown": 4.0, "mult": 3.2, "gauge": 1.5, "single": 1, "stun": 0.3, "crackDuration": 6.0, "crackStacks": 1, "crackMax": 3 },
+      "effects": [ { "op": "stat", "stat": "crit_chance", "value": 0.12 } ] }
+  ]
+}

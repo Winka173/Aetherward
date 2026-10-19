@@ -1,0 +1,28 @@
+{
+  // Run economy and difficulty curve. All values are starting hypotheses tuned by Tools/SimHarness/Balance.
+  "startGold": 8,
+  "crystalHp": 1000,
+  "rerollBaseCost": 2,
+  "rerollCostStep": 1,
+  "reviveBaseCost": 5,
+  "reviveCostPerWave": 0.5,
+  "repairCost": 5,
+  "repairPct": 0.15,
+  "interestPer10": 1,
+  "interestCap": 4,
+  "shopPriceGrowthPerWave": 0.035,
+  "relicBasePrice": 14,
+  "maxHeroes": 6,
+  "levelCap": 5,
+  "xpToLevel": [0, 2, 5, 9, 14],
+  "xpPerWave": 1,
+  "xpBossBonus": 2,
+  "evolutionEssence": 3,
+  "survivorHealPct": 0.25,
+  "shopWaves": [4, 9, 14, 19],
+  "enemyHpGrowth": 0.16,
+  "enemyHpGrowthQuad": 0.012,
+  "enemyDamageGrowth": 0.07,
+  "reactionLevelGrowth": 0.12,
+  "maxActiveEnemies": 160
+}

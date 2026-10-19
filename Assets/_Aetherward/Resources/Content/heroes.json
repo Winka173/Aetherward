@@ -1,0 +1,115 @@
+{
+  // Twelve launch heroes. Class (role) and element are independent fields.
+  // stats: base values at run level 1. attack_interval in seconds; range/leash in world units.
+  // skill.kind selects behaviour in Battle.Heroes.cs; all other skill keys are tunable params.
+  "heroes": [
+    {
+      "id": "ignis", "element": "fire", "role": "mage", "targeting": "cluster", "melee": false, "starter": true, "cost": 6,
+      "silhouette": "tall pointed hood, staff with ember orb",
+      "stats": { "max_hp": 360, "attack": 30, "defense": 8, "attack_interval": 1.15, "range": 4.6, "elemental_mastery": 40, "threat": 0.8, "crit_chance": 0.08 },
+      "basic": { "kind": "projectile", "mult": 1.0, "gauge": 1.0, "speed": 10 },
+      "skill": { "kind": "fireball", "cooldown": 6.0, "mult": 2.1, "gauge": 1.5, "radius": 1.35, "speed": 9 },
+      "passive": { "kind": "kindling", "bonus": 0.2 },
+      "evolutions": ["ignis_meteor_archmage", "ignis_ember_weaver"]
+    },
+    {
+      "id": "cinder", "element": "fire", "role": "bruiser", "targeting": "nearest_to_crystal", "melee": true, "starter": true, "cost": 6,
+      "silhouette": "broad shoulders, flaming greatsword",
+      "stats": { "max_hp": 560, "attack": 28, "defense": 22, "attack_interval": 0.95, "range": 0.75, "leash_radius": 2.1, "threat": 1.6, "crit_chance": 0.08, "move_speed": 2.8 },
+      "basic": { "kind": "melee", "mult": 1.0, "gauge": 1.0 },
+      "skill": { "kind": "cleave", "cooldown": 5.0, "mult": 1.9, "gauge": 1.0, "radius": 1.7, "arc": 140 },
+      "passive": { "kind": "heat_up", "perStack": 0.07, "maxStacks": 5 },
+      "evolutions": ["cinder_inferno_duelist", "cinder_ash_guardian"]
+    },
+    {
+      "id": "marina", "element": "water", "role": "healer", "targeting": "nearest_to_crystal", "melee": false, "starter": true, "cost": 6,
+      "silhouette": "flowing robes, wave-crest staff",
+      "stats": { "max_hp": 340, "attack": 22, "defense": 8, "attack_interval": 1.2, "range": 4.4, "elemental_mastery": 30, "threat": 0.7, "heal_power": 1.0 },
+      "basic": { "kind": "projectile", "mult": 1.0, "gauge": 1.0, "speed": 9 },
+      "skill": { "kind": "heal_rain", "cooldown": 7.0, "mult": 1.0, "gauge": 0.5, "radius": 2.3, "duration": 3.0, "heal": 0.55, "healBelow": 0.9 },
+      "passive": { "kind": "tidecall", "crystalHealPct": 0.006 },
+      "evolutions": ["marina_tide_saint", "marina_torrent_caller"]
+    },
+    {
+      "id": "tidal", "element": "water", "role": "controller", "targeting": "nearest_to_crystal", "melee": false, "starter": false, "cost": 7,
+      "silhouette": "hooded, twin water whips",
+      "stats": { "max_hp": 420, "attack": 24, "defense": 14, "attack_interval": 1.1, "range": 3.8, "elemental_mastery": 30, "threat": 1.0 },
+      "basic": { "kind": "projectile", "mult": 1.0, "gauge": 1.0, "speed": 11 },
+      "skill": { "kind": "push_wave", "cooldown": 6.5, "mult": 1.4, "gauge": 1.5, "length": 4.2, "width": 0.9, "knock": 1.6 },
+      "passive": { "kind": "undertow", "amount": 0.15, "duration": 3.0 },
+      "evolutions": ["tidal_floodbreaker", "tidal_healing_spring"]
+    },
+    {
+      "id": "volt", "element": "lightning", "role": "mage", "targeting": "reaction_opportunity", "melee": false, "starter": true, "cost": 6,
+      "silhouette": "spiky hair, floating conductor rods",
+      "stats": { "max_hp": 330, "attack": 27, "defense": 8, "attack_interval": 1.0, "range": 4.6, "elemental_mastery": 50, "threat": 0.8, "crit_chance": 0.08 },
+      "basic": { "kind": "projectile", "mult": 1.0, "gauge": 1.0, "speed": 14 },
+      "skill": { "kind": "chain_lightning", "cooldown": 5.5, "mult": 1.5, "gauge": 1.0, "jumps": 4, "falloff": 0.85, "jumpRange": 2.6 },
+      "passive": { "kind": "static", "bonus": 0.2 },
+      "evolutions": ["volt_tempest_lord", "volt_circuit_conductor"]
+    },
+    {
+      "id": "raiden", "element": "lightning", "role": "assassin", "targeting": "elite", "melee": true, "starter": false, "cost": 7,
+      "silhouette": "lean, scarf, twin daggers",
+      "stats": { "max_hp": 400, "attack": 34, "defense": 12, "attack_interval": 0.8, "range": 0.8, "leash_radius": 3.0, "threat": 1.0, "crit_chance": 0.2, "crit_multiplier": 1.8, "move_speed": 4.0 },
+      "basic": { "kind": "melee", "mult": 1.0, "gauge": 0.8 },
+      "skill": { "kind": "dash_strike", "cooldown": 5.0, "mult": 3.0, "gauge": 1.0 },
+      "passive": { "kind": "momentum", "refund": 0.5 },
+      "evolutions": ["raiden_stormblade", "raiden_static_executioner"]
+    },
+    {
+      "id": "freya", "element": "ice", "role": "controller", "targeting": "cluster", "melee": false, "starter": true, "cost": 6,
+      "silhouette": "crystal crown, long cape",
+      "stats": { "max_hp": 360, "attack": 24, "defense": 10, "attack_interval": 1.15, "range": 4.4, "elemental_mastery": 40, "threat": 0.8, "status_power": 0.1 },
+      "basic": { "kind": "projectile", "mult": 1.0, "gauge": 1.0, "speed": 10 },
+      "skill": { "kind": "frost_nova", "cooldown": 6.5, "mult": 1.4, "gauge": 1.5, "radius": 1.9, "slow": 0.4, "slowDuration": 2.5 },
+      "passive": { "kind": "frostbite", "reduction": 0.15 },
+      "evolutions": ["freya_blizzard_witch", "freya_crystalbinder"]
+    },
+    {
+      "id": "glacius", "element": "ice", "role": "guardian", "targeting": "nearest_to_crystal", "melee": true, "starter": false, "cost": 7,
+      "silhouette": "heavy armour, tower shield of ice",
+      "stats": { "max_hp": 720, "attack": 20, "defense": 34, "attack_interval": 1.2, "range": 0.8, "leash_radius": 1.7, "threat": 3.0, "damage_reduction": 0.1, "move_speed": 2.2 },
+      "basic": { "kind": "melee", "mult": 1.0, "gauge": 1.0 },
+      "skill": { "kind": "ice_shield", "cooldown": 8.0, "mult": 1.0, "gauge": 1.0, "shieldPct": 0.25, "retaliate": 0.6, "duration": 5.0, "taunt": 2.5, "tauntRadius": 2.3 },
+      "passive": { "kind": "retaliate", "mult": 0.45, "gauge": 0.5, "cooldown": 0.8 },
+      "evolutions": ["glacius_permafrost_sentinel", "glacius_shatter_knight"]
+    },
+    {
+      "id": "zephyr", "element": "wind", "role": "support", "targeting": "cluster", "melee": false, "starter": false, "cost": 7,
+      "silhouette": "feathered mantle, fan",
+      "stats": { "max_hp": 340, "attack": 22, "defense": 10, "attack_interval": 1.0, "range": 4.4, "elemental_mastery": 60, "threat": 0.7 },
+      "basic": { "kind": "projectile", "mult": 1.0, "gauge": 1.0, "speed": 12 },
+      "skill": { "kind": "vortex", "cooldown": 7.0, "mult": 0.35, "gauge": 1.0, "radius": 2.2, "duration": 1.6 },
+      "passive": { "kind": "tailwind", "haste": 0.12, "radius": 3.4 },
+      "evolutions": ["zephyr_cyclone_sage", "zephyr_gale_tactician"]
+    },
+    {
+      "id": "sylph", "element": "wind", "role": "ranger", "targeting": "nearest_to_crystal", "melee": false, "starter": true, "cost": 6,
+      "silhouette": "light cloak, longbow",
+      "stats": { "max_hp": 330, "attack": 29, "defense": 8, "attack_interval": 0.9, "range": 5.4, "threat": 0.7, "crit_chance": 0.15, "crit_multiplier": 1.7 },
+      "basic": { "kind": "projectile", "mult": 1.0, "gauge": 1.0, "speed": 15 },
+      "skill": { "kind": "pierce_arrow", "cooldown": 5.5, "mult": 1.8, "gauge": 1.0, "speed": 16, "width": 0.45, "arrows": 1 },
+      "passive": { "kind": "keen_eye", "distance": 3.5, "bonus": 0.25 },
+      "evolutions": ["sylph_tempest_archer", "sylph_wind_dancer"]
+    },
+    {
+      "id": "terra", "element": "earth", "role": "guardian", "targeting": "nearest_to_crystal", "melee": true, "starter": true, "cost": 6,
+      "silhouette": "stone pauldrons, hammer",
+      "stats": { "max_hp": 760, "attack": 19, "defense": 38, "attack_interval": 1.25, "range": 0.8, "leash_radius": 1.7, "threat": 3.2, "damage_reduction": 0.08, "move_speed": 2.2 },
+      "basic": { "kind": "melee", "mult": 1.0, "gauge": 1.0 },
+      "skill": { "kind": "stone_barrier", "cooldown": 8.0, "mult": 0.8, "gauge": 1.0, "tauntRadius": 2.6, "taunt": 3.0, "armorPct": 0.6, "shieldPct": 0.12, "duration": 4.0 },
+      "passive": { "kind": "bulwark", "defensePct": 0.3, "radius": 2.8 },
+      "evolutions": ["terra_bedrock_warden", "terra_living_fortress"]
+    },
+    {
+      "id": "magnus", "element": "earth", "role": "bruiser", "targeting": "cluster", "melee": true, "starter": false, "cost": 7,
+      "silhouette": "huge gauntlets, bare arms, belt",
+      "stats": { "max_hp": 600, "attack": 30, "defense": 24, "attack_interval": 1.1, "range": 0.8, "leash_radius": 2.0, "threat": 1.6, "crit_chance": 0.06, "move_speed": 2.6 },
+      "basic": { "kind": "melee", "mult": 1.0, "gauge": 1.0 },
+      "skill": { "kind": "ground_slam", "cooldown": 6.0, "mult": 1.7, "gauge": 1.0, "radius": 1.7, "stun": 0.45, "crackDuration": 4.0, "crackStacks": 1, "crackMax": 1 },
+      "passive": { "kind": "crushing", "bonus": 0.25 },
+      "evolutions": ["magnus_quake_champion", "magnus_shardbreaker"]
+    }
+  ]
+}
