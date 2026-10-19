@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Aetherward.Sim.Content;
 using Aetherward.Sim.Run;
@@ -50,6 +51,8 @@ namespace Aetherward.Sim.Meta
         public int BestWave;
         public int TotalReactions;
         public int MaxAscensionUnlocked;
+        /// <summary>Best wave/stage per mode: "classic", "endless", "bossrush", "daily:yyyymmdd".</summary>
+        public readonly Dictionary<string, int> ModeRecords = new Dictionary<string, int>();
         public bool TutorialDone;
 
         public static readonly UnlockRule[] Rules =
@@ -107,7 +110,7 @@ namespace Aetherward.Sim.Meta
         };
 
         /// <summary>Highest Ascension that can be unlocked (data: difficulty.json).</summary>
-        public static int MaxAscension = 5;
+        public static int MaxAscension = 10;
 
         public static MetaProfile CreateDefault(ContentDatabase db)
         {
@@ -147,8 +150,12 @@ namespace Aetherward.Sim.Meta
                 int cap = System.Math.Max(MaxAscension, rc.Content.Difficulty.MaxLevel);
                 if (MaxAscensionUnlocked <= s.Ascension && s.Ascension < cap) MaxAscensionUnlocked = s.Ascension + 1;
             }
-            int reached = results.Victory ? rc.Content.Waves.Count : s.Wave;
-            if (reached > BestWave) BestWave = reached;
+            int reached = results.Victory && rc.TotalWaves > 0 ? rc.TotalWaves : s.Wave;
+            // Boss Rush stages are not waves: they never count toward wave-based unlocks.
+            if (s.Mode != GameMode.BossRush && Math.Min(reached, rc.Content.Waves.Count) > BestWave) BestWave = Math.Min(reached, rc.Content.Waves.Count);
+            string recordKey = s.Mode == GameMode.Daily ? "daily:" + s.DailyKey : s.Mode.ToString().ToLowerInvariant();
+            ModeRecords.TryGetValue(recordKey, out int prev);
+            if (reached > prev) ModeRecords[recordKey] = reached;
             TotalReactions += results.TotalReactions;
             foreach (var kv in s.ReactionCounts) Codex.Add("reaction:" + kv.Key);
             foreach (HeroRunState h in s.Heroes)
@@ -193,8 +200,8 @@ namespace Aetherward.Sim.Meta
             // Every boss actually fought and beaten this run (boss pools resolved per seed).
             foreach (WaveRecord w in s.WaveLog)
             {
-                if (!w.Cleared || w.Wave < 1 || w.Wave > rc.Content.Waves.Count) continue;
-                WaveDef wd = rc.Content.Waves[w.Wave - 1];
+                if (!w.Cleared || w.Wave < 1) continue;
+                WaveDef wd = rc.WaveAt(w.Wave);
                 if (!wd.Boss) continue;
                 foreach (SpawnGroup g in wd.Groups)
                 {

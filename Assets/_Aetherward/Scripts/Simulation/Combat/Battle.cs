@@ -38,6 +38,8 @@ namespace Aetherward.Sim.Combat
         public BiomeDef Biome;
         /// <summary>Ascension: bosses enrage below 25% HP by this amount (0 = off).</summary>
         public float BossEnrage;
+        public int EliteEvery;        // Ascension "double_elite": every Nth regular spawn is elite (0 = off)
+        public float HazardShift;     // Ascension "hazard_shift": biome hazards fire this much more often
     }
 
     public enum BattleOutcome
@@ -120,10 +122,10 @@ namespace Aetherward.Sim.Combat
             Grid = new SpatialGrid(Arena.HalfWidth, Arena.HalfHeight, 1.5f);
 
             EconomyDef eco = Content.Economy;
-            int w = Wave.Number - 1;
+            int w = Wave.EffectiveLevel - 1;
             float asc = 1f + Content.Difficulty.HpPerLevel * setup.Ascension;
-            _enemyHpScale = (1f + eco.EnemyHpGrowth * w + eco.EnemyHpGrowthQuad * w * w) * asc * (1f + Mods.EnemyHpPct);
-            _enemyDamageScale = (1f + eco.EnemyDamageGrowth * w) * asc * (1f + Mods.EnemyDamagePct);
+            _enemyHpScale = (1f + eco.EnemyHpGrowth * w + eco.EnemyHpGrowthQuad * w * w) * asc * (1f + Mods.EnemyHpPct) * (1f + Wave.ScalePct);
+            _enemyDamageScale = (1f + eco.EnemyDamageGrowth * w) * asc * (1f + Mods.EnemyDamagePct) * (1f + Wave.ScalePct * 0.5f);
             WaveLevelScale = 1f + eco.ReactionLevelGrowth * w;
 
             SetupCrystal();
@@ -157,6 +159,8 @@ namespace Aetherward.Sim.Combat
             foreach (HeroUnit h in Heroes) ApplyBattleStartTrait(h);
         }
 
+        private int _eliteCounter;
+
         private void BuildSchedule()
         {
             Pcg32 rng = Pcg32.Derive(Setup.Seed, "spawns:" + Wave.Number);
@@ -183,7 +187,7 @@ namespace Aetherward.Sim.Combat
                         Time = g.Start + i * g.Interval + jitter,
                         Def = def,
                         Lane = lane,
-                        Elite = g.Elite,
+                        Elite = g.Elite || (Setup.EliteEvery > 0 && !def.Boss && ++_eliteCounter % Setup.EliteEvery == 0),
                         Affix = g.Affix
                     });
                 }
@@ -293,7 +297,7 @@ namespace Aetherward.Sim.Combat
             e.MaxHp = def.Hp * _enemyHpScale * eliteHp;
             e.Attack = def.Attack * _enemyDamageScale * eliteDmg;
             e.CrystalDamage = def.CrystalDamage * _enemyDamageScale * eliteDmg;
-            e.Defense = def.Defense * (1f + 0.03f * (Wave.Number - 1));
+            e.Defense = def.Defense * (1f + 0.03f * (Wave.EffectiveLevel - 1));
             e.Speed = def.Speed * (1f + Mods.EnemySpeedPct);
             e.Radius = def.Radius * (e.Elite && !def.Elite && !def.Boss ? 1.3f : 1f);
             e.Tenacity = def.Tenacity + (e.Elite ? 0.25f : 0f);

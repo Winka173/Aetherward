@@ -28,6 +28,7 @@ namespace Aetherward.Game
         private ulong _seed;
         private int _ascension;
         private int _biomeIndex;
+        private GameMode _mode = GameMode.Classic;
         private bool _hasSave;
         private int _codexTab;
         private string _codexFocus;
@@ -220,7 +221,8 @@ namespace Aetherward.Game
                 Ui.Label(dx + 30, 150 + 640, dw - 60, 40, SharedPanels.UnlockHint("hero:" + focus), 24, Ui.Bad);
 
             float by = Ui.H - 140;
-            DrawBiomePicker(dx, by - 92, dw);
+            DrawModePicker(dx, by - 176, dw);
+            if (_mode != GameMode.Daily) DrawBiomePicker(dx, by - 92, dw);
             if (Ui.Button(60, by, 240, 96, l.Get("common.back"), Tone.Ghost)) _page = Page.Main;
             Ui.Label(330, by, 420, 46, l.Format("common.seed", Pcg32.FormatSeed(_seed)), 26, Ui.Muted, TextAnchor.MiddleLeft, false, true, true);
             if (Ui.Button(330, by + 46, 300, 60, l.Get("team.random_seed"), Tone.Ghost, true, 22)) _seed = Pcg32.SeedFromTime(DateTime.UtcNow.AddTicks(UnityEngine.Random.Range(1, 99999)));
@@ -237,10 +239,30 @@ namespace Aetherward.Game
             if (Ui.Button(Ui.W - 480, by, 420, 96, ready ? l.Get("team.start") : l.Get("team.pick_two"), Tone.Primary, ready, 32))
             {
                 App.ClearRun();
-                App.Run = RunController.NewRun(App.Content, _seed, _picked, _ascension, App.Meta.ToRunUnlocks(), SelectedBiome().Id);
+                App.Run = RunController.NewModeRun(App.Content, ModeUnlocked(_mode) ? _mode : GameMode.Classic, _seed, _picked, _ascension,
+                                                   App.Meta.ToRunUnlocks(), SelectedBiome().Id);
                 App.SaveRun();
                 GameRoot.Instance.GoTo(AppScreen.Battle);
             }
+        }
+
+        /// <summary>Endless after a first victory, Boss Rush after beating a wave-10 boss; Daily always.</summary>
+        private static bool ModeUnlocked(GameMode m) =>
+            m == GameMode.Classic || m == GameMode.Daily || (m == GameMode.Endless ? App.Meta.Victories > 0 : App.Meta.BestWave >= 11);
+
+        private void DrawModePicker(float x, float y, float w)
+        {
+            Localization l = App.Loc;
+            int count = System.Enum.GetValues(typeof(GameMode)).Length;
+            if (Ui.Button(x, y, 64, 64, "<", Tone.Ghost, (int)_mode > 0, 28)) _mode--;
+            string key = _mode.ToString().ToLowerInvariant();
+            bool unlocked = ModeUnlocked(_mode);
+            Ui.Label(x + 76, y - 4, w - 160, 36, l.Get("mode.label") + ": " + l.Get("mode." + key + ".name"), 22, unlocked ? Ui.Gold : Ui.Muted, TextAnchor.UpperLeft, true);
+            string sub = unlocked ? l.Get("mode." + key + ".desc") : l.Get("mode." + key + ".locked");
+            App.Meta.ModeRecords.TryGetValue(_mode == GameMode.Daily ? "daily:" + RunController.DailyKeyFor(DateTime.UtcNow) : key, out int best);
+            if (unlocked && best > 0) sub += "  " + l.Format("mode.best", best);
+            Ui.Label(x + 76, y + 28, w - 160, 40, sub, 15, unlocked ? Ui.Muted : Ui.Bad, TextAnchor.UpperLeft);
+            if (Ui.Button(x + w - 64, y, 64, 64, ">", Tone.Ghost, (int)_mode < count - 1, 28)) _mode++;
         }
 
         private BiomeDef SelectedBiome()

@@ -142,6 +142,7 @@ namespace Aetherward.Sim.Meta
                 .Set("codex", StringArray(m.Codex))
                 .Set("heroRuns", IntMap(m.HeroRuns))
                 .Set("heroWins", IntMap(m.HeroWins))
+                .Set("modeRecords", IntMap(m.ModeRecords))
                 .Set("totalRuns", m.TotalRuns).Set("victories", m.Victories).Set("bestWave", m.BestWave)
                 .Set("totalReactions", m.TotalReactions).Set("ascension", m.MaxAscensionUnlocked).Set("tutorial", m.TutorialDone);
             JsonNode hist = JsonNode.NewArray();
@@ -171,6 +172,7 @@ namespace Aetherward.Sim.Meta
             foreach (string c in d.StringList("codex")) m.Codex.Add(c);
             ReadIntMap(d["heroRuns"], m.HeroRuns);
             ReadIntMap(d["heroWins"], m.HeroWins);
+            ReadIntMap(d["modeRecords"], m.ModeRecords);
             m.TotalRuns = d.Int("totalRuns");
             m.Victories = d.Int("victories");
             m.BestWave = d.Int("bestWave");
@@ -244,7 +246,8 @@ namespace Aetherward.Sim.Meta
                 .Set("reactionCounts", IntMap(s.ReactionCounts)).Set("reactionDamage", FloatMap(s.ReactionDamage))
                 .Set("sourceCounts", IntMap(s.SourceActivations)).Set("sourceDamage", FloatMap(s.SourceDamage))
                 .Set("elements", elements).Set("seen", StringArray(s.SeenEnemies)).Set("drafts", s.DraftsTaken)
-                .Set("bosses", BossMap(s.BossChoices)).Set("blocked", s.BlockedNode).Set("biome", s.BiomeId);
+                .Set("bosses", BossMap(s.BossChoices)).Set("blocked", s.BlockedNode).Set("biome", s.BiomeId)
+                .Set("mode", s.Mode.ToString()).Set("daily", s.DailyKey).Set("modeMods", StringArray(s.ModeModifiers));
             WriteEnvelope("run", d);
         }
 
@@ -341,6 +344,9 @@ namespace Aetherward.Sim.Meta
                 s.BlockedNode = d.Int("blocked", -1);
                 string biome = d.Str("biome");
                 s.BiomeId = biome != null && db.Biomes.ContainsKey(biome) ? biome : null;
+                s.Mode = Enum.TryParse(d.Str("mode") ?? "Classic", out GameMode mode) ? mode : GameMode.Classic;
+                s.DailyKey = d.Str("daily");
+                s.ModeModifiers.AddRange(d.StringList("modeMods"));
                 foreach (string k in d["bosses"].Keys)
                 {
                     string boss = d["bosses"].Str(k);

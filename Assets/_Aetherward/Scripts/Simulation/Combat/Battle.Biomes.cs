@@ -30,7 +30,7 @@ namespace Aetherward.Sim.Combat
                 if (Wave.Number < hz.FromWave || hz.Points.Count == 0) continue;
                 _hazardTimers[i] -= dt;
                 if (_hazardTimers[i] > 0f) continue;
-                _hazardTimers[i] = hz.Interval;
+                _hazardTimers[i] = hz.Interval * (1f - SimMath.Clamp(Setup.HazardShift, 0f, 0.6f));
                 // Deterministic choice of distinct vents; heroes get a telegraph (Delay) to read the threat.
                 int start = _hazardRng.Range(0, hz.Points.Count);
                 for (int k = 0; k < hz.Count && k < hz.Points.Count; k++)

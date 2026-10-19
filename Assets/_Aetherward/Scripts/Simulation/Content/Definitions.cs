@@ -394,6 +394,23 @@ namespace Aetherward.Sim.Content
         public bool Elite;
         /// <summary>Alternative bosses for this wave; the run picks one per seed (first entry is the authored default).</summary>
         public List<string> BossPool = new List<string>();
+        /// <summary>Scaling level when it differs from <see cref="Number"/> (Boss Rush stages); 0 = Number.</summary>
+        public int Level;
+        /// <summary>Extra enemy HP/damage multiplier on top of the curve (Endless loops).</summary>
+        public float ScalePct;
+
+        public int EffectiveLevel => Level > 0 ? Level : Number;
+
+        public WaveDef CloneAs(int number)
+        {
+            var w = (WaveDef)MemberwiseClone();
+            w.Number = number;
+            w.Groups = new List<SpawnGroup>(Groups);
+            w.Rewards = new List<RewardKind>(Rewards);
+            w.Modifiers = new List<string>(Modifiers);
+            w.BossPool = new List<string>(BossPool);
+            return w;
+        }
     }
 
     public sealed class EventDef

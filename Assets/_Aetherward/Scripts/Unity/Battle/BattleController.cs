@@ -186,7 +186,7 @@ namespace Aetherward.Game
                         App.Saves.Delete("run");
                     }
                     Banner(cleared ? App.Loc.Get("hud.wave_clear") : App.Loc.Get("results.defeat"), cleared ? Ui.Good : Ui.Bad, 1.6f);
-                    App.Audio.Play(cleared ? (b.Wave.Number >= App.Content.Waves.Count ? "victory" : "wave_clear") : "defeat", 1f, 0f);
+                    App.Audio.Play(cleared ? (_rc.TotalWaves > 0 && b.Wave.Number >= _rc.TotalWaves ? "victory" : "wave_clear") : "defeat", 1f, 0f);
                 }
                 _resolveDelay -= dt;
                 if (_resolveDelay <= 0f)
@@ -500,7 +500,7 @@ namespace Aetherward.Game
         private void ShowPrepareBanner()
         {
             if (_rc.State.Phase != RunPhase.Prepare) return;
-            WaveDef w = App.Content.Waves[Mathf.Min(_rc.State.Wave, App.Content.Waves.Count) - 1];
+            WaveDef w = _rc.CurrentWave;
             Banner(App.Loc.Format("prep.title", w.Number), Ui.Gold, 1.6f);
             App.Audio.PlayMusic(_rc.Biome.Music);
         }
@@ -819,7 +819,7 @@ namespace Aetherward.Game
             int needed = 0;
             if (prep)
             {
-                WaveDef w = App.Content.Waves[Mathf.Min(_rc.State.Wave, App.Content.Waves.Count) - 1];
+                WaveDef w = _rc.CurrentWave;
                 foreach (int laneIndex in Battle.LanesForWave(w, _rc.Biome))
                 {
                     LaneDef lane = Arena.Lanes[laneIndex % Arena.Lanes.Count];

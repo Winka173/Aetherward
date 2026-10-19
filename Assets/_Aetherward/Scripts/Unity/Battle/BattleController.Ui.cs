@@ -87,9 +87,10 @@ namespace Aetherward.Game
             Ui.Label(246, 92, 120, 40, s.Essence.ToString(), 30, new Color(0.8f, 0.65f, 1f), TextAnchor.MiddleLeft, true, true, true);
             Ui.Label(360, 92, 280, 40, L.Format("common.seed", Sim.Core.Pcg32.FormatSeed(s.Seed)), 18, Ui.Muted, TextAnchor.MiddleRight);
 
-            int total = App.Content.Waves.Count;
-            int wave = Mathf.Min(s.Wave, total);
-            WaveDef w = App.Content.Waves[wave - 1];
+            int total = _rc.TotalWaves;
+            int wave = total > 0 ? Mathf.Min(s.Wave, total) : s.Wave;
+            WaveDef w = _rc.WaveAt(wave);
+            string totalText = total > 0 ? total.ToString() : "∞";
             Ui.Panel(Ui.W / 2 - 300, 12, 600, battle ? 118 : 96, "glass");
             Block(Ui.W / 2 - 300, 12, 600, 96);
             Ui.Label(Ui.W / 2 - 300, 20, 600, 46, L.Format("hud.wave", wave) + "  <size=" + Ui.Px(24) + "><color=#c0c8e8>/ " + total + "</color></size>", 38, Ui.Gold, TextAnchor.UpperCenter, true);
@@ -220,7 +221,7 @@ namespace Aetherward.Game
         private void DrawPrepare()
         {
             RunState s = _rc.State;
-            WaveDef w = App.Content.Waves[Mathf.Min(s.Wave, App.Content.Waves.Count) - 1];
+            WaveDef w = _rc.CurrentWave;
             // incoming panel (left)
             float px = 16, py = 156, pw = 560;
             List<KeyValuePair<string, int>> counts = _rc.PreviewEnemies(w);

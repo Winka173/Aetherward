@@ -82,6 +82,16 @@ namespace Aetherward.Sim.Run
     /// Complete state of a run. Plain data so it can be saved between waves and restored exactly
     /// (resume never restores mid-combat projectiles; it restarts at the wave boundary).
     /// </summary>
+    /// <summary>Run modes. Classic = 20 authored waves; Endless loops 11–20 with rising scale; Daily = a
+    /// date-seeded Classic run with daily modifiers; Boss Rush = every boss in sequence.</summary>
+    public enum GameMode
+    {
+        Classic,
+        Endless,
+        Daily,
+        BossRush
+    }
+
     public sealed class RunState
     {
         public const int SaveVersion = 2;
@@ -126,6 +136,9 @@ namespace Aetherward.Sim.Run
         public int BlockedNode = -1;
         /// <summary>Battlefield of this run (null = default biome; unknown ids degrade to default).</summary>
         public string BiomeId;
+        public GameMode Mode;
+        public string DailyKey;                 // yyyymmdd for Daily runs
+        public readonly List<string> ModeModifiers = new List<string>(); // applied to every wave (Daily)
         public string DefeatSource;
         public int DraftsTaken;
         public readonly List<string> Log = new List<string>(); // selection trace (debug, bounded)

@@ -52,3 +52,8 @@
 - **Thức tỉnh nguyên tố** (sự kiện Elemental Shrine): hero cấp 2+ cao nhất nhận nguyên tố phụ tạo phản ứng Signature với nguyên tố gốc; tối đa 2/lượt; tất định theo seed; lưu save; mỗi 2 đòn thường gắn nguyên tố có 1 đòn dùng nguyên tố phụ; hiển thị trong bảng hero.
 - Validator: hiệu ứng tiến hoá chỉ được dùng `stat` (trước đây op khác bị bỏ qua âm thầm).
 - AutoPilot: `arcane_void`.
+
+## Phase 4a — Chế độ & Ascension 6–10 (2026-10-19)
+- Endless, Daily Seed, Boss Rush (xem `META_MODES.md`), chọn ở màn chọn đội, kỷ lục theo chế độ, HUD hiển thị "∞".
+- Ascension 6–10 với 5 module mới (enemy_hp, reroll_cost, double_elite, rarity_shift, hazard_shift); `MaxAscension` = 10.
+- Harness: `--mode`. Test: `ModeTests` (7), 157/157.

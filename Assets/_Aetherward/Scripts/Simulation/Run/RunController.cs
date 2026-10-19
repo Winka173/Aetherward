@@ -53,6 +53,116 @@ namespace Aetherward.Sim.Run
             Unlocks = unlocks ?? RunUnlocks.Everything(content);
         }
 
+        // ------------------------------------------------------------------ modes
+
+        /// <summary>Waves in this run: 20 (Classic/Daily), the boss count (Boss Rush), 0 = unbounded (Endless).</summary>
+        /// <summary>Ascension "rarity_shift": epic/legendary offers become rarer.</summary>
+        public float RarityShift(Rarity r) =>
+            r == Rarity.Epic || r == Rarity.Legendary ? Math.Max(0.1f, 1f - Content.Difficulty.Value("rarity_shift", State.Ascension)) : 1f;
+
+        public int TotalWaves => State.Mode == GameMode.Endless ? 0 : State.Mode == GameMode.BossRush ? BossRushBosses().Count : Content.Waves.Count;
+
+        public WaveDef CurrentWave => WaveAt(State.Wave);
+
+        /// <summary>The wave definition for a wave number in this run's mode (deterministic, never saved).</summary>
+        public WaveDef WaveAt(int number)
+        {
+            number = Math.Max(1, number);
+            switch (State.Mode)
+            {
+                case GameMode.Endless:
+                {
+                    if (number <= Content.Waves.Count) return Content.Waves[number - 1];
+                    // Loop the second half (waves 11-20) with +30% enemy HP per loop; wave 20 (final boss) gets rewards.
+                    int over = number - Content.Waves.Count - 1;
+                    WaveDef t = Content.Waves[10 + over % 10];
+                    WaveDef w = t.CloneAs(number);
+                    w.Level = Content.Waves.Count + over + 1;   // keeps climbing the authored HP curve
+                    w.ScalePct = 0.25f * (over / 10 + 1);
+                    if (w.Rewards.Count == 0) { w.Rewards.Add(RewardKind.Relic); w.Rewards.Add(RewardKind.Draft); }
+                    if (w.Gold <= 0) w.Gold = 30;
+                    return w;
+                }
+                case GameMode.BossRush:
+                {
+                    List<string> bosses = BossRushBosses();
+                    int i = Math.Min(number, bosses.Count) - 1;
+                    // Stage template: the authored mid boss wave first, the final boss wave for the last third.
+                    WaveDef t = Content.Waves[i < bosses.Count * 2 / 3 ? 9 : Content.Waves.Count - 1];
+                    WaveDef w = t.CloneAs(number);
+                    w.Level = 6 + (int)Math.Round(14f * i / Math.Max(1, bosses.Count - 1));
+                    w.BossPool = new List<string> { bosses[i] };
+                    w.Groups = new List<SpawnGroup>();
+                    foreach (SpawnGroup g in t.Groups)
+                    {
+                        if (Content.Enemies.TryGetValue(g.Enemy, out EnemyDef ed) && ed.Boss)
+                            w.Groups.Add(new SpawnGroup { Enemy = bosses[i], Count = 1, Lane = g.Lane, Start = g.Start, Interval = g.Interval });
+                        else w.Groups.Add(g);
+                    }
+                    w.Rewards = new List<RewardKind> { RewardKind.Relic, RewardKind.Recruit, RewardKind.Evolution };
+                    w.Gold = 25;
+                    w.Essence = 2;
+                    return w;
+                }
+                default:
+                    return Content.Waves[Math.Min(number, Content.Waves.Count) - 1];
+            }
+        }
+
+        /// <summary>Boss Rush order: every boss, weakest first (by HP), ties by id. Deterministic.</summary>
+        public List<string> BossRushBosses()
+        {
+            var list = new List<EnemyDef>();
+            foreach (EnemyDef e in Content.Enemies.Values) if (e.Boss) list.Add(e);
+            list.Sort((a, b) => { int d = a.Hp.CompareTo(b.Hp); return d != 0 ? d : string.CompareOrdinal(a.Id, b.Id); });
+            return list.ConvertAll(e => e.Id);
+        }
+
+        /// <summary>Daily key and seed for a UTC date: everyone gets the same run that day.</summary>
+        public static string DailyKeyFor(DateTime utc) => utc.ToString("yyyyMMdd", System.Globalization.CultureInfo.InvariantCulture);
+
+        public static ulong DailySeed(string key) => Pcg32.Hash64("daily:" + key);
+
+        public static readonly string[] DailyModifierPool = { "haste", "armored", "swarm" };
+
+        /// <summary>Starts a mode run. Daily derives seed, biome and two modifiers from the date key.</summary>
+        public static RunController NewModeRun(ContentDatabase content, GameMode mode, ulong seed, IList<string> starters, int ascension,
+                                               RunUnlocks unlocks, string biomeId = null, string dailyKey = null)
+        {
+            if (mode == GameMode.Daily)
+            {
+                dailyKey ??= DailyKeyFor(DateTime.UtcNow);
+                seed = DailySeed(dailyKey);
+                Pcg32 rng = Pcg32.Derive(seed, "daily");
+                var biomes = content.BiomeList;
+                biomeId = biomes[rng.Range(0, biomes.Count)].Id;
+            }
+            RunController rc = NewRun(content, seed, starters, ascension, unlocks, biomeId);
+            rc.State.Mode = mode;
+            if (mode == GameMode.Daily)
+            {
+                rc.State.DailyKey = dailyKey;
+                Pcg32 rng = Pcg32.Derive(seed, "daily:mods");
+                var pool = new List<string>(DailyModifierPool);
+                for (int k = 0; k < 2 && pool.Count > 0; k++)
+                {
+                    int i = rng.Range(0, pool.Count);
+                    rc.State.ModeModifiers.Add(pool[i]);
+                    pool.RemoveAt(i);
+                }
+                rc.State.ModeModifiers.Sort(string.CompareOrdinal); // a set: stable order (matches saves)
+            }
+            if (mode == GameMode.BossRush)
+            {
+                // Bosses from stage 1: start with a seasoned squad of four (two extra recruits from the unlocked pool) and a war chest.
+                Pcg32 rng = Pcg32.Derive(seed, "bossrush:squad");
+                foreach (string id in rc.PickHeroes(rng, 2)) rc.AddHero(id, 1).Node = rc.FreeNode();
+                foreach (HeroRunState h in rc.State.Heroes) h.Level = Math.Min(content.Economy.LevelCap, 3);
+                rc.State.Gold += 30;
+            }
+            return rc;
+        }
+
         public static RunController NewRun(ContentDatabase content, ulong seed, IList<string> starters, int ascension, RunUnlocks unlocks, string biomeId = null)
         {
             var s = new RunState
@@ -81,7 +191,7 @@ namespace Aetherward.Sim.Run
             return rc;
         }
 
-        private HeroRunState AddHero(string defId, int level)
+        internal HeroRunState AddHero(string defId, int level)
         {
             var h = new HeroRunState { Uid = State.NextHeroUid++, DefId = defId, Level = level, JoinedWave = State.Wave };
             h.Xp = level > 1 ? Eco.XpToLevel[Math.Min(level - 1, Eco.XpToLevel.Length - 1)] : 0;
@@ -94,6 +204,7 @@ namespace Aetherward.Sim.Run
         public string BossFor(WaveDef wave)
         {
             if (wave.BossPool.Count == 0) return null;
+            if (State.Mode == GameMode.BossRush) return wave.BossPool[0];
             if (State.BossChoices.TryGetValue(wave.Number, out string id) && Content.Enemies.ContainsKey(id)) return id;
             Pcg32 rng = Pcg32.Derive(State.Seed, "boss:" + wave.Number);
             // A biome may restrict the wave's boss to its own faction bosses.
@@ -201,7 +312,7 @@ namespace Aetherward.Sim.Run
             get
             {
                 if (State.FreeRerollsLeft > 0) return 0;
-                return Eco.RerollBaseCost + Eco.RerollCostStep * State.RerollsThisScreen;
+                return Eco.RerollBaseCost + Eco.RerollCostStep * State.RerollsThisScreen + (int)Content.Difficulty.Value("reroll_cost", State.Ascension);
             }
         }
 
@@ -302,7 +413,7 @@ namespace Aetherward.Sim.Run
 
         public BattleSetup BuildBattleSetup()
         {
-            WaveDef wave = Content.Waves[State.Wave - 1];
+            WaveDef wave = CurrentWave;
             var setup = new BattleSetup
             {
                 Content = Content,
@@ -318,9 +429,12 @@ namespace Aetherward.Sim.Run
             string boss = BossFor(wave);
             if (boss != null && boss != wave.BossPool[0]) setup.Substitutions[wave.BossPool[0]] = boss;
             setup.ExtraWaveModifiers.AddRange(State.NextWaveModifiers);
+            setup.ExtraWaveModifiers.AddRange(State.ModeModifiers);
             if (Content.Difficulty.Has("frenzy", State.Ascension)) setup.ExtraWaveModifiers.Add("ascension_frenzy");
             setup.EliteExtraAffix = Content.Difficulty.Has("elite_affix", State.Ascension);
             setup.BossEnrage = Content.Difficulty.Value("boss_enrage", State.Ascension);
+            setup.EliteEvery = (int)Content.Difficulty.Value("double_elite", State.Ascension);
+            setup.HazardShift = Content.Difficulty.Value("hazard_shift", State.Ascension);
             foreach (HeroRunState h in State.Heroes)
             {
                 if (h.Node < 0) continue;
@@ -428,7 +542,7 @@ namespace Aetherward.Sim.Run
             State.Trace("cleared wave " + wave.Number + " gold+" + gold + " essence+" + essence);
             Battle = null;
 
-            if (wave.Number >= Content.Waves.Count)
+            if (TotalWaves > 0 && wave.Number >= TotalWaves)
             {
                 State.Phase = RunPhase.Victory;
                 return;
@@ -615,7 +729,7 @@ namespace Aetherward.Sim.Run
             return (int)Math.Ceiling(baseCost * PriceScale);
         }
 
-        private List<string> PickHeroes(Pcg32 rng, int count)
+        internal List<string> PickHeroes(Pcg32 rng, int count)
         {
             var pool = new List<string>();
             foreach (HeroDef h in Content.HeroList)
@@ -704,7 +818,7 @@ namespace Aetherward.Sim.Run
                 var weights = new float[pool.Count];
                 for (int i = 0; i < pool.Count; i++)
                 {
-                    float w = DraftGenerator.RarityWeight(pool[i].Rarity, State.Wave);
+                    float w = DraftGenerator.RarityWeight(pool[i].Rarity, State.Wave) * RarityShift(pool[i].Rarity);
                     if (CompletesFusion(pool[i].Id)) w *= 1.8f; // gently surface curated fusions
                     w *= ElementRelevance(pool[i]);
                     weights[i] = w;

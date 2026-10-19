@@ -65,7 +65,7 @@ namespace Aetherward.Sim.Run
             foreach (CardDef c in rc.Content.CardList)
             {
                 if (!IsEligible(rc, c, pact)) continue;
-                float w = c.Weight * RarityWeight(c.Rarity, rc.State.Wave);
+                float w = c.Weight * RarityWeight(c.Rarity, rc.State.Wave) * rc.RarityShift(c.Rarity);
                 if (w <= 0f) continue;
                 if (IsSynergy(c)) w *= 1.6f;
                 pool.Add(c);

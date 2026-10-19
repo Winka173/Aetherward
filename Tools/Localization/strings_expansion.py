@@ -729,3 +729,23 @@ UI_X.update({
     "skillparam.perRamp": ("damage per ramp", "sát thương mỗi tầng tích tụ"), "skillparam.frozenBonus": ("shatter bonus", "thưởng phá băng"),
     "skillparam.drift": ("drift (m)", "khoảng dời (m)"), "skillparam.shockMult": ("aftershock", "dư chấn"),
 })
+
+UI_X.update({
+    "mode.label": ("Mode", "Chế độ"), "mode.best": ("Best: {0}", "Tốt nhất: {0}"),
+    "mode.classic.name": ("Classic", "Cổ điển"), "mode.classic.desc": ("20 waves, two bosses.", "20 đợt, hai boss."),
+    "mode.classic.locked": ("", ""),
+    "mode.endless.name": ("Endless", "Vô tận"), "mode.endless.desc": ("After wave 20 the second half loops, +30% enemy HP per loop. How far can you go?", "Sau đợt 20, nửa sau lặp lại, kẻ địch +30% HP mỗi vòng. Bạn đi được bao xa?"),
+    "mode.endless.locked": ("Locked: win a Classic run.", "Chưa mở: thắng một lượt Cổ điển."),
+    "mode.daily.name": ("Daily Seed", "Hạt giống ngày"), "mode.daily.desc": ("Same seed, battlefield and two modifiers for everyone today.", "Cùng hạt giống, chiến trường và hai biến thể cho mọi người hôm nay."),
+    "mode.daily.locked": ("", ""),
+    "mode.bossrush.name": ("Boss Rush", "Đấu Boss liên hoàn"), "mode.bossrush.desc": ("Every boss in a row, weakest first. Heroes start at level 3.", "Mọi boss nối tiếp, yếu trước. Anh hùng bắt đầu cấp 3."),
+    "mode.bossrush.locked": ("Locked: beat a wave-10 boss.", "Chưa mở: hạ một boss đợt 10."),
+})
+
+UI_X.update({
+    "team.ascension_desc.6": ("+ Enemies +10% HP; rerolls cost 1 more.", "+ Kẻ địch +10% HP; đổi lựa chọn tốn thêm 1."),
+    "team.ascension_desc.7": ("+ Every 8th regular enemy is an elite.", "+ Cứ 8 kẻ địch thường có 1 elite."),
+    "team.ascension_desc.8": ("+ Epic/legendary offers 30% rarer; Crystal -10% max HP.", "+ Lựa chọn sử thi/huyền thoại hiếm hơn 30%; Pha Lê -10% HP tối đa."),
+    "team.ascension_desc.9": ("+ Enemies +10% damage; hazards fire 30% more often.", "+ Kẻ địch +10% sát thương; hiểm hoạ xảy ra thường hơn 30%."),
+    "team.ascension_desc.10": ("+ Bosses enrage harder; enemies +10% HP. The true trial.", "+ Boss nổi giận mạnh hơn; kẻ địch +10% HP. Thử thách thật sự."),
+})
