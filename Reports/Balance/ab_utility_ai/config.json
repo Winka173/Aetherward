@@ -1,0 +1,13 @@
+{
+  "seeds": 500,
+  "policies": "Scripted,Synergy,Random,Greedy",
+  "mode": "Classic",
+  "ascension": 0,
+  "biome": "default",
+  "crystalEvolution": false,
+  "utilityTargeting": true,
+  "contentHash": "292ebec7f47819b3",
+  "runs": 24000,
+  "seconds": 557.4,
+  "threads": 4
+}
