@@ -29,6 +29,10 @@ namespace Aetherward.Game
         private readonly Dictionary<EnemyBolt, SpriteRenderer> _bolts = new Dictionary<EnemyBolt, SpriteRenderer>();
         private readonly Stack<SpriteRenderer> _srPool = new Stack<SpriteRenderer>();
         private readonly HashSet<int> _seen = new HashSet<int>();
+        private readonly HashSet<DelayedStrike> _liveStrikes = new HashSet<DelayedStrike>();
+        private readonly List<DelayedStrike> _goneStrikes = new List<DelayedStrike>();
+        private readonly HashSet<EnemyBolt> _liveBolts = new HashSet<EnemyBolt>();
+        private readonly List<EnemyBolt> _goneBolts = new List<EnemyBolt>();
         private readonly List<int> _remove = new List<int>();
         private FxSystem _fx;
         private readonly FloatingTextSystem _text = new FloatingTextSystem();
@@ -599,10 +603,11 @@ namespace Aetherward.Game
             ReleaseUnseen(_zones);
 
             // telegraphs for delayed strikes (meteors, spikes, boss slams)
-            var liveStrikes = new HashSet<DelayedStrike>(b.Strikes);
-            var gone = new List<DelayedStrike>();
-            foreach (var kv in _strikes) if (!liveStrikes.Contains(kv.Key)) gone.Add(kv.Key);
-            foreach (DelayedStrike s in gone)
+            _liveStrikes.Clear();
+            foreach (DelayedStrike ds in b.Strikes) _liveStrikes.Add(ds);
+            _goneStrikes.Clear();
+            foreach (var kv in _strikes) if (!_liveStrikes.Contains(kv.Key)) _goneStrikes.Add(kv.Key);
+            foreach (DelayedStrike s in _goneStrikes)
             {
                 ReturnSr(_strikes[s]);
                 _strikes.Remove(s);
@@ -623,10 +628,11 @@ namespace Aetherward.Game
             }
 
             // enemy bolts
-            var liveBolts = new HashSet<EnemyBolt>(b.Bolts);
-            var goneBolts = new List<EnemyBolt>();
-            foreach (var kv in _bolts) if (!liveBolts.Contains(kv.Key)) goneBolts.Add(kv.Key);
-            foreach (EnemyBolt bolt in goneBolts)
+            _liveBolts.Clear();
+            foreach (EnemyBolt eb in b.Bolts) _liveBolts.Add(eb);
+            _goneBolts.Clear();
+            foreach (var kv in _bolts) if (!_liveBolts.Contains(kv.Key)) _goneBolts.Add(kv.Key);
+            foreach (EnemyBolt bolt in _goneBolts)
             {
                 ReturnSr(_bolts[bolt]);
                 _bolts.Remove(bolt);

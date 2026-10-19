@@ -30,7 +30,8 @@ namespace Aetherward.Game
         private static bool _builtContrast;
 
         public static Font Heading, Body, Numbers;
-        private static readonly Dictionary<string, GUIStyle> Styles = new Dictionary<string, GUIStyle>();
+        // Allocation-free style cache key (no per-frame string building on mobile).
+        private static readonly Dictionary<(float, Color, TextAnchor, int), GUIStyle> Styles = new Dictionary<(float, Color, TextAnchor, int), GUIStyle>();
         private static GUIStyle _panelDark, _panelLight, _panelGlass, _panelDanger, _tooltip, _barBg, _barFill;
         private static readonly Dictionary<Tone, GUIStyle> Buttons = new Dictionary<Tone, GUIStyle>();
         private static readonly Dictionary<string, GUIStyle> CardFrames = new Dictionary<string, GUIStyle>();
@@ -38,7 +39,9 @@ namespace Aetherward.Game
         public static readonly Color Gold = new Color(1f, 0.83f, 0.35f);
         public static readonly Color Teal = new Color(0.37f, 0.88f, 0.82f);
         public static readonly Color Ink = new Color(0.07f, 0.06f, 0.14f, 0.9f);
-        public static readonly Color Muted = new Color(0.75f, 0.78f, 0.9f);
+        private static bool HighContrast => App.Settings != null && App.Settings.HighContrast;
+        /// <summary>Secondary text colour; becomes near-white in high-contrast mode.</summary>
+        public static Color Muted => HighContrast ? new Color(0.96f, 0.96f, 1f) : new Color(0.75f, 0.78f, 0.9f);
         public static readonly Color Good = new Color(0.49f, 1f, 0.6f);
         public static readonly Color Bad = new Color(1f, 0.42f, 0.48f);
         public static readonly Color White = Color.white;
@@ -132,7 +135,7 @@ namespace Aetherward.Game
 
         public static GUIStyle Text(float size, Color color, TextAnchor align = TextAnchor.UpperLeft, bool heading = false, bool numbers = false, bool wrap = true)
         {
-            string key = size + "|" + color + "|" + align + "|" + heading + "|" + numbers + "|" + wrap;
+            var key = (size, color, align, (heading ? 1 : 0) | (numbers ? 2 : 0) | (wrap ? 4 : 0));
             if (Styles.TryGetValue(key, out GUIStyle st)) return st;
             st = new GUIStyle
             {
@@ -154,11 +157,12 @@ namespace Aetherward.Game
             TextAnchor align = TextAnchor.UpperLeft, bool heading = false, bool shadow = true, bool numbers = false)
         {
             Color c = color ?? White;
-            if (shadow)
+            if (shadow || HighContrast)
             {
-                GUIStyle sh = Text(size, new Color(0.04f, 0.03f, 0.1f, 0.85f * c.a), align, heading, numbers);
-                float o = Mathf.Max(1.5f, size * 0.07f);
+                GUIStyle sh = Text(size, new Color(0.02f, 0.02f, 0.06f, (HighContrast ? 1f : 0.85f) * c.a), align, heading, numbers);
+                float o = Mathf.Max(1.5f, size * (HighContrast ? 0.1f : 0.07f));
                 GUI.Label(R(x + o * 0.6f, y + o, w, h), text, sh);
+                if (HighContrast) GUI.Label(R(x - o * 0.6f, y - o * 0.3f, w, h), text, sh);
             }
             GUI.Label(R(x, y, w, h), text, Text(size, c, align, heading, numbers));
         }
@@ -171,6 +175,7 @@ namespace Aetherward.Game
 
         public static void Panel(float x, float y, float w, float h, string kind = "dark")
         {
+            if (HighContrast) DrawRect(x + 6, y + 6, w - 12, h - 12, new Color(0f, 0f, 0.03f, 0.85f));
             GUIStyle st = kind == "light" ? _panelLight : kind == "glass" ? _panelGlass : kind == "danger" ? _panelDanger : _panelDark;
             if (st != null && st.normal.background != null) GUI.Box(R(x, y, w, h), GUIContent.none, st);
             else DrawRect(x, y, w, h, new Color(0.11f, 0.13f, 0.25f, 0.95f));

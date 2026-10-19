@@ -10,7 +10,7 @@
 | D-06 | Lựa chọn giữa cấp: thẻ "Hero Specialization" trong draft chỉ xuất hiện khi hero đủ cấp; cấp 5 + Essence mở tiến hoá 2 nhánh. | Giữ số màn hình giữa wave thấp (tránh menu fatigue) mà vẫn có lựa chọn thay đổi cơ chế. |
 | D-07 | Art: **vector 2D sinh bằng Python/pycairo** (viền đậm, cel-shade, tỉ lệ ~2.5 đầu), xuất PNG + contact sheet; Blender để dự phòng. | Kiểm soát silhouette/màu tốt nhất cho phong cách cartoon giống chuẩn Arcane-Brigade; tái tạo deterministic; hợp pháp 100%. Không gọi là vẽ tay. |
 | D-08 | UI bằng **IMGUI với skin sinh tự động** (9-slice, font OFL Be Vietnam Pro / Lilita One hỗ trợ tiếng Việt). | Cách Arcane-Brigade đã dùng trên cùng version Unity; không cần uGUI/TMP package. Touch hoạt động qua mouse emulation. |
-| D-09 | Âm thanh: SFX và nhạc **tổng hợp bằng numpy** (sóng cơ bản + envelope), xuất WAV. | Bản quyền sạch; đủ nhận diện theo nguyên tố. Không phải soundtrack hoàn chỉnh. |
+| D-09 | Âm thanh: SFX và nhạc **tổng hợp bằng numpy** (sóng cơ bản + envelope), mã hoá OGG Vorbis bằng ffmpeg (WAV nếu thiếu ffmpeg). | Bản quyền sạch; đủ nhận diện theo nguyên tố. Không phải soundtrack hoàn chỉnh. |
 | D-10 | RNG gameplay: PCG32 riêng, tách stream (combat/draft/shop/wave). Float không fixed-point → tái lập tốt nhất trên cùng nền tảng. | Đúng yêu cầu RNG độc lập `UnityEngine.Random`. |
 | D-11 | Hồi phục sau wave: hero còn sống hồi 25% HP tối đa; hero gục phải hồi sinh bằng Gold (giá tăng theo wave) ở màn Prepare. | Mặc định đề xuất trong spec, dự đoán được. |
 | D-12 | Commit thẳng lên `main` theo yêu cầu chủ dự án ("commit code on main on every major function"). | Yêu cầu trực tiếp. |
