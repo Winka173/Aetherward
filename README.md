@@ -38,3 +38,10 @@ cd Tools/SimHarness
 dotnet test Tests
 dotnet run --project Balance -c Release -- --runs 30
 ```
+
+Gameplay Operations tools (reports under `Reports/`):
+```
+dotnet run --project Balance -c Release -- --batch 500 --out ../../Reports/Balance/run
+dotnet run --project Balance -c Release -- --validate | --encounters | --soak 40 | --breakdown 1007
+```
+See `Docs/Enhancement/FINAL_IMPLEMENTATION_REPORT.md`.

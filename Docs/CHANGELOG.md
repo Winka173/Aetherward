@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.3.0 — 2026-10-19 (Gameplay Operations Enhancement)
+- AI chọn mục tiêu kiểu utility (7 thành phần, hysteresis 0.15), 5 tactic đội và AI inspector. A/B: thắng 8,25% → 9,46%.
+- Crystal Evolution: Bastion, Aether Pulse, Thornheart (feature flag, lưu trong save). Đã retune để không nhánh nào áp đảo.
+- Khoá món trong shop; draft luôn có lựa chọn thay thế; run breakdown (nguồn sát thương, bước ngoặt, share code).
+- Save: backup 2 tầng, cách ly file hỏng, ghi nguyên tử; fixture save MVP.
+- Gộp số sát thương, cường độ flash, tự tạm dừng khi mất focus, tiết kiệm pin; phản hồi sau run chỉ lưu trên máy.
+- Công cụ: `--batch`, `--validate`, `--breakdown`, `--encounters`, `--soak`, các cờ A/B; `Tools/Reports/ab_compare.py`; CI workflow (chưa chạy).
+- 192 test. Chưa mở Unity, chưa build, chưa playtest — xem `Docs/Enhancement/FINAL_IMPLEMENTATION_REPORT.md`.
+
+## 0.2.0 — 2026-10-19 (Post-MVP Expansion)
+- 12 nguyên tố, 36 anh hùng, 52 kẻ địch (12 boss), 81 di vật, 6 biome, các chế độ Endless/Daily/Boss Rush, Ascension 1–10, bond — xem `Docs/Expansion/FINAL_REPORT_VI.md`.
+
 ## 0.1.0 — 2026-10-19 (phiên Claude Code đầu tiên)
 - Khởi tạo project Unity 6000.4.8f1 (cấu hình dựa trên Arcane-Brigade), harness .NET.
 - Mô phỏng chiến đấu tất định: 12 anh hùng, 24 tiến hoá, 15 kẻ địch (2 boss), 6 nguyên tố, 15 phản ứng, chống chuỗi proc.
