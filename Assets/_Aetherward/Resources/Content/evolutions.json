@@ -21,7 +21,7 @@
       "skill": { "kind": "heal_rain", "cooldown": 6.5, "mult": 1.0, "gauge": 0.5, "radius": 2.8, "duration": 3.5, "heal": 0.85, "reviveHp": 0.35, "healBelow": 0.95 },
       "effects": [ { "op": "stat", "stat": "heal_power", "value": 0.25, "pct": true } ] },
     { "id": "marina_torrent_caller", "hero": "marina", "role": "mage", "targeting": "cluster",
-      "skill": { "kind": "heal_rain", "cooldown": 5.5, "mult": 1.6, "gauge": 1.0, "radius": 2.4, "duration": 3.0, "heal": 0.3, "offensive": 1, "healBelow": 0.6 },
+      "skill": { "kind": "heal_rain", "cooldown": 5.5, "mult": 0.55, "gauge": 1.0, "radius": 2.4, "duration": 3.0, "heal": 0.3, "offensive": 1, "healBelow": 0.6 },
       "effects": [ { "op": "stat", "stat": "attack", "value": 0.25, "pct": true }, { "op": "stat", "stat": "elemental_mastery", "value": 40 } ] },
 
     { "id": "tidal_floodbreaker", "hero": "tidal",

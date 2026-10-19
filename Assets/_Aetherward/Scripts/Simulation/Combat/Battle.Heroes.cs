@@ -368,8 +368,9 @@ namespace Aetherward.Sim.Combat
                         pos = t.Pos;
                     }
                     float atk = h.Stat(StatId.Attack);
+                    // Zone power is the per-tick damage multiplier (offensive rain only).
                     Zone z = SpawnZone(ZoneKind.HealingRain, pos, s.Params.Get("radius", 2.2f), s.Params.Get("duration", 3f), h, Element.Water,
-                        atk * mult * 0.35f, 0, null);
+                        mult, 0, null);
                     z.Heal = atk * s.Params.Get("heal", 0.55f) * power;
                     z.Offensive = s.Params.Flag("offensive");
                     if (s.Params.Get("reviveHp") > 0f && !h.ReviveUsedThisWave)
