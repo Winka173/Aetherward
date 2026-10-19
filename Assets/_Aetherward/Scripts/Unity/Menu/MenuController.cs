@@ -36,6 +36,7 @@ namespace Aetherward.Game
             Camera cam = GameRoot.EnsureCamera(new Color(0.12f, 0.2f, 0.18f));
             cam.orthographicSize = 6.2f;
             _backdrop = BuildBackdrop();
+            _backdrop.SetParent(transform, false);
             App.Audio.PlayMusic("menu_loop");
             _hasSave = App.HasSavedRun;
             _seed = Pcg32.SeedFromTime(DateTime.UtcNow);

@@ -31,7 +31,9 @@ namespace Aetherward.Game
 
         public static Font Heading, Body, Numbers;
         // Allocation-free style cache key (no per-frame string building on mobile).
-        private static readonly Dictionary<(float, Color, TextAnchor, int), GUIStyle> Styles = new Dictionary<(float, Color, TextAnchor, int), GUIStyle>();
+        // Keyed on pixel size/alignment/flags only; colour is applied per call so fading text does not grow the cache.
+        private static readonly Dictionary<(int, TextAnchor, int), GUIStyle> Styles = new Dictionary<(int, TextAnchor, int), GUIStyle>();
+        private static readonly Dictionary<Tone, GUIStyle> DisabledButtons = new Dictionary<Tone, GUIStyle>();
         private static GUIStyle _panelDark, _panelLight, _panelGlass, _panelDanger, _tooltip, _barBg, _barFill;
         private static readonly Dictionary<Tone, GUIStyle> Buttons = new Dictionary<Tone, GUIStyle>();
         private static readonly Dictionary<string, GUIStyle> CardFrames = new Dictionary<string, GUIStyle>();
@@ -102,6 +104,7 @@ namespace Aetherward.Game
             _barBg = Slice("UI/bar_bg", 18);
             _barFill = Slice("UI/bar_fill", 18);
             Buttons.Clear();
+            DisabledButtons.Clear();
             foreach (Tone t in new[] { Tone.Primary, Tone.Secondary, Tone.Danger, Tone.Ghost })
             {
                 string k = t.ToString().ToLowerInvariant();
@@ -117,6 +120,10 @@ namespace Aetherward.Game
                 Color text = t == Tone.Primary ? new Color(0.2f, 0.1f, 0.05f) : Color.white;
                 st.normal.textColor = st.hover.textColor = st.active.textColor = st.onNormal.textColor = text;
                 Buttons[t] = st;
+                var off = new GUIStyle(st);
+                off.normal.background = off.hover.background = off.active.background = Art.Tex("UI/button_" + k + "_disabled");
+                off.normal.textColor = off.hover.textColor = new Color(0.85f, 0.85f, 0.9f);
+                DisabledButtons[t] = off;
             }
             CardFrames.Clear();
             foreach (string r in new[] { "common", "rare", "epic", "legendary", "cursed" })
@@ -135,8 +142,12 @@ namespace Aetherward.Game
 
         public static GUIStyle Text(float size, Color color, TextAnchor align = TextAnchor.UpperLeft, bool heading = false, bool numbers = false, bool wrap = true)
         {
-            var key = (size, color, align, (heading ? 1 : 0) | (numbers ? 2 : 0) | (wrap ? 4 : 0));
-            if (Styles.TryGetValue(key, out GUIStyle st)) return st;
+            var key = (Px(size), align, (heading ? 1 : 0) | (numbers ? 2 : 0) | (wrap ? 4 : 0));
+            if (Styles.TryGetValue(key, out GUIStyle st))
+            {
+                st.normal.textColor = color;
+                return st;
+            }
             st = new GUIStyle
             {
                 font = numbers ? Numbers : (heading ? Heading : Body),
@@ -194,16 +205,11 @@ namespace Aetherward.Game
 
         public static bool Button(float x, float y, float w, float h, string text, Tone tone = Tone.Primary, bool enabled = true, float size = 30)
         {
-            GUIStyle st = Buttons.TryGetValue(tone, out GUIStyle b) ? b : GUI.skin.button;
+            var styles = enabled ? Buttons : DisabledButtons;
+            GUIStyle st = styles.TryGetValue(tone, out GUIStyle b) ? b : GUI.skin.button;
             bool prevEnabled = GUI.enabled;
-            GUI.enabled = enabled;
-            if (!enabled)
-            {
-                st = new GUIStyle(st);
-                string k = tone.ToString().ToLowerInvariant();
-                st.normal.background = st.hover.background = st.active.background = Art.Tex("UI/button_" + k + "_disabled");
-                st.normal.textColor = st.hover.textColor = new Color(0.85f, 0.85f, 0.9f);
-            }
+            // Respect an outer GUI.enabled = false (e.g. a modal overlay) as well as the per-button flag.
+            GUI.enabled = prevEnabled && enabled;
             st.fontSize = Px(size);
             bool clicked = GUI.Button(R(x, y, w, h), text, st);
             GUI.enabled = prevEnabled;

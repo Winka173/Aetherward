@@ -8,3 +8,4 @@
 - Lớp Unity: menu, chọn đội, bách khoa, lịch sử, cài đặt, chiến trường, HUD, 7 loại màn thưởng, tạm dừng, kết quả; editor tools và script build.
 - 64 test tự động; 180 lượt mô phỏng cân bằng; composite offline.
 - Sửa lỗi: Mưa của Torrent Caller nhân Công hai lần.
+- Sửa sau review lớp Unity: overlay (tạm dừng, cài đặt, xem build, tiến hoá, xác nhận khế ước) chặn click/phím Space/kéo-thả bên dưới; vòng lặp ưu đãi dừng khi danh sách đổi trong frame; nút Đóng cài đặt không còn đè hàng FPS; cache style không phình theo màu; xoá save ngay khi Pha Lê vỡ (không chơi lại đợt thua); không attach controller hai lần; object world/debug/backdrop gắn dưới controller; bỏ qua âm `cast_none` và sprite relic không tồn tại.

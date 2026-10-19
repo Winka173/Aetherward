@@ -16,7 +16,7 @@ namespace Aetherward.Game
             var s = App.Settings;
             Ui.Panel(x, y, w, h);
             Ui.Label(x, y + 26, w, 60, l.Get("settings.title"), 46, Ui.Gold, TextAnchor.MiddleCenter, true);
-            float row = y + 110, rh = 92, inner = x + 50, iw = w - 100;
+            float row = y + 110, rh = 84, inner = x + 50, iw = w - 100;
             Ui.Label(inner, row, iw * 0.42f, rh, l.Get("settings.language"), 28, Ui.White, TextAnchor.MiddleLeft);
             float bx = inner + iw * 0.44f;
             for (int i = 0; i < Localization.Supported.Length; i++)
@@ -53,14 +53,15 @@ namespace Aetherward.Game
             Ui.Label(inner, row, iw * 0.42f, rh, l.Get("settings.fps"), 28, Ui.White, TextAnchor.MiddleLeft);
             for (int i = 0; i < FpsOptions.Length; i++)
             {
-                if (Ui.Button(bx + i * 170, row + 6, 160, 80, FpsOptions[i].ToString(), s.TargetFps == FpsOptions[i] ? Tone.Secondary : Tone.Ghost, true, 26))
+                if (Ui.Button(bx + i * 170, row + 6, 160, 72, FpsOptions[i].ToString(), s.TargetFps == FpsOptions[i] ? Tone.Secondary : Tone.Ghost, true, 26))
                 {
                     s.TargetFps = FpsOptions[i];
                     changed = true;
                 }
             }
             if (changed) App.SaveSettings();
-            return Ui.Button(x + w / 2 - 160, y + h - 120, 320, 92, l.Get("common.close"), Tone.Primary);
+            // Placed below the last row so it never overlaps the FPS buttons.
+            return Ui.Button(x + w / 2 - 160, row + rh + 10, 320, 80, l.Get("common.close"), Tone.Primary);
         }
 
         /// <summary>Hero card: art, identity, stats, skill and passive text generated from data.</summary>

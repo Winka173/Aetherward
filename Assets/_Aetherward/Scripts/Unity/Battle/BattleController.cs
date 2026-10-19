@@ -75,6 +75,7 @@ namespace Aetherward.Game
             BuildWorld();
             _fx = new FxSystem(_fxRoot);
             _debug = new GameObject("DebugOverlay").AddComponent<DebugOverlay>();
+            _debug.transform.SetParent(transform, false);
             _debug.Init(this);
             App.Audio.PlayMusic("battle_loop");
             _speed = App.Settings.DefaultFastSpeed ? 2 : 1;
@@ -99,6 +100,7 @@ namespace Aetherward.Game
         private void BuildWorld()
         {
             _world = new GameObject("World").transform;
+            _world.SetParent(transform, false);
             _unitsRoot = new GameObject("Units").transform;
             _unitsRoot.SetParent(_world, false);
             _fxRoot = new GameObject("Fx").transform;
@@ -132,7 +134,7 @@ namespace Aetherward.Game
             if (s.Phase == RunPhase.Battle && _rc.Battle != null)
             {
                 StepBattle(dt);
-                SyncBattleViews(dt);
+                if (_rc.Battle != null) SyncBattleViews(dt); // StepBattle may resolve the battle
             }
             else
             {
@@ -162,7 +164,7 @@ namespace Aetherward.Game
                 else if (_showSettings) _showSettings = false;
                 else _paused = !_paused;
             }
-            if (Input.GetKeyDown(KeyCode.Space) && _rc.State.Phase == RunPhase.Prepare) StartWave();
+            if (Input.GetKeyDown(KeyCode.Space) && _rc.State.Phase == RunPhase.Prepare && !OverlayOpen) StartWave();
             if (Input.GetKeyDown(KeyCode.F)) _speed = _speed == 1 ? 2 : 1;
             if (Input.GetKeyDown(KeyCode.F3)) App.Settings.ShowRanges = !App.Settings.ShowRanges;
         }
@@ -176,6 +178,12 @@ namespace Aetherward.Game
                 {
                     _resolveDelay = 1.6f;
                     bool cleared = b.Outcome == BattleOutcome.Cleared;
+                    if (b.Outcome == BattleOutcome.CrystalDestroyed)
+                    {
+                        // Drop the wave-start save now so quitting during the defeat banner cannot replay the wave.
+                        _runLost = true;
+                        App.Saves.Delete("run");
+                    }
                     Banner(cleared ? App.Loc.Get("hud.wave_clear") : App.Loc.Get("results.defeat"), cleared ? Ui.Good : Ui.Bad, 1.6f);
                     App.Audio.Play(cleared ? (b.Wave.Number >= App.Content.Waves.Count ? "victory" : "wave_clear") : "defeat", 1f, 0f);
                 }
@@ -236,6 +244,7 @@ namespace Aetherward.Game
         }
 
         private bool _finishing;
+        private bool _runLost;
 
         // ------------------------------------------------------------------ event -> presentation
 
@@ -275,7 +284,7 @@ namespace Aetherward.Game
                     case SimEventType.SkillCast:
                     {
                         if (_units.TryGetValue(e.SourceUid, out UnitView v)) v.Cast();
-                        App.Audio.Play("cast_" + ElementUtil.Key(e.Element), 0.55f, 0.04f, SoundCategory.Sfx, 0.08f);
+                        if (e.Element != Element.None) App.Audio.Play("cast_" + ElementUtil.Key(e.Element), 0.55f, 0.04f, SoundCategory.Sfx, 0.08f);
                         if (!reduced) _fx.Spawn("Vfx/glow", p + new Vector3(0, 0.4f, 0), 0.5f, 2.2f, 0.4f, Ui.ElementColor(e.Element) * new Color(1, 1, 1, 0.55f));
                         break;
                     }
@@ -335,7 +344,7 @@ namespace Aetherward.Game
                         if (!reduced && Random.value < 0.35f) _fx.Spawn("Vfx/glow", p + new Vector3(0, 0.4f, 0), 0.6f, 1.6f, 0.35f, new Color(0.7f, 0.5f, 1f, 0.6f));
                         break;
                     case SimEventType.RelicProc:
-                        if (!reduced && e.Id != null && Random.value < 0.5f)
+                        if (!reduced && e.Id != null && App.Content.Relics.ContainsKey(e.Id) && Random.value < 0.5f)
                             _fx.Spawn("Relics/" + e.Id, p + new Vector3(0, 1.2f, 0), 0.25f, 0.3f, 0.7f, new Color(1, 1, 1, 0.9f), 0, 0, new Vector3(0, 0.8f, 0));
                         break;
                     case SimEventType.Taunt:
@@ -850,7 +859,7 @@ namespace Aetherward.Game
 
         private void HandlePlacementInput()
         {
-            if (_modalOpen || _paused) return;
+            if (_modalOpen || OverlayOpen) return;
             Vector3 w = PointerWorld();
             if (Input.GetMouseButtonDown(0) && !PointerOverUi())
             {

@@ -31,6 +31,11 @@ namespace Aetherward.Game
             Ui.Begin();
             GUI.depth = 0;
             RunState s = _rc.State;
+            _offersChanged = false;
+            bool evolveOpen = s.Phase == RunPhase.Prepare && _evolveHero >= 0;
+            bool prevEnabled = GUI.enabled;
+            // Everything under an open overlay is drawn but not clickable.
+            GUI.enabled = prevEnabled && !(evolveOpen || _showBuild || _paused || _showSettings);
             _text.Draw(_cam);
             DrawTopBar();
             if (s.Phase == RunPhase.Battle && _rc.Battle != null)
@@ -47,8 +52,12 @@ namespace Aetherward.Game
             _modalOpen = s.Phase == RunPhase.Reward;
             if (s.Phase == RunPhase.Reward) DrawReward();
             DrawBanner();
+            GUI.enabled = prevEnabled && !(_showBuild || _paused || _showSettings);
+            if (evolveOpen) DrawEvolveModal(_evolveHero, false);
+            GUI.enabled = prevEnabled && !(_paused || _showSettings);
             if (_showBuild) DrawBuild();
-            if (_paused) DrawPause();
+            GUI.enabled = prevEnabled;
+            if (_paused && !_showSettings) DrawPause();
             if (_showSettings)
             {
                 Ui.DrawRect(0, 0, Ui.W, Ui.H, new Color(0, 0, 0, 0.5f));
@@ -280,10 +289,14 @@ namespace Aetherward.Game
                 Ui.Label(Ui.W / 2 - 430, 140, 860, 80, L.Get("tutorial.2"), 24, Ui.White, TextAnchor.MiddleCenter);
             }
             DrawHeroDock(false);
-            if (_evolveHero >= 0) DrawEvolveModal(_evolveHero, false);
         }
 
         private int _evolveHero = -1;
+        /// <summary>Set when a choice/reroll/skip replaced the offer list this frame; offer loops stop drawing stale entries.</summary>
+        private bool _offersChanged;
+
+        /// <summary>True while a modal overlay owns input (keyboard shortcuts must not act beneath it).</summary>
+        private bool OverlayOpen => _paused || _showBuild || _showSettings || _evolveHero >= 0 || _pactPending >= 0;
 
         // ------------------------------------------------------------------ rewards
 
@@ -318,12 +331,14 @@ namespace Aetherward.Game
                 {
                     if (_rc.Reroll()) App.Audio.Ui("ui_reroll");
                     _focusOffer = -1;
+                    _offersChanged = true;
                 }
             }
             if (skipKey != null && Ui.Button(canReroll ? Ui.W / 2 + 20 : Ui.W / 2 - 200, y, 400, 100, L.Get(skipKey), skipDanger ? Tone.Danger : Tone.Ghost, true, 28))
             {
                 _rc.Skip();
                 _focusOffer = -1;
+                _offersChanged = true;
                 AfterReward();
             }
             Ui.Label(40, y + 20, 600, 60, L.Format("reward.save_gold", App.Content.Economy.InterestCap), 20, Ui.Muted, TextAnchor.MiddleLeft);
@@ -331,6 +346,7 @@ namespace Aetherward.Game
 
         private void AfterReward()
         {
+            _evolveHero = -1;
             if (_rc.State.Phase != RunPhase.Reward)
             {
                 App.SaveRun();
@@ -344,6 +360,7 @@ namespace Aetherward.Game
             {
                 App.Audio.Ui("ui_confirm");
                 _focusOffer = -1;
+                _offersChanged = true;
                 AfterReward();
             }
             else App.Audio.Ui("ui_error");
@@ -365,7 +382,9 @@ namespace Aetherward.Game
             int n = s.Offers.Count;
             float cw = 440, ch = 600, gap = 40;
             float x0 = Ui.W / 2 - (n * cw + (n - 1) * gap) / 2, y = 250;
-            for (int i = 0; i < n; i++)
+            bool prevEnabled = GUI.enabled;
+            if (_pactPending >= 0) GUI.enabled = false; // the confirm dialog owns input
+            for (int i = 0; i < n && !_offersChanged; i++)
             {
                 Offer o = s.Offers[i];
                 CardDef c = App.Content.Cards[o.Id];
@@ -387,8 +406,11 @@ namespace Aetherward.Game
                     else Choose(i);
                 }
             }
+            GUI.enabled = prevEnabled;
+            if (_offersChanged) return;
             if (_pactPending >= 0)
             {
+                Block(0, 0, Ui.W, Ui.H);
                 Ui.DrawRect(0, 0, Ui.W, Ui.H, new Color(0, 0, 0, 0.6f));
                 Ui.Panel(Ui.W / 2 - 500, Ui.H / 2 - 190, 1000, 380, "danger");
                 Ui.Label(Ui.W / 2 - 460, Ui.H / 2 - 160, 920, 160, L.Get("reward.pact_confirm"), 30, Ui.White, TextAnchor.MiddleCenter, true);
@@ -410,13 +432,13 @@ namespace Aetherward.Game
             int n = s.Offers.Count;
             float cw = 460, ch = 620, gap = 36;
             float x0 = Ui.W / 2 - (n * cw + (n - 1) * gap) / 2, y = 250;
-            for (int i = 0; i < n; i++)
+            for (int i = 0; i < n && !_offersChanged; i++)
             {
                 Offer o = s.Offers[i];
                 float x = x0 + i * (cw + gap);
                 DrawHeroOffer(o, x, y, cw, ch, i, "reward.recruit_btn");
             }
-            RewardFooter(true, "common.skip");
+            if (!_offersChanged) RewardFooter(true, "common.skip");
         }
 
         private void DrawHeroOffer(Offer o, float x, float y, float cw, float ch, int index, string buttonKey)
@@ -449,8 +471,8 @@ namespace Aetherward.Game
             int n = s.Offers.Count;
             float cw = 440, ch = 560, gap = 40;
             float x0 = Ui.W / 2 - (n * cw + (n - 1) * gap) / 2, y = 260;
-            for (int i = 0; i < n; i++) DrawRelicOffer(s.Offers[i], x0 + i * (cw + gap), y, cw, ch, i, "reward.take");
-            RewardFooter(false, "common.skip");
+            for (int i = 0; i < n && !_offersChanged; i++) DrawRelicOffer(s.Offers[i], x0 + i * (cw + gap), y, cw, ch, i, "reward.take");
+            if (!_offersChanged) RewardFooter(false, "common.skip");
         }
 
         private void DrawRelicOffer(Offer o, float x, float y, float cw, float ch, int index, string buttonKey)
@@ -488,7 +510,7 @@ namespace Aetherward.Game
             ch *= scale;
             float rowW = Mathf.Min(items.Count, perRow) * (cw + gap) - gap;
             float x0 = Ui.W / 2 - rowW / 2, y0 = 240;
-            for (int k = 0; k < items.Count; k++)
+            for (int k = 0; k < items.Count && !_offersChanged; k++)
             {
                 int i = items[k];
                 Offer o = s.Offers[i];
@@ -527,7 +549,7 @@ namespace Aetherward.Game
                     }
                 }
             }
-            RewardFooter(true, "reward.leave");
+            if (!_offersChanged) RewardFooter(true, "reward.leave");
         }
 
         private void DrawEvolutionReward()
@@ -553,7 +575,7 @@ namespace Aetherward.Game
                 DrawEvolveModal(_evolveHero, true);
             }
             Ui.Label(0, Ui.H - 220, Ui.W, 40, L.Format("reward.evolve_cost", App.Content.Economy.EvolutionEssence) + " · " + L.Get("common.essence") + " " + s.Essence, 24, new Color(0.8f, 0.65f, 1f), TextAnchor.MiddleCenter, true);
-            RewardFooter(false, "common.done");
+            if (!_offersChanged) RewardFooter(false, "common.done");
         }
 
         /// <summary>Two evolution branches side by side with full mechanical descriptions.</summary>
@@ -591,7 +613,9 @@ namespace Aetherward.Game
                     {
                         App.Audio.Play("evolution", 1f, 0f, SoundCategory.Ui);
                         _evolveHero = -1;
+                        _offersChanged = true;
                         App.SaveRun();
+                        return;
                     }
                 }
             }
@@ -607,7 +631,7 @@ namespace Aetherward.Game
             Ui.Label(x + 40, 270, w - 80, 50, L.Get(ev.NameKey), 36, Ui.Gold, TextAnchor.UpperLeft, true);
             Ui.Label(x + 40, 324, w - 80, 90, L.Get(ev.DescKey), 24, Ui.White);
             float y = 460;
-            for (int i = 0; i < s.Offers.Count; i++)
+            for (int i = 0; i < s.Offers.Count && !_offersChanged; i++)
             {
                 EventOption o = ev.Options[s.Offers[i].OptionIndex];
                 string text = L.Get(o.TextKey);
@@ -712,7 +736,7 @@ namespace Aetherward.Game
             if (Ui.Button(x + 60, by, w - 120, 100, L.Get("pause.to_menu"), Tone.Secondary))
             {
                 _paused = false;
-                App.SaveRun();
+                if (!_runLost) App.SaveRun();
                 App.SaveMeta();
                 App.Run = null;
                 GameRoot.Instance.GoTo(AppScreen.MainMenu);

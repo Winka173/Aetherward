@@ -18,6 +18,8 @@ Phiên: Claude Code (cloud container Linux, không có Unity Editor). Nhánh: `m
 - 7 loại màn thưởng (draft, chiêu mộ, cửa hàng, di vật, tiến hoá, sự kiện, khế ước có xác nhận), tạm dừng/lưu/bỏ lượt, xem build, màn kết quả.
 - Editor: Validate Content and Art, Rebuild Scenes, Play From Boot, mô phỏng 6 lối chơi, xoá save, postprocessor texture, build Windows/Android/iOS (menu + batch).
 
+- Đã tự review lớp Unity và sửa 11 lỗi runtime tiềm ẩn (overlay để lọt input, vòng lặp ưu đãi đọc danh sách cũ, bố cục cài đặt chồng nút, save còn sau khi thua, attach controller hai lần…) — xem `Docs/CHANGELOG.md`. Các sửa này chỉ được type-check, chưa chạy trong Unity.
+
 **Asset nguyên bản**: 333 texture (hero 7 tư thế, enemy 2 frame, boss, arena, crystal 3 trạng thái, VFX, icon, UI 9-slice), 43 file âm thanh (SFX theo nguyên tố + 3 vòng nhạc), 811 khoá dịch EN/VI. Tất cả tái tạo được bằng script trong `Tools/`.
 
 ## 2. Đã kiểm chứng (bằng chứng thật)

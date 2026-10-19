@@ -52,7 +52,8 @@ namespace Aetherward.Game
 
         private void Start()
         {
-            AttachFor(SceneManager.GetActiveScene().name);
+            // sceneLoaded may already have attached a controller for the first scene.
+            if (_controller == null) AttachFor(SceneManager.GetActiveScene().name);
         }
 
         private void OnDestroy()
