@@ -76,7 +76,7 @@ namespace Aetherward.Game
             return text;
         }
 
-        public static void HeroDetail(float x, float y, float w, float h, HeroDef def, string evolutionId = null, int level = 1, string traitId = null)
+        public static void HeroDetail(float x, float y, float w, float h, HeroDef def, string evolutionId = null, int level = 1, string traitId = null, string awakened = null)
         {
             var l = App.Loc;
             Ui.Panel(x, y, w, h);
@@ -125,6 +125,16 @@ namespace Aetherward.Game
                 yy += 44;
                 Ui.Label(x + 30, yy, w - 60, 100, trait, 22, Ui.White);
                 yy += Ui.TextHeight(trait, 22, w - 60) + 10;
+            }
+            if (awakened != null && ElementUtil.TryParse(awakened, out Element aw) && aw != Element.None)
+            {
+                string elName = l.Get("element." + awakened);
+                Ui.Icon(x + 30, yy, 40, 40, Art.ElementIcon(aw));
+                Ui.Label(x + 78, yy, w - 110, 40, "<b>" + l.Format("hero.awakened", elName) + "</b>", 26, Ui.ElementColor(aw), TextAnchor.MiddleLeft, true);
+                yy += 44;
+                string ad = l.Format("hero.awakened.desc", elName);
+                Ui.Label(x + 30, yy, w - 60, 80, ad, 22, Ui.White);
+                yy += Ui.TextHeight(ad, 22, w - 60) + 10;
             }
             if (evolutionId == null && yy < y + h - 90)
             {

@@ -85,7 +85,25 @@ namespace Aetherward.Sim.Meta
             new UnlockRule { Id = "hero:vesper", Condition = "total_reactions", Value = 250 },
             new UnlockRule { Id = "hero:sable", Condition = "reach_wave", Value = 16 },
             new UnlockRule { Id = "relic:plague_bell", Condition = "distinct_reactions", Value = 20 },
-            new UnlockRule { Id = "relic:worldroot_heart", Condition = "reach_wave", Value = 19 }
+            new UnlockRule { Id = "relic:worldroot_heart", Condition = "reach_wave", Value = 19 },
+            // Expansion Phase 3
+            new UnlockRule { Id = "hero:solenne", Condition = "reach_wave", Value = 3 },
+            new UnlockRule { Id = "hero:mirel", Condition = "total_reactions", Value = 40 },
+            new UnlockRule { Id = "hero:veyra", Condition = "reach_wave", Value = 5 },
+            new UnlockRule { Id = "hero:isolde", Condition = "distinct_reactions", Value = 6 },
+            new UnlockRule { Id = "hero:aeris", Condition = "hero_runs", Value = 3 },
+            new UnlockRule { Id = "hero:doran", Condition = "reach_wave", Value = 7 },
+            new UnlockRule { Id = "hero:elowen", Condition = "total_reactions", Value = 180 },
+            new UnlockRule { Id = "hero:morven", Condition = "reach_wave", Value = 13 },
+            new UnlockRule { Id = "hero:caelis", Condition = "distinct_reactions", Value = 14 },
+            new UnlockRule { Id = "hero:oriane", Condition = "total_reactions", Value = 350 },
+            new UnlockRule { Id = "hero:zerith", Condition = "reach_wave", Value = 17 },
+            new UnlockRule { Id = "hero:maelis", Condition = "victory", Value = 1 },
+            new UnlockRule { Id = "relic:infinite_codex", Condition = "distinct_reactions", Value = 22 },
+            new UnlockRule { Id = "relic:event_horizon_core", Condition = "defeat_boss", Param = "gravemaw" },
+            new UnlockRule { Id = "relic:ember_codex", Condition = "total_reactions", Value = 500 },
+            new UnlockRule { Id = "relic:tidal_engine", Condition = "hero_runs", Value = 8 },
+            new UnlockRule { Id = "relic:astral_compass", Condition = "defeat_boss", Param = "seraphyne" }
         };
 
         /// <summary>Highest Ascension that can be unlocked (data: difficulty.json).</summary>

@@ -25,6 +25,7 @@ namespace Aetherward.Sim.Run
         public int Node = -1;
         public int JoinedWave = 1;
         public string TraitId;            // rolled on recruitment; null for starters
+        public string Awakened;           // Elemental Awakening: secondary element key (run-only), null if none
         // Lifetime totals for the results screen.
         public float DamageDealt;
         public float HealingDone;

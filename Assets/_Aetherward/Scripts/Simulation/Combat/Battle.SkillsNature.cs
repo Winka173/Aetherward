@@ -183,7 +183,7 @@ namespace Aetherward.Sim.Combat
             {
                 case "deep_roots": return e.Rooted ? h.PassiveParams.Get("bonus", 0.3f) : 0f;
                 case "catalysis": return SimMath.Min(h.PassiveParams.Get("cap", 0.3f), e.PoisonStacks * h.PassiveParams.Get("perStack", 0.04f));
-                default: return 0f;
+                default: return PassiveBonusH1(h, e);
             }
         }
 

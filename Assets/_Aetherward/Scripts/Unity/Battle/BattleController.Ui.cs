@@ -179,7 +179,7 @@ namespace Aetherward.Game
                     float pw = 900, ph = 640;
                     float px = Ui.W - pw - 20, py = Ui.H - 220 - ph;
                     Block(px, py, pw, ph);
-                    SharedPanels.HeroDetail(px, py, pw, ph, App.Content.Heroes[h.DefId], h.EvolutionId, h.Level, h.TraitId);
+                    SharedPanels.HeroDetail(px, py, pw, ph, App.Content.Heroes[h.DefId], h.EvolutionId, h.Level, h.TraitId, h.Awakened);
                     int next = h.Level < App.Content.Economy.LevelCap ? App.Content.Economy.XpToLevel[h.Level] : -1;
                     Ui.Label(px + 30, py + ph - 56, 500, 40, next > 0 ? L.Format("prep.xp", h.Xp, next) : L.Get("prep.max_level"), 22, Ui.Muted);
                     if (Ui.Button(px + pw - 200, py + ph - 100, 170, 80, L.Get("common.close"), Tone.Ghost, true, 24)) _heroInfoUid = -1;

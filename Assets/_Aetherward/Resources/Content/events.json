@@ -18,6 +18,12 @@
         { "crystalHpPct": 0.2 },
         { "gold": -6, "relic": "overgrowth" },
         { "effects": [ { "op": "card", "id": "reinforced_plate" } ] }
+      ] },
+    { "id": "elemental_shrine",
+      "options": [
+        { "effects": [ { "op": "awaken" } ], "essence": -1 },
+        { "gold": 8 },
+        { "essence": 1 }
       ] }
   ]
 }

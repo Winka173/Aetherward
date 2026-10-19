@@ -236,6 +236,8 @@ namespace Aetherward.Sim.Combat
             // Element gauge is applied at most every other basic attack: keeps auras readable.
             bool slipstream = h.PassiveKind == "slipstream" && h.PassiveStacks > 0;
             if (h.AttackCount % 2 == 0 && !h.Basic.Params.Flag("alwaysApply") && !slipstream) d.Gauge = 0f;
+            // Elemental Awakening: every other element-applying basic carries the secondary element.
+            if (h.SecondaryElement != Element.None && h.AttackCount % 4 == 1) d.Element = h.SecondaryElement;
 
             int pierceEvery = (int)(h.Skill.Params.Get("basicPierceEvery") > 0 ? h.Skill.Params.Get("basicPierceEvery") : h.Basic.Params.Get("pierceEvery"));
             if (h.Melee || h.Basic.Kind == "melee")
@@ -669,6 +671,7 @@ namespace Aetherward.Sim.Combat
             {
                 FireTrigger("skill_cast", h, null, castPos, null);
                 TryTraitEcho(h);
+                TryAllyEcho(h);
             }
             return true;
         }

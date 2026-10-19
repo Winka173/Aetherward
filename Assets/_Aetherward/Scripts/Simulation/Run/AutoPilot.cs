@@ -114,6 +114,15 @@ namespace Aetherward.Sim.Run
             },
             new Strategy
             {
+                Name = "arcane_void",
+                Starters = new[] { "caelis", "zerith" },
+                RecruitPriority = new[] { "volt", "ignis", "oriane", "maelis", "zephyr", "marina" },
+                RelicPriority = new[] { "echo_prism", "rune_inkwell", "void_lodestone", "null_shard", "infinite_codex", "event_horizon_core" },
+                CardPriority = new[] { "arcane_accord", "void_covenant", "spec_caelis_resonant_echo", "spec_zerith_event_pull" },
+                EvolutionPriority = new[] { "caelis_arcane_barrage", "zerith_singularity_lord", "oriane_grand_conductor", "maelis_null_bastion" }
+            },
+            new Strategy
+            {
                 Name = "balanced",
                 Starters = new[] { "terra", "ignis" },
                 RecruitPriority = new[] { "marina", "volt", "freya", "sylph", "cinder", "zephyr" },

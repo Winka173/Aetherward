@@ -260,7 +260,7 @@ def main():
         add("card.%s.desc" % cid, (d_en, d_vi))
     for cid, pair in CARD_DRAWBACKS.items():
         add("card.%s.drawback" % cid, pair)
-    for evid, (name, desc, options) in EVENTS.items():
+    for evid, (name, desc, options) in list(EVENTS.items()) + list(X.EVENTS_X.items()):
         add("event.%s.name" % evid, name)
         add("event.%s.desc" % evid, desc)
         for i, (text, drawback) in enumerate(options):

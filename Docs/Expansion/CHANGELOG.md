@@ -45,3 +45,10 @@
 - Lỗi bắt được nhờ test: `heal_power` của Sable là 0.1 (hệ số nhân ⇒ chỉ hồi 10%) → 1.1.
 - Affix tương thích: elite không nhận affix kháng nguyên tố mà nó đã kháng ≥30%, không nhận affix tốc độ nếu đã nhanh/bay/bứt tốc, summon không có affix; kháng sau affix bị chặn ở 75% (trước đây Flame Devourer + fireproof = miễn nhiễm Lửa). Validator kiểm affix ghi sẵn trong đợt.
 - Test: 136/136 (thêm `NatureHeroTests` 11, test affix).
+
+## Phase 3 — Arcane/Void, đủ 36 hero, relic/fusion/keystone, Thức tỉnh (2026-10-19)
+- **12 hero mới (36 tổng)**: Caelis (lặp chiêu đồng minh, chống vòng lặp), Oriane (vòng cổ tự khuếch đại phản ứng), Zerith (khe nứt kéo + Bất Ổn, không kéo vào Pha Lê), Maelis (lá chắn hư không chặn đạn + phong ấn), Solenne (dấu bỏng nổ ở ngưỡng, tiêu dấu trước khi nổ), Mirel (đẩy lùi + dòng nước), Veyra (tích tụ theo mục tiêu, reset khi đổi), Isolde (phá băng), Aeris (dời vùng có giới hạn, không dời tường, không vào Pha Lê), Doran (Thủ → sát thương, tối đa 40%), Elowen (tia sáng chiếu + hồi máu), Morven (gánh sát thương cho đồng minh máu thấp, không xuống dưới 25% HP). 24 tiến hoá đổi cơ chế, 14 field mới.
+- **22 relic** (12 thường, 5 keystone ⇒ **12 keystone**, 5 hợp thể ⇒ **11 công thức hợp thể**), **14 thẻ** (2 cộng hưởng Arcane/Void, 12 chuyên môn).
+- **Thức tỉnh nguyên tố** (sự kiện Elemental Shrine): hero cấp 2+ cao nhất nhận nguyên tố phụ tạo phản ứng Signature với nguyên tố gốc; tối đa 2/lượt; tất định theo seed; lưu save; mỗi 2 đòn thường gắn nguyên tố có 1 đòn dùng nguyên tố phụ; hiển thị trong bảng hero.
+- Validator: hiệu ứng tiến hoá chỉ được dùng `stat` (trước đây op khác bị bỏ qua âm thầm).
+- AutoPilot: `arcane_void`.

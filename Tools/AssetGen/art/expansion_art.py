@@ -431,3 +431,30 @@ HERO_FIELD_STYLE.update({
     "toxic_patch": (hex2rgb("#7a9a2a"), POISON, "bubbles"), "lingering_miasma": (hex2rgb("#5a3a7a"), POISON, "bubbles"),
     "spore_garden": (NATURE, NATURE2, "leaves"),
 })
+
+
+# Expansion Phase 3: hero skill fields (Arcane/Void and the remaining specialists).
+HERO_FIELD_STYLE.update({
+    "rune_circle": (ARCANE, ARCANE2, "rings"), "grand_rune": (ARCANE, GOLD, "rays"), "sigil_ward": (ARCANE, LIGHT2, "crosses"),
+    "rift": (VOID, VOID2, "spiral"), "deep_rift": (hex2rgb("#1a1440"), VOID2, "spiral"),
+    "void_ward": (VOID, hex2rgb("#a8a0ff"), "rings"), "null_bastion": (hex2rgb("#2a2060"), LIGHT2, "rings"),
+    "portal_ward": (VOID, ARCANE2, "spiral"), "river_stream": (WATER, WATER2, "bubbles"), "flood_stream": (hex2rgb("#2a5aa0"), WATER2, "bubbles"),
+    "healing_stream": (WATER2, NATURE2, "crosses"), "gale_snare": (WIND, WIND2, "spiral"),
+    "gloom_mire": (SHADOW, SHADOW2, "bubbles"), "dread_mire": (hex2rgb("#2a0a20"), SHADOW2, "eclipse"),
+})
+
+# Expansion Phase 3 relics.
+icons.RELIC_ART.update({
+    "echo_prism": ("mirror", ARCANE, None), "rune_inkwell": ("book", ARCANE, ARCANE2), "void_lodestone": ("gem", VOID, None),
+    "null_shard": ("crack_shield", VOID, None), "scribe_quill": ("feather", FIRE, None), "river_pearl": ("drop", WATER2, None),
+    "copper_quiver": ("quiver", hex2rgb("#c87a3a"), BOLT2), "frostbreaker_hammer": ("fist", ICE, None), "tempest_chime": ("bell", WIND, None),
+    "granite_knuckles": ("fist", EARTH, None), "sun_hymnal": ("book", LIGHT, None), "gloom_lantern": ("eye", SHADOW, None),
+    "infinite_codex": ("book", ARCANE, GOLD), "event_horizon_core": ("gem", hex2rgb("#140c38"), VOID), "ember_codex": ("scroll", FIRE, GOLD),
+    "tidal_engine": ("gear", WATER, ARCANE), "astral_compass": ("target", LIGHT, VOID),
+    "grand_grimoire": ("book", GOLD, ARCANE), "event_singularity": ("gem", VOID, ARCANE), "ember_testament": ("scroll", FIRE, RED),
+    "ocean_heart": ("heart", WATER, None), "dusk_hymn": ("book", SHADOW, LIGHT),
+})
+icons.RELIC_EXTRA.update({"infinite_codex": "star", "event_horizon_core": "star", "ember_codex": "flame", "tidal_engine": "drop",
+                          "astral_compass": "star", "grand_grimoire": "echo", "event_singularity": "star", "dusk_hymn": "moon"})
+
+icons.CARD_ART.update({"arcane_accord": ("rune", ARCANE), "void_covenant": ("void_ring", VOID)})

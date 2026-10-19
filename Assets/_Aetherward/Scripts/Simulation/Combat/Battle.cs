@@ -15,6 +15,7 @@ namespace Aetherward.Sim.Combat
         public float HpFraction = 1f;
         public bool Downed;
         public string TraitId;
+        public Element Awakened;
     }
 
     public sealed class BattleSetup

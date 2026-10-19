@@ -27,6 +27,8 @@ namespace Aetherward.Sim.Combat
                 default:
                 {
                     bool cast = CastSkillNature(h, s, power, mult, el, ref castPos, out bool handled);
+                    if (handled) return cast;
+                    cast = CastSkillH1(h, s, power, mult, range, el, ref castPos, out handled);
                     return handled && cast;
                 }
             }
@@ -318,6 +320,7 @@ namespace Aetherward.Sim.Combat
 
         private void TickPassiveExt(HeroUnit h, float dt)
         {
+            TickPassiveH1(h, dt);
             switch (h.PassiveKind)
             {
                 case "overclock":
@@ -356,6 +359,7 @@ namespace Aetherward.Sim.Combat
 
         private void OnBasicAttackPassiveExt(HeroUnit h, EnemyUnit target)
         {
+            OnBasicAttackPassiveH1(h, target);
             switch (h.PassiveKind)
             {
                 case "phoenix_heat":
@@ -440,6 +444,7 @@ namespace Aetherward.Sim.Combat
         /// <summary>Reaction-counting passives (Tide Oracle) tick on every reaction in the battle.</summary>
         private void NotifyReactionPassives()
         {
+            NotifyReactionPassivesH1();
             for (int i = 0; i < Heroes.Count; i++)
             {
                 HeroUnit h = Heroes[i];

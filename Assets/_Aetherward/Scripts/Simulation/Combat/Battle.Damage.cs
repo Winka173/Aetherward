@@ -637,6 +637,7 @@ namespace Aetherward.Sim.Combat
             float dr = h.Stat(StatId.DamageReduction) + (h.FieldTimer > 0f ? h.FieldDamageReduction : 0f) + HeroGuardReduction(h) + SelfPassiveReduction(h);
             amount *= 1f - SimMath.Clamp(dr, 0f, 0.75f);
             if (h.FeverTimer > 0f) amount *= 1f + h.FeverAmount;
+            amount = GloomRedirect(h, amount);
             if (attacker != null)
             {
                 if (attacker.Chilled) amount *= 1f - attacker.ChillDamageReduction;

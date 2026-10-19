@@ -208,7 +208,7 @@ namespace Aetherward.Sim.Meta
                     .Set("uid", h.Uid).Set("id", h.DefId).Set("level", h.Level).Set("xp", h.Xp).Set("evo", h.EvolutionId)
                     .Set("hp", h.HpFraction).Set("downed", h.Downed).Set("node", h.Node).Set("joined", h.JoinedWave)
                     .Set("dmg", h.DamageDealt).Set("heal", h.HealingDone).Set("taken", h.DamageTaken).Set("kills", h.Kills)
-                    .Set("reactions", h.Reactions).Set("casts", h.SkillCasts).Set("downs", h.TimesDowned).Set("trait", h.TraitId));
+                    .Set("reactions", h.Reactions).Set("casts", h.SkillCasts).Set("downs", h.TimesDowned).Set("trait", h.TraitId).Set("awaken", h.Awakened));
             }
             JsonNode offers = JsonNode.NewArray();
             foreach (Offer o in s.Offers)
@@ -299,7 +299,8 @@ namespace Aetherward.Sim.Meta
                         HpFraction = h.Float("hp", 1f), Downed = h.Bool("downed"), Node = h.Int("node", -1), JoinedWave = h.Int("joined", 1),
                         DamageDealt = h.Float("dmg"), HealingDone = h.Float("heal"), DamageTaken = h.Float("taken"), Kills = h.Int("kills"),
                         Reactions = h.Int("reactions"), SkillCasts = h.Int("casts"), TimesDowned = h.Int("downs"),
-                        TraitId = db.Traits.ContainsKey(h.Str("trait") ?? "") ? h.Str("trait") : null // retired traits drop gracefully
+                        TraitId = db.Traits.ContainsKey(h.Str("trait") ?? "") ? h.Str("trait") : null, // retired traits drop gracefully
+                        Awakened = ElementUtil.TryParse(h.Str("awaken") ?? "", out Element aw) && aw != Element.None ? h.Str("awaken") : null
                     });
                 }
                 foreach (string r in d.StringList("relics")) if (db.Relics.ContainsKey(r)) s.Relics.Add(r);

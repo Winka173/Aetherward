@@ -12,7 +12,7 @@ namespace Aetherward.Sim.Content
     {
         private static readonly HashSet<string> KnownOps = new HashSet<string>
         {
-            "stat", "crystal", "enemy", "reaction", "gauge", "healing", "economy", "trigger", "rule", "skill", "card"
+            "stat", "crystal", "enemy", "reaction", "gauge", "healing", "economy", "trigger", "rule", "skill", "card", "awaken"
         };
 
         private static readonly HashSet<string> KnownTriggers = new HashSet<string>
@@ -40,7 +40,9 @@ namespace Aetherward.Sim.Content
             "frost_nova", "ice_shield", "vortex", "pierce_arrow", "stone_barrier", "ground_slam",
             // expansion
             "dawn_aegis", "oath_of_doom", "phoenix_slash", "tide_blessing", "deploy_pylon", "frost_aegis", "gust_step", "raise_wall",
-            "root_bloom", "thorn_wall", "catalyst_flask", "plague_cure"
+            "root_bloom", "thorn_wall", "catalyst_flask", "plague_cure",
+            "arcane_echo", "rune_circle", "gravity_rift", "void_ward", "ember_script", "river_surge", "charged_shot",
+            "shatter_lance", "zone_drift", "fracture_punch", "sun_beam", "curse_mire"
         };
 
         public static readonly HashSet<string> KnownActionOps = new HashSet<string>
@@ -146,6 +148,8 @@ namespace Aetherward.Sim.Content
                 if (e.Skill != null && e.Skill.Kind != null && !KnownSkills.Contains(e.Skill.Kind)) Err("evolution " + e.Id + ": unknown skill " + e.Skill.Kind);
                 if (e.Skill == null && e.PassiveKind == null && !e.RoleOverride.HasValue) Err("evolution " + e.Id + ": must change mechanics");
                 CheckOps(db, "evolution " + e.Id, e.Effects, errors);
+                foreach (EffectOp op in e.Effects)
+                    if (op.Op != "stat") Err("evolution " + e.Id + ": only stat effects are applied (got " + op.Op + ")");
             }
             foreach (EnemyDef en in db.Enemies.Values)
             {

@@ -333,7 +333,8 @@ namespace Aetherward.Sim.Run
                     EvolutionId = h.EvolutionId,
                     HpFraction = h.HpFraction,
                     Downed = h.Downed,
-                    TraitId = h.TraitId
+                    TraitId = h.TraitId,
+                    Awakened = h.Awakened != null && ElementUtil.TryParse(h.Awakened, out Element aw) ? aw : Element.None
                 });
             }
             return setup;
@@ -912,11 +913,63 @@ namespace Aetherward.Sim.Run
             return pool[pool.Count - 1].Id;
         }
 
+        public const int MaxAwakenings = 2;
+
+        /// <summary>
+        /// Elemental Awakening (run-only): the highest-level eligible hero (level 2+, not yet awakened)
+        /// gains a secondary element that forms a signature reaction with its own. At most
+        /// <see cref="MaxAwakenings"/> per run. Deterministic per seed/wave. Returns the hero or null.
+        /// </summary>
+        public HeroRunState Awaken()
+        {
+            int awakened = 0;
+            HeroRunState best = null;
+            foreach (HeroRunState h in State.Heroes)
+            {
+                if (h.Awakened != null) { awakened++; continue; }
+                if (h.Level < 2) continue;
+                if (best == null || h.Level > best.Level || (h.Level == best.Level && h.Uid < best.Uid)) best = h;
+            }
+            if (best == null || awakened >= MaxAwakenings) return null;
+            List<Element> options = AwakeningOptions(Content.Heroes[best.DefId].Element);
+            if (options.Count == 0) return null;
+            Pcg32 rng = Pcg32.Derive(State.Seed, "awaken:" + State.Wave + ":" + best.Uid);
+            best.Awakened = ElementUtil.Key(options[rng.Range(0, options.Count)]);
+            return best;
+        }
+
+        public bool CanAwaken()
+        {
+            int awakened = 0;
+            bool eligible = false;
+            foreach (HeroRunState h in State.Heroes)
+            {
+                if (h.Awakened != null) awakened++;
+                else if (h.Level >= 2) eligible = true;
+            }
+            return eligible && awakened < MaxAwakenings;
+        }
+
+        /// <summary>Secondary elements that form an authored (signature) reaction with the primary.</summary>
+        public List<Element> AwakeningOptions(Element primary)
+        {
+            var list = new List<Element>();
+            foreach (Element el in ElementUtil.All)
+            {
+                if (el == primary) continue;
+                ReactionDef r = Content.ReactionFor(primary, el);
+                if (r != null && r.Category == ReactionCategory.Signature) list.Add(el);
+            }
+            return list;
+        }
+
         private bool ApplyEventOption(string eventId, int option)
         {
             if (!Content.Events.TryGetValue(eventId, out EventDef ev) || option < 0 || option >= ev.Options.Count) return false;
             EventOption o = ev.Options[option];
             if (o.Gold < 0 && State.Gold < -o.Gold) return false;
+            if (o.Essence < 0 && State.Essence < -o.Essence) return false;
+            foreach (EffectOp op in o.Effects) if (op.Op == "awaken" && !CanAwaken()) return false;
             State.Gold += o.Gold;
             if (o.Gold > 0) State.GoldEarnedTotal += o.Gold;
             State.Essence += o.Essence;
@@ -930,6 +983,7 @@ namespace Aetherward.Sim.Run
             foreach (EffectOp op in o.Effects)
             {
                 if (op.Op == "card" && Content.Cards.ContainsKey(op.Params.GetString("id"))) AddCard(op.Params.GetString("id"));
+                if (op.Op == "awaken") Awaken();
             }
             return true;
         }

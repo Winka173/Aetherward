@@ -62,6 +62,7 @@ namespace Aetherward.Sim.Combat
                     if (op.Op == "stat") Accumulate(op, 1, flat, pct);
             }
 
+            if (l.Awakened != Element.None && l.Awakened != def.Element) h.SecondaryElement = l.Awakened;
             if (!string.IsNullOrEmpty(l.TraitId) && content.Traits.TryGetValue(l.TraitId, out TraitDef trait))
             {
                 h.TraitId = trait.Id;

@@ -222,6 +222,118 @@
                  "healPct": 0.08, "healPerPoisoned": 0.02, "countMax": 6, "fever": 0.15, "feverDuration": 3.0 },
       "passive": { "kind": "plague_doctor", "radius": 5.0, "healPct": 0.03, "cooldown": 1.5 },
       "evolutions": ["sable_pandemic", "sable_remedy"]
+    },
+    {
+      "id": "caelis", "element": "arcane", "role": "mage", "targeting": "cluster", "melee": false, "starter": false, "cost": 7,
+      "silhouette": "floating rune-book, layered violet robes, mirrored circlet",
+      "stats": { "max_hp": 400, "attack": 30, "defense": 10, "attack_interval": 1.1, "range": 4.4, "threat": 0.9, "move_speed": 2.4 },
+      "basic": { "kind": "projectile", "mult": 1.0, "gauge": 1.0, "speed": 10 },
+      "skill": { "kind": "arcane_echo", "cooldown": 7.5, "mult": 1.2, "gauge": 1.0, "radius": 1.8, "resonant": 4.0, "echoWindow": 6.0, "echoCharges": 1, "echoPower": 0.5 },
+      "passive": { "kind": "spell_memory", "bonus": 0.25 },
+      "evolutions": ["caelis_mirror_savant", "caelis_arcane_barrage"]
+    },
+    {
+      "id": "oriane", "element": "arcane", "role": "support", "targeting": "cluster", "melee": false, "starter": false, "cost": 7,
+      "silhouette": "conductor's baton, orbiting rune rings, tailcoat with glyphs",
+      "stats": { "max_hp": 440, "attack": 24, "defense": 13, "attack_interval": 1.15, "range": 4.2, "threat": 1.0, "elemental_mastery": 40, "move_speed": 2.4 },
+      "basic": { "kind": "projectile", "mult": 1.0, "gauge": 1.2, "speed": 9 },
+      "skill": { "kind": "rune_circle", "cooldown": 8.0, "mult": 0.8, "gauge": 1.2, "radius": 2.0, "field": "rune_circle", "fieldRadius": 2.2, "fieldDuration": 5.0 },
+      "passive": { "kind": "rune_conductor", "every": 4, "refund": 0.8 },
+      "evolutions": ["oriane_grand_conductor", "oriane_sigil_warden"]
+    },
+    {
+      "id": "zerith", "element": "void", "role": "controller", "targeting": "cluster", "melee": false, "starter": false, "cost": 7,
+      "silhouette": "hooded rift-walker, black-star gauntlet, cloak full of stars",
+      "stats": { "max_hp": 420, "attack": 27, "defense": 12, "attack_interval": 1.15, "range": 4.0, "threat": 1.0, "move_speed": 2.4 },
+      "basic": { "kind": "projectile", "mult": 1.0, "gauge": 1.0, "speed": 8 },
+      "skill": { "kind": "gravity_rift", "cooldown": 8.0, "mult": 1.0, "gauge": 1.0, "radius": 2.4, "pull": 3.0, "unstable": 1,
+                 "field": "rift", "fieldRadius": 1.8, "fieldDuration": 2.0 },
+      "passive": { "kind": "event_horizon", "perStack": 0.1, "cap": 0.3 },
+      "evolutions": ["zerith_singularity_lord", "zerith_rift_walker"]
+    },
+    {
+      "id": "maelis", "element": "void", "role": "guardian", "targeting": "nearest_to_crystal", "melee": true, "starter": false, "cost": 7,
+      "silhouette": "obsidian full plate, portal-shaped tower shield, void halo",
+      "stats": { "max_hp": 740, "attack": 19, "defense": 32, "attack_interval": 1.25, "range": 0.8, "leash_radius": 1.7, "threat": 2.6, "move_speed": 2.0 },
+      "basic": { "kind": "melee", "mult": 1.0, "gauge": 1.0 },
+      "skill": { "kind": "void_ward", "cooldown": 8.5, "mult": 0.8, "gauge": 1.0, "sealRadius": 2.4, "seal": 2.0, "taunt": 1.2,
+                 "field": "void_ward", "fieldRadius": 2.2, "fieldDuration": 5.0 },
+      "passive": { "kind": "backline_ward", "reduction": 0.12, "radius": 3.5 },
+      "evolutions": ["maelis_null_bastion", "maelis_portal_keeper"]
+    },
+    {
+      "id": "solenne", "element": "fire", "role": "mage", "targeting": "cluster", "melee": false, "starter": false, "cost": 7,
+      "silhouette": "scribe with a burning quill, scroll belt, ink-stained sleeves",
+      "stats": { "max_hp": 390, "attack": 29, "defense": 10, "attack_interval": 1.05, "range": 4.2, "threat": 0.9, "move_speed": 2.4 },
+      "basic": { "kind": "projectile", "mult": 1.0, "gauge": 1.0, "speed": 10 },
+      "skill": { "kind": "ember_script", "cooldown": 7.0, "mult": 1.0, "gauge": 1.0, "radius": 1.8, "marks": 2, "detonateAt": 4, "detonateMult": 0.35, "detonateRadius": 1.6 },
+      "passive": { "kind": "scribe_ink", "perMark": 0.05 },
+      "evolutions": ["solenne_inferno_script", "solenne_kindling_scribe"]
+    },
+    {
+      "id": "mirel", "element": "water", "role": "controller", "targeting": "nearest_to_crystal", "melee": false, "starter": false, "cost": 7,
+      "silhouette": "river priestess, shell crown, flowing water ribbons",
+      "stats": { "max_hp": 430, "attack": 25, "defense": 12, "attack_interval": 1.1, "range": 4.0, "threat": 1.0, "move_speed": 2.4 },
+      "basic": { "kind": "projectile", "mult": 1.0, "gauge": 1.0, "speed": 9 },
+      "skill": { "kind": "river_surge", "cooldown": 8.0, "mult": 1.0, "gauge": 1.2, "radius": 2.0, "push": 1.6,
+                 "field": "river_stream", "fieldRadius": 1.8, "fieldDuration": 4.0 },
+      "passive": { "kind": "tidecaller", "bonus": 0.25 },
+      "evolutions": ["mirel_flood_warden", "mirel_healing_streams"]
+    },
+    {
+      "id": "veyra", "element": "lightning", "role": "ranger", "targeting": "elite", "melee": false, "starter": false, "cost": 7,
+      "silhouette": "long recurve bow strung with lightning, visor, quiver of copper arrows",
+      "stats": { "max_hp": 380, "attack": 28, "defense": 10, "attack_interval": 0.9, "range": 5.0, "threat": 0.9, "crit_chance": 0.1, "move_speed": 2.6 },
+      "basic": { "kind": "projectile", "mult": 1.0, "gauge": 0.8, "speed": 13 },
+      "skill": { "kind": "charged_shot", "cooldown": 7.0, "mult": 2.2, "gauge": 1.5, "perRamp": 0.15 },
+      "passive": { "kind": "arcshot", "perStack": 0.06, "maxStacks": 6 },
+      "evolutions": ["veyra_boss_hunter", "veyra_split_conductor"]
+    },
+    {
+      "id": "isolde", "element": "ice", "role": "mage", "targeting": "cluster", "melee": false, "starter": false, "cost": 7,
+      "silhouette": "frost lance, crystalline pauldron, braided white hair",
+      "stats": { "max_hp": 400, "attack": 29, "defense": 11, "attack_interval": 1.1, "range": 4.2, "threat": 0.9, "move_speed": 2.4 },
+      "basic": { "kind": "projectile", "mult": 1.0, "gauge": 1.0, "speed": 10 },
+      "skill": { "kind": "shatter_lance", "cooldown": 6.5, "mult": 1.6, "gauge": 1.0, "chillGauge": 2.0, "frozenBonus": 1.2, "shardRadius": 1.6, "shardMult": 0.6, "brittle": 0.2 },
+      "passive": { "kind": "frostbreaker", "bonus": 0.25 },
+      "evolutions": ["isolde_shatter_burst", "isolde_glacial_engine"]
+    },
+    {
+      "id": "aeris", "element": "wind", "role": "support", "targeting": "cluster", "melee": false, "starter": false, "cost": 7,
+      "silhouette": "oracle with wind-chime staff, floating veil, feathered sandals",
+      "stats": { "max_hp": 420, "attack": 24, "defense": 12, "attack_interval": 1.05, "range": 4.2, "threat": 1.0, "move_speed": 2.6 },
+      "basic": { "kind": "projectile", "mult": 1.0, "gauge": 1.0, "speed": 10 },
+      "skill": { "kind": "zone_drift", "cooldown": 7.5, "mult": 1.0, "gauge": 1.2, "radius": 1.8, "drift": 2.0, "reach": 3.0, "extend": 0.5 },
+      "passive": { "kind": "tempest_oracle", "radius": 3.5, "haste": 0.08 },
+      "evolutions": ["aeris_zone_weaver", "aeris_gale_curse"]
+    },
+    {
+      "id": "doran", "element": "earth", "role": "bruiser", "targeting": "nearest_to_crystal", "melee": true, "starter": false, "cost": 7,
+      "silhouette": "huge granite gauntlets, bare stone-skinned arms, rope belt",
+      "stats": { "max_hp": 640, "attack": 26, "defense": 30, "attack_interval": 1.15, "range": 0.8, "leash_radius": 2.2, "threat": 2.0, "move_speed": 2.4 },
+      "basic": { "kind": "melee", "mult": 1.0, "gauge": 1.0 },
+      "skill": { "kind": "fracture_punch", "cooldown": 6.0, "mult": 2.2, "gauge": 1.5, "cracks": 1, "crackMax": 2, "shockRadius": 1.5, "shockMult": 0.4 },
+      "passive": { "kind": "granite_body", "perDefense": 0.005, "cap": 0.4 },
+      "evolutions": ["doran_juggernaut", "doran_fracture_striker"]
+    },
+    {
+      "id": "elowen", "element": "light", "role": "support", "targeting": "cluster", "melee": false, "starter": false, "cost": 7,
+      "silhouette": "cantor in sun-embroidered robes, golden songbook, radiant hair",
+      "stats": { "max_hp": 430, "attack": 24, "defense": 12, "attack_interval": 1.1, "range": 4.4, "threat": 1.0, "heal_power": 1.1, "move_speed": 2.4 },
+      "basic": { "kind": "projectile", "mult": 1.0, "gauge": 1.0, "speed": 10 },
+      "skill": { "kind": "sun_beam", "cooldown": 7.5, "mult": 1.1, "gauge": 1.0, "width": 0.6, "extra": 2.0, "illuminate": 3.0, "healPct": 0.07, "healTargets": 2 },
+      "passive": { "kind": "radiant_hymn", "every": 4, "healPct": 0.03, "radius": 5.0, "bonus": 0.15 },
+      "evolutions": ["elowen_dawn_choir", "elowen_solar_lance"]
+    },
+    {
+      "id": "morven", "element": "shadow", "role": "guardian", "targeting": "nearest_to_crystal", "melee": true, "starter": false, "cost": 7,
+      "silhouette": "hooded sentinel in tattered black mail, chained lantern, crescent glaive",
+      "stats": { "max_hp": 780, "attack": 19, "defense": 30, "attack_interval": 1.2, "range": 0.9, "leash_radius": 1.8, "threat": 2.8, "move_speed": 2.0 },
+      "basic": { "kind": "melee", "mult": 1.0, "gauge": 1.0 },
+      "skill": { "kind": "curse_mire", "cooldown": 8.0, "mult": 0.8, "gauge": 1.2, "radius": 2.2, "taunt": 1.5,
+                 "field": "gloom_mire", "fieldRadius": 2.2, "fieldDuration": 4.0 },
+      "passive": { "kind": "gloom_guard", "radius": 3.0, "share": 0.35, "selfReduction": 0.3, "cooldown": 0.5 },
+      "evolutions": ["morven_dread_bulwark", "morven_soul_tithe"]
     }
   ],
 
@@ -234,6 +346,25 @@
       "onTick": [{ "op": "status", "status": "armor_crack", "duration": 2, "stacks": 1, "max": 2 }] },
     { "id": "stone_bastion", "element": "earth", "shape": "line", "tick": 0.5, "slow": 0.75, "damageMult": 0.35, "heroDamageReduction": 0.15, "maxCount": 3, "params": { "wall": 1 },
       "onTick": [{ "op": "status", "status": "armor_crack", "duration": 2, "stacks": 1, "max": 2 }] },
+    { "id": "rune_circle", "element": "arcane", "tick": 0.5, "reactionAmp": 0.3, "maxCount": 2 },
+    { "id": "grand_rune", "element": "arcane", "tick": 0.5, "reactionAmp": 0.45, "enemyVuln": 0.08, "maxCount": 2 },
+    { "id": "sigil_ward", "element": "arcane", "tick": 0.5, "reactionAmp": 0.2, "heroDamageReduction": 0.15, "maxCount": 2 },
+    { "id": "rift", "element": "void", "tick": 0.5, "pull": 1.5, "maxCount": 2,
+      "onEnd": [{ "op": "collapse", "mult": 0.8, "radius": 2.0 }] },
+    { "id": "deep_rift", "element": "void", "tick": 0.5, "pull": 2.4, "maxCount": 2,
+      "onEnd": [{ "op": "collapse", "mult": 1.4, "radius": 2.6 }] },
+    { "id": "void_ward", "element": "void", "tick": 0.5, "blockBolts": true, "heroDamageReduction": 0.12, "maxCount": 1 },
+    { "id": "null_bastion", "element": "void", "tick": 0.5, "blockBolts": true, "heroDamageReduction": 0.2, "crystalShieldPct": 0.003, "maxCount": 1 },
+    { "id": "portal_ward", "element": "void", "tick": 0.5, "blockBolts": true, "pull": 0.8, "enemyWeaken": 0.15, "maxCount": 1 },
+    { "id": "river_stream", "element": "water", "tick": 0.5, "slow": 0.3, "maxCount": 2,
+      "onTick": [{ "op": "apply", "element": "water", "gauge": 0.3 }] },
+    { "id": "flood_stream", "element": "water", "tick": 0.5, "slow": 0.45, "maxCount": 2,
+      "onTick": [{ "op": "apply", "element": "water", "gauge": 0.4 }] },
+    { "id": "healing_stream", "element": "water", "tick": 0.5, "slow": 0.2, "heroHealPct": 0.01, "maxCount": 2 },
+    { "id": "gale_snare", "element": "wind", "tick": 0.5, "slow": 0.35, "enemyWeaken": 0.12, "maxCount": 2 },
+    { "id": "gloom_mire", "element": "shadow", "tick": 0.5, "slow": 0.2, "enemyWeaken": 0.15, "maxCount": 1 },
+    { "id": "dread_mire", "element": "shadow", "tick": 1.0, "slow": 0.25, "enemyWeaken": 0.2, "maxCount": 1,
+      "onTick": [{ "op": "status", "status": "doom", "stacks": 1 }] },
     { "id": "toxic_patch", "element": "poison", "tick": 0.6, "damageMult": 0.12, "maxCount": 2,
       "onTick": [{ "op": "status", "status": "poison", "stacks": 1, "duration": 4 }] },
     { "id": "lingering_miasma", "element": "poison", "tick": 0.6, "damageMult": 0.15, "slow": 0.25, "enemyWeaken": 0.15, "maxCount": 2,
