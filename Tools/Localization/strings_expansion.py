@@ -820,3 +820,19 @@ UI_X.update({
     "codex.category.signature": ("Signature", "Đặc trưng"), "codex.category.generic": ("Generic", "Chung"),
     "codex.category.neutral": ("Neutral", "Trung tính"), "codex.category.blockedbydesign": ("Blocked by design", "Bị chặn có chủ đích"),
 })
+
+UI_X.update({
+    "shop.lock": ("Lock", "Khoá"), "shop.unlock": ("Locked", "Đã khoá"),
+    "results.turning": ("Closest save: wave {0} at {1}% Crystal · Biggest threat: {2} · Time in menus: {3} min",
+                        "Suýt thua nhất: đợt {0} còn {1}% Pha Lê · Mối đe doạ lớn nhất: {2} · Thời gian ở menu: {3} phút"),
+    "results.copy_build": ("Copy build", "Sao chép đội hình"),
+})
+
+UI_X.update({
+    "tactic.label": ("Team tactic", "Chiến thuật đội"),
+    "tactic.balanced": ("Balanced", "Cân bằng"), "tactic.balanced.desc": ("heroes weigh every factor evenly.", "anh hùng cân nhắc đều mọi yếu tố."),
+    "tactic.protectcrystal": ("Protect Crystal", "Bảo vệ Pha Lê"), "tactic.protectcrystal.desc": ("prefer enemies closest to reaching the Crystal.", "ưu tiên kẻ địch sắp tới Pha Lê."),
+    "tactic.focusboss": ("Focus Boss", "Dồn Boss"), "tactic.focusboss.desc": ("prefer bosses and elites in reach.", "ưu tiên boss và elite trong tầm."),
+    "tactic.elementalchain": ("Elemental Chain", "Chuỗi Nguyên Tố"), "tactic.elementalchain.desc": ("prefer targets where a reaction can trigger.", "ưu tiên mục tiêu có thể kích phản ứng."),
+    "tactic.crowdcontrol": ("Crowd Control", "Khống Chế Đám Đông"), "tactic.crowdcontrol.desc": ("prefer dense groups.", "ưu tiên nhóm đông."),
+})

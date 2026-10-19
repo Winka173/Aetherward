@@ -134,7 +134,42 @@ namespace Aetherward.Sim.Combat
         // ------------------------------------------------------------------ targeting
 
         /// <summary>Capped, allocation-free target search with deterministic uid tie-break.</summary>
-        public EnemyUnit SelectTarget(HeroUnit h) => SelectTarget(h, h.Targeting, 0f);
+        public EnemyUnit SelectTarget(HeroUnit h) => Setup.UtilityTargeting ? SelectTargetUtility(h) : SelectTarget(h, h.Targeting, 0f);
+
+        /// <summary>The role targeting profile's raw preference for an enemy (higher is better).</summary>
+        private float ProfileScore(HeroUnit h, TargetProfile profile, EnemyUnit e)
+        {
+            float score;
+            switch (profile)
+            {
+                case TargetProfile.Nearest:
+                    score = -Vec2.SqrDistance(h.Pos, e.Pos);
+                    break;
+                case TargetProfile.NearestToCrystal:
+                    score = -RemainingPath(e);
+                    break;
+                case TargetProfile.Cluster:
+                    score = ClusterScore(e, 1.5f) * 10f - RemainingPath(e) * 0.1f;
+                    break;
+                case TargetProfile.Elite:
+                    score = (e.IsBoss ? 3000f : 0f) + (e.Elite ? 2000f : 0f) + e.MaxHp * 0.01f - RemainingPath(e) * 0.05f;
+                    break;
+                case TargetProfile.Execute:
+                    score = (1f - e.HpFraction) * 100f + (e.Elite ? 20f : 0f);
+                    break;
+                case TargetProfile.ReactionOpportunity:
+                    score = ReactionOpportunity(h.Def.Element, e) * 100f - RemainingPath(e);
+                    break;
+                case TargetProfile.Strongest:
+                    score = e.Hp;
+                    break;
+                default:
+                    score = -RemainingPath(e);
+                    break;
+            }
+            return score;
+        }
+
 
         public EnemyUnit SelectTarget(HeroUnit h, TargetProfile profile, float extraRange)
         {
@@ -149,34 +184,7 @@ namespace Aetherward.Sim.Combat
                 EnemyUnit e = c[i];
                 if (!e.Alive || e.Burrowed) continue;
                 evaluated++;
-                float score;
-                switch (profile)
-                {
-                    case TargetProfile.Nearest:
-                        score = -Vec2.SqrDistance(h.Pos, e.Pos);
-                        break;
-                    case TargetProfile.NearestToCrystal:
-                        score = -RemainingPath(e);
-                        break;
-                    case TargetProfile.Cluster:
-                        score = ClusterScore(e, 1.5f) * 10f - RemainingPath(e) * 0.1f;
-                        break;
-                    case TargetProfile.Elite:
-                        score = (e.IsBoss ? 3000f : 0f) + (e.Elite ? 2000f : 0f) + e.MaxHp * 0.01f - RemainingPath(e) * 0.05f;
-                        break;
-                    case TargetProfile.Execute:
-                        score = (1f - e.HpFraction) * 100f + (e.Elite ? 20f : 0f);
-                        break;
-                    case TargetProfile.ReactionOpportunity:
-                        score = ReactionOpportunity(h.Def.Element, e) * 100f - RemainingPath(e);
-                        break;
-                    case TargetProfile.Strongest:
-                        score = e.Hp;
-                        break;
-                    default:
-                        score = -RemainingPath(e);
-                        break;
-                }
+                float score = ProfileScore(h, profile, e);
                 if (score > bestScore)
                 {
                     bestScore = score;

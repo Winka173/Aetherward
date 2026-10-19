@@ -92,6 +92,10 @@ namespace Aetherward.Sim.Combat
         public readonly Dictionary<string, float> SourceDamage = new Dictionary<string, float>();
         public readonly float[] ElementDamage = new float[ElementUtil.Count];
         public readonly Dictionary<string, float> CrystalDamageByEnemy = new Dictionary<string, float>();
+        /// <summary>Effective damage by kind (Basic/Skill/Reaction/Dot/Trigger/Enemy) — each hit counted once.</summary>
+        public readonly float[] DamageByKind = new float[6];
+        public float HeroShieldAbsorbed;
+        public int MaxProcDepth;
         public int Kills;
         public int Leaks;
         public int HeroDowns;

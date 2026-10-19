@@ -38,7 +38,9 @@ namespace Aetherward.Sim.Combat
         public BiomeDef Biome;
         /// <summary>Ascension: bosses enrage below 25% HP by this amount (0 = off).</summary>
         public float BossEnrage;
-        public int EliteEvery;        // Ascension "double_elite": every Nth regular spawn is elite (0 = off)
+        public int EliteEvery;
+        public TeamTactic Tactic;                 // soft targeting weights chosen before the wave
+        public bool UtilityTargeting = true;      // feature flag: utility scoring for basic-attack targets        // Ascension "double_elite": every Nth regular spawn is elite (0 = off)
         public float HazardShift;     // Ascension "hazard_shift": biome hazards fire this much more often
     }
 

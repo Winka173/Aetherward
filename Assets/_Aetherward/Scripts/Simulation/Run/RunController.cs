@@ -126,6 +126,15 @@ namespace Aetherward.Sim.Run
             }
         }
 
+        /// <summary>Compact, copyable build summary: seed, mode, difficulty, biome, heroes (+evolution), relics.</summary>
+        public string ShareCode()
+        {
+            var heroes = new List<string>();
+            foreach (HeroRunState h in State.Heroes) heroes.Add(h.DefId + (h.EvolutionId != null ? "+" + h.EvolutionId : ""));
+            return "AW1 seed=" + Pcg32.FormatSeed(State.Seed) + " mode=" + State.Mode + " asc=" + State.Ascension + " biome=" + (State.BiomeId ?? "default") +
+                   " heroes=" + string.Join(",", heroes) + " relics=" + string.Join(",", State.Relics);
+        }
+
         public int TotalWaves => State.Mode == GameMode.Endless ? 0 : State.Mode == GameMode.BossRush ? BossRushBosses().Count : Content.Waves.Count;
 
         public WaveDef CurrentWave => WaveAt(State.Wave);
@@ -522,6 +531,7 @@ namespace Aetherward.Sim.Run
             setup.EliteExtraAffix = Content.Difficulty.Has("elite_affix", State.Ascension);
             setup.BossEnrage = Content.Difficulty.Value("boss_enrage", State.Ascension);
             setup.EliteEvery = (int)Content.Difficulty.Value("double_elite", State.Ascension);
+            setup.Tactic = State.Tactic;
             setup.HazardShift = Content.Difficulty.Value("hazard_shift", State.Ascension);
             foreach (HeroRunState h in State.Heroes)
             {
@@ -680,6 +690,14 @@ namespace Aetherward.Sim.Run
                 State.SourceDamage[kv.Key] = d + kv.Value;
             }
             for (int i = 0; i < s.ElementDamage.Length; i++) State.ElementDamage[i] += s.ElementDamage[i];
+            for (int i = 0; i < s.DamageByKind.Length; i++) State.DamageByKind[i] += s.DamageByKind[i];
+            State.ShieldAbsorbed += s.HeroShieldAbsorbed;
+            if (s.MaxProcDepth > State.MaxProcDepth) State.MaxProcDepth = s.MaxProcDepth;
+            foreach (var kv in s.CrystalDamageByEnemy)
+            {
+                State.CrystalDamageByEnemy.TryGetValue(kv.Key, out float d);
+                State.CrystalDamageByEnemy[kv.Key] = d + kv.Value;
+            }
         }
 
         // ================================================================== rewards
@@ -766,8 +784,38 @@ namespace Aetherward.Sim.Run
             foreach (Offer o in State.Offers) State.Trace("offer " + kind + " " + o.Kind + ":" + o.Id + " $" + o.Price);
         }
 
+        /// <summary>Locks (or unlocks) one shop offer so it survives rerolls and waits in the next shop.</summary>
+        public bool ToggleLock(int index)
+        {
+            if (State.Phase != RunPhase.Reward || State.CurrentReward != RewardKind.Shop || index < 0 || index >= State.Offers.Count) return false;
+            Offer o = State.Offers[index];
+            if (o.Sold || (o.Kind != OfferKind.Hero && o.Kind != OfferKind.Relic && o.Kind != OfferKind.Card)) return false;
+            bool same = State.LockedOffer != null && State.LockedOffer.Kind == o.Kind && State.LockedOffer.Id == o.Id;
+            State.LockedOffer = same ? null : new Offer { Kind = o.Kind, Id = o.Id, Price = o.Price, TraitId = o.TraitId, Tag = "locked" };
+            return true;
+        }
+
+        public bool IsLocked(Offer o) => State.LockedOffer != null && State.LockedOffer.Kind == o.Kind && State.LockedOffer.Id == o.Id;
+
+        private bool LockStillValid(Offer o)
+        {
+            switch (o.Kind)
+            {
+                case OfferKind.Hero: return Content.Heroes.ContainsKey(o.Id) && !State.HasHero(o.Id) && State.Heroes.Count < Eco.MaxHeroes;
+                case OfferKind.Relic: return Content.Relics.ContainsKey(o.Id) && !State.Relics.Contains(o.Id);
+                case OfferKind.Card: return Content.Cards.TryGetValue(o.Id, out CardDef c) && State.CardStacks(o.Id) < c.MaxStacks;
+                default: return false;
+            }
+        }
+
         private void GenerateShop()
         {
+            if (State.LockedOffer != null)
+            {
+                if (LockStillValid(State.LockedOffer))
+                    State.Offers.Add(new Offer { Kind = State.LockedOffer.Kind, Id = State.LockedOffer.Id, Price = State.LockedOffer.Price, TraitId = State.LockedOffer.TraitId, Tag = "locked" });
+                else State.LockedOffer = null;
+            }
             Pcg32 rng = OfferRng("shop");
             if (State.Heroes.Count < Eco.MaxHeroes)
                 foreach (string id in PickHeroes(rng, 2))
@@ -1014,6 +1062,7 @@ namespace Aetherward.Sim.Run
                     break;
             }
             o.Sold = true;
+            if (IsLocked(o)) State.LockedOffer = null;
             State.Trace("choose " + o.Kind + ":" + o.Id);
             if (endsScreen) AdvanceReward();
             return true;

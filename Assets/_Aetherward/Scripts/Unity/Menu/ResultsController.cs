@@ -42,6 +42,11 @@ namespace Aetherward.Game
             TimeSpan active = TimeSpan.FromSeconds(_r.ActiveSeconds);
             Ui.Label(0, 140, Ui.W, 44, l.Format("results.reached", _r.WaveReached, active.Minutes + ":" + active.Seconds.ToString("00")), 28, Ui.White, TextAnchor.UpperCenter);
             Ui.Label(0, 182, Ui.W, 34, l.Format("results.seed", _r.Seed, _r.GameVersion), 20, Ui.Muted, TextAnchor.UpperCenter);
+            string turning = l.Format("results.turning", _r.ClosestSaveWave, Mathf.RoundToInt(_r.ClosestSaveHpFraction * 100f),
+                _r.MostDamagingThreat != null ? l.Get("enemy." + _r.MostDamagingThreat + ".name") : "—",
+                Mathf.RoundToInt(_r.MenuSeconds / 60f));
+            Ui.Label(0, 210, Ui.W, 30, turning, 18, Ui.Muted, TextAnchor.UpperCenter);
+            if (Ui.Button(Ui.W - 300, 140, 260, 60, l.Get("results.copy_build"), Tone.Ghost, true, 20)) GUIUtility.systemCopyBuffer = _r.ShareCode;
 
             float colW = (Ui.W - 120) / 3f;
             DrawHeroes(40, 240, colW, 560);

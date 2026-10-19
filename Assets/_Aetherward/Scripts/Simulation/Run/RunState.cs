@@ -129,6 +129,10 @@ namespace Aetherward.Sim.Run
         public readonly Dictionary<string, int> SourceActivations = new Dictionary<string, int>();
         public readonly Dictionary<string, float> SourceDamage = new Dictionary<string, float>();
         public readonly float[] ElementDamage = new float[ElementUtil.Count];
+        public readonly float[] DamageByKind = new float[6];
+        public float ShieldAbsorbed;
+        public int MaxProcDepth;
+        public readonly Dictionary<string, float> CrystalDamageByEnemy = new Dictionary<string, float>();
         public readonly List<string> SeenEnemies = new List<string>();
         /// <summary>Boss chosen for each wave that has a boss pool (deterministic per seed, saved).</summary>
         public readonly Dictionary<int, string> BossChoices = new Dictionary<int, string>();
@@ -137,6 +141,11 @@ namespace Aetherward.Sim.Run
         /// <summary>Battlefield of this run (null = default biome; unknown ids degrade to default).</summary>
         public string BiomeId;
         public GameMode Mode;
+        public Combat.TeamTactic Tactic;
+        /// <summary>Optional shop lock: one hero/relic/card offer carried into the next shop at its price.</summary>
+        public Offer LockedOffer;
+        /// <summary>Real seconds spent outside combat (prepare/reward screens), measured by the client.</summary>
+        public float MenuSeconds;
         /// <summary>Per-run offer pools (empty = everything unlocked). Drawn once at run start, saved.</summary>
         public readonly List<string> HeroPool = new List<string>();
         public readonly List<string> RelicPool = new List<string>();

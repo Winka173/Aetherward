@@ -7,6 +7,14 @@ using Aetherward.Sim.Core;
 namespace Aetherward.Sim.Run
 {
     /// <summary>A scripted build plan used by the headless simulator and integration tests.</summary>
+    public enum DraftPolicy
+    {
+        Scripted,
+        Random,
+        Synergy,
+        Greedy
+    }
+
     public sealed class Strategy
     {
         public string Name;
@@ -17,6 +25,22 @@ namespace Aetherward.Sim.Run
         public string[] EvolutionPriority;   // preferred evolution ids
         public bool TakePacts;
         public float RepairBelow = 0.5f;
+        /// <summary>Draft policy (Phase 10 simulator): Scripted follows the priority lists; Random picks any
+        /// affordable offer; Synergy ignores priorities and scores synergy/roles; Greedy takes the rarest.</summary>
+        public DraftPolicy Policy = DraftPolicy.Scripted;
+
+        /// <summary>A copy of this strategy with another draft policy (starters kept).</summary>
+        public Strategy WithPolicy(DraftPolicy p)
+        {
+            var s = (Strategy)MemberwiseClone();
+            s.Policy = p;
+            s.Name = p == DraftPolicy.Scripted ? Name : Name + "/" + p.ToString().ToLowerInvariant();
+            if (p != DraftPolicy.Scripted)
+            {
+                s.RecruitPriority = s.RelicPriority = s.CardPriority = s.EvolutionPriority = new string[0];
+            }
+            return s;
+        }
 
         public static readonly Strategy[] Archetypes =
         {
@@ -295,6 +319,7 @@ namespace Aetherward.Sim.Run
                 CardDef c = _rc.Content.Cards[offers[i].Id];
                 float score = Priority(_strategy.CardPriority, c.Id) * 2f + (int)c.Rarity * 0.6f + (DraftGenerator.IsSynergy(c) ? 1.5f : 0f) + _rng.NextFloat();
                 if (c.DrawbackKey != null && !_strategy.TakePacts) score -= 2f;
+                score = PolicyScore(score, (int)c.Rarity);
                 if (score > bestScore) { bestScore = score; best = i; }
             }
             return best;
@@ -312,6 +337,17 @@ namespace Aetherward.Sim.Run
             return false;
         }
 
+        /// <summary>Random ignores the judgement entirely; Greedy only looks at rarity; others keep the score.</summary>
+        private float PolicyScore(float judged, int rarity)
+        {
+            switch (_strategy.Policy)
+            {
+                case DraftPolicy.Random: return _rng.NextFloat();
+                case DraftPolicy.Greedy: return rarity + _rng.NextFloat() * 0.5f;
+                default: return judged;
+            }
+        }
+
         private int BestHero(List<Offer> offers)
         {
             int best = -1;
@@ -323,6 +359,7 @@ namespace Aetherward.Sim.Run
                 // Off-plan recruits are judged like a player would: synergy and filling missing roles.
                 float score = Priority(_strategy.RecruitPriority, offers[i].Id) + 0.8f * Math.Min(3, _rc.SignatureCount(d.Element))
                               + RoleNeed(d.Role) + (_rc.BondFor(d.Id) != null ? 1.5f : 0f) + _rng.NextFloat();
+                score = PolicyScore(score, 0);
                 if (score > bestScore) { bestScore = score; best = i; }
             }
             return best;
@@ -353,6 +390,7 @@ namespace Aetherward.Sim.Run
                 float score = Priority(_strategy.RelicPriority, r.Id) * 2f + (int)r.Rarity * 0.5f + (_rc.CompletesFusion(r.Id) ? 4f : 0f)
                               + (_rc.ElementRelevance(r) - 1f) * 1.5f + _rng.NextFloat();
                 if (!_strategy.TakePacts && HasDrawback(r.Effects)) score -= 3f; // risk relics only for risk-taking plans
+                score = PolicyScore(score, (int)r.Rarity);
                 if (score > bestScore) { bestScore = score; best = i; }
             }
             return best;

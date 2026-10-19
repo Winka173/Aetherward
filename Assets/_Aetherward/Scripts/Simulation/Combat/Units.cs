@@ -96,6 +96,7 @@ namespace Aetherward.Sim.Combat
         public float ThornMult;
         public float ThornRoot;
         public float ThornCooldown;
+        public TargetDecision Decision;   // last basic-attack targeting decision (inspector)
         public float EchoPrimed;      // Echo Savant: window in which the next ally skill is echoed
         public int EchoCharges;
         public float DoctorCooldown;  // Plague Doctor passive heal internal cooldown

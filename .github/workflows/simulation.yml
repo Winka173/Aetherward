@@ -1,0 +1,21 @@
+# Headless checks on the authoritative C# simulation (no Unity Editor needed).
+name: simulation
+on: [push, pull_request]
+jobs:
+  sim:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+      - name: Tests (content validation, mechanics, invariants, replay)
+        run: dotnet test Tools/SimHarness/Tests
+      - name: Content validation report (fails on critical errors)
+        run: dotnet run --project Tools/SimHarness/Balance -c Release -- --validate
+      - name: Balance smoke batch (bots, not players)
+        run: dotnet run --project Tools/SimHarness/Balance -c Release -- --batch 25 --out Reports/Balance/ci
+      - uses: actions/upload-artifact@v4
+        with:
+          name: reports
+          path: Reports/

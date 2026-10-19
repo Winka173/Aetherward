@@ -66,6 +66,34 @@ namespace Aetherward.Game
             lr.startWidth = lr.endWidth = width;
         }
 
+        /// <summary>AI inspector (debug ranges toggle): each hero's last targeting decision and weighted reasons.</summary>
+        private void OnGUI()
+        {
+            if (_owner == null || !App.Settings.ShowRanges) return;
+            Battle b = _owner.Run.Battle;
+            if (b == null) return;
+            float y = 260;
+            GUI.color = new Color(1f, 1f, 1f, 0.9f);
+            foreach (HeroUnit h in b.Heroes)
+            {
+                TargetDecision d = h.Decision;
+                string line = h.Def.Id + ": ";
+                if (d == null) line += "—";
+                else if (d.Reason != null && d.TargetUid == 0) line += d.Reason;
+                else
+                {
+                    line += "target #" + d.TargetUid + " score " + d.Total.ToString("F2") + " of " + d.Candidates + (d.KeptByHysteresis ? " (kept)" : "");
+                    for (int k = 0; k < TargetDecision.Components; k++) if (d.Parts[k] > 0.01f) line += "  " + TargetDecision.Names[k] + " " + d.Parts[k].ToString("F2");
+                    if (d.RunnerUpUid != 0) line += "  | next #" + d.RunnerUpUid + " " + d.RunnerUpTotal.ToString("F2");
+                }
+                if (h.SilenceTimer > 0f) line += "  [silenced]";
+                if (h.SkillTimer > 0f) line += "  skill in " + h.SkillTimer.ToString("F1") + "s";
+                GUI.Label(new Rect(12, y, Screen.width - 24, 22), line);
+                y += 22;
+            }
+            GUI.color = Color.white;
+        }
+
         private void LateUpdate()
         {
             _used = 0;

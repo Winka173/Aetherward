@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "kind": "settings",
+  "checksum": "845130739614978822",
+  "data": {
+    "language": "en",
+    "master": 0.800000011920929,
+    "music": 0.6000000238418579,
+    "sfx": 0.800000011920929,
+    "ui": 0.699999988079071,
+    "fast": false,
+    "reducedVfx": false,
+    "shake": true,
+    "numbers": true,
+    "contrast": false,
+    "fps": 60,
+    "ranges": false
+  }
+}

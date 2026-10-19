@@ -40,6 +40,10 @@ namespace Aetherward.Balance
             string contentDir = Path.Combine(root, "Assets", "_Aetherward", "Resources", "Content");
             ContentDatabase db = ContentDatabase.Load(n => File.ReadAllText(Path.Combine(contentDir, n + ".json")));
 
+            if (Array.IndexOf(args, "--batch") >= 0) return Batch.Run(db, root, contentDir, args);
+            if (Array.IndexOf(args, "--validate") >= 0) return Validate.Run(db, root);
+            if (Array.IndexOf(args, "--breakdown") >= 0) return Breakdown.Run(db, root, args);
+
             int snapWave = 0;
             float snapTime = 20f;
             for (int i = 0; i < args.Length - 1; i++)

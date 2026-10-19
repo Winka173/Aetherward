@@ -46,6 +46,18 @@ namespace Aetherward.Sim.Run
         public readonly List<WaveRecord> Waves = new List<WaveRecord>();
         public string StrongestReaction;
         public string MvpHero;
+        // Run breakdown (Phase 8): provenance split, prevention and the run's turning points.
+        public readonly float[] DamageByKind = new float[6];
+        public float ShieldAbsorbed;
+        public int MaxProcDepth;
+        public string MostDamagingThreat;
+        public float MostDamagingThreatDamage;
+        public int ClosestSaveWave;
+        public float ClosestSaveHpFraction = 1f;
+        public string DecisiveUpgrade;
+        public string ShareCode;
+        public float MenuSeconds;
+        public float DecisiveUpgradeDamage;
         public readonly List<string> Insights = new List<string>(); // localization keys with {0} args encoded as key|arg
 
         public static RunResults Build(RunController rc)
@@ -98,6 +110,19 @@ namespace Aetherward.Sim.Run
             }
             r.Sources.Sort((a, b) => b.Count.CompareTo(a.Count));
             for (int i = 0; i < s.ElementDamage.Length; i++) r.ElementDamage[i] = s.ElementDamage[i];
+            for (int i = 0; i < s.DamageByKind.Length; i++) r.DamageByKind[i] = s.DamageByKind[i];
+            r.ShieldAbsorbed = s.ShieldAbsorbed;
+            r.MaxProcDepth = s.MaxProcDepth;
+            foreach (var kv in s.CrystalDamageByEnemy)
+                if (kv.Value > r.MostDamagingThreatDamage) { r.MostDamagingThreatDamage = kv.Value; r.MostDamagingThreat = kv.Key; }
+            float max = rc.CrystalMaxHp;
+            foreach (WaveRecord w in s.WaveLog)
+                if (w.Cleared && max > 0f && w.CrystalHpAfter / max < r.ClosestSaveHpFraction) { r.ClosestSaveHpFraction = w.CrystalHpAfter / max; r.ClosestSaveWave = w.Wave; }
+            // Decisive upgrade: the relic/card/bond whose own effects dealt the most damage (attributed via SourceTag).
+            foreach (var kv in s.SourceDamage)
+                if (kv.Value > r.DecisiveUpgradeDamage) { r.DecisiveUpgradeDamage = kv.Value; r.DecisiveUpgrade = kv.Key; }
+            r.ShareCode = rc.ShareCode();
+            r.MenuSeconds = s.MenuSeconds;
             r.Relics.AddRange(s.Relics);
             r.Cards.AddRange(s.CardOrder);
             r.Waves.AddRange(s.WaveLog);

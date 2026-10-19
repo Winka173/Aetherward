@@ -147,6 +147,8 @@ namespace Aetherward.Sim.Combat
             float effective = SimMath.Min(hpBefore, dealt) + absorbed;
 
             if (src != null) src.DamageDealt += effective;
+            Stats.DamageByKind[(int)req.Kind] += effective;
+            if (req.Generation > Stats.MaxProcDepth) Stats.MaxProcDepth = req.Generation;
             target.AdaptDamage[(int)req.Element] += effective;
             Stats.ElementDamage[(int)req.Element] += effective;
             if (req.ReactionId != null) Stats.AddReactionDamage(req.ReactionId, effective);
@@ -653,6 +655,7 @@ namespace Aetherward.Sim.Combat
             {
                 float a = SimMath.Min(h.Shield, amount);
                 h.Shield -= a;
+                Stats.HeroShieldAbsorbed += a;
                 amount -= a;
                 if (h.Shield <= 0f && h.ShieldRetaliate > 0f) OnHeroShieldBroken(h);
                 if (h.Shield <= 0f && h.ShieldGiverUid != 0) FrostBurst(h);
@@ -769,8 +772,11 @@ namespace Aetherward.Sim.Combat
     /// <summary>Tiny pool for per-chain visited sets to keep chains allocation-free in steady state.</summary>
     internal static class HitSetPool
     {
-        private static readonly System.Collections.Generic.Stack<System.Collections.Generic.HashSet<int>> Pool =
-            new System.Collections.Generic.Stack<System.Collections.Generic.HashSet<int>>();
+        // Thread-static so headless batch simulation can run battles in parallel (Unity uses one thread).
+        [System.ThreadStatic] private static System.Collections.Generic.Stack<System.Collections.Generic.HashSet<int>> _pool;
+
+        private static System.Collections.Generic.Stack<System.Collections.Generic.HashSet<int>> Pool =>
+            _pool ?? (_pool = new System.Collections.Generic.Stack<System.Collections.Generic.HashSet<int>>());
 
         public static System.Collections.Generic.HashSet<int> Rent()
         {

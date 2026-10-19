@@ -218,9 +218,25 @@ namespace Aetherward.Game
             return sb.ToString();
         }
 
+        /// <summary>Team tactic chips (soft targeting weights); shown on the prepare screen, persisted in the run.</summary>
+        private void DrawTacticPicker(float x, float y)
+        {
+            RunState s = _rc.State;
+            Ui.Label(x, y, 600, 30, L.Get("tactic.label") + ": " + L.Get("tactic." + s.Tactic.ToString().ToLowerInvariant() + ".desc"), 18, Ui.Muted, TextAnchor.UpperLeft);
+            var values = (TeamTactic[])System.Enum.GetValues(typeof(TeamTactic));
+            for (int i = 0; i < values.Length; i++)
+            {
+                TeamTactic t = values[i];
+                if (Ui.Button(x + i * 150, y + 32, 140, 56, L.Get("tactic." + t.ToString().ToLowerInvariant()), s.Tactic == t ? Tone.Secondary : Tone.Ghost, true, 16))
+                    s.Tactic = t;
+            }
+            Block(x, y, values.Length * 150, 90);
+        }
+
         private void DrawPrepare()
         {
             RunState s = _rc.State;
+            DrawTacticPicker(Ui.W / 2 - 370, Ui.H - 260);
             WaveDef w = _rc.CurrentWave;
             // incoming panel (left)
             float px = 16, py = 156, pw = 560;
@@ -539,6 +555,14 @@ namespace Aetherward.Game
                 int i = items[k];
                 Offer o = s.Offers[i];
                 float x = x0 + (k % perRow) * (cw + gap), y = y0 + (k / perRow) * (ch + 130 * scale);
+                if (!o.Sold && (o.Kind == OfferKind.Hero || o.Kind == OfferKind.Relic || o.Kind == OfferKind.Card))
+                {
+                    // Shop lock: keep one offer for the next shop (survives rerolls).
+                    bool locked = _rc.IsLocked(o);
+                    if (locked) Ui.DrawRect(x - 4, y - 4, cw + 8, ch + 8, new Color(0.45f, 0.75f, 1f, 0.45f));
+                    if (Ui.Button(x + cw - 64, y - 30, 64, 52, locked ? L.Get("shop.unlock") : L.Get("shop.lock"), locked ? Tone.Secondary : Tone.Ghost, true, 16))
+                        _rc.ToggleLock(i);
+                }
                 switch (o.Kind)
                 {
                     case OfferKind.Hero: DrawHeroOffer(o, x, y, cw, ch, i, "reward.buy"); break;

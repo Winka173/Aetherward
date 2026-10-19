@@ -140,8 +140,9 @@ namespace Aetherward.Game
             try
             {
                 File.WriteAllText(tmp, text);
-                if (File.Exists(p)) File.Delete(p);
-                File.Move(tmp, p);
+                // Atomic swap where the platform supports it; the previous file is never deleted before the new one exists.
+                if (File.Exists(p)) File.Replace(tmp, p, null);
+                else File.Move(tmp, p);
             }
             catch (IOException e)
             {

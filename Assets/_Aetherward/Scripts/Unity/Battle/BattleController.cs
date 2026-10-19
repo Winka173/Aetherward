@@ -132,6 +132,7 @@ namespace Aetherward.Game
             _uiBlockers.Clear();
             _uiBlockers.AddRange(_uiBlockersNext);
 
+            if (s.Phase != RunPhase.Battle) s.MenuSeconds += dt; // decision time outside combat (run breakdown)
             if (s.Phase == RunPhase.Battle && _rc.Battle != null)
             {
                 StepBattle(dt);

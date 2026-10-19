@@ -86,6 +86,25 @@ namespace Aetherward.Sim.Run
                 if (i < 0) break;
                 Take(pool, weights, result, i);
             }
+            // Strategic alternative: never three copies of the current plan when a different direction exists.
+            if (!pact && result.Count >= 3 && result.TrueForAll(IsSynergy))
+            {
+                int alt = -1;
+                float total = 0f;
+                for (int i = 0; i < pool.Count; i++) if (!IsSynergy(pool[i])) total += weights[i];
+                if (total > 0f)
+                {
+                    float roll = rng.NextFloat() * total;
+                    for (int i = 0; i < pool.Count && alt < 0; i++)
+                    {
+                        if (IsSynergy(pool[i])) continue;
+                        roll -= weights[i];
+                        if (roll <= 0f) alt = i;
+                    }
+                    if (alt < 0) alt = pool.FindLastIndex(c => !IsSynergy(c));
+                    result[result.Count - 1] = pool[alt];
+                }
+            }
             // Present in a stable but shuffled order so the guaranteed card is not always first.
             for (int i = result.Count - 1; i > 0; i--)
             {

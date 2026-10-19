@@ -63,15 +63,21 @@ namespace Aetherward.Sim.Meta
                 .Set("checksum", Pcg32.Hash64(payload).ToString(CultureInfo.InvariantCulture))
                 .Set("data", data);
             string text = env.ToJson(true);
+            // Two-level backup rotation: key -> key.bak -> key.bak2 (a bad write never costs the last good save).
             string previous = _storage.Read(key);
-            if (previous != null) _storage.Write(key + ".bak", previous);
+            if (previous != null)
+            {
+                string older = _storage.Read(key + ".bak");
+                if (older != null) _storage.Write(key + ".bak2", older);
+                _storage.Write(key + ".bak", previous);
+            }
             _storage.Write(key, text);
         }
 
         private JsonNode ReadEnvelope(string key, out int version)
         {
             version = 0;
-            foreach (string candidate in new[] { key, key + ".bak" })
+            foreach (string candidate in new[] { key, key + ".bak", key + ".bak2" })
             {
                 string text = _storage.Read(candidate);
                 if (text == null) continue;
@@ -89,6 +95,8 @@ namespace Aetherward.Sim.Meta
                 catch (Exception e)
                 {
                     LastError = candidate + ": " + e.Message;
+                    // Keep the unreadable file for recovery/support instead of silently overwriting it later.
+                    if (_storage.Read(candidate + ".corrupt") == null) _storage.Write(candidate + ".corrupt", text);
                 }
             }
             return null;
@@ -98,6 +106,7 @@ namespace Aetherward.Sim.Meta
         {
             _storage.Delete(key);
             _storage.Delete(key + ".bak");
+            _storage.Delete(key + ".bak2");
         }
 
         // ------------------------------------------------------------------ settings
@@ -232,6 +241,8 @@ namespace Aetherward.Sim.Meta
             foreach (RewardKind r in s.PendingRewards) pending.Add(JsonNode.From(r.ToString()));
             JsonNode elements = JsonNode.NewArray();
             foreach (float v in s.ElementDamage) elements.Add(JsonNode.From(v));
+            JsonNode kinds = JsonNode.NewArray();
+            foreach (float v in s.DamageByKind) kinds.Add(JsonNode.From(v));
 
             JsonNode d = JsonNode.NewObject()
                 .Set("seed", s.Seed.ToString(CultureInfo.InvariantCulture)).Set("gameVersion", s.GameVersion)
@@ -245,10 +256,14 @@ namespace Aetherward.Sim.Meta
                 .Set("goldEarned", s.GoldEarnedTotal).Set("goldSpent", s.GoldSpentTotal).Set("waves", waves)
                 .Set("reactionCounts", IntMap(s.ReactionCounts)).Set("reactionDamage", FloatMap(s.ReactionDamage))
                 .Set("sourceCounts", IntMap(s.SourceActivations)).Set("sourceDamage", FloatMap(s.SourceDamage))
+                .Set("dmgKinds", kinds).Set("shieldAbsorbed", s.ShieldAbsorbed).Set("procDepth", s.MaxProcDepth).Set("crystalBy", FloatMap(s.CrystalDamageByEnemy))
                 .Set("elements", elements).Set("seen", StringArray(s.SeenEnemies)).Set("drafts", s.DraftsTaken)
                 .Set("bosses", BossMap(s.BossChoices)).Set("blocked", s.BlockedNode).Set("biome", s.BiomeId)
                 .Set("mode", s.Mode.ToString()).Set("daily", s.DailyKey).Set("modeMods", StringArray(s.ModeModifiers))
-                .Set("heroPool", StringArray(s.HeroPool)).Set("relicPool", StringArray(s.RelicPool));
+                .Set("heroPool", StringArray(s.HeroPool)).Set("relicPool", StringArray(s.RelicPool))
+                .Set("menuSeconds", Math.Round(s.MenuSeconds, 1)).Set("tactic", s.Tactic.ToString())
+                .Set("lock", s.LockedOffer == null ? JsonNode.NewObject() : JsonNode.NewObject().Set("kind", s.LockedOffer.Kind.ToString()).Set("id", s.LockedOffer.Id)
+                    .Set("price", s.LockedOffer.Price).Set("trait", s.LockedOffer.TraitId));
             WriteEnvelope("run", d);
         }
 
@@ -341,6 +356,11 @@ namespace Aetherward.Sim.Meta
                 ReadFloatMap(d["sourceDamage"], s.SourceDamage);
                 var els = d["elements"].Items;
                 for (int i = 0; i < els.Count && i < s.ElementDamage.Length; i++) s.ElementDamage[i] = els[i].AsFloat();
+                var kinds = d["dmgKinds"].Items; // absent in older saves: stays zero
+                for (int i = 0; i < kinds.Count && i < s.DamageByKind.Length; i++) s.DamageByKind[i] = kinds[i].AsFloat();
+                s.ShieldAbsorbed = d.Float("shieldAbsorbed");
+                s.MaxProcDepth = d.Int("procDepth");
+                ReadFloatMap(d["crystalBy"], s.CrystalDamageByEnemy);
                 s.SeenEnemies.AddRange(d.StringList("seen"));
                 s.BlockedNode = d.Int("blocked", -1);
                 string biome = d.Str("biome");
@@ -350,6 +370,11 @@ namespace Aetherward.Sim.Meta
                 s.ModeModifiers.AddRange(d.StringList("modeMods"));
                 foreach (string h in d.StringList("heroPool")) if (db.Heroes.ContainsKey(h)) s.HeroPool.Add(h);
                 foreach (string r in d.StringList("relicPool")) if (db.Relics.ContainsKey(r)) s.RelicPool.Add(r);
+                s.MenuSeconds = d.Float("menuSeconds");
+                s.Tactic = Enum.TryParse(d.Str("tactic") ?? "Balanced", out Combat.TeamTactic tac) ? tac : Combat.TeamTactic.Balanced;
+                JsonNode lk = d["lock"];
+                if (lk.Kind == JsonKind.Object && lk.Has("id") && Enum.TryParse(lk.Str("kind") ?? "", out OfferKind lkind))
+                    s.LockedOffer = new Offer { Kind = lkind, Id = lk.Str("id"), Price = lk.Int("price"), TraitId = lk.Str("trait"), Tag = "locked" };
                 foreach (string k in d["bosses"].Keys)
                 {
                     string boss = d["bosses"].Str(k);
