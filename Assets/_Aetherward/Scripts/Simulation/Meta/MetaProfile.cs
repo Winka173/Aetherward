@@ -82,6 +82,9 @@ namespace Aetherward.Sim.Meta
             // Expansion Phase 2: battlefields
             new UnlockRule { Id = "biome:molten_crater", Condition = "reach_wave", Value = 7 },
             new UnlockRule { Id = "biome:frostfall_bastion", Condition = "reach_wave", Value = 11 },
+            new UnlockRule { Id = "biome:sunken_archive", Condition = "reach_wave", Value = 14 },
+            new UnlockRule { Id = "biome:stormspire_citadel", Condition = "reach_wave", Value = 17 },
+            new UnlockRule { Id = "biome:shattered_aether", Condition = "victory", Value = 1 },
             // Expansion Phase 2: Nature / Poison
             new UnlockRule { Id = "hero:liora", Condition = "reach_wave", Value = 9 },
             new UnlockRule { Id = "hero:thalen", Condition = "hero_runs", Value = 5 },

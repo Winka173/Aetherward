@@ -779,3 +779,20 @@ UI_X.update({
     "hud.mirrath_phase": ("More knights rise!", "Thêm hiệp sĩ trỗi dậy!"), "hud.aetherion_phase": ("THE CRYSTAL FRACTURES!", "PHA LÊ NỨT VỠ!"),
     "hud.ashen_matriarch_phase": ("THE BROOD AWAKENS!", "LŨ CON THỨC GIẤC!"), "hud.nyxhollow_guard": ("RIFT SUMMONERS shield it!", "KẺ TRIỆU HỒI KHE NỨT che chắn nó!"),
 })
+
+BIOMES.update({
+    "shattered_aether": (("Shattered Aether", "Aether Vỡ Nát"),
+        ("Floating islands over the rift. Aether rifts tear open between the lanes (telegraphed), dragging enemies together and stinging heroes inside; aether nodes grant +40 Elemental Mastery. Chaos Elementals join; Aetherion or Nyxhollow waits at wave 20.",
+         "Những hòn đảo trôi trên khe nứt. Khe nứt aether mở ra giữa các làn (có cảnh báo), kéo kẻ địch lại và châm anh hùng bên trong; ô aether +40 Tinh Thông Nguyên Tố. Nguyên Tố Hỗn Loạn tham chiến; Aetherion hoặc Nyxhollow chờ ở đợt 20.")),
+    "stormspire_citadel": (("Stormspire Citadel", "Thành Đỉnh Bão"),
+        ("A citadel on a storm peak. Lightning strikes the battlements (telegraphed); lightning-rod nodes make heroes attack 10% faster. Storm Wisps join; Ironclad Warlord and Vaelith rule here.",
+         "Thành trì trên đỉnh bão. Sét đánh xuống tường thành (có cảnh báo); ô cột thu lôi giúp anh hùng đánh nhanh hơn 10%. Đốm Bão tham chiến; Lãnh Chúa Giáp Sắt và Vaelith cai trị nơi này.")),
+    "sunken_archive": (("Sunken Archive", "Thư Viện Chìm"),
+        ("A drowned library. Tidal surges (telegraphed) wash enemies back but batter heroes standing in the water; the north and south stairs stay flooded until wave 6. Tome nodes shorten cooldowns. Arcane Mimics join; Thornmother and Mirrath await.",
+         "Thư viện chìm dưới nước. Sóng triều (có cảnh báo) đẩy lùi kẻ địch nhưng đánh vào anh hùng đứng trong nước; cầu thang bắc và nam ngập đến đợt 6. Ô sách cổ giảm hồi chiêu. Kẻ Nhại Huyền Bí tham chiến; Mẹ Gai và Mirrath đang chờ.")),
+})
+UI_X.update({
+    "nodetrait.aether_node": ("Aether node: +40 Elemental Mastery", "Ô aether: +40 Tinh Thông Nguyên Tố"),
+    "nodetrait.lightning_rod": ("Lightning rod: attacks 10% faster", "Cột thu lôi: đánh nhanh hơn 10%"),
+    "nodetrait.archive_tome": ("Archive tome: 10% shorter cooldowns", "Sách cổ: hồi chiêu ngắn hơn 10%"),
+})

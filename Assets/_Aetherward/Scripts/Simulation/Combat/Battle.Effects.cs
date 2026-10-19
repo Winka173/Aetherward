@@ -437,6 +437,7 @@ namespace Aetherward.Sim.Combat
                     HeroUnit h = Heroes[i];
                     if (h.Alive && Vec2.Distance(h.Pos, s.Pos) <= s.Radius + h.Radius) DamageHero(h, h.MaxHp * s.HeroDamagePct, null);
                 }
+                HazardDisplacement(s);
             }
             List<EnemyUnit> hits = RentList();
             QueryEnemies(s.Pos, s.Radius, hits);

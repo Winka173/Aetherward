@@ -234,7 +234,7 @@ namespace Aetherward.Sim.Content
             return errors;
         }
 
-        public static readonly HashSet<string> KnownHazards = new HashSet<string> { "lava_vents" };
+        public static readonly HashSet<string> KnownHazards = new HashSet<string> { "lava_vents", "lightning_strikes", "aether_rifts", "tidal_surge" };
 
         private static void CheckBiomes(ContentDatabase db, List<string> errors)
         {

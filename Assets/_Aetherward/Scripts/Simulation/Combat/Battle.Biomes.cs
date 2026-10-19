@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Aetherward.Sim.Content;
 using Aetherward.Sim.Core;
 
@@ -22,6 +23,34 @@ namespace Aetherward.Sim.Combat
             }
         }
 
+        /// <summary>Hazard kinds: lava vents (Fire), lightning strikes (Lightning), aether rifts (Void, pull), tidal surges (Water, push).</summary>
+        public static Element HazardElement(string kind)
+        {
+            switch (kind)
+            {
+                case "lava_vents": return Element.Fire;
+                case "lightning_strikes": return Element.Lightning;
+                case "aether_rifts": return Element.Void;
+                case "tidal_surge": return Element.Water;
+                default: return Element.None;
+            }
+        }
+
+        /// <summary>Rifts drag enemies inward, surges shove them back from the crystal (bosses resist both).</summary>
+        private void HazardDisplacement(DelayedStrike s)
+        {
+            bool rift = s.SourceTag == "hazard_aether_rifts", surge = s.SourceTag == "hazard_tidal_surge";
+            if (!rift && !surge) return;
+            List<EnemyUnit> c = RentList();
+            QueryEnemies(s.Pos, s.Radius + 0.5f, c);
+            for (int i = 0; i < c.Count; i++)
+            {
+                if (rift) Pull(c[i], s.Pos, 2.4f, 0.4f);
+                else Knock(c[i], (c[i].Pos - Crystal.Pos).Normalized, 1.4f);
+            }
+            ReturnList(c);
+        }
+
         private void UpdateBiome(float dt)
         {
             for (int i = 0; i < _hazardTimers.Length; i++)
@@ -42,7 +71,7 @@ namespace Aetherward.Sim.Combat
                         Pos = p,
                         Delay = hz.Delay,
                         Radius = hz.Radius,
-                        Element = hz.Kind == "lava_vents" ? Element.Fire : Element.None,
+                        Element = HazardElement(hz.Kind),
                         Power = hz.Power * WaveLevelScale,
                         Multiplier = 1f,
                         HeroDamagePct = hz.HeroDamagePct,

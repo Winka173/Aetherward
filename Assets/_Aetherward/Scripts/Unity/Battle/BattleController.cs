@@ -809,6 +809,9 @@ namespace Aetherward.Game
             {
                 case "heated_bridge": return new Color(1f, 0.62f, 0.35f);
                 case "frozen_tile": return new Color(0.6f, 0.88f, 1f);
+                case "aether_node": return new Color(1f, 0.55f, 0.95f);
+                case "lightning_rod": return new Color(1f, 0.95f, 0.45f);
+                case "archive_tome": return new Color(0.55f, 0.85f, 1f);
                 default: return new Color(1f, 0.95f, 0.6f);
             }
         }
