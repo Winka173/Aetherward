@@ -14,7 +14,7 @@
     { "id": "mana_battery", "family": "combat", "rarity": "rare", "price": 15,
       "effects": [ { "op": "stat", "stat": "skill_cooldown", "value": 0.18, "pct": true } ] },
     { "id": "glass_cannon", "family": "chaos", "rarity": "epic", "price": 16, "starter": false,
-      "effects": [ { "op": "stat", "stat": "damage_bonus", "value": 0.4 }, { "op": "crystal", "maxHpPct": -0.3 } ] },
+      "effects": [ { "op": "stat", "stat": "damage_bonus", "value": 0.45 }, { "op": "crystal", "maxHpPct": -0.25 } ] },
     { "id": "elemental_mirror", "family": "chaos", "rarity": "legendary", "price": 22, "starter": false,
       "effects": [ { "op": "rule", "rule": "mirror_reactions" } ] },
     { "id": "blood_contract", "family": "chaos", "rarity": "rare", "price": 12,

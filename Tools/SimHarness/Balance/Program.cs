@@ -36,6 +36,25 @@ namespace Aetherward.Balance
             string contentDir = Path.Combine(root, "Assets", "_Aetherward", "Resources", "Content");
             ContentDatabase db = ContentDatabase.Load(n => File.ReadAllText(Path.Combine(contentDir, n + ".json")));
 
+            int snapWave = 0;
+            float snapTime = 20f;
+            for (int i = 0; i < args.Length - 1; i++)
+            {
+                if (args[i] == "--snapshot") snapWave = int.Parse(args[i + 1]);
+                if (args[i] == "--time") snapTime = float.Parse(args[i + 1], CultureInfo.InvariantCulture);
+            }
+            if (Array.IndexOf(args, "--perf") >= 0)
+            {
+                Perf.Run(db, Path.Combine(outDir, "PERF.md"));
+                return 0;
+            }
+            if (snapWave > 0)
+            {
+                Snapshot.Write(db, Strategy.Find(strategyName == "all" ? "thunderstorm" : strategyName), snapWave, snapTime,
+                    Path.Combine(outDir, "snapshot_w" + snapWave + ".json"));
+                return 0;
+            }
+
             Strategy[] strategies = strategyName == "all" ? Strategy.Archetypes : new[] { Strategy.Find(strategyName) };
             var runCsv = new StringBuilder("strategy,seed,victory,wave,active_seconds,crystal_hp_pct,heroes,hero_downs,reactions,peak_enemies,peak_rps,gold_earned,gold_spent,relics,top_reaction,defeat_source,stuck_recoveries,ms\n");
             var waveCsv = new StringBuilder("strategy,seed,wave,duration,crystal_damage,crystal_hp_after,kills,leaks,reactions,hero_downs,gold,peak_enemies,peak_rps\n");

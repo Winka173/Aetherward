@@ -91,6 +91,7 @@ namespace Aetherward.Game
             v._hpFill = WorldGfx.NewSprite(go.transform, "HpFill", Art.Sprite("UI/bar_fill"), 0);
             v._status1 = WorldGfx.NewSprite(go.transform, "Status1", null, 0);
             v._status2 = WorldGfx.NewSprite(go.transform, "Status2", null, 0);
+            v._status1.transform.localScale = v._status2.transform.localScale = Vector3.one * 0.75f;
             return v;
         }
 
@@ -118,7 +119,7 @@ namespace Aetherward.Game
             _cast = _idle;
             _down = _idle;
             bool big = def.Boss;
-            _baseScale = (elite && !def.Elite && !def.Boss ? 1.3f : 1f) * (def.Id == "swarmling" ? 0.8f : 1f);
+            _baseScale = (elite && !def.Elite && !def.Boss ? 1.3f : 1f) * (def.Id == "swarmling" ? 0.8f : 1f) * (big ? 1.25f : 1f);
             float shadowW = big ? 2.6f : (def.Radius * 2.4f) * _baseScale;
             _shadow.transform.localScale = new Vector3(shadowW, shadowW * 0.9f, 1);
             _ring.enabled = elite || !string.IsNullOrEmpty(affix);
@@ -268,8 +269,8 @@ namespace Aetherward.Game
             _status1.enabled = status1 != Element.None;
             _status2.enabled = status2 != Element.None;
             float sy = height * 0.88f + (showHp ? 0.32f : 0.15f);
-            _status1.transform.localPosition = new Vector3(status2 != Element.None ? -0.2f : 0f, sy, 0);
-            _status2.transform.localPosition = new Vector3(0.2f, sy, 0);
+            _status1.transform.localPosition = new Vector3(status2 != Element.None ? -0.16f : 0f, sy, 0);
+            _status2.transform.localPosition = new Vector3(0.16f, sy, 0);
         }
 
         private static Sprite StatusSprite(Element e)
