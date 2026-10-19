@@ -338,6 +338,7 @@ namespace Aetherward.Sim.Combat
             Array.Clear(e.AdaptDamage, 0, e.AdaptDamage.Length);
             e.AdaptedElement = 0;
             e.AdaptTimer = 0f;
+            ResetExpansionStatuses(e);
         }
 
         private static int NearestWaypoint(LaneDef lane, Vec2 p)

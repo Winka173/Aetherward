@@ -1,0 +1,34 @@
+{
+  // Twelve primary elements. Ordinals in code are append-only (see Docs/Expansion/DECISIONS.md X-02).
+  // stage: 0 launch, 1 Light/Shadow, 2 Nature/Poison, 3 Arcane/Void (content gating only).
+  // onApply runs when the aura is newly applied, onRefresh when more gauge lands on an existing aura.
+  // Time and Crystal are special magic schools, not elements, and are intentionally absent here.
+  "elements": [
+    { "id": "fire", "stage": 0, "color": "#ff6a2b", "status": "burn",
+      "onApply": [{ "op": "status", "status": "burn", "duration": 3 }],
+      "onRefresh": [{ "op": "status", "status": "burn", "duration": 3 }] },
+    { "id": "water", "stage": 0, "color": "#2f8cff", "status": "wet" },
+    { "id": "lightning", "stage": 0, "color": "#b06cff", "status": "charged" },
+    { "id": "ice", "stage": 0, "color": "#8fe3ff", "status": "chill" },
+    { "id": "wind", "stage": 0, "color": "#5fe8c8", "status": "windmark" },
+    { "id": "earth", "stage": 0, "color": "#c98a3e", "status": "armor_crack",
+      "onApply": [{ "op": "status", "status": "armor_crack", "duration": 4, "stacks": 1 }] },
+    { "id": "light", "stage": 1, "color": "#ffe066", "status": "illuminated",
+      "onApply": [{ "op": "status", "status": "illuminate", "duration": 4, "weaken": 0.15, "purge": 0.5 }],
+      "onRefresh": [{ "op": "status", "status": "illuminate", "duration": 4, "weaken": 0.15, "purge": 0.5 }] },
+    { "id": "shadow", "stage": 1, "color": "#a3306b", "status": "doom",
+      "onApply": [{ "op": "status", "status": "doom", "stacks": 1 }],
+      "onRefresh": [{ "op": "status", "status": "doom", "stacks": 1 }] },
+    { "id": "nature", "stage": 2, "color": "#3fa34d", "status": "rooted",
+      "onApply": [{ "op": "status", "status": "root", "duration": 0.8 }] },
+    { "id": "poison", "stage": 2, "color": "#c8f03a", "status": "poisoned",
+      "onApply": [{ "op": "status", "status": "poison", "stacks": 1, "duration": 5 }],
+      "onRefresh": [{ "op": "status", "status": "poison", "stacks": 1, "duration": 5 }] },
+    { "id": "arcane", "stage": 3, "color": "#ff5fd2", "status": "resonant",
+      "onApply": [{ "op": "status", "status": "resonant", "duration": 5 }],
+      "onRefresh": [{ "op": "status", "status": "resonant", "duration": 5 }] },
+    { "id": "void", "stage": 3, "color": "#5146d9", "status": "unstable",
+      "onApply": [{ "op": "status", "status": "unstable", "stacks": 1 }],
+      "onRefresh": [{ "op": "status", "status": "unstable", "stacks": 1 }] }
+  ]
+}

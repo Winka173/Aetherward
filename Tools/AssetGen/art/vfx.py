@@ -3,6 +3,7 @@ effects stay readable with reduced VFX or colour-vision deficits. White/greyscal
 glow, telegraph) are tinted at runtime."""
 import math
 import random
+import zlib
 import cairo
 from toolkit import (INK, Canvas, hex2rgb, mix, shade, light, paint, flat, stroke, glow, sparkle, smooth_closed, smooth_open,
                      ellipse_path, rrect_path, poly_path, star_path, outlined_line)
@@ -76,7 +77,7 @@ def impact(el, s=192):
     ctx = cv.ctx
     a, b = EL[el]
     c = s / 2
-    rnd = random.Random(hash(el) & 0xffff)
+    rnd = random.Random(zlib.crc32(el.encode()) & 0xffff)  # stable across runs (str hash is salted)
     glow(ctx, c, c, s * 0.45, b, 0.6)
     if el == "fire":
         paint(ctx, lambda x: star_path(x, c, c, 78, 34, 9), a, lw=5)

@@ -1,4 +1,8 @@
 {
+  // Launch reactions (15) keep hand-written rules (no "ops"). Expansion reactions are declarative:
+  // each op is interpreted by Battle.ReactionOps.cs (damage/status/apply/field/pull/knock/chain/consume/...).
+  // Coverage: every pair of the 12 primary elements is Signature, Generic (named or auto "A·B burst"),
+  // Neutral or BlockedByDesign - see Docs/Expansion/ELEMENT_REACTION_MATRIX.md (generated).
   // 15 order-independent element pairs. Reaction damage =
   //   (base * waveLevelScale + attackScale * sourceAttack) * (1 + ReactionBonus + EM bonus + mods) * per-effect mult
   // consume: gauge removed from the existing aura per incoming gauge unit.
@@ -18,6 +22,133 @@
     { "id": "magnetize",     "a": "lightning", "b": "earth",     "base": 6,  "attackScale": 0.4, "radius": 2.5, "duration": 0,   "consume": 1.0, "cooldown": 1.2, "params": { "mult": 0.4, "pull": 3.5 } },
     { "id": "blizzard",      "a": "ice",       "b": "wind",      "base": 7,  "attackScale": 0.45, "radius": 2.0, "duration": 4.0, "consume": 1.0, "cooldown": 1.5, "params": { "dpsMult": 0.4 } },
     { "id": "ice_spikes",    "a": "ice",       "b": "earth",     "base": 9,  "attackScale": 0.55, "radius": 0.8, "duration": 0,  "consume": 1.0, "cooldown": 1.0, "params": { "mult": 0.75, "spikes": 3, "spread": 0.9 } },
-    { "id": "sandstorm",     "a": "wind",      "b": "earth",     "base": 5,  "attackScale": 0.3, "radius": 2.0, "duration": 4.0, "consume": 1.0, "cooldown": 1.5, "params": { "mult": 0.3, "slow": 0.25 } }
+    { "id": "sandstorm",     "a": "wind",      "b": "earth",     "base": 5,  "attackScale": 0.3, "radius": 2.0, "duration": 4.0, "consume": 1.0, "cooldown": 1.5, "params": { "mult": 0.3, "slow": 0.25 } },
+
+    // ---------------------------------------------------------------- Stage E1: Light / Shadow
+    { "id": "eclipse", "sound": "react_dark", "a": "light", "b": "shadow", "base": 12, "attackScale": 0.7, "radius": 2.0, "duration": 4.0, "cooldown": 2.0,
+      "ops": [ { "op": "damage", "element": "shadow", "mult": 1.0 },
+               { "op": "field", "field": "eclipse" } ] },
+    { "id": "hallowed_bulwark", "sound": "react_holy", "a": "earth", "b": "light", "base": 8, "attackScale": 0.5, "radius": 2.2, "duration": 4.0, "cooldown": 2.5,
+      "ops": [ { "op": "damage", "element": "earth", "mult": 0.6 },
+               { "op": "hero_shield", "pct": 0.1, "heroRadius": 3.0, "nearest": true },
+               { "op": "field", "field": "hallowed_ward" } ] },
+    { "id": "solar_flare", "sound": "react_explosion", "category": "generic", "a": "fire", "b": "light", "base": 10, "attackScale": 0.6, "radius": 1.2, "cooldown": 1.0,
+      "ops": [ { "op": "damage", "area": true, "element": "fire", "mult": 0.8 },
+               { "op": "status", "area": true, "status": "illuminate", "duration": 3, "weaken": 0.1, "purge": 0.3 } ] },
+    { "id": "glimmer_tide", "sound": "react_holy", "category": "generic", "a": "water", "b": "light", "base": 7, "attackScale": 0.45, "radius": 1.4, "cooldown": 1.5,
+      "ops": [ { "op": "damage", "element": "water", "mult": 0.6 },
+               { "op": "hero_heal", "pct": 0.03, "heroRadius": 3.0, "nearest": true },
+               { "op": "cleanse", "heroRadius": 3.0 } ] },
+    { "id": "hellfire", "sound": "react_dark", "category": "generic", "a": "fire", "b": "shadow", "base": 11, "attackScale": 0.65, "radius": 0, "cooldown": 1.0,
+      "ops": [ { "op": "damage", "element": "fire", "mult": 1.1, "bonusIf": "doomed", "bonus": 0.4 },
+               { "op": "status", "status": "burn", "duration": 4 } ] },
+    { "id": "black_tide", "sound": "react_dark", "category": "generic", "a": "water", "b": "shadow", "base": 7, "attackScale": 0.4, "radius": 1.4, "cooldown": 1.2,
+      "ops": [ { "op": "damage", "area": true, "element": "water", "mult": 0.45 },
+               { "op": "status", "area": true, "status": "doom", "stacks": 1 },
+               { "op": "status", "area": true, "status": "slow", "amount": 0.2, "duration": 2 } ] },
+
+    // ---------------------------------------------------------------- Stage E2: Nature / Poison
+    { "id": "wildfire", "sound": "react_explosion", "a": "fire", "b": "nature", "base": 9, "attackScale": 0.55, "radius": 1.6, "duration": 4.0, "cooldown": 1.5,
+      "ops": [ { "op": "damage", "element": "fire", "mult": 0.7 },
+               { "op": "field", "field": "wildfire" },
+               { "op": "spread", "status": "burn", "duration": 3, "count": 4, "filter": "rooted", "radius": 3.0 } ] },
+    { "id": "overgrowth", "sound": "react_growth", "a": "water", "b": "nature", "base": 6, "attackScale": 0.35, "radius": 1.8, "duration": 3.5, "cooldown": 2.0,
+      "ops": [ { "op": "status", "area": true, "status": "root", "duration": 1.2 },
+               { "op": "field", "field": "overgrowth" } ] },
+    { "id": "toxic_shock", "sound": "react_chain", "a": "lightning", "b": "poison", "base": 9, "attackScale": 0.5, "radius": 0, "cooldown": 1.2,
+      "ops": [ { "op": "consume", "status": "poison", "fraction": 0.5 },
+               { "op": "damage", "element": "lightning", "mult": 0.6, "perConsumed": 0.45 },
+               { "op": "chain", "element": "lightning", "mult": 0.55, "bounces": 3, "jump": 2.6, "requires": "poisoned" } ] },
+    { "id": "venom_shards", "sound": "react_freeze", "a": "ice", "b": "poison", "base": 8, "attackScale": 0.45, "radius": 1.0, "cooldown": 1.5,
+      "ops": [ { "op": "damage", "element": "ice", "mult": 0.5 },
+               { "op": "shards", "element": "ice", "mult": 0.4, "count": 4, "spread": 1.3, "status": "poison", "stacks": 2, "duration": 5 } ] },
+    { "id": "sanctuary", "sound": "react_holy", "a": "light", "b": "nature", "base": 5, "attackScale": 0.3, "radius": 2.2, "duration": 4.0, "cooldown": 3.0,
+      "params": { "worldCooldown": 2.0 },
+      "ops": [ { "op": "damage", "element": "light", "mult": 0.4 },
+               { "op": "field", "field": "sanctuary" } ] },
+    { "id": "plague", "sound": "react_toxic", "a": "shadow", "b": "poison", "base": 8, "attackScale": 0.45, "radius": 2.2, "cooldown": 1.5,
+      "ops": [ { "op": "damage", "element": "poison", "mult": 0.5 },
+               { "op": "status", "status": "doom", "stacks": 2 },
+               { "op": "spread", "status": "poison", "stacks": 2, "duration": 5, "count": 3 } ] },
+    { "id": "blight_garden", "sound": "react_toxic", "a": "nature", "b": "poison", "base": 6, "attackScale": 0.35, "radius": 1.5, "duration": 5.0, "cooldown": 2.5,
+      "ops": [ { "op": "field", "field": "blight_garden" } ] },
+    { "id": "toxic_combustion", "sound": "react_explosion", "a": "fire", "b": "poison", "base": 9, "attackScale": 0.5, "radius": 1.5, "cooldown": 1.2,
+      "ops": [ { "op": "consume", "status": "poison", "fraction": 0.5 },
+               { "op": "damage", "area": true, "element": "fire", "mult": 0.35, "perConsumed": 0.3 } ] },
+    { "id": "venom_flow", "sound": "react_toxic", "a": "water", "b": "poison", "base": 6, "attackScale": 0.35, "radius": 2.4, "cooldown": 1.2,
+      "ops": [ { "op": "damage", "element": "water", "mult": 0.4 },
+               { "op": "spread", "status": "poison", "stacks": 2, "duration": 5, "count": 3, "filter": "wet" } ] },
+    { "id": "frost_roots", "sound": "react_freeze", "a": "ice", "b": "nature", "base": 6, "attackScale": 0.35, "radius": 1.8, "duration": 4.0, "cooldown": 2.0,
+      "ops": [ { "op": "damage", "element": "ice", "mult": 0.4 },
+               { "op": "field", "field": "frost_roots" } ] },
+
+    // ---------------------------------------------------------------- Stage E3: Arcane / Void
+    { "id": "overcharge", "sound": "react_chain", "a": "lightning", "b": "arcane", "base": 10, "attackScale": 0.55, "radius": 0, "cooldown": 1.5,
+      "ops": [ { "op": "damage", "element": "lightning", "mult": 0.9 },
+               { "op": "chain", "element": "lightning", "mult": 0.45, "bounces": 2, "jump": 2.4 },
+               { "op": "echo", "mult": 0.35, "cooldown": 3.0 } ] },
+    { "id": "spellflare", "sound": "react_arcane", "a": "fire", "b": "arcane", "base": 10, "attackScale": 0.6, "radius": 1.4, "duration": 2.5, "cooldown": 1.5,
+      "ops": [ { "op": "delayed", "element": "fire", "mult": 1.3, "delay": 0.9, "radius": 1.4, "status": "burn", "duration": 3 },
+               { "op": "field", "field": "ember_patch", "mult": 1.0 } ] },
+    { "id": "mana_tide", "sound": "react_arcane", "a": "water", "b": "arcane", "base": 6, "attackScale": 0.35, "radius": 1.0, "cooldown": 3.0,
+      "params": { "worldCooldown": 1.5 },
+      "ops": [ { "op": "damage", "element": "water", "mult": 0.5 },
+               { "op": "refund", "seconds": 0.5, "heroRadius": 3.5 },
+               { "op": "hero_buff", "stat": "attack_interval", "pct": 0.12, "duration": 3, "heroRadius": 3.5, "nearest": true } ] },
+    { "id": "singularity", "sound": "react_void", "a": "wind", "b": "void", "base": 10, "attackScale": 0.6, "radius": 2.2, "duration": 1.5, "cooldown": 2.5,
+      "ops": [ { "op": "field", "field": "singularity" } ] },
+    { "id": "gravemaw", "sound": "react_void", "a": "earth", "b": "void", "base": 7, "attackScale": 0.4, "radius": 2.0, "duration": 4.0, "cooldown": 2.0,
+      "ops": [ { "op": "damage", "element": "void", "mult": 0.4 },
+               { "op": "field", "field": "gravity_well" } ] },
+    { "id": "abyss_mark", "sound": "react_void", "a": "shadow", "b": "void", "base": 9, "attackScale": 0.5, "radius": 1.3, "cooldown": 2.0,
+      "ops": [ { "op": "consume", "status": "doom", "fraction": 1.0 },
+               { "op": "delayed", "element": "void", "mult": 0.6, "perConsumed": 0.45, "delay": 1.2, "radius": 1.3 },
+               { "op": "status", "status": "unstable", "stacks": 1 } ] },
+    { "id": "prism_chant", "sound": "react_holy", "a": "light", "b": "arcane", "base": 7, "attackScale": 0.4, "radius": 1.0, "cooldown": 2.5,
+      "params": { "worldCooldown": 1.5 },
+      "ops": [ { "op": "damage", "element": "light", "mult": 0.5 },
+               { "op": "hero_shield", "pct": 0.07, "heroRadius": 3.0, "nearest": true },
+               { "op": "cleanse", "heroRadius": 3.0 },
+               { "op": "echo", "mult": 0.3, "cooldown": 4.0 } ] },
+    { "id": "astral_seal", "sound": "react_holy", "a": "light", "b": "void", "base": 8, "attackScale": 0.45, "radius": 2.5, "cooldown": 3.0,
+      "ops": [ { "op": "damage", "element": "light", "mult": 0.7 },
+               { "op": "suppress", "area": true, "duration": 2.5 },
+               { "op": "status", "status": "illuminate", "duration": 3, "weaken": 0.15, "purge": 0.5 } ] },
+    { "id": "paradox", "sound": "react_void", "category": "generic", "a": "arcane", "b": "void", "base": 9, "attackScale": 0.5, "radius": 0, "cooldown": 1.5,
+      "ops": [ { "op": "damage", "element": "void", "mult": 0.8 },
+               { "op": "status", "status": "resonant", "duration": 4 },
+               { "op": "status", "status": "unstable", "stacks": 1 } ] }
+  ],
+
+  // Pairs that coexist without reacting (both auras and their statuses stay active).
+  "neutral": [
+    { "a": "light", "b": "poison", "reason": "light_poison" },
+    { "a": "earth", "b": "nature", "reason": "earth_nature" },
+    { "a": "earth", "b": "poison", "reason": "earth_poison" }
+  ],
+  "blocked": [],
+
+  // Template for every remaining primary pair: a small burst of both elements, named "A·B burst".
+  "generic": { "base": 6, "attackScale": 0.4, "radius": 0.9, "consume": 1.0, "cooldown": 1.2,
+    "ops": [ { "op": "damage", "area": true, "element": "$incoming", "mult": 0.45 },
+             { "op": "damage", "element": "$existing", "mult": 0.3 } ] },
+
+  // Data-driven persistent zones used by reactions (and later by skills/relics).
+  "fields": [
+    { "id": "eclipse", "element": "shadow", "tick": 1.0, "damageMult": 0.3, "reactionDamage": true, "enemyVuln": 0.15, "enemyWeaken": 0.15, "maxCount": 3,
+      "onTick": [{ "op": "status", "status": "doom", "stacks": 1 }] },
+    { "id": "hallowed_ward", "element": "light", "tick": 1.0, "heroDamageReduction": 0.2, "enemyWeaken": 0.1, "crystalShieldPct": 0.004, "maxCount": 2 },
+    { "id": "wildfire", "element": "fire", "tick": 0.5, "damageMult": 0.3, "reactionDamage": true, "grow": 0.25, "maxCount": 3,
+      "onTick": [{ "op": "status", "status": "burn", "duration": 2 }] },
+    { "id": "overgrowth", "element": "nature", "tick": 0.5, "slow": 0.35, "grow": 0.2, "heroHealPct": 0.008, "maxCount": 3 },
+    { "id": "sanctuary", "element": "light", "tick": 0.5, "heroHealPct": 0.015, "cleanse": true, "crystalShieldPct": 0.003, "maxCount": 2 },
+    { "id": "blight_garden", "element": "poison", "tick": 0.6, "damageMult": 0.15, "reactionDamage": true, "grow": 0.15, "maxRadiusMult": 1.5, "maxCount": 3,
+      "onTick": [{ "op": "status", "status": "poison", "stacks": 1, "duration": 4 }] },
+    { "id": "frost_roots", "element": "ice", "tick": 0.6, "slow": 0.45, "maxCount": 3,
+      "onTick": [{ "op": "status", "status": "root", "duration": 0.6 }] },
+    { "id": "ember_patch", "element": "fire", "tick": 0.5, "damageMult": 0.25, "reactionDamage": true, "maxCount": 3 },
+    { "id": "singularity", "element": "void", "tick": 0.5, "pull": 2.6, "maxCount": 2,
+      "onEnd": [{ "op": "collapse", "mult": 1.0, "radius": 2.2 }] },
+    { "id": "gravity_well", "element": "void", "tick": 0.5, "damageMult": 0.25, "reactionDamage": true, "slow": 0.4, "pull": 0.6, "maxCount": 2 }
   ]
 }

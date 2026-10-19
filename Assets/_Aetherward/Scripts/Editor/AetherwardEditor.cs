@@ -56,31 +56,11 @@ namespace Aetherward.EditorTools
                 var importer = AssetImporter.GetAtPath(asset) as TextureImporter;
                 if (importer != null && importer.textureType != TextureImporterType.Sprite) errors.Add("not imported as sprite: " + asset);
             }
-            foreach (HeroDef h in db.HeroList)
-            {
-                foreach (string pose in new[] { "idle", "cast", "downed", "evoA", "evoB", "evoA_cast", "evoB_cast" }) Need("Heroes/" + h.Id + "_" + pose);
-                Need("Portraits/" + h.Id);
-            }
-            foreach (EnemyDef e in db.Enemies.Values)
-            {
-                Need("Enemies/" + e.Id + "_a");
-                Need("Enemies/" + e.Id + "_b");
-            }
-            foreach (ReactionDef r in db.Reactions.Values) Need("Icons/reaction_" + r.Id);
-            foreach (RelicDef r in db.RelicList) Need("Relics/" + r.Id);
-            foreach (CardDef c in db.CardList) Need("Cards/" + c.Id);
-            foreach (Element el in ElementUtil.All)
-            {
-                Need("Icons/element_" + ElementUtil.Key(el));
-                Need("Vfx/projectile_" + ElementUtil.Key(el));
-                Need("Vfx/impact_" + ElementUtil.Key(el));
-            }
-            foreach (string s in new[] { "World/arena_background", "World/crystal_intact", "World/crystal_cracked", "World/crystal_critical",
-                         "World/node_empty", "World/node_occupied", "World/node_highlight", "World/lane_arrow", "World/shadow",
-                         "UI/panel_dark", "UI/button_primary_normal", "UI/bar_bg", "UI/bar_fill", "UI/title_emblem" })
-                Need(s);
-            foreach (string clip in new[] { "Music/menu_loop", "Music/battle_loop", "Music/boss_loop", "Sfx/ui_click", "Sfx/wave_start" })
-                if (!File.Exists("Assets/_Aetherward/Resources/Audio/" + clip + ".ogg") && !File.Exists("Assets/_Aetherward/Resources/Audio/" + clip + ".wav"))
+            var seen = new HashSet<string>();
+            foreach (string path in AssetManifest.RequiredArt(db))
+                if (seen.Add(path)) Need(path);
+            foreach (string clip in AssetManifest.RequiredAudio(db))
+                if (seen.Add(clip) && !File.Exists("Assets/_Aetherward/Resources/Audio/" + clip + ".ogg") && !File.Exists("Assets/_Aetherward/Resources/Audio/" + clip + ".wav"))
                     errors.Add("missing audio " + clip);
             return errors;
         }

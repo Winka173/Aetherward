@@ -16,6 +16,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 import cairo  # noqa: E402
 import heroes, enemies, world, vfx, ui, icons  # noqa: E402
+import expansion_art as xa  # noqa: E402
 
 ROOT = os.path.abspath(os.path.join(HERE, "..", "..", ".."))
 ART = os.path.join(ROOT, "Assets", "_Aetherward", "Resources", "Art")
@@ -120,6 +121,24 @@ def main():
     for name in icons.UI_ICONS:
         icon_paths.append(save(icons.ui_icon(name), "Icons/ui_%s" % name, 240, kind="icons.py"))
     sheet(icon_paths, 10, 110, "icons.png", (0.16, 0.18, 0.28))
+
+    # ---- post-MVP expansion: six new elements, statuses, declarative reactions and fields
+    x_paths = []
+    for el in xa.NEW_ELEMENTS:
+        x_paths.append(save(xa.element_icon(el), "Icons/element_%s" % el, 256, kind="expansion_art.py"))
+        x_paths.append(save(xa.projectile(el), "Vfx/projectile_%s" % el, 230, kind="expansion_art.py"))
+        x_paths.append(save(xa.impact(el), "Vfx/impact_%s" % el, 192, kind="expansion_art.py"))
+    for sid in xa.STATUS_NEW:
+        x_paths.append(save(xa.status_icon(sid), "Icons/status_%s" % sid, 240, kind="expansion_art.py"))
+    for rid in xa.REACTION_ART:
+        x_paths.append(save(xa.reaction_icon(rid), "Icons/reaction_%s" % rid, 200, kind="expansion_art.py"))
+    x_paths.append(save(xa.generic_reaction_icon(), "Icons/reaction_generic", 200, kind="expansion_art.py"))
+    elements_by_id = {e["id"]: e for e in content("elements")["elements"]}
+    for f in content("reactions")["fields"] + content("heroes").get("fields", []):
+        fid = f["id"]
+        style = xa.FIELD_STYLE.get(fid) or xa.HERO_FIELD_STYLE.get(fid)
+        x_paths.append(save(xa.field(fid, style=style), "Vfx/field_%s" % fid, 128, kind="expansion_art.py"))
+    sheet(x_paths, 10, 120, "expansion_elements.png", (0.16, 0.18, 0.28))
 
     relic_paths = []
     for r in content("relics")["relics"]:

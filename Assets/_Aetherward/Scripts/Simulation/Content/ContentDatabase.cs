@@ -32,7 +32,12 @@ namespace Aetherward.Sim.Content
         public readonly Dictionary<string, EvolutionDef> Evolutions = new Dictionary<string, EvolutionDef>();
         public readonly Dictionary<string, EnemyDef> Enemies = new Dictionary<string, EnemyDef>();
         public readonly Dictionary<string, ReactionDef> Reactions = new Dictionary<string, ReactionDef>();
-        public readonly ReactionDef[] ReactionByPair = new ReactionDef[64];
+        public readonly ReactionDef[] ReactionByPair = new ReactionDef[ElementUtil.PairSlots];
+        /// <summary>Category of every element pair; pairs without a reaction are Neutral or BlockedByDesign.</summary>
+        public readonly ReactionCategory[] PairCategory = new ReactionCategory[ElementUtil.PairSlots];
+        public readonly Dictionary<int, string> PairNote = new Dictionary<int, string>();
+        public readonly Dictionary<string, FieldDef> Fields = new Dictionary<string, FieldDef>();
+        public readonly ElementDef[] ElementDefs = new ElementDef[ElementUtil.Count];
         public readonly Dictionary<string, RelicDef> Relics = new Dictionary<string, RelicDef>();
         public readonly List<RelicDef> RelicList = new List<RelicDef>();
         public readonly List<FusionDef> Fusions = new List<FusionDef>();
@@ -46,17 +51,20 @@ namespace Aetherward.Sim.Content
         public ArenaDef Arena = new ArenaDef();
 
         public ReactionDef ReactionFor(Element a, Element b) => ReactionByPair[ElementUtil.PairIndex(a, b)];
+        public ReactionCategory CategoryFor(Element a, Element b) => PairCategory[ElementUtil.PairIndex(a, b)];
+        public ElementDef ElementDef(Element e) => ElementDefs[(int)e];
 
         /// <summary>Content file names expected under Resources/Content (without extension).</summary>
         public static readonly string[] FileNames =
         {
-            "heroes", "evolutions", "enemies", "reactions", "relics", "cards", "waves", "events", "economy", "arena",
+            "elements", "heroes", "evolutions", "enemies", "reactions", "relics", "cards", "waves", "events", "economy", "arena",
             "loc_en", "loc_vi"
         };
 
         public static ContentDatabase Load(Func<string, string> readFile)
         {
             var db = new ContentDatabase();
+            db.LoadElements(Parse(readFile, "elements"));
             db.LoadHeroes(Parse(readFile, "heroes"));
             db.LoadEvolutions(Parse(readFile, "evolutions"));
             db.LoadEnemies(Parse(readFile, "enemies"));
@@ -234,33 +242,180 @@ namespace Aetherward.Sim.Content
 
         // ------------------------------------------------------------------ reactions
 
+        /// <summary>The 15 launch reactions keep their hand-written resolution (regression safety).</summary>
+        public static readonly string[] LegacyReactionIds =
+        {
+            "vaporize", "overload", "melt", "firestorm", "magma", "electrocharge", "freeze", "rainstorm", "mudfield",
+            "superconduct", "thunderstorm", "magnetize", "blizzard", "ice_spikes", "sandstorm"
+        };
+
+        private void LoadElements(JsonNode root)
+        {
+            foreach (JsonNode n in root["elements"].Items)
+            {
+                Element el = ParseElement(n.Str("id"));
+                if (el == Element.None) throw new FormatException("elements.json: 'none' is not a definable element");
+                if (ElementDefs[(int)el] != null) throw new FormatException("Duplicate element " + n.Str("id"));
+                ElementDefs[(int)el] = new ElementDef
+                {
+                    Element = el,
+                    Id = n.Str("id"),
+                    NameKey = "element." + n.Str("id"),
+                    Color = n.Str("color", "#ffffff"),
+                    StatusKey = n.Str("status", n.Str("id")),
+                    Stage = n.Int("stage"),
+                    OnApply = ParseActions(n["onApply"]),
+                    OnRefresh = ParseActions(n["onRefresh"])
+                };
+            }
+            foreach (Element e in ElementUtil.All)
+                if (ElementDefs[(int)e] == null) throw new FormatException("elements.json is missing " + ElementUtil.Key(e));
+        }
+
         private void LoadReactions(JsonNode root)
         {
+            foreach (JsonNode n in root["fields"].Items)
+            {
+                string id = n.Str("id");
+                var f = new FieldDef
+                {
+                    Id = id,
+                    NameKey = "field." + id + ".name",
+                    Element = ParseElement(n.Str("element")),
+                    Tick = n.Float("tick", 0.5f),
+                    DamageMult = n.Float("damageMult"),
+                    DamageAsReaction = n.Bool("reactionDamage"),
+                    Slow = n.Float("slow"),
+                    Pull = n.Float("pull"),
+                    Grow = n.Float("grow"),
+                    MaxRadiusMult = n.Float("maxRadiusMult", 1.6f),
+                    HeroHealPct = n.Float("heroHealPct"),
+                    HeroDamageReduction = n.Float("heroDamageReduction"),
+                    HeroHaste = n.Float("heroHaste"),
+                    Cleanse = n.Bool("cleanse"),
+                    CrystalShieldPct = n.Float("crystalShieldPct"),
+                    EnemyVuln = n.Float("enemyVuln"),
+                    EnemyWeaken = n.Float("enemyWeaken"),
+                    ReactionAmp = n.Float("reactionAmp"),
+                    BlockBolts = n.Bool("blockBolts"),
+                    Zap = n.Float("zap"),
+                    MaxCount = n.Int("maxCount", 4),
+                    Shape = n.Str("shape", "circle"),
+                    OnTick = ParseActions(n["onTick"]),
+                    OnEnd = ParseActions(n["onEnd"]),
+                    Params = ParamBag.FromJson(n["params"])
+                };
+                Add(Fields, id, f, "field");
+            }
+
             foreach (JsonNode n in root["reactions"].Items)
             {
                 string id = n.Str("id");
-                var r = new ReactionDef
-                {
-                    Id = id,
-                    A = ParseElement(n.Str("a")),
-                    B = ParseElement(n.Str("b")),
-                    NameKey = "reaction." + id + ".name",
-                    DescKey = "reaction." + id + ".desc",
-                    BaseDamage = n.Float("base", 10f),
-                    AttackScale = n.Float("attackScale", 0.5f),
-                    Radius = n.Float("radius", 0f),
-                    Duration = n.Float("duration", 0f),
-                    Consume = n.Float("consume", 1f),
-                    Cooldown = n.Float("cooldown", 0.6f),
-                    Params = ParamBag.FromJson(n["params"])
-                };
-                if (r.A == r.B || r.A == Element.None || r.B == Element.None)
-                    throw new FormatException("Reaction " + id + " must combine two distinct elements");
-                int pair = ElementUtil.PairIndex(r.A, r.B);
-                if (ReactionByPair[pair] != null) throw new FormatException("Duplicate reaction pair for " + id);
-                ReactionByPair[pair] = r;
-                Add(Reactions, id, r, "reaction");
+                ReactionDef r = ParseReaction(n, id);
+                r.Category = n.Has("category") ? ParseEnum<ReactionCategory>(n.Str("category"), "reaction category") : ReactionCategory.Signature;
+                r.Legacy = !n.Has("ops");
+                if (r.Legacy && Array.IndexOf(LegacyReactionIds, id) < 0)
+                    throw new FormatException("Reaction " + id + " has no ops and is not a launch reaction");
+                RegisterReaction(r);
             }
+
+            foreach (JsonNode n in root["neutral"].Items) RegisterNoReaction(n, ReactionCategory.Neutral);
+            foreach (JsonNode n in root["blocked"].Items) RegisterNoReaction(n, ReactionCategory.BlockedByDesign);
+
+            // Every remaining primary pair gets the documented generic interaction (never silently ignored).
+            JsonNode g = root["generic"];
+            if (g.Kind == JsonKind.Object)
+            {
+                List<ActionOp> ops = ParseActions(g["ops"]);
+                for (int i = 0; i < ElementUtil.All.Length; i++)
+                {
+                    for (int j = i + 1; j < ElementUtil.All.Length; j++)
+                    {
+                        Element a = ElementUtil.All[i], b = ElementUtil.All[j];
+                        int pair = ElementUtil.PairIndex(a, b);
+                        if (ReactionByPair[pair] != null || PairNote.ContainsKey(pair)) continue;
+                        string id = "generic_" + ElementUtil.Key(a) + "_" + ElementUtil.Key(b);
+                        ReactionDef r = ParseReaction(g, id);
+                        r.A = a;
+                        r.B = b;
+                        r.NameKey = "reaction.generic.name";
+                        r.DescKey = "reaction.generic.desc";
+                        r.Category = ReactionCategory.Generic;
+                        r.AutoNamed = true;
+                        r.Ops = ops;
+                        RegisterReaction(r);
+                    }
+                }
+            }
+        }
+
+        private ReactionDef ParseReaction(JsonNode n, string id)
+        {
+            var r = new ReactionDef
+            {
+                Id = id,
+                A = ParseElement(n.Str("a")),
+                B = ParseElement(n.Str("b")),
+                NameKey = "reaction." + id + ".name",
+                DescKey = "reaction." + id + ".desc",
+                BaseDamage = n.Float("base", 10f),
+                AttackScale = n.Float("attackScale", 0.5f),
+                Radius = n.Float("radius", 0f),
+                Duration = n.Float("duration", 0f),
+                Consume = n.Float("consume", 1f),
+                Cooldown = n.Float("cooldown", 0.6f),
+                Params = ParamBag.FromJson(n["params"]),
+                Ops = ParseActions(n["ops"]),
+                Sound = n.Str("sound")
+            };
+            return r;
+        }
+
+        private void RegisterReaction(ReactionDef r)
+        {
+            if (r.A == r.B || r.A == Element.None || r.B == Element.None)
+                throw new FormatException("Reaction " + r.Id + " must combine two distinct elements");
+            int pair = ElementUtil.PairIndex(r.A, r.B);
+            if (ReactionByPair[pair] != null || PairNote.ContainsKey(pair)) throw new FormatException("Duplicate reaction pair for " + r.Id);
+            ReactionByPair[pair] = r;
+            PairCategory[pair] = r.Category;
+            Add(Reactions, r.Id, r, "reaction");
+        }
+
+        private void RegisterNoReaction(JsonNode n, ReactionCategory category)
+        {
+            Element a = ParseElement(n.Str("a")), b = ParseElement(n.Str("b"));
+            if (a == b || a == Element.None || b == Element.None) throw new FormatException("Invalid " + category + " pair");
+            int pair = ElementUtil.PairIndex(a, b);
+            if (ReactionByPair[pair] != null || PairNote.ContainsKey(pair)) throw new FormatException("Pair listed twice: " + n.Str("a") + "+" + n.Str("b"));
+            PairCategory[pair] = category;
+            PairNote[pair] = n.Str("reason", "");
+        }
+
+        public static List<ActionOp> ParseActions(JsonNode arr)
+        {
+            var list = new List<ActionOp>();
+            foreach (JsonNode n in arr.Items) list.Add(ParseAction(n));
+            return list;
+        }
+
+        public static ActionOp ParseAction(JsonNode n)
+        {
+            var op = new ActionOp
+            {
+                Op = n.Str("op"),
+                Status = n.Str("status"),
+                Field = n.Str("field"),
+                Area = n.Bool("area"),
+                Mult = n.Float("mult", 1f),
+                Params = ParamBag.FromJson(n, "op", "element", "status", "field", "area", "mult")
+            };
+            if (string.IsNullOrEmpty(op.Op)) throw new FormatException("Action without op");
+            string el = n.Str("element");
+            if (el == "$incoming") op.ElementRef = ActionOp.ElementIncoming;
+            else if (el == "$existing") op.ElementRef = ActionOp.ElementExisting;
+            else op.Element = ParseElement(el);
+            return op;
         }
 
         // ------------------------------------------------------------------ relics, cards

@@ -36,10 +36,86 @@ namespace Aetherward.Sim.Content
             "frost_nova", "ice_shield", "vortex", "pierce_arrow", "stone_barrier", "ground_slam"
         };
 
+        public static readonly HashSet<string> KnownActionOps = new HashSet<string>
+        {
+            "damage", "status", "apply", "field", "pull", "knock", "chain", "consume", "hero_shield", "hero_heal", "hero_buff",
+            "crystal_shield", "cleanse", "refund", "echo", "suppress", "spread", "delayed", "shards", "collapse"
+        };
+
+        public static readonly HashSet<string> KnownStatuses = new HashSet<string>
+        {
+            "burn", "armor_crack", "slow", "stun", "vulnerable", "brittle", "reaction_vuln", "illuminate", "doom", "root", "poison",
+            "resonant", "unstable", "mark", "seal"
+        };
+
+        public static readonly HashSet<string> KnownStatusChecks = new HashSet<string>
+        {
+            "illuminated", "doomed", "rooted", "poisoned", "corroded", "resonant", "unstable", "frozen", "chilled", "burning", "wet", "marked", "elite"
+        };
+
+        private static readonly HashSet<string> Consumable = new HashSet<string> { "poison", "doom", "mark", "freeze" };
+
+        /// <summary>Authored signature reactions must stay inside this band (spec: 25-35, no 66-pair trap).</summary>
+        public const int MinSignature = 25, MaxSignature = 35;
+
+        private static void CheckActions(ContentDatabase db, string owner, List<ActionOp> ops, List<string> errors)
+        {
+            foreach (ActionOp op in ops)
+            {
+                if (!KnownActionOps.Contains(op.Op)) { errors.Add(owner + ": unknown action op " + op.Op); continue; }
+                if ((op.Op == "status" || op.Op == "spread") && !KnownStatuses.Contains(op.Status ?? "")) errors.Add(owner + ": unknown status " + op.Status);
+                if (op.Op == "consume" && !Consumable.Contains(op.Status ?? "")) errors.Add(owner + ": status " + op.Status + " cannot be consumed");
+                if (op.Op == "field" && !db.Fields.ContainsKey(op.Field ?? "")) errors.Add(owner + ": unknown field " + op.Field);
+                string filter = op.Params.GetString("filter") ?? op.Params.GetString("bonusIf") ?? op.Params.GetString("requires");
+                if (filter != null && !KnownStatusChecks.Contains(filter)) errors.Add(owner + ": unknown status check " + filter);
+                string delayedStatus = op.Params.GetString("status");
+                if ((op.Op == "delayed" || op.Op == "shards") && delayedStatus != null && !KnownStatuses.Contains(delayedStatus))
+                    errors.Add(owner + ": unknown strike status " + delayedStatus);
+            }
+        }
+
+        private static void CheckReactionMatrix(ContentDatabase db, List<string> errors)
+        {
+            int signature = 0, legacy = 0;
+            foreach (ReactionDef r in db.Reactions.Values)
+            {
+                if (r.Category == ReactionCategory.Signature) signature++;
+                if (r.Legacy) legacy++;
+                if (!r.Legacy && r.Ops.Count == 0) errors.Add("reaction " + r.Id + ": no ops");
+                CheckActions(db, "reaction " + r.Id, r.Ops, errors);
+            }
+            if (legacy != ContentDatabase.LegacyReactionIds.Length) errors.Add("expected " + ContentDatabase.LegacyReactionIds.Length + " launch reactions, found " + legacy);
+            if (signature < MinSignature || signature > MaxSignature) errors.Add("signature reactions must be " + MinSignature + "-" + MaxSignature + ", found " + signature);
+            Element[] all = ElementUtil.All;
+            for (int i = 0; i < all.Length; i++)
+            {
+                for (int j = i + 1; j < all.Length; j++)
+                {
+                    int pair = ElementUtil.PairIndex(all[i], all[j]);
+                    bool covered = db.ReactionByPair[pair] != null || db.PairNote.ContainsKey(pair);
+                    if (!covered) errors.Add("pair " + ElementUtil.Key(all[i]) + "+" + ElementUtil.Key(all[j]) + " has no defined behaviour");
+                }
+            }
+            foreach (ElementDef e in db.ElementDefs)
+            {
+                if (e == null) continue;
+                CheckActions(db, "element " + e.Id, e.OnApply, errors);
+                CheckActions(db, "element " + e.Id, e.OnRefresh, errors);
+            }
+            foreach (FieldDef f in db.Fields.Values)
+            {
+                CheckActions(db, "field " + f.Id, f.OnTick, errors);
+                CheckActions(db, "field " + f.Id, f.OnEnd, errors);
+                if (f.MaxCount < 1 || f.MaxCount > 8) errors.Add("field " + f.Id + ": maxCount must be 1-8");
+                if (f.Tick < 0.2f) errors.Add("field " + f.Id + ": tick too fast");
+            }
+        }
+
         public static List<string> Validate(ContentDatabase db)
         {
             var errors = new List<string>();
             void Err(string s) => errors.Add(s);
+            CheckReactionMatrix(db, errors);
 
             foreach (HeroDef h in db.HeroList)
             {
@@ -158,6 +234,15 @@ namespace Aetherward.Sim.Content
                 yield return r.NameKey;
                 yield return r.DescKey;
             }
+            foreach (Element e in ElementUtil.All)
+            {
+                ElementDef d = db.ElementDef(e);
+                yield return d.NameKey;
+                yield return "status." + d.StatusKey;
+                yield return "status." + d.StatusKey + ".desc";
+            }
+            foreach (FieldDef f in db.Fields.Values) yield return f.NameKey;
+            foreach (string note in db.PairNote.Values) yield return "pair." + note;
             foreach (RelicDef r in db.RelicList)
             {
                 yield return r.NameKey;

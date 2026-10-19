@@ -161,6 +161,15 @@ namespace Aetherward.Sim.Content
         public List<string> Tags = new List<string>();
     }
 
+    /// <summary>How an element pair behaves (reaction coverage audit; no pair is ever silently ignored).</summary>
+    public enum ReactionCategory
+    {
+        Signature,        // authored reaction with its own rules
+        Generic,          // template interaction (named or auto-named "A·B burst")
+        Neutral,          // auras coexist by design, no reaction
+        BlockedByDesign   // explicitly cannot react (documented reason)
+    }
+
     public sealed class ReactionDef
     {
         public string Id;
@@ -175,6 +184,86 @@ namespace Aetherward.Sim.Content
         public float Consume = 1f;    // gauge units removed from the existing aura
         public float Cooldown = 0.6f; // per-target anti-repeat window for this reaction
         public ParamBag Params = new ParamBag();
+        public ReactionCategory Category = ReactionCategory.Signature;
+        /// <summary>Launch reaction resolved by the original hand-written rules (kept for regression safety).</summary>
+        public bool Legacy;
+        /// <summary>Generated generic interaction: display name is a template over both element names.</summary>
+        public bool AutoNamed;
+        public string Sound;           // presentation hint (SFX id); launch reactions map by id in the view
+        /// <summary>Declarative resolution for non-legacy reactions.</summary>
+        public List<ActionOp> Ops = new List<ActionOp>();
+    }
+
+    /// <summary>
+    /// One declarative action used by reactions, element statuses, fields and some skills. Only the op
+    /// kind is interpreted by code; everything else is data.
+    /// </summary>
+    public sealed class ActionOp
+    {
+        public const int ElementLiteral = 0, ElementIncoming = 1, ElementExisting = 2;
+
+        public string Op;                 // damage | status | apply | field | pull | knock | chain | consume | hero_shield | hero_heal
+                                          // crystal_shield | cleanse | delayed | echo | refund | suppress | spread | shards
+        public Element Element;
+        public int ElementRef;            // literal / "$incoming" / "$existing"
+        public string Status;             // status id for status/consume/spread ops
+        public string Field;              // field id for field ops
+        public bool Area;                 // all enemies in radius instead of the reaction target
+        public float Mult;                // damage multiplier where relevant
+        public ParamBag Params = new ParamBag();
+
+        public Element Resolve(Element incoming, Element existing)
+        {
+            switch (ElementRef)
+            {
+                case ElementIncoming: return incoming;
+                case ElementExisting: return existing;
+                default: return Element;
+            }
+        }
+    }
+
+    /// <summary>Data-driven persistent zone ("field") spawned by reactions, skills or relics.</summary>
+    public sealed class FieldDef
+    {
+        public string Id;
+        public string NameKey;
+        public Element Element;
+        public float Tick = 0.5f;
+        public float DamageMult;          // x zone power per tick to enemies inside
+        public bool DamageAsReaction;     // counts as reaction damage (attribution + reaction bonuses)
+        public float Slow;
+        public float Pull;
+        public float Grow;                // radius growth per second (bounded by MaxRadiusMult)
+        public float MaxRadiusMult = 1.6f;
+        public float HeroHealPct;         // of hero max HP per tick, heroes inside (+ margin)
+        public float HeroDamageReduction; // while a hero stands inside
+        public float HeroHaste;           // attack/cooldown haste for heroes inside
+        public bool Cleanse;              // heroes inside lose silence/leech debuffs
+        public float CrystalShieldPct;    // per tick when the field overlaps the crystal
+        public float EnemyVuln;           // extra damage taken by enemies inside
+        public float EnemyWeaken;         // enemies inside deal less damage
+        public float ReactionAmp;         // reactions on enemies inside deal more damage
+        public bool BlockBolts;           // destroys enemy projectiles entering it
+        public float Zap;                 // strikes on one enemy per tick (x power)
+        public int MaxCount = 4;          // concurrent fields of this id
+        public string Shape = "circle";   // circle | line
+        public List<ActionOp> OnTick = new List<ActionOp>();  // status/apply ops on enemies inside each tick
+        public List<ActionOp> OnEnd = new List<ActionOp>();   // ops resolved at the field position on expiry
+        public ParamBag Params = new ParamBag();
+    }
+
+    /// <summary>Data for one element: presentation hints and the status rules applied with its aura.</summary>
+    public sealed class ElementDef
+    {
+        public Element Element;
+        public string Id;
+        public string NameKey;
+        public string Color = "#ffffff";
+        public string StatusKey;          // icon/name key of the element's signature status
+        public int Stage;                 // 0 launch, 1 Light/Shadow, 2 Nature/Poison, 3 Arcane/Void
+        public List<ActionOp> OnApply = new List<ActionOp>();   // aura newly applied
+        public List<ActionOp> OnRefresh = new List<ActionOp>(); // aura already present, more gauge added
     }
 
     /// <summary>

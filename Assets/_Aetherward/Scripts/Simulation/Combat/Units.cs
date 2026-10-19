@@ -73,6 +73,26 @@ namespace Aetherward.Sim.Combat
         public float BarrierTimer;   // Terra/Glacius defensive window
         public float ShieldRetaliate; // Glacius shield retaliation power while shield up
 
+        // Expansion: debuffs from enemies, field effects, shield bursts, echo limits.
+        public float SilenceTimer;    // Hex disruptor: skill cannot be cast
+        public float LeechTimer;      // Mana Leech: skill cooldown recovers slower
+        public float LeechAmount;
+        public float FeverTimer;      // Plague Doctor tradeoff: takes more damage
+        public float FeverAmount;
+        public float FieldTimer;      // refreshed while standing in a supportive field
+        public float FieldDamageReduction;
+        public float FieldHaste;
+        public int ShieldGiverUid;    // whose shield is up (Frost Paladin burst on break)
+        public float ShieldBurst;     // burst power when that shield breaks
+        public float EchoCooldown;    // spell echo internal cooldown
+        public float Heat;            // Phoenix Knight resource
+        public int RampStacks;        // Arcshot ramp on one target
+        public int RampTargetUid;
+        public int ComboCount;
+        public float RedirectTimer;   // Gloom Sentinel guard internal cooldown
+        public string TraitId;
+        public Element SecondaryElement; // Elemental Awakening (run-only)
+
         // Per-wave statistics; aggregated into run results.
         public float DamageDealt;
         public float HealingDone;
@@ -119,7 +139,7 @@ namespace Aetherward.Sim.Combat
 
         // Element auras and statuses.
         public readonly float[] Aura = new float[ElementUtil.Count];
-        public readonly float[] ReactionCooldown = new float[64];
+        public readonly float[] ReactionCooldown = new float[ElementUtil.PairSlots];
         public float ReactionWindowStart;
         public int ReactionsInWindow;
         public float BurnTimer;
@@ -167,12 +187,49 @@ namespace Aetherward.Sim.Combat
         public int AdaptedElement;
         public float AdaptTimer;
 
+        // Expansion statuses (see Battle.Statuses.cs; all bounded by caps).
+        public float IlluminatedTimer;
+        public float IlluminatedWeaken;
+        public int DoomStacks;
+        public float DoomTimer;
+        public HeroUnit DoomSource;
+        public float RootTimer;
+        public float RootImmune;
+        public int PoisonStacks;
+        public float PoisonTimer;
+        public float PoisonTick;
+        public float PoisonDpsPerStack;
+        public HeroUnit PoisonSource;
+        public int ContagionDepth;
+        public float ResonantTimer;
+        public int UnstableStacks;
+        public float UnstableCooldown;
+        public HeroUnit UnstableSource;
+        public float BrittleTimer;
+        public float BrittleAmount;
+        public float ReactionVulnTimer;
+        public float ReactionVulnAmount;
+        public int MarkStacks;        // Ember Scribe burn marks
+        public float MarkTimer;
+        public HeroUnit MarkOwner;
+        public float FieldTimer;      // refreshed while inside fields
+        public float FieldVuln;
+        public float FieldWeaken;
+        public float FieldReactionAmp;
+        public float SealTimer;       // abilities suppressed (Astral Seal / Portal Seal)
+        public float SpecialCooldownMult = 1f;
+
         public bool IsBoss => Def.Boss;
         public bool HasAura(Element e) => Aura[(int)e] > 0.05f;
         public bool Chilled => Aura[(int)Element.Ice] > 0.05f || Frozen;
         public bool Wet => Aura[(int)Element.Water] > 0.05f;
         public bool Burning => BurnTimer > 0f;
         public bool Stunned => StunTimer > 0f;
+        public bool Rooted => RootTimer > 0f;
+        public bool Illuminated => IlluminatedTimer > 0f;
+        public bool Corroded => PoisonStacks >= 5;
+        /// <summary>Multiplier on damage this enemy deals (Illuminated, weakening fields).</summary>
+        public float OutgoingDamageMult => (1f - (IlluminatedTimer > 0f ? IlluminatedWeaken : 0f)) * (1f - (FieldTimer > 0f ? FieldWeaken : 0f));
 
         /// <summary>Two dominant visible statuses for the HUD (spec: show up to two icons).</summary>
         public void DominantStatuses(out Element first, out Element second)

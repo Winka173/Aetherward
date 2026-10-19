@@ -17,19 +17,19 @@ namespace Aetherward.Tests
         }
 
         [Test]
-        public void AllFifteenPairsMapToUniqueReactions()
+        public void LaunchFifteenPairsKeepTheirLegacyReactions()
         {
             ContentDatabase db = TestContent.Db;
-            Assert.AreEqual(15, db.Reactions.Count);
             var seen = new HashSet<string>();
-            Element[] all = ElementUtil.All;
-            for (int i = 0; i < all.Length; i++)
+            Element[] launch = { Element.Fire, Element.Water, Element.Lightning, Element.Ice, Element.Wind, Element.Earth };
+            for (int i = 0; i < launch.Length; i++)
             {
-                for (int j = i + 1; j < all.Length; j++)
+                for (int j = i + 1; j < launch.Length; j++)
                 {
-                    ReactionDef r = db.ReactionFor(all[i], all[j]);
-                    Assert.IsNotNull(r, all[i] + "+" + all[j] + " has no reaction");
-                    Assert.AreSame(r, db.ReactionFor(all[j], all[i]), "reaction lookup must be commutative");
+                    ReactionDef r = db.ReactionFor(launch[i], launch[j]);
+                    Assert.IsNotNull(r, launch[i] + "+" + launch[j] + " has no reaction");
+                    Assert.AreSame(r, db.ReactionFor(launch[j], launch[i]), "reaction lookup must be commutative");
+                    Assert.IsTrue(r.Legacy, r.Id + " must keep its launch resolution");
                     Assert.IsTrue(seen.Add(r.Id), "duplicate reaction " + r.Id);
                 }
             }

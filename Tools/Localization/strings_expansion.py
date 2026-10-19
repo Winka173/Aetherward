@@ -1,0 +1,132 @@
+# -*- coding: utf-8 -*-
+"""Post-MVP expansion strings (English, Vietnamese). Same conventions as strings_content.py:
+tooltip templates use {param} / {param%} tokens filled from the simulation data."""
+
+ELEMENT_NAMES = {
+    "light": ("Light", "Ánh Sáng"), "shadow": ("Shadow", "Bóng Tối"), "nature": ("Nature", "Tự Nhiên"),
+    "poison": ("Poison", "Độc"), "arcane": ("Arcane", "Huyền Bí"), "void": ("Void", "Hư Không"),
+}
+
+# Element signature statuses. Launch statuses already have a name key in build_strings.UI; they only get .desc here.
+STATUS_DESCS = {
+    "burn": ("Takes Fire damage over time.", "Chịu sát thương Lửa theo thời gian."),
+    "wet": ("Primed for Water reactions (Vaporize, Electrocharge, Freeze...).", "Sẵn sàng cho phản ứng Nước (Bốc Hơi, Điện Giật, Đóng Băng...)."),
+    "charged": ("Carries Lightning; the next different element reacts.", "Mang điện; nguyên tố khác chạm vào sẽ gây phản ứng."),
+    "chill": ("Moves 15% slower; Fire melts it for big damage.", "Chậm hơn 15%; Lửa làm tan chảy gây sát thương lớn."),
+    "windmark": ("Takes +10% Wind damage; Wind spreads it.", "Nhận thêm 10% sát thương Gió; Gió làm lan dấu."),
+    "armor_crack": ("Defense reduced while cracked.", "Giảm Thủ khi đang Nứt Giáp."),
+    "illuminated": ("Purified: loses 50% shield and support buffs when lit, deals 15% less damage for 4s.",
+                    "Bị thanh tẩy: mất 50% khiên và buff hỗ trợ khi bị chiếu sáng, gây ít hơn 15% sát thương trong 4s."),
+    "doom": ("Stacks up to 5. Non-bosses at or below 4% HP per stack are executed (half on elites); bosses take +3% damage per stack.",
+             "Cộng dồn tối đa 5. Kẻ địch thường còn ≤ 4% HP mỗi tầng sẽ bị xử tử (elite: một nửa); boss nhận thêm 3% sát thương mỗi tầng."),
+    "rooted": ("Held in place for 0.8s but can still attack; 1.5s immunity afterwards. Bosses are slowed instead.",
+               "Bị giữ chân 0.8s nhưng vẫn đánh được; miễn nhiễm 1.5s sau đó. Boss chỉ bị làm chậm."),
+    "poisoned": ("Stacking damage over time (max 10). At 5+ stacks: Corroded (-30% Defense). On death half the stacks jump to a neighbour (max 2 hops).",
+                 "Sát thương theo thời gian cộng dồn (tối đa 10). Từ 5 tầng: Ăn Mòn (−30% Thủ). Khi chết, một nửa số tầng lây sang kẻ bên cạnh (tối đa 2 lần lây)."),
+    "resonant": ("The next reaction on this enemy deals +30% damage, then the mark fades.",
+                 "Phản ứng kế tiếp trên kẻ địch này gây thêm 30% sát thương, sau đó dấu biến mất."),
+    "unstable": ("At 3 stacks the enemy collapses: a short pull and Void damage around it (2s cooldown, bosses are not pulled).",
+                 "Đủ 3 tầng, kẻ địch sụp đổ: hút ngắn và sát thương Hư Không xung quanh (hồi 2s, boss không bị hút)."),
+}
+
+STATUS_NAMES_NEW = {
+    "illuminated": ("Illuminated", "Chiếu Sáng"), "doom": ("Doom", "Diệt Vong"), "rooted": ("Rooted", "Trói Rễ"),
+    "poisoned": ("Poisoned", "Trúng Độc"), "resonant": ("Resonant", "Cộng Hưởng"), "unstable": ("Unstable", "Bất Ổn"),
+    "corroded": ("Corroded", "Ăn Mòn"), "brittle": ("Brittle", "Giòn"), "silenced": ("Silenced", "Câm Lặng"),
+    "leeched": ("Mana Drained", "Hút Năng Lượng"), "fever": ("Fever", "Sốt"), "marked": ("Burn Mark", "Dấu Bỏng"),
+    "sealed": ("Sealed", "Bị Phong Ấn"), "cleanse": ("Cleansed", "Thanh Tẩy"),
+}
+
+REACTIONS_X = {
+    "eclipse": (("Eclipse", "Nhật Thực"),
+                ("Light + Shadow: a Shadow blast and an eclipse zone ({radius} m, {duration}s): enemies inside take +15% damage, deal 15% less and gain 1 Doom per second.",
+                 "Ánh Sáng + Bóng Tối: nổ Bóng Tối và vùng nhật thực ({radius} m, {duration}s): kẻ địch bên trong nhận thêm 15% sát thương, gây ít hơn 15% và nhận 1 Diệt Vong mỗi giây.")),
+    "hallowed_bulwark": (("Hallowed Bulwark", "Thành Luỹ Thánh"),
+                         ("Earth + Light: shields nearby heroes for 10% max HP and raises a ward ({radius} m, {duration}s): heroes inside take 20% less damage; over the Crystal it adds shield.",
+                          "Đất + Ánh Sáng: tạo khiên 10% HP tối đa cho anh hùng gần đó và dựng kết giới ({radius} m, {duration}s): anh hùng bên trong nhận ít hơn 20% sát thương; nếu phủ Pha Lê thì thêm khiên.")),
+    "solar_flare": (("Solar Flare", "Lửa Mặt Trời"),
+                    ("Fire + Light (generic): a flare in {radius} m that Illuminates every enemy hit.", "Lửa + Ánh Sáng (chung): bùng lửa trong {radius} m, Chiếu Sáng mọi kẻ địch trúng đòn.")),
+    "glimmer_tide": (("Glimmer Tide", "Triều Lấp Lánh"),
+                     ("Water + Light (generic): heals nearby heroes 3% max HP and cleanses their debuffs.", "Nước + Ánh Sáng (chung): hồi 3% HP tối đa cho anh hùng gần đó và thanh tẩy hiệu ứng xấu.")),
+    "hellfire": (("Hellfire", "Hoả Ngục"),
+                 ("Fire + Shadow (generic): a heavy Fire hit, stronger on Doomed enemies, and a long Burn.", "Lửa + Bóng Tối (chung): đòn Lửa mạnh, mạnh hơn lên kẻ bị Diệt Vong, kèm Bỏng dài.")),
+    "black_tide": (("Black Tide", "Triều Đen"),
+                   ("Water + Shadow (generic): a dark wave in {radius} m that adds Doom and slows.", "Nước + Bóng Tối (chung): sóng đen trong {radius} m, thêm Diệt Vong và làm chậm.")),
+    "wildfire": (("Wildfire", "Cháy Rừng"),
+                 ("Fire + Nature: a spreading blaze ({radius} m, {duration}s, grows); Burn jumps to Rooted enemies within 3 m.",
+                  "Lửa + Tự Nhiên: đám cháy lan rộng ({radius} m, {duration}s, lớn dần); Bỏng nhảy sang kẻ đang Trói Rễ trong 3 m.")),
+    "overgrowth": (("Overgrowth", "Um Tùm"),
+                   ("Water + Nature: roots enemies in {radius} m and leaves thick growth ({duration}s) that slows and gently heals heroes.",
+                    "Nước + Tự Nhiên: trói rễ kẻ địch trong {radius} m và để lại bụi rậm ({duration}s) làm chậm, hồi nhẹ cho anh hùng.")),
+    "toxic_shock": (("Toxic Shock", "Sốc Độc"),
+                    ("Lightning + Poison: consumes half the Poison stacks for a burst that scales with them, then arcs to 3 Poisoned enemies.",
+                     "Sét + Độc: tiêu một nửa tầng Độc để gây nổ theo số tầng, rồi phóng sang 3 kẻ đang Trúng Độc.")),
+    "venom_shards": (("Venom Shards", "Mảnh Nọc"),
+                     ("Ice + Poison: the target shatters into 4 shards that strike around it and add 2 Poison stacks each.",
+                      "Băng + Độc: mục tiêu vỡ thành 4 mảnh đâm xung quanh, mỗi mảnh thêm 2 tầng Độc.")),
+    "sanctuary": (("Sanctuary", "Thánh Địa"),
+                  ("Light + Nature: a healing grove ({radius} m, {duration}s) that heals and cleanses heroes; over the Crystal it adds shield. At most one per 2s.",
+                   "Ánh Sáng + Tự Nhiên: khu rừng hồi phục ({radius} m, {duration}s) hồi máu và thanh tẩy anh hùng; nếu phủ Pha Lê thì thêm khiên. Tối đa một lần mỗi 2s.")),
+    "plague": (("Plague", "Dịch Bệnh"),
+               ("Shadow + Poison: adds 2 Doom to the target and spreads 2 Poison stacks to 3 enemies within {radius} m.",
+                "Bóng Tối + Độc: thêm 2 Diệt Vong cho mục tiêu và lây 2 tầng Độc sang 3 kẻ địch trong {radius} m.")),
+    "blight_garden": (("Blight Garden", "Vườn Tàn Lụi"),
+                      ("Nature + Poison: a toxic patch ({radius} m, {duration}s, grows, max 3) that poisons everything inside.",
+                       "Tự Nhiên + Độc: mảng độc ({radius} m, {duration}s, lớn dần, tối đa 3) làm trúng độc mọi thứ bên trong.")),
+    "toxic_combustion": (("Toxic Combustion", "Cháy Độc"),
+                         ("Fire + Poison: consumes half the Poison stacks to explode in {radius} m; more stacks, bigger blast.",
+                          "Lửa + Độc: tiêu một nửa tầng Độc để nổ trong {radius} m; càng nhiều tầng càng mạnh.")),
+    "venom_flow": (("Venom Flow", "Dòng Nọc"),
+                   ("Water + Poison: Poison flows to up to 3 Wet enemies within {radius} m (2 stacks each).",
+                    "Nước + Độc: Độc chảy sang tối đa 3 kẻ đang Ướt trong {radius} m (mỗi kẻ 2 tầng).")),
+    "frost_roots": (("Frost Roots", "Rễ Băng"),
+                    ("Ice + Nature: frozen roots ({radius} m, {duration}s) slow by 45% and briefly root enemies passing through.",
+                     "Băng + Tự Nhiên: rễ băng ({radius} m, {duration}s) làm chậm 45% và trói rễ ngắn kẻ đi qua.")),
+    "overcharge": (("Overcharge", "Quá Nạp"),
+                   ("Lightning + Arcane: a strike that arcs twice and makes its hero echo their skill at 35% power (3s cooldown, echoes never echo).",
+                    "Sét + Huyền Bí: đòn sét nhảy 2 lần và khiến anh hùng lặp lại kỹ năng với 35% sức mạnh (hồi 3s, bản lặp không thể lặp tiếp).")),
+    "spellflare": (("Spellflare", "Bùa Lửa"),
+                   ("Fire + Arcane: marks the ground; after 0.9s it ignites ({radius} m) and leaves embers for {duration}s.",
+                    "Lửa + Huyền Bí: đánh dấu mặt đất; sau 0.9s bùng cháy ({radius} m) và để lại than hồng trong {duration}s.")),
+    "mana_tide": (("Mana Tide", "Triều Năng Lượng"),
+                  ("Water + Arcane: heroes within 3.5 m recover 0.5s of cooldown and gain 12% attack speed for 3s. At most once per 1.5s.",
+                   "Nước + Huyền Bí: anh hùng trong 3.5 m hồi 0.5s hồi chiêu và +12% tốc đánh trong 3s. Tối đa một lần mỗi 1.5s.")),
+    "singularity": (("Singularity", "Điểm Kỳ Dị"),
+                    ("Wind + Void: a vortex ({radius} m) pulls enemies in for {duration}s, then collapses for Void damage. Bosses are not pulled.",
+                     "Gió + Hư Không: xoáy ({radius} m) hút kẻ địch trong {duration}s rồi sụp đổ gây sát thương Hư Không. Boss không bị hút.")),
+    "gravemaw": (("Gravemaw", "Hàm Mộ"),
+                 ("Earth + Void: a heavy gravity field ({radius} m, {duration}s) that slows by 40%, drags enemies inward and grinds them.",
+                  "Đất + Hư Không: trường trọng lực ({radius} m, {duration}s) làm chậm 40%, kéo kẻ địch vào trong và nghiền nát.")),
+    "abyss_mark": (("Abyss Mark", "Dấu Vực Thẳm"),
+                   ("Shadow + Void: condenses all Doom on the target into a delayed collapse; more Doom, bigger blast.",
+                    "Bóng Tối + Hư Không: dồn toàn bộ Diệt Vong trên mục tiêu thành vụ sụp đổ trễ; càng nhiều Diệt Vong càng mạnh.")),
+    "prism_chant": (("Prism Chant", "Thánh Ca Lăng Kính"),
+                    ("Light + Arcane: shields and cleanses nearby heroes, and its hero echoes their skill at 30% power (4s cooldown). At most once per 1.5s.",
+                     "Ánh Sáng + Huyền Bí: tạo khiên và thanh tẩy anh hùng gần đó, anh hùng gây phản ứng lặp kỹ năng với 30% sức mạnh (hồi 4s). Tối đa một lần mỗi 1.5s.")),
+    "astral_seal": (("Astral Seal", "Ấn Tinh Tú"),
+                    ("Light + Void: seals enemies in {radius} m for 2.5s (summons and specials paused; bosses half as long) and Illuminates the target.",
+                     "Ánh Sáng + Hư Không: phong ấn kẻ địch trong {radius} m trong 2.5s (dừng triệu hồi và chiêu đặc biệt; boss chỉ một nửa) và Chiếu Sáng mục tiêu.")),
+    "paradox": (("Paradox", "Nghịch Lý"),
+                ("Arcane + Void (generic): a Void hit that leaves the target Resonant and Unstable.", "Huyền Bí + Hư Không (chung): đòn Hư Không khiến mục tiêu Cộng Hưởng và Bất Ổn.")),
+}
+
+FIELDS = {
+    "eclipse": ("eclipse", "nhật thực"), "hallowed_ward": ("hallowed ward", "kết giới thánh"), "wildfire": ("wildfire", "cháy rừng"),
+    "overgrowth": ("overgrowth", "bụi rậm"), "sanctuary": ("sanctuary", "thánh địa"), "blight_garden": ("blight garden", "vườn tàn lụi"),
+    "frost_roots": ("frost roots", "rễ băng"), "ember_patch": ("embers", "than hồng"), "singularity": ("singularity", "điểm kỳ dị"),
+    "gravity_well": ("gravity well", "giếng trọng lực"),
+}
+
+PAIR_NOTES = {
+    "light_poison": ("Light purifies but does not neutralise Poison: both statuses stay active.", "Ánh Sáng thanh tẩy nhưng không hoá giải Độc: cả hai trạng thái cùng tồn tại."),
+    "earth_nature": ("Earth and Nature grow together: Armor Crack and Root both apply, no reaction.", "Đất và Tự Nhiên cùng sinh trưởng: Nứt Giáp và Trói Rễ cùng tác dụng, không phản ứng."),
+    "earth_poison": ("Corrosion already eats armour: Armor Crack and Corroded stack, no reaction.", "Ăn mòn vốn đã phá giáp: Nứt Giáp và Ăn Mòn cộng dồn, không phản ứng."),
+}
+
+UI_X = {
+    "reaction.generic.name": ("{0}·{1} Burst", "Bùng Nổ {0}·{1}"),
+    "reaction.generic.desc": ("Generic interaction: a small burst of both elements around the target ({radius} m).",
+                              "Tương tác chung: nổ nhỏ của cả hai nguyên tố quanh mục tiêu ({radius} m)."),
+    "category.signature": ("Signature", "Đặc trưng"), "category.generic": ("Generic", "Chung"),
+    "category.neutral": ("Neutral", "Trung tính"), "category.blocked_by_design": ("Blocked by design", "Chặn có chủ đích"),
+}

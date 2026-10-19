@@ -278,18 +278,24 @@ namespace Aetherward.Game
             return Mathf.Clamp01(Mathf.Round(value * 20f) / 20f);
         }
 
+        private static Color[] _elementColors;
+
+        /// <summary>Element tint from elements.json (cached); physical/none is neutral white.</summary>
         public static Color ElementColor(Sim.Content.Element e)
         {
-            switch (e)
+            if (_elementColors == null)
             {
-                case Sim.Content.Element.Fire: return new Color(1f, 0.42f, 0.22f);
-                case Sim.Content.Element.Water: return new Color(0.25f, 0.62f, 1f);
-                case Sim.Content.Element.Lightning: return new Color(0.78f, 0.5f, 1f);
-                case Sim.Content.Element.Ice: return new Color(0.6f, 0.9f, 1f);
-                case Sim.Content.Element.Wind: return new Color(0.35f, 0.9f, 0.65f);
-                case Sim.Content.Element.Earth: return new Color(0.85f, 0.62f, 0.32f);
-                default: return new Color(0.92f, 0.92f, 0.95f);
+                _elementColors = new Color[Sim.Content.ElementUtil.Count];
+                for (int i = 0; i < _elementColors.Length; i++)
+                {
+                    _elementColors[i] = new Color(0.92f, 0.92f, 0.95f);
+                    Sim.Content.ElementDef d = App.Content != null ? App.Content.ElementDefs[i] : null;
+                    if (d != null && ColorUtility.TryParseHtmlString(d.Color, out Color c))
+                        _elementColors[i] = Color.Lerp(c, Color.white, 0.12f); // lift dark hues for text legibility
+                }
             }
+            int k = (int)e;
+            return k >= 0 && k < _elementColors.Length ? _elementColors[k] : _elementColors[0];
         }
 
         public static string RarityKey(Sim.Content.Rarity r) => r.ToString().ToLowerInvariant();

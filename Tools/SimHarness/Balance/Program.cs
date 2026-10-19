@@ -46,6 +46,7 @@ namespace Aetherward.Balance
             if (Array.IndexOf(args, "--catalog") >= 0)
             {
                 Catalog.Write(db, Path.Combine(root, "Docs", "CONTENT_CATALOG.md"));
+                ReactionMatrix.Write(db, Path.Combine(root, "Docs", "Expansion", "ELEMENT_REACTION_MATRIX.md"));
                 return 0;
             }
             if (Array.IndexOf(args, "--perf") >= 0)

@@ -8,7 +8,14 @@ namespace Aetherward.Sim.Content
         Lightning = 3,
         Ice = 4,
         Wind = 5,
-        Earth = 6
+        Earth = 6,
+        // Expansion elements (append-only: values are stable and never reordered).
+        Light = 7,
+        Shadow = 8,
+        Nature = 9,
+        Poison = 10,
+        Arcane = 11,
+        Void = 12
     }
 
     public enum HeroRole
@@ -116,48 +123,51 @@ namespace Aetherward.Sim.Content
 
     public static class ElementUtil
     {
-        public const int Count = 7; // including None at index 0
+        public const int Count = 13; // including None at index 0
+        /// <summary>Size of per-pair arrays; <see cref="PairIndex"/> is always below this.</summary>
+        public const int PairSlots = 256;
 
+        /// <summary>The twelve primary elements in stable order (content stage gating lives in elements.json).</summary>
         public static readonly Element[] All =
         {
-            Element.Fire, Element.Water, Element.Lightning, Element.Ice, Element.Wind, Element.Earth
+            Element.Fire, Element.Water, Element.Lightning, Element.Ice, Element.Wind, Element.Earth,
+            Element.Light, Element.Shadow, Element.Nature, Element.Poison, Element.Arcane, Element.Void
+        };
+
+        private static readonly string[] Keys =
+        {
+            "none", "fire", "water", "lightning", "ice", "wind", "earth", "light", "shadow", "nature", "poison", "arcane", "void"
         };
 
         public static bool TryParse(string s, out Element e)
         {
-            switch (s)
+            if (string.IsNullOrEmpty(s))
             {
-                case "fire": e = Element.Fire; return true;
-                case "water": e = Element.Water; return true;
-                case "lightning": e = Element.Lightning; return true;
-                case "ice": e = Element.Ice; return true;
-                case "wind": e = Element.Wind; return true;
-                case "earth": e = Element.Earth; return true;
-                case "none": case null: case "": e = Element.None; return true;
-                default: e = Element.None; return false;
+                e = Element.None;
+                return true;
             }
+            for (int i = 0; i < Keys.Length; i++)
+            {
+                if (Keys[i] != s) continue;
+                e = (Element)i;
+                return true;
+            }
+            e = Element.None;
+            return false;
         }
 
         public static string Key(Element e)
         {
-            switch (e)
-            {
-                case Element.Fire: return "fire";
-                case Element.Water: return "water";
-                case Element.Lightning: return "lightning";
-                case Element.Ice: return "ice";
-                case Element.Wind: return "wind";
-                case Element.Earth: return "earth";
-                default: return "none";
-            }
+            int i = (int)e;
+            return i > 0 && i < Keys.Length ? Keys[i] : "none";
         }
 
-        /// <summary>Order-independent key for a reaction pair, e.g. (Water, Fire) -> "fire+water".</summary>
+        /// <summary>Order-independent slot for a reaction pair, e.g. (Water, Fire) == (Fire, Water).</summary>
         public static int PairIndex(Element a, Element b)
         {
             int x = (int)a, y = (int)b;
             if (x > y) { int t = x; x = y; y = t; }
-            return x * 8 + y;
+            return x * 16 + y;
         }
     }
 

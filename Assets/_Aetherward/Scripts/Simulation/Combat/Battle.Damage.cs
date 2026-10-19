@@ -40,6 +40,8 @@ namespace Aetherward.Sim.Combat
     public sealed partial class Battle
     {
         private readonly Stack<List<EnemyUnit>> _listPool = new Stack<List<EnemyUnit>>();
+        /// <summary>Battle-wide readiness for reactions with a "worldCooldown" (team-buff reactions).</summary>
+        private readonly Dictionary<string, float> _worldReactionReady = new Dictionary<string, float>();
 
         /// <summary>Re-entrancy-safe scratch list: nested reactions/triggers each get their own.</summary>
         public List<EnemyUnit> RentList() => _listPool.Count > 0 ? _listPool.Pop() : new List<EnemyUnit>(32);
@@ -75,7 +77,9 @@ namespace Aetherward.Sim.Combat
             {
                 float em = src != null ? src.Stat(StatId.ElementalMastery) : 0f;
                 float emBonus = 2.0f * em / (em + 150f);
-                float bonus = (src != null ? src.Stat(StatId.ReactionBonus) : 0f) + emBonus + Mods.ReactionDamageAll;
+                float bonus = (src != null ? src.Stat(StatId.ReactionBonus) : 0f) + emBonus + Mods.ReactionDamageAll + _activeReactionBonus;
+                if (target.ReactionVulnTimer > 0f) bonus += target.ReactionVulnAmount;
+                if (target.FieldTimer > 0f) bonus += target.FieldReactionAmp;
                 if (req.ReactionId != null)
                 {
                     ReactionMod m = Mods.ModFor(req.ReactionId);
@@ -120,6 +124,9 @@ namespace Aetherward.Sim.Combat
             float vuln = 1f;
             if (target.VulnerableTimer > 0f) vuln += target.VulnerableAmount;
             if (target.HasAura(Element.Wind) && req.Element == Element.Wind) vuln += 0.1f;
+            if (target.BrittleTimer > 0f) vuln += target.BrittleAmount;
+            if (target.FieldTimer > 0f) vuln += target.FieldVuln;
+            if (target.IsBoss && target.DoomStacks > 0) vuln += target.DoomStacks * (0.03f + Mods.Rule("doom_boss"));
             raw *= vuln;
             if (raw < 1f) raw = 1f;
 
@@ -148,6 +155,10 @@ namespace Aetherward.Sim.Combat
             {
                 KillEnemy(target, src);
             }
+            else if (target.DoomStacks > 0 && TryDoomExecute(target, src))
+            {
+                // executed by Doom (credited to the Doom source)
+            }
             else if (req.Gauge > 0f && req.Element != Element.None)
             {
                 ApplyElement(target, req.Element, req.Gauge, src, req.Generation);
@@ -161,6 +172,7 @@ namespace Aetherward.Sim.Combat
             float def = e.Defense + e.ArmorBuff;
             if (e.ArmorCrackTimer > 0f) def *= 1f - SimMath.Clamp(e.ArmorCrackStacks * e.ArmorCrackPerStack * 2f, 0f, 0.9f);
             if (e.SuperconductTimer > 0f) def *= 0.6f;
+            if (e.Corroded) def *= 0.7f;
             return def;
         }
 
@@ -179,6 +191,7 @@ namespace Aetherward.Sim.Combat
                 OnKillPassive(killer, e);
             }
             Emit(SimEventType.EnemyDeath, e.Pos, Element.None, gold, killer?.Uid ?? 0, e.Uid, e.Def.Id);
+            SpreadContagion(e);
             OnEnemyDeathBehaviour(e);
             FireTrigger("kill", killer, e, e.Pos, null);
         }
@@ -195,12 +208,17 @@ namespace Aetherward.Sim.Combat
             gauge *= Mods.GaugeMult[(int)el];
             if (source != null) gauge *= 1f + source.Stat(StatId.StatusPower) * 0.5f;
 
+            // Strongest foreign aura that actually pairs with the incoming element (ties: lower ordinal).
+            // Neutral/blocked pairs coexist and are skipped. With the six launch elements every pair
+            // reacts, so this is identical to picking the strongest aura.
             Element existing = Element.None;
             float best = 0.05f;
             for (int i = 1; i < ElementUtil.Count; i++)
             {
-                if (i == (int)el) continue;
-                if (target.Aura[i] > best) { best = target.Aura[i]; existing = (Element)i; }
+                if (i == (int)el || target.Aura[i] <= best) continue;
+                if (Content.ReactionFor(el, (Element)i) == null) continue;
+                best = target.Aura[i];
+                existing = (Element)i;
             }
 
             if (existing != Element.None)
@@ -219,15 +237,15 @@ namespace Aetherward.Sim.Combat
 
             float before = target.Aura[(int)el];
             target.Aura[(int)el] = SimMath.Min(2.5f, before + gauge);
+            ElementDef def = Content.ElementDefs[(int)el];
             if (before <= 0.05f)
             {
                 Emit(SimEventType.StatusApplied, target.Pos, el, gauge, source?.Uid ?? 0, target.Uid, null);
-                if (el == Element.Fire) ApplyBurn(target, source, 3f);
-                if (el == Element.Earth) ApplyArmorCrack(target, 4f, 1);
+                if (def != null) RunElementStatusOps(def.OnApply, target, source, generation);
             }
-            else if (el == Element.Fire)
+            else if (def != null)
             {
-                ApplyBurn(target, source, 3f);
+                RunElementStatusOps(def.OnRefresh, target, source, generation);
             }
         }
 
@@ -241,6 +259,7 @@ namespace Aetherward.Sim.Combat
             }
             int pair = ElementUtil.PairIndex(r.A, r.B);
             if (target.ReactionCooldown[pair] > Time) return false;
+            if (r.Params.Get("worldCooldown") > 0f && _worldReactionReady.TryGetValue(r.Id, out float ready) && Time < ready) return false;
             if (Time - target.ReactionWindowStart >= 1f)
             {
                 target.ReactionWindowStart = Time;
@@ -303,6 +322,8 @@ namespace Aetherward.Sim.Combat
         {
             int pair = ElementUtil.PairIndex(r.A, r.B);
             target.ReactionCooldown[pair] = Time + r.Cooldown;
+            float worldCd = r.Params.Get("worldCooldown");
+            if (worldCd > 0f) _worldReactionReady[r.Id] = Time + worldCd;
             target.ReactionsInWindow++;
             _reactionsThisTick++;
             _reactionsThisSecond++;
@@ -316,9 +337,37 @@ namespace Aetherward.Sim.Combat
             List<EnemyUnit> q = RentList();
             List<EnemyUnit> q2 = RentList();
             Stats.AddReaction(r.Id, 0f);
-            Emit(SimEventType.Reaction, pos, incoming, 0f, source?.Uid ?? 0, target.Uid, r.Id, false, radius, gen);
+            Emit(SimEventType.Reaction, pos, incoming, (int)existing, source?.Uid ?? 0, target.Uid, r.Id, false, radius, gen);
 
-            switch (r.Id)
+            // Arcane Resonant: the next reaction on the target is amplified, then the mark is consumed.
+            float prevBonus = _activeReactionBonus;
+            if (target.ResonantTimer > 0f)
+            {
+                target.ResonantTimer = 0f;
+                _activeReactionBonus += 0.3f + Mods.Rule("resonance_bonus");
+                Emit(SimEventType.StatusApplied, pos, Element.Arcane, 0f, source?.Uid ?? 0, target.Uid, "resonance");
+            }
+
+            if (!r.Legacy)
+            {
+                var ctx = new ActionContext
+                {
+                    Reaction = r,
+                    Tag = r.Id,
+                    Target = target,
+                    Source = source,
+                    Incoming = incoming,
+                    Existing = existing,
+                    Pos = pos,
+                    Generation = gen,
+                    Radius = radius,
+                    Duration = duration,
+                    StatusScale = control,
+                    Power = ReactionPower(r, source)
+                };
+                ExecuteActions(r.Ops, ref ctx);
+            }
+            else switch (r.Id)
             {
                 case "vaporize":
                 {
@@ -463,6 +512,7 @@ namespace Aetherward.Sim.Combat
                 }
             }
 
+            _activeReactionBonus = prevBonus;
             FireTrigger("reaction", source, target, pos, r.Id);
             if (Mods.HasRule("mirror_reactions") && gen < MaxProcGeneration + (int)Mods.Rule("proc_generation_bonus"))
             {
@@ -576,8 +626,14 @@ namespace Aetherward.Sim.Combat
             if (h == null || !h.Alive) return;
             float def = h.Stat(StatId.Defense);
             amount *= 100f / (100f + SimMath.Max(0f, def));
-            amount *= 1f - SimMath.Clamp(h.Stat(StatId.DamageReduction), 0f, 0.75f);
-            if (attacker != null && attacker.Chilled) amount *= 1f - attacker.ChillDamageReduction;
+            float dr = h.Stat(StatId.DamageReduction) + (h.FieldTimer > 0f ? h.FieldDamageReduction : 0f) + HeroGuardReduction(h);
+            amount *= 1f - SimMath.Clamp(dr, 0f, 0.75f);
+            if (h.FeverTimer > 0f) amount *= 1f + h.FeverAmount;
+            if (attacker != null)
+            {
+                if (attacker.Chilled) amount *= 1f - attacker.ChillDamageReduction;
+                amount *= attacker.OutgoingDamageMult;
+            }
             if (attacker != null && attacker.SandstormTimer > 0f && Rng.Chance(0.35f))
             {
                 Emit(SimEventType.Miss, h.Pos, Element.Earth, 0f, attacker.Uid, h.Uid, "miss");
@@ -668,6 +724,7 @@ namespace Aetherward.Sim.Combat
             if (!Crystal.Alive) return;
             float reduction = Crystal.DamageReduction + (Crystal.TempReductionTimer > 0f ? Crystal.TempReduction : 0f);
             amount *= 1f - SimMath.Clamp(reduction, 0f, 0.8f);
+            if (attacker != null) amount *= attacker.OutgoingDamageMult;
             if (Crystal.Shield > 0f)
             {
                 float a = SimMath.Min(Crystal.Shield, amount);

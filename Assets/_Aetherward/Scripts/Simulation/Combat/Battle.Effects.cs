@@ -40,7 +40,8 @@ namespace Aetherward.Sim.Combat
         Vortex,
         BurningGround,
         StormTrail,
-        TempestLink
+        TempestLink,
+        Field           // data-driven (FieldDef): expansion reactions, skills, relics
     }
 
     public sealed class Zone
@@ -59,6 +60,11 @@ namespace Aetherward.Sim.Combat
         public string ReactionId;
         public float Heal;          // healing rain: heal per tick
         public bool Offensive;      // healing rain variant that damages
+        public FieldDef Field;      // set for ZoneKind.Field
+        public Vec2 End;            // line fields: second endpoint
+        public bool Line;
+        public float BaseRadius;
+        public string Tag;          // attribution id (reaction/skill/relic)
     }
 
     public enum StrikeKind
@@ -67,7 +73,9 @@ namespace Aetherward.Sim.Combat
         IceSpike,
         Aftershock,
         BossSlam,
-        BossLaneMark
+        BossLaneMark,
+        ReactionBurst,  // declarative delayed/shard strikes
+        Hazard          // biome hazards: hit heroes and enemies alike
     }
 
     public sealed class DelayedStrike
@@ -86,6 +94,9 @@ namespace Aetherward.Sim.Combat
         public string ReactionId;
         public float Stun;
         public float Gauge;
+        public string SourceTag;
+        public string Status;       // optional status applied to each enemy hit
+        public ParamBag StatusParams;
     }
 
     /// <summary>Enemy ranged attack in flight (visible, short travel so presentation can show it).</summary>
@@ -264,6 +275,9 @@ namespace Aetherward.Sim.Combat
                 List<EnemyUnit> inside = RentList();
                 switch (z.Kind)
                 {
+                    case ZoneKind.Field:
+                        UpdateField(z, dt, tick, inside);
+                        break;
                     case ZoneKind.Mud:
                         QueryEnemies(z.Pos, z.Radius, inside);
                         for (int i = 0; i < inside.Count; i++) Slow(inside[i], z.Power, 0.3f);
@@ -368,7 +382,13 @@ namespace Aetherward.Sim.Combat
                 }
                 ReturnList(inside);
             }
-            for (int i = Zones.Count - 1; i >= 0; i--) if (Zones[i].Remaining <= 0f) Zones.RemoveAt(i);
+            for (int i = Zones.Count - 1; i >= 0; i--)
+            {
+                if (Zones[i].Remaining > 0f) continue;
+                Zone dead = Zones[i];
+                Zones.RemoveAt(i);
+                if (dead.Kind == ZoneKind.Field) ExpireField(dead);
+            }
         }
 
         // ------------------------------------------------------------------ delayed strikes
@@ -405,8 +425,17 @@ namespace Aetherward.Sim.Combat
                 if (Vec2.Distance(Crystal.Pos, s.Pos) <= s.Radius + Crystal.Radius) DamageCrystal(s.Power * 0.5f, s.EnemySource);
                 return;
             }
+            if (s.Kind == StrikeKind.Hazard)
+            {
+                for (int i = 0; i < Heroes.Count; i++)
+                {
+                    HeroUnit h = Heroes[i];
+                    if (h.Alive && Vec2.Distance(h.Pos, s.Pos) <= s.Radius + h.Radius) DamageHero(h, s.Power, null);
+                }
+            }
             List<EnemyUnit> hits = RentList();
             QueryEnemies(s.Pos, s.Radius, hits);
+            bool trigger = s.Kind == StrikeKind.Hazard || (s.Kind == StrikeKind.ReactionBurst && s.ReactionId == null);
             for (int k = 0; k < hits.Count; k++)
             {
                 EnemyUnit e = hits[k];
@@ -417,12 +446,14 @@ namespace Aetherward.Sim.Combat
                     Multiplier = s.Multiplier,
                     Element = s.Element,
                     Gauge = s.Gauge,
-                    Kind = s.ReactionId != null ? DamageKind.Reaction : DamageKind.Skill,
+                    Kind = s.ReactionId != null ? DamageKind.Reaction : (trigger ? DamageKind.Trigger : DamageKind.Skill),
                     Generation = s.Generation,
                     ReactionId = s.ReactionId,
-                    CanCrit = s.ReactionId == null
+                    SourceTag = s.SourceTag,
+                    CanCrit = s.ReactionId == null && !trigger
                 });
                 if (s.Stun > 0f && e.Alive) Stun(e, s.Stun);
+                if (s.Status != null && e.Alive) ApplyStatus(e, s.Status, s.StatusParams, 1f, s.Source, s.Generation);
             }
             ReturnList(hits);
         }
@@ -451,12 +482,28 @@ namespace Aetherward.Sim.Combat
                 EnemyBolt b = Bolts[i];
                 if (b.HeroTarget != null && b.HeroTarget.Alive) b.Target = b.HeroTarget.Pos;
                 b.Pos = Vec2.MoveTowards(b.Pos, b.Target, b.Speed * dt);
+                if (BoltBlocked(b))
+                {
+                    b.Alive = false;
+                    Emit(SimEventType.Miss, b.Pos, Element.Void, 0f, b.Owner?.Uid ?? 0, 0, "blocked");
+                    continue;
+                }
                 if (Vec2.SqrDistance(b.Pos, b.Target) > 0.04f) continue;
                 b.Alive = false;
                 if (b.AtCrystal) DamageCrystal(b.Damage, b.Owner);
                 else if (b.HeroTarget != null && b.HeroTarget.Alive) DamageHero(b.HeroTarget, b.Damage, b.Owner);
             }
             Bolts.RemoveAll(b => !b.Alive);
+        }
+
+        private bool BoltBlocked(EnemyBolt b)
+        {
+            for (int i = 0; i < Zones.Count; i++)
+            {
+                Zone z = Zones[i];
+                if (z.Kind == ZoneKind.Field && z.Field.BlockBolts && InsideField(z, b.Pos, 0f)) return true;
+            }
+            return false;
         }
 
         // ------------------------------------------------------------------ declarative triggers (relics/cards)

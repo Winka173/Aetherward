@@ -39,7 +39,7 @@ namespace Aetherward.Sim.Combat
         public readonly List<SourcedOp> Triggers = new List<SourcedOp>();
         public readonly List<SourcedOp> SkillOps = new List<SourcedOp>();
         public readonly Dictionary<string, float> Rules = new Dictionary<string, float>();
-        public readonly float[] GaugeMult = { 1f, 1f, 1f, 1f, 1f, 1f, 1f };
+        public readonly float[] GaugeMult = NewGaugeMult();
         public float CrystalMaxHpPct;
         public float CrystalMaxHpFlat;
         public float CrystalRegen;
@@ -51,6 +51,13 @@ namespace Aetherward.Sim.Combat
         public float EnemyGoldPct;
         public float HealingPct;
         public float ReactionDamageAll;
+
+        private static float[] NewGaugeMult()
+        {
+            var g = new float[ElementUtil.Count];
+            for (int i = 0; i < g.Length; i++) g[i] = 1f;
+            return g;
+        }
 
         public float Rule(string key) => Rules.TryGetValue(key, out float v) ? v : 0f;
         public bool HasRule(string key) => Rules.ContainsKey(key);

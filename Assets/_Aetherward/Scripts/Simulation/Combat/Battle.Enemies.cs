@@ -42,10 +42,14 @@ namespace Aetherward.Sim.Combat
             e.AttackTimer -= dt;
             float speed = e.Speed * (1f - (e.SlowTimer > 0f ? e.SlowAmount : 0f)) * (1f + e.SpeedBuff);
             if (e.Chilled) speed *= 0.85f;
+            if (e.RootTimer > 0f) speed = 0f; // rooted: holds position but can still attack in reach
             EnemyBehavior b = e.Def.Behavior;
 
-            if (b == EnemyBehavior.Summoner) UpdateSummoner(e, dt);
-            if (b == EnemyBehavior.Buffer) UpdateBuffer(e, dt);
+            if (e.SealTimer <= 0f)
+            {
+                if (b == EnemyBehavior.Summoner) UpdateSummoner(e, dt);
+                if (b == EnemyBehavior.Buffer) UpdateBuffer(e, dt);
+            }
 
             // Taunt overrides normal targeting (sappers are immune, see Taunt()).
             if (e.TauntTimer > 0f)
@@ -120,6 +124,8 @@ namespace Aetherward.Sim.Combat
             }
             if (!e.Chilled) e.ChillDamageReduction = 0f;
             if (e.Def.Params.Flag("adaptive")) UpdateAdaptive(e, dt);
+            TickExpansionStatuses(e, dt);
+            if (!e.Alive) return;
 
             if (e.BurnTimer > 0f)
             {

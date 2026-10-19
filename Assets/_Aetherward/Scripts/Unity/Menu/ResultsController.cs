@@ -100,7 +100,7 @@ namespace Aetherward.Game
             {
                 if (shown++ >= 8) break;
                 Ui.Icon(x + 24, yy, 48, 48, Art.Tex("Icons/reaction_" + e.Id));
-                Ui.Label(x + 82, yy, w - 110, 26, l.Get("reaction." + e.Id + ".name") + " ×" + e.Count, 20, Ui.White, TextAnchor.UpperLeft, true);
+                Ui.Label(x + 82, yy, w - 110, 26, l.ReactionName(e.Id) + " ×" + e.Count, 20, Ui.White, TextAnchor.UpperLeft, true);
                 Ui.DrawRect(x + 82, yy + 28, Mathf.Max(2, (w - 120) * e.Value / max), 14, new Color(0.6f, 0.75f, 1f));
                 yy += 58;
             }
@@ -141,7 +141,7 @@ namespace Aetherward.Game
             {
                 string[] parts = ins.Split('|');
                 string arg = parts.Length > 1 ? parts[1] : "";
-                if (parts[0] == "insight.strongest_reaction") arg = l.Get("reaction." + arg + ".name");
+                if (parts[0] == "insight.strongest_reaction") arg = l.ReactionName(arg);
                 if (parts[0] == "insight.defeated_by") arg = arg == "abandoned" || arg == "breach" ? arg : l.Get("enemy." + arg + ".name");
                 string text = "• " + l.Format(parts[0], arg);
                 Ui.Label(x + 24, yy, w - 48, 80, text, 19, Ui.White);

@@ -359,6 +359,7 @@ namespace Aetherward.Game
 
         private static string ReactionSound(string id)
         {
+            if (App.Content.Reactions.TryGetValue(id, out ReactionDef def) && !string.IsNullOrEmpty(def.Sound)) return def.Sound;
             switch (id)
             {
                 case "vaporize": case "melt": return "react_steam";
@@ -380,7 +381,7 @@ namespace Aetherward.Game
             float rad = Mathf.Max(0.8f, e.Radius);
             Color c = Ui.ElementColor(e.Element);
             if (!reduced || e.Generation <= 1)
-                _fx.Spawn("Icons/reaction_" + e.Id, p + new Vector3(0, 0.9f, 0), 0.25f, 0.45f, 0.5f, new Color(1, 1, 1, 0.95f));
+                _fx.Spawn(ReactionIcon(e.Id), p + new Vector3(0, 0.9f, 0), 0.25f, 0.45f, 0.5f, new Color(1, 1, 1, 0.95f));
             if (!reduced) _fx.Spawn("Vfx/ring", p + new Vector3(0, 0.1f, 0), 0.3f, rad, 0.35f, c * new Color(1, 1, 1, 0.8f), 0, 0, default, -20);
             if (e.Id == "overload" || e.Id == "vaporize" || e.Id == "melt")
                 _fx.Spawn("Vfx/impact_" + (e.Id == "vaporize" ? "water" : "fire"), p + new Vector3(0, 0.4f, 0), 0.4f, rad * 0.9f, 0.3f, Color.white, Random.Range(0, 360));
@@ -389,9 +390,15 @@ namespace Aetherward.Game
             if (Time.unscaledTime >= until && e.Generation <= 1)
             {
                 _calloutCooldown[e.Id] = Time.unscaledTime + 0.6f;
-                _text.Add(p + new Vector3(0, 1.4f, 0), App.Loc.Get("reaction." + e.Id + ".name"), Color.Lerp(c, Color.white, 0.35f), 26, 0.9f,
-                    Art.Tex("Icons/reaction_" + e.Id));
+                _text.Add(p + new Vector3(0, 1.4f, 0), App.Loc.ReactionName(e.Id), Color.Lerp(c, Color.white, 0.35f), 26, 0.9f,
+                    Art.Tex(ReactionIcon(e.Id)));
             }
+        }
+
+        /// <summary>Generated generic interactions share one icon; their name carries both elements.</summary>
+        public static string ReactionIcon(string id)
+        {
+            return App.Content.Reactions.TryGetValue(id, out ReactionDef r) && r.AutoNamed ? "Icons/reaction_generic" : "Icons/reaction_" + id;
         }
 
         private void OnStrike(SimEvent e, Vector3 p, bool reduced)
@@ -597,14 +604,25 @@ namespace Aetherward.Game
             {
                 if (!_zones.TryGetValue(z.Uid, out SpriteRenderer r))
                 {
-                    r = RentSr("Vfx/zone_" + ZoneSprite(z.Kind));
+                    r = RentSr(z.Kind == ZoneKind.Field ? "Vfx/field_" + z.Field.Id : "Vfx/zone_" + ZoneSprite(z.Kind));
                     _zones[z.Uid] = r;
                 }
                 _seen.Add(z.Uid);
-                r.transform.position = WorldGfx.V(z.Pos);
                 float k = z.Duration > 0 ? z.Remaining / z.Duration : 1f;
                 float grow = Mathf.Clamp01((z.Duration - z.Remaining) / 0.2f);
-                r.transform.localScale = new Vector3(z.Radius * grow, z.Radius * 0.62f * grow, 1f);
+                if (z.Line)
+                {
+                    // Line fields (river channels, walls): stretched along the segment.
+                    Vector3 a = WorldGfx.V(z.Pos), c = WorldGfx.V(z.End);
+                    r.transform.position = (a + c) * 0.5f;
+                    r.transform.rotation = Quaternion.Euler(0, 0, Mathf.Atan2(c.y - a.y, c.x - a.x) * Mathf.Rad2Deg);
+                    r.transform.localScale = new Vector3((Vector3.Distance(a, c) * 0.5f + z.Radius) * grow, z.Radius * grow, 1f);
+                }
+                else
+                {
+                    r.transform.position = WorldGfx.V(z.Pos);
+                    r.transform.localScale = new Vector3(z.Radius * grow, z.Radius * 0.62f * grow, 1f);
+                }
                 if (z.Kind == ZoneKind.Vortex) r.transform.Rotate(0, 0, -240f * viewDt);
                 r.color = new Color(1, 1, 1, Mathf.Clamp01(k * 3f) * (App.Settings.ReducedVfx ? 0.55f : 0.9f));
                 r.sortingOrder = -8000;

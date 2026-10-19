@@ -9,6 +9,7 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from strings_content import (HEROES, EVOLUTIONS, EVO_PASSIVES, ENEMIES, AFFIXES, REACTIONS, RELICS, CARDS, CARD_DRAWBACKS,
                              EVENTS, WAVES, LANES)
+import strings_expansion as X
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 OUT = os.path.join(ROOT, "Assets", "_Aetherward", "Resources", "Content")
@@ -271,6 +272,23 @@ def main():
         add("wave.%d.hint" % n, hint)
     for lid, pair in LANES.items():
         add("lane.%s" % lid, pair)
+
+    # ---- post-MVP expansion
+    for k, v in X.UI_X.items():
+        add(k, v)
+    for eid, pair in X.ELEMENT_NAMES.items():
+        add("element.%s" % eid, pair)
+    for sid, pair in X.STATUS_NAMES_NEW.items():
+        add("status.%s" % sid, pair)
+    for sid, pair in X.STATUS_DESCS.items():
+        add("status.%s.desc" % sid, pair)
+    for rid, (name, desc) in X.REACTIONS_X.items():
+        add("reaction.%s.name" % rid, name)
+        add("reaction.%s.desc" % rid, desc)
+    for fid, pair in X.FIELDS.items():
+        add("field.%s.name" % fid, pair)
+    for nid, pair in X.PAIR_NOTES.items():
+        add("pair.%s" % nid, pair)
 
     for lang, table in (("en", en), ("vi", vi)):
         with open(os.path.join(OUT, "loc_%s.json" % lang), "w", encoding="utf-8") as f:

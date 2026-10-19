@@ -26,6 +26,7 @@ namespace Aetherward.Sim.Combat
                 if (h.BarrierTimer <= 0f && h.ShieldRetaliate > 0f && h.Shield <= 0f) h.ShieldRetaliate = 0f;
             }
             if (h.RetaliateTimer > 0f) h.RetaliateTimer -= dt;
+            TickHeroDebuffs(h, dt);
             TickPassive(h, dt);
 
             if (h.StunTimer > 0f)
@@ -35,8 +36,9 @@ namespace Aetherward.Sim.Combat
                 return;
             }
 
-            h.AttackTimer -= dt;
-            h.SkillTimer -= dt;
+            float haste = 1f + (h.FieldTimer > 0f ? h.FieldHaste : 0f);
+            h.AttackTimer -= dt * haste;
+            h.SkillTimer -= dt * haste * (h.LeechTimer > 0f ? 1f - h.LeechAmount : 1f);
             h.RetargetTimer -= dt;
             if (h.CastLock > 0f) h.CastLock -= dt;
 
@@ -47,7 +49,7 @@ namespace Aetherward.Sim.Combat
                 h.RetargetTimer = RetargetInterval;
             }
 
-            if (h.SkillTimer <= 0f && h.CastLock <= 0f)
+            if (h.SkillTimer <= 0f && h.CastLock <= 0f && h.SilenceTimer <= 0f)
             {
                 if (CastSkill(h, 1f, false))
                 {

@@ -206,6 +206,47 @@ def sfx_reactions():
     write("Sfx/react_generic", bell * 0.5 + 0.3 * lowpass(noise(len(t2)), 3000) * exp_env(len(t2), 0.05), 0.55, True, 0.3)
 
 
+def sfx_expansion():
+    """Six expansion elements (hits + casts) and the reaction families they introduce."""
+    t = t_of(0.3)
+    n = len(t)
+    shimmer = sum(sine(f, t) * exp_env(n, 0.1 / (i + 1)) for i, f in enumerate((1568, 2349, 3136)))
+    write("Sfx/hit_light", shimmer * 0.6 + 0.25 * highpass(noise(n), 6000) * exp_env(n, 0.02), 0.55)
+    write("Sfx/hit_shadow", lowpass(noise(n), np.linspace(1500, 200, n)) * env(n, 0.005, 0.25, 0, 0.05) + 0.5 * sine(np.linspace(220, 70, n), t) * exp_env(n, 0.09), 0.7)
+    rustle = lowpass(highpass(noise(n), 1500), 5000) * (0.5 + 0.5 * sine(23, t)) * env(n, 0.01, 0.25, 0, 0.04)
+    write("Sfx/hit_nature", rustle + 0.4 * sine(np.linspace(300, 180, n), t) * exp_env(n, 0.05), 0.6)
+    bubble = sum(sine(np.linspace(400 + 150 * k, 900 + 150 * k, n), t) * exp_env(n, 0.04) * (0.7 ** k) for k in range(3))
+    write("Sfx/hit_poison", bubble * 0.6 + 0.3 * lowpass(noise(n), 1200) * exp_env(n, 0.06), 0.6)
+    write("Sfx/hit_arcane", sine(1320 + 220 * sine(12, t), t) * exp_env(n, 0.09) * 0.6 + 0.3 * sine(1980, t) * exp_env(n, 0.05), 0.55)
+    write("Sfx/hit_void", sine(np.linspace(60, 140, n), t) * env(n, 0.04, 0.24, 0, 0.02) + 0.4 * lowpass(noise(n), np.linspace(200, 2000, n)) * env(n, 0.05, 0.2, 0, 0.03), 0.75)
+    t = t_of(0.55)
+    n = len(t)
+    whoosh = lowpass(noise(n), np.concatenate([np.linspace(300, 4000, n // 2), np.linspace(4000, 600, n - n // 2)])) * env(n, 0.15, 0.35, 0, 0.05)
+    tones = {"light": sum(sine(f, t) * 0.22 for f in (1046, 1318, 1568)), "shadow": saw(np.linspace(110, 70, n), t) * 0.25,
+             "nature": tri(np.linspace(330, 440, n), t) * 0.4, "poison": sine(np.linspace(500, 300, n) + 60 * sine(9, t), t) * 0.45,
+             "arcane": sine(880 + 440 * sine(5, t), t) * 0.35, "void": sine(np.linspace(55, 110, n), t) * 0.8}
+    for el, tone in tones.items():
+        write("Sfx/cast_" + el, whoosh * 0.8 + tone * env(n, 0.05, 0.4, 0, 0.1), 0.6, True, 0.18)
+    t = t_of(0.9)
+    n = len(t)
+    chord = sum(sine(f, t) * exp_env(n, 0.5 / (i + 1)) for i, f in enumerate((523, 659, 784, 1046)))
+    write("Sfx/react_holy", chord * 0.45 + 0.2 * highpass(noise(n), 7000) * exp_env(n, 0.05), 0.55, True, 0.35)
+    dark = lowpass(noise(n), np.linspace(2500, 150, n)) * env(n, 0.02, 0.6, 0, 0.2) + sine(np.linspace(180, 45, n), t) * exp_env(n, 0.35)
+    write("Sfx/react_dark", dark, 0.75, True, 0.3)
+    toxic = np.zeros(n)
+    for k in range(6):
+        s0 = int(k * 0.09 * SR)
+        tt = t[: n - s0]
+        toxic[s0:] += sine(np.linspace(300 + 60 * k, 800 + 60 * k, len(tt)), tt) * exp_env(len(tt), 0.04) * 0.5
+    write("Sfx/react_toxic", toxic + 0.2 * lowpass(noise(n), 900) * exp_env(n, 0.3), 0.6, True, 0.2)
+    sparkles = sum(sine(f, t) * exp_env(n, 0.3) * (0.8 ** i) for i, f in enumerate((1760, 2637, 3520, 4186)))
+    write("Sfx/react_arcane", sparkles * 0.4 + sine(440 + 220 * sine(3, t), t) * exp_env(n, 0.4) * 0.3, 0.55, True, 0.35)
+    implode = sine(np.linspace(40, 180, n), t) * env(n, 0.3, 0.5, 0, 0.05) + lowpass(noise(n), np.linspace(100, 3000, n)) * env(n, 0.4, 0.45, 0, 0.03)
+    write("Sfx/react_void", implode, 0.8, True, 0.25)
+    growth = lowpass(highpass(noise(n), 1200), 4000) * (0.5 + 0.5 * sine(17, t)) * env(n, 0.05, 0.6, 0, 0.2) + tri(np.linspace(220, 330, n), t) * exp_env(n, 0.4) * 0.3
+    write("Sfx/react_growth", growth, 0.6, True, 0.25)
+
+
 def sfx_game():
     t = t_of(0.35)
     n = len(t)
@@ -394,9 +435,15 @@ def music():
 
 
 if __name__ == "__main__":
-    sfx_ui()
-    sfx_elements()
-    sfx_reactions()
-    sfx_game()
-    music()
+    import sys
+    if "--only" in sys.argv:
+        # Partial rebuild (avoids re-encoding unchanged launch audio): --only expansion
+        globals()["sfx_" + sys.argv[sys.argv.index("--only") + 1]]()
+    else:
+        sfx_ui()
+        sfx_elements()
+        sfx_reactions()
+        sfx_expansion()
+        sfx_game()
+        music()
     print("wrote %d audio files" % len(written))

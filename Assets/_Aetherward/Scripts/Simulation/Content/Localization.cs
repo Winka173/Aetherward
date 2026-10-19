@@ -61,6 +61,21 @@ namespace Aetherward.Sim.Content
         }
 
         public string Element(Element e) => Get("element." + ElementUtil.Key(e));
+
+        /// <summary>Reaction display name; generic auto interactions are named from both elements.</summary>
+        public string ReactionName(string id)
+        {
+            if (string.IsNullOrEmpty(id)) return "";
+            if (_db.Reactions.TryGetValue(id, out ReactionDef r))
+                return r.AutoNamed ? Format(r.NameKey, Element(r.A), Element(r.B)) : Get(r.NameKey);
+            return Get("reaction." + id + ".name");
+        }
+
+        public string StatusName(Element e)
+        {
+            ElementDef d = _db.ElementDefs[(int)e];
+            return d != null ? Get("status." + d.StatusKey) : "";
+        }
         public string Role(HeroRole r) => Get("role." + EnumParse.ToSnake(r.ToString()));
         public string Stat(StatId s) => Get("stat." + EnumParse.ToSnake(s.ToString()));
         public string Rarity(Rarity r) => Get("rarity." + EnumParse.ToSnake(r.ToString()));

@@ -223,7 +223,7 @@ namespace Aetherward.Game
             if (_codexTab == 0)
                 foreach (HeroDef h in db.HeroList) entries.Add((h.Id, h.NameKey, Art.Portrait(h.Id), m.Codex.Contains("hero:" + h.Id) || m.UnlockedHeroes.Contains(h.Id)));
             else if (_codexTab == 1)
-                foreach (ReactionDef r in db.Reactions.Values) entries.Add((r.Id, r.NameKey, Art.Tex("Icons/reaction_" + r.Id), m.Codex.Contains("reaction:" + r.Id)));
+                foreach (ReactionDef r in db.Reactions.Values) entries.Add((r.Id, r.NameKey, Art.Tex(BattleController.ReactionIcon(r.Id)), m.Codex.Contains("reaction:" + r.Id)));
             else if (_codexTab == 2)
                 foreach (RelicDef r in db.RelicList) entries.Add((r.Id, r.NameKey, Art.Tex("Relics/" + r.Id), m.Codex.Contains("relic:" + r.Id)));
             else
@@ -274,7 +274,7 @@ namespace Aetherward.Game
             if (_codexTab == 1)
             {
                 ReactionDef r = db.Reactions[id];
-                title = l.Get(r.NameKey);
+                title = l.ReactionName(id);
                 body = l.Element(r.A) + " + " + l.Element(r.B) + "\n\n" + ContentValidator.ReactionText(l, r);
             }
             else if (_codexTab == 2)

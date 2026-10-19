@@ -273,18 +273,12 @@ namespace Aetherward.Game
             _status2.transform.localPosition = new Vector3(0.16f, sy, 0);
         }
 
+        /// <summary>Signature status icon of an element aura (key from elements.json).</summary>
         private static Sprite StatusSprite(Element e)
         {
-            switch (e)
-            {
-                case Element.Fire: return Art.Sprite("Icons/status_burn");
-                case Element.Water: return Art.Sprite("Icons/status_wet");
-                case Element.Lightning: return Art.Sprite("Icons/status_charged");
-                case Element.Ice: return Art.Sprite("Icons/status_chill");
-                case Element.Wind: return Art.Sprite("Icons/status_windmark");
-                case Element.Earth: return Art.Sprite("Icons/status_armor_crack");
-                default: return null;
-            }
+            if (e == Element.None) return null;
+            ElementDef d = App.Content.ElementDefs[(int)e];
+            return d != null ? Art.Sprite("Icons/status_" + d.StatusKey) : null;
         }
     }
 

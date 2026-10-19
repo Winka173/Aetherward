@@ -37,7 +37,7 @@ namespace Aetherward.Sim.Content
             return lines;
         }
 
-        public string ReactionName(string id) => id == "*" || string.IsNullOrEmpty(id) ? _l.Get("fx.all_reactions") : _l.Get("reaction." + id + ".name");
+        public string ReactionName(string id) => id == "*" || string.IsNullOrEmpty(id) ? _l.Get("fx.all_reactions") : _l.ReactionName(id);
 
         private string Scope(EffectOp op)
         {
