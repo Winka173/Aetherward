@@ -37,6 +37,7 @@ namespace Aetherward.Sim.Combat
         public readonly List<SourcedOp> StatOps = new List<SourcedOp>();
         public readonly Dictionary<string, ReactionMod> Reactions = new Dictionary<string, ReactionMod>();
         public readonly List<SourcedOp> Triggers = new List<SourcedOp>();
+        public readonly List<SourcedOp> SkillOps = new List<SourcedOp>();
         public readonly Dictionary<string, float> Rules = new Dictionary<string, float>();
         public readonly float[] GaugeMult = { 1f, 1f, 1f, 1f, 1f, 1f, 1f };
         public float CrystalMaxHpPct;
@@ -81,6 +82,9 @@ namespace Aetherward.Sim.Combat
                 }
                 case "trigger":
                     Triggers.Add(s);
+                    break;
+                case "skill":
+                    SkillOps.Add(s);
                     break;
                 case "rule":
                     Rules.TryGetValue(op.Rule, out float existing);

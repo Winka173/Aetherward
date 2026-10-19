@@ -474,7 +474,7 @@ namespace Aetherward.Sim.Combat
                 if (op.Trigger != on) continue;
                 if (t.Cooldown > 0f) continue;
                 if (!string.IsNullOrEmpty(op.Reaction) && op.Reaction != "*" && op.Reaction != reactionId) continue;
-                string el = op.Params.GetString("element");
+                string el = op.Params.GetString("heroElement");
                 if (!string.IsNullOrEmpty(el) && (hero == null || ElementUtil.Key(hero.Def.Element) != el)) continue;
                 string heroId = op.Params.GetString("hero");
                 if (!string.IsNullOrEmpty(heroId) && (hero == null || hero.Def.Id != heroId)) continue;

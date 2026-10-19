@@ -62,6 +62,8 @@ namespace Aetherward.Sim.Combat
                     if (op.Op == "stat") Accumulate(op, 1, flat, pct);
             }
 
+            ApplySkillOps(h, battle.Mods);
+
             foreach (SourcedOp s in battle.Mods.StatOps)
                 if (s.Op.MatchesHero(def, h.Melee)) Accumulate(s.Op, s.Stacks, flat, pct);
 
@@ -102,6 +104,34 @@ namespace Aetherward.Sim.Combat
                 h.State = HeroState.Downed;
             }
             return h;
+        }
+
+        /// <summary>
+        /// Hero specialization cards modify skill parameters (radius, jumps, arrows...). The skill is
+        /// cloned first so shared definitions are never mutated.
+        /// </summary>
+        private static void ApplySkillOps(HeroUnit h, BattleModifiers mods)
+        {
+            bool cloned = false;
+            foreach (SourcedOp s in mods.SkillOps)
+            {
+                if (s.Op.Params.GetString("hero") != h.Def.Id) continue;
+                if (!cloned)
+                {
+                    h.Skill = h.Skill.With(new SkillOverride());
+                    cloned = true;
+                }
+                string key = s.Op.Params.GetString("param");
+                float add = s.Op.Params.Get("add") * s.Stacks;
+                float pct = s.Op.Params.Get("pct") * s.Stacks;
+                switch (key)
+                {
+                    case "cooldown": h.Skill.Cooldown = (h.Skill.Cooldown + add) / (1f + pct); break;
+                    case "mult": h.Skill.Multiplier = (h.Skill.Multiplier + add) * (1f + pct); break;
+                    case "gauge": h.Skill.Gauge = (h.Skill.Gauge + add) * (1f + pct); break;
+                    default: h.Skill.Params.Set(key, (h.Skill.Params.Get(key) + add) * (1f + pct)); break;
+                }
+            }
         }
 
         private static void Accumulate(EffectOp op, int stacks, float[] flat, float[] pct)

@@ -1,1 +1,23 @@
-{ "events": [] }
+{
+  // Wave-8 events. Every option shows its exact cost/drawback before it is chosen.
+  "events": [
+    { "id": "rift_merchant",
+      "options": [
+        { "gold": -10, "essence": 2 },
+        { "crystalHpPct": -0.1, "relic": "spark_of_genesis", "drawback": true },
+        { "gold": 6 }
+      ] },
+    { "id": "challenge_altar",
+      "options": [
+        { "gold": 15, "essence": 1, "waveModifier": "swarm", "drawback": true },
+        { "gold": 8, "waveModifier": "haste", "drawback": true },
+        { }
+      ] },
+    { "id": "wandering_healer",
+      "options": [
+        { "crystalHpPct": 0.2 },
+        { "gold": -6, "relic": "overgrowth" },
+        { "effects": [ { "op": "card", "id": "reinforced_plate" } ] }
+      ] }
+  ]
+}

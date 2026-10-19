@@ -53,7 +53,7 @@
       "silhouette": "lean, scarf, twin daggers",
       "stats": { "max_hp": 400, "attack": 34, "defense": 12, "attack_interval": 0.8, "range": 0.8, "leash_radius": 3.0, "threat": 1.0, "crit_chance": 0.2, "crit_multiplier": 1.8, "move_speed": 4.0 },
       "basic": { "kind": "melee", "mult": 1.0, "gauge": 0.8 },
-      "skill": { "kind": "dash_strike", "cooldown": 5.0, "mult": 3.0, "gauge": 1.0 },
+      "skill": { "kind": "dash_strike", "cooldown": 5.0, "mult": 3.0, "gauge": 1.0, "trailPower": 0.5 },
       "passive": { "kind": "momentum", "refund": 0.5 },
       "evolutions": ["raiden_stormblade", "raiden_static_executioner"]
     },
@@ -62,7 +62,7 @@
       "silhouette": "crystal crown, long cape",
       "stats": { "max_hp": 360, "attack": 24, "defense": 10, "attack_interval": 1.15, "range": 4.4, "elemental_mastery": 40, "threat": 0.8, "status_power": 0.1 },
       "basic": { "kind": "projectile", "mult": 1.0, "gauge": 1.0, "speed": 10 },
-      "skill": { "kind": "frost_nova", "cooldown": 6.5, "mult": 1.4, "gauge": 1.5, "radius": 1.9, "slow": 0.4, "slowDuration": 2.5 },
+      "skill": { "kind": "frost_nova", "cooldown": 6.5, "mult": 1.4, "gauge": 1.5, "radius": 1.9, "slow": 0.4, "slowDuration": 2.5, "zonePower": 0.45 },
       "passive": { "kind": "frostbite", "reduction": 0.15 },
       "evolutions": ["freya_blizzard_witch", "freya_crystalbinder"]
     },
@@ -71,7 +71,7 @@
       "silhouette": "heavy armour, tower shield of ice",
       "stats": { "max_hp": 720, "attack": 20, "defense": 34, "attack_interval": 1.2, "range": 0.8, "leash_radius": 1.7, "threat": 3.0, "damage_reduction": 0.1, "move_speed": 2.2 },
       "basic": { "kind": "melee", "mult": 1.0, "gauge": 1.0 },
-      "skill": { "kind": "ice_shield", "cooldown": 8.0, "mult": 1.0, "gauge": 1.0, "shieldPct": 0.25, "retaliate": 0.6, "duration": 5.0, "taunt": 2.5, "tauntRadius": 2.3 },
+      "skill": { "kind": "ice_shield", "cooldown": 8.0, "mult": 1.0, "gauge": 1.0, "shieldPct": 0.25, "retaliate": 0.6, "duration": 5.0, "taunt": 2.5, "tauntRadius": 2.3, "allyRadius": 3.0 },
       "passive": { "kind": "retaliate", "mult": 0.45, "gauge": 0.5, "cooldown": 0.8 },
       "evolutions": ["glacius_permafrost_sentinel", "glacius_shatter_knight"]
     },
@@ -89,7 +89,7 @@
       "silhouette": "light cloak, longbow",
       "stats": { "max_hp": 330, "attack": 29, "defense": 8, "attack_interval": 0.9, "range": 5.4, "threat": 0.7, "crit_chance": 0.15, "crit_multiplier": 1.7 },
       "basic": { "kind": "projectile", "mult": 1.0, "gauge": 1.0, "speed": 15 },
-      "skill": { "kind": "pierce_arrow", "cooldown": 5.5, "mult": 1.8, "gauge": 1.0, "speed": 16, "width": 0.45, "arrows": 1 },
+      "skill": { "kind": "pierce_arrow", "cooldown": 5.5, "mult": 1.8, "gauge": 1.0, "speed": 16, "width": 0.45, "arrows": 1, "spread": 14 },
       "passive": { "kind": "keen_eye", "distance": 3.5, "bonus": 0.25 },
       "evolutions": ["sylph_tempest_archer", "sylph_wind_dancer"]
     },
