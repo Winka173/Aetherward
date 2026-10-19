@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using Aetherward.Sim.Combat;
 using Aetherward.Sim.Content;
 using Aetherward.Sim.Core;
+using Aetherward.Sim.Presentation;
 using Aetherward.Sim.Run;
 using UnityEngine;
 
@@ -36,6 +37,7 @@ namespace Aetherward.Game
         private readonly List<int> _remove = new List<int>();
         private FxSystem _fx;
         private readonly FloatingTextSystem _text = new FloatingTextSystem();
+        private readonly DamageNumberMerger _merge = new DamageNumberMerger();
         private DebugOverlay _debug;
 
         private float _accumulator;
@@ -122,6 +124,12 @@ namespace Aetherward.Game
         }
 
         // ------------------------------------------------------------------ main loop
+
+        /// <summary>Accessibility/mobile: losing focus mid-battle pauses instead of letting the wave run unattended.</summary>
+        private void OnApplicationFocus(bool focused)
+        {
+            if (!focused && App.Settings.PauseOnFocusLoss && _rc != null && _rc.State.Phase == RunPhase.Battle) _paused = true;
+        }
 
         private void Update()
         {
@@ -252,7 +260,8 @@ namespace Aetherward.Game
 
         private void ProcessEvents(Battle b)
         {
-            bool reduced = App.Settings.ReducedVfx;
+            bool reduced = App.Settings.ReducedVfx || App.Settings.BatterySaver;
+            _merge.Prune(Time.unscaledTime);
             bool numbers = App.Settings.DamageNumbers;
             foreach (SimEvent e in b.Journal.Pending)
             {
@@ -270,7 +279,8 @@ namespace Aetherward.Game
                         if (numbers && (e.Crit || e.Value >= 8f) && e.Generation <= 1)
                         {
                             Color c = e.Crit ? Ui.Gold : (e.Id != null ? Ui.ElementColor(e.Element) : Color.white);
-                            _text.Add(p + new Vector3(Random.Range(-0.25f, 0.25f), 0.9f, 0), Mathf.RoundToInt(e.Value) + (e.Crit ? "!" : ""), c, e.Crit ? 34 : 24, 0.75f);
+                            DamageNumberMerger.Result m = _merge.Add(e.TargetUid, e.Value, e.Crit, Time.unscaledTime);
+                            _text.Upsert(m.Slot, p + new Vector3(Random.Range(-0.25f, 0.25f), 0.9f, 0), Mathf.RoundToInt(m.Total) + (e.Crit ? "!" : ""), c, e.Crit ? 34 : 24, 0.75f);
                         }
                         if (!reduced && e.Generation == 0 && Random.value < 0.6f)
                             _fx.Spawn("Vfx/impact_" + (e.Element == Element.None ? "earth" : ElementUtil.Key(e.Element)), p + new Vector3(0, 0.45f, 0), 0.25f, 0.55f, 0.22f, Color.white, Random.Range(0, 360));

@@ -71,7 +71,8 @@ namespace Aetherward.Game
         public static void ApplySettings()
         {
             QualitySettings.vSyncCount = 0;
-            Application.targetFrameRate = Settings.TargetFps;
+            Application.targetFrameRate = Settings.BatterySaver ? Mathf.Min(30, Settings.TargetFps) : Settings.TargetFps;
+            WorldGfx.FlashScale = Mathf.Clamp01(Settings.FlashIntensity);
             if (Audio != null) Audio.ApplyVolumes();
         }
 

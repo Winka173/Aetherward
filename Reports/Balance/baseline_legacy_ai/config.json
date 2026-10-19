@@ -1,0 +1,11 @@
+{
+  "seeds": 1000,
+  "policies": "Scripted,Synergy,Random,Greedy",
+  "mode": "Classic",
+  "ascension": 0,
+  "biome": "default",
+  "contentHash": "cc591f02dd5044be",
+  "runs": 48000,
+  "seconds": 909.7,
+  "threads": 4
+}

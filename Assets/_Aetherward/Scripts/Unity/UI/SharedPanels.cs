@@ -42,6 +42,15 @@ namespace Aetherward.Game
             bool numbers = Ui.Toggle(inner + half + 40, row, half, rh, l.Get("settings.numbers"), s.DamageNumbers); row += rh;
             bool contrast = Ui.Toggle(inner, row, half, rh, l.Get("settings.contrast"), s.HighContrast);
             bool ranges = Ui.Toggle(inner + half + 40, row, half, rh, l.Get("settings.ranges"), s.ShowRanges); row += rh;
+            bool focusPause = Ui.Toggle(inner, row, half, rh, l.Get("settings.focus_pause"), s.PauseOnFocusLoss);
+            bool battery = Ui.Toggle(inner + half + 40, row, half, rh, l.Get("settings.battery"), s.BatterySaver); row += rh;
+            float flash = Ui.Stepper(inner, row, iw, rh, l.Get("settings.flash"), s.FlashIntensity); row += rh;
+            changed |= focusPause != s.PauseOnFocusLoss || battery != s.BatterySaver || flash != s.FlashIntensity;
+            bool reapply = battery != s.BatterySaver || flash != s.FlashIntensity;
+            s.PauseOnFocusLoss = focusPause;
+            s.BatterySaver = battery;
+            s.FlashIntensity = Mathf.Clamp01(flash);
+            if (reapply) App.ApplySettings();
             changed |= fast != s.DefaultFastSpeed || vfx != s.ReducedVfx || shake != s.ScreenShake || numbers != s.DamageNumbers ||
                        contrast != s.HighContrast || ranges != s.ShowRanges;
             s.DefaultFastSpeed = fast;

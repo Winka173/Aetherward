@@ -41,8 +41,12 @@ namespace Aetherward.Game
         /// <summary>Lower on screen = drawn in front. Each unit reserves 10 sorting slots.</summary>
         public static int OrderFor(float y) => 5000 - Mathf.RoundToInt(y * 100f) * 10;
 
+        /// <summary>Accessibility: global multiplier on sprite flashes (Settings.FlashIntensity).</summary>
+        public static float FlashScale = 1f;
+
         public static void SetFlash(SpriteRenderer r, float amount, Color color)
         {
+            amount *= FlashScale;
             if (_mpb == null) _mpb = new MaterialPropertyBlock();
             if (amount <= 0.001f)
             {
@@ -378,6 +382,7 @@ namespace Aetherward.Game
             public float T;
             public float Life;
             public Texture Icon;
+            public int Slot;
         }
 
         public readonly List<Entry> Entries = new List<Entry>();
@@ -387,6 +392,25 @@ namespace Aetherward.Game
         {
             if (Entries.Count >= Max) Entries.RemoveAt(0);
             Entries.Add(new Entry { World = world, Text = text, Color = color, Size = size, Life = life, Icon = icon });
+        }
+
+        /// <summary>Adds a number, or refreshes the live entry with the same slot (merged hits).</summary>
+        public void Upsert(int slot, Vector3 world, string text, Color color, float size, float life)
+        {
+            for (int i = Entries.Count - 1; i >= 0; i--)
+            {
+                if (Entries[i].Slot != slot) continue;
+                Entry e = Entries[i];
+                e.Text = text;
+                e.Size = Mathf.Min(size * 1.35f, e.Size + 1.5f); // grows a little as hits stack
+                e.T = Mathf.Min(e.T, 0.1f);
+                Entries[i] = e;
+                return;
+            }
+            Add(world, text, color, size, life);
+            Entry n = Entries[Entries.Count - 1];
+            n.Slot = slot;
+            Entries[Entries.Count - 1] = n;
         }
 
         public void Update(float dt)

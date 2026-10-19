@@ -830,6 +830,9 @@ UI_X.update({
 
 UI_X.update({
     "tactic.label": ("Team tactic", "Chiến thuật đội"),
+    "settings.focus_pause": ("Pause when unfocused", "Tạm dừng khi rời ứng dụng"),
+    "settings.battery": ("Battery saver (30 FPS)", "Tiết kiệm pin (30 FPS)"),
+    "settings.flash": ("Flash intensity", "Cường độ chớp sáng"),
     "reward.crystalevolution": ("Crystal Evolution", "Tiến hoá Pha lê"),
     "crystal.permanent": ("Choose one path. It is permanent for this run.", "Chọn một nhánh. Lựa chọn giữ nguyên đến hết lượt chơi."),
     "crystal.bastion": ("Bastion", "Thành Luỹ"), "crystal.bastion.desc": ("The Crystal takes 10% less damage and regenerates 0.2% of its max HP per second.", "Pha lê nhận ít hơn 10% sát thương và hồi 0,2% HP tối đa mỗi giây."),
