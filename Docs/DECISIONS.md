@@ -1,0 +1,16 @@
+# Nhật ký quyết định (Decision Log)
+
+| ID | Quyết định | Lý do |
+|---|---|---|
+| D-01 | Unity **6000.4.8f1**, built-in 2D renderer (không URP), chỉ package builtin như Arcane-Brigade. | Không có Unity trong container để tạo/kiểm chứng asset URP; dự án tham chiếu cùng chủ đã chạy ổn với cấu hình này. Không đoán version package. Có thể nâng lên URP 2D sau khi mở Editor. |
+| D-02 | Gameplay là **mô phỏng pure C#** (`Aetherward.Simulation`, `noEngineReferences`), tick cố định 1/30 s; Unity chỉ hiển thị và gửi lệnh. | Test được ngoài Unity (dotnet), tái lập theo seed, chạy được batch mô phỏng cân bằng headless, đúng ranh giới `Core -> combat -> run -> presentation`. |
+| D-03 | Nội dung (hero, enemy, phản ứng, relic, thẻ, wave, tiến hoá, chuỗi dịch) là **JSON trong `Assets/_Aetherward/Resources/Content/`** với ID chuỗi ổn định, đọc bằng parser JSON nội bộ. | Data-driven, sửa không cần compile, test và validator dùng chung một nguồn. Thay cho ScriptableObject vì YAML `.asset` viết tay không kiểm chứng được khi thiếu Editor. Runtime luôn copy dữ liệu vào instance, không sửa định nghĩa dùng chung. |
+| D-04 | Hiệu ứng relic/thẻ/tiến hoá là **danh sách op khai báo** (StatMod, ReactionMod, trigger, economy, crystal, rule-op). Damage resolver không biết tên relic. | Đúng yêu cầu "no hardcoding relic names"; op dùng lại được, dọn sạch khi hết run (modifier sống trong `RunState`, tạo lại mỗi run). |
+| D-05 | Roster tối đa 6 hero, **tất cả đều đứng trên bàn** (12 node, chọn 6). Không có ghế dự bị. | Đúng giới hạn 6 hero; giảm UI. Đổi vị trí miễn phí giữa các wave. |
+| D-06 | Lựa chọn giữa cấp: thẻ "Hero Specialization" trong draft chỉ xuất hiện khi hero đủ cấp; cấp 5 + Essence mở tiến hoá 2 nhánh. | Giữ số màn hình giữa wave thấp (tránh menu fatigue) mà vẫn có lựa chọn thay đổi cơ chế. |
+| D-07 | Art: **vector 2D sinh bằng Python/pycairo** (viền đậm, cel-shade, tỉ lệ ~2.5 đầu), xuất PNG + contact sheet; Blender để dự phòng. | Kiểm soát silhouette/màu tốt nhất cho phong cách cartoon giống chuẩn Arcane-Brigade; tái tạo deterministic; hợp pháp 100%. Không gọi là vẽ tay. |
+| D-08 | UI bằng **IMGUI với skin sinh tự động** (9-slice, font OFL Be Vietnam Pro / Lilita One hỗ trợ tiếng Việt). | Cách Arcane-Brigade đã dùng trên cùng version Unity; không cần uGUI/TMP package. Touch hoạt động qua mouse emulation. |
+| D-09 | Âm thanh: SFX và nhạc **tổng hợp bằng numpy** (sóng cơ bản + envelope), xuất WAV. | Bản quyền sạch; đủ nhận diện theo nguyên tố. Không phải soundtrack hoàn chỉnh. |
+| D-10 | RNG gameplay: PCG32 riêng, tách stream (combat/draft/shop/wave). Float không fixed-point → tái lập tốt nhất trên cùng nền tảng. | Đúng yêu cầu RNG độc lập `UnityEngine.Random`. |
+| D-11 | Hồi phục sau wave: hero còn sống hồi 25% HP tối đa; hero gục phải hồi sinh bằng Gold (giá tăng theo wave) ở màn Prepare. | Mặc định đề xuất trong spec, dự đoán được. |
+| D-12 | Commit thẳng lên `main` theo yêu cầu chủ dự án ("commit code on main on every major function"). | Yêu cầu trực tiếp. |

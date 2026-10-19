@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Compiles the exact Unity simulation sources under the same constraints Unity 6 uses:
+       .NET Standard 2.1 API surface and C# 9. Nothing here is copied; files are linked. -->
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <LangVersion>9.0</LangVersion>
+    <Nullable>disable</Nullable>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <AssemblyName>Aetherward.Simulation</AssemblyName>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="../../../Assets/_Aetherward/Scripts/Simulation/**/*.cs" />
+  </ItemGroup>
+</Project>
