@@ -167,7 +167,7 @@ namespace Aetherward.Balance
                     r.Gold.ToString("F0", CultureInfo.InvariantCulture), r.Defeat, r.InvariantsOk ? 1 : 0, string.Join(" ", r.Heroes), string.Join(" ", r.Relics)));
             File.WriteAllText(Path.Combine(outDir, "runs.csv"), runs.ToString());
             File.WriteAllText(Path.Combine(outDir, "config.json"), "{\n  \"seeds\": " + n + ",\n  \"policies\": \"" + string.Join(",", policies) + "\",\n  \"mode\": \"" + mode +
-                "\",\n  \"ascension\": " + asc + ",\n  \"biome\": \"" + (biome ?? "default") + "\",\n  \"crystalEvolution\": " + (Aetherward.Sim.Run.FeatureFlags.CrystalEvolution ? "true" : "false") + ",\n  \"utilityTargeting\": " + (Aetherward.Sim.Run.FeatureFlags.UtilityTargeting ? "true" : "false") + ",\n  \"contentHash\": \"" + hash + "\",\n  \"runs\": " + all.Count +
+                "\",\n  \"ascension\": " + asc + ",\n  \"biome\": \"" + (biome ?? "default") + "\",\n  \"crystalEvolution\": " + (Aetherward.Sim.Run.FeatureFlags.CrystalEvolution ? "true" : "false") + ",\n  \"utilityTargeting\": " + (Aetherward.Sim.Run.FeatureFlags.UtilityTargeting ? "true" : "false") + ",\n  \"botTactics\": " + (Aetherward.Sim.Run.AutoPilot.UseTactics ? "true" : "false") + ",\n  \"contentHash\": \"" + hash + "\",\n  \"runs\": " + all.Count +
                 ",\n  \"seconds\": " + elapsed.TotalSeconds.ToString("F1", CultureInfo.InvariantCulture) + ",\n  \"threads\": " + Environment.ProcessorCount + "\n}\n");
         }
 

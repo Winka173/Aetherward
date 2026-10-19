@@ -169,6 +169,9 @@ namespace Aetherward.Sim.Run
     /// </summary>
     public sealed class AutoPilot
     {
+        /// <summary>Bot reads the visible wave preview and picks a team tactic (off by default to keep baselines comparable).</summary>
+        public static bool UseTactics;
+
         private readonly RunController _rc;
         private readonly Strategy _strategy;
         private readonly Pcg32 _rng;
@@ -211,11 +214,25 @@ namespace Aetherward.Sim.Run
             return true;
         }
 
+        /// <summary>Same information a player sees in the wave preview: siege/sapper enemies -> protect, boss -> focus.</summary>
+        private Combat.TeamTactic TacticFor(WaveDef w)
+        {
+            bool siege = false, boss = w.Boss;
+            foreach (SpawnGroup g in w.Groups)
+            {
+                if (!_rc.Content.Enemies.TryGetValue(g.Enemy, out EnemyDef d)) continue;
+                boss |= d.Boss;
+                siege |= d.Behavior == EnemyBehavior.Sapper || d.Params.Has("siegeRange");
+            }
+            return boss ? Combat.TeamTactic.FocusBoss : siege ? Combat.TeamTactic.ProtectCrystal : Combat.TeamTactic.Balanced;
+        }
+
         public void Prepare()
         {
             RunState s = _rc.State;
             foreach (HeroRunState h in s.Heroes)
                 if (h.Downed && s.Gold >= _rc.ReviveCost) _rc.Revive(h.Uid);
+            if (UseTactics) s.Tactic = TacticFor(_rc.WaveAt(s.Wave));
             if (s.CrystalHp < _rc.CrystalMaxHp * _strategy.RepairBelow)
                 for (int i = 0; i < 3 && s.CrystalHp < _rc.CrystalMaxHp * _strategy.RepairBelow; i++)
                     if (!_rc.RepairCrystal()) break;
