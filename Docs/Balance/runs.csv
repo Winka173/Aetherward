@@ -1,0 +1,73 @@
+strategy,seed,victory,wave,active_seconds,crystal_hp_pct,heroes,hero_downs,reactions,peak_enemies,peak_rps,gold_earned,gold_spent,relics,top_reaction,defeat_source,stuck_recoveries,ms
+thunderstorm,1000,1,20,695.56,100,6,1,944,31,15,1752,269,"iron_bulwark scholars_lens last_stand war_drum quiver_of_gales living_monolith tempest_engine sanctuary_bell",thunderstorm,,0,518.31
+thunderstorm,8919,1,20,692.93,100,6,1,910,31,20,1588,274,"iron_bulwark executioners_lens overgrowth spark_of_genesis phoenix_feather absolute_zero war_drum last_stand",thunderstorm,,0,272.66
+thunderstorm,16838,1,20,798.33,100,6,3,863,34,13,1732,295,"spark_of_genesis eternal_ember frozen_heart mana_battery glass_cannon quiver_of_gales war_drum elemental_mirror chain_conductor steam_reactor",thunderstorm,,0,384.2
+thunderstorm,24757,1,20,803.66,100,6,0,827,34,15,1582,285,"sanctuary_bell overgrowth chain_conductor thunder_relay executioners_lens quiver_of_gales absolute_zero steam_reactor glass_cannon",thunderstorm,,0,200.74
+thunderstorm,32676,1,20,745.7,64.87,6,7,605,34,13,1591,376,"spark_of_genesis glass_cannon last_stand crystal_growth phoenix_feather iron_bulwark frozen_crown mana_battery overgrowth alchemists_purse",thunderstorm,,0,75.06
+thunderstorm,40595,1,20,657.86,82.8,6,0,849,36,11,1737,267,"iron_bulwark alchemists_purse stoneheart sanctuary_bell mana_battery war_drum thunder_relay tempest_engine frozen_heart",thunderstorm,,0,77.43
+thunderstorm,48514,1,20,655.26,100,6,3,659,35,12,1560,290,"quiver_of_gales steam_reactor glass_cannon mana_battery overgrowth living_monolith tempest_engine war_drum",thunderstorm,,0,82.76
+thunderstorm,56433,1,20,1030.86,100,6,8,831,33,11,1690,335,"overgrowth living_monolith scholars_lens alchemists_purse executioners_lens iron_bulwark last_stand frozen_heart quiver_of_gales",thunderstorm,,0,107.02
+thunderstorm,64352,1,20,668.9,100,6,1,702,33,12,1626,268,"glass_cannon quiver_of_gales executioners_lens overgrowth steam_reactor iron_bulwark blood_contract mana_battery chain_conductor crystal_growth",thunderstorm,,0,70.51
+thunderstorm,72271,1,20,788.33,90.41,6,1,906,33,13,1900,282,"spark_of_genesis sanctuary_bell executioners_lens frozen_crown war_drum last_stand arcane_echo chain_conductor mana_battery eternal_ember",vaporize,,0,88.64
+thunderstorm,80190,1,20,677.76,100,6,0,919,27,17,1590,276,"overgrowth mana_battery iron_bulwark living_monolith tempest_engine quiver_of_gales absolute_zero",thunderstorm,,0,84.51
+thunderstorm,88109,1,20,802.66,64.09,6,11,738,37,14,1751,373,"glass_cannon alchemists_purse war_drum spark_of_genesis storm_caller quiver_of_gales thunder_relay frozen_crown sanctuary_bell",thunderstorm,,0,66.4
+frozen_fortress,1000,1,20,1399.2,100,6,2,1829,47,16,1523,320,"iron_bulwark scholars_lens stoneheart frozen_heart war_drum quiver_of_gales arcane_echo sanctuary_bell tempest_engine",ice_spikes,,0,129.88
+frozen_fortress,8919,0,20,1061.96,0,6,15,906,54,9,1607,464,"iron_bulwark executioners_lens overgrowth blood_contract spark_of_genesis chain_conductor absolute_zero war_drum steam_reactor",melt,rift_warden,0,156.08
+frozen_fortress,16838,0,20,740.46,0,6,9,1004,47,27,1660,409,"spark_of_genesis eternal_ember frozen_heart glass_cannon mana_battery quiver_of_gales war_drum iron_bulwark tempest_engine",blizzard,rift_warden,0,119.04
+frozen_fortress,24757,1,20,997.49,100,6,3,1406,48,15,1552,291,"sanctuary_bell overgrowth spark_of_genesis war_drum executioners_lens phoenix_feather absolute_zero living_monolith",electrocharge,,0,136.65
+frozen_fortress,32676,1,20,698.26,92.58,6,4,974,42,14,1606,312,"spark_of_genesis glass_cannon last_stand crystal_growth phoenix_feather frozen_crown iron_bulwark mana_battery overgrowth alchemists_purse",melt,,0,91.13
+frozen_fortress,40595,1,20,712.43,51.76,6,4,1143,45,21,1710,311,"iron_bulwark alchemists_purse quiver_of_gales stoneheart sanctuary_bell war_drum mana_battery absolute_zero chain_conductor",melt,,0,97.42
+frozen_fortress,48514,1,20,1156.79,100,6,4,2213,59,22,1544,339,"quiver_of_gales iron_bulwark stoneheart glass_cannon mana_battery overgrowth executioners_lens tempest_engine eternal_ember",blizzard,,0,170.61
+frozen_fortress,56433,0,19,902.23,0,6,14,1096,54,16,1411,290,"overgrowth living_monolith scholars_lens alchemists_purse iron_bulwark executioners_lens last_stand",ice_spikes,mimic,0,170.01
+frozen_fortress,64352,1,20,790.33,100,6,0,1301,42,19,1631,302,"glass_cannon quiver_of_gales sanctuary_bell overgrowth steam_reactor executioners_lens blood_contract arcane_echo crystal_growth chain_conductor",vaporize,,0,126.46
+frozen_fortress,72271,1,20,858.36,81.37,6,1,1666,48,21,1888,318,"spark_of_genesis sanctuary_bell iron_bulwark frozen_crown war_drum last_stand arcane_echo chain_conductor eternal_ember mana_battery",vaporize,,0,148.65
+frozen_fortress,80190,0,20,1091.29,0,6,19,783,53,12,1488,497,"overgrowth living_monolith iron_bulwark absolute_zero war_drum chain_conductor quiver_of_gales glass_cannon",ice_spikes,rift_warden,0,117.93
+frozen_fortress,88109,1,20,890.86,78.45,6,4,1852,53,40,1728,330,"glass_cannon alchemists_purse iron_bulwark stoneheart spark_of_genesis storm_caller executioners_lens phoenix_feather frozen_crown sanctuary_bell",blizzard,,0,90.68
+magma_engine,1000,1,20,1158.91,62.99,6,17,892,50,11,1557,459,"iron_bulwark scholars_lens war_drum last_stand quiver_of_gales living_monolith sanctuary_bell tempest_engine",overload,,0,107.76
+magma_engine,8919,1,20,830.06,100,6,3,1342,42,16,1729,316,"iron_bulwark frozen_heart blood_contract overgrowth stoneheart spark_of_genesis chain_conductor war_drum steam_reactor executioners_lens",vaporize,,0,79.86
+magma_engine,16838,1,20,686.3,47.75,6,6,933,39,15,1731,362,"eternal_ember spark_of_genesis frozen_heart glass_cannon mana_battery war_drum quiver_of_gales iron_bulwark tempest_engine",firestorm,,0,62.87
+magma_engine,24757,1,20,972.23,100,6,3,1065,43,19,1564,293,"sanctuary_bell overgrowth spark_of_genesis war_drum executioners_lens phoenix_feather iron_bulwark stoneheart absolute_zero",vaporize,,0,84.64
+magma_engine,32676,1,20,952.59,100,6,1,1531,43,16,1607,294,"spark_of_genesis glass_cannon last_stand crystal_growth phoenix_feather iron_bulwark frozen_crown mana_battery overgrowth alchemists_purse",vaporize,,0,85.2
+magma_engine,40595,1,20,1033.59,77.5,6,2,1895,43,19,1736,304,"iron_bulwark alchemists_purse stoneheart sanctuary_bell war_drum mana_battery phoenix_feather tempest_engine thunder_relay",vaporize,,0,92.11
+magma_engine,48514,0,19,681.56,0,6,16,572,39,12,1347,333,"chain_conductor quiver_of_gales steam_reactor glass_cannon mana_battery overgrowth eternal_ember",overload,mimic,0,54.6
+magma_engine,56433,1,20,988.16,100,6,3,1355,41,20,1676,278,"crystal_growth overgrowth eternal_ember scholars_lens alchemists_purse iron_bulwark executioners_lens steam_reactor storm_caller quiver_of_gales",vaporize,,0,89.11
+magma_engine,64352,1,20,701.53,91.37,6,2,1069,40,19,1631,297,"glass_cannon quiver_of_gales war_drum steam_reactor overgrowth iron_bulwark blood_contract arcane_echo eternal_ember chain_conductor",vaporize,,0,63.79
+magma_engine,72271,1,20,767.83,55.96,6,1,908,36,13,1889,305,"spark_of_genesis sanctuary_bell iron_bulwark war_drum frozen_crown last_stand arcane_echo chain_conductor eternal_ember mana_battery",overload,,0,69.26
+magma_engine,80190,1,20,901.63,33.16,6,18,1047,42,16,1596,524,"stoneheart overgrowth iron_bulwark frozen_crown quiver_of_gales eternal_ember steam_reactor war_drum executioners_lens phoenix_feather",blizzard,,0,77.67
+magma_engine,88109,0,9,317.66,0,5,2,143,18,10,386,78,"glass_cannon alchemists_purse eternal_ember",sandstorm,warded,0,19.46
+mixed_burst,1000,1,20,733.46,59.64,6,3,1660,50,29,1727,303,"iron_bulwark scholars_lens war_drum last_stand quiver_of_gales living_monolith sanctuary_bell tempest_engine",vaporize,,0,105.12
+mixed_burst,8919,1,20,728.33,100,6,0,1398,40,16,1706,270,"frozen_heart iron_bulwark executioners_lens overgrowth blood_contract spark_of_genesis war_drum crystal_growth tempest_engine",vaporize,,0,65.32
+mixed_burst,16838,1,20,867.59,44.84,6,2,1383,47,17,1920,368,"spark_of_genesis eternal_ember blood_contract elemental_mirror glass_cannon war_drum quiver_of_gales mana_battery thunder_relay chain_conductor",melt,,0,78.42
+mixed_burst,24757,0,18,626.1,0,6,2,872,43,14,1210,246,"sanctuary_bell overgrowth spark_of_genesis war_drum frozen_heart executioners_lens phoenix_feather last_stand",vaporize,sapper,0,65.88
+mixed_burst,32676,1,20,850.59,96,6,0,1339,41,22,1590,318,"spark_of_genesis glass_cannon last_stand crystal_growth phoenix_feather iron_bulwark frozen_crown mana_battery overgrowth alchemists_purse",melt,,0,86.89
+mixed_burst,40595,0,20,1175.86,0,6,3,1380,53,15,1648,323,"iron_bulwark alchemists_purse stoneheart sanctuary_bell war_drum mana_battery elemental_mirror tempest_engine thunder_relay",vaporize,rift_warden,0,106.11
+mixed_burst,48514,1,20,663.1,79.67,6,2,1241,45,34,1554,300,"quiver_of_gales steam_reactor glass_cannon mana_battery overgrowth living_monolith war_drum tempest_engine",vaporize,,0,64.42
+mixed_burst,56433,0,19,819.23,0,6,8,1043,53,20,1420,218,"overgrowth living_monolith scholars_lens alchemists_purse executioners_lens iron_bulwark last_stand",vaporize,hexcaster,0,89.49
+mixed_burst,64352,0,18,659.8,0,6,0,722,45,11,1228,214,"glass_cannon quiver_of_gales executioners_lens steam_reactor overgrowth iron_bulwark blood_contract arcane_echo",vaporize,sapper,0,56.3
+mixed_burst,72271,1,20,830.36,61.9,6,1,1325,43,15,1896,315,"spark_of_genesis sanctuary_bell executioners_lens war_drum frozen_crown last_stand arcane_echo chain_conductor eternal_ember mana_battery",vaporize,,0,66.47
+mixed_burst,80190,1,20,755,95.67,6,2,1319,47,15,1560,306,"overgrowth living_monolith iron_bulwark war_drum absolute_zero chain_conductor quiver_of_gales glass_cannon",vaporize,,0,66.75
+mixed_burst,88109,0,18,558.33,0,6,0,661,35,8,1338,205,"glass_cannon alchemists_purse war_drum spark_of_genesis stoneheart quiver_of_gales tempest_engine",electrocharge,sapper,0,45.73
+glass_cannon,1000,0,19,637.26,0,6,7,1172,44,20,1469,240,"iron_bulwark scholars_lens war_drum last_stand quiver_of_gales chain_conductor living_monolith",electrocharge,mimic,0,62.9
+glass_cannon,8919,0,19,680.2,0,6,15,661,42,13,1486,365,"frozen_heart iron_bulwark blood_contract overgrowth stoneheart spark_of_genesis chain_conductor war_drum",blizzard,grunt,0,56.88
+glass_cannon,16838,0,18,540.13,0,6,5,539,34,9,1286,248,"spark_of_genesis eternal_ember frozen_heart glass_cannon mana_battery quiver_of_gales war_drum arcane_echo",blizzard,sapper,0,44.09
+glass_cannon,24757,0,19,602.6,0,6,12,913,44,13,1527,290,"sanctuary_bell overgrowth glass_cannon executioners_lens eternal_ember quiver_of_gales phoenix_feather war_drum",blizzard,ravager,0,62.04
+glass_cannon,32676,0,18,541.8,0,6,3,525,31,10,1226,237,"glass_cannon spark_of_genesis last_stand crystal_growth phoenix_feather iron_bulwark frozen_crown mana_battery",blizzard,sapper,0,40.5
+glass_cannon,40595,0,20,656.83,0,6,6,1181,42,21,1689,310,"iron_bulwark alchemists_purse quiver_of_gales stoneheart sanctuary_bell war_drum mana_battery steam_reactor chain_conductor last_stand",blizzard,rift_warden,0,61.52
+glass_cannon,48514,0,19,636.3,0,6,9,1059,42,21,1561,247,"quiver_of_gales chain_conductor war_drum glass_cannon stoneheart mana_battery overgrowth blood_contract",electrocharge,shieldbearer,0,62.09
+glass_cannon,56433,0,19,622.23,0,6,11,1155,46,18,1609,254,"overgrowth living_monolith scholars_lens alchemists_purse executioners_lens iron_bulwark last_stand",blizzard,ravager,0,67.26
+glass_cannon,64352,1,20,687.73,82.58,6,2,1132,42,16,1644,290,"glass_cannon quiver_of_gales war_drum overgrowth steam_reactor iron_bulwark blood_contract mana_battery chain_conductor eternal_ember",vaporize,,0,61.62
+glass_cannon,72271,1,20,735,72.7,6,0,1316,41,15,1896,316,"spark_of_genesis sanctuary_bell quiver_of_gales war_drum frozen_crown last_stand arcane_echo glass_cannon eternal_ember chain_conductor",vaporize,,0,66.3
+glass_cannon,80190,1,20,694.73,100,6,1,816,34,18,1815,294,"overgrowth living_monolith iron_bulwark war_drum absolute_zero quiver_of_gales executioners_lens phoenix_feather",blizzard,,0,53.68
+glass_cannon,88109,0,19,632.76,0,6,6,728,33,9,1544,204,"glass_cannon alchemists_purse war_drum spark_of_genesis stoneheart quiver_of_gales blood_contract",blizzard,mimic,0,68.21
+balanced,1000,1,20,717.43,91.53,6,3,1254,39,14,1746,303,"iron_bulwark scholars_lens war_drum last_stand quiver_of_gales living_monolith sanctuary_bell tempest_engine",vaporize,,0,67.11
+balanced,8919,1,20,982.53,100,6,2,1602,47,20,1716,311,"frozen_heart iron_bulwark blood_contract stoneheart overgrowth spark_of_genesis chain_conductor war_drum executioners_lens steam_reactor",vaporize,,0,85.22
+balanced,16838,0,18,557.36,0,6,4,646,36,9,1287,222,"spark_of_genesis eternal_ember frozen_heart glass_cannon mana_battery war_drum quiver_of_gales elemental_mirror",firestorm,sapper,0,58.44
+balanced,24757,1,20,729.93,100,6,0,1325,43,18,1584,282,"sanctuary_bell overgrowth spark_of_genesis war_drum executioners_lens phoenix_feather living_monolith absolute_zero",vaporize,,0,101.33
+balanced,32676,0,18,609.03,0,6,2,734,40,9,1241,231,"spark_of_genesis glass_cannon last_stand crystal_growth phoenix_feather iron_bulwark frozen_crown blood_contract",magma,sapper,0,52.52
+balanced,40595,1,20,975.56,75.56,6,0,1504,46,20,1728,282,"iron_bulwark alchemists_purse quiver_of_gales stoneheart sanctuary_bell war_drum mana_battery steam_reactor chain_conductor last_stand",vaporize,,0,78.6
+balanced,48514,1,20,715.03,100,6,3,991,45,11,1554,308,"quiver_of_gales war_drum glass_cannon mana_battery overgrowth eternal_ember living_monolith tempest_engine",electrocharge,,0,64.13
+balanced,56433,1,20,805.66,100,6,4,887,40,10,1691,309,"overgrowth living_monolith scholars_lens alchemists_purse executioners_lens iron_bulwark last_stand frozen_heart quiver_of_gales",magma,,0,79.95
+balanced,64352,1,20,691.23,100,6,2,927,46,15,1639,286,"glass_cannon quiver_of_gales war_drum overgrowth steam_reactor iron_bulwark blood_contract living_monolith chain_conductor",vaporize,,0,81.32
+balanced,72271,1,20,791.96,62.15,6,0,1259,38,16,1890,314,"spark_of_genesis sanctuary_bell quiver_of_gales war_drum frozen_crown last_stand arcane_echo iron_bulwark thunder_relay chain_conductor",vaporize,,0,62.71
+balanced,80190,0,20,867.13,0,6,13,833,52,9,1571,387,"overgrowth living_monolith iron_bulwark war_drum absolute_zero blood_contract quiver_of_gales phoenix_feather",melt,rift_warden,0,74.85
+balanced,88109,0,20,707.56,0,6,7,982,43,28,1682,327,"glass_cannon alchemists_purse war_drum spark_of_genesis storm_caller living_monolith frozen_crown sanctuary_bell",magma,rift_warden,0,65.65
