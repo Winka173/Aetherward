@@ -334,6 +334,9 @@ namespace Aetherward.Sim.Combat
             e.Latched = false;
             e.Timer2 = 0f;
             e.Enraged = false;
+            e.Burrowed = false;
+            e.SurfaceTimer = e.SprintTimer = e.ChannelTimer = e.Stoke = 0f;
+            e.LinkedTo = null;
         }
     }
 }

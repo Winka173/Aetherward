@@ -62,7 +62,7 @@ namespace Aetherward.Sim.Combat
         //   * vulnerability, then shield absorbs before HP.
         public float DealDamage(EnemyUnit target, DamageRequest req)
         {
-            if (target == null || !target.Alive) return 0f;
+            if (target == null || !target.Alive || target.Burrowed) return 0f;
             if (target.Invulnerable > 0f)
             {
                 Emit(SimEventType.Miss, target.Pos, req.Element, 0f, req.Source?.Uid ?? 0, target.Uid, "immune");
@@ -120,6 +120,7 @@ namespace Aetherward.Sim.Combat
                 if (Vec2.Dot(toSource, target.Facing) > 0.35f) resist += 0.6f;
             }
             raw *= 1f - SimMath.Clamp(resist, -0.5f, 0.75f);
+            raw *= MechanicDamageTaken(target, req);
             // Latched parasites shrug off damage unless a hero guards the core (Light always connects).
             if (target.Latched && req.Element != Element.Light && !CoreGuarded) raw *= 0.4f;
 
@@ -139,7 +140,7 @@ namespace Aetherward.Sim.Combat
                 absorbed = SimMath.Min(target.Shield, raw);
                 target.Shield -= absorbed;
             }
-            float dealt = raw - absorbed;
+            float dealt = RedirectLinkedDamage(target, raw - absorbed);
             float hpBefore = target.Hp;
             target.Hp -= dealt;
             target.HitFlash = 0.12f;
@@ -153,6 +154,7 @@ namespace Aetherward.Sim.Combat
             Emit(SimEventType.Hit, target.Pos, req.Element, raw, src?.Uid ?? 0, target.Uid, req.ReactionId, crit, 0f, req.Generation);
 
             if (crit && src != null) FireTrigger("crit", src, target, target.Pos, null);
+            OnMechanicHit(target, req);
 
             if (target.Hp <= 0f)
             {
@@ -195,6 +197,7 @@ namespace Aetherward.Sim.Combat
             }
             Emit(SimEventType.EnemyDeath, e.Pos, Element.None, gold, killer?.Uid ?? 0, e.Uid, e.Def.Id);
             SpreadContagion(e);
+            OnMechanicDeath(e);
             OnEnemyDeathBehaviour(e);
             FireTrigger("kill", killer, e, e.Pos, null);
         }
@@ -207,7 +210,7 @@ namespace Aetherward.Sim.Combat
         /// </summary>
         public void ApplyElement(EnemyUnit target, Element el, float gauge, HeroUnit source, int generation)
         {
-            if (target == null || !target.Alive || el == Element.None || gauge <= 0f) return;
+            if (target == null || !target.Alive || target.Burrowed || el == Element.None || gauge <= 0f) return;
             gauge *= Mods.GaugeMult[(int)el];
             if (source != null) gauge *= (1f + source.Stat(StatId.StatusPower) * 0.5f) * (1f + TraitValue(source, "gaugeBonus"));
 

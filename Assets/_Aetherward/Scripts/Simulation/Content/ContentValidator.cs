@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Aetherward.Sim.Core;
 
 namespace Aetherward.Sim.Content
 {
@@ -198,8 +199,77 @@ namespace Aetherward.Sim.Content
                 if (!anyEligible) Err("trait " + t.Id + ": no eligible hero");
             }
 
+            foreach (EnemyDef en in db.Enemies.Values)
+            {
+                foreach (string key in new[] { "splitInto", "deathField" })
+                {
+                    string v = en.Params.GetString(key);
+                    if (v == null) continue;
+                    bool ok = key == "splitInto" ? db.Enemies.ContainsKey(v) : db.Fields.ContainsKey(v);
+                    if (!ok) Err("enemy " + en.Id + ": unknown " + key + " " + v);
+                }
+                if (en.Params.GetString("splitInto") is string child && db.Enemies.TryGetValue(child, out EnemyDef cd) && cd.Params.GetString("splitInto") != null)
+                    Err("enemy " + en.Id + ": split children must not split again");
+            }
+            CheckBiomes(db, errors);
+
             CheckLocalization(db, errors);
             return errors;
+        }
+
+        public static readonly HashSet<string> KnownHazards = new HashSet<string> { "lava_vents" };
+
+        private static void CheckBiomes(ContentDatabase db, List<string> errors)
+        {
+            int defaults = 0;
+            foreach (BiomeDef b in db.BiomeList)
+            {
+                string owner = "biome " + b.Id;
+                if (b.Default) defaults++;
+                ArenaDef a = b.Arena;
+                if (a.Nodes.Count != 12) errors.Add(owner + ": needs exactly 12 defense nodes");
+                if (a.Lanes.Count != db.Arena.Lanes.Count) errors.Add(owner + ": needs " + db.Arena.Lanes.Count + " lane slots (waves reference them)");
+                foreach (LaneDef l in a.Lanes)
+                {
+                    if (l.Points.Count < 2) { errors.Add(owner + ": lane " + l.Id + " has fewer than 2 points"); continue; }
+                    Vec2 end = l.Points[l.Points.Count - 1];
+                    if (end.Length > a.CrystalRadius + 2.5f) errors.Add(owner + ": lane " + l.Id + " does not reach the crystal");
+                }
+                foreach (HazardDef h in b.Hazards)
+                {
+                    if (!KnownHazards.Contains(h.Kind)) errors.Add(owner + ": unknown hazard " + h.Kind);
+                    if (h.Delay < 0.8f) errors.Add(owner + ": hazard " + h.Kind + " telegraph shorter than 0.8s");
+                    if (h.Points.Count == 0) errors.Add(owner + ": hazard " + h.Kind + " has no points");
+                    if (h.HeroDamagePct > 0.25f) errors.Add(owner + ": hazard " + h.Kind + " hits heroes for more than 25% max HP");
+                    foreach (Vec2 p in h.Points)
+                        if (p.Length < a.CrystalRadius + h.Radius) errors.Add(owner + ": hazard point overlaps the crystal");
+                }
+                foreach (var kv in b.NodeTraitOps)
+                {
+                    if (kv.Key < 0 || kv.Key >= a.Nodes.Count) errors.Add(owner + ": node trait on missing node " + kv.Key);
+                    CheckOps(db, owner + " node trait", kv.Value, errors);
+                    foreach (EffectOp op in kv.Value) if (op.Op != "stat") errors.Add(owner + ": node traits allow only stat ops");
+                }
+                foreach (CoverDef c in b.Covers)
+                    if (!db.Fields.ContainsKey(c.Field)) errors.Add(owner + ": unknown cover field " + c.Field);
+                foreach (LaneRemap r in b.LaneRemaps)
+                    if (r.Lane < 0 || r.Lane >= a.Lanes.Count || r.Use < 0 || r.Use >= a.Lanes.Count || r.Use == r.Lane)
+                        errors.Add(owner + ": bad lane schedule entry for lane " + r.Lane);
+                foreach (SpawnGroup g in b.Extra)
+                {
+                    if (!db.Enemies.TryGetValue(g.Enemy, out EnemyDef ed)) errors.Add(owner + ": unknown extra enemy " + g.Enemy);
+                    else if (ed.Boss) errors.Add(owner + ": extra spawns cannot be bosses");
+                }
+                foreach (var kv in b.BossPools)
+                {
+                    if (kv.Key < 1 || kv.Key > db.Waves.Count || !db.Waves[kv.Key - 1].Boss) errors.Add(owner + ": boss pool on non-boss wave " + kv.Key);
+                    foreach (string id in kv.Value)
+                        if (!db.Enemies.TryGetValue(id, out EnemyDef bd) || !bd.Boss) errors.Add(owner + ": boss pool entry " + id + " is not a boss");
+                }
+                foreach (var kv in b.Substitutions)
+                    if (!db.Enemies.ContainsKey(kv.Key) || !db.Enemies.ContainsKey(kv.Value)) errors.Add(owner + ": bad substitution " + kv.Key + "->" + kv.Value);
+            }
+            if (defaults != 1) errors.Add("biomes: exactly one default biome required");
         }
 
         private static void CheckOps(ContentDatabase db, string owner, List<EffectOp> ops, List<string> errors)
@@ -271,6 +341,12 @@ namespace Aetherward.Sim.Content
                 yield return t.DescKey;
             }
             foreach (string note in db.PairNote.Values) yield return "pair." + note;
+            foreach (BiomeDef b in db.BiomeList)
+            {
+                yield return b.NameKey;
+                yield return b.DescKey;
+                foreach (string t in b.NodeTraitIds.Values) yield return "nodetrait." + t;
+            }
             foreach (RelicDef r in db.RelicList)
             {
                 yield return r.NameKey;

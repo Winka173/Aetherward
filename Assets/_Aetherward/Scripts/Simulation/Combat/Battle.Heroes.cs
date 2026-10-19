@@ -37,6 +37,11 @@ namespace Aetherward.Sim.Combat
             }
 
             float haste = 1f + (h.FieldTimer > 0f ? h.FieldHaste : 0f);
+            if (h.ChillTimer > 0f)
+            {
+                h.ChillTimer -= dt;
+                haste *= 1f - h.ChillAmount;
+            }
             h.AttackTimer -= dt * haste;
             h.SkillTimer -= dt * haste * (h.LeechTimer > 0f ? 1f - h.LeechAmount : 1f);
             h.RetargetTimer -= dt;
@@ -142,7 +147,7 @@ namespace Aetherward.Sim.Combat
             for (int i = 0; i < c.Count && evaluated < 40; i++)
             {
                 EnemyUnit e = c[i];
-                if (!e.Alive) continue;
+                if (!e.Alive || e.Burrowed) continue;
                 evaluated++;
                 float score;
                 switch (profile)

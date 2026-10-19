@@ -123,6 +123,8 @@ namespace Aetherward.Sim.Run
         public readonly Dictionary<int, string> BossChoices = new Dictionary<int, string>();
         /// <summary>Ascension "blocked_node": a defense node unusable for the current wave (-1 = none).</summary>
         public int BlockedNode = -1;
+        /// <summary>Battlefield of this run (null = default biome; unknown ids degrade to default).</summary>
+        public string BiomeId;
         public string DefeatSource;
         public int DraftsTaken;
         public readonly List<string> Log = new List<string>(); // selection trace (debug, bounded)

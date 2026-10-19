@@ -11,6 +11,61 @@ namespace Aetherward.Sim.Content
         public List<Vec2> Points = new List<Vec2>(); // spawn -> crystal
     }
 
+    public sealed class HazardDef
+    {
+        public string Kind;                 // lava_vents
+        public float Interval = 9f;
+        public float Delay = 1.5f;
+        public float Radius = 1.3f;
+        public int Count = 2;
+        public float HeroDamagePct = 0.12f; // of hero max HP
+        public float Power = 40f;           // enemy damage, scaled by wave level
+        public int FromWave = 1;
+        public readonly List<Vec2> Points = new List<Vec2>();
+    }
+
+    public sealed class CoverDef
+    {
+        public Vec2 Pos;
+        public float Radius = 1f;
+        public int Hits = 8;                // enemy projectiles absorbed before it breaks
+        public string Field = "ice_cover";
+    }
+
+    public sealed class LaneRemap
+    {
+        public int Lane;
+        public int Until;                   // waves below this number use the replacement lane
+        public int Use;
+    }
+
+    /// <summary>A functional battlefield: board layout, hazards, node traits, covers, lane evolution, enemy pool.</summary>
+    public sealed class BiomeDef
+    {
+        public string Id;
+        public string NameKey;
+        public string DescKey;
+        public ArenaDef Arena;
+        public string Background = "World/arena_background";
+        public string Music = "battle_loop";
+        public bool Default;
+        public readonly List<HazardDef> Hazards = new List<HazardDef>();
+        public readonly Dictionary<int, string> NodeTraitIds = new Dictionary<int, string>();
+        public readonly Dictionary<int, List<EffectOp>> NodeTraitOps = new Dictionary<int, List<EffectOp>>();
+        public readonly List<CoverDef> Covers = new List<CoverDef>();
+        public readonly List<LaneRemap> LaneRemaps = new List<LaneRemap>();
+        public readonly List<SpawnGroup> Extra = new List<SpawnGroup>();          // Start/Count/Interval/Lane; FromWave/ToWave in ExtraWaves
+        public readonly List<int[]> ExtraWaves = new List<int[]>();               // [fromWave, toWave] per Extra entry
+        public readonly Dictionary<int, List<string>> BossPools = new Dictionary<int, List<string>>();
+        public readonly Dictionary<string, string> Substitutions = new Dictionary<string, string>();
+
+        public int MapLane(int lane, int wave)
+        {
+            foreach (LaneRemap r in LaneRemaps) if (r.Lane == lane && wave < r.Until) return r.Use;
+            return lane;
+        }
+    }
+
     public sealed class ArenaDef
     {
         public string Id;
@@ -52,6 +107,11 @@ namespace Aetherward.Sim.Content
         public EconomyDef Economy = new EconomyDef();
         public DifficultyDef Difficulty = new DifficultyDef();
         public ArenaDef Arena = new ArenaDef();
+        public readonly Dictionary<string, BiomeDef> Biomes = new Dictionary<string, BiomeDef>();
+        public readonly List<BiomeDef> BiomeList = new List<BiomeDef>();
+        public BiomeDef DefaultBiome;
+
+        public BiomeDef BiomeOrDefault(string id) => id != null && Biomes.TryGetValue(id, out BiomeDef b) ? b : DefaultBiome;
 
         public ReactionDef ReactionFor(Element a, Element b) => ReactionByPair[ElementUtil.PairIndex(a, b)];
         public ReactionCategory CategoryFor(Element a, Element b) => PairCategory[ElementUtil.PairIndex(a, b)];
@@ -60,7 +120,7 @@ namespace Aetherward.Sim.Content
         /// <summary>Content file names expected under Resources/Content (without extension).</summary>
         public static readonly string[] FileNames =
         {
-            "elements", "traits", "heroes", "evolutions", "enemies", "reactions", "relics", "cards", "waves", "events", "economy", "arena", "difficulty",
+            "elements", "traits", "heroes", "evolutions", "enemies", "reactions", "relics", "cards", "waves", "events", "economy", "arena", "biomes", "difficulty",
             "loc_en", "loc_vi"
         };
 
@@ -79,6 +139,7 @@ namespace Aetherward.Sim.Content
             db.LoadEvents(Parse(readFile, "events"));
             db.LoadEconomy(Parse(readFile, "economy"));
             db.LoadArena(Parse(readFile, "arena"));
+            db.LoadBiomes(Parse(readFile, "biomes"));
             db.LoadDifficulty(Parse(readFile, "difficulty"));
             db.LoadStrings("en", Parse(readFile, "loc_en"));
             db.LoadStrings("vi", Parse(readFile, "loc_vi"));
@@ -653,7 +714,58 @@ namespace Aetherward.Sim.Content
             Economy = e;
         }
 
-        private void LoadArena(JsonNode n)
+        private void LoadArena(JsonNode n) => Arena = ParseArena(n);
+
+        private void LoadBiomes(JsonNode root)
+        {
+            foreach (JsonNode n in root["biomes"].Items)
+            {
+                string id = n.Str("id");
+                var b = new BiomeDef
+                {
+                    Id = id,
+                    NameKey = "biome." + id + ".name",
+                    DescKey = "biome." + id + ".desc",
+                    Arena = n["arena"].Kind == JsonKind.Object ? ParseArena(n["arena"]) : Arena,
+                    Background = n.Str("background", "World/arena_background"),
+                    Music = n.Str("music", "battle_loop"),
+                    Default = n.Bool("default")
+                };
+                foreach (JsonNode h in n["hazards"].Items)
+                {
+                    var hz = new HazardDef
+                    {
+                        Kind = h.Str("kind"), Interval = h.Float("interval", 9f), Delay = h.Float("delay", 1.5f), Radius = h.Float("radius", 1.3f),
+                        Count = h.Int("count", 2), HeroDamagePct = h.Float("heroDamagePct", 0.12f), Power = h.Float("power", 40f), FromWave = h.Int("fromWave", 1)
+                    };
+                    foreach (JsonNode p in h["points"].Items) hz.Points.Add(new Vec2(p[0].AsFloat(), p[1].AsFloat()));
+                    b.Hazards.Add(hz);
+                }
+                foreach (JsonNode t in n["nodeTraits"].Items)
+                {
+                    int node = t.Int("node", -1);
+                    b.NodeTraitIds[node] = t.Str("trait");
+                    b.NodeTraitOps[node] = ParseEffects(t["effects"]);
+                }
+                foreach (JsonNode c in n["covers"].Items)
+                    b.Covers.Add(new CoverDef { Pos = new Vec2(c["pos"][0].AsFloat(), c["pos"][1].AsFloat()), Radius = c.Float("radius", 1f), Hits = c.Int("hits", 8), Field = c.Str("field", "ice_cover") });
+                foreach (JsonNode r in n["laneSchedule"].Items)
+                    b.LaneRemaps.Add(new LaneRemap { Lane = r.Int("lane"), Until = r.Int("opensAt"), Use = r.Int("useBefore") });
+                foreach (JsonNode g in n["extra"].Items)
+                {
+                    b.Extra.Add(new SpawnGroup { Enemy = g.Str("enemy"), Count = g.Int("count", 1), Lane = g.Int("lane", -1), Start = g.Float("start"), Interval = g.Float("interval", 1f) });
+                    b.ExtraWaves.Add(new[] { g.Int("fromWave", 1), g.Int("toWave", 99) });
+                }
+                foreach (string k in n["bossPools"].Keys) b.BossPools[int.Parse(k, System.Globalization.CultureInfo.InvariantCulture)] = n["bossPools"].StringList(k);
+                foreach (string k in n["substitutions"].Keys) b.Substitutions[k] = n["substitutions"].Str(k);
+                Add(Biomes, id, b, "biome");
+                BiomeList.Add(b);
+                if (b.Default) DefaultBiome = b;
+            }
+            if (DefaultBiome == null) throw new FormatException("biomes.json needs one default biome");
+        }
+
+        private static ArenaDef ParseArena(JsonNode n)
         {
             var a = new ArenaDef
             {
@@ -669,7 +781,7 @@ namespace Aetherward.Sim.Content
                 foreach (JsonNode p in l["points"].Items) lane.Points.Add(new Vec2(p[0].AsFloat(), p[1].AsFloat()));
                 a.Lanes.Add(lane);
             }
-            Arena = a;
+            return a;
         }
 
         public static readonly string[] KnownDifficultyModules =

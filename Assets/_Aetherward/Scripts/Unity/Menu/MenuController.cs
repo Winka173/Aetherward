@@ -27,6 +27,7 @@ namespace Aetherward.Game
         private int _teamPage;
         private ulong _seed;
         private int _ascension;
+        private int _biomeIndex;
         private bool _hasSave;
         private int _codexTab;
         private string _codexFocus;
@@ -214,11 +215,12 @@ namespace Aetherward.Game
             float dx = gx + cols * (cell + 16) + 30, dw = Ui.W - dx - 60;
             string focus = _focusHero ?? (_picked.Count > 0 ? _picked[_picked.Count - 1] : db.HeroList[0].Id);
             HeroDef fd = db.Heroes[focus];
-            SharedPanels.HeroDetail(dx, 150, dw, 720, fd);
+            SharedPanels.HeroDetail(dx, 150, dw, 690, fd);
             if (!App.Meta.UnlockedHeroes.Contains(focus))
-                Ui.Label(dx + 30, 150 + 670, dw - 60, 40, SharedPanels.UnlockHint("hero:" + focus), 24, Ui.Bad);
+                Ui.Label(dx + 30, 150 + 640, dw - 60, 40, SharedPanels.UnlockHint("hero:" + focus), 24, Ui.Bad);
 
             float by = Ui.H - 140;
+            DrawBiomePicker(dx, by - 92, dw);
             if (Ui.Button(60, by, 240, 96, l.Get("common.back"), Tone.Ghost)) _page = Page.Main;
             Ui.Label(330, by, 420, 46, l.Format("common.seed", Pcg32.FormatSeed(_seed)), 26, Ui.Muted, TextAnchor.MiddleLeft, false, true, true);
             if (Ui.Button(330, by + 46, 300, 60, l.Get("team.random_seed"), Tone.Ghost, true, 22)) _seed = Pcg32.SeedFromTime(DateTime.UtcNow.AddTicks(UnityEngine.Random.Range(1, 99999)));
@@ -235,10 +237,36 @@ namespace Aetherward.Game
             if (Ui.Button(Ui.W - 480, by, 420, 96, ready ? l.Get("team.start") : l.Get("team.pick_two"), Tone.Primary, ready, 32))
             {
                 App.ClearRun();
-                App.Run = RunController.NewRun(App.Content, _seed, _picked, _ascension, App.Meta.ToRunUnlocks());
+                App.Run = RunController.NewRun(App.Content, _seed, _picked, _ascension, App.Meta.ToRunUnlocks(), SelectedBiome().Id);
                 App.SaveRun();
                 GameRoot.Instance.GoTo(AppScreen.Battle);
             }
+        }
+
+        private BiomeDef SelectedBiome()
+        {
+            List<BiomeDef> list = App.Content.BiomeList;
+            _biomeIndex = Mathf.Clamp(_biomeIndex, 0, list.Count - 1);
+            BiomeDef b = list[_biomeIndex];
+            return App.Meta.UnlockedBiomes.Contains(b.Id) ? b : App.Content.DefaultBiome;
+        }
+
+        /// <summary>Battlefield selector: cycles through biomes; locked ones show their unlock condition.</summary>
+        private void DrawBiomePicker(float x, float y, float w)
+        {
+            Localization l = App.Loc;
+            List<BiomeDef> list = App.Content.BiomeList;
+            if (list.Count < 2) return;
+            _biomeIndex = Mathf.Clamp(_biomeIndex, 0, list.Count - 1);
+            BiomeDef b = list[_biomeIndex];
+            bool unlocked = App.Meta.UnlockedBiomes.Contains(b.Id);
+            if (Ui.Button(x, y, 64, 64, "<", Tone.Ghost, _biomeIndex > 0, 28)) _biomeIndex--;
+            Ui.Icon(x + 72, y, 112, 64, Art.Tex(b.Background), unlocked ? (Color?)null : new Color(0.3f, 0.3f, 0.35f, 1f));
+            string title = l.Get("biome.label") + ": " + l.Get(b.NameKey);
+            Ui.Label(x + 196, y - 4, w - 280, 36, title, 22, unlocked ? Ui.Gold : Ui.Muted, TextAnchor.UpperLeft, true);
+            string sub = unlocked ? l.Get(b.DescKey) : SharedPanels.UnlockHint("biome:" + b.Id);
+            Ui.Label(x + 196, y + 28, w - 280, 40, sub, 15, unlocked ? Ui.Muted : Ui.Bad, TextAnchor.UpperLeft);
+            if (Ui.Button(x + w - 64, y, 64, 64, ">", Tone.Ghost, _biomeIndex < list.Count - 1, 28)) _biomeIndex++;
         }
 
         // ------------------------------------------------------------------ codex

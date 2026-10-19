@@ -23,12 +23,14 @@ namespace Aetherward.Balance
             string strategyName = "all";
             string outDir = null;
             int ascension = 0;
+            string biome = null;
             for (int i = 0; i < args.Length - 1; i++)
             {
                 if (args[i] == "--runs") runs = int.Parse(args[i + 1]);
                 if (args[i] == "--strategy") strategyName = args[i + 1];
                 if (args[i] == "--out") outDir = args[i + 1];
                 if (args[i] == "--asc") ascension = int.Parse(args[i + 1]);
+                if (args[i] == "--biome") biome = args[i + 1];
             }
             string root = FindRepoRoot();
             outDir ??= Path.Combine(root, "Docs", "Balance");
@@ -77,7 +79,7 @@ namespace Aetherward.Balance
                 {
                     ulong seed = 1000UL + (ulong)r * 7919UL;
                     var sw = Stopwatch.StartNew();
-                    RunController rc = RunController.NewRun(db, seed, st.Starters, ascension, Unlocks(db, args));
+                    RunController rc = RunController.NewRun(db, seed, st.Starters, ascension, Unlocks(db, args), biome);
                     var pilot = new AutoPilot(rc, st);
                     bool ok = pilot.PlayToEnd();
                     sw.Stop();

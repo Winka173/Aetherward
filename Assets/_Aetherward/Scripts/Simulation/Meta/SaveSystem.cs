@@ -138,6 +138,7 @@ namespace Aetherward.Sim.Meta
             JsonNode d = JsonNode.NewObject()
                 .Set("heroes", StringArray(m.UnlockedHeroes))
                 .Set("relics", StringArray(m.UnlockedRelics))
+                .Set("biomes", StringArray(m.UnlockedBiomes))
                 .Set("codex", StringArray(m.Codex))
                 .Set("heroRuns", IntMap(m.HeroRuns))
                 .Set("heroWins", IntMap(m.HeroWins))
@@ -166,6 +167,7 @@ namespace Aetherward.Sim.Meta
             if (d == null) return m;
             foreach (string h in d.StringList("heroes")) if (db.Heroes.ContainsKey(h)) m.UnlockedHeroes.Add(h);
             foreach (string r in d.StringList("relics")) if (db.Relics.ContainsKey(r)) m.UnlockedRelics.Add(r);
+            foreach (string b in d.StringList("biomes")) if (db.Biomes.ContainsKey(b)) m.UnlockedBiomes.Add(b);
             foreach (string c in d.StringList("codex")) m.Codex.Add(c);
             ReadIntMap(d["heroRuns"], m.HeroRuns);
             ReadIntMap(d["heroWins"], m.HeroWins);
@@ -242,7 +244,7 @@ namespace Aetherward.Sim.Meta
                 .Set("reactionCounts", IntMap(s.ReactionCounts)).Set("reactionDamage", FloatMap(s.ReactionDamage))
                 .Set("sourceCounts", IntMap(s.SourceActivations)).Set("sourceDamage", FloatMap(s.SourceDamage))
                 .Set("elements", elements).Set("seen", StringArray(s.SeenEnemies)).Set("drafts", s.DraftsTaken)
-                .Set("bosses", BossMap(s.BossChoices)).Set("blocked", s.BlockedNode);
+                .Set("bosses", BossMap(s.BossChoices)).Set("blocked", s.BlockedNode).Set("biome", s.BiomeId);
             WriteEnvelope("run", d);
         }
 
@@ -336,6 +338,8 @@ namespace Aetherward.Sim.Meta
                 for (int i = 0; i < els.Count && i < s.ElementDamage.Length; i++) s.ElementDamage[i] = els[i].AsFloat();
                 s.SeenEnemies.AddRange(d.StringList("seen"));
                 s.BlockedNode = d.Int("blocked", -1);
+                string biome = d.Str("biome");
+                s.BiomeId = biome != null && db.Biomes.ContainsKey(biome) ? biome : null;
                 foreach (string k in d["bosses"].Keys)
                 {
                     string boss = d["bosses"].Str(k);

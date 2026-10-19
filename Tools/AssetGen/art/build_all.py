@@ -74,7 +74,7 @@ def main():
 
     enemy_paths = []
     for eid in enemies.DRAWERS:
-        big = eid in ("siegebreaker_golem", "rift_warden", "ignaroth")
+        big = eid in enemies.BIG_IDS
         pivot = (0.5, (512 - 486) / 512.0) if big else (0.5, (256 - 236) / 256.0)
         for fr in ("a", "b"):
             p = save(enemies.enemy_sprite(eid, fr), "Enemies/%s_%s" % (eid, fr), 160, pivot, kind="enemies.py")
@@ -83,6 +83,16 @@ def main():
     sheet(enemy_paths, 5, 220, "enemies.png", (0.30, 0.45, 0.36))
 
     world_paths = [save(world.background(), "World/arena_background", 80, (0.5, 0.5), max_size=4096, kind="world.py")]
+    # biome battlefields: inline arenas in biomes.json get their own background at their "background" path
+    biome_themes = {"molten_crater": "molten", "frostfall_bastion": "frost"}
+    for biome in world.load_biomes():
+        if not isinstance(biome.get("arena"), dict) or biome["id"] not in biome_themes:
+            continue
+        p = save(world.background(biome["arena"], biome_themes[biome["id"]], biome), biome["background"], 80, (0.5, 0.5), max_size=4096,
+                 kind="world.py")
+        from PIL import Image
+        os.makedirs(PREVIEW, exist_ok=True)
+        Image.open(p).resize((1200, 680)).save(os.path.join(PREVIEW, os.path.basename(biome["background"]) + ".png"))
     for st in ("intact", "cracked", "critical"):
         world_paths.append(save(world.crystal(st), "World/crystal_%s" % st, 160, (0.5, (400 - 372) / 400.0), kind="world.py"))
     for st in ("empty", "occupied", "highlight"):

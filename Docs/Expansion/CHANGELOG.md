@@ -25,3 +25,13 @@
 - UI: chọn đội có lọc nguyên tố + phân trang; trait trên thẻ chiêu mộ và bảng hero; ô bị khoá; banner pha boss theo dữ liệu.
 - Tài liệu sinh tự động: `HERO_ROSTER.md`, `CONTENT_MATRIX.csv`; `BALANCE_REPORT.md`.
 - Test: 99/99 (thêm Trait, Enemy, Difficulty, Asset contract).
+
+## Phase 2a — Biome, kẻ địch, boss (2026-10-19)
+- **Hệ thống biome** (`biomes.json`): bố cục ô/làn riêng, hiểm hoạ có báo trước, đặc tính ô (chỉ chỉ số), che chắn phá được, lịch mở làn, kẻ địch thêm, boss pool, thay thế. Validator kiểm tra 12 ô, 6 làn chạm Pha Lê, hiểm hoạ hợp lệ, boss pool… Lưu trong save, chọn ở màn chọn đội, mở khoá qua meta.
+- **2 biome**: Molten Crater (cầu bazan, lỗ dung nham, cầu nóng), Frostfall Bastion (ô băng, che chắn băng, cổng chéo mở đợt 8).
+- **14 kẻ địch mới** + **2 boss** (Seraphyne, Gravemaw), xem `ENEMY_BESTIARY.md`, `BOSS_DESIGNS.md`. Đã trộn vào đợt thường.
+- Unity: nền/nhạc/màu ô theo biome, cảnh báo hiểm hoạ, bảng chuẩn bị dùng kẻ địch thực tế (`RunController.PreviewEnemies`), lane/debug overlay dùng arena của biome, ô chọn biome, ô mở khoá biome ở màn kết quả.
+- Art: 32 sprite kẻ địch, 2 nền biome, 2 sprite field (đám bào tử, che chắn băng); art cũ giữ nguyên từng byte.
+- Balance harness: `--biome <id>`.
+- Sửa test `TwinCasterEchoesWithACooldown` (trước dựa vào 1 seed, nay cộng 6 seed, cùng cửa sổ 40 s).
+- Test: 124/124 (thêm `BiomeTests` 10, `EnemyPhase2Tests` 15).

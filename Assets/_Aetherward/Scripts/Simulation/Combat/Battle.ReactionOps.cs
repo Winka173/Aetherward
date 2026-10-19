@@ -421,8 +421,9 @@ namespace Aetherward.Sim.Combat
             for (int i = 0; i < inside.Count; i++)
             {
                 EnemyUnit e = inside[i];
-                if (f.Slow > 0f) Slow(e, f.Slow, 0.3f);
-                if (f.Pull > 0f) Pull(e, z.Pos, f.Pull, 0.15f);
+                bool ignores = e.Def.Params.Flag("ignoreFields");
+                if (f.Slow > 0f && !ignores) Slow(e, f.Slow, 0.3f);
+                if (f.Pull > 0f && !ignores) Pull(e, z.Pos, f.Pull, 0.15f);
                 if (f.EnemyVuln > 0f || f.EnemyWeaken > 0f || f.ReactionAmp > 0f)
                 {
                     e.FieldTimer = 0.25f;
@@ -464,9 +465,11 @@ namespace Aetherward.Sim.Combat
                 Incoming = f.Element,
                 Existing = f.Element
             };
+            float regen = f.Params.Get("enemyRegen");
             for (int i = 0; i < inside.Count; i++)
             {
                 EnemyUnit e = inside[i];
+                if (regen > 0f && e.Alive) e.Hp = SimMath.Min(e.MaxHp, e.Hp + e.MaxHp * regen);
                 if (f.DamageMult > 0f)
                 {
                     DealDamage(e, new DamageRequest

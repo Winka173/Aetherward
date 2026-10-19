@@ -325,9 +325,9 @@ namespace Aetherward.Sim.Run
         public static void AutoArrange(RunController rc)
         {
             RunState s = rc.State;
-            ArenaDef arena = rc.Content.Arena;
+            ArenaDef arena = rc.Arena;
             WaveDef wave = rc.Content.Waves[Math.Min(s.Wave, rc.Content.Waves.Count) - 1];
-            List<int> lanes = Battle.LanesForWave(wave);
+            List<int> lanes = Battle.LanesForWave(wave, rc.Biome);
             var taken = new HashSet<int>();
             if (s.BlockedNode >= 0) taken.Add(s.BlockedNode);
             var melee = new List<HeroRunState>();

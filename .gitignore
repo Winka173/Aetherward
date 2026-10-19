@@ -116,3 +116,7 @@ Tools/AssetGen/out/
 # local reference assemblies used only for compile checks (never committed)
 Tools/UnityRefs/
 !Tools/SimHarness/*.sln
+
+# Python bytecode
+__pycache__/
+*.pyc

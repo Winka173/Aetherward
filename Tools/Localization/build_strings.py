@@ -317,6 +317,9 @@ def main():
     for tid, (name, desc) in X.TRAITS.items():
         add("trait.%s.name" % tid, name)
         add("trait.%s.desc" % tid, desc)
+    for bid, (name, desc) in X.BIOMES.items():
+        add("biome.%s.name" % bid, name)
+        add("biome.%s.desc" % bid, desc)
 
     for lang, table in (("en", en), ("vi", vi)):
         with open(os.path.join(OUT, "loc_%s.json" % lang), "w", encoding="utf-8") as f:

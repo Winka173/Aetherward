@@ -161,6 +161,22 @@ Every entry is wired into the simulation (no stub effects); validation: `Content
 | `crystal_parasite` | Crystal Parasite | Runner | 70 / 4 / 4 / 1.9 | Darts past heroes and latches onto the Crystal. Latched parasites take 60% less damage unless a hero guards the core; Light or any cleanse rips them off. | `Enemies/crystal_parasite_a/_b` | Implemented |
 | `ash_imp` | Ash Imp | Melee | 32 / 7 / 0 / 1.7 | Ignaroth's spawn. Bursts into flame when it dies, scorching heroes beside it. | `Enemies/ash_imp_a/_b` | Implemented |
 | `ignaroth` | Ignaroth, the Ember Tyrant | Boss (boss) | 1800 / 30 / 26 / 0.6 | Erupts lava under heroes (watch the telegraphs) and summons Ash Imps. At half HP it Overheats: resists Fire, is weak to Water and Ice, scorches nearby heroes, and periodically vents—strike while it is Exposed. | `Enemies/ignaroth_a/_b` | Implemented |
+| `goblin_sprinter` | Goblin Sprinter | Runner | 40 / 6 / 0 / 2 | Fragile runner that bursts into a sprint every few seconds. Slows, roots and wide coverage on its lane stop it. | `Enemies/goblin_sprinter_a/_b` | Implemented |
+| `ironback_golem` | Ironback Golem | Melee | 300 / 16 / 55 / 0.75 | Heavy plates halve basic-attack damage until its armour is cracked or Corroded. Use skills, reactions, Earth or Poison. | `Enemies/ironback_golem_a/_b` | Implemented |
+| `spirit_splitter` | Spirit Splitter | Melee | 90 / 9 / 4 / 1.15 | Splits into two Spirit Wisps when it dies. Area damage cleans up both halves. | `Enemies/spirit_splitter_a/_b` | Implemented |
+| `spirit_wisp` | Spirit Wisp | Runner | 28 / 5 / 0 / 1.7 | A quick fragment of a Spirit Splitter. Wisps never split again. | `Enemies/spirit_wisp_a/_b` | Implemented |
+| `flame_devourer` | Flame Devourer | Melee | 140 / 11 / 8 / 1 | Shrugs off Fire, and every Fire hit stokes its speed. Weak to Water: swap damage sources or Vaporize it. | `Enemies/flame_devourer_a/_b` | Implemented |
+| `frost_wraith` | Frost Wraith | Melee | 115 / 11 / 4 / 1.3 | Phases through attacks (35% less damage) unless Illuminated, glides over ground fields and shrugs off slows. | `Enemies/frost_wraith_a/_b` | Implemented |
+| `storm_harpy` | Storm Harpy | Runner | 70 / 7 / 2 / 1.55 | Flies straight at the Crystal over walls and ground fields. Melee heroes hit it for half; ranged heroes are the answer. | `Enemies/storm_harpy_a/_b` | Implemented |
+| `stone_burrower` | Stone Burrower | Melee | 150 / 13 / 18 / 1.6 | Tunnels underground where it cannot be hit, then surfaces near the core after a short rumble. Keep defenders on the inner ring. | `Enemies/stone_burrower_a/_b` | Implemented |
+| `void_priest` | Void Priest | Melee | 100 / 7 / 6 / 0.95 | Channels a heal on nearby enemies. Any stun interrupts the channel; focus it down first. | `Enemies/void_priest_a/_b` | Implemented |
+| `hex_binder` | Hex Binder | Ranged | 75 / 9 / 4 / 1 | Ranged caster that periodically Silences the nearest hero, blocking skills. Steadfast heroes and cleanses counter it. | `Enemies/hex_binder_a/_b` | Implemented |
+| `siege_colossus` | Siege Colossus | Melee | 360 / 18 / 25 / 0.55 | Stops far from the core and shells the Crystal with telegraphed artillery. Flankers and long range reach it. | `Enemies/siege_colossus_a/_b` | Implemented |
+| `soul_binder` | Soul Binder | Melee | 170 / 9 / 10 / 0.9 | Links up to 3 nearby allies: they take 40% less damage and the binder absorbs that share. Kill the binder to break the links. | `Enemies/soul_binder_a/_b` | Implemented |
+| `spore_carrier` | Spore Carrier | Melee | 85 / 7 / 4 / 1.05 | Releases a spore cloud on death that regenerates enemies inside. Kill it away from the pack; weak to Fire. | `Enemies/spore_carrier_a/_b` | Implemented |
+| `ice_statue` | Ice Statue | Melee | 260 / 0 / 10 / 0 | Seraphyne's guardian. While any statue stands she takes 45% less damage. Statues are immobile and melt fast to Fire. | `Enemies/ice_statue_a/_b` | Implemented |
+| `seraphyne` | Seraphyne, Queen of Winter | Boss (boss) | 2300 / 30 / 24 / 0.55 | Marks the ground with frost that freezes heroes standing in it (watch the telegraphs). Raises Ice Statues that shield her, then unleashes a blizzard that slows nearby heroes' attacks. Weak to Fire. | `Enemies/seraphyne_a/_b` | Implemented |
+| `gravemaw` | Gravemaw, the Siege Titan | Boss (boss) | 2600 / 34 / 70 / 0.42 | Very slow and heavily armoured. Shells the Crystal area, then vents its armour—strike while it is Exposed. At half HP it breaches forward along its lane. | `Enemies/gravemaw_a/_b` | Implemented |
 
 ## Relics (25 + 3 fusions)
 | ID | Name | Family / Rarity | Effect (generated) | Icon | State |
@@ -286,22 +302,22 @@ Fusions: `chain_conductor` + `storm_caller` → `tempest_engine`, `frozen_crown`
 | 1 | First Contact | 7× grunt | east | Draft | 10 / 0 | 70s | A small pack from the east. Your heroes fight on their own. |
 | 2 | Two Fronts | 10× grunt, 3× runner | east, west | Draft, Recruit | 11 / 0 | 70s | Enemies from east and west; hounds rush the east late. |
 | 3 | The Swarm | 14× swarmling, 14× swarmling, 6× grunt | east, north | Draft | 12 / 0 | 70s | Dense swarms: area damage shines. |
-| 4 | Hound Rush | 14× runner, 8× grunt | west, south | Shop, Draft | 13 / 0 | 70s | Fast runners from west and south. Block their paths. |
+| 4 | Hound Rush | 10× runner, 8× grunt, 4× goblin_sprinter | west, south | Shop, Draft | 13 / 0 | 70s | Fast runners from west and south. Block their paths. |
 | 5 | Ravager | 15× grunt, 5× shieldbearer, 1× ravager | east, west | Relic | 14 / 1 | 85s | An elite with telegraphed charges. Spread out of the red circles. |
-| 6 | Four Winds | 24× grunt, 12× runner, 6× hexcaster | east, west, north, south | Draft | 15 / 0 | 80s | Pressure on all four lanes. |
-| 7 | Iron Wall | 12× shieldbearer, 15× grunt, 3× juggernaut | north, south | Draft | 16 / 0 | 85s | Shieldbearers block frontal hits: flank them or crack their armor. |
-| 8 | Crossroads | 18× grunt, 9× runner, 3× hexcaster, 2× mana_leech, 3× summoner | east, west, northeast | Event, Draft | 17 / 0 | 85s | Summoners and casters join from the northeast. |
-| 9 | Warded Vanguard | 6× warded (fireproof), 6× warded (frostproof), 5× warded (stormproof), 15× grunt | east, west, north, south | Shop | 18 / 0 | 85s | Warded golems resist Fire, Ice or Lightning (see their ward). Mix your elements. |
+| 6 | Four Winds | 20× grunt, 12× runner, 6× hexcaster, 2× spirit_splitter | east, west, north, south | Draft | 15 / 0 | 80s | Pressure on all four lanes. |
+| 7 | Iron Wall | 10× shieldbearer, 15× grunt, 3× juggernaut, 2× ironback_golem | north, south | Draft | 16 / 0 | 85s | Shieldbearers block frontal hits: flank them or crack their armor. |
+| 8 | Crossroads | 18× grunt, 6× runner, 3× hexcaster, 2× mana_leech, 3× summoner, 3× storm_harpy | east, west, northeast | Event, Draft | 17 / 0 | 85s | Summoners and casters join from the northeast. |
+| 9 | Warded Vanguard | 6× warded (fireproof), 6× warded (frostproof), 5× warded (stormproof), 12× grunt, 2× void_priest | east, west, north, south | Shop | 18 / 0 | 85s | Warded golems resist Fire, Ice or Lightning (see their ward). Mix your elements. |
 | 10 | Siegebreaker | 1× siegebreaker_golem, 15× grunt, 9× runner | east, west | Evolution | 22 / 2 | 150s | Mini-boss! Armor Crack and Superconduct break its armored phase. |
-| 11 | Swarm and Fang | 45× swarmling, 3× summoner, 1× ravager (hasted) | east, north, south | Draft | 20 / 0 | 85s | Massive swarm with a hasted Ravager from the north. |
-| 12 | Hexfire Line | 4× crystal_parasite, 15× hexcaster, 12× shieldbearer, 15× grunt | east, west, north, south | Draft | 21 / 0 | 85s | Ranged casters target your heroes from 3.6 m. |
-| 13 | Siege Sappers | 12× sapper, 4× juggernaut, 22× grunt | east, west, north, south | Draft | 22 / 0 | 85s | Sappers ignore heroes and explode on the Crystal. Kill them on the way. |
-| 14 | Mixed Assault | 26× grunt, 15× runner, 9× hexcaster, 8× shieldbearer, 4× banner, 8× sapper | east, west, north, south, northeast | Shop | 23 / 0 | 90s | Everything at once, with banners buffing allies. |
-| 15 | Twin Ravagers | 3× mana_leech, 1× ravager (unyielding), 1× ravager (bulwark), 6× banner, 29× grunt, 4× juggernaut | east, west, north, south | Relic, Pact | 24 / 2 | 100s | Two hardened elites. A pact will be offered after this wave. |
-| 16 | Diagonal Breach | 22× runner, 22× runner, 26× grunt, 11× sapper | east, west, northeast, southwest | Draft | 25 / 0 | 90s | New diagonal lanes open; enemies are hasted this wave. |
-| 17 | Prism Hunt | 6× crystal_parasite, 15× mimic, 11× warded (windproof), 4× banner, 22× grunt | east, west, north, south | Draft | 26 / 0 | 95s | Mimics adapt to your strongest element. Diverse damage wins. |
-| 18 | Siege Escalation | 3× mana_leech, 16× sapper, 8× juggernaut, 6× summoner, 11× hexcaster, 18× grunt | east, west, north, south, northeast, southwest | Draft | 27 / 0 | 100s | Sappers, juggernauts and summoners on six lanes. |
-| 19 | Last Stand | 33× grunt, 18× runner, 11× shieldbearer, 11× hexcaster, 8× mimic, 4× banner, 1× ravager | east, west, north, south, northeast, southwest | Shop | 30 / 1 | 105s | The final shop follows. Prepare for the Warden. |
+| 11 | Swarm and Fang | 38× swarmling, 3× summoner, 1× ravager (hasted), 4× spore_carrier | east, north, south | Draft | 20 / 0 | 85s | Massive swarm with a hasted Ravager from the north. |
+| 12 | Hexfire Line | 4× crystal_parasite, 12× hexcaster, 12× shieldbearer, 15× grunt, 2× hex_binder | east, west, north, south | Draft | 21 / 0 | 85s | Ranged casters target your heroes from 3.6 m. |
+| 13 | Siege Sappers | 12× sapper, 4× juggernaut, 17× grunt, 2× stone_burrower, 1× flame_devourer | east, west, north, south | Draft | 22 / 0 | 85s | Sappers ignore heroes and explode on the Crystal. Kill them on the way. |
+| 14 | Mixed Assault | 22× grunt, 15× runner, 9× hexcaster, 8× shieldbearer, 4× banner, 8× sapper, 2× soul_binder | east, west, north, south, northeast | Shop | 23 / 0 | 90s | Everything at once, with banners buffing allies. |
+| 15 | Twin Ravagers | 3× mana_leech, 1× ravager (unyielding), 1× ravager (bulwark), 6× banner, 25× grunt, 4× juggernaut, 3× frost_wraith | east, west, north, south | Relic, Pact | 24 / 2 | 100s | Two hardened elites. A pact will be offered after this wave. |
+| 16 | Diagonal Breach | 18× runner, 22× runner, 26× grunt, 11× sapper, 6× goblin_sprinter | east, west, northeast, southwest | Draft | 25 / 0 | 90s | New diagonal lanes open; enemies are hasted this wave. |
+| 17 | Prism Hunt | 6× crystal_parasite, 15× mimic, 11× warded (windproof), 4× banner, 14× grunt, 1× siege_colossus | east, west, north, south | Draft | 26 / 0 | 95s | Mimics adapt to your strongest element. Diverse damage wins. |
+| 18 | Siege Escalation | 3× mana_leech, 16× sapper, 8× juggernaut, 6× summoner, 11× hexcaster, 15× grunt, 1× void_priest | east, west, north, south, northeast, southwest | Draft | 27 / 0 | 100s | Sappers, juggernauts and summoners on six lanes. |
+| 19 | Last Stand | 29× grunt, 18× runner, 11× shieldbearer, 11× hexcaster, 8× mimic, 4× banner, 1× ravager, 3× storm_harpy, 1× soul_binder | east, west, north, south, northeast, southwest | Shop | 30 / 1 | 105s | The final shop follows. Prepare for the Warden. |
 | 20 | The Rift Warden | 1× rift_warden, 18× grunt, 8× shieldbearer | east, west, north, south |  | 0 / 0 | 240s | Three phases: summons, a marked lane assault, then a slam sequence followed by an Exposed window. |
 
 ## Events

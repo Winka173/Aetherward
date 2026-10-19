@@ -63,14 +63,22 @@ namespace Aetherward.Tests
         [Test]
         public void TwinCasterEchoesWithACooldown()
         {
-            BattleSetup s = TestContent.Setup(6, 11, ("ignis", 4), ("terra", 0));
-            Battle plain = new Battle(s);
-            plain.RunToEnd();
-            s.Heroes[0].TraitId = "twin_caster";
-            Battle twin = new Battle(s);
-            twin.RunToEnd();
-            Assert.Greater(twin.Heroes[0].SkillCasts, plain.Heroes[0].SkillCasts, "echoes add casts");
-            Assert.LessOrEqual(twin.Heroes[0].SkillCasts, plain.Heroes[0].SkillCasts * 2, "echo cooldown bounds extra casts");
+            // Echoes are a chance roll: compare total casts over the same 40 s window across several seeds.
+            int plainCasts = 0, twinCasts = 0;
+            for (ulong seed = 11; seed < 17; seed++)
+            {
+                BattleSetup s = TestContent.Setup(6, seed, ("ignis", 4), ("terra", 0));
+                s.CrystalHp = s.CrystalMaxHp = 1e6f;
+                Battle plain = new Battle(s);
+                for (int t = 0; t < 30 * 40; t++) { plain.Tick(); plain.Journal.Clear(); }
+                s.Heroes[0].TraitId = "twin_caster";
+                Battle twin = new Battle(s);
+                for (int t = 0; t < 30 * 40; t++) { twin.Tick(); twin.Journal.Clear(); }
+                plainCasts += plain.Heroes[0].SkillCasts;
+                twinCasts += twin.Heroes[0].SkillCasts;
+            }
+            Assert.Greater(twinCasts, plainCasts, "echoes add casts");
+            Assert.LessOrEqual(twinCasts, plainCasts * 2, "echo cooldown bounds extra casts");
         }
 
         [Test]

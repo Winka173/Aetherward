@@ -58,7 +58,7 @@ namespace Aetherward.Game
         private readonly List<Rect> _uiBlockers = new List<Rect>();
         private readonly List<Rect> _uiBlockersNext = new List<Rect>();
 
-        private ArenaDef Arena => App.Content.Arena;
+        private ArenaDef Arena => _rc.Arena;
 
         private void Start()
         {
@@ -77,7 +77,7 @@ namespace Aetherward.Game
             _debug = new GameObject("DebugOverlay").AddComponent<DebugOverlay>();
             _debug.transform.SetParent(transform, false);
             _debug.Init(this);
-            App.Audio.PlayMusic("battle_loop");
+            App.Audio.PlayMusic(_rc.Biome.Music);
             _speed = App.Settings.DefaultFastSpeed ? 2 : 1;
             if (_rc.State.Phase == RunPhase.Battle) _rc.State.Phase = RunPhase.Prepare; // resumed mid-wave
             ShowPrepareBanner();
@@ -105,7 +105,8 @@ namespace Aetherward.Game
             _unitsRoot.SetParent(_world, false);
             _fxRoot = new GameObject("Fx").transform;
             _fxRoot.SetParent(_world, false);
-            SpriteRenderer bg = WorldGfx.NewSprite(_world, "Arena", Art.Sprite("World/arena_background"), -10000);
+            Sprite bgSprite = Art.Sprite(_rc.Biome.Background) ?? Art.Sprite("World/arena_background");
+            SpriteRenderer bg = WorldGfx.NewSprite(_world, "Arena", bgSprite, -10000);
             bg.transform.position = Vector3.zero;
             for (int i = 0; i < Arena.Nodes.Count; i++)
             {
@@ -501,7 +502,7 @@ namespace Aetherward.Game
             if (_rc.State.Phase != RunPhase.Prepare) return;
             WaveDef w = App.Content.Waves[Mathf.Min(_rc.State.Wave, App.Content.Waves.Count) - 1];
             Banner(App.Loc.Format("prep.title", w.Number), Ui.Gold, 1.6f);
-            App.Audio.PlayMusic("battle_loop");
+            App.Audio.PlayMusic(_rc.Biome.Music);
         }
 
         private void Shake(float amount)
@@ -657,7 +658,7 @@ namespace Aetherward.Game
                     r = RentSr("Vfx/telegraph");
                     _strikes[s] = r;
                 }
-                bool danger = s.Kind == StrikeKind.BossSlam || s.Kind == StrikeKind.BossLaneMark;
+                bool danger = s.Kind == StrikeKind.BossSlam || s.Kind == StrikeKind.BossLaneMark || s.Kind == StrikeKind.Hazard;
                 float k = s.Total > 0 ? 1f - s.Delay / s.Total : 1f;
                 r.transform.position = WorldGfx.V(s.Pos);
                 r.transform.localScale = new Vector3(s.Radius, s.Radius * 0.62f, 1f) * (0.85f + 0.15f * k);
@@ -794,7 +795,21 @@ namespace Aetherward.Game
                 }
                 _nodes[i].sprite = Art.Sprite(sprite);
                 float pulse = prep && occ == null ? 0.75f + 0.25f * Mathf.Sin(Time.time * 3f + i) : 0.45f;
-                _nodes[i].color = new Color(1, 1, 1, prep ? pulse : 0.35f);
+                Color tint = NodeTraitTint(i);
+                tint.a = prep ? pulse : 0.35f;
+                _nodes[i].color = tint;
+            }
+        }
+
+        /// <summary>Biome node traits read at a glance: warm for heated bridges, icy for frozen tiles.</summary>
+        private Color NodeTraitTint(int node)
+        {
+            if (!_rc.Biome.NodeTraitIds.TryGetValue(node, out string trait)) return Color.white;
+            switch (trait)
+            {
+                case "heated_bridge": return new Color(1f, 0.62f, 0.35f);
+                case "frozen_tile": return new Color(0.6f, 0.88f, 1f);
+                default: return new Color(1f, 0.95f, 0.6f);
             }
         }
 
@@ -805,7 +820,7 @@ namespace Aetherward.Game
             if (prep)
             {
                 WaveDef w = App.Content.Waves[Mathf.Min(_rc.State.Wave, App.Content.Waves.Count) - 1];
-                foreach (int laneIndex in Battle.LanesForWave(w))
+                foreach (int laneIndex in Battle.LanesForWave(w, _rc.Biome))
                 {
                     LaneDef lane = Arena.Lanes[laneIndex % Arena.Lanes.Count];
                     for (int k = 0; k < 3; k++)

@@ -332,6 +332,84 @@ ENEMIES_X = {
                   "Phun dung nham dưới chân anh hùng (để ý vòng cảnh báo) và gọi Tiểu Quỷ Tro. Còn nửa HP sẽ Quá Nhiệt: kháng Lửa, yếu Nước và Băng, thiêu anh hùng gần đó, và định kỳ xả nhiệt — hãy đánh khi nó Lộ Sơ Hở.")),
 }
 
+# Expansion Phase 2: factions, counters and two biome bosses.
+ENEMIES_X.update({
+    "goblin_sprinter": (("Goblin Sprinter", "Yêu Tinh Tốc Hành"),
+                        ("Fragile runner that bursts into a sprint every few seconds. Slows, roots and wide coverage on its lane stop it.",
+                         "Kẻ chạy mỏng manh, cứ vài giây lại tăng tốc bứt phá. Làm chậm, trói rễ và phủ kín làn của nó sẽ chặn được.")),
+    "ironback_golem": (("Ironback Golem", "Golem Lưng Sắt"),
+                       ("Heavy plates halve basic-attack damage until its armour is cracked or Corroded. Use skills, reactions, Earth or Poison.",
+                        "Giáp dày giảm nửa sát thương đòn thường cho đến khi giáp bị nứt hoặc Ăn Mòn. Dùng chiêu, phản ứng, Đất hoặc Độc.")),
+    "spirit_splitter": (("Spirit Splitter", "Linh Hồn Phân Tách"),
+                        ("Splits into two Spirit Wisps when it dies. Area damage cleans up both halves.",
+                         "Tách thành hai Đốm Linh Hồn khi chết. Sát thương diện rộng dọn sạch cả hai.")),
+    "spirit_wisp": (("Spirit Wisp", "Đốm Linh Hồn"),
+                    ("A quick fragment of a Spirit Splitter. Wisps never split again.", "Mảnh nhanh nhẹn của Linh Hồn Phân Tách. Đốm không tách thêm nữa.")),
+    "flame_devourer": (("Flame Devourer", "Kẻ Nuốt Lửa"),
+                       ("Shrugs off Fire, and every Fire hit stokes its speed. Weak to Water: swap damage sources or Vaporize it.",
+                        "Kháng Lửa, mỗi đòn Lửa lại khiến nó nhanh hơn. Yếu Nước: đổi nguồn sát thương hoặc dùng Bốc Hơi.")),
+    "frost_wraith": (("Frost Wraith", "Hồn Ma Băng Giá"),
+                     ("Phases through attacks (35% less damage) unless Illuminated, glides over ground fields and shrugs off slows.",
+                      "Lướt xuyên đòn đánh (giảm 35% sát thương) trừ khi bị Chiếu Sáng, bay qua vùng trên mặt đất và ít bị làm chậm.")),
+    "storm_harpy": (("Storm Harpy", "Đại Bàng Bão"),
+                    ("Flies straight at the Crystal over walls and ground fields. Melee heroes hit it for half; ranged heroes are the answer.",
+                     "Bay thẳng tới Pha Lê, vượt tường và vùng trên mặt đất. Anh hùng cận chiến chỉ gây nửa sát thương; hãy dùng tầm xa.")),
+    "stone_burrower": (("Stone Burrower", "Kẻ Đào Đá"),
+                       ("Tunnels underground where it cannot be hit, then surfaces near the core after a short rumble. Keep defenders on the inner ring.",
+                        "Đào dưới đất, không thể bị đánh trúng, rồi trồi lên gần lõi sau tiếng rung ngắn. Giữ người canh ở vòng trong.")),
+    "void_priest": (("Void Priest", "Tư Tế Hư Không"),
+                    ("Channels a heal on nearby enemies. Any stun interrupts the channel; focus it down first.",
+                     "Niệm chú hồi máu cho kẻ địch gần đó. Mọi hiệu ứng choáng đều ngắt chú; hãy hạ nó trước.")),
+    "hex_binder": (("Hex Binder", "Kẻ Trói Bùa"),
+                   ("Ranged caster that periodically Silences the nearest hero, blocking skills. Steadfast heroes and cleanses counter it.",
+                    "Pháp sư tầm xa định kỳ làm Câm Lặng anh hùng gần nhất, chặn dùng chiêu. Anh hùng Kiên Định và thanh tẩy khắc chế nó.")),
+    "siege_colossus": (("Siege Colossus", "Cự Thần Công Thành"),
+                       ("Stops far from the core and shells the Crystal with telegraphed artillery. Flankers and long range reach it.",
+                        "Dừng xa lõi và nã pháo (có cảnh báo) vào Pha Lê. Anh hùng tầm xa hoặc đứng cánh sẽ với tới nó.")),
+    "soul_binder": (("Soul Binder", "Kẻ Trói Hồn"),
+                    ("Links up to 3 nearby allies: they take 40% less damage and the binder absorbs that share. Kill the binder to break the links.",
+                     "Liên kết tối đa 3 đồng minh gần đó: chúng nhận ít hơn 40% sát thương, phần đó dồn vào kẻ trói. Hạ nó để cắt liên kết.")),
+    "spore_carrier": (("Spore Carrier", "Kẻ Mang Bào Tử"),
+                      ("Releases a spore cloud on death that regenerates enemies inside. Kill it away from the pack; weak to Fire.",
+                       "Khi chết thả đám bào tử hồi máu cho kẻ địch bên trong. Hạ nó xa đám đông; yếu Lửa.")),
+    "ice_statue": (("Ice Statue", "Tượng Băng"),
+                   ("Seraphyne's guardian. While any statue stands she takes 45% less damage. Statues are immobile and melt fast to Fire.",
+                    "Hộ vệ của Seraphyne. Khi còn tượng đứng, bà ta nhận ít hơn 45% sát thương. Tượng bất động và tan nhanh trước Lửa.")),
+    "seraphyne": (("Seraphyne, Queen of Winter", "Seraphyne, Nữ Hoàng Mùa Đông"),
+                  ("Marks the ground with frost that freezes heroes standing in it (watch the telegraphs). Raises Ice Statues that shield her, then unleashes a blizzard that slows nearby heroes' attacks. Weak to Fire.",
+                   "Đánh dấu băng giá dưới đất, đóng băng anh hùng đứng trong đó (để ý vòng cảnh báo). Dựng Tượng Băng che chắn, rồi gọi bão tuyết làm chậm đòn đánh của anh hùng gần đó. Yếu Lửa.")),
+    "gravemaw": (("Gravemaw, the Siege Titan", "Gravemaw, Titan Công Thành"),
+                 ("Very slow and heavily armoured. Shells the Crystal area, then vents its armour—strike while it is Exposed. At half HP it breaches forward along its lane.",
+                  "Rất chậm và giáp cực dày. Nã pháo quanh Pha Lê, rồi xả giáp — hãy đánh khi nó Lộ Sơ Hở. Còn nửa HP sẽ phá vây lao lên theo làn.")),
+})
+
+FIELDS_X.update({
+    "spore_cloud": ("spore cloud", "đám bào tử"), "ice_cover": ("ice cover", "tấm chắn băng"),
+})
+
+BIOMES = {
+    "verdant_sanctuary": (("Verdant Sanctuary", "Thánh Địa Xanh"),
+                          ("The classic battlefield: six open lanes and no hazards.", "Chiến trường cổ điển: sáu làn thoáng, không có hiểm hoạ.")),
+    "molten_crater": (("Molten Crater", "Miệng Núi Lửa"),
+                      ("Two basalt bridges funnel the east and west lanes. Lava vents erupt (telegraphed) beside them and hurt everyone; heated bridge nodes grant +15% attack. Flame Devourers join the waves; Ignaroth or Gravemaw guards wave 10.",
+                       "Hai cầu đá bazan dồn làn đông và tây. Lỗ dung nham phun trào (có cảnh báo) cạnh cầu, gây hại cho tất cả; ô cầu nóng tăng 15% công. Kẻ Nuốt Lửa tham chiến; Ignaroth hoặc Gravemaw giữ đợt 10.")),
+    "frostfall_bastion": (("Frostfall Bastion", "Pháo Đài Tuyết Rơi"),
+                          ("A fortress in a blizzard. Frozen tiles add 25% defense but slow attacks; ice covers absorb enemy shots until they shatter. The diagonal gates open from wave 8. Frost Wraiths join the waves; Seraphyne guards wave 10.",
+                           "Pháo đài giữa bão tuyết. Ô băng tăng 25% thủ nhưng làm chậm đòn đánh; tấm chắn băng đỡ đạn địch đến khi vỡ. Cổng chéo mở từ đợt 8. Hồn Ma Băng Giá tham chiến; Seraphyne giữ đợt 10.")),
+}
+
+UI_X.update({
+    "hud.seraphyne_statues": ("ICE STATUES! Break them to expose her", "TƯỢNG BĂNG! Phá tượng để làm lộ bà ta"),
+    "hud.seraphyne_blizzard": ("BLIZZARD! Nearby heroes are chilled", "BÃO TUYẾT! Anh hùng gần đó bị lạnh cóng"),
+    "hud.gravemaw_exposed": ("ARMOR VENTED — EXPOSED!", "XẢ GIÁP — LỘ SƠ HỞ!"),
+    "hud.gravemaw_breach": ("BREACH! Gravemaw charges forward", "PHÁ VÂY! Gravemaw lao lên phía trước"),
+    "nodetrait.heated_bridge": ("Heated bridge: +15% attack", "Cầu nóng: +15% công"),
+    "nodetrait.frozen_tile": ("Frozen tile: +25% defense, 12% slower attacks", "Ô băng: +25% thủ, đánh chậm hơn 12%"),
+    "status.burrowed": ("Burrowed", "Đang Đào"), "status.sprint": ("Sprinting", "Bứt Tốc"), "status.linked": ("Soul-linked", "Liên Kết Hồn"),
+    "status.chilled": ("Chilled", "Lạnh Cóng"),
+    "biome.label": ("Battlefield", "Chiến trường"), "biome.locked": ("Locked: {0}", "Chưa mở: {0}"),
+})
+
 UI_X.update({
     "hud.ignaroth_heat": ("OVERHEAT! Use Water and Ice", "QUÁ NHIỆT! Dùng Nước và Băng"),
     "hud.ignaroth_vent": ("VENTING — EXPOSED!", "XẢ NHIỆT — LỘ SƠ HỞ!"),

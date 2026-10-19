@@ -19,3 +19,7 @@ Mô phỏng (pure C#) được kiểm chứng bằng `dotnet test`; mọi thứ 
 | Ascension 1–5 module | VERIFIED | IMPLEMENTED_UNVERIFIED | `DifficultyTests` (5) |
 | Relic/thẻ mới (34) | VERIFIED (validator, mô tả sinh từ dữ liệu) | IMPLEMENTED_UNVERIFIED | `ContentPassesValidation` |
 | Cân bằng Phase 1 | ĐO ĐƯỢC, chưa đạt mục tiêu | — | `BALANCE_REPORT.md` |
+| Hệ thống biome + 2 biome | VERIFIED | IMPLEMENTED_UNVERIFIED | `BiomeTests` (10): làn tới Pha Lê, tường không chặn, hiểm hoạ, che chắn, lịch làn, đặc tính ô, save, mở khoá, không kẹt |
+| 14 kẻ địch Phase 2 | VERIFIED | IMPLEMENTED_UNVERIFIED (sprite chỉ xem qua contact sheet) | `EnemyPhase2Tests` |
+| Seraphyne / Gravemaw | VERIFIED (pha, cửa sổ, không kẹt) | IMPLEMENTED_UNVERIFIED | `SeraphyneRaises…`, `StatuesGuard…`, `GravemawVents…` |
+| Cân bằng Phase 2a | ĐO ĐƯỢC | — | `BALANCE_REPORT.md`, `BIOMES.md` |

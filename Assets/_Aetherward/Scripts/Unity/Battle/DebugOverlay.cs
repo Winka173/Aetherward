@@ -71,7 +71,7 @@ namespace Aetherward.Game
             _used = 0;
             if (_owner != null && App.Settings.ShowRanges)
             {
-                ArenaDef arena = App.Content.Arena;
+                ArenaDef arena = _owner.Run.Arena;
                 foreach (LaneDef lane in arena.Lanes)
                     for (int i = 0; i < lane.Points.Count - 1; i++)
                         Line(WorldGfx.V(lane.Points[i]), WorldGfx.V(lane.Points[i + 1]), new Color(1f, 0.4f, 0.4f, 0.5f), 0.05f);

@@ -79,6 +79,8 @@ namespace Aetherward.Sim.Combat
         public float LeechAmount;
         public float FeverTimer;      // Plague Doctor tradeoff: takes more damage
         public float FeverAmount;
+        public float ChillTimer;      // boss blizzard: attacks recover slower
+        public float ChillAmount;
         public float FieldTimer;      // refreshed while standing in a supportive field
         public float FieldDamageReduction;
         public float FieldHaste;
@@ -220,6 +222,12 @@ namespace Aetherward.Sim.Combat
         public float SealTimer;       // abilities suppressed (Astral Seal / Portal Seal)
         public bool Latched;          // Crystal Parasite attached to the crystal
         public bool Enraged;          // Ascension boss enrage triggered
+        public bool Burrowed;         // underground: untouchable until it surfaces
+        public float SurfaceTimer;
+        public float SprintTimer;
+        public float ChannelTimer;
+        public float Stoke;           // speed gained from absorbed element hits
+        public EnemyUnit LinkedTo;    // Soul Binder link
         public float Timer2;          // secondary behaviour timer (auras, boss summons)
         public float SpecialCooldownMult = 1f;
 

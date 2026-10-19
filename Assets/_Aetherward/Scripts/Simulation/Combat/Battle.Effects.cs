@@ -65,6 +65,7 @@ namespace Aetherward.Sim.Combat
         public bool Line;
         public float BaseRadius;
         public string Tag;          // attribution id (reaction/skill/relic)
+        public int HitsLeft;        // destructible fields (biome cover): 0 = indestructible
     }
 
     public enum StrikeKind
@@ -97,6 +98,8 @@ namespace Aetherward.Sim.Combat
         public string SourceTag;
         public string Status;       // optional status applied to each enemy hit
         public ParamBag StatusParams;
+        public float HeroDamagePct; // hazards: fraction of hero max HP
+        public float HeroStun;      // boss frost marks: heroes hit are frozen briefly
     }
 
     /// <summary>Enemy ranged attack in flight (visible, short travel so presentation can show it).</summary>
@@ -223,8 +226,8 @@ namespace Aetherward.Sim.Combat
 
         private bool OutOfArena(Vec2 p)
         {
-            return p.X < -Content.Arena.HalfWidth - 2f || p.X > Content.Arena.HalfWidth + 2f ||
-                   p.Y < -Content.Arena.HalfHeight - 2f || p.Y > Content.Arena.HalfHeight + 2f;
+            return p.X < -Arena.HalfWidth - 2f || p.X > Arena.HalfWidth + 2f ||
+                   p.Y < -Arena.HalfHeight - 2f || p.Y > Arena.HalfHeight + 2f;
         }
 
         // ------------------------------------------------------------------ zones
@@ -420,7 +423,9 @@ namespace Aetherward.Sim.Combat
                 for (int i = 0; i < Heroes.Count; i++)
                 {
                     HeroUnit h = Heroes[i];
-                    if (h.Alive && Vec2.Distance(h.Pos, s.Pos) <= s.Radius + h.Radius) DamageHero(h, s.Power, s.EnemySource);
+                    if (!h.Alive || Vec2.Distance(h.Pos, s.Pos) > s.Radius + h.Radius) continue;
+                    DamageHero(h, s.Power, s.EnemySource);
+                    if (s.HeroStun > 0f && h.Alive && !ImmuneToDebuffs(h)) h.StunTimer = SimMath.Max(h.StunTimer, s.HeroStun);
                 }
                 if (Vec2.Distance(Crystal.Pos, s.Pos) <= s.Radius + Crystal.Radius) DamageCrystal(s.Power * 0.5f, s.EnemySource);
                 return;
@@ -430,7 +435,7 @@ namespace Aetherward.Sim.Combat
                 for (int i = 0; i < Heroes.Count; i++)
                 {
                     HeroUnit h = Heroes[i];
-                    if (h.Alive && Vec2.Distance(h.Pos, s.Pos) <= s.Radius + h.Radius) DamageHero(h, s.Power, null);
+                    if (h.Alive && Vec2.Distance(h.Pos, s.Pos) <= s.Radius + h.Radius) DamageHero(h, h.MaxHp * s.HeroDamagePct, null);
                 }
             }
             List<EnemyUnit> hits = RentList();
@@ -501,7 +506,9 @@ namespace Aetherward.Sim.Combat
             for (int i = 0; i < Zones.Count; i++)
             {
                 Zone z = Zones[i];
-                if (z.Kind == ZoneKind.Field && z.Field.BlockBolts && InsideField(z, b.Pos, 0f)) return true;
+                if (z.Kind != ZoneKind.Field || !z.Field.BlockBolts || !InsideField(z, b.Pos, 0f)) continue;
+                if (z.HitsLeft > 0 && --z.HitsLeft == 0) z.Remaining = 0f; // destructible cover breaks
+                return true;
             }
             return false;
         }

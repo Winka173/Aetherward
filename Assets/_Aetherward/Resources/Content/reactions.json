@@ -149,6 +149,8 @@
     { "id": "ember_patch", "element": "fire", "tick": 0.5, "damageMult": 0.25, "reactionDamage": true, "maxCount": 3 },
     { "id": "singularity", "element": "void", "tick": 0.5, "pull": 2.6, "maxCount": 2,
       "onEnd": [{ "op": "collapse", "mult": 1.0, "radius": 2.2 }] },
+    { "id": "spore_cloud", "element": "nature", "tick": 0.5, "maxCount": 4, "params": { "enemyRegen": 0.015 } },
+    { "id": "ice_cover", "element": "ice", "tick": 1.0, "blockBolts": true, "maxCount": 6 },
     { "id": "gravity_well", "element": "void", "tick": 0.5, "damageMult": 0.25, "reactionDamage": true, "slow": 0.4, "pull": 0.6, "maxCount": 2 }
   ]
 }

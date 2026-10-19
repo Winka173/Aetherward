@@ -43,6 +43,8 @@ namespace Aetherward.Sim.Run
         public event Action<string> Notice; // localized-key notices (fusion formed, level up...)
 
         private EconomyDef Eco => Content.Economy;
+        public BiomeDef Biome => Content.BiomeOrDefault(State.BiomeId);
+        public ArenaDef Arena => Biome.Arena;
 
         public RunController(ContentDatabase content, RunState state, RunUnlocks unlocks)
         {
@@ -51,10 +53,11 @@ namespace Aetherward.Sim.Run
             Unlocks = unlocks ?? RunUnlocks.Everything(content);
         }
 
-        public static RunController NewRun(ContentDatabase content, ulong seed, IList<string> starters, int ascension, RunUnlocks unlocks)
+        public static RunController NewRun(ContentDatabase content, ulong seed, IList<string> starters, int ascension, RunUnlocks unlocks, string biomeId = null)
         {
             var s = new RunState
             {
+                BiomeId = biomeId != null && content.Biomes.ContainsKey(biomeId) ? biomeId : null,
                 Seed = seed,
                 Ascension = ascension,
                 Gold = content.Economy.StartGold,
@@ -93,7 +96,9 @@ namespace Aetherward.Sim.Run
             if (wave.BossPool.Count == 0) return null;
             if (State.BossChoices.TryGetValue(wave.Number, out string id) && Content.Enemies.ContainsKey(id)) return id;
             Pcg32 rng = Pcg32.Derive(State.Seed, "boss:" + wave.Number);
-            id = wave.BossPool[rng.Range(0, wave.BossPool.Count)];
+            // A biome may restrict the wave's boss to its own faction bosses.
+            List<string> pool = Biome.BossPools.TryGetValue(wave.Number, out List<string> bp) && bp.Count > 0 ? bp : wave.BossPool;
+            id = pool[rng.Range(0, pool.Count)];
             State.BossChoices[wave.Number] = id;
             return id;
         }
@@ -103,6 +108,24 @@ namespace Aetherward.Sim.Run
         {
             string boss = BossFor(wave);
             return boss != null && enemyId == wave.BossPool[0] ? boss : enemyId;
+        }
+
+        /// <summary>Enemies a wave will actually field in this run (boss choice, biome extras and swaps), for previews.</summary>
+        public List<KeyValuePair<string, int>> PreviewEnemies(WaveDef wave)
+        {
+            var groups = new List<SpawnGroup>(wave.Groups);
+            for (int i = 0; i < Biome.Extra.Count; i++)
+                if (wave.Number >= Biome.ExtraWaves[i][0] && wave.Number <= Biome.ExtraWaves[i][1]) groups.Add(Biome.Extra[i]);
+            var counts = new List<KeyValuePair<string, int>>();
+            foreach (SpawnGroup g in groups)
+            {
+                string id = EnemyFor(wave, g.Enemy);
+                if (Biome.Substitutions.TryGetValue(id, out string sub) && Content.Enemies.ContainsKey(sub)) id = sub;
+                int idx = counts.FindIndex(k => k.Key == id);
+                if (idx >= 0) counts[idx] = new KeyValuePair<string, int>(id, counts[idx].Value + g.Count);
+                else counts.Add(new KeyValuePair<string, int>(id, g.Count));
+            }
+            return counts;
         }
 
         public int FreeNode()
@@ -121,7 +144,7 @@ namespace Aetherward.Sim.Run
             State.BlockedNode = -1;
             if (!Content.Difficulty.Has("blocked_node", State.Ascension)) return;
             Pcg32 rng = Pcg32.Derive(State.Seed, "block:" + State.Wave);
-            State.BlockedNode = rng.Range(0, Content.Arena.Nodes.Count);
+            State.BlockedNode = rng.Range(0, Arena.Nodes.Count);
             HeroRunState on = State.HeroOnNode(State.BlockedNode);
             if (on != null)
             {
@@ -195,7 +218,7 @@ namespace Aetherward.Sim.Run
         public bool PlaceHero(int heroUid, int node)
         {
             if (State.Phase != RunPhase.Prepare) return false;
-            if (node < 0 || node >= Content.Arena.Nodes.Count || node == State.BlockedNode) return false;
+            if (node < 0 || node >= Arena.Nodes.Count || node == State.BlockedNode) return false;
             HeroRunState h = State.Hero(heroUid);
             if (h == null) return false;
             HeroRunState occupant = State.HeroOnNode(node);
@@ -288,7 +311,8 @@ namespace Aetherward.Sim.Run
                 Modifiers = BuildModifiers(),
                 CrystalMaxHp = CrystalMaxHp,
                 Ascension = State.Ascension,
-                MaxActiveEnemies = Eco.MaxActiveEnemies
+                MaxActiveEnemies = Eco.MaxActiveEnemies,
+                Biome = Biome
             };
             setup.CrystalHp = Math.Min(State.CrystalHp, setup.CrystalMaxHp);
             string boss = BossFor(wave);

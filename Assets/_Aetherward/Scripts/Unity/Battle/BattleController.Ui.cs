@@ -207,28 +207,34 @@ namespace Aetherward.Game
 
         // ------------------------------------------------------------------ preparation
 
+        /// <summary>"Heated bridge: +15% attack. " for each distinct node trait of the current biome.</summary>
+        private string NodeTraitSummary()
+        {
+            var seen = new HashSet<string>();
+            var sb = new System.Text.StringBuilder();
+            foreach (string t in _rc.Biome.NodeTraitIds.Values)
+                if (seen.Add(t)) sb.Append(App.Loc.Get("nodetrait." + t)).Append(". ");
+            return sb.ToString();
+        }
+
         private void DrawPrepare()
         {
             RunState s = _rc.State;
             WaveDef w = App.Content.Waves[Mathf.Min(s.Wave, App.Content.Waves.Count) - 1];
             // incoming panel (left)
             float px = 16, py = 156, pw = 560;
-            var counts = new List<KeyValuePair<string, int>>();
-            foreach (SpawnGroup g in w.Groups)
-            {
-                int idx = counts.FindIndex(k => k.Key == g.Enemy);
-                if (idx >= 0) counts[idx] = new KeyValuePair<string, int>(g.Enemy, counts[idx].Value + g.Count);
-                else counts.Add(new KeyValuePair<string, int>(g.Enemy, g.Count));
-            }
-            float hintH = Ui.TextHeight(L.Get(w.HintKey), 22, pw - 40);
+            List<KeyValuePair<string, int>> counts = _rc.PreviewEnemies(w);
+            string hint = L.Get(w.HintKey);
+            if (!_rc.Biome.Default) hint = L.Get(_rc.Biome.NameKey) + " — " + NodeTraitSummary() + hint;
+            float hintH = Ui.TextHeight(hint, 22, pw - 40);
             float ph = 110 + hintH + 20 + ((counts.Count + 3) / 4) * 130;
             Ui.Panel(px, py, pw, ph);
             Block(px, py, pw, ph);
             Ui.Label(px + 20, py + 18, pw - 40, 40, L.Get("prep.incoming"), 26, Ui.Gold, TextAnchor.UpperLeft, true);
             var laneNames = new List<string>();
-            foreach (int l in Battle.LanesForWave(w)) laneNames.Add(L.Get(App.Content.Arena.Lanes[l].NameKey));
+            foreach (int l in Battle.LanesForWave(w, _rc.Biome)) laneNames.Add(L.Get(Arena.Lanes[l].NameKey));
             Ui.Label(px + 20, py + 56, pw - 40, 34, L.Format("prep.lanes", string.Join(", ", laneNames)), 22, Ui.Bad);
-            Ui.Label(px + 20, py + 92, pw - 40, hintH + 10, L.Get(w.HintKey), 22, Ui.White);
+            Ui.Label(px + 20, py + 92, pw - 40, hintH + 10, hint, 22, Ui.White);
             float ey = py + 110 + hintH;
             for (int i = 0; i < counts.Count; i++)
             {

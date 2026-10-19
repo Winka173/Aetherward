@@ -155,7 +155,9 @@ namespace Aetherward.Game
                 float ix = x + 24;
                 foreach (string u in App.LastUnlocks)
                 {
-                    Texture tex = u.StartsWith("hero:") ? Art.Portrait(u.Substring(5)) : Art.Tex("Relics/" + u.Substring(6));
+                    Texture tex = u.StartsWith("hero:") ? Art.Portrait(u.Substring(5))
+                        : u.StartsWith("biome:") ? Art.Tex(App.Content.BiomeOrDefault(u.Substring(6)).Background)
+                        : Art.Tex("Relics/" + u.Substring(6));
                     Ui.Icon(ix, yy, 72, 72, tex);
                     ix += 80;
                 }

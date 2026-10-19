@@ -289,6 +289,9 @@ FIELD_STYLE = {
     "ember_patch": (hex2rgb("#ff7a2a"), ARCANE, "flames"),
     "singularity": (VOID, hex2rgb("#a8a0ff"), "spiral"),
     "gravity_well": (hex2rgb("#3a2e8a"), hex2rgb("#8a80ff"), "rings"),
+    # Phase 2 enemy/biome fields
+    "spore_cloud": (hex2rgb("#7a8a3a"), hex2rgb("#d0e070"), "bubbles"),
+    "ice_cover": (hex2rgb("#8ad0f0"), hex2rgb("#e8fbff"), "cracks"),
 }
 
 

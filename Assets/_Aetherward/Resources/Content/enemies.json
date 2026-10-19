@@ -57,7 +57,70 @@
       "crystalDamage": 110, "radius": 1.0, "tenacity": 0.7, "gold": 20, "essence": 3, "threat": 30, "resist": { "fire": 0.35 },
       "params": { "boss": "ignaroth", "lavaInterval": 7.0, "lavaCount": 3, "lavaRadius": 1.3, "lavaMult": 1.3, "lavaDelay": 1.6,
                   "summon": "ash_imp", "summonCount": 3, "summonInterval": 11.0, "heatAt": 0.5, "heatResist": 0.3, "heatVuln": 0.35,
-                  "auraRadius": 2.2, "auraMult": 0.12, "ventInterval": 12.0, "ventDuration": 3.0, "ventVuln": 0.4 }, "tags": ["boss", "ashen_horde"] }
+                  "auraRadius": 2.2, "auraMult": 0.12, "ventInterval": 12.0, "ventDuration": 3.0, "ventVuln": 0.4 }, "tags": ["boss", "ashen_horde"] },
+
+    // ---------------------------------------------------------------- Expansion Phase 2 (factions: iron_legion, voidborn,
+    // ashen_horde, frozen_covenant, corrupted_wilds, arcane_fractures, stormspire). Each line states its counterplay.
+    // Goblin Sprinter: periodic telegraphed sprints straight for the core. Counter: slows, roots, frost, lane traps.
+    { "id": "goblin_sprinter", "behavior": "runner", "hp": 40, "attack": 6, "defense": 0, "speed": 2.0, "attackInterval": 0.8, "range": 0.45,
+      "crystalDamage": 10, "radius": 0.25, "gold": 1, "threat": 1, "params": { "sprintEvery": 4.0, "sprintDuration": 1.2, "sprintMult": 1.9 }, "tags": ["runner", "iron_legion"] },
+    // Ironback Golem: plates halve basic-attack damage until its armour is cracked or corroded. Counter: Earth crack, Poison, skills/reactions.
+    { "id": "ironback_golem", "behavior": "melee", "hp": 300, "attack": 16, "defense": 55, "speed": 0.75, "attackInterval": 1.5, "range": 0.65,
+      "crystalDamage": 30, "radius": 0.5, "tenacity": 0.5, "gold": 3, "threat": 4, "params": { "plated": 0.5 }, "tags": ["tank", "iron_legion"] },
+    // Spirit Splitter: splits into two wisps on death (wisps never split again). Counter: AoE.
+    { "id": "spirit_splitter", "behavior": "melee", "hp": 90, "attack": 9, "defense": 4, "speed": 1.15, "attackInterval": 1.2, "range": 0.5,
+      "crystalDamage": 12, "radius": 0.34, "gold": 2, "threat": 2, "params": { "splitInto": "spirit_wisp", "splitCount": 2 }, "tags": ["splitter", "voidborn"] },
+    { "id": "spirit_wisp", "behavior": "runner", "hp": 28, "attack": 5, "defense": 0, "speed": 1.7, "attackInterval": 0.9, "range": 0.4,
+      "crystalDamage": 6, "radius": 0.22, "gold": 0, "threat": 0, "tags": ["summon", "voidborn"] },
+    // Flame Devourer: shrugs off Fire and every Fire hit stokes its speed; weak to Water. Counter: swap damage source, Vaporize.
+    { "id": "flame_devourer", "behavior": "melee", "hp": 140, "attack": 11, "defense": 8, "speed": 1.0, "attackInterval": 1.2, "range": 0.55,
+      "crystalDamage": 16, "radius": 0.38, "gold": 2, "threat": 3, "resist": { "fire": 0.6, "water": -0.3 }, "params": { "stokeElement": "fire", "stokePerHit": 0.03, "stokeMax": 0.3 },
+      "tags": ["absorber", "ashen_horde"] },
+    // Frost Wraith: phases (35% less damage) unless Illuminated, ignores ground fields, resists slows. Counter: Light, burst, non-slow control.
+    { "id": "frost_wraith", "behavior": "melee", "hp": 115, "attack": 11, "defense": 4, "speed": 1.3, "attackInterval": 1.1, "range": 0.5,
+      "crystalDamage": 15, "radius": 0.34, "tenacity": 0.5, "gold": 2, "threat": 3, "resist": { "ice": 0.5 }, "params": { "phasing": 0.35, "ignoreFields": 1 },
+      "tags": ["phasing", "frozen_covenant"] },
+    // Storm Harpy: flies straight at the crystal over walls and ground fields; melee heroes hit it for half. Counter: ranged coverage.
+    { "id": "storm_harpy", "behavior": "runner", "hp": 70, "attack": 7, "defense": 2, "speed": 1.55, "attackInterval": 1.0, "range": 0.5,
+      "crystalDamage": 12, "radius": 0.3, "gold": 2, "threat": 2, "resist": { "lightning": 0.3 }, "params": { "flying": 1, "ignoreFields": 1 }, "tags": ["flyer", "stormspire"] },
+    // Stone Burrower: travels underground (untouchable) and surfaces near the core after a telegraph. Counter: inner-ring defenders.
+    { "id": "stone_burrower", "behavior": "melee", "hp": 150, "attack": 13, "defense": 18, "speed": 1.6, "attackInterval": 1.2, "range": 0.55,
+      "crystalDamage": 20, "radius": 0.4, "tenacity": 0.3, "gold": 3, "threat": 3, "params": { "burrow": 1, "surfaceDist": 3.2, "surfaceDelay": 1.2 }, "tags": ["burrower", "iron_legion"] },
+    // Void Priest: channels a 0.8s heal (6% max HP) on nearby enemies; any stun cancels the channel. Counter: focus fire, interrupts.
+    { "id": "void_priest", "behavior": "melee", "hp": 100, "attack": 7, "defense": 6, "speed": 0.95, "attackInterval": 1.4, "range": 0.55,
+      "crystalDamage": 12, "radius": 0.34, "gold": 3, "threat": 3, "params": { "healEvery": 3.0, "healRadius": 2.6, "healPct": 0.06, "channel": 0.8 }, "tags": ["support", "voidborn"] },
+    // Hex Binder: ranged; every 6s silences the nearest hero for 2.5s. Counter: Steadfast, cleanse (Seren, Glimmer Tide, Sanctuary), kill priority.
+    { "id": "hex_binder", "behavior": "ranged", "hp": 75, "attack": 9, "defense": 4, "speed": 1.0, "attackInterval": 1.6, "range": 3.8,
+      "crystalDamage": 10, "radius": 0.3, "gold": 3, "threat": 3, "params": { "silenceEvery": 6.0, "silenceDuration": 2.5 }, "tags": ["disruptor", "arcane_fractures"] },
+    // Siege Colossus: stops far from the core and shells it with telegraphed artillery. Counter: flankers, long range, assassins.
+    { "id": "siege_colossus", "behavior": "melee", "hp": 360, "attack": 18, "defense": 25, "speed": 0.55, "attackInterval": 1.6, "range": 0.7,
+      "crystalDamage": 40, "radius": 0.6, "tenacity": 0.55, "gold": 5, "threat": 6, "params": { "siegeRange": 5.5, "shellEvery": 6.0, "shellDelay": 1.8, "shellRadius": 1.0, "shellMult": 0.8 },
+      "tags": ["siege", "iron_legion"] },
+    // Soul Binder: links up to 3 nearby allies; linked enemies take 40% less damage and the binder takes that share. Counter: kill the binder, AoE.
+    { "id": "soul_binder", "behavior": "melee", "hp": 170, "attack": 9, "defense": 10, "speed": 0.9, "attackInterval": 1.3, "range": 0.55,
+      "crystalDamage": 14, "radius": 0.38, "gold": 3, "threat": 4, "params": { "linkRadius": 3.0, "linkCount": 3, "linkShare": 0.4 }, "tags": ["support", "voidborn"] },
+    // Spore Carrier: on death releases a spore cloud that regenerates enemies inside. Counter: kill it away from the pack, Fire.
+    { "id": "spore_carrier", "behavior": "melee", "hp": 85, "attack": 7, "defense": 4, "speed": 1.05, "attackInterval": 1.2, "range": 0.5,
+      "crystalDamage": 12, "radius": 0.34, "gold": 2, "threat": 2, "resist": { "nature": 0.3, "fire": -0.25 }, "params": { "deathField": "spore_cloud" },
+      "tags": ["wilds", "corrupted_wilds"] },
+    // Ice Statue: Seraphyne's statue; immobile; while any stands she takes 45% less damage. Mortal by design (no immortal adds).
+    { "id": "ice_statue", "behavior": "melee", "hp": 260, "attack": 0, "defense": 10, "speed": 0.0, "attackInterval": 9.0, "range": 0.1,
+      "crystalDamage": 0, "radius": 0.45, "tenacity": 0.9, "gold": 1, "threat": 0, "resist": { "fire": -0.3 }, "params": { "statue": 1 }, "tags": ["summon", "frozen_covenant"] },
+
+    // Seraphyne, Queen of Winter (Frostfall boss): frost marks that freeze heroes standing in them, ice statues that guard
+    // her (destructible), and a blizzard phase that chills nearby heroes' attacks. Weak to Fire.
+    { "id": "seraphyne", "behavior": "boss", "boss": true, "hp": 2300, "attack": 30, "defense": 24, "speed": 0.55, "attackInterval": 1.5, "range": 0.9,
+      "crystalDamage": 120, "radius": 1.0, "tenacity": 0.7, "gold": 20, "essence": 3, "threat": 30, "resist": { "ice": 0.4, "fire": -0.25 },
+      "params": { "boss": "seraphyne", "markInterval": 8.0, "markCount": 2, "markDelay": 1.8, "markRadius": 1.1, "markStun": 1.0, "markMult": 0.8,
+                  "statueAt": 0.6, "statueCount": 2, "statueGuard": 0.45, "blizzardAt": 0.45, "blizzardRadius": 3.2, "blizzardSlow": 0.3 },
+      "tags": ["boss", "frozen_covenant"] },
+    // Gravemaw, the Siege Titan (Molten/Iron boss): very slow, very armoured; shells the crystal area, then vents its armour
+    // (Exposed window); at half HP it breaches forward along its lane. Never invulnerable.
+    { "id": "gravemaw", "behavior": "boss", "boss": true, "hp": 2600, "attack": 34, "defense": 70, "speed": 0.42, "attackInterval": 1.7, "range": 1.0,
+      "crystalDamage": 130, "radius": 1.1, "tenacity": 0.75, "gold": 20, "essence": 3, "threat": 30, "resist": { "earth": 0.3 },
+      "params": { "boss": "gravemaw", "volleyInterval": 10.0, "volleyCount": 3, "volleyDelay": 1.8, "volleyRadius": 1.2, "volleyMult": 1.4,
+                  "ventDuration": 4.0, "ventArmor": 60, "breachAt": 0.5, "breachDistance": 3.0, "breachMult": 2.0 },
+      "tags": ["boss", "iron_legion"] }
   ],
   // Elite/element affixes. Element resistance is always partial (never full immunity).
   "affixes": [

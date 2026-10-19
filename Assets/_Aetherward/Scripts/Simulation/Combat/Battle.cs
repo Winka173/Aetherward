@@ -33,6 +33,8 @@ namespace Aetherward.Sim.Combat
         public readonly Dictionary<string, string> Substitutions = new Dictionary<string, string>();
         /// <summary>Ascension: elites gain one extra compatible affix.</summary>
         public bool EliteExtraAffix;
+        /// <summary>Battlefield (null = content default biome).</summary>
+        public BiomeDef Biome;
         /// <summary>Ascension: bosses enrage below 25% HP by this amount (0 = off).</summary>
         public float BossEnrage;
     }
@@ -57,6 +59,8 @@ namespace Aetherward.Sim.Combat
 
         public readonly ContentDatabase Content;
         public readonly BattleSetup Setup;
+        public readonly BiomeDef Biome;
+        public readonly ArenaDef Arena;
         public readonly WaveDef Wave;
         public readonly BattleModifiers Mods;
         public readonly Pcg32 Rng;
@@ -107,10 +111,12 @@ namespace Aetherward.Sim.Combat
         {
             Setup = setup ?? throw new ArgumentNullException(nameof(setup));
             Content = setup.Content;
+            Biome = setup.Biome ?? Content.DefaultBiome ?? new BiomeDef { Arena = Content.Arena };
+            Arena = Biome.Arena ?? Content.Arena;
             Wave = setup.Wave;
             Mods = setup.Modifiers ?? new BattleModifiers();
             Rng = Pcg32.Derive(setup.Seed, "battle:" + Wave.Number);
-            Grid = new SpatialGrid(Content.Arena.HalfWidth, Content.Arena.HalfHeight, 1.5f);
+            Grid = new SpatialGrid(Arena.HalfWidth, Arena.HalfHeight, 1.5f);
 
             EconomyDef eco = Content.Economy;
             int w = Wave.Number - 1;
@@ -122,13 +128,14 @@ namespace Aetherward.Sim.Combat
             SetupCrystal();
             SetupHeroes();
             BuildSchedule();
+            SetupBiome();
             foreach (SourcedOp t in Mods.Triggers) Triggers.Add(new TriggerInstance { Source = t });
             FireTrigger("wave_start", null, null, Crystal.Pos, null);
         }
 
         private void SetupCrystal()
         {
-            Crystal.Radius = Content.Arena.CrystalRadius;
+            Crystal.Radius = Arena.CrystalRadius;
             Crystal.MaxHp = Setup.CrystalMaxHp;
             Crystal.Hp = SimMath.Clamp(Setup.CrystalHp, 0f, Crystal.MaxHp);
             Crystal.DamageReduction = SimMath.Clamp(Mods.CrystalReduction, 0f, 0.6f);
@@ -155,16 +162,20 @@ namespace Aetherward.Sim.Combat
             List<int> lanes = Wave.Lanes.Count > 0 ? Wave.Lanes : new List<int> { 0, 1, 2, 3 };
             int rotate = rng.Range(0, lanes.Count);
             bool swarmMod = HasWaveModifier("swarm");
-            foreach (SpawnGroup g in Wave.Groups)
+            var groups = new List<SpawnGroup>(Wave.Groups);
+            for (int i = 0; i < Biome.Extra.Count; i++)
+                if (Wave.Number >= Biome.ExtraWaves[i][0] && Wave.Number <= Biome.ExtraWaves[i][1]) groups.Add(Biome.Extra[i]);
+            foreach (SpawnGroup g in groups)
             {
                 string enemyId = Setup.Substitutions.TryGetValue(g.Enemy, out string sub) ? sub : g.Enemy;
+                if (Biome.Substitutions.TryGetValue(enemyId, out string bsub) && Content.Enemies.ContainsKey(bsub)) enemyId = bsub;
                 if (!Content.Enemies.TryGetValue(enemyId, out EnemyDef def))
                     throw new InvalidOperationException("Wave " + Wave.Number + " references unknown enemy " + enemyId);
                 int count = g.Count;
                 if (swarmMod && !def.Boss) count += count / 4;
                 for (int i = 0; i < count; i++)
                 {
-                    int lane = g.Lane >= 0 ? g.Lane : lanes[(rotate + i) % lanes.Count];
+                    int lane = Biome.MapLane(g.Lane >= 0 ? g.Lane : lanes[(rotate + i) % lanes.Count], Wave.Number);
                     float jitter = g.Interval * rng.Range(-0.15f, 0.15f);
                     _schedule.Add(new ScheduledSpawn
                     {
@@ -218,6 +229,7 @@ namespace Aetherward.Sim.Combat
             UpdateZones(dt);
             UpdateStrikes(dt);
             UpdateTriggers(dt);
+            UpdateBiome(dt);
             RemoveDead();
 
             if (Enemies.Count > Stats.PeakEnemies) Stats.PeakEnemies = Enemies.Count;
@@ -258,7 +270,7 @@ namespace Aetherward.Sim.Combat
 
         public EnemyUnit SpawnEnemy(EnemyDef def, int laneIndex, bool elite, string affix, Vec2? at)
         {
-            List<LaneDef> lanes = Content.Arena.Lanes;
+            List<LaneDef> lanes = Arena.Lanes;
             laneIndex = ((laneIndex % lanes.Count) + lanes.Count) % lanes.Count;
             LaneDef lane = lanes[laneIndex];
             EnemyUnit e = _enemyPool.Count > 0 ? _enemyPool.Pop() : new EnemyUnit();
@@ -301,6 +313,7 @@ namespace Aetherward.Sim.Combat
             e.AttackTimer = def.AttackInterval * Rng.Range(0.3f, 1f);
             e.SpecialTimer = def.Params.Get("specialInterval", 6f) * Rng.Range(0.5f, 1f);
             Enemies.Add(e);
+            InitEnemyMechanics(e);
             Emit(SimEventType.EnemySpawn, e.Pos, Element.None, 0f, 0, e.Uid, def.Id);
             return e;
         }
@@ -508,7 +521,7 @@ namespace Aetherward.Sim.Combat
         /// <summary>Distance an enemy still has to travel to the crystal along its lane (leak threat).</summary>
         public float RemainingPath(EnemyUnit e)
         {
-            LaneDef lane = Content.Arena.Lanes[e.Lane];
+            LaneDef lane = Arena.Lanes[e.Lane];
             if (e.Waypoint >= lane.Points.Count) return Vec2.Distance(e.Pos, Crystal.Pos);
             float d = Vec2.Distance(e.Pos, lane.Points[e.Waypoint]);
             for (int i = e.Waypoint; i < lane.Points.Count - 1; i++) d += Vec2.Distance(lane.Points[i], lane.Points[i + 1]);
@@ -516,14 +529,29 @@ namespace Aetherward.Sim.Combat
         }
 
         /// <summary>Upcoming lanes for the preparation screen telegraph.</summary>
-        public static List<int> LanesForWave(WaveDef wave)
+        public static List<int> LanesForWave(WaveDef wave) => LanesForWave(wave, null);
+
+        /// <summary>Upcoming lanes (after the biome's lane schedule) for the preparation telegraph.</summary>
+        public static List<int> LanesForWave(WaveDef wave, BiomeDef biome)
         {
             var result = new List<int>();
+            void Add(int l)
+            {
+                int m = biome != null ? biome.MapLane(l, wave.Number) : l;
+                if (!result.Contains(m)) result.Add(m);
+            }
             foreach (SpawnGroup g in wave.Groups)
             {
-                if (g.Lane >= 0) { if (!result.Contains(g.Lane)) result.Add(g.Lane); }
-                else foreach (int l in wave.Lanes) if (!result.Contains(l)) result.Add(l);
+                if (g.Lane >= 0) Add(g.Lane);
+                else foreach (int l in wave.Lanes) Add(l);
             }
+            if (biome != null)
+                for (int i = 0; i < biome.Extra.Count; i++)
+                {
+                    if (wave.Number < biome.ExtraWaves[i][0] || wave.Number > biome.ExtraWaves[i][1]) continue;
+                    if (biome.Extra[i].Lane >= 0) Add(biome.Extra[i].Lane);
+                    else foreach (int l in wave.Lanes) Add(l);
+                }
             result.Sort();
             return result;
         }

@@ -24,7 +24,7 @@ namespace Aetherward.Sim.Meta
 
     public sealed class UnlockRule
     {
-        public string Id;          // content id unlocked (hero:x / relic:y)
+        public string Id;          // content id unlocked (hero:x / relic:y / biome:z)
         public string Condition;   // reach_wave | total_reactions | distinct_reactions | defeat_boss | victory | hero_runs
         public int Value;
         public string Param;
@@ -40,6 +40,7 @@ namespace Aetherward.Sim.Meta
 
         public readonly HashSet<string> UnlockedHeroes = new HashSet<string>();
         public readonly HashSet<string> UnlockedRelics = new HashSet<string>();
+        public readonly HashSet<string> UnlockedBiomes = new HashSet<string>();
         public readonly HashSet<string> Codex = new HashSet<string>();   // "reaction:x", "hero:y", "enemy:z", "relic:r", "fusion:f"
         public readonly Dictionary<string, int> HeroRuns = new Dictionary<string, int>();
         public readonly Dictionary<string, int> HeroWins = new Dictionary<string, int>();
@@ -74,7 +75,10 @@ namespace Aetherward.Sim.Meta
             new UnlockRule { Id = "relic:verdict_scale", Condition = "distinct_reactions", Value = 15 },
             new UnlockRule { Id = "relic:radiant_lens", Condition = "reach_wave", Value = 18 },
             new UnlockRule { Id = "relic:shadow_contract", Condition = "defeat_boss", Param = "ignaroth" },
-            new UnlockRule { Id = "relic:eclipse_engine", Condition = "victory", Value = 1 }
+            new UnlockRule { Id = "relic:eclipse_engine", Condition = "victory", Value = 1 },
+            // Expansion Phase 2: battlefields
+            new UnlockRule { Id = "biome:molten_crater", Condition = "reach_wave", Value = 7 },
+            new UnlockRule { Id = "biome:frostfall_bastion", Condition = "reach_wave", Value = 11 }
         };
 
         /// <summary>Highest Ascension that can be unlocked (data: difficulty.json).</summary>
@@ -85,6 +89,7 @@ namespace Aetherward.Sim.Meta
             var m = new MetaProfile();
             foreach (HeroDef h in db.HeroList) if (h.StarterUnlocked) m.UnlockedHeroes.Add(h.Id);
             foreach (RelicDef r in db.RelicList) if (r.StarterUnlocked && !r.Fusion) m.UnlockedRelics.Add(r.Id);
+            m.UnlockedBiomes.Add(db.DefaultBiome.Id);
             return m;
         }
 
@@ -176,8 +181,7 @@ namespace Aetherward.Sim.Meta
             var unlocked = new List<string>();
             foreach (UnlockRule rule in Rules)
             {
-                bool already = rule.Id.StartsWith("hero:") ? UnlockedHeroes.Contains(rule.Id.Substring(5)) : UnlockedRelics.Contains(rule.Id.Substring(6));
-                if (already) continue;
+                if (SetFor(rule.Id, out string key).Contains(key)) continue;
                 bool met;
                 switch (rule.Condition)
                 {
@@ -190,11 +194,23 @@ namespace Aetherward.Sim.Meta
                     default: met = false; break;
                 }
                 if (!met) continue;
-                if (rule.Id.StartsWith("hero:")) UnlockedHeroes.Add(rule.Id.Substring(5));
-                else UnlockedRelics.Add(rule.Id.Substring(6));
+                SetFor(rule.Id, out key).Add(key);
                 unlocked.Add(rule.Id);
             }
             return unlocked;
+        }
+
+        /// <summary>Unlock set for a rule id ("hero:x", "relic:y", "biome:z") and the bare content id.</summary>
+        private HashSet<string> SetFor(string ruleId, out string key)
+        {
+            int colon = ruleId.IndexOf(':');
+            key = ruleId.Substring(colon + 1);
+            switch (ruleId.Substring(0, colon))
+            {
+                case "hero": return UnlockedHeroes;
+                case "biome": return UnlockedBiomes;
+                default: return UnlockedRelics;
+            }
         }
     }
 }

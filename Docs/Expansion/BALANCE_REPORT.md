@@ -23,3 +23,21 @@ Mọi số liệu là **mô phỏng headless** (`Tools/SimHarness/Balance`, Auto
 ### Kết luận & độ tin cậy
 - Người chơi mới: hero mới **bị khoá** lúc đầu (mở dần theo meta) ⇒ trải nghiệm gần cột "launch pool" (~50–70% với lối chơi có định hướng).
 - Lối chơi toàn bộ nội dung thấp hơn mục tiêu; **chưa cân bằng xong** — để lại cho pass cân bằng tổng thể ở Phase 5 khi đủ 36 hero (KNOWN_ISSUES K-04). Độ tin cậy trung bình: AutoPilot không chơi tối ưu như người.
+
+## Phase 2a (14 kẻ địch + 2 boss + 2 biome)
+| Lối chơi | Trước Phase 2a | Sau (Verdant) | Molten Crater (20 seed) | Frostfall (20 seed) |
+|---|---|---|---|---|
+| thunderstorm | 13/30 | 12/30 | 9/20 | 9/20 |
+| frozen_fortress | 9/30 | 9/30 | 5/20 | 9/20 |
+| magma_engine | 14/30 | 12/30 | 7/20 | 5/20 |
+| mixed_burst | 14/30 | 12/30 | 11/20 | 7/20 |
+| glass_cannon | 7/30 | 5/30 | 1/20 | 2/20 |
+| eclipse | 5/30 | 2/30 | 6/20 | 1/20 |
+| engineers | 7/30 | 5/30 | 5/20 | 5/20 |
+| phoenix_gale | 7/30 | 8/30 | 0/20 | 4/20 |
+| balanced | 18/30 | 15/30 | 11/20 | 10/20 |
+| **Tổng** | 94/270 | 80/270 | 55/180 | 52/180 |
+
+- Lần trộn đầu kẻ địch mới vào đợt thường khiến Siege Colossus một mình gây 44 thất bại ở đợt 17 ⇒ giảm (HP 360, thủ 25, tầm 5.5 m, nã mỗi 6 s, sức 0.8×), lùi thời điểm xuất hiện; bớt Splitter/Burrower/Devourer ở đợt 6/13; Void Priest đợt 18 còn 1.
+- Molten ban đầu 2/180 vì ô đặt xa làn ⇒ dời ô (xem `BIOMES.md`).
+- Vẫn thấp hơn trước ~15% (nhiễu 30 seed khá lớn); điểm nghẽn chính vẫn là các đợt cũ (9, 14, 18 — Sapper). Hero Nature/Poison (Phase 2b) có phản chế trực tiếp (Rooted, Corroded). Cân bằng tổng ở Phase 5 (K-04).

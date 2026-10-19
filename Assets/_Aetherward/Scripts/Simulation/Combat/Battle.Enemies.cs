@@ -51,6 +51,7 @@ namespace Aetherward.Sim.Combat
             float speed = e.Speed * (1f - (e.SlowTimer > 0f ? e.SlowAmount : 0f)) * (1f + e.SpeedBuff);
             if (e.Chilled) speed *= 0.85f;
             if (e.RootTimer > 0f) speed = 0f; // rooted: holds position but can still attack in reach
+            speed *= MechanicSpeed(e);
             EnemyBehavior b = e.Def.Behavior;
 
             if (e.SealTimer <= 0f)
@@ -72,6 +73,12 @@ namespace Aetherward.Sim.Combat
             }
 
             if (b == EnemyBehavior.Ranged && UpdateRanged(e, speed, dt)) return;
+            if (e.Burrowed || IsFlying(e))
+            {
+                AdvanceOrAttackCrystal(e, speed, dt); // underground / airborne: ignores heroes
+                return;
+            }
+            if (UpdateSiege(e, dt)) return;
 
             if (b != EnemyBehavior.Sapper && b != EnemyBehavior.Runner && b != EnemyBehavior.Ranged)
             {
@@ -135,6 +142,7 @@ namespace Aetherward.Sim.Combat
             TickExpansionStatuses(e, dt);
             if (!e.Alive) return;
             UpdateEnemyAuras(e, dt);
+            UpdateEnemyMechanics(e, dt);
 
             if (e.BurnTimer > 0f)
             {
@@ -278,8 +286,9 @@ namespace Aetherward.Sim.Combat
                 return;
             }
 
-            LaneDef lane = Content.Arena.Lanes[e.Lane];
+            LaneDef lane = Arena.Lanes[e.Lane];
             Vec2 target = e.Waypoint < lane.Points.Count ? lane.Points[e.Waypoint] : Crystal.Pos;
+            if (IsFlying(e)) target = Crystal.Pos; // flyers cut straight over walls and lava
             if (Vec2.Distance(e.Pos, target) < 0.35f && e.Waypoint < lane.Points.Count)
             {
                 e.Waypoint++;
@@ -307,7 +316,7 @@ namespace Aetherward.Sim.Combat
 
         private void ClampToArena(EnemyUnit e)
         {
-            float hw = Content.Arena.HalfWidth + 1f, hh = Content.Arena.HalfHeight + 1f;
+            float hw = Arena.HalfWidth + 1f, hh = Arena.HalfHeight + 1f;
             e.Pos = new Vec2(SimMath.Clamp(e.Pos.X, -hw, hw), SimMath.Clamp(e.Pos.Y, -hh, hh));
         }
 
@@ -367,6 +376,8 @@ namespace Aetherward.Sim.Combat
                 case "golem": UpdateGolem(e, dt); break;
                 case "warden": UpdateWarden(e, dt); break;
                 case "ignaroth": UpdateIgnaroth(e, dt); break;
+                case "seraphyne": UpdateSeraphyne(e, dt); break;
+                case "gravemaw": UpdateGravemaw(e, dt); break;
             }
         }
 
@@ -473,14 +484,14 @@ namespace Aetherward.Sim.Combat
                 {
                     Emit(SimEventType.Telegraph, e.Pos, Element.None, 0.6f, e.Uid, 0, "summon", false, 2f);
                     int n = (int)p.Get("summonCount", 4f);
-                    for (int i = 0; i < n; i++) SpawnEnemy(add, (e.Lane + i) % Content.Arena.Lanes.Count, false, null, null);
+                    for (int i = 0; i < n; i++) SpawnEnemy(add, (e.Lane + i) % Arena.Lanes.Count, false, null, null);
                 }
             }
             else if (e.Phase == 1)
             {
                 e.SpecialTimer = p.Get("laneInterval", 9f);
-                int lane = Rng.Range(0, Content.Arena.Lanes.Count);
-                LaneDef l = Content.Arena.Lanes[lane];
+                int lane = Rng.Range(0, Arena.Lanes.Count);
+                LaneDef l = Arena.Lanes[lane];
                 Emit(SimEventType.Telegraph, l.Points[0], Element.None, 1.5f, e.Uid, lane, "lane_mark", false, 0f);
                 // Telegraphed strikes march down the lane; heroes standing on it take hits.
                 for (int i = 1; i < l.Points.Count; i++)

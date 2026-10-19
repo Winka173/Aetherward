@@ -70,6 +70,11 @@ namespace Aetherward.Sim.Combat
                     if (op.Op == "stat") Accumulate(op, 1, flat, pct);
             }
 
+            // Biome node traits (frozen tiles, heated bridges...) modify heroes standing on that node.
+            if (battle.Biome != null && battle.Biome.NodeTraitOps.TryGetValue(l.NodeIndex, out var nodeOps))
+                foreach (EffectOp op in nodeOps)
+                    if (op.Op == "stat") Accumulate(op, 1, flat, pct);
+
             ApplySkillOps(h, battle.Mods);
 
             foreach (SourcedOp s in battle.Mods.StatOps)
@@ -99,7 +104,7 @@ namespace Aetherward.Sim.Combat
             h.MaxHp = h.Stats[(int)StatId.MaxHp];
             h.Hp = h.MaxHp * SimMath.Clamp01(l.HpFraction);
             h.Radius = h.Melee ? 0.4f : 0.36f;
-            h.Anchor = l.NodeIndex >= 0 && l.NodeIndex < content.Arena.Nodes.Count ? content.Arena.Nodes[l.NodeIndex] : Vec2.Zero;
+            h.Anchor = l.NodeIndex >= 0 && l.NodeIndex < battle.Arena.Nodes.Count ? battle.Arena.Nodes[l.NodeIndex] : Vec2.Zero;
             h.Pos = h.Anchor;
             h.Facing = (Vec2.Zero - h.Anchor).SqrLength > 0.01f ? (h.Anchor - Vec2.Zero).Normalized : new Vec2(1f, 0f);
             h.AttackTimer = 0.2f + 0.1f * l.RosterIndex;

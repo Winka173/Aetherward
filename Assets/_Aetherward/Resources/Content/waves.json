@@ -20,8 +20,9 @@
       ] },
     { "wave": 4, "gold": 13, "lanes": [1, 3], "rewards": ["shop", "draft"], "timeLimit": 70,
       "groups": [
-        {"enemy": "runner", "count": 14, "start": 2.0, "interval": 0.9},
-        {"enemy": "grunt", "count": 8, "start": 4.0, "interval": 2.0}
+        {"enemy": "runner", "count": 10, "start": 2.0, "interval": 0.9},
+        {"enemy": "grunt", "count": 8, "start": 4.0, "interval": 2.0},
+        {"enemy": "goblin_sprinter", "count": 4, "start": 10.0, "interval": 1.6}
       ] },
     { "wave": 5, "gold": 14, "essence": 1, "lanes": [0, 1], "elite": true, "rewards": ["relic"], "timeLimit": 85,
       "groups": [
@@ -31,30 +32,34 @@
       ] },
     { "wave": 6, "gold": 15, "lanes": [0, 1, 2, 3], "rewards": ["draft"], "timeLimit": 80,
       "groups": [
-        {"enemy": "grunt", "count": 24, "start": 1.0, "interval": 0.88},
+        {"enemy": "grunt", "count": 20, "start": 1.0, "interval": 0.88},
         {"enemy": "runner", "count": 12, "start": 8.0, "interval": 0.8},
-        {"enemy": "hexcaster", "count": 6, "start": 14.0, "interval": 1.6}
+        {"enemy": "hexcaster", "count": 6, "start": 14.0, "interval": 1.6},
+        {"enemy": "spirit_splitter", "count": 2, "start": 12.0, "interval": 4.0}
       ] },
     { "wave": 7, "gold": 16, "lanes": [2, 3], "rewards": ["draft"], "timeLimit": 85,
       "groups": [
-        {"enemy": "shieldbearer", "count": 12, "start": 1.0, "interval": 1.92},
+        {"enemy": "shieldbearer", "count": 10, "start": 1.0, "interval": 1.92},
         {"enemy": "grunt", "count": 15, "start": 3.0, "interval": 1.28},
-        {"enemy": "juggernaut", "count": 3, "start": 16.0, "interval": 3.2}
+        {"enemy": "juggernaut", "count": 3, "start": 16.0, "interval": 3.2},
+        {"enemy": "ironback_golem", "count": 2, "start": 9.0, "interval": 5.0}
       ] },
     { "wave": 8, "gold": 17, "lanes": [0, 1, 4], "rewards": ["event", "draft"], "timeLimit": 85,
       "groups": [
         {"enemy": "grunt", "count": 18, "start": 1.0, "interval": 1.12},
-        {"enemy": "runner", "count": 9, "start": 6.0, "interval": 0.8},
+        {"enemy": "runner", "count": 6, "start": 6.0, "interval": 0.8},
         {"enemy": "hexcaster", "count": 3, "start": 10.0, "interval": 1.6},
         {"enemy": "mana_leech", "count": 2, "start": 11.0, "interval": 2.0},
-        {"enemy": "summoner", "count": 3, "start": 14.0, "interval": 4.0}
+        {"enemy": "summoner", "count": 3, "start": 14.0, "interval": 4.0},
+        {"enemy": "storm_harpy", "count": 3, "start": 12.0, "interval": 2.0}
       ] },
     { "wave": 9, "gold": 18, "lanes": [0, 1, 2, 3], "rewards": ["shop"], "timeLimit": 85, "modifiers": ["resistant_vanguard"],
       "groups": [
         {"enemy": "warded", "count": 6, "start": 1.0, "interval": 1.6, "affix": "fireproof"},
         {"enemy": "warded", "count": 6, "start": 6.0, "interval": 1.6, "affix": "frostproof"},
         {"enemy": "warded", "count": 5, "start": 12.0, "interval": 1.6, "affix": "stormproof"},
-        {"enemy": "grunt", "count": 15, "start": 2.0, "interval": 1.44}
+        {"enemy": "grunt", "count": 12, "start": 2.0, "interval": 1.44},
+        {"enemy": "void_priest", "count": 2, "start": 8.0, "interval": 6.0}
       ] },
     { "wave": 10, "bossPool": ["siegebreaker_golem", "ignaroth"], "gold": 22, "essence": 2, "lanes": [0, 1], "boss": true, "rewards": ["evolution"], "timeLimit": 150,
       "groups": [
@@ -64,31 +69,36 @@
       ] },
     { "wave": 11, "gold": 20, "lanes": [0, 2, 3], "elite": true, "rewards": ["draft"], "timeLimit": 85,
       "groups": [
-        {"enemy": "swarmling", "count": 45, "start": 1.0, "interval": 0.28},
+        {"enemy": "swarmling", "count": 38, "start": 1.0, "interval": 0.28},
         {"enemy": "summoner", "count": 3, "start": 5.0, "interval": 4.8},
-        {"enemy": "ravager", "count": 1, "lane": 2, "start": 16.0, "affix": "hasted"}
+        {"enemy": "ravager", "count": 1, "lane": 2, "start": 16.0, "affix": "hasted"},
+        {"enemy": "spore_carrier", "count": 4, "start": 8.0, "interval": 2.5}
       ] },
     { "wave": 12, "gold": 21, "lanes": [0, 1, 2, 3], "rewards": ["draft"], "timeLimit": 85,
       "groups": [
         {"enemy": "crystal_parasite", "count": 4, "start": 8.0, "interval": 1.4},
-        {"enemy": "hexcaster", "count": 15, "start": 2.0, "interval": 1.28},
+        {"enemy": "hexcaster", "count": 12, "start": 2.0, "interval": 1.28},
         {"enemy": "shieldbearer", "count": 12, "start": 1.0, "interval": 1.6},
-        {"enemy": "grunt", "count": 15, "start": 4.0, "interval": 1.28}
+        {"enemy": "grunt", "count": 15, "start": 4.0, "interval": 1.28},
+        {"enemy": "hex_binder", "count": 2, "start": 10.0, "interval": 5.0}
       ] },
     { "wave": 13, "gold": 22, "lanes": [0, 1, 2, 3], "rewards": ["draft"], "timeLimit": 85,
       "groups": [
         {"enemy": "sapper", "count": 12, "start": 3.0, "interval": 1.44},
         {"enemy": "juggernaut", "count": 4, "start": 1.0, "interval": 4.8},
-        {"enemy": "grunt", "count": 22, "start": 1.0, "interval": 1.12}
+        {"enemy": "grunt", "count": 17, "start": 1.0, "interval": 1.12},
+        {"enemy": "stone_burrower", "count": 2, "start": 10.0, "interval": 4.0},
+        {"enemy": "flame_devourer", "count": 1, "start": 14.0}
       ] },
     { "wave": 14, "gold": 23, "lanes": [0, 1, 2, 3, 4], "rewards": ["shop"], "timeLimit": 90,
       "groups": [
-        {"enemy": "grunt", "count": 26, "start": 1.0, "interval": 0.96},
+        {"enemy": "grunt", "count": 22, "start": 1.0, "interval": 0.96},
         {"enemy": "runner", "count": 15, "start": 6.0, "interval": 0.72},
         {"enemy": "hexcaster", "count": 9, "start": 8.0, "interval": 1.6},
         {"enemy": "shieldbearer", "count": 8, "start": 4.0, "interval": 2.4},
         {"enemy": "banner", "count": 4, "start": 12.0, "interval": 4.0},
-        {"enemy": "sapper", "count": 8, "start": 18.0, "interval": 1.6}
+        {"enemy": "sapper", "count": 8, "start": 18.0, "interval": 1.6},
+        {"enemy": "soul_binder", "count": 2, "start": 10.0, "interval": 6.0}
       ] },
     { "wave": 15, "gold": 24, "essence": 2, "lanes": [0, 1, 2, 3], "elite": true, "rewards": ["relic", "pact"], "timeLimit": 100,
       "groups": [
@@ -96,15 +106,17 @@
         {"enemy": "ravager", "count": 1, "lane": 0, "start": 6.0, "affix": "unyielding"},
         {"enemy": "ravager", "count": 1, "lane": 1, "start": 18.0, "affix": "bulwark"},
         {"enemy": "banner", "count": 6, "start": 4.0, "interval": 4.0},
-        {"enemy": "grunt", "count": 29, "start": 1.0, "interval": 0.96},
-        {"enemy": "juggernaut", "count": 4, "start": 10.0, "interval": 4.8}
+        {"enemy": "grunt", "count": 25, "start": 1.0, "interval": 0.96},
+        {"enemy": "juggernaut", "count": 4, "start": 10.0, "interval": 4.8},
+        {"enemy": "frost_wraith", "count": 3, "start": 12.0, "interval": 2.5}
       ] },
     { "wave": 16, "gold": 25, "lanes": [4, 5, 0, 1], "rewards": ["draft"], "timeLimit": 90, "modifiers": ["haste"],
       "groups": [
-        {"enemy": "runner", "count": 22, "lane": 4, "start": 2.0, "interval": 0.64},
+        {"enemy": "runner", "count": 18, "lane": 4, "start": 2.0, "interval": 0.64},
         {"enemy": "runner", "count": 22, "lane": 5, "start": 10.0, "interval": 0.64},
         {"enemy": "grunt", "count": 26, "start": 1.0, "interval": 1.04},
-        {"enemy": "sapper", "count": 11, "start": 14.0, "interval": 1.28}
+        {"enemy": "sapper", "count": 11, "start": 14.0, "interval": 1.28},
+        {"enemy": "goblin_sprinter", "count": 6, "start": 16.0, "interval": 1.0}
       ] },
     { "wave": 17, "gold": 26, "lanes": [0, 1, 2, 3], "rewards": ["draft"], "timeLimit": 95, "modifiers": ["adaptive_foes"],
       "groups": [
@@ -112,7 +124,8 @@
         {"enemy": "mimic", "count": 15, "start": 1.0, "interval": 2.0},
         {"enemy": "warded", "count": 11, "start": 4.0, "interval": 2.0, "affix": "windproof"},
         {"enemy": "banner", "count": 4, "start": 8.0, "interval": 4.8},
-        {"enemy": "grunt", "count": 22, "start": 2.0, "interval": 1.12}
+        {"enemy": "grunt", "count": 14, "start": 2.0, "interval": 1.12},
+        {"enemy": "siege_colossus", "count": 1, "start": 18.0}
       ] },
     { "wave": 18, "gold": 27, "lanes": [0, 1, 2, 3, 4, 5], "rewards": ["draft"], "timeLimit": 100,
       "groups": [
@@ -121,17 +134,20 @@
         {"enemy": "juggernaut", "count": 8, "start": 1.0, "interval": 3.2},
         {"enemy": "summoner", "count": 6, "start": 6.0, "interval": 3.2},
         {"enemy": "hexcaster", "count": 11, "start": 8.0, "interval": 1.44},
-        {"enemy": "grunt", "count": 18, "start": 1.0, "interval": 1.2}
+        {"enemy": "grunt", "count": 15, "start": 1.0, "interval": 1.2},
+        {"enemy": "void_priest", "count": 1, "start": 12.0}
       ] },
     { "wave": 19, "gold": 30, "essence": 1, "lanes": [0, 1, 2, 3, 4, 5], "rewards": ["shop"], "timeLimit": 105,
       "groups": [
-        {"enemy": "grunt", "count": 33, "start": 1.0, "interval": 0.8},
+        {"enemy": "grunt", "count": 29, "start": 1.0, "interval": 0.8},
         {"enemy": "runner", "count": 18, "start": 6.0, "interval": 0.64},
         {"enemy": "shieldbearer", "count": 11, "start": 3.0, "interval": 1.92},
         {"enemy": "hexcaster", "count": 11, "start": 9.0, "interval": 1.44},
         {"enemy": "mimic", "count": 8, "start": 12.0, "interval": 2.4},
         {"enemy": "banner", "count": 4, "start": 14.0, "interval": 4.0},
-        {"enemy": "ravager", "count": 1, "lane": 2, "start": 20.0}
+        {"enemy": "ravager", "count": 1, "lane": 2, "start": 20.0},
+        {"enemy": "storm_harpy", "count": 3, "start": 10.0, "interval": 1.6},
+        {"enemy": "soul_binder", "count": 1, "start": 15.0}
       ] },
     { "wave": 20, "gold": 0, "lanes": [0, 1, 2, 3], "boss": true, "rewards": [], "timeLimit": 240,
       "groups": [
