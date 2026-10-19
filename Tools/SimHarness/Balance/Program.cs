@@ -44,6 +44,8 @@ namespace Aetherward.Balance
             if (Array.IndexOf(args, "--no-crystal-evo") >= 0) Aetherward.Sim.Run.FeatureFlags.CrystalEvolution = false;
             if (Array.IndexOf(args, "--legacy-targeting") >= 0) Aetherward.Sim.Run.FeatureFlags.UtilityTargeting = false;
             if (Array.IndexOf(args, "--batch") >= 0) return Batch.Run(db, root, contentDir, args);
+            if (Array.IndexOf(args, "--encounters") >= 0) return Encounters.Run(db, root, args);
+            if (Array.IndexOf(args, "--soak") >= 0) return Encounters.Soak(db, root, args);
             if (Array.IndexOf(args, "--validate") >= 0) return Validate.Run(db, root);
             if (Array.IndexOf(args, "--breakdown") >= 0) return Breakdown.Run(db, root, args);
 
