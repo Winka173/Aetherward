@@ -16,6 +16,7 @@ CX = 160
 SKIN = {
     "fair": hex2rgb("#ffe0c8"), "light": hex2rgb("#f6c9a4"), "tan": hex2rgb("#d99a6c"),
     "brown": hex2rgb("#a8693f"), "deep": hex2rgb("#6e4127"),
+    "bark": hex2rgb("#b98d5e"),
 }
 
 ELEMENT = {
@@ -76,6 +77,27 @@ HEROES = {
     "borun": dict(element="earth", skin="deep", build="huge", outfit="apron", head="flat_cap", hair="#b0582a",
                   main="#5a7a9a", second="#7a5030", trim="#e0b060", prop="stone_gauntlet", eyes="#2a160a",
                   cap="#6e6a5c", backpack="plans"),
+    # ---- nature / poison expansion heroes (parts in the "nature & poison parts" section at the end of this file).
+    # evo_spec: per-branch spec overrides; the drawers also read spec["_evo"] for branch-specific gear.
+    "liora": dict(element="nature", skin="light", build="slim", outfit="moss_cloak", head="leaf_crown", hair="#9a4a2a",
+                  main="#4f8a3a", second="#7a5a3a", trim="#ff9cc6", prop="blossom_staff", eyes="#2a4a1a", dress="#efe6c8",
+                  evo_halo=False, evo_wings=False, downed_y=222,
+                  evo_spec={"A": dict(main="#3f7a32"), "B": dict(main="#79b85a", dress="#fffaf0")}),
+    "thalen": dict(element="nature", skin="bark", build="broad", outfit="bark_armor", head="antler_helm", hair="#5f9a34",
+                   main="#7a5534", second="#4f8a3a", trim="#c8e86a", prop="thorn_shield", eyes="#2a3a10",
+                   evo_wings=False, downed_y=218,
+                   evo_spec={"A": dict(prop="thorn_tower", main="#6a4a2c"),
+                             "B": dict(prop="thorn_whip", main="#94683e", stance_lean=5)}),
+    "vesper": dict(element="poison", skin="tan", build="normal", outfit="alchemist_coat", head="alchemist_goggles",
+                   hair="#d4cce6", main="#5a3d6e", second="#2e2a24", trim="#d9a441", prop="flask", eyes="#3a1a4a",
+                   evo_wings=False, downed_y=224,
+                   evo_spec={"A": dict(main="#4a3448"), "B": dict(main="#4a2f66")}),
+    "sable": dict(element="poison", skin="fair", build="lean", outfit="plague_robe", head="plague_beak", hair="#1c1a24",
+                  main="#2e2b36", second="#4a3a2a", trim="#8a7aa0", prop="censer", eyes="#2a1a3a", hat="#24212c",
+                  mask="#ece0c4", feather="#26222e", evo_wings=False, downed_y=226,
+                  evo_spec={"A": dict(main="#1e1b24", hat="#16141c", mask="#a89c86", feather="#18151e", trim="#ffd35a"),
+                            "B": dict(main="#f4f2ea", second="#6fbf4a", trim="#a8e030", hat="#f4f2ea", mask="#fffaf0",
+                                      feather="#d8dce0")}),
 }
 
 EVOLUTIONS = {
@@ -117,6 +139,8 @@ def torso_path(spec, m, lean=0.0):
     s, w, hp = m["shoulder"], m["waist"], m["hip"]
     top, bottom = 164, 250
     o = spec["outfit"]
+    if o in NAT_TORSO_SHAPES:
+        return nat_torso_path(spec, s, w, hp, top, lean)
     if o in EXT_TORSO_SHAPES:
         return ext_torso_path(o, s, w, hp, top, lean)
     if o in ("robe", "gown"):
@@ -483,7 +507,7 @@ def draw_prop(ctx, spec, hand, pose, element):
 
 # ============================================================================ assembly
 
-BETWEEN_ARMS_PROPS = ("tower_shield", "longbow", "sun_shield_sword", "crystal_shield_mace")
+BETWEEN_ARMS_PROPS = ("tower_shield", "longbow", "sun_shield_sword", "crystal_shield_mace", "thorn_shield", "thorn_tower")
 
 
 def hero_sprite(hero_id, pose="idle", evo=None, size=W):
@@ -494,6 +518,8 @@ def hero_sprite(hero_id, pose="idle", evo=None, size=W):
         spec["trim"] = "#ffd35a"
     elif evo == "B":
         spec["trim"] = "#%02x%02x%02x" % tuple(int(v * 255) for v in ec2)
+    spec.update(spec.get("evo_spec", {}).get(evo, {}))
+    spec["_evo"], spec["_pose"] = evo, pose
     cv = Canvas(size, size, size / W)
     ctx = cv.ctx
     m = build_metrics(spec["build"])
@@ -501,21 +527,21 @@ def hero_sprite(hero_id, pose="idle", evo=None, size=W):
     downed = pose == "downed"
     if downed:
         # lying on the ground: rotate the figure about its centre and shrink to fit the canvas
-        ctx.translate(CX, 236)
+        ctx.translate(CX, spec.get("downed_y", 236))
         ctx.rotate(-1.45)
         ctx.scale(0.72, 0.72)
         ctx.translate(-CX, -180)
-    lean = 6 if pose == "cast" else 0
+    lean = 6 if pose == "cast" else spec.get("stance_lean", 0)
 
     if evo:
         aura = ec2 if evo == "B" else hex2rgb("#ffd35a")
         glow(ctx, CX, 180, 150, aura, 0.38)
         if evo == "B":
-            for side in (-1, 1):
+            for side in (-1, 1) if spec.get("evo_wings", True) else ():
                 wing = [(CX + side * 30, 176), (CX + side * 120, 112), (CX + side * 142, 150), (CX + side * 118, 176),
                         (CX + side * 132, 206), (CX + side * 92, 210), (CX + side * 56, 214)]
                 paint(ctx, lambda c, wing=wing: smooth_closed(c, wing, 0.45), mix(ec2, (1, 1, 1), 0.35), lw=4.5, alpha=0.9, hi_size=0.7)
-        else:
+        elif spec.get("evo_halo", True):
             stroke(ctx, lambda c: ellipse_path(c, CX, 42, 48, 12), hex2rgb("#ffd35a"), 6)
             stroke(ctx, lambda c: ellipse_path(c, CX, 42, 48, 12), INK, 2)
 
@@ -583,6 +609,7 @@ def hero_sprite(hero_id, pose="idle", evo=None, size=W):
 
     if spec["prop"] not in BETWEEN_ARMS_PROPS:
         draw_prop(ctx, spec, right_hand, pose, element)
+    nat_front_fx(ctx, spec, pose)
 
     if pose == "cast":
         glow(ctx, left_hand[0], left_hand[1], 40, ec2, 0.75)
@@ -657,11 +684,13 @@ def portrait(hero_id, size=192):
 # New head / outfit / prop / back-item kinds used by the expansion heroes (seren, nyxara, ashara, nerissa,
 # voltrix, eirwen, kael, borun). The original drawing functions dispatch here through the EXT_* sets.
 
-EXT_HEADS = ("sun_helm", "crescent_hood", "plume_helm", "pearl_veil", "goggles_messy", "winged_helm", "topknot", "flat_cap")
-EXT_OUTFITS = ("tabard", "long_cloak", "phoenix_plate", "sea_robe", "engineer", "frost_plate", "wraps", "apron")
+EXT_HEADS = ("sun_helm", "crescent_hood", "plume_helm", "pearl_veil", "goggles_messy", "winged_helm", "topknot", "flat_cap",
+             "leaf_crown", "antler_helm", "alchemist_goggles", "plague_beak")
+EXT_OUTFITS = ("tabard", "long_cloak", "phoenix_plate", "sea_robe", "engineer", "frost_plate", "wraps", "apron",
+               "moss_cloak", "bark_armor", "alchemist_coat", "plague_robe")
 EXT_TORSO_SHAPES = ("long_cloak", "sea_robe")
 EXT_PROPS = ("sun_shield_sword", "chain_staff", "flame_sabre", "conch_staff", "wrench_staff", "crystal_shield_mace",
-             "war_fans", "stone_gauntlet")
+             "war_fans", "stone_gauntlet", "blossom_staff", "thorn_shield", "thorn_tower", "thorn_whip", "flask", "censer")
 
 STONE = hex2rgb("#8f8a86")
 BRASS = hex2rgb("#d9a441")
@@ -762,6 +791,8 @@ def ext_torso_detail(ctx, spec, m, lean):
                                                           (CX - side * 18, 226)]), wrap)
             stroke(ctx, lambda c, side=side: (c.move_to(CX + side * 40, 164), c.line_to(CX - side * 18, 226)), INK, 2.5)
             stroke(ctx, lambda c, side=side: (c.move_to(CX + side * 24, 164), c.line_to(CX - side * 34, 226)), INK, 2.5)
+    elif o in NAT_OUTFITS:
+        nat_torso_detail(ctx, spec, m, lean)
     elif o == "apron":
         # rolled shirt with a button placket
         stroke(ctx, lambda c: (c.move_to(CX, 166), c.line_to(CX, 200)), shade(main, 0.4), 3)
@@ -814,6 +845,8 @@ def ext_torso_overlay(ctx, spec, m, lean):
         # waist sash with a side knot
         paint(ctx, lambda c: smooth_closed(c, [(CX - 40, 222), (CX + 40, 222), (CX + 42, 240), (CX - 42, 240)], 0.3), sash, lw=4.5)
         paint(ctx, lambda c: ellipse_path(c, CX - 30, 232, 9, 9), light(sash, 0.2), lw=3.5, hi=False)
+    elif o in NAT_OUTFITS:
+        nat_torso_overlay(ctx, spec, m, lean)
     elif o == "apron":
         leather = second
         for side in (-1, 1):
@@ -846,6 +879,8 @@ def ext_shoulders(ctx, spec, m, lean):
             if o == "tabard":
                 stroke(ctx, lambda c, side=side: smooth_open(c, [(CX + side * (s - 22) + lean, 172), (CX + side * (s + 12) + lean, 178)]),
                        light(pad, 0.5), 3)
+    elif o in NAT_OUTFITS:
+        nat_shoulders(ctx, spec, m, lean)
     elif o == "phoenix_plate":
         ec, ec2 = ELEMENT[spec["element"]]
         for side in (-1, 1):
@@ -873,6 +908,7 @@ def ext_shoulders(ctx, spec, m, lean):
 def ext_back_items(ctx, spec, pose, lean):
     """Things worn on the back / trailing behind the body (drawn before hair-back and torso)."""
     ec, ec2 = ELEMENT[spec["element"]]
+    nat_back_items(ctx, spec, pose, lean)
     bp = spec.get("backpack")
     if bp == "coils":
         paint(ctx, lambda c: rrect_path(c, CX - 52, 150, 104, 72, 14), hex2rgb("#4a4a58"), lw=LW)
@@ -946,6 +982,8 @@ def ext_hair_back(ctx, spec):
         paint(ctx, lambda c: smooth_closed(c, [(CX - 60, 96), (CX + 60, 96), (CX + 72, 150), (CX + 80, 206), (CX + 58, 196),
                                                  (CX + 66, 220), (CX + 36, 206), (CX - 36, 206), (CX - 64, 222), (CX - 58, 196),
                                                  (CX - 80, 206), (CX - 72, 150)], 0.5), hair, lw=LW)
+    elif h in NAT_HEADS:
+        nat_hair_back(ctx, spec)
     elif h == "topknot":
         # ribbon tails, then the knot itself (its base is hidden by the front hair)
         for k, dy in enumerate((0, 14)):
@@ -1041,6 +1079,8 @@ def ext_hair_front(ctx, spec, element_color):
                                                  (CX - 50, 138)], 0.4), helm, lw=LW, hi_size=0.7)
         stroke(ctx, lambda c: smooth_open(c, [(CX - 56, 94), (CX, 82), (CX + 56, 94)]), second, 6)
         paint(ctx, lambda c: poly_path(c, [(CX, 54), (CX + 10, 70), (CX, 84), (CX - 10, 70)]), trim, lw=3.5, hi_size=0.6)
+    elif h in NAT_HEADS:
+        nat_hair_front(ctx, spec)
     elif h == "topknot":
         pts = [(CX - 60, 112), (CX - 58, 74), (CX - 26, 54), (CX + 20, 54), (CX + 56, 72), (CX + 62, 110), (CX + 48, 90),
                (CX + 30, 98), (CX + 22, 80), (CX - 6, 88), (CX - 26, 80), (CX - 44, 94)]
@@ -1219,6 +1259,8 @@ def ext_prop(ctx, spec, hand, pose, element):
             stroke(ctx, lambda c, ox=ox, oy=oy, ix=ix, iy=iy: (c.move_to(ox, oy), c.line_to(ix, iy)), (1, 1, 1), 2.5, 0.8)
         sparkle(ctx, sx - 18, sy - 44, 10)
         sparkle(ctx, sx + 16, sy + 30, 6)
+    elif kind in NAT_PROPS:
+        nat_prop(ctx, spec, hand, pose, element)
     elif kind == "war_fans":
         for side, (fx, fy) in ((1, rh), (-1, lh)):
             r = 46 if not cast else 54
@@ -1262,3 +1304,709 @@ def ext_prop(ctx, spec, hand, pose, element):
             for (px, py, r) in ((ox - 42, oy - 44, 7), (ox + 44, oy - 36, 6), (ox + 4, oy - 58, 5)):
                 paint(ctx, lambda c, px=px, py=py, r=r: poly_path(c, [(px - r, py), (px, py - r), (px + r, py + 2), (px, py + r)]),
                       STONE, lw=3, hi=False)
+
+
+# ============================================================================ nature & poison parts
+# Heroes liora (Grove Warden), thalen (Thornguard), vesper (Alchemist) and sable (Plague Doctor). Unlike the
+# earlier heroes, their evolutions change gear, not only trim/halo/wings: the drawers read spec["_evo"]
+# ("A" / "B" / None) and spec["_pose"], which hero_sprite sets after applying the hero's evo_spec overrides.
+
+NAT_HEADS = ("leaf_crown", "antler_helm", "alchemist_goggles", "plague_beak")
+NAT_OUTFITS = ("moss_cloak", "bark_armor", "alchemist_coat", "plague_robe")
+NAT_TORSO_SHAPES = ("moss_cloak", "alchemist_coat", "plague_robe")
+NAT_PROPS = ("blossom_staff", "thorn_shield", "thorn_tower", "thorn_whip", "flask", "censer")
+
+LEAF = hex2rgb("#4fae4a")
+LEAF_LIGHT = hex2rgb("#8fd65a")
+BLOSSOM_CORE = hex2rgb("#ffe36a")
+PALE_WOOD = hex2rgb("#dcc49a")
+DARK_WOOD = hex2rgb("#6a4426")
+GLASS = hex2rgb("#e4f6ff")
+MIASMA = hex2rgb("#8a4ac8")
+SMOKE = hex2rgb("#9a9aa4")
+
+
+def _leaf(ctx, x, y, ang, L, w, col, lw=3.0, vein=True):
+    ca, sa = math.cos(ang), math.sin(ang)
+    nx, ny = -sa, ca
+    tip = (x + ca * L, y + sa * L)
+    m1 = (x + ca * L * 0.45 + nx * w, y + sa * L * 0.45 + ny * w)
+    m2 = (x + ca * L * 0.45 - nx * w, y + sa * L * 0.45 - ny * w)
+    paint(ctx, lambda c: smooth_closed(c, [(x, y), m1, tip, m2], 0.55), col, lw=lw, hi=False, shade_amt=0.2)
+    if vein:
+        stroke(ctx, lambda c: (c.move_to(x + ca * L * 0.15, y + sa * L * 0.15), c.line_to(x + ca * L * 0.75, y + sa * L * 0.75)),
+               shade(col, 0.45), 1.8)
+
+
+def _blossom(ctx, x, y, r, col, glow_col=None, glow_a=0.0, glow_k=3.2):
+    if glow_col:
+        glow(ctx, x, y, r * glow_k, glow_col, glow_a)
+    for k in range(5):
+        a = -math.pi / 2 + k * 2 * math.pi / 5
+        paint(ctx, lambda c, a=a: ellipse_path(c, x + math.cos(a) * r * 0.72, y + math.sin(a) * r * 0.72, r * 0.62, r * 0.5, a),
+              col, lw=2.5, hi=False, shade_amt=0.15)
+    paint(ctx, lambda c: ellipse_path(c, x, y, r * 0.4, r * 0.4), BLOSSOM_CORE, lw=2, hi=False, shade_amt=0)
+
+
+def _thorn(ctx, x, y, ang, L, col, lw=2.5):
+    nx, ny = -math.sin(ang), math.cos(ang)
+    w = L * 0.4
+    paint(ctx, lambda c: poly_path(c, [(x + nx * w, y + ny * w), (x + math.cos(ang) * L, y + math.sin(ang) * L), (x - nx * w, y - ny * w)]),
+          col, lw=lw, hi=False, shade_amt=0)
+
+
+def _cloud(ctx, blobs, col, alpha=1.0, lw=3.5, hi_col=None):
+    """Union of circles with a single ink outline (smoke puffs, miasma, spore clouds)."""
+    def path(c):
+        for (x, y, r) in blobs:
+            ellipse_path(c, x, y, r, r)
+    ctx.push_group()
+    if lw > 0:
+        stroke(ctx, path, INK, lw * 2)
+    flat(ctx, path, col)
+    if hi_col:
+        flat(ctx, lambda c: [ellipse_path(c, x - r * 0.25, y - r * 0.3, r * 0.45, r * 0.35) for (x, y, r) in blobs], hi_col, 0.55)
+    ctx.pop_group_to_source()
+    ctx.paint_with_alpha(alpha)
+
+
+def _mushroom(ctx, x, y, r, cap, spot=(1, 0.97, 0.88), glow_col=None):
+    if glow_col:
+        glow(ctx, x, y, r * 2.6, glow_col, 0.55)
+    paint(ctx, lambda c: rrect_path(c, x - r * 0.3, y - r * 0.2, r * 0.6, r * 1.1, r * 0.25), hex2rgb("#f4ead2"), lw=2.5, hi=False)
+    paint(ctx, lambda c: smooth_closed(c, [(x - r, y), (x - r * 0.7, y - r * 0.75), (x, y - r * 0.95), (x + r * 0.7, y - r * 0.75),
+                                         (x + r, y), (x, y + r * 0.1)], 0.5), cap, lw=2.8, hi_size=0.6)
+    for (dx, dy, rr) in ((-0.4, -0.45, 0.17), (0.3, -0.6, 0.14), (0.55, -0.2, 0.11)):
+        flat(ctx, lambda c, dx=dx, dy=dy, rr=rr: ellipse_path(c, x + dx * r, y + dy * r, rr * r, rr * r), spot)
+
+
+def _cross(ctx, x, y, r, col, glow_a=0.7):
+    glow(ctx, x, y, r * 3.2, col, glow_a)
+    t = r * 0.38
+    pts = [(x - t, y - r), (x + t, y - r), (x + t, y - t), (x + r, y - t), (x + r, y + t), (x + t, y + t), (x + t, y + r),
+           (x - t, y + r), (x - t, y + t), (x - r, y + t), (x - r, y - t), (x - t, y - t)]
+    paint(ctx, lambda c: poly_path(c, pts), col, lw=2.5, hi_size=0.7, shade_amt=0.1)
+
+
+def _flask_vial(ctx, x, y, liquid, scale=1.0, lw=2.5):
+    w, h = 9 * scale, 18 * scale
+    paint(ctx, lambda c: rrect_path(c, x - w / 2, y - h / 2, w, h, w * 0.45), GLASS, lw=lw, hi=False, shade_amt=0.1)
+    flat(ctx, lambda c: rrect_path(c, x - w / 2 + 1.5, y - h * 0.05, w - 3, h * 0.5, w * 0.35), liquid)
+    paint(ctx, lambda c: rrect_path(c, x - w * 0.35, y - h / 2 - 5 * scale, w * 0.7, 6 * scale, 2), hex2rgb("#a8743a"), lw=2, hi=False)
+
+
+# ---------------------------------------------------------------------------- torso
+
+def nat_torso_path(spec, s, w, hp, top, lean):
+    o, evo = spec["outfit"], spec.get("_evo")
+    if o == "moss_cloak":
+        bottom = GROUND - 8
+        n = 9
+        hem = []
+        for i in range(n + 1):
+            t = i / float(n)
+            x = CX + hp + 26 - (2 * hp + 52) * t
+            hem.append((x, bottom - (0 if i % 2 == 0 else 16)))
+        pts = [(CX - s * 0.6 + lean, top - 2), (CX + s * 0.6 + lean, top - 2), (CX + s + 8 + lean * 0.6, top + 22),
+               (CX + hp + 12, 232)] + hem + [(CX - hp - 12, 232), (CX - s - 8 + lean * 0.6, top + 22)]
+        return lambda c: smooth_closed(c, pts, 0.25)
+    if o == "alchemist_coat":
+        bottom = 280
+        pts = [(CX - s * 0.6 + lean, top), (CX + s * 0.6 + lean, top), (CX + s + 4 + lean * 0.6, top + 16), (CX + w + 4, 214),
+               (CX + hp + 22, bottom), (CX + 18, bottom - 2), (CX, 246), (CX - 18, bottom - 2), (CX - hp - 22, bottom),
+               (CX - w - 4, 214), (CX - s - 4 + lean * 0.6, top + 16)]
+        if evo == "A":
+            # scorched, ragged tails
+            pts[4:10] = [(CX + hp + 22, bottom - 4), (CX + hp + 10, bottom - 14), (CX + hp, bottom), (CX + 18, bottom - 6), (CX, 246),
+                         (CX - 18, bottom - 6), (CX - hp + 2, bottom), (CX - hp - 10, bottom - 14), (CX - hp - 22, bottom - 4)]
+        return lambda c: smooth_closed(c, pts, 0.32)
+    # plague_robe
+    bottom = GROUND - 6
+    if evo == "A":
+        hem = [(CX + hp + 18, bottom - 4), (CX + hp + 4, bottom - 18), (CX + 26, bottom + 2), (CX + 10, bottom - 14), (CX - 8, bottom + 4),
+               (CX - 24, bottom - 14), (CX - hp - 4, bottom + 2), (CX - hp - 18, bottom - 6)]
+    else:
+        hem = [(CX + hp + 16, bottom - 2), (CX, bottom + 4), (CX - hp - 16, bottom - 2)]
+    pts = [(CX - s * 0.62 + lean, top), (CX + s * 0.62 + lean, top), (CX + s + lean * 0.6, top + 16), (CX + w + 4, 214)] + hem + \
+          [(CX - w - 4, 214), (CX - s + lean * 0.6, top + 16)]
+    return lambda c: smooth_closed(c, pts, 0.4 if evo != "A" else 0.25)
+
+
+def nat_torso_detail(ctx, spec, m, lean):
+    main, second, trim = hex2rgb(spec["main"]), hex2rgb(spec["second"]), hex2rgb(spec["trim"])
+    o, evo = spec["outfit"], spec.get("_evo")
+    ec, ec2 = ELEMENT[spec["element"]]
+    x0 = CX + lean * 0.3
+    if o == "moss_cloak":
+        dress = hex2rgb(spec.get("dress", "#efe6c8"))
+        flat(ctx, lambda c: poly_path(c, [(x0 - 6, 168), (x0 + 6, 168), (CX + 30, 300), (CX - 30, 300)]), dress)
+        for side in (-1, 1):
+            stroke(ctx, lambda c, side=side: (c.move_to(x0 + side * 6, 168), c.line_to(CX + side * 30, 300)), INK, 3)
+        # moss texture
+        for (dx, dy, r) in ((-44, 190, 6), (-30, 238, 5), (-58, 262, 7), (40, 200, 5), (52, 248, 7), (28, 270, 5), (-48, 222, 4)):
+            flat(ctx, lambda c, dx=dx, dy=dy, r=r: ellipse_path(c, CX + dx, dy, r, r * 0.8), shade(main, 0.35), 0.8)
+            flat(ctx, lambda c, dx=dx, dy=dy, r=r: ellipse_path(c, CX + dx - 2, dy - 2, r * 0.5, r * 0.4), light(main, 0.3), 0.8)
+        # vine belt
+        vine = [(CX - 70, 222), (CX - 24, 230), (CX + 20, 226), (CX + 70, 218)]
+        outlined_line(ctx, vine, hex2rgb("#3f7a2a"), 5, 10)
+        for (x, y, a) in ((CX - 40, 228, 2.2), (CX + 6, 228, 0.9), (CX + 44, 222, 2.4)):
+            _leaf(ctx, x, y, a, 16, 6, LEAF_LIGHT, lw=2.5, vein=False)
+        if evo == "B":
+            # healer's satchel with a leaf cross
+            paint(ctx, lambda c: rrect_path(c, CX + 18, 232, 26, 22, 6), hex2rgb("#c89a5a"), lw=3, hi=False)
+            _cross(ctx, CX + 31, 243, 6, LEAF, glow_a=0.0)
+    elif o == "bark_armor":
+        if evo == "B":
+            # light leather jerkin crossed with vine straps
+            for side in (-1, 1):
+                outlined_line(ctx, [(CX + side * 44, 168), (CX - side * 30, 236)], hex2rgb("#3f7a2a"), 7, 13, smooth=False)
+                for t in (0.3, 0.65):
+                    px, py = CX + side * 44 + (-side * 74) * t, 168 + 68 * t
+                    _thorn(ctx, px, py, -math.pi / 2 - side * 0.6, 9, PALE_WOOD, lw=2)
+        else:
+            plate = light(main, 0.18)
+            chest = [(CX - 38, 174), (CX + 38, 174), (CX + 34, 226), (CX, 240), (CX - 34, 226)]
+            paint(ctx, lambda c: smooth_closed(c, chest, 0.35), plate, lw=4, hi_size=0.6)
+            # bark grain
+            for (a, b) in (((CX - 22, 182), (CX - 18, 226)), ((CX - 4, 180), (CX - 2, 236)), ((CX + 16, 182), (CX + 20, 224))):
+                stroke(ctx, lambda c, a=a, b=b: smooth_open(c, [a, ((a[0] + b[0]) / 2 + 4, (a[1] + b[1]) / 2), b]), shade(plate, 0.4), 3)
+            # moss on the plate
+            _cloud(ctx, [(CX - 26, 178, 9), (CX - 12, 176, 8), (CX + 24, 180, 7)], second, lw=2)
+            if evo == "A":
+                # second, heavier layer of bark plates on the belly
+                for i in range(2):
+                    y = 222 + i * 12
+                    paint(ctx, lambda c, y=y: rrect_path(c, CX - 52, y, 104, 14, 6), shade(main, 0.1), lw=3.5, hi=False)
+        flat(ctx, lambda c: rrect_path(c, CX - 60, 236, 120, 12, 5), DARK_WOOD)
+        stroke(ctx, lambda c: rrect_path(c, CX - 60, 236, 120, 12, 5), INK, 3)
+        _leaf(ctx, CX - 8, 242, -0.3, 18, 7, trim, lw=2.5, vein=False)
+    elif o == "alchemist_coat":
+        vest = second
+        flat(ctx, lambda c: poly_path(c, [(x0 - 18, 166), (x0 + 18, 166), (CX + 14, 248), (CX - 14, 248)]), vest)
+        for side in (-1, 1):
+            stroke(ctx, lambda c, side=side: smooth_open(c, [(x0 + side * 18, 166), (x0 + side * 26, 196), (CX + side * 14, 248)]), INK, 3)
+        for i in range(3):
+            paint(ctx, lambda c, i=i: ellipse_path(c, CX + 1, 196 + i * 16, 3.5, 3.5), trim, lw=2, hi=False, shade_amt=0)
+        # pockets
+        for side in (-1, 1):
+            paint(ctx, lambda c, side=side: rrect_path(c, CX + side * 40 - 11, 232, 22, 16, 4), shade(main, 0.2), lw=3, hi=False)
+        if evo == "A":
+            for (dx, dy, r) in ((-46, 262, 13), (40, 250, 11), (-30, 206, 8), (52, 214, 9), (10, 266, 9)):
+                flat(ctx, lambda c, dx=dx, dy=dy, r=r: ellipse_path(c, CX + dx, dy, r, r * 0.8), hex2rgb("#1e1418"), 0.7)
+                stroke(ctx, lambda c, dx=dx, dy=dy, r=r: ellipse_path(c, CX + dx, dy, r * 0.75, r * 0.6), hex2rgb("#ff8a2a"), 1.8, 0.75)
+        else:
+            # old potion stain
+            flat(ctx, lambda c: smooth_closed(c, [(CX - 52, 252), (CX - 38, 246), (CX - 30, 258), (CX - 40, 266), (CX - 54, 262)], 0.5), ec, 0.55)
+    elif o == "plague_robe":
+        stroke(ctx, lambda c: (c.move_to(x0, 170), c.line_to(CX, 300)), shade(main, 0.45), 3)
+        belt = hex2rgb("#4a3a2a") if evo != "B" else second
+        flat(ctx, lambda c: rrect_path(c, CX - 60, 222, 120, 12, 5), belt)
+        stroke(ctx, lambda c: rrect_path(c, CX - 60, 222, 120, 12, 5), INK, 3)
+        for x in (CX - 38, CX + 22):
+            paint(ctx, lambda c, x=x: rrect_path(c, x, 230, 16, 18, 5), shade(belt, 0.1) if evo != "B" else light(second, 0.2), lw=3, hi=False)
+        if evo == "B":
+            for side in (-1, 1):
+                stroke(ctx, lambda c, side=side: (c.move_to(x0 + side * 12, 236), c.line_to(CX + side * 20, 300)), second, 6)
+
+
+def nat_torso_overlay(ctx, spec, m, lean):
+    o, evo = spec["outfit"], spec.get("_evo")
+    ec, ec2 = ELEMENT[spec["element"]]
+    trim = hex2rgb(spec["trim"])
+    if o == "moss_cloak":
+        if evo == "A":
+            # wild overhanging leaves along the hem
+            for i in range(7):
+                x = CX - 70 + i * 23
+                _leaf(ctx, x, 262 + (i % 2) * 6, math.pi / 2 + (i - 3) * 0.18, 26, 9, LEAF if i % 2 else LEAF_LIGHT, lw=3)
+        elif evo == "B":
+            for (x, y, r) in ((CX - 58, 278, 11), (CX + 52, 276, 9), (CX - 36, 284, 7)):
+                _mushroom(ctx, x, y, r, hex2rgb("#c8553d"))
+    elif o == "alchemist_coat":
+        # bandolier of flasks from the left shoulder to the right hip
+        a, b = (CX - 44 + lean, 166), (CX + 48, 244)
+        outlined_line(ctx, [a, b], hex2rgb("#6a4428"), 9, 15, smooth=False)
+        liquids = (ec, MIASMA, ec, hex2rgb("#ff8a2a") if evo == "A" else MIASMA)
+        if evo == "B":
+            liquids = (MIASMA, ec, MIASMA, MIASMA)
+        for k, t in enumerate((0.18, 0.4, 0.62, 0.84)):
+            x, y = a[0] + (b[0] - a[0]) * t, a[1] + (b[1] - a[1]) * t
+            glow(ctx, x, y, 16, liquids[k], 0.45)
+            _flask_vial(ctx, x, y - 2, liquids[k])
+            if evo == "A" and k % 2 == 0:
+                sparkle(ctx, x + 8, y - 18, 7, hex2rgb("#ffe36a"))
+        paint(ctx, lambda c: rrect_path(c, CX + 38, 236, 20, 16, 4), BRASS, lw=3, hi=False)
+    elif o == "plague_robe" and evo == "A":
+        # a third censer hanging from the belt
+        _censer(ctx, CX - 30, 262, 11, spec, chain_from=(CX - 30, 232))
+
+
+def nat_shoulders(ctx, spec, m, lean):
+    main, second, trim = hex2rgb(spec["main"]), hex2rgb(spec["second"]), hex2rgb(spec["trim"])
+    o, evo = spec["outfit"], spec.get("_evo")
+    s = m["shoulder"]
+    if o == "moss_cloak":
+        # leaf collar around the neck, blossom clasp
+        n = 9 if evo != "A" else 11
+        for i in range(n):
+            t = i / float(n - 1)
+            x = CX - 54 + 108 * t + lean
+            y = 166 + 8 * math.sin(t * math.pi)
+            ang = math.pi / 2 + (0.5 - t) * 1.9
+            _leaf(ctx, x, y - 4, ang, 30 if evo != "A" else 36, 10, LEAF if i % 2 else LEAF_LIGHT, lw=3)
+        if evo == "A":
+            # twigs sprouting from the shoulders
+            for side in (-1, 1):
+                outlined_line(ctx, [(CX + side * (s - 6) + lean, 170), (CX + side * (s + 14) + lean, 150), (CX + side * (s + 20) + lean, 132)],
+                              DARK_WOOD, 5, 10)
+                _leaf(ctx, CX + side * (s + 20) + lean, 132, -math.pi / 2 + side * 0.6, 18, 7, LEAF_LIGHT, lw=2.5, vein=False)
+        _blossom(ctx, CX + lean, 176, 9, trim)
+    elif o == "bark_armor":
+        if evo == "B":
+            # light leaf pauldrons
+            for side in (-1, 1):
+                for k in range(3):
+                    _leaf(ctx, CX + side * (s - 22 + k * 10) + lean, 168 + k * 4, math.pi / 2 - side * (0.9 + k * 0.25), 30, 10,
+                          second if k % 2 else LEAF_LIGHT, lw=3)
+            return
+        big = 1.25 if evo == "A" else 1.0
+        for side in (-1, 1):
+            ox = CX + side * (s - 8) + lean
+            pad = [(ox - side * 24, 160 - 6 * big), (ox + side * 22 * big, 160), (ox + side * 26 * big, 196 + 6 * big), (ox - side * 10, 194)]
+            for k, (dx, ang) in enumerate(((-10, -1.9), (4, -1.57), (18, -1.2))):
+                if side < 0:
+                    ang = -math.pi - ang
+                _thorn(ctx, ox + side * dx * big, 162 - 2 * big, ang, 16 * big, PALE_WOOD)
+            paint(ctx, lambda c, pad=pad: smooth_closed(c, pad, 0.5), main, lw=LW, hi_size=0.6)
+            stroke(ctx, lambda c, ox=ox: smooth_open(c, [(ox - side * 12, 172), (ox + side * 6, 178), (ox + side * 16, 190)]), shade(main, 0.4), 3)
+            _cloud(ctx, [(ox - side * 10, 162, 9), (ox + side * 6, 160, 9), (ox + side * 18, 164, 7)], second, lw=2)
+            if evo == "A":
+                paint(ctx, lambda c, ox=ox: smooth_closed(c, [(ox - side * 6, 188), (ox + side * 30, 190), (ox + side * 30, 212), (ox - side * 2, 208)], 0.5),
+                      shade(main, 0.15), lw=4.5, hi=False)
+    elif o == "alchemist_coat":
+        # high stiff collar
+        col = shade(main, 0.15)
+        for side in (-1, 1):
+            paint(ctx, lambda c, side=side: smooth_closed(c, [(CX + side * 12 + lean, 170), (CX + side * 44 + lean, 136),
+                                                               (CX + side * 58 + lean, 150), (CX + side * 42 + lean, 180)], 0.4),
+                  col, lw=4.5, hi=False)
+    elif o == "plague_robe":
+        # raven-feather mantle over the shoulders
+        fe = hex2rgb(spec.get("feather", "#26222e"))
+        sheen = hex2rgb("#7a5aa8") if evo != "B" else hex2rgb("#ffffff")
+        rows = ((0, 13, 50, 11), (1, 9, 34, 10)) if evo != "A" else ((0, 15, 60, 12), (1, 11, 40, 10))
+        for row, n, L, wdt in rows:
+            span = s + 26 - row * 16
+            for i in range(n):
+                t = i / float(n - 1)
+                x = CX - span + 2 * span * t + lean
+                y = 160 + row * 2 + 10 * math.sin(t * math.pi)
+                ang = math.pi / 2 + (0.5 - t) * 1.6
+                col = fe if (i + row) % 2 == 0 else light(fe, 0.12)
+                _leaf(ctx, x, y, ang, L, wdt, col, lw=3, vein=False)
+                stroke(ctx, lambda c, x=x, y=y, ang=ang, L=L: (c.move_to(x + math.cos(ang) * L * 0.2, y + math.sin(ang) * L * 0.2),
+                                                             c.line_to(x + math.cos(ang) * L * 0.7, y + math.sin(ang) * L * 0.7)),
+                       sheen, 1.8, 0.6)
+
+
+def nat_back_items(ctx, spec, pose, lean):
+    evo = spec.get("_evo")
+    if spec["outfit"] == "alchemist_coat" and evo == "B":
+        # swirling purple miasma behind the alchemist
+        _cloud(ctx, [(CX - 96, 210, 30), (CX - 70, 168, 26), (CX - 92, 252, 26), (CX + 96, 200, 30), (CX + 74, 160, 24),
+                     (CX + 98, 246, 26), (CX - 40, 120, 22), (CX + 46, 112, 22), (CX, 96, 26)], MIASMA, alpha=0.55, lw=2.5,
+               hi_col=light(MIASMA, 0.5))
+        for k in range(3):
+            r = 92 + k * 14
+            stroke(ctx, lambda c, r=r, k=k: c.arc(CX, 196, r, math.pi * (0.8 + k * 0.3), math.pi * (1.5 + k * 0.3)), light(MIASMA, 0.4), 4, 0.7)
+    elif spec["outfit"] == "plague_robe" and evo == "A":
+        _cloud(ctx, [(CX - 90, 150, 30), (CX - 104, 200, 26), (CX + 92, 136, 28), (CX + 102, 186, 24), (CX - 60, 104, 24), (CX + 64, 96, 24)],
+               hex2rgb("#5a6a2a"), alpha=0.5, lw=2.5)
+    elif spec["outfit"] == "plague_robe" and evo == "B":
+        glow(ctx, CX, 150, 140, hex2rgb("#e8ffd0"), 0.45)
+
+
+def nat_front_fx(ctx, spec, pose):
+    if spec["head"] not in NAT_HEADS:
+        return
+    evo = spec.get("_evo")
+    ec, ec2 = ELEMENT[spec["element"]]
+    cast = pose == "cast"
+    if spec["head"] == "leaf_crown" and evo == "B":
+        # glowing spores floating around the healer
+        for (x, y, r) in ((58, 116, 7), (40, 182, 5), (70, 250, 6), (272, 158, 5), (286, 236, 7), (96, 54, 5), (258, 262, 4),
+                          (34, 226, 4)):
+            glow(ctx, x, y, r * 3.6, ec2, 0.6)
+            paint(ctx, lambda c, x=x, y=y, r=r: ellipse_path(c, x, y, r, r), light(ec2, 0.4), lw=2.5, hi=False, shade_amt=0)
+    elif spec["head"] == "leaf_crown" and evo == "A":
+        for (x, y, a) in ((54, 98, 0.6), (40, 200, -0.4), (284, 186, 2.6)):
+            _leaf(ctx, x, y, a, 20, 7, LEAF_LIGHT, lw=2.5)
+    elif spec["head"] == "alchemist_goggles" and evo == "B":
+        _cloud(ctx, [(CX - 70, 284, 18), (CX - 36, 290, 16), (CX + 40, 290, 16), (CX + 74, 282, 18)], MIASMA, alpha=0.5, lw=2)
+        for (x, y) in ((CX - 108, 120), (CX + 104, 132), (CX - 112, 214)):
+            stroke(ctx, lambda c, x=x, y=y: smooth_open(c, [(x - 10, y + 6), (x, y - 6), (x + 10, y), (x + 4, y + 8), (x - 2, y + 2)]),
+                   light(MIASMA, 0.3), 3.5, 0.85)
+    elif spec["head"] == "plague_beak" and evo == "B":
+        for (x, y, r) in ((60, 110, 8), (264, 100, 6), (48, 196, 6)):
+            sparkle(ctx, x, y, r, hex2rgb("#f4ffe0"))
+
+
+# ---------------------------------------------------------------------------- heads
+
+def nat_hair_back(ctx, spec):
+    hair = hex2rgb(spec["hair"])
+    h, evo = spec["head"], spec.get("_evo")
+    ec, ec2 = ELEMENT[spec["element"]]
+    if h == "leaf_crown":
+        paint(ctx, lambda c: smooth_closed(c, [(CX - 58, 96), (CX + 58, 96), (CX + 68, 160), (CX + 76, 214), (CX + 50, 204),
+                                                 (CX + 28, 184), (CX - 28, 184), (CX - 50, 206), (CX - 78, 214), (CX - 68, 160)], 0.5),
+              hair, lw=LW)
+        if evo == "A":
+            # antler-like branches rising from the crown
+            for side in (-1, 1):
+                main_b = [(CX + side * 30, 78), (CX + side * 50, 54), (CX + side * 58, 28)]
+                outlined_line(ctx, main_b, DARK_WOOD, 9, 16)
+                for (a, b) in (((CX + side * 46, 60), (CX + side * 82, 48)), ((CX + side * 54, 40), (CX + side * 80, 24)),
+                               ((CX + side * 40, 66), (CX + side * 30, 40))):
+                    outlined_line(ctx, [a, b], DARK_WOOD, 6, 12, smooth=False)
+                _leaf(ctx, CX + side * 82, 48, -math.pi / 2 + side * 1.1, 20, 7, LEAF_LIGHT, lw=2.5, vein=False)
+                _blossom(ctx, CX + side * 80, 24, 9, hex2rgb("#ff9cc6"), ec2, 0.6)
+                _blossom(ctx, CX + side * 58, 28, 7, hex2rgb("#ff9cc6"), ec2, 0.5)
+    elif h == "antler_helm":
+        big = 1.25 if evo == "A" else 1.0
+        for side in (-1, 1):
+            base = (CX + side * 40, 72)
+            tip = (CX + side * 82 * big, 12 if big == 1.0 else 18)
+            mid = (CX + side * 64 * big, 46)
+            outlined_line(ctx, [base, mid, tip], PALE_WOOD, 11, 18)
+            for (a, b) in (((CX + side * 56 * big, 54), (CX + side * 52 * big, 18)),
+                           ((CX + side * 72 * big, 32), (CX + side * 104 * min(big, 1.12), 22))):
+                outlined_line(ctx, [a, b], PALE_WOOD, 8, 14, smooth=False)
+            _leaf(ctx, CX + side * 52 * big, 22, -math.pi / 2 - side * 0.5, 18, 7, LEAF_LIGHT, lw=2.5, vein=False)
+            _leaf(ctx, mid[0], mid[1], -math.pi / 2 + side * 1.2, 20, 7, LEAF, lw=2.5, vein=False)
+    elif h == "alchemist_goggles":
+        paint(ctx, lambda c: smooth_closed(c, [(CX - 62, 92), (CX + 62, 92), (CX + 70, 150), (CX + 52, 160), (CX - 52, 160),
+                                                 (CX - 70, 150)], 0.5), shade(hair, 0.15), lw=LW)
+    elif h == "plague_beak":
+        hood = shade(hex2rgb(spec.get("hat", "#24212c")), 0.1)
+        paint(ctx, lambda c: smooth_closed(c, [(CX - 68, 162), (CX - 74, 100), (CX - 54, 64), (CX, 56), (CX + 54, 64),
+                                                 (CX + 74, 100), (CX + 68, 162), (CX, 170)], 0.5), hood, lw=LW)
+
+
+def nat_hair_front(ctx, spec):
+    hair = hex2rgb(spec["hair"])
+    main, second, trim = hex2rgb(spec["main"]), hex2rgb(spec["second"]), hex2rgb(spec["trim"])
+    h, evo, pose = spec["head"], spec.get("_evo"), spec.get("_pose")
+    ec, ec2 = ELEMENT[spec["element"]]
+    downed = pose == "downed"
+    if h == "leaf_crown":
+        pts = [(CX - 62, 124), (CX - 60, 80), (CX - 30, 56), (CX + 10, 52), (CX + 48, 62), (CX + 64, 92), (CX + 64, 126),
+               (CX + 50, 100), (CX + 34, 84), (CX + 10, 96), (CX - 12, 82), (CX - 40, 96)]
+        paint(ctx, lambda c: smooth_closed(c, pts, 0.45), hair, lw=LW)
+        if evo == "B":
+            # mushroom-cap hat with glowing spots
+            cap = hex2rgb("#c8553d")
+            glow(ctx, CX, 70, 110, ec2, 0.35)
+            paint(ctx, lambda c: smooth_closed(c, [(CX - 88, 86), (CX - 74, 46), (CX - 34, 18), (CX + 34, 18), (CX + 74, 46),
+                                                     (CX + 88, 86), (CX + 44, 94), (CX, 96), (CX - 44, 94)], 0.5), cap, lw=LW, hi_size=0.6)
+            stroke(ctx, lambda c: smooth_open(c, [(CX - 80, 86), (CX - 40, 92), (CX, 93), (CX + 40, 92), (CX + 80, 86)]), hex2rgb("#f4e6c8"), 4)
+            for (x, y, r) in ((CX - 46, 50, 10), (CX + 6, 34, 12), (CX + 52, 56, 9), (CX - 14, 70, 7), (CX + 30, 76, 6), (CX - 66, 74, 6)):
+                glow(ctx, x, y, r * 2.4, ec2, 0.5)
+                paint(ctx, lambda c, x=x, y=y, r=r: ellipse_path(c, x, y, r, r * 0.85), light(ec2, 0.55), lw=2.5, hi=False, shade_amt=0)
+            _leaf(ctx, CX + 70, 82, 0.5, 22, 8, LEAF_LIGHT, lw=2.5)
+        else:
+            n = 11
+            for i in range(n):
+                t = i / float(n - 1)
+                x = CX - 62 + 124 * t
+                y = 92 - 22 * math.sin(math.pi * t)
+                ang = -math.pi / 2 + (t - 0.5) * 2.2
+                _leaf(ctx, x, y, ang, 28 if i % 2 else 22, 9, LEAF if i % 2 else LEAF_LIGHT, lw=3)
+            stroke(ctx, lambda c: smooth_open(c, [(CX - 62, 94), (CX - 30, 76), (CX, 70), (CX + 30, 76), (CX + 62, 94)]), INK, 8)
+            stroke(ctx, lambda c: smooth_open(c, [(CX - 62, 94), (CX - 30, 76), (CX, 70), (CX + 30, 76), (CX + 62, 94)]), DARK_WOOD, 4)
+            big = evo == "A"
+            for (x, y, r) in ((CX - 38, 80, 8), (CX, 70, 11), (CX + 38, 80, 8)):
+                _blossom(ctx, x, y, r * (1.3 if big else 1.0), trim if not big else hex2rgb("#ff9cc6"), ec2 if big else None, 0.6)
+    elif h == "antler_helm":
+        beard = hair
+        # mossy beard first (covers mouth), then the bark helm
+        paint(ctx, lambda c: smooth_closed(c, [(CX - 50, 126), (CX - 40, 156), (CX - 20, 176), (CX, 184), (CX + 20, 176),
+                                                 (CX + 40, 156), (CX + 50, 126), (CX + 30, 138), (CX, 140), (CX - 30, 138)], 0.45),
+              beard, lw=LW - 1, hi_pos=(-0.2, 0.1))
+        for (x, y) in ((CX - 24, 156), (CX + 8, 166), (CX + 28, 150)):
+            _leaf(ctx, x, y, math.pi / 2 + (0.3 if x > CX else -0.3), 14, 5, LEAF_LIGHT, lw=2, vein=False)
+        stroke(ctx, lambda c: smooth_open(c, [(CX - 8, 146), (CX, 150), (CX + 8, 146)]), INK, 3)
+        helm = hex2rgb(spec["main"])
+        paint(ctx, lambda c: smooth_closed(c, [(CX - 68, 134), (CX - 66, 72), (CX - 30, 46), (CX + 30, 46), (CX + 66, 72),
+                                                 (CX + 68, 134), (CX + 50, 120), (CX + 46, 96), (CX, 88), (CX - 46, 96),
+                                                 (CX - 50, 120)], 0.4), helm, lw=LW, hi_size=0.7)
+        for (a, b) in (((CX - 36, 56), (CX - 42, 86)), ((CX - 8, 50), (CX - 6, 84)), ((CX + 24, 52), (CX + 30, 84))):
+            stroke(ctx, lambda c, a=a, b=b: smooth_open(c, [a, ((a[0] + b[0]) / 2 + 3, (a[1] + b[1]) / 2), b]), shade(helm, 0.45), 3)
+        # moss band on the brim with a glowing seed gem
+        _cloud(ctx, [(CX - 50, 96, 9), (CX - 30, 90, 10), (CX - 8, 88, 9), (CX + 14, 88, 10), (CX + 36, 92, 9), (CX + 54, 98, 8)],
+               second, lw=2.5, hi_col=light(second, 0.4))
+        glow(ctx, CX, 74, 22, ec2, 0.7)
+        paint(ctx, lambda c: smooth_closed(c, [(CX, 60), (CX + 9, 74), (CX, 86), (CX - 9, 74)], 0.4), trim, lw=3, hi_size=0.6)
+    elif h == "alchemist_goggles":
+        # swept silver hair with one long lock, goggles worn over the eyes
+        pts = [(CX - 62, 118), (CX - 66, 80), (CX - 40, 54), (CX - 4, 46), (CX + 34, 50), (CX + 62, 70), (CX + 78, 96),
+               (CX + 66, 98), (CX + 64, 120), (CX + 50, 92), (CX + 22, 84), (CX - 4, 92), (CX - 26, 82), (CX - 46, 100)]
+        paint(ctx, lambda c: smooth_closed(c, pts, 0.4), hair, lw=LW, hi_pos=(-0.25, -0.3))
+        stroke(ctx, lambda c: smooth_open(c, [(CX - 44, 64), (CX - 10, 56), (CX + 30, 64)]), hex2rgb("#a8e030"), 4, 0.9)
+        stroke(ctx, lambda c: smooth_open(c, [(CX - 62, 118), (CX, 112), (CX + 62, 118)]), INK, 12)
+        stroke(ctx, lambda c: smooth_open(c, [(CX - 62, 118), (CX, 112), (CX + 62, 118)]), hex2rgb("#4a3a30"), 6)
+        for side in (-1, 1):
+            x, y = CX + side * 20, 116
+            paint(ctx, lambda c, x=x: ellipse_path(c, x, y, 18, 16), hex2rgb("#5a5866"), lw=4.5, hi_size=0.6)
+            lens = ec if not downed else grey(ec, 0.9)
+            if not downed:
+                glow(ctx, x, y, 22, ec, 0.5)
+            paint(ctx, lambda c, x=x, lens=lens: ellipse_path(c, x, y, 11, 10), lens, lw=3, hi=False, shade_amt=0.25)
+            if downed:
+                stroke(ctx, lambda c, x=x: (c.move_to(x - 5, y - 5), c.line_to(x + 5, y + 5), c.move_to(x + 5, y - 5), c.line_to(x - 5, y + 5)), INK, 3)
+            else:
+                flat(ctx, lambda c, x=x: ellipse_path(c, x - 4, y - 4, 3.5, 3), (1, 1, 1))
+        if evo == "B":
+            mask = hex2rgb("#3a3448")
+            paint(ctx, lambda c: smooth_closed(c, [(CX - 34, 134), (CX + 34, 134), (CX + 38, 152), (CX + 20, 168), (CX - 20, 168),
+                                                     (CX - 38, 152)], 0.45), mask, lw=LW - 1, hi_size=0.5)
+            for k in range(3):
+                stroke(ctx, lambda c, k=k: (c.move_to(CX - 10, 146 + k * 6), c.line_to(CX + 10, 146 + k * 6)), light(mask, 0.35), 2.5)
+            for side in (-1, 1):
+                paint(ctx, lambda c, side=side: ellipse_path(c, CX + side * 38, 156, 12, 12), MIASMA, lw=3.5, hi_size=0.6)
+                flat(ctx, lambda c, side=side: ellipse_path(c, CX + side * 38, 156, 5, 5), shade(MIASMA, 0.5))
+    elif h == "plague_beak":
+        mask = hex2rgb(spec.get("mask", "#ece0c4"))
+        hat = hex2rgb(spec.get("hat", "#24212c"))
+        paint(ctx, lambda c: smooth_closed(c, [(CX - 54, 98), (CX + 54, 98), (CX + 56, 132), (CX + 40, 158), (CX, 166),
+                                                 (CX - 40, 158), (CX - 56, 132)], 0.45), mask, lw=LW - 1, hi_size=0.5)
+        # beak curving down and to the right
+        beak = [(CX - 16, 128), (CX + 16, 124), (CX + 34, 150), (CX + 50, 186), (CX + 44, 190), (CX + 20, 166), (CX - 6, 150)]
+        paint(ctx, lambda c: smooth_closed(c, beak, 0.45), mask, lw=LW - 1, hi_pos=(-0.3, -0.3))
+        stroke(ctx, lambda c: smooth_open(c, [(CX - 2, 138), (CX + 22, 152), (CX + 40, 180)]), shade(mask, 0.4), 2.5)
+        for (x, y) in ((CX + 4, 134), (CX + 12, 132)):
+            flat(ctx, lambda c, x=x, y=y: ellipse_path(c, x, y, 2, 2), INK)
+        if evo == "B":
+            _cross(ctx, CX + 18, 150, 9, hex2rgb("#5fe05a"))
+        for side in (-1, 1):
+            x, y = CX + side * 22, 114
+            paint(ctx, lambda c, x=x: ellipse_path(c, x, y, 15, 15), hex2rgb("#6a5a3a") if evo != "B" else hex2rgb("#c8d0c0"), lw=4, hi=False)
+            if downed:
+                paint(ctx, lambda c, x=x: ellipse_path(c, x, y, 9, 9), grey(ec, 0.9), lw=2.5, hi=False)
+                stroke(ctx, lambda c, x=x: (c.move_to(x - 5, y - 5), c.line_to(x + 5, y + 5), c.move_to(x + 5, y - 5), c.line_to(x - 5, y + 5)), INK, 3)
+            else:
+                lens = ec if evo != "B" else hex2rgb("#bff7a0")
+                glow(ctx, x, y, 20, lens, 0.55)
+                paint(ctx, lambda c, x=x, lens=lens: ellipse_path(c, x, y, 9, 9), lens, lw=2.5, hi=False, shade_amt=0.2)
+                flat(ctx, lambda c, x=x: ellipse_path(c, x - 3, y - 3, 3, 2.6), (1, 1, 1))
+        # wide-brimmed hat
+        paint(ctx, lambda c: smooth_closed(c, [(CX - 92, 88), (CX - 70, 72), (CX, 66), (CX + 70, 72), (CX + 92, 88), (CX + 60, 98),
+                                                 (CX, 100), (CX - 60, 98)], 0.5), hat, lw=LW, hi=False)
+        paint(ctx, lambda c: smooth_closed(c, [(CX - 46, 86), (CX - 42, 30), (CX - 30, 18), (CX + 30, 18), (CX + 42, 30), (CX + 46, 86),
+                                                 (CX, 92)], 0.3), light(hat, 0.06), lw=LW, hi_size=0.5)
+        band = trim if evo != "B" else hex2rgb("#6fbf4a")
+        paint(ctx, lambda c: smooth_closed(c, [(CX - 45, 68), (CX + 45, 68), (CX + 46, 84), (CX, 90), (CX - 46, 84)], 0.3), band, lw=3.5, hi=False)
+        if evo == "A":
+            # crow feather tucked in the band
+            _leaf(ctx, CX + 34, 74, -1.1, 50, 9, hex2rgb("#3a2a4a"), lw=3, vein=True)
+
+
+# ---------------------------------------------------------------------------- props
+
+def _censer(ctx, x, y, r, spec, chain_from=None, light_mode=False):
+    ec, ec2 = ELEMENT[spec["element"]]
+    metal = BRASS if spec.get("_evo") != "A" else hex2rgb("#6a6470")
+    if chain_from:
+        stroke(ctx, lambda c: (c.move_to(*chain_from), c.line_to(x, y - r - 4)), INK, 5)
+        stroke(ctx, lambda c: (c.move_to(*chain_from), c.line_to(x, y - r - 4)), hex2rgb("#c9c3b0"), 2)
+    glow(ctx, x, y, r * 2.6, ec if not light_mode else hex2rgb("#f4ffe0"), 0.55)
+    paint(ctx, lambda c: ellipse_path(c, x, y, r, r * 0.95), metal, lw=4, hi_size=0.6)
+    for dx in (-r * 0.45, 0, r * 0.45):
+        flat(ctx, lambda c, dx=dx: rrect_path(c, x + dx - 2, y - r * 0.5, 4, r, 2), ec if not light_mode else hex2rgb("#f4ffe0"))
+    paint(ctx, lambda c: smooth_closed(c, [(x - r * 0.8, y - r * 0.55), (x, y - r * 1.4), (x + r * 0.8, y - r * 0.55)], 0.5), metal, lw=3.5, hi=False)
+    paint(ctx, lambda c: ellipse_path(c, x, y + r + 2, r * 0.3, r * 0.3), metal, lw=2.5, hi=False)
+
+
+def _smoke_trail(ctx, pts, col, alpha=0.8, r0=10, grow=2.5):
+    blobs = [(x, y, r0 + i * grow) for i, (x, y) in enumerate(pts)]
+    _cloud(ctx, blobs, col, alpha=alpha, lw=2.5, hi_col=light(col, 0.45))
+
+
+def nat_prop(ctx, spec, hand, pose, element):
+    kind, evo = spec["prop"], spec.get("_evo")
+    ec, ec2 = ELEMENT[element]
+    hx, hy = hand
+    lh, rh = hands_for(spec, pose)
+    trim = hex2rgb(spec["trim"])
+    cast = pose == "cast"
+    if kind == "blossom_staff":
+        reach = 150 if not cast else 62
+        tx, ty = hx + 10, hy - reach
+        bx, by = hx - 4, hy + 40
+        shaft = []
+        for i in range(6):
+            t = i / 5.0
+            wob = (6 if i % 2 else -5) if 0 < i < 5 else 0
+            shaft.append((bx + (tx - bx) * t + wob, by + (ty - by) * t))
+        outlined_line(ctx, shaft, DARK_WOOD, 10, 17)
+        for (a, b) in (((bx + (tx - bx) * 0.55 + 4, by + (ty - by) * 0.55), (bx + (tx - bx) * 0.55 + 18, by + (ty - by) * 0.55 - 14)),):
+            outlined_line(ctx, [a, b], DARK_WOOD, 5, 10, smooth=False)
+            _leaf(ctx, b[0], b[1], -0.6, 16, 6, LEAF_LIGHT, lw=2.5, vein=False)
+        glow(ctx, tx, ty - 14, 46 if cast else 44, ec2, 0.75 if cast else 0.5)
+        # curled crook
+        outlined_line(ctx, [(tx, ty), (tx - 16, ty - 16), (tx - 10, ty - 34), (tx + 6, ty - 36), (tx + 12, ty - 24)], DARK_WOOD, 8, 15)
+        outlined_line(ctx, [(tx, ty), (tx + 16, ty - 8), (tx + 22, ty - 22)], DARK_WOOD, 6, 12)
+        for (x, y, a) in ((tx - 20, ty - 4, 2.6), (tx + 22, ty - 4, 0.2)):
+            _leaf(ctx, x, y, a, 18, 7, LEAF, lw=2.5)
+        r = 9 if evo != "A" else 14
+        for (x, y, rr) in ((tx - 2, ty - 28, r + 2), (tx + 22, ty - 24, r), (tx - 20, ty - 18, r - 1)):
+            _blossom(ctx, x, y, rr, hex2rgb("#ff9cc6"), ec2 if (cast or evo == "A") else None, 0.7, 2.2 if cast else 3.2)
+        if evo == "B":
+            _mushroom(ctx, tx - 8, ty + 26, 9, hex2rgb("#c8553d"), glow_col=ec2)
+        if cast:
+            for (x, y, a) in ((tx - 40, ty - 30, 0.4), (tx + 36, ty - 36, 1.2), (tx - 30, ty - 44, 2.2), (tx + 40, ty - 12, 2.8)):
+                paint(ctx, lambda c, x=x, y=y, a=a: ellipse_path(c, x, y, 6, 3.5, a), hex2rgb("#ffc2dc"), lw=2, hi=False, shade_amt=0)
+            sparkle(ctx, tx + 32, ty - 18, 10, light(ec2, 0.4))
+    elif kind in ("thorn_shield", "thorn_tower"):
+        # wooden thorn sword in the right hand
+        ang = -1.3 if not cast else -0.95
+        L = 92
+        tip = (hx + math.cos(ang) * L, hy + math.sin(ang) * L)
+        nx, ny = -math.sin(ang), math.cos(ang)
+        b = (hx + math.cos(ang) * 16, hy + math.sin(ang) * 16)
+        if cast:
+            glow(ctx, (b[0] + tip[0]) / 2, (b[1] + tip[1]) / 2, 56, ec2, 0.6)
+        for t in (0.35, 0.6, 0.82):
+            px, py = b[0] + (tip[0] - b[0]) * t, b[1] + (tip[1] - b[1]) * t
+            _thorn(ctx, px + nx * 8, py + ny * 8, ang + 0.9, 12, PALE_WOOD)
+        blade = [(b[0] + nx * 9, b[1] + ny * 9), (tip[0] - math.cos(ang) * 18 + nx * 7, tip[1] - math.sin(ang) * 18 + ny * 7), tip,
+                 (tip[0] - math.cos(ang) * 18 - nx * 7, tip[1] - math.sin(ang) * 18 - ny * 7), (b[0] - nx * 9, b[1] - ny * 9)]
+        paint(ctx, lambda c: poly_path(c, blade), hex2rgb("#c8a070"), lw=4.5, hi_size=0.6)
+        stroke(ctx, lambda c: (c.move_to(*b), c.line_to(*tip)), ec, 3)
+        outlined_line(ctx, [(b[0] + nx * 18, b[1] + ny * 18), (b[0] - nx * 18, b[1] - ny * 18)], hex2rgb("#3f7a2a"), 8, 15, smooth=False)
+        if kind == "thorn_shield":
+            sx, sy = (lh[0] + 4, lh[1] - 24) if not cast else (lh[0] + 6, lh[1] - 36)
+            rx, ry = 42, 50
+            for k in range(12):
+                a = k * 2 * math.pi / 12 + 0.26
+                _thorn(ctx, sx + math.cos(a) * (rx - 2), sy + math.sin(a) * (ry - 2), a, 14, PALE_WOOD)
+            paint(ctx, lambda c: ellipse_path(c, sx, sy, rx, ry), hex2rgb("#8a5a34"), lw=LW, hi_size=0.7)
+            ctx.save()
+            ctx.new_path()
+            ellipse_path(ctx, sx, sy, rx, ry)
+            ctx.clip()
+            for dx in (-20, 0, 20):
+                stroke(ctx, lambda c, dx=dx: (c.move_to(sx + dx, sy - ry), c.line_to(sx + dx, sy + ry)), shade(hex2rgb("#8a5a34"), 0.45), 3)
+            ctx.restore()
+            stroke(ctx, lambda c: ellipse_path(c, sx, sy, rx - 7, ry - 7), INK, 9)
+            stroke(ctx, lambda c: ellipse_path(c, sx, sy, rx - 7, ry - 7), hex2rgb("#3f9a3a"), 5)
+            if cast:
+                glow(ctx, sx, sy, 56, ec2, 0.7)
+            glow(ctx, sx, sy, 26, ec2, 0.6)
+            _leaf(ctx, sx, sy + 16, -math.pi / 2, 34, 13, LEAF_LIGHT, lw=3.5)
+        else:
+            # Bramble Fortress: huge bark tower shield bristling with thorns
+            sx, sy = (lh[0] + 6, lh[1] - 40) if not cast else (lh[0] + 30, lh[1] - 4)
+            w2, top, bot = 50, sy - 92, sy + 78
+            body = [(sx - w2, top + 26), (sx - w2 + 14, top + 4), (sx, top - 6), (sx + w2 - 14, top + 4), (sx + w2, top + 26),
+                    (sx + w2, bot - 18), (sx, bot), (sx - w2, bot - 18)]
+            for side in (-1, 1):
+                for k in range(5):
+                    y = top + 30 + k * 30
+                    _thorn(ctx, sx + side * (w2 - 2), y, math.pi / 2 - side * math.pi / 2 + side * -0.25, 16, PALE_WOOD)
+            glow(ctx, sx, sy, 110, ec2, 0.35 if not cast else 0.65)
+            paint(ctx, lambda c: smooth_closed(c, body, 0.25), hex2rgb("#7a5030"), lw=LW, hi_size=0.7)
+            ctx.save()
+            ctx.new_path()
+            smooth_closed(ctx, body, 0.25)
+            ctx.clip()
+            for dx in (-25, 0, 25):
+                stroke(ctx, lambda c, dx=dx: (c.move_to(sx + dx, top), c.line_to(sx + dx + 2, bot)), shade(hex2rgb("#7a5030"), 0.45), 3)
+            for y in (top + 30, bot - 34):
+                _cloud(ctx, [(sx - 40 + i * 16, y + (i % 2) * 4, 9) for i in range(6)], hex2rgb("#4f8a3a"), lw=2)
+            ctx.restore()
+            glow(ctx, sx, sy - 6, 34, ec2, 0.7)
+            _leaf(ctx, sx, sy + 18, -math.pi / 2, 44, 16, LEAF_LIGHT, lw=3.5)
+            for (x, y) in ((sx - 26, top + 54), (sx + 24, top + 60), (sx + 18, bot - 26)):
+                _thorn(ctx, x, y, -1.2, 12, PALE_WOOD)
+    elif kind == "thorn_whip":
+        if not cast:
+            pts = [(hx, hy), (hx + 30, hy - 26), (hx + 52, hy - 78), (hx + 36, hy - 130), (hx - 2, hy - 150), (hx + 10, hy - 168)]
+        else:
+            pts = [(hx, hy), (hx + 30, hy - 26), (hx + 36, hy - 66), (hx + 4, hy - 92), (hx - 44, hy - 90), (hx - 70, hy - 76)]
+        glow(ctx, pts[-1][0], pts[-1][1], 36 if cast else 30, ec2, 0.7 if cast else 0.45)
+        outlined_line(ctx, pts, hex2rgb("#3f7a2a"), 9, 16)
+        # thorns along the lash
+        for i in range(1, len(pts) - 1):
+            (x0, y0), (x1, y1) = pts[i], pts[i + 1]
+            a = math.atan2(y1 - y0, x1 - x0)
+            for t in (0.3, 0.75):
+                px, py = x0 + (x1 - x0) * t, y0 + (y1 - y0) * t
+                _thorn(ctx, px, py, a + (1.5 if (i + int(t * 4)) % 2 else -1.5), 11, PALE_WOOD, lw=2)
+        _leaf(ctx, pts[-1][0], pts[-1][1], math.atan2(pts[-1][1] - pts[-2][1], pts[-1][0] - pts[-2][0]), 22, 8, LEAF_LIGHT, lw=3)
+        outlined_line(ctx, [(hx - 4, hy + 14), (hx + 4, hy - 10)], DARK_WOOD, 9, 16, smooth=False)
+        if cast:
+            sparkle(ctx, pts[-1][0] - 10, pts[-1][1] - 18, 12, light(ec2, 0.4))
+            for k in range(2):
+                stroke(ctx, lambda c, k=k: c.arc(hx - 10, hy - 30, 56 + k * 12, -math.pi * 0.95, -math.pi * 0.6), ec2, 4 - k, 0.8)
+    elif kind == "flask":
+        liquid = {None: ec, "A": hex2rgb("#ff9a2a"), "B": MIASMA}[evo]
+        if not cast:
+            fx, fy = hx + 4, hy + 16
+        else:
+            fx, fy = hx + 6, hy - 6
+        r = 18
+        glow(ctx, fx, fy, 50, liquid, 0.55 if not cast else 0.8)
+        neck_top = fy - r - 22
+        paint(ctx, lambda c: rrect_path(c, fx - 6, neck_top, 12, 26, 4), GLASS, lw=3.5, hi=False, shade_amt=0.1)
+        paint(ctx, lambda c: ellipse_path(c, fx, fy, r, r), GLASS, lw=4, hi=False, shade_amt=0.1)
+        ctx.save()
+        ctx.new_path()
+        ellipse_path(ctx, fx, fy, r - 2, r - 2)
+        ctx.clip()
+        flat(ctx, lambda c: rrect_path(c, fx - r, fy - 3, 2 * r, r + 4, 2), liquid)
+        flat(ctx, lambda c: rrect_path(c, fx - r, fy - 3, 2 * r, 4, 2), light(liquid, 0.4))
+        ctx.restore()
+        flat(ctx, lambda c: ellipse_path(c, fx - 7, fy - 8, 4, 6, 0.5), (1, 1, 1), 0.85)
+        for (bx, by, br) in ((fx + 5, fy + 6, 3), (fx - 4, fy + 10, 2.2)):
+            stroke(ctx, lambda c, bx=bx, by=by, br=br: ellipse_path(c, bx, by, br, br), (1, 1, 1), 1.8, 0.9)
+        if not cast:
+            paint(ctx, lambda c: rrect_path(c, fx - 7, neck_top - 8, 14, 10, 3), hex2rgb("#a8743a"), lw=3, hi=False)
+        if cast or evo is not None:
+            # bubbling over / splashing out of the neck
+            if cast:
+                splash = [(fx - 14, neck_top - 12, 8), (fx + 10, neck_top - 20, 9), (fx - 4, neck_top - 34, 10), (fx + 16, neck_top - 44, 7)]
+                _cloud(ctx, splash, liquid, lw=2.5, hi_col=light(liquid, 0.5))
+                for (bx, by, br) in ((fx - 24, neck_top - 46, 5), (fx + 28, neck_top - 56, 4), (fx - 4, neck_top - 60, 6)):
+                    stroke(ctx, lambda c, bx=bx, by=by, br=br: ellipse_path(c, bx, by, br, br), INK, 5)
+                    stroke(ctx, lambda c, bx=bx, by=by, br=br: ellipse_path(c, bx, by, br, br), light(liquid, 0.4), 2.5)
+        if evo == "A":
+            # unstable: smoke and sparks
+            if cast:
+                trail = [(fx + 26, fy - 4), (fx + 34, fy - 26), (fx + 30, fy - 50)]
+            else:
+                trail = [(fx + 4, neck_top - 10), (fx + 16, neck_top - 28), (fx + 6, neck_top - 48)]
+            _smoke_trail(ctx, trail, SMOKE, alpha=0.75, r0=9, grow=3)
+            for (sx_, sy_, sr) in ((fx - 22, fy - 10, 9), (fx + 24, fy - 26, 7), (fx - 12, neck_top - 4, 6)):
+                sparkle(ctx, sx_, sy_, sr, hex2rgb("#ffe36a"))
+        elif evo == "B" and not cast:
+            _smoke_trail(ctx, [(fx + 2, neck_top - 16), (fx + 14, neck_top - 32)], MIASMA, alpha=0.6, r0=8, grow=3)
+    elif kind == "censer":
+        light_mode = evo == "B"
+        smoke = {None: ec, "A": hex2rgb("#6a8a2a"), "B": hex2rgb("#e4ffd0")}[evo]
+        hands = [(hx, hy, 1)]
+        if evo == "A":
+            hands.append((lh[0], lh[1], -1))
+        for (px, py, side) in hands:
+            if not cast:
+                cx_, cy_ = px + side * 4, py + 40
+                trail = [(cx_ + side * 14, cy_ - 22), (cx_ + side * 30, cy_ - 52), (cx_ + side * 22, cy_ - 88), (cx_ + side * 38, cy_ - 124)]
+            else:
+                cx_, cy_ = px + side * 30, py - 22
+                trail = [(cx_ + side * 6, cy_ + 26), (cx_ + side * 16, cy_ + 54), (cx_ + side * 8, cy_ + 84), (cx_ + side * 20, cy_ + 114)]
+            if evo == "A":
+                trail = trail + [(trail[-1][0] - side * 6, trail[-1][1] - 30)] if not cast else trail
+            _smoke_trail(ctx, trail, smoke, alpha=0.8 if not light_mode else 0.85, r0=9, grow=3)
+            _censer(ctx, cx_, cy_, 15, spec, chain_from=(px, py), light_mode=light_mode)
+            if cast:
+                sparkle(ctx, cx_ + side * 6, cy_ - 26, 9, light(smoke, 0.4))

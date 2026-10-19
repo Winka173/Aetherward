@@ -27,6 +27,10 @@ Every entry is wired into the simulation (no stub effects); validation: `Content
 | `eirwen` | Eirwen | Ice / Guardian | **Frost Aegis**: Shields herself (18%) and the most endangered ally within 3.5 m (20% max HP). When a shield she granted breaks, it explodes for 140% Attack as Ice in 2 m. Cooldown 7s. | **Glacial Resolve**: While shielded, enemies that strike her are Chilled and slowed by 20%. | Ice Bulwark (`eirwen_ice_bulwark`)<br>Shatter Counter (`eirwen_shatter_counter`) | `Heroes/eirwen_idle/_cast/_downed/_evoA/_evoB`, `Portraits/eirwen` | Implemented, tested (`EveryHeroSkillCastsInARealWave`) |
 | `kael` | Kael | Wind / Assassin | **Gust Step**: Dashes into the densest group, pulls enemies within 2 m together and strikes them for 130% Attack as Wind. Cooldown 5.5s. | **Slipstream**: After Gust Step his next 3 basic attacks deal +40% damage and always apply Wind. | Precision Assassin (`kael_precision_assassin`)<br>Storm Shepherd (`kael_storm_shepherd`) | `Heroes/kael_idle/_cast/_downed/_evoA/_evoB`, `Portraits/kael` | Implemented, tested (`EveryHeroSkillCastsInARealWave`) |
 | `borun` | Borun | Earth / Guardian | **Raise Wall**: Raises a 4.5s stone wall across the lead enemy's path. Enemies crossing it are slowed heavily and their armour cracks; walls never fully block a lane. Cooldown 7s. | **Fortify**: While one of his walls stands, the Crystal takes 12% less damage. | Fortifier (`borun_fortifier`)<br>Spike Mason (`borun_spike_mason`) | `Heroes/borun_idle/_cast/_downed/_evoA/_evoB`, `Portraits/borun` | Implemented, tested (`EveryHeroSkillCastsInARealWave`) |
+| `liora` | Liora | Nature / Controller | **Root Bloom**: Vines burst under the densest group: enemies within 2 m take 130% Attack as Nature and are Rooted for 1.2s. Cooldown 7s. | **Deep Roots**: +30% damage to Rooted enemies. | Wildwood (`liora_wildwood`)<br>Spore Garden (`liora_spore_garden`) | `Heroes/liora_idle/_cast/_downed/_evoA/_evoB`, `Portraits/liora` | Implemented, tested (`EveryHeroSkillCastsInARealWave`) |
+| `thalen` | Thalen | Nature / Guardian | **Thorn Wall**: Gains a bark shield of 15% max HP and thorns for 5s: attackers take 60% Attack as Nature. Taunts enemies within 2.2 m. Cooldown 8s. | **Barkskin**: Takes up to 20% less damage as his health drops. | Bramble Fortress (`thalen_bramble_fortress`)<br>Overgrowth Charge (`thalen_overgrowth_charge`) | `Heroes/thalen_idle/_cast/_downed/_evoA/_evoB`, `Portraits/thalen` | Implemented, tested (`EveryHeroSkillCastsInARealWave`) |
+| `vesper` | Vesper | Poison / Controller | **Catalyst Flask**: Throws a flask at the densest group: 100% Attack as Poison in 1.8 m, 2 Poison stacks, and a toxic patch for 4s. Cooldown 6.5s. | **Catalysis**: +4% damage per Poison stack on the target (up to 30%). | Volatile Mixture (`vesper_volatile_mixture`)<br>Lingering Miasma (`vesper_lingering_miasma`) | `Heroes/vesper_idle/_cast/_downed/_evoA/_evoB`, `Portraits/vesper` | Implemented, tested (`EveryHeroSkillCastsInARealWave`) |
+| `sable` | Sable | Poison / Support | **Plague Cure**: Infects enemies within 1.8 m (90% Attack, 2 Poison stacks), then heals the most hurt ally for 8% max HP +2% per poisoned enemy nearby (max 6). The healed ally runs a Fever: +15% damage taken for 3s. Cooldown 7s. | **Plague Doctor**: When a poisoned enemy dies within 5 m, the most hurt ally heals 3% max HP (every 1.5s at most). | Pandemic (`sable_pandemic`)<br>Remedy (`sable_remedy`) | `Heroes/sable_idle/_cast/_downed/_evoA/_evoB`, `Portraits/sable` | Implemented, tested (`EveryHeroSkillCastsInARealWave`) |
 
 ## Evolution branches (24)
 | ID | Hero | Branch | Mechanical change | Extra stats | State |
@@ -71,6 +75,14 @@ Every entry is wired into the simulation (no stub effects); validation: `Content
 | `kael_storm_shepherd` | Kael | Storm Shepherd | **Herding Gale** (`gust_step`): Pulls enemies within 3.2 m together (100% Attack) and leaves a 1.5s vortex that spreads elements. Cooldown 6s. | +40 Elemental Mastery<br>Role → Controller | Implemented, tested (`EveryEvolutionBuildsAndCasts`) |
 | `borun_fortifier` | Borun | Fortifier | **Bastion** (`raise_wall`): Raises a 6.5s bastion (up to 3) that slows, cracks armour, grinds enemies and gives heroes beside it 15% damage reduction. Cooldown 7s. | +10 Defense | Implemented, tested (`EveryEvolutionBuildsAndCasts`) |
 | `borun_spike_mason` | Borun | Spike Mason | **Spike Wall** (`raise_wall`): Raises a 3.5s wall; when it crumbles it erupts, damaging and stunning enemies nearby for 0.6s. Cooldown 5.5s. | +15% Attack<br>Role → Controller | Implemented, tested (`EveryEvolutionBuildsAndCasts`) |
+| `liora_wildwood` | Liora | Wildwood | **Wildwood Bloom** (`root_bloom`): Vines in 2.7 m: 150% Attack as Nature and Root for 1.8s. Cooldown 7s. | +12% Attack | Implemented, tested (`EveryEvolutionBuildsAndCasts`) |
+| `liora_spore_garden` | Liora | Spore Garden | **Garden Bloom** (`root_bloom`): Vines in 2 m (100% Attack, Root 1.2s) and a spore garden of 2 m for 5s that slows and roots enemies and heals allies inside. Cooldown 6.5s. | +15% healing power<br>Role → Support | Implemented, tested (`EveryEvolutionBuildsAndCasts`) |
+| `thalen_bramble_fortress` | Thalen | Bramble Fortress | **Bramble Wall** (`thorn_wall`): Shield 22% max HP; thorns for 7s reflect 70% Attack and Root attackers for 0.6s. Taunts within 2.2 m. Cooldown 8s. | +12 Defense | Implemented, tested (`EveryEvolutionBuildsAndCasts`) |
+| `thalen_overgrowth_charge` | Thalen | Overgrowth Charge | **Thorn Lash** (`thorn_wall`): Lashes enemies within 1.8 m of the densest group in reach for 160% Attack as Nature and Roots them for 1.2s, then gains a 10% shield and thorns. Cooldown 6.5s. | +25% Attack<br>Role → Bruiser | Implemented, tested (`EveryEvolutionBuildsAndCasts`) |
+| `vesper_volatile_mixture` | Vesper | Volatile Mixture | **Volatile Flask** (`catalyst_flask`): 120% Attack as Poison in 1.8 m; consumes half of each target's Poison for +35% damage per stack, then applies 2 stacks. Cooldown 6.5s. | +15% Attack | Implemented, tested (`EveryEvolutionBuildsAndCasts`) |
+| `vesper_lingering_miasma` | Vesper | Lingering Miasma | **Miasma Flask** (`catalyst_flask`): 100% Attack as Poison in 2.2 m and 3 stacks; leaves a 2 m miasma for 6s. Cooldown 6.5s. | +40 Elemental Mastery<br>Role → Controller | Implemented, tested (`EveryEvolutionBuildsAndCasts`) |
+| `sable_pandemic` | Sable | Pandemic | **Pandemic** (`plague_cure`): Infects enemies within 2.6 m (100% Attack, 4 Poison stacks); heals the most hurt ally 5% +2% per poisoned enemy, with Fever (+15% damage taken). Cooldown 7s. | +25% status power<br>Role → Controller | Implemented, tested (`EveryEvolutionBuildsAndCasts`) |
+| `sable_remedy` | Sable | Remedy | **Remedy** (`plague_cure`): Infects enemies within 1.8 m (2 stacks); heals the most hurt ally 12% +2.5% per poisoned enemy, cleanses them and grants 15% attack speed for 4s. Cooldown 7s. | +20% healing power | Implemented, tested (`EveryEvolutionBuildsAndCasts`) |
 
 ## Reactions (15)
 | ID | Pair | Effect | Base / Attack scale | Per-target cooldown | Icon | State |
@@ -229,12 +241,21 @@ Every entry is wired into the simulation (no stub effects); validation: `Content
 | `focus_crystal` | Focus Crystal | Combat / Common | +10% skill power | `Relics/focus_crystal` | Implemented |
 | `twilight_hourglass` | Twilight Hourglass | Chaos / Epic | +25% skill haste (shorter cooldowns)<br>-15% Crystal max HP | `Relics/twilight_hourglass` | Implemented |
 | `cleansing_chime` | Cleansing Chime | Defense / Rare | Every 8s: cleanse every hero and rip parasites off the Crystal | `Relics/cleansing_chime` | Implemented |
+| `verdant_seed` | Verdant Seed | Element / Rare | Roots last 30% longer<br>+12% Attack (Nature heroes) | `Relics/verdant_seed` | Implemented |
+| `venom_vial` | Venom Vial | Element / Rare | Poison deals 25% more damage<br>Poison stacks up to 2 more times | `Relics/venom_vial` | Implemented |
+| `thornmail` | Thornmail | Defense / Rare | +15% Defense (Nature heroes)<br>+10% max HP (Guardians) | `Relics/thornmail` | Implemented |
+| `plague_bell` | Plague Bell | Combat / Epic | Contagion jumps to 1 more enemies<br>Contagion carries 1 more stacks | `Relics/plague_bell` | Implemented |
+| `blight_lantern` | Blight Lantern | Element / Rare | Blight Garden: +30% damage<br>Blight Garden: +50% duration | `Relics/blight_lantern` | Implemented |
+| `gardeners_trowel` | Gardener's Trowel | Defense / Common | Skill fields (pylons, walls...) last 15% longer<br>+10% healing power | `Relics/gardeners_trowel` | Implemented |
+| `antidote_flask` | Antidote Flask | Defense / Rare | At wave start: cleanse every hero and rip parasites off the Crystal<br>At wave start: shield every hero for 10% max HP | `Relics/antidote_flask` | Implemented |
+| `worldroot_heart` | Worldroot Heart | Element / Legendary | Roots last 50% longer<br>When Overgrowth triggers: heal all heroes for 5% max HP (3s cooldown) | `Relics/worldroot_heart` | Implemented |
+| `rot_bloom` | Rot Bloom *(fusion)* | Element / Legendary | Poison deals 40% more damage<br>Roots last 40% longer<br>Blight Garden: +60% damage | `Relics/rot_bloom` | Implemented |
 | `twilight_crown` | Twilight Crown *(fusion)* | Element / Legendary | Eclipse: +60% damage<br>Eclipse: +30% area<br>Eclipse: +40% duration<br>Doom stacks up to 2 more times<br>When Eclipse triggers: shield the Crystal for 3% of its max HP (4s cooldown) | `Relics/twilight_crown` | Implemented |
 | `aegis_of_ages` | Aegis of Ages *(fusion)* | Defense / Legendary | Shields are 40% stronger<br>At wave start: shield every hero for 10% max HP<br>Crystal takes 8% less damage | `Relics/aegis_of_ages` | Implemented |
 
-Fusions: `chain_conductor` + `storm_caller` → `tempest_engine`, `frozen_crown` + `frozen_heart` → `absolute_zero`, `stoneheart` + `crystal_growth` → `living_monolith`, `dawnstone` + `nightfall_censer` → `twilight_crown`, `glacier_plate` + `warding_bell` → `aegis_of_ages` (`FusionReplacesBothComponents`).
+Fusions: `chain_conductor` + `storm_caller` → `tempest_engine`, `frozen_crown` + `frozen_heart` → `absolute_zero`, `stoneheart` + `crystal_growth` → `living_monolith`, `dawnstone` + `nightfall_censer` → `twilight_crown`, `glacier_plate` + `warding_bell` → `aegis_of_ages`, `verdant_seed` + `venom_vial` → `rot_bloom` (`FusionReplacesBothComponents`).
 
-## Upgrade / mutation / pact cards (58)
+## Upgrade / mutation / pact cards (66)
 | ID | Name | Type / Rarity | Requires | Effect (generated) | Drawback | Max stacks | State |
 |---|---|---|---|---|---|---|---|
 | `sharpened_focus` | Sharpened Focus | Stat / Common |  | +8% Attack |  | 3 | Implemented |
@@ -283,6 +304,14 @@ Fusions: `chain_conductor` + `storm_caller` → `tempest_engine`, `frozen_crown`
 | `pact_of_hunger` | Pact of Hunger | CursedPact / Cursed |  | All healing is halved<br>+40% Gold earned<br>+1 Essence after elite and boss waves | Drawback: all healing is halved. | 1 | Implemented |
 | `pact_of_haste` | Pact of Haste | CursedPact / Cursed |  | Enemies +15% speed<br>+30% attack speed | Drawback: enemies move 15% faster. | 1 | Implemented |
 | `pact_of_glass` | Pact of Glass | CursedPact / Cursed |  | -30% max HP<br>+50% damage | Drawback: all heroes -30% max HP. | 1 | Implemented |
+| `wild_growth` | Wild Growth | TeamSynergy / Common | Nature | +15% max HP (Nature heroes)<br>Roots last 20% longer |  | 1 | Implemented |
+| `toxic_pact` | Toxic Pact | TeamSynergy / Common | Poison | +15% Attack (Poison heroes)<br>Poison deals 15% more damage |  | 1 | Implemented |
+| `overgrowth_theory` | Overgrowth Theory | ElementReaction / Rare | Nature | Overgrowth: +40% duration<br>Overgrowth: +30% control strength |  | 1 | Implemented |
+| `toxic_shock_theory` | Toxic Shock Theory | ElementReaction / Rare | Poison | Toxic Shock: +40% damage |  | 1 | Implemented |
+| `spec_liora_bramble` | Liora: Bramble Bloom | HeroSpecialization / Rare | Liora Lv2 | Liora: area +0.4<br>Liora: root duration (s) +0.3 |  | 1 | Implemented |
+| `spec_thalen_heartwood` | Thalen: Heartwood | HeroSpecialization / Rare | Thalen Lv2 | Thalen: thorn reflect +0.3<br>Thalen: shield +0.1 |  | 1 | Implemented |
+| `spec_vesper_potency` | Vesper: Potency | HeroSpecialization / Rare | Vesper Lv2 | Vesper: Poison stacks +1 |  | 1 | Implemented |
+| `spec_sable_triage` | Sable: Triage | HeroSpecialization / Rare | Sable Lv2 | Sable: heal +0<br>Sable: Fever -0.1 |  | 1 | Implemented |
 | `dawn_vigil` | Dawn Vigil | TeamSynergy / Common | Light | +15% max HP (Light heroes)<br>Shields are 10% stronger |  | 1 | Implemented |
 | `night_oath` | Night Oath | TeamSynergy / Common | Shadow | +15% Attack (Shadow heroes)<br>Doom execute threshold +1% per stack |  | 1 | Implemented |
 | `eclipse_theory` | Eclipse Theory | ElementReaction / Rare | Light | Eclipse: +40% damage<br>Eclipse: +25% area |  | 1 | Implemented |
