@@ -229,6 +229,15 @@ namespace Aetherward.Sim.Content
                     Err("enemy " + en.Id + ": split children must not split again");
             }
             CheckBiomes(db, errors);
+            var bondPairs = new HashSet<string>();
+            foreach (BondDef b in db.Bonds)
+            {
+                if (!db.Heroes.ContainsKey(b.A) || !db.Heroes.ContainsKey(b.B) || b.A == b.B) Err("bond " + b.Id + ": needs two distinct known heroes");
+                string key = string.CompareOrdinal(b.A, b.B) < 0 ? b.A + "+" + b.B : b.B + "+" + b.A;
+                if (!bondPairs.Add(key)) Err("bond " + b.Id + ": duplicate pair");
+                CheckOps(db, "bond " + b.Id, b.Effects, errors);
+                foreach (EffectOp op in b.Effects) if (op.Op != "stat" && op.Op != "rule" && op.Op != "reaction") Err("bond " + b.Id + ": only stat/rule/reaction effects");
+            }
 
             CheckLocalization(db, errors);
             return errors;
@@ -358,6 +367,11 @@ namespace Aetherward.Sim.Content
                 yield return t.DescKey;
             }
             foreach (string note in db.PairNote.Values) yield return "pair." + note;
+            foreach (BondDef bd in db.Bonds)
+            {
+                yield return bd.NameKey;
+                yield return bd.DescKey;
+            }
             foreach (BiomeDef b in db.BiomeList)
             {
                 yield return b.NameKey;

@@ -462,6 +462,13 @@ namespace Aetherward.Game
             Ui.Label(x + 144, y + 292, cw - 170, 44, L.Format("label.element_role", L.Element(def.Element), L.Role(def.Role)), 22, Ui.ElementColor(def.Element), TextAnchor.MiddleLeft, true);
             Ui.Label(x + 30, y + 346, cw - 60, 36, L.Get(def.Skill.NameKey), 24, Ui.Gold, TextAnchor.UpperLeft, true);
             Ui.Label(x + 30, y + 380, cw - 60, 200, L.SkillText(def.Skill, def.Skill.DescKey), 20, Ui.White);
+            BondDef bond = _rc.BondFor(def.Id);
+            if (bond != null)
+            {
+                // Bond banner over the portrait: recruiting this hero completes a bond with the roster.
+                Ui.DrawRect(x + 18, y + 252, cw - 36, 36, new Color(0.35f, 0.12f, 0.3f, 0.85f));
+                Ui.Label(x + 24, y + 252, cw - 48, 36, L.Format("bond.forms", L.Get(bond.NameKey)), 18, Ui.Gold, TextAnchor.MiddleCenter, true);
+            }
             if (o.TraitId != null)
             {
                 // Recruit trait strip: icon, name and the rule (traits are rolled per offer, run-only).

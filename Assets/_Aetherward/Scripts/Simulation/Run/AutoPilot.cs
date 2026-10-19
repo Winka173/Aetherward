@@ -322,7 +322,7 @@ namespace Aetherward.Sim.Run
                 HeroDef d = _rc.Content.Heroes[offers[i].Id];
                 // Off-plan recruits are judged like a player would: synergy and filling missing roles.
                 float score = Priority(_strategy.RecruitPriority, offers[i].Id) + 0.8f * Math.Min(3, _rc.SignatureCount(d.Element))
-                              + RoleNeed(d.Role) + _rng.NextFloat();
+                              + RoleNeed(d.Role) + (_rc.BondFor(d.Id) != null ? 1.5f : 0f) + _rng.NextFloat();
                 if (score > bestScore) { bestScore = score; best = i; }
             }
             return best;

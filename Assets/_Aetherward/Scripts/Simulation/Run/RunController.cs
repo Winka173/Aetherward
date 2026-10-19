@@ -284,6 +284,25 @@ namespace Aetherward.Sim.Run
                 if (Content.Cards.TryGetValue(kv.Key, out CardDef c))
                     for (int s = 0; s < kv.Value; s++)
                         foreach (EffectOp op in c.Effects) yield return op;
+            foreach (BondDef b in ActiveBonds())
+                foreach (EffectOp op in b.Effects) yield return op;
+        }
+
+        /// <summary>Bonds whose two heroes are both in the roster.</summary>
+        public List<BondDef> ActiveBonds()
+        {
+            var list = new List<BondDef>();
+            foreach (BondDef b in Content.Bonds)
+                if (State.HasHero(b.A) && State.HasHero(b.B)) list.Add(b);
+            return list;
+        }
+
+        /// <summary>The bond an offered hero would complete with the current roster, if any.</summary>
+        public BondDef BondFor(string heroId)
+        {
+            foreach (BondDef b in Content.Bonds)
+                if (b.Involves(heroId) && State.HasHero(b.Partner(heroId))) return b;
+            return null;
         }
 
         public float CrystalMaxHp
@@ -404,6 +423,8 @@ namespace Aetherward.Sim.Run
             foreach (string id in State.CardOrder)
                 if (Content.Cards.TryGetValue(id, out CardDef c))
                     foreach (EffectOp op in c.Effects) m.Add(op, id, State.CardStacks(id));
+            foreach (BondDef b in ActiveBonds())
+                foreach (EffectOp op in b.Effects) m.Add(op, "bond:" + b.Id);
             DifficultyDef d = Content.Difficulty;
             m.EnemySpeedPct += d.Value("enemy_speed", State.Ascension);
             m.EnemyDamagePct += d.Value("enemy_damage", State.Ascension);
@@ -755,6 +776,7 @@ namespace Aetherward.Sim.Run
                     if (!hasRole) w += 0.4f;
                     // Larger roster: favour heroes whose element forms a signature reaction with the team.
                     w += 0.6f * System.Math.Min(3, SignatureCount(d.Element));
+                    if (BondFor(d.Id) != null) w += 1.0f; // completing a bond is worth surfacing
                     weights[i] = w;
                     total += w;
                 }

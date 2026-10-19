@@ -796,3 +796,27 @@ UI_X.update({
     "nodetrait.lightning_rod": ("Lightning rod: attacks 10% faster", "Cột thu lôi: đánh nhanh hơn 10%"),
     "nodetrait.archive_tome": ("Archive tome: 10% shorter cooldowns", "Sách cổ: hồi chiêu ngắn hơn 10%"),
 })
+
+BONDS = {
+    "twilight_vow": (("Twilight Vow", "Lời Thề Hoàng Hôn"), ("Seren & Nyxara: Eclipse +40% damage; both +10% max HP.", "Seren & Nyxara: Nhật Thực +40% sát thương; cả hai +10% HP tối đa.")),
+    "fire_and_ash": (("Fire and Ash", "Lửa và Tro"), ("Ignis & Ashara: both +12% Attack.", "Ignis & Ashara: cả hai +12% Công.")),
+    "storm_engineers": (("Storm Engineers", "Kỹ Sư Bão"), ("Volt & Voltrix: both attack 10% faster.", "Volt & Voltrix: cả hai đánh nhanh hơn 10%.")),
+    "frozen_guard": (("Frozen Guard", "Vệ Binh Băng"), ("Glacius & Eirwen: shields +15% stronger; Eirwen +8 Defense.", "Glacius & Eirwen: khiên mạnh hơn 15%; Eirwen +8 Thủ.")),
+    "stone_and_root": (("Stone and Root", "Đá và Rễ"), ("Terra & Thalen: both +10 Defense.", "Terra & Thalen: cả hai +10 Thủ.")),
+    "plague_alchemy": (("Plague Alchemy", "Giả Kim Dịch Hạch"), ("Vesper & Sable: Poison +20% damage and +1 max stack.", "Vesper & Sable: Độc +20% sát thương và +1 tầng tối đa.")),
+    "mirror_minds": (("Mirror Minds", "Tâm Trí Gương"), ("Caelis & Oriane: Resonant amplifies reactions 15% more; Arcane heroes −8% cooldowns.", "Caelis & Oriane: Cộng Hưởng khuếch đại phản ứng thêm 15%; anh hùng Huyền Bí −8% hồi chiêu.")),
+    "event_horizon_pact": (("Event Horizon Pact", "Hiệp Ước Chân Trời"), ("Zerith & Maelis: collapses 20% wider; Void heroes +10% Attack.", "Zerith & Maelis: sụp đổ rộng hơn 20%; anh hùng Hư Không +10% Công.")),
+    "dawn_chorus": (("Dawn Chorus", "Hợp Xướng Bình Minh"), ("Elowen & Seren: Light heroes heal 15% more; Illuminated enemies take 8% more damage.", "Elowen & Seren: anh hùng Ánh Sáng hồi máu thêm 15%; kẻ bị Chiếu Sáng nhận thêm 8% sát thương.")),
+    "tide_and_river": (("Tide and River", "Triều và Sông"), ("Marina & Mirel: Water heroes +12% max HP and heal 10% more.", "Marina & Mirel: anh hùng Nước +12% HP tối đa và hồi máu thêm 10%.")),
+    "wind_dancers": (("Wind Dancers", "Vũ Công Gió"), ("Zephyr & Kael: Wind heroes attack 8% faster.", "Zephyr & Kael: anh hùng Gió đánh nhanh hơn 8%.")),
+    "scholars_of_flame": (("Scholars of Flame", "Học Giả Lửa"), ("Solenne & Cinder: marks stack once more; Fire heroes +10% Attack.", "Solenne & Cinder: dấu bỏng cộng thêm 1 tầng; anh hùng Lửa +10% Công.")),
+}
+UI_X.update({"bond.label": ("Bond", "Gắn kết"), "bond.forms": ("Forms bond: {0}", "Tạo gắn kết: {0}"), "bond.active": ("Bond: {0}", "Gắn kết: {0}")})
+
+UI_X.update({
+    "codex.matrix": ("Matrix", "Ma trận"),
+    "codex.matrix_help": ("All 66 element pairs. Gold: signature reactions (icons once discovered). Grey: generic bursts. Dark: neutral pairs. Red: blocked by design. Select a cell for details.",
+                          "Toàn bộ 66 cặp nguyên tố. Vàng: phản ứng đặc trưng (hiện biểu tượng khi đã khám phá). Xám: bùng nổ chung. Tối: cặp trung tính. Đỏ: bị chặn có chủ đích. Chọn một ô để xem chi tiết."),
+    "codex.category.signature": ("Signature", "Đặc trưng"), "codex.category.generic": ("Generic", "Chung"),
+    "codex.category.neutral": ("Neutral", "Trung tính"), "codex.category.blockedbydesign": ("Blocked by design", "Bị chặn có chủ đích"),
+})

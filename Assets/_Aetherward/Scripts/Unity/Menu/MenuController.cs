@@ -31,6 +31,7 @@ namespace Aetherward.Game
         private GameMode _mode = GameMode.Classic;
         private bool _hasSave;
         private int _codexTab;
+        private int _codexPage;
         private string _codexFocus;
         private float _historyScroll;
         private Transform _backdrop;
@@ -300,13 +301,20 @@ namespace Aetherward.Game
             MetaProfile m = App.Meta;
             Ui.DrawRect(0, 0, Ui.W, Ui.H, new Color(0.04f, 0.05f, 0.12f, 0.8f));
             Ui.Label(60, 30, 600, 70, l.Get("codex.title"), 50, Ui.Gold, TextAnchor.UpperLeft, true);
-            string[] tabs = { "codex.heroes", "codex.reactions", "codex.relics", "codex.enemies" };
+            string[] tabs = { "codex.heroes", "codex.reactions", "codex.relics", "codex.enemies", "codex.matrix" };
             for (int i = 0; i < tabs.Length; i++)
-                if (Ui.Button(60 + i * 250, 110, 240, 80, l.Get(tabs[i]), _codexTab == i ? Tone.Secondary : Tone.Ghost, true, 26))
+                if (Ui.Button(60 + i * 210, 110, 200, 80, l.Get(tabs[i]), _codexTab == i ? Tone.Secondary : Tone.Ghost, true, 24))
                 {
                     _codexTab = i;
                     _codexFocus = null;
+                    _codexPage = 0;
                 }
+            if (_codexTab == 4)
+            {
+                DrawReactionMatrix();
+                if (Ui.Button(60, Ui.H - 130, 240, 96, l.Get("common.back"), Tone.Ghost)) _page = Page.Main;
+                return;
+            }
             var entries = new List<(string id, string key, Texture tex, bool known)>();
             if (_codexTab == 0)
                 foreach (HeroDef h in db.HeroList) entries.Add((h.Id, h.NameKey, Art.Portrait(h.Id), m.Codex.Contains("hero:" + h.Id) || m.UnlockedHeroes.Contains(h.Id)));
@@ -321,10 +329,22 @@ namespace Aetherward.Game
             Ui.Label(1100, 120, Ui.W - 1160, 60, l.Format("codex.progress", known, entries.Count), 26, Ui.Muted, TextAnchor.MiddleRight);
             float cell = 120, gx = 60, gy = 220;
             int cols = 7;
-            for (int i = 0; i < entries.Count; i++)
+            int rows = Mathf.Max(1, Mathf.FloorToInt((Ui.H - 170 - gy) / (cell + 14)));
+            int perPage = rows * cols, pages = Mathf.Max(1, (entries.Count + perPage - 1) / perPage);
+            _codexPage = Mathf.Clamp(_codexPage, 0, pages - 1);
+            if (pages > 1)
             {
+                float py = gy + rows * (cell + 14);
+                if (Ui.Button(330, py, 90, 56, "<", Tone.Ghost, _codexPage > 0, 26)) _codexPage--;
+                Ui.Label(430, py, 160, 56, (_codexPage + 1) + " / " + pages, 24, Ui.Muted, TextAnchor.MiddleCenter, false, true, true);
+                if (Ui.Button(600, py, 90, 56, ">", Tone.Ghost, _codexPage < pages - 1, 26)) _codexPage++;
+            }
+            for (int n = 0; n < perPage; n++)
+            {
+                int i = _codexPage * perPage + n;
+                if (i >= entries.Count) break;
                 var e = entries[i];
-                float x = gx + (i % cols) * (cell + 14), y = gy + (i / cols) * (cell + 14);
+                float x = gx + (n % cols) * (cell + 14), y = gy + (n / cols) * (cell + 14);
                 Ui.DrawRect(x, y, cell, cell, _codexFocus == e.id ? new Color(1f, 0.83f, 0.35f, 0.5f) : new Color(0.15f, 0.17f, 0.3f, 0.85f));
                 Ui.Icon(x + 8, y + 8, cell - 16, cell - 16, e.tex, e.known ? (Color?)null : new Color(0, 0, 0, 0.85f));
                 if (Ui.Hit(x, y, cell, cell)) _codexFocus = e.id;
@@ -350,6 +370,55 @@ namespace Aetherward.Game
                 Ui.Label(dx + 30, 250, dw - 60, 320, l.Get("codex.reaction_formula"), 24, Ui.White);
             }
             if (Ui.Button(60, Ui.H - 130, 240, 96, l.Get("common.back"), Tone.Ghost)) _page = Page.Main;
+        }
+
+        /// <summary>
+        /// 12×12 element matrix: every pair's category (signature / generic / neutral / blocked), the
+        /// signature icon once discovered, and details for the focused pair.
+        /// </summary>
+        private void DrawReactionMatrix()
+        {
+            var l = App.Loc;
+            ContentDatabase db = App.Content;
+            Element[] els = ElementUtil.All;
+            float cell = Mathf.Min(58f, (Ui.H - 330f) / (els.Length + 1)), gx = 60, gy = 220;
+            for (int i = 0; i < els.Length; i++)
+            {
+                Ui.Icon(gx + (i + 1) * cell + 4, gy + 4, cell - 8, cell - 8, Art.ElementIcon(els[i]));
+                Ui.Icon(gx + 4, gy + (i + 1) * cell + 4, cell - 8, cell - 8, Art.ElementIcon(els[i]));
+            }
+            ReactionDef focus = null;
+            for (int r = 0; r < els.Length; r++)
+                for (int c = 0; c < els.Length; c++)
+                {
+                    float x = gx + (c + 1) * cell, y = gy + (r + 1) * cell;
+                    if (r == c) { Ui.DrawRect(x + 2, y + 2, cell - 4, cell - 4, new Color(0.08f, 0.08f, 0.12f, 0.9f)); continue; }
+                    ReactionDef rd = db.ReactionFor(els[r], els[c]);
+                    bool known = rd != null && App.Meta.Codex.Contains("reaction:" + rd.Id);
+                    Color col = rd == null ? new Color(0.1f, 0.1f, 0.14f, 0.9f)
+                        : rd.Category == ReactionCategory.Signature ? new Color(0.55f, 0.42f, 0.12f, 0.95f)
+                        : rd.Category == ReactionCategory.Generic ? new Color(0.25f, 0.27f, 0.36f, 0.95f)
+                        : rd.Category == ReactionCategory.Neutral ? new Color(0.14f, 0.16f, 0.2f, 0.95f)
+                        : new Color(0.4f, 0.12f, 0.14f, 0.95f);
+                    bool hover = _codexFocus == "pair:" + r + ":" + c;
+                    Ui.DrawRect(x + 2, y + 2, cell - 4, cell - 4, hover ? new Color(1f, 0.83f, 0.35f, 0.9f) : col);
+                    if (rd != null && rd.Category == ReactionCategory.Signature)
+                        Ui.Icon(x + 6, y + 6, cell - 12, cell - 12, Art.Tex(BattleController.ReactionIcon(rd.Id)), known ? (Color?)null : new Color(0, 0, 0, 0.75f));
+                    if (Ui.Hit(x, y, cell, cell)) _codexFocus = "pair:" + r + ":" + c;
+                    if (hover) focus = rd;
+                }
+            float dx = gx + (els.Length + 1) * cell + 30, dw = Ui.W - dx - 60;
+            Ui.Panel(dx, gy, dw, 520);
+            if (focus == null)
+            {
+                Ui.Label(dx + 30, gy + 30, dw - 60, 460, l.Get("codex.matrix_help"), 24, Ui.White);
+                return;
+            }
+            bool seen = App.Meta.Codex.Contains("reaction:" + focus.Id);
+            Ui.Label(dx + 30, gy + 30, dw - 60, 50, seen || focus.Category != ReactionCategory.Signature ? l.ReactionName(focus.Id) : l.Get("codex.undiscovered"), 32, Ui.Gold, TextAnchor.UpperLeft, true);
+            Ui.Label(dx + 30, gy + 84, dw - 60, 40, l.Element(focus.A) + " + " + l.Element(focus.B) + " · " + l.Get("codex.category." + focus.Category.ToString().ToLowerInvariant()), 22, Ui.Muted);
+            if (seen || focus.Category != ReactionCategory.Signature)
+                Ui.Label(dx + 30, gy + 134, dw - 60, 360, ContentValidator.ReactionText(l, focus), 22, Ui.White);
         }
 
         private void DrawCodexEntry(float x, float y, float w, string id, Texture tex)

@@ -317,6 +317,9 @@ def main():
     for tid, (name, desc) in X.TRAITS.items():
         add("trait.%s.name" % tid, name)
         add("trait.%s.desc" % tid, desc)
+    for bid, (name, desc) in X.BONDS.items():
+        add("bond.%s.name" % bid, name)
+        add("bond.%s.desc" % bid, desc)
     for bid, (name, desc) in X.BIOMES.items():
         add("biome.%s.name" % bid, name)
         add("biome.%s.desc" % bid, desc)

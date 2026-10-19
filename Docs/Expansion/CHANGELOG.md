@@ -63,3 +63,7 @@
 - **Bộ điều khiển boss theo dữ liệu** (`"boss": "generic"`): dấu đánh dấu anh hùng, triệu hồi có trần, loạt pháo vào Pha Lê, quân hộ vệ giảm sát thương, chuyển pha, cửa sổ lộ sơ hở (validator bắt buộc). 7 boss mới (12 tổng): Vaelith, Mirrath, Aetherion, Thornmother, Ironclad Warlord, Ashen Matriarch, Nyxhollow. Pool đợt 10: 5 boss; đợt 20: 5 boss.
 - Test: `EnemyPhase4Tests` (6; mỗi boss mới có cảnh báo, cửa sổ lộ sơ hở, không kẹt).
 - Cân bằng `--launch-pool`: 108/360 (trước 117).
+
+## Phase 5a — Gắn kết hero & ma trận phản ứng (2026-10-19)
+- **12 gắn kết** (`bonds.json`): cặp hero cùng có mặt trong đội nhận chỉ số/luật/phản ứng; hiển thị "Tạo gắn kết" trên thẻ chiêu mộ; chiêu mộ ưu tiên hero hoàn thành gắn kết; validator (2 hero khác nhau, không trùng cặp, chỉ stat/rule/reaction).
+- **Codex**: phân trang (danh mục giờ vượt một màn hình) và tab **Ma trận** 12×12: màu theo loại cặp, biểu tượng phản ứng đặc trưng khi đã khám phá, chi tiết khi chọn ô.

@@ -378,6 +378,19 @@ namespace Aetherward.Sim.Content
         public string Affix;        // optional elite affix id
     }
 
+    /// <summary>A hero bond: both heroes in the roster grant extra effects (stats/rules/reactions).</summary>
+    public sealed class BondDef
+    {
+        public string Id;
+        public string NameKey;
+        public string DescKey;
+        public string A;
+        public string B;
+        public List<EffectOp> Effects = new List<EffectOp>();
+        public bool Involves(string hero) => hero == A || hero == B;
+        public string Partner(string hero) => hero == A ? B : hero == B ? A : null;
+    }
+
     public sealed class WaveDef
     {
         public int Number;

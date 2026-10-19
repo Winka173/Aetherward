@@ -95,6 +95,7 @@ namespace Aetherward.Sim.Content
         public readonly ElementDef[] ElementDefs = new ElementDef[ElementUtil.Count];
         public readonly Dictionary<string, TraitDef> Traits = new Dictionary<string, TraitDef>();
         public readonly List<TraitDef> TraitList = new List<TraitDef>();
+        public readonly List<BondDef> Bonds = new List<BondDef>();
         public readonly Dictionary<string, RelicDef> Relics = new Dictionary<string, RelicDef>();
         public readonly List<RelicDef> RelicList = new List<RelicDef>();
         public readonly List<FusionDef> Fusions = new List<FusionDef>();
@@ -120,7 +121,7 @@ namespace Aetherward.Sim.Content
         /// <summary>Content file names expected under Resources/Content (without extension).</summary>
         public static readonly string[] FileNames =
         {
-            "elements", "traits", "heroes", "evolutions", "enemies", "reactions", "relics", "cards", "waves", "events", "economy", "arena", "biomes", "difficulty",
+            "elements", "traits", "heroes", "evolutions", "enemies", "reactions", "relics", "cards", "waves", "events", "economy", "arena", "biomes", "difficulty", "bonds",
             "loc_en", "loc_vi"
         };
 
@@ -141,6 +142,7 @@ namespace Aetherward.Sim.Content
             db.LoadArena(Parse(readFile, "arena"));
             db.LoadBiomes(Parse(readFile, "biomes"));
             db.LoadDifficulty(Parse(readFile, "difficulty"));
+            db.LoadBonds(Parse(readFile, "bonds"));
             db.LoadStrings("en", Parse(readFile, "loc_en"));
             db.LoadStrings("vi", Parse(readFile, "loc_vi"));
             return db;
@@ -337,6 +339,20 @@ namespace Aetherward.Sim.Content
             }
             foreach (Element e in ElementUtil.All)
                 if (ElementDefs[(int)e] == null) throw new FormatException("elements.json is missing " + ElementUtil.Key(e));
+        }
+
+        private void LoadBonds(JsonNode root)
+        {
+            foreach (JsonNode n in root["bonds"].Items)
+            {
+                string id = n.Str("id");
+                List<string> heroes = n.StringList("heroes");
+                if (heroes.Count != 2) throw new FormatException("bond " + id + " needs exactly two heroes");
+                Bonds.Add(new BondDef
+                {
+                    Id = id, NameKey = "bond." + id + ".name", DescKey = "bond." + id + ".desc", A = heroes[0], B = heroes[1], Effects = ParseEffects(n["effects"])
+                });
+            }
         }
 
         private void LoadTraits(JsonNode root)

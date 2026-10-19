@@ -1,0 +1,31 @@
+{
+  // Hero bonds: when both heroes are in the roster the effects apply (stats scoped to the pair, or team rules).
+  // Shown on recruit cards and in the hero panel. Ops: stat | rule | reaction (same pipeline as relics).
+  "bonds": [
+    { "id": "twilight_vow", "heroes": ["seren", "nyxara"],
+      "effects": [ { "op": "reaction", "reaction": "eclipse", "damagePct": 0.4 }, { "op": "stat", "stat": "max_hp", "value": 0.1, "pct": true, "scope": { "hero": "seren" } },
+                   { "op": "stat", "stat": "max_hp", "value": 0.1, "pct": true, "scope": { "hero": "nyxara" } } ] },
+    { "id": "fire_and_ash", "heroes": ["ignis", "ashara"],
+      "effects": [ { "op": "stat", "stat": "attack", "value": 0.12, "pct": true, "scope": { "hero": "ignis" } }, { "op": "stat", "stat": "attack", "value": 0.12, "pct": true, "scope": { "hero": "ashara" } } ] },
+    { "id": "storm_engineers", "heroes": ["volt", "voltrix"],
+      "effects": [ { "op": "stat", "stat": "attack_interval", "value": 0.1, "pct": true, "scope": { "hero": "volt" } }, { "op": "stat", "stat": "attack_interval", "value": 0.1, "pct": true, "scope": { "hero": "voltrix" } } ] },
+    { "id": "frozen_guard", "heroes": ["glacius", "eirwen"],
+      "effects": [ { "op": "rule", "rule": "shield_power", "value": 0.15 }, { "op": "stat", "stat": "defense", "value": 8, "scope": { "hero": "eirwen" } } ] },
+    { "id": "stone_and_root", "heroes": ["terra", "thalen"],
+      "effects": [ { "op": "stat", "stat": "defense", "value": 10, "scope": { "hero": "terra" } }, { "op": "stat", "stat": "defense", "value": 10, "scope": { "hero": "thalen" } } ] },
+    { "id": "plague_alchemy", "heroes": ["vesper", "sable"],
+      "effects": [ { "op": "rule", "rule": "poison_power", "value": 0.2 }, { "op": "rule", "rule": "poison_max", "value": 1 } ] },
+    { "id": "mirror_minds", "heroes": ["caelis", "oriane"],
+      "effects": [ { "op": "rule", "rule": "resonance_bonus", "value": 0.15 }, { "op": "stat", "stat": "skill_cooldown", "value": 0.08, "pct": true, "scope": { "element": "arcane" } } ] },
+    { "id": "event_horizon_pact", "heroes": ["zerith", "maelis"],
+      "effects": [ { "op": "rule", "rule": "collapse_radius", "value": 0.2 }, { "op": "stat", "stat": "attack", "value": 0.1, "pct": true, "scope": { "element": "void" } } ] },
+    { "id": "dawn_chorus", "heroes": ["elowen", "seren"],
+      "effects": [ { "op": "stat", "stat": "heal_power", "value": 0.15, "pct": true, "scope": { "element": "light" } }, { "op": "rule", "rule": "illuminate_power", "value": 0.08 } ] },
+    { "id": "tide_and_river", "heroes": ["marina", "mirel"],
+      "effects": [ { "op": "stat", "stat": "max_hp", "value": 0.12, "pct": true, "scope": { "element": "water" } }, { "op": "stat", "stat": "heal_power", "value": 0.1, "pct": true, "scope": { "element": "water" } } ] },
+    { "id": "wind_dancers", "heroes": ["zephyr", "kael"],
+      "effects": [ { "op": "stat", "stat": "attack_interval", "value": 0.08, "pct": true, "scope": { "element": "wind" } } ] },
+    { "id": "scholars_of_flame", "heroes": ["solenne", "cinder"],
+      "effects": [ { "op": "rule", "rule": "mark_max", "value": 1 }, { "op": "stat", "stat": "attack", "value": 0.1, "pct": true, "scope": { "element": "fire" } } ] }
+  ]
+}

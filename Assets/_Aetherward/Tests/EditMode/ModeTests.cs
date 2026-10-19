@@ -134,5 +134,20 @@ namespace Aetherward.Tests
             foreach (EnemyUnit e in b.Enemies) if (e.Elite) elites++;
             Assert.Greater(total, 8);
         }
+
+        [Test]
+        public void BondsActivateOnlyWithBothHeroesAndChangeStats()
+        {
+            RunController rc = RunController.NewRun(Db, 4, new[] { "seren", "terra" }, 0, RunUnlocks.Everything(Db));
+            Assert.IsEmpty(rc.ActiveBonds());
+            Assert.AreEqual("twilight_vow", rc.BondFor("nyxara").Id, "recruit offers know which bond they complete");
+            rc.State.Wave = 1;
+            float before = new Battle(rc.BuildBattleSetup()).Heroes.Find(h => h.Def.Id == "seren").MaxHp;
+            RunController both = RunController.NewRun(Db, 4, new[] { "seren", "terra", "nyxara" }, 0, RunUnlocks.Everything(Db));
+            Assert.AreEqual(1, both.ActiveBonds().Count);
+            both.State.Wave = 1;
+            float after = new Battle(both.BuildBattleSetup()).Heroes.Find(h => h.Def.Id == "seren").MaxHp;
+            Assert.AreEqual(before * 1.1f, after, before * 0.01f);
+        }
     }
 }
