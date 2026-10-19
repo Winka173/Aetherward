@@ -1279,6 +1279,70 @@
   "ppu": 200,
   "sprite": true
  },
+ "Assets/_Aetherward/Resources/Art/Enemies/aetherion_a.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.05078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Enemies/aetherion_b.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.05078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Enemies/arcane_mimic_a.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Enemies/arcane_mimic_b.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
  "Assets/_Aetherward/Resources/Art/Enemies/ash_imp_a.png": {
   "border": [
    0,
@@ -1307,6 +1371,38 @@
   "pivot": [
    0.5,
    0.078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Enemies/ashen_matriarch_a.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.05078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Enemies/ashen_matriarch_b.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.05078125
   ],
   "ppu": 160,
   "sprite": true
@@ -1343,6 +1439,70 @@
   "ppu": 160,
   "sprite": true
  },
+ "Assets/_Aetherward/Resources/Art/Enemies/blight_shambler_a.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Enemies/blight_shambler_b.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Enemies/chaos_elemental_a.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Enemies/chaos_elemental_b.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
  "Assets/_Aetherward/Resources/Art/Enemies/crystal_parasite_a.png": {
   "border": [
    0,
@@ -1360,6 +1520,38 @@
   "sprite": true
  },
  "Assets/_Aetherward/Resources/Art/Enemies/crystal_parasite_b.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Enemies/ember_hound_a.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Enemies/ember_hound_b.png": {
   "border": [
    0,
    0,
@@ -1424,6 +1616,38 @@
   "sprite": true
  },
  "Assets/_Aetherward/Resources/Art/Enemies/frost_wraith_b.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Enemies/glacier_golem_a.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Enemies/glacier_golem_b.png": {
   "border": [
    0,
    0,
@@ -1695,6 +1919,38 @@
   "ppu": 160,
   "sprite": true
  },
+ "Assets/_Aetherward/Resources/Art/Enemies/ironclad_warlord_a.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.05078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Enemies/ironclad_warlord_b.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.05078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
  "Assets/_Aetherward/Resources/Art/Enemies/juggernaut_a.png": {
   "border": [
    0,
@@ -1791,6 +2047,102 @@
   "ppu": 160,
   "sprite": true
  },
+ "Assets/_Aetherward/Resources/Art/Enemies/mirrath_a.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.05078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Enemies/mirrath_b.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.05078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Enemies/mirror_knight_a.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Enemies/mirror_knight_b.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Enemies/nyxhollow_a.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.05078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Enemies/nyxhollow_b.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.05078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
  "Assets/_Aetherward/Resources/Art/Enemies/ravager_a.png": {
   "border": [
    0,
@@ -1808,6 +2160,38 @@
   "sprite": true
  },
  "Assets/_Aetherward/Resources/Art/Enemies/ravager_b.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Enemies/rift_summoner_a.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Enemies/rift_summoner_b.png": {
   "border": [
    0,
    0,
@@ -1872,6 +2256,38 @@
   "sprite": true
  },
  "Assets/_Aetherward/Resources/Art/Enemies/riftling_b.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Enemies/rootbound_treant_a.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Enemies/rootbound_treant_b.png": {
   "border": [
    0,
    0,
@@ -2271,6 +2687,38 @@
   "ppu": 160,
   "sprite": true
  },
+ "Assets/_Aetherward/Resources/Art/Enemies/storm_wisp_a.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Enemies/storm_wisp_b.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
  "Assets/_Aetherward/Resources/Art/Enemies/summoner_a.png": {
   "border": [
    0,
@@ -2331,6 +2779,102 @@
   "pivot": [
    0.5,
    0.078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Enemies/thornmother_a.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.05078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Enemies/thornmother_b.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.05078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Enemies/thunder_drummer_a.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Enemies/thunder_drummer_b.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Enemies/vaelith_a.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.05078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Enemies/vaelith_b.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.05078125
   ],
   "ppu": 160,
   "sprite": true
