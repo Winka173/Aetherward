@@ -25,6 +25,7 @@ namespace Aetherward.Sim.Combat
                     Emit(SimEventType.StatusApplied, e.Pos, Element.None, 0f, e.Uid, e.Uid, "sprint");
                 }
             }
+            UpdateEnemyMechanicsP4(e, dt);
             if (e.Burrowed) UpdateBurrow(e, dt);
             if (e.SealTimer > 0f) return;
             if (p.Has("healEvery")) UpdatePriest(e, dt);
@@ -42,6 +43,14 @@ namespace Aetherward.Sim.Combat
             }
             if (p.Has("sprintEvery")) e.Timer2 = p.Get("sprintEvery", 4f) * Rng.Range(0.4f, 1f);
             if (p.Has("silenceEvery")) e.Timer2 = p.Get("silenceEvery", 6f) * 0.5f;
+            if (p.Has("chaosCycle")) e.ChaosElement = ElementUtil.All[Rng.Range(0, ElementUtil.All.Length)];
+            if (p.GetString("boss") == "generic")
+            {
+                e.BossTimers[TMark] = p.Get("markInterval") * 0.6f;
+                e.BossTimers[TSummon] = p.Get("summonInterval") * 0.5f;
+                e.BossTimers[TVolley] = p.Get("volleyInterval") * 0.7f;
+                e.BossTimers[TExpose] = p.Get("exposeEvery", 999f);
+            }
             if (p.Has("healEvery")) e.SpecialTimer = p.Get("healEvery", 3f) * 0.5f;
             if (p.Has("linkRadius")) e.SpecialTimer = 0f;
         }

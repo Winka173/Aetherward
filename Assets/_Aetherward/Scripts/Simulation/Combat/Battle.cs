@@ -358,6 +358,10 @@ namespace Aetherward.Sim.Combat
         private static void ResetEnemy(EnemyUnit e)
         {
             e.Alive = true;
+            Array.Clear(e.BossTimers, 0, e.BossTimers.Length);
+            e.BossFlags = 0;
+            e.ChaosElement = Element.None;
+            e.ChaosTimer = 0f;
             e.Shield = 0f;
             e.HitFlash = 0f;
             e.Engaged = null;

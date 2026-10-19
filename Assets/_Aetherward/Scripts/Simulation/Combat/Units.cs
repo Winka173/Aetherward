@@ -220,6 +220,10 @@ namespace Aetherward.Sim.Combat
         public float ReactionVulnTimer;
         public float ReactionVulnAmount;
         public int MarkStacks;        // Ember Scribe burn marks
+        public readonly float[] BossTimers = new float[4]; // generic boss modules: mark, summon, volley, expose
+        public int BossFlags;         // generic boss one-shot phases (guard adds summoned)
+        public Element ChaosElement;  // Chaos Elemental: currently resisted element
+        public float ChaosTimer;
         public float MarkTimer;
         public HeroUnit MarkOwner;
         public float FieldTimer;      // refreshed while inside fields

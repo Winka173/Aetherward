@@ -378,6 +378,7 @@ namespace Aetherward.Sim.Combat
                 case "ignaroth": UpdateIgnaroth(e, dt); break;
                 case "seraphyne": UpdateSeraphyne(e, dt); break;
                 case "gravemaw": UpdateGravemaw(e, dt); break;
+                case "generic": UpdateGenericBoss(e, dt); break;
             }
         }
 

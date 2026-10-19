@@ -672,6 +672,7 @@ namespace Aetherward.Sim.Combat
                 FireTrigger("skill_cast", h, null, castPos, null);
                 TryTraitEcho(h);
                 TryAllyEcho(h);
+                MimicOnHeroCast(h);
             }
             return true;
         }

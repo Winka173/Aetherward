@@ -749,3 +749,33 @@ UI_X.update({
     "team.ascension_desc.9": ("+ Enemies +10% damage; hazards fire 30% more often.", "+ Kẻ địch +10% sát thương; hiểm hoạ xảy ra thường hơn 30%."),
     "team.ascension_desc.10": ("+ Bosses enrage harder; enemies +10% HP. The true trial.", "+ Boss nổi giận mạnh hơn; kẻ địch +10% HP. Thử thách thật sự."),
 })
+
+# Expansion Phase 4: enemies and generic-module bosses.
+ENEMIES_X.update({
+    "mirror_knight": (("Mirror Knight", "Hiệp Sĩ Gương"), ("Reflects 25% of hero skill damage back at the caster (never lethal). Basic attacks, damage over time and reactions are safe.", "Phản 25% sát thương kỹ năng về người dùng (không bao giờ gây chết). Đòn thường, sát thương theo thời gian và phản ứng thì an toàn.")),
+    "chaos_elemental": (("Chaos Elemental", "Nguyên Tố Hỗn Loạn"), ("Every few seconds it shifts to resist one element by 60% and takes 15% more from all others. Mixed teams shine.", "Vài giây lại đổi sang kháng 60% một nguyên tố và nhận thêm 15% từ mọi nguyên tố khác. Đội đa nguyên tố toả sáng.")),
+    "rift_summoner": (("Rift Summoner", "Kẻ Triệu Hồi Khe Nứt"), ("Opens small rifts that spill Riftlings. Focus it down or Seal it.", "Mở khe nứt nhỏ thả ra Bọn Khe Nứt. Hạ nó trước hoặc Phong Ấn.")),
+    "arcane_mimic": (("Arcane Mimic", "Kẻ Nhại Huyền Bí"), ("Copies the magic of heroes casting nearby into a shield. Kill it before casting near it.", "Sao chép phép của anh hùng thi triển gần đó thành khiên. Hạ nó trước khi tung chiêu gần nó.")),
+    "ember_hound": (("Ember Hound", "Chó Săn Than Hồng"), ("A fast runner that resists Fire. Weak to Water.", "Kẻ chạy nhanh kháng Lửa. Yếu Nước.")),
+    "thunder_drummer": (("Thunder Drummer", "Tay Trống Sấm"), ("War drums hasten and armour nearby enemies. Silence the drums first.", "Tiếng trống tăng tốc và giáp cho kẻ địch gần đó. Dập tắt tiếng trống trước.")),
+    "blight_shambler": (("Blight Shambler", "Quái Mục Rữa"), ("Regenerates quickly unless it is Burning or Poisoned.", "Hồi máu nhanh trừ khi đang Bỏng hoặc Trúng Độc.")),
+    "glacier_golem": (("Glacier Golem", "Golem Sông Băng"), ("A frontal ice shield blocks attacks from the front. Flank it or melt it with Fire.", "Khiên băng phía trước chặn đòn từ chính diện. Đánh bên sườn hoặc làm tan bằng Lửa.")),
+    "storm_wisp": (("Storm Wisp", "Đốm Bão"), ("A small flyer that zips over walls and fields.", "Sinh vật bay nhỏ lướt qua tường và vùng.")),
+    "rootbound_treant": (("Rootbound Treant", "Cây Người Bị Trói Rễ"), ("Entangles the nearest hero, silencing skills. Steadfast and cleanses counter it; weak to Fire.", "Quấn lấy anh hùng gần nhất, chặn dùng chiêu. Kiên Định và thanh tẩy khắc chế; yếu Lửa.")),
+    "vaelith": (("Vaelith, the Storm Tyrant", "Vaelith, Bạo Chúa Bão Tố"), ("Calls lightning on heroes (telegraphed, brief stun) and storm wisps. At half HP she quickens—strike during her exposed windows. Weak to Earth.", "Gọi sét xuống anh hùng (có cảnh báo, choáng ngắn) và triệu đốm bão. Còn nửa HP sẽ nhanh hơn—tấn công khi lộ sơ hở. Yếu Đất.")),
+    "mirrath": (("Mirrath, the Mirror Queen", "Mirrath, Nữ Hoàng Gương"), ("Reflects skill damage and summons Mirror Knights that shield her while they stand. Break the knights, then strike. Weak to Void.", "Phản sát thương kỹ năng và gọi Hiệp Sĩ Gương che chắn khi chúng còn đứng. Phá các hiệp sĩ rồi tấn công. Yếu Hư Không.")),
+})
+
+ENEMIES_X.update({
+    "aetherion": (("Aetherion, the Fallen Crystal", "Aetherion, Pha Lê Sa Ngã"), ("Bombards the Crystal, marks heroes and summons Chaos Elementals; at half HP it fractures and unleashes Riftlings. A volley is always followed by an exposed window.", "Oanh tạc Pha Lê, đánh dấu anh hùng và gọi Nguyên Tố Hỗn Loạn; còn nửa HP sẽ nứt vỡ và thả Bọn Khe Nứt. Sau mỗi loạt bắn luôn có lúc lộ sơ hở.")),
+    "thornmother": (("Thornmother", "Mẹ Gai"), ("Regenerates unless Burning or Poisoned, roots heroes with thorn marks and calls Blight Shamblers. Weak to Fire.", "Hồi máu trừ khi Bỏng hoặc Trúng Độc, trói anh hùng bằng dấu gai và gọi Quái Mục Rữa. Yếu Lửa.")),
+    "ironclad_warlord": (("Ironclad Warlord", "Lãnh Chúa Giáp Sắt"), ("Heavily armoured; shells the Crystal and sends Goblin Sprinters. After each volley his guard drops.", "Giáp cực dày; nã pháo Pha Lê và thả Yêu Tinh Tốc Hành. Sau mỗi loạt pháo hắn hở thế thủ.")),
+    "ashen_matriarch": (("Ashen Matriarch", "Mẫu Hậu Tro Tàn"), ("Brood mother of Ash Imps; marks heroes with fire and, below 40%, unleashes Ember Hounds. Weak to Water.", "Mẹ của Tiểu Quỷ Tro; đánh dấu anh hùng bằng lửa và dưới 40% sẽ thả Chó Săn Than Hồng. Yếu Nước.")),
+    "nyxhollow": (("Nyxhollow, the Hungering Void", "Nyxhollow, Hư Không Đói Khát"), ("Marks heroes with void, spills Riftlings and raises Rift Summoners that shield it. Weak to Light.", "Đánh dấu anh hùng bằng hư không, thả Bọn Khe Nứt và dựng Kẻ Triệu Hồi Khe Nứt che chắn. Yếu Ánh Sáng.")),
+})
+UI_X.update({
+    "hud.boss_exposed": ("EXPOSED!", "LỘ SƠ HỞ!"),
+    "hud.vaelith_phase": ("THE STORM QUICKENS!", "BÃO TỐ TĂNG TỐC!"), "hud.mirrath_guard": ("MIRROR KNIGHTS! Break them", "HIỆP SĨ GƯƠNG! Phá chúng"),
+    "hud.mirrath_phase": ("More knights rise!", "Thêm hiệp sĩ trỗi dậy!"), "hud.aetherion_phase": ("THE CRYSTAL FRACTURES!", "PHA LÊ NỨT VỠ!"),
+    "hud.ashen_matriarch_phase": ("THE BROOD AWAKENS!", "LŨ CON THỨC GIẤC!"), "hud.nyxhollow_guard": ("RIFT SUMMONERS shield it!", "KẺ TRIỆU HỒI KHE NỨT che chắn nó!"),
+})

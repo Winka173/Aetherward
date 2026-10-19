@@ -107,6 +107,84 @@
     { "id": "ice_statue", "behavior": "melee", "hp": 260, "attack": 0, "defense": 10, "speed": 0.0, "attackInterval": 9.0, "range": 0.1,
       "crystalDamage": 0, "radius": 0.45, "tenacity": 0.9, "gold": 1, "threat": 0, "resist": { "fire": -0.3 }, "params": { "statue": 1 }, "tags": ["summon", "frozen_covenant"] },
 
+    // ---------------------------------------------------------------- Expansion Phase 4 enemies
+    // Mirror Knight: reflects 25% of hero skill damage back at the caster (never lethal). Counter: basic attacks, DoTs, reactions.
+    { "id": "mirror_knight", "behavior": "melee", "hp": 210, "attack": 15, "defense": 30, "speed": 0.9, "attackInterval": 1.3, "range": 0.6,
+      "crystalDamage": 22, "radius": 0.42, "tenacity": 0.3, "gold": 3, "threat": 4, "params": { "reflect": 0.25 }, "tags": ["reflector", "arcane_fractures"] },
+    // Chaos Elemental: cycles a resisted element every 4s (60% less from it, 15% more from others). Counter: mixed-element teams.
+    { "id": "chaos_elemental", "behavior": "melee", "hp": 160, "attack": 12, "defense": 8, "speed": 1.0, "attackInterval": 1.2, "range": 0.55,
+      "crystalDamage": 18, "radius": 0.38, "gold": 3, "threat": 3, "params": { "chaosCycle": 4.0, "chaosResist": 0.6, "chaosWeak": 0.15 }, "tags": ["chaos", "arcane_fractures"] },
+    // Rift Summoner: opens rifts that spill riftlings. Counter: focus fire, Seal.
+    { "id": "rift_summoner", "behavior": "summoner", "hp": 140, "attack": 8, "defense": 8, "speed": 0.8, "attackInterval": 1.4, "range": 0.55,
+      "crystalDamage": 15, "radius": 0.38, "gold": 3, "threat": 4, "params": { "summon": "riftling", "summonCount": 2, "summonCap": 6, "specialInterval": 6.5 },
+      "tags": ["summoner", "voidborn"] },
+    // Arcane Mimic: copies hero magic cast nearby as a shield (capped). Counter: kill it before casting near it, burst it with basics.
+    { "id": "arcane_mimic", "behavior": "melee", "hp": 150, "attack": 12, "defense": 10, "speed": 1.0, "attackInterval": 1.2, "range": 0.55,
+      "crystalDamage": 16, "radius": 0.36, "gold": 3, "threat": 3, "params": { "mimicShield": 0.08, "mimicRange": 4.5 }, "tags": ["copycat", "arcane_fractures"] },
+    // Ember Hound: fast runner that leaves an ember patch when it dies. Counter: kill it away from the crystal path.
+    { "id": "ember_hound", "behavior": "runner", "hp": 55, "attack": 8, "defense": 2, "speed": 1.9, "attackInterval": 0.8, "range": 0.45,
+      "crystalDamage": 12, "radius": 0.3, "gold": 1, "threat": 2, "resist": { "fire": 0.3, "water": -0.25 }, "tags": ["runner", "ashen_horde"] },
+    // Thunder Drummer: war drums that hasten and armour nearby enemies. Counter: priority target.
+    { "id": "thunder_drummer", "behavior": "buffer", "hp": 140, "attack": 8, "defense": 10, "speed": 0.95, "attackInterval": 1.4, "range": 0.55,
+      "crystalDamage": 15, "radius": 0.38, "gold": 3, "threat": 3, "resist": { "lightning": 0.3 }, "params": { "auraRadius": 2.4, "speedBuff": 0.2, "armorBuff": 12 },
+      "tags": ["support", "stormspire"] },
+    // Blight Shambler: regenerates 3%/s unless Burning or Poisoned. Counter: Fire or Poison.
+    { "id": "blight_shambler", "behavior": "melee", "hp": 230, "attack": 12, "defense": 10, "speed": 0.8, "attackInterval": 1.4, "range": 0.6,
+      "crystalDamage": 20, "radius": 0.45, "gold": 3, "threat": 4, "resist": { "nature": 0.3 }, "params": { "regenPct": 0.03 }, "tags": ["regenerator", "corrupted_wilds"] },
+    // Glacier Golem: a frontal ice shield blocks attacks from the front. Counter: flankers, area damage, Fire.
+    { "id": "glacier_golem", "behavior": "melee", "hp": 280, "attack": 15, "defense": 25, "speed": 0.7, "attackInterval": 1.5, "range": 0.65,
+      "crystalDamage": 26, "radius": 0.5, "tenacity": 0.4, "gold": 3, "threat": 4, "resist": { "ice": 0.4, "fire": -0.25 }, "params": { "frontShield": 1 },
+      "tags": ["tank", "frozen_covenant"] },
+    // Storm Wisp: small flyer that zips over walls. Counter: ranged coverage.
+    { "id": "storm_wisp", "behavior": "runner", "hp": 45, "attack": 6, "defense": 0, "speed": 1.7, "attackInterval": 1.0, "range": 0.45,
+      "crystalDamage": 9, "radius": 0.24, "gold": 1, "threat": 1, "resist": { "lightning": 0.3 }, "params": { "flying": 1, "ignoreFields": 1 }, "tags": ["flyer", "stormspire"] },
+    // Rootbound Treant: entangles (silences) the nearest hero every 7s. Counter: Steadfast, cleanses, Fire.
+    { "id": "rootbound_treant", "behavior": "melee", "hp": 260, "attack": 13, "defense": 18, "speed": 0.7, "attackInterval": 1.5, "range": 0.6,
+      "crystalDamage": 22, "radius": 0.5, "tenacity": 0.3, "gold": 3, "threat": 4, "resist": { "nature": 0.4, "fire": -0.3 },
+      "params": { "silenceEvery": 7.0, "silenceDuration": 2.0 }, "tags": ["disruptor", "corrupted_wilds"] },
+
+    // ---------------------------------------------------------------- Expansion Phase 4 bosses (generic modules)
+    { "id": "vaelith", "behavior": "boss", "boss": true, "hp": 2700, "attack": 34, "defense": 26, "speed": 0.55, "attackInterval": 1.4, "range": 0.9,
+      "crystalDamage": 130, "radius": 1.0, "tenacity": 0.72, "gold": 20, "essence": 4, "threat": 40, "resist": { "lightning": 0.4, "earth": -0.25 },
+      "params": { "boss": "generic", "markInterval": 7.0, "markCount": 3, "markDelay": 1.5, "markRadius": 1.0, "markStun": 0.6, "markMult": 0.7, "markElement": "lightning",
+                  "summon": "storm_wisp", "summonCount": 3, "summonInterval": 12.0, "summonCap": 6,
+                  "phaseAt": 0.5, "phaseSpeed": 0.3, "phaseAttack": 0.15, "phaseElement": "lightning", "exposeEvery": 14.0, "exposeDuration": 3.5, "exposeAmount": 0.35 },
+      "tags": ["boss", "stormspire"] },
+    { "id": "mirrath", "behavior": "boss", "boss": true, "hp": 2600, "attack": 32, "defense": 30, "speed": 0.5, "attackInterval": 1.5, "range": 0.9,
+      "crystalDamage": 130, "radius": 1.0, "tenacity": 0.72, "gold": 20, "essence": 4, "threat": 40, "resist": { "arcane": 0.4, "void": -0.25 },
+      "params": { "boss": "generic", "reflect": 0.15, "guardAt": 0.7, "guardAdd": "mirror_knight", "guardCount": 2, "guardReduction": 0.4,
+                  "phaseAt": 0.4, "phaseSummon": "mirror_knight", "phaseSummonCount": 2, "summonCap": 4, "exposeEvery": 12.0, "exposeDuration": 3.0, "exposeAmount": 0.35,
+                  "markInterval": 9.0, "markCount": 2, "markMult": 0.8, "markElement": "arcane" },
+      "tags": ["boss", "arcane_fractures"] },
+    { "id": "aetherion", "behavior": "boss", "boss": true, "hp": 3100, "attack": 38, "defense": 30, "speed": 0.5, "attackInterval": 1.5, "range": 0.95,
+      "crystalDamage": 150, "radius": 1.1, "tenacity": 0.75, "gold": 0, "essence": 5, "threat": 50,
+      "params": { "boss": "generic", "volleyInterval": 11.0, "volleyCount": 3, "volleyMult": 1.3, "markInterval": 8.0, "markCount": 2, "markElement": "arcane", "markStun": 0.5,
+                  "summon": "chaos_elemental", "summonCount": 2, "summonInterval": 14.0, "summonCap": 4,
+                  "phaseAt": 0.5, "phaseSpeed": 0.2, "phaseAttack": 0.2, "phaseSummon": "riftling", "phaseSummonCount": 4, "exposeDuration": 4.0, "exposeAmount": 0.4 },
+      "tags": ["boss", "arcane_fractures"] },
+    { "id": "thornmother", "behavior": "boss", "boss": true, "hp": 2000, "attack": 30, "defense": 22, "speed": 0.55, "attackInterval": 1.5, "range": 0.9,
+      "crystalDamage": 110, "radius": 1.0, "tenacity": 0.7, "gold": 20, "essence": 3, "threat": 30, "resist": { "nature": 0.4, "fire": -0.3 },
+      "params": { "boss": "generic", "regenPct": 0.008, "summon": "blight_shambler", "summonCount": 2, "summonInterval": 13.0, "summonCap": 4,
+                  "markInterval": 8.0, "markCount": 2, "markStun": 0.8, "markMult": 0.6, "markElement": "nature", "exposeEvery": 13.0, "exposeDuration": 3.5, "exposeAmount": 0.35 },
+      "tags": ["boss", "corrupted_wilds"] },
+    { "id": "ironclad_warlord", "behavior": "boss", "boss": true, "hp": 2000, "attack": 32, "defense": 45, "speed": 0.55, "attackInterval": 1.6, "range": 0.9,
+      "crystalDamage": 115, "radius": 1.0, "tenacity": 0.72, "gold": 20, "essence": 3, "threat": 30, "resist": { "earth": 0.3 },
+      "params": { "boss": "generic", "volleyInterval": 10.0, "volleyCount": 3, "volleyMult": 1.2, "volleyDelay": 1.8,
+                  "summon": "goblin_sprinter", "summonCount": 3, "summonInterval": 11.0, "summonCap": 6, "exposeDuration": 4.0, "exposeAmount": 0.45 },
+      "tags": ["boss", "iron_legion"] },
+    { "id": "ashen_matriarch", "behavior": "boss", "boss": true, "hp": 1900, "attack": 32, "defense": 24, "speed": 0.6, "attackInterval": 1.4, "range": 0.9,
+      "crystalDamage": 110, "radius": 1.0, "tenacity": 0.7, "gold": 20, "essence": 3, "threat": 30, "resist": { "fire": 0.4, "water": -0.25 },
+      "params": { "boss": "generic", "summon": "ash_imp", "summonCount": 3, "summonInterval": 9.0, "summonCap": 6,
+                  "markInterval": 7.5, "markCount": 2, "markMult": 0.8, "markElement": "fire",
+                  "phaseAt": 0.4, "phaseSpeed": 0.25, "phaseAttack": 0.2, "phaseSummon": "ember_hound", "phaseSummonCount": 3, "exposeDuration": 3.5, "exposeAmount": 0.35 },
+      "tags": ["boss", "ashen_horde"] },
+    { "id": "nyxhollow", "behavior": "boss", "boss": true, "hp": 2800, "attack": 34, "defense": 28, "speed": 0.5, "attackInterval": 1.5, "range": 0.9,
+      "crystalDamage": 135, "radius": 1.05, "tenacity": 0.74, "gold": 20, "essence": 4, "threat": 40, "resist": { "void": 0.4, "light": -0.3 },
+      "params": { "boss": "generic", "markInterval": 8.0, "markCount": 3, "markMult": 0.7, "markElement": "void", "markStun": 0.4,
+                  "summon": "riftling", "summonCount": 4, "summonInterval": 10.0, "summonCap": 8,
+                  "guardAt": 0.6, "guardAdd": "rift_summoner", "guardCount": 2, "guardReduction": 0.35, "exposeEvery": 15.0, "exposeDuration": 3.5, "exposeAmount": 0.35 },
+      "tags": ["boss", "voidborn"] },
+
     // Seraphyne, Queen of Winter (Frostfall boss): frost marks that freeze heroes standing in them, ice statues that guard
     // her (destructible), and a blizzard phase that chills nearby heroes' attacks. Weak to Fire.
     { "id": "seraphyne", "behavior": "boss", "boss": true, "hp": 2300, "attack": 30, "defense": 24, "speed": 0.55, "attackInterval": 1.5, "range": 0.9,

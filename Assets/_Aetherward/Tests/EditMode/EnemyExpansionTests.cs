@@ -126,7 +126,7 @@ namespace Aetherward.Tests
                 }
                 Assert.IsTrue(spawned, a + " should be the wave-10 boss for seed " + seed);
             }
-            Assert.AreEqual(2, seen.Count, "both bosses appear across seeds");
+            Assert.GreaterOrEqual(seen.Count, 2, "several bosses appear across seeds");
         }
     }
 }

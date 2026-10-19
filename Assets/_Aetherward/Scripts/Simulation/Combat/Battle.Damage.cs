@@ -120,7 +120,7 @@ namespace Aetherward.Sim.Combat
                 if (Vec2.Dot(toSource, target.Facing) > 0.35f) resist += 0.6f;
             }
             raw *= 1f - SimMath.Clamp(resist, -0.5f, 0.75f);
-            raw *= MechanicDamageTaken(target, req);
+            raw *= MechanicDamageTaken(target, req) * MechanicDamageTakenP4(target, req);
             // Latched parasites shrug off damage unless a hero guards the core (Light always connects).
             if (target.Latched && req.Element != Element.Light && !CoreGuarded) raw *= 0.4f;
 
@@ -155,6 +155,7 @@ namespace Aetherward.Sim.Combat
 
             if (crit && src != null) FireTrigger("crit", src, target, target.Pos, null);
             OnMechanicHit(target, req);
+            ReflectSkill(target, req, effective);
 
             if (target.Hp <= 0f)
             {

@@ -216,6 +216,15 @@ namespace Aetherward.Sim.Content
                     bool ok = key == "splitInto" ? db.Enemies.ContainsKey(v) : db.Fields.ContainsKey(v);
                     if (!ok) Err("enemy " + en.Id + ": unknown " + key + " " + v);
                 }
+                foreach (string key in new[] { "summon", "guardAdd", "phaseSummon" })
+                {
+                    string add = en.Params.GetString(key);
+                    if (add == null) continue;
+                    if (!db.Enemies.TryGetValue(add, out EnemyDef ad2)) Err("enemy " + en.Id + ": unknown " + key + " " + add);
+                    else if (ad2.Boss) Err("enemy " + en.Id + ": " + key + " cannot be a boss");
+                }
+                if (en.Params.GetString("markElement") is string me && me != "none" && !ElementUtil.TryParse(me, out _)) Err("enemy " + en.Id + ": bad markElement");
+                if (en.Boss && en.Params.GetString("boss") == "generic" && !en.Params.Has("exposeAmount")) Err("enemy " + en.Id + ": generic bosses need an exposed window");
                 if (en.Params.GetString("splitInto") is string child && db.Enemies.TryGetValue(child, out EnemyDef cd) && cd.Params.GetString("splitInto") != null)
                     Err("enemy " + en.Id + ": split children must not split again");
             }
