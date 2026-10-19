@@ -23,4 +23,15 @@ Mọi cơ chế đọc từ `params` trong `enemies.json` (không theo id); mã 
 
 Xuất hiện: các kẻ địch Phase 2 đã được trộn (số lượng nhỏ, thay một phần grunt/runner) vào đợt 4–19 của chế độ thường, và thêm theo biome.
 
-Tổng hiện tại: 35 kẻ địch (gồm 5 boss). Mục tiêu 45+ ở Phase 4.
+| Mirror Knight | Arcane Fractures | Phản 25% sát thương kỹ năng (không gây chết) | Đòn thường, DoT, phản ứng | `MirrorKnight…` |
+| Chaos Elemental | Arcane Fractures | Mỗi 4s kháng 60% một nguyên tố, +15% từ nguyên tố khác | Đội đa nguyên tố | `ChaosElemental…` |
+| Rift Summoner | Voidborn | Mở khe nứt thả Riftling (trần 6) | Hạ trước, Phong Ấn | dữ liệu (summoner) |
+| Arcane Mimic | Arcane Fractures | Sao chép phép gần đó thành khiên (trần 24% HP) | Hạ trước khi dùng chiêu gần nó | `ArcaneMimic…` |
+| Ember Hound | Ashen Horde | Chạy nhanh, kháng Lửa | Nước | dữ liệu |
+| Thunder Drummer | Stormspire | Tăng tốc + giáp cho kẻ gần | Ưu tiên hạ | dữ liệu (buffer) |
+| Blight Shambler | Corrupted Wilds | Hồi 3%/s trừ khi Bỏng/Độc | Lửa, Độc | `BlightShambler…` |
+| Glacier Golem | Frozen Covenant | Khiên băng phía trước | Đánh sườn, AoE, Lửa | dữ liệu (frontShield) |
+| Storm Wisp | Stormspire | Bay qua tường/vùng | Tầm xa | dữ liệu |
+| Rootbound Treant | Corrupted Wilds | Câm Lặng anh hùng gần nhất | Kiên Định, thanh tẩy, Lửa | dữ liệu |
+
+Tổng hiện tại: **52 kẻ địch = 40 thường (gồm 3 quân triệu hồi) + 12 boss**, 7 phe (thẻ `iron_legion`, `voidborn`, `ashen_horde`, `frozen_covenant`, `stormspire`, `corrupted_wilds`, `arcane_fractures`).

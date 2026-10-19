@@ -25,3 +25,13 @@ Mô phỏng (pure C#) được kiểm chứng bằng `dotnet test`; mọi thứ 
 | Cân bằng Phase 2a | ĐO ĐƯỢC | — | `BALANCE_REPORT.md`, `BIOMES.md` |
 | 4 hero Nature/Poison + 8 tiến hoá | VERIFIED | IMPLEMENTED_UNVERIFIED | `NatureHeroTests` (11), `EveryHeroSkillCastsInARealWave`, `EveryEvolutionBuildsAndCasts` |
 | 9 relic + 8 thẻ Nature/Poison | VERIFIED (validator) | IMPLEMENTED_UNVERIFIED | `ContentPassesValidation`, `NaturePoisonRelicsChangeTheRules` |
+| 12 hero Phase 3 (36 tổng) + 24 tiến hoá | VERIFIED | IMPLEMENTED_UNVERIFIED | `Phase3HeroTests` (14), `EveryHeroSkillCastsInARealWave` |
+| Thức tỉnh nguyên tố | VERIFIED | IMPLEMENTED_UNVERIFIED | `AwakeningIsBoundedDeterministicSavedAndUsedInCombat` |
+| 81 relic / 80 thẻ / 11 hợp thể / 12 keystone | VERIFIED (validator) | IMPLEMENTED_UNVERIFIED | `ContentPassesValidation`, `RELICS_AND_FUSIONS.md` |
+| Endless / Daily / Boss Rush | VERIFIED (chạy hết không kẹt) | IMPLEMENTED_UNVERIFIED | `ModeTests` |
+| Ascension 6–10 | VERIFIED | IMPLEMENTED_UNVERIFIED | `AscensionSixToTenModulesApply` |
+| 52 kẻ địch (40 thường + 12 boss) | VERIFIED | IMPLEMENTED_UNVERIFIED (sprite qua contact sheet) | `EnemyPhase4Tests` |
+| 6 biome | VERIFIED (làn tới Pha Lê kể cả có tường, không kẹt) | IMPLEMENTED_UNVERIFIED | `BiomeTests` |
+| 12 gắn kết + ma trận codex | VERIFIED (gắn kết) | IMPLEMENTED_UNVERIFIED (UI) | `BondsActivate…` |
+| Run pool | VERIFIED | — | `RunPoolsAreSeeded…` |
+| Cân bằng toàn bộ nội dung | ĐO ĐƯỢC, **chưa đạt** | — | `BALANCE_REPORT.md`, K-04 |

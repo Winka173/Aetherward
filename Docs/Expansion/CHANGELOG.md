@@ -59,7 +59,7 @@
 - Harness: `--mode`. Test: `ModeTests` (7), 157/157.
 
 ## Phase 4b — 10 kẻ địch, 7 boss (2026-10-19)
-- Kẻ địch (45 tổng): Mirror Knight (phản 25% sát thương kỹ năng, không gây chết), Chaos Elemental (đổi nguyên tố kháng mỗi 4s), Rift Summoner, Arcane Mimic (sao chép phép thành khiên, có trần), Ember Hound, Thunder Drummer, Blight Shambler (hồi máu trừ khi Bỏng/Độc), Glacier Golem (khiên trước), Storm Wisp (bay), Rootbound Treant (câm lặng).
+- Kẻ địch (52 tổng gồm 12 boss): Mirror Knight (phản 25% sát thương kỹ năng, không gây chết), Chaos Elemental (đổi nguyên tố kháng mỗi 4s), Rift Summoner, Arcane Mimic (sao chép phép thành khiên, có trần), Ember Hound, Thunder Drummer, Blight Shambler (hồi máu trừ khi Bỏng/Độc), Glacier Golem (khiên trước), Storm Wisp (bay), Rootbound Treant (câm lặng).
 - **Bộ điều khiển boss theo dữ liệu** (`"boss": "generic"`): dấu đánh dấu anh hùng, triệu hồi có trần, loạt pháo vào Pha Lê, quân hộ vệ giảm sát thương, chuyển pha, cửa sổ lộ sơ hở (validator bắt buộc). 7 boss mới (12 tổng): Vaelith, Mirrath, Aetherion, Thornmother, Ironclad Warlord, Ashen Matriarch, Nyxhollow. Pool đợt 10: 5 boss; đợt 20: 5 boss.
 - Test: `EnemyPhase4Tests` (6; mỗi boss mới có cảnh báo, cửa sổ lộ sơ hở, không kẹt).
 - Cân bằng `--launch-pool`: 108/360 (trước 117).
