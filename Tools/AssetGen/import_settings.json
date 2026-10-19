@@ -1,0 +1,5330 @@
+{
+ "Assets/_Aetherward/Resources/Art/Cards/arcane_attunement.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Cards/bedrock_oath.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Cards/bounty_hunter.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Cards/catalyst_surge.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Cards/crystal_lattice.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Cards/echoing_chant.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Cards/elemental_overflow.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Cards/empowered_spells.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Cards/fortress_doctrine.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Cards/gale_banner.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Cards/glacial_vow.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Cards/heavy_impact.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Cards/keen_edge.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Cards/lingering_elements.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Cards/long_reach.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Cards/magma_core.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Cards/mender_training.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Cards/overcharge.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Cards/overheal_barrier.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Cards/pact_of_cinders.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Cards/pact_of_glass.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Cards/pact_of_haste.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Cards/pact_of_hunger.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Cards/permafrost.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Cards/pyre_covenant.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Cards/quick_cast.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Cards/reinforced_plate.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Cards/sharpened_focus.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Cards/spec_cinder_wildfire.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Cards/spec_freya_whiteout.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Cards/spec_glacius_aegis.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Cards/spec_ignis_pyroclasm.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Cards/spec_magnus_fault_line.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Cards/spec_marina_monsoon.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Cards/spec_raiden_afterimage.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Cards/spec_sylph_volley.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Cards/spec_terra_sanctum.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Cards/spec_tidal_riptide.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Cards/spec_volt_arc_lattice.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Cards/spec_zephyr_eye_of_storm.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Cards/static_field.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Cards/steam_engine.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Cards/storm_choir.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Cards/storm_front.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Cards/swift_hands.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Cards/tidebound.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Enemies/banner_a.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Enemies/banner_b.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Enemies/grunt_a.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Enemies/grunt_b.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Enemies/hexcaster_a.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Enemies/hexcaster_b.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Enemies/juggernaut_a.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Enemies/juggernaut_b.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Enemies/mimic_a.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Enemies/mimic_b.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Enemies/ravager_a.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Enemies/ravager_b.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Enemies/rift_warden_a.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.05078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Enemies/rift_warden_b.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.05078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Enemies/riftling_a.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Enemies/riftling_b.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Enemies/runner_a.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Enemies/runner_b.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Enemies/sapper_a.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Enemies/sapper_b.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Enemies/shieldbearer_a.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Enemies/shieldbearer_b.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Enemies/siegebreaker_golem_a.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.05078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Enemies/siegebreaker_golem_b.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.05078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Enemies/summoner_a.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Enemies/summoner_b.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Enemies/swarmling_a.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Enemies/swarmling_b.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Enemies/warded_a.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Enemies/warded_b.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/cinder_cast.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/cinder_downed.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/cinder_evoA.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/cinder_evoA_cast.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/cinder_evoB.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/cinder_evoB_cast.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/cinder_idle.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/freya_cast.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/freya_downed.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/freya_evoA.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/freya_evoA_cast.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/freya_evoB.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/freya_evoB_cast.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/freya_idle.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/glacius_cast.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/glacius_downed.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/glacius_evoA.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/glacius_evoA_cast.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/glacius_evoB.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/glacius_evoB_cast.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/glacius_idle.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/ignis_cast.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/ignis_downed.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/ignis_evoA.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/ignis_evoA_cast.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/ignis_evoB.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/ignis_evoB_cast.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/ignis_idle.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/magnus_cast.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/magnus_downed.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/magnus_evoA.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/magnus_evoA_cast.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/magnus_evoB.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/magnus_evoB_cast.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/magnus_idle.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/marina_cast.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/marina_downed.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/marina_evoA.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/marina_evoA_cast.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/marina_evoB.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/marina_evoB_cast.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/marina_idle.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/raiden_cast.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/raiden_downed.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/raiden_evoA.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/raiden_evoA_cast.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/raiden_evoB.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/raiden_evoB_cast.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/raiden_idle.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/sylph_cast.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/sylph_downed.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/sylph_evoA.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/sylph_evoA_cast.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/sylph_evoB.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/sylph_evoB_cast.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/sylph_idle.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/terra_cast.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/terra_downed.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/terra_evoA.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/terra_evoA_cast.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/terra_evoB.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/terra_evoB_cast.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/terra_idle.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/tidal_cast.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/tidal_downed.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/tidal_evoA.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/tidal_evoA_cast.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/tidal_evoB.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/tidal_evoB_cast.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/tidal_idle.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/volt_cast.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/volt_downed.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/volt_evoA.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/volt_evoA_cast.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/volt_evoB.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/volt_evoB_cast.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/volt_idle.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/zephyr_cast.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/zephyr_downed.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/zephyr_evoA.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/zephyr_evoA_cast.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/zephyr_evoB.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/zephyr_evoB_cast.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/zephyr_idle.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.0875
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Icons/element_earth.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 256,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Icons/element_fire.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 256,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Icons/element_ice.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 256,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Icons/element_lightning.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 256,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Icons/element_water.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 256,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Icons/element_wind.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 256,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Icons/reaction_blizzard.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Icons/reaction_electrocharge.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Icons/reaction_firestorm.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Icons/reaction_freeze.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Icons/reaction_ice_spikes.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Icons/reaction_magma.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Icons/reaction_magnetize.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Icons/reaction_melt.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Icons/reaction_mudfield.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Icons/reaction_overload.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Icons/reaction_rainstorm.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Icons/reaction_sandstorm.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Icons/reaction_superconduct.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Icons/reaction_thunderstorm.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Icons/reaction_vaporize.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Icons/role_assassin.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 240,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Icons/role_bruiser.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 240,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Icons/role_controller.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 240,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Icons/role_guardian.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 240,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Icons/role_healer.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 240,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Icons/role_mage.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 240,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Icons/role_ranger.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 240,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Icons/role_support.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 240,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Icons/status_adapt.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 240,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Icons/status_armor_crack.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 240,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Icons/status_burn.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 240,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Icons/status_charged.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 240,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Icons/status_chill.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 240,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Icons/status_exposed.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 240,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Icons/status_frozen.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 240,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Icons/status_shield.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 240,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Icons/status_slow.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 240,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Icons/status_stun.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 240,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Icons/status_taunt.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 240,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Icons/status_wet.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 240,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Icons/status_windmark.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 240,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Icons/ui_auto.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 240,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Icons/ui_check.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 240,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Icons/ui_close.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 240,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Icons/ui_codex.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 240,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Icons/ui_crystal.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 240,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Icons/ui_essence.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 240,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Icons/ui_evolve.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 240,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Icons/ui_gold.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 240,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Icons/ui_heart.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 240,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Icons/ui_history.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 240,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Icons/ui_leak.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 240,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Icons/ui_lock.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 240,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Icons/ui_pause.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 240,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Icons/ui_play.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 240,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Icons/ui_reroll.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 240,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Icons/ui_settings.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 240,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Icons/ui_shield.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 240,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Icons/ui_speed.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 240,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Icons/ui_star.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 240,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Icons/ui_sword.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 240,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Icons/ui_trophy.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 240,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Icons/ui_wave.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 240,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Icons/ui_xp.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 240,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Portraits/cinder.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 100,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Portraits/freya.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 100,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Portraits/glacius.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 100,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Portraits/ignis.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 100,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Portraits/magnus.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 100,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Portraits/marina.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 100,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Portraits/raiden.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 100,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Portraits/sylph.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 100,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Portraits/terra.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 100,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Portraits/tidal.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 100,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Portraits/volt.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 100,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Portraits/zephyr.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 100,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Relics/absolute_zero.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Relics/alchemists_purse.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Relics/arcane_echo.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Relics/blood_contract.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Relics/chain_conductor.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Relics/crystal_growth.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Relics/elemental_mirror.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Relics/eternal_ember.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Relics/executioners_lens.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Relics/frozen_crown.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Relics/frozen_heart.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Relics/glass_cannon.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Relics/iron_bulwark.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Relics/last_stand.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Relics/living_monolith.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Relics/mana_battery.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Relics/overgrowth.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Relics/phoenix_feather.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Relics/quiver_of_gales.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Relics/sanctuary_bell.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Relics/scholars_lens.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Relics/spark_of_genesis.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Relics/steam_reactor.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Relics/stoneheart.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Relics/storm_caller.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Relics/tempest_engine.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Relics/thunder_relay.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Relics/war_drum.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/UI/bar_bg.png": {
+  "border": [
+   18,
+   18,
+   18,
+   18
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 100,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/UI/bar_fill.png": {
+  "border": [
+   18,
+   18,
+   18,
+   18
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 100,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/UI/button_danger_disabled.png": {
+  "border": [
+   36,
+   36,
+   36,
+   36
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 100,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/UI/button_danger_hover.png": {
+  "border": [
+   36,
+   36,
+   36,
+   36
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 100,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/UI/button_danger_normal.png": {
+  "border": [
+   36,
+   36,
+   36,
+   36
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 100,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/UI/button_danger_pressed.png": {
+  "border": [
+   36,
+   36,
+   36,
+   36
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 100,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/UI/button_ghost_disabled.png": {
+  "border": [
+   36,
+   36,
+   36,
+   36
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 100,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/UI/button_ghost_hover.png": {
+  "border": [
+   36,
+   36,
+   36,
+   36
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 100,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/UI/button_ghost_normal.png": {
+  "border": [
+   36,
+   36,
+   36,
+   36
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 100,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/UI/button_ghost_pressed.png": {
+  "border": [
+   36,
+   36,
+   36,
+   36
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 100,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/UI/button_primary_disabled.png": {
+  "border": [
+   36,
+   36,
+   36,
+   36
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 100,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/UI/button_primary_hover.png": {
+  "border": [
+   36,
+   36,
+   36,
+   36
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 100,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/UI/button_primary_normal.png": {
+  "border": [
+   36,
+   36,
+   36,
+   36
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 100,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/UI/button_primary_pressed.png": {
+  "border": [
+   36,
+   36,
+   36,
+   36
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 100,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/UI/button_secondary_disabled.png": {
+  "border": [
+   36,
+   36,
+   36,
+   36
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 100,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/UI/button_secondary_hover.png": {
+  "border": [
+   36,
+   36,
+   36,
+   36
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 100,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/UI/button_secondary_normal.png": {
+  "border": [
+   36,
+   36,
+   36,
+   36
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 100,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/UI/button_secondary_pressed.png": {
+  "border": [
+   36,
+   36,
+   36,
+   36
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 100,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/UI/card_common.png": {
+  "border": [
+   48,
+   48,
+   48,
+   80
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 100,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/UI/card_cursed.png": {
+  "border": [
+   48,
+   48,
+   48,
+   80
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 100,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/UI/card_epic.png": {
+  "border": [
+   48,
+   48,
+   48,
+   80
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 100,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/UI/card_legendary.png": {
+  "border": [
+   48,
+   48,
+   48,
+   80
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 100,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/UI/card_rare.png": {
+  "border": [
+   48,
+   48,
+   48,
+   80
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 100,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/UI/panel_danger.png": {
+  "border": [
+   40,
+   40,
+   40,
+   40
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 100,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/UI/panel_dark.png": {
+  "border": [
+   40,
+   40,
+   40,
+   40
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 100,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/UI/panel_glass.png": {
+  "border": [
+   40,
+   40,
+   40,
+   40
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 100,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/UI/panel_light.png": {
+  "border": [
+   40,
+   40,
+   40,
+   40
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 100,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/UI/title_emblem.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 100,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/UI/tooltip.png": {
+  "border": [
+   24,
+   24,
+   24,
+   24
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 100,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/UI/vignette.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 100,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Vfx/arrow.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 220,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Vfx/coin.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Vfx/fireball.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Vfx/glow.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 64,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Vfx/impact_earth.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 192,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Vfx/impact_fire.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 192,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Vfx/impact_ice.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 192,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Vfx/impact_lightning.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 192,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Vfx/impact_water.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 192,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Vfx/impact_wind.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 192,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Vfx/projectile_earth.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 230,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Vfx/projectile_fire.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 230,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Vfx/projectile_ice.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 230,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Vfx/projectile_lightning.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 230,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Vfx/projectile_water.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 230,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Vfx/projectile_wind.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 230,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Vfx/ring.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 128,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Vfx/slash.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Vfx/spark.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Vfx/telegraph.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 128,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Vfx/zone_blizzard.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 128,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Vfx/zone_burning_ground.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 128,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Vfx/zone_healing_rain.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 128,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Vfx/zone_magma.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 128,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Vfx/zone_mud.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 128,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Vfx/zone_storm_trail.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 128,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Vfx/zone_tempest_link.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 128,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Vfx/zone_thunderstorm.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 128,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Vfx/zone_vortex.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 128,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/World/arena_background.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 4096,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 80,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/World/crystal_cracked.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.07
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/World/crystal_critical.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.07
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/World/crystal_intact.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.07
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/World/lane_arrow.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/World/node_empty.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 150,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/World/node_highlight.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 150,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/World/node_occupied.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 150,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/World/shadow.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 128,
+  "sprite": true
+ }
+}
