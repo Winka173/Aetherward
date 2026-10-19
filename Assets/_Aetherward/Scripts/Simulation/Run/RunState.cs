@@ -24,6 +24,7 @@ namespace Aetherward.Sim.Run
         public bool Downed;
         public int Node = -1;
         public int JoinedWave = 1;
+        public string TraitId;            // rolled on recruitment; null for starters
         // Lifetime totals for the results screen.
         public float DamageDealt;
         public float HealingDone;
@@ -56,6 +57,7 @@ namespace Aetherward.Sim.Run
         public int OptionIndex;    // for events
         public bool Sold;
         public string Tag;         // "synergy", "pivot", "new", ... for UI hints
+        public string TraitId;     // hero offers: the trait this recruit comes with
     }
 
     /// <summary>Per-wave record for the post-run report.</summary>
@@ -117,6 +119,10 @@ namespace Aetherward.Sim.Run
         public readonly Dictionary<string, float> SourceDamage = new Dictionary<string, float>();
         public readonly float[] ElementDamage = new float[ElementUtil.Count];
         public readonly List<string> SeenEnemies = new List<string>();
+        /// <summary>Boss chosen for each wave that has a boss pool (deterministic per seed, saved).</summary>
+        public readonly Dictionary<int, string> BossChoices = new Dictionary<int, string>();
+        /// <summary>Ascension "blocked_node": a defense node unusable for the current wave (-1 = none).</summary>
+        public int BlockedNode = -1;
         public string DefeatSource;
         public int DraftsTaken;
         public readonly List<string> Log = new List<string>(); // selection trace (debug, bounded)

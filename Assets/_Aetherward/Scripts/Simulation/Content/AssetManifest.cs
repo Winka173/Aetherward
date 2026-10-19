@@ -36,6 +36,7 @@ namespace Aetherward.Sim.Content
                 yield return "Icons/status_" + db.ElementDef(el).StatusKey;
             }
             foreach (FieldDef f in db.Fields.Values) yield return "Vfx/field_" + f.Id;
+            foreach (TraitDef t in db.TraitList) yield return "Icons/trait_" + t.Id;
             foreach (string s in new[] { "World/arena_background", "World/crystal_intact", "World/crystal_cracked", "World/crystal_critical",
                          "World/node_empty", "World/node_occupied", "World/node_highlight", "World/lane_arrow", "World/shadow",
                          "UI/panel_dark", "UI/button_primary_normal", "UI/bar_bg", "UI/bar_fill", "UI/title_emblem" })

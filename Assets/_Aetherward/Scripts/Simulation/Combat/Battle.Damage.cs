@@ -91,7 +91,7 @@ namespace Aetherward.Sim.Combat
             }
             else
             {
-                float bonus = (src != null ? src.Stat(StatId.DamageBonus) : 0f) + req.BonusMult;
+                float bonus = (src != null ? src.Stat(StatId.DamageBonus) : 0f) + req.BonusMult + TraitDamageBonus(src, target);
                 if (req.Kind == DamageKind.Skill && src != null) raw *= src.Stat(StatId.SkillPower);
                 raw *= 1f + bonus;
                 if (req.CanCrit && src != null)
@@ -120,11 +120,14 @@ namespace Aetherward.Sim.Combat
                 if (Vec2.Dot(toSource, target.Facing) > 0.35f) resist += 0.6f;
             }
             raw *= 1f - SimMath.Clamp(resist, -0.5f, 0.75f);
+            // Latched parasites shrug off damage unless a hero guards the core (Light always connects).
+            if (target.Latched && req.Element != Element.Light && !CoreGuarded) raw *= 0.4f;
 
             float vuln = 1f;
             if (target.VulnerableTimer > 0f) vuln += target.VulnerableAmount;
             if (target.HasAura(Element.Wind) && req.Element == Element.Wind) vuln += 0.1f;
             if (target.BrittleTimer > 0f) vuln += target.BrittleAmount;
+            if (target.IlluminatedTimer > 0f) vuln += Mods.Rule("illuminate_power");
             if (target.FieldTimer > 0f) vuln += target.FieldVuln;
             if (target.IsBoss && target.DoomStacks > 0) vuln += target.DoomStacks * (0.03f + Mods.Rule("doom_boss"));
             raw *= vuln;
@@ -206,7 +209,7 @@ namespace Aetherward.Sim.Combat
         {
             if (target == null || !target.Alive || el == Element.None || gauge <= 0f) return;
             gauge *= Mods.GaugeMult[(int)el];
-            if (source != null) gauge *= 1f + source.Stat(StatId.StatusPower) * 0.5f;
+            if (source != null) gauge *= (1f + source.Stat(StatId.StatusPower) * 0.5f) * (1f + TraitValue(source, "gaugeBonus"));
 
             // Strongest foreign aura that actually pairs with the incoming element (ties: lower ordinal).
             // Neutral/blocked pairs coexist and are skipped. With the six launch elements every pair
@@ -513,6 +516,7 @@ namespace Aetherward.Sim.Combat
             }
 
             _activeReactionBonus = prevBonus;
+            NotifyReactionPassives();
             FireTrigger("reaction", source, target, pos, r.Id);
             if (Mods.HasRule("mirror_reactions") && gen < MaxProcGeneration + (int)Mods.Rule("proc_generation_bonus"))
             {
@@ -574,6 +578,7 @@ namespace Aetherward.Sim.Combat
             float atk = source != null ? source.Stat(StatId.Attack) : 15f * WaveLevelScale;
             float sp = source != null ? source.Stat(StatId.StatusPower) : 0f;
             float dps = atk * 0.22f * (1f + sp) * (1f + Mods.Rule("burn_power"));
+            duration *= 1f + TraitValue(source, "burnDuration");
             if (dps >= e.BurnDps || e.BurnTimer <= 0f)
             {
                 e.BurnDps = dps;
@@ -645,9 +650,11 @@ namespace Aetherward.Sim.Combat
                 h.Shield -= a;
                 amount -= a;
                 if (h.Shield <= 0f && h.ShieldRetaliate > 0f) OnHeroShieldBroken(h);
+                if (h.Shield <= 0f && h.ShieldGiverUid != 0) FrostBurst(h);
             }
             h.Hp -= amount;
             h.DamageTaken += amount;
+            if (h.PassiveKind == "phoenix_heat" && amount > 0f) AddHeat(h, amount / SimMath.Max(1f, h.MaxHp) * h.PassiveParams.Get("damageHeat", 50f));
             h.HitFlash = 0.12f;
             Emit(SimEventType.Hit, h.Pos, Element.None, amount, attacker?.Uid ?? 0, h.Uid, "hero");
             if (attacker != null) OnHeroHit(h, attacker);
@@ -656,6 +663,7 @@ namespace Aetherward.Sim.Combat
 
         private void DownHero(HeroUnit h)
         {
+            if (TryRebirth(h)) return;
             FireTrigger("hero_downed", h, null, h.Pos, null);
             if (h.Hp > 0f) return; // a trigger (e.g. Phoenix Feather) revived the hero
             h.Hp = 0f;
@@ -685,7 +693,7 @@ namespace Aetherward.Sim.Combat
         {
             if (target == null || !target.Alive || amount <= 0f) return 0f;
             if (Mods.HasRule("no_healing")) amount *= 0.5f;
-            amount *= (source != null ? source.Stat(StatId.HealPower) : 1f) * (1f + Mods.HealingPct);
+            amount *= (source != null ? source.Stat(StatId.HealPower) : 1f) * (1f + Mods.HealingPct) * (1f + TraitValue(source, "healBonus"));
             float before = target.Hp;
             target.Hp = SimMath.Min(target.MaxHp, target.Hp + amount);
             float healed = target.Hp - before;
@@ -700,6 +708,7 @@ namespace Aetherward.Sim.Combat
         public void AddHeroShield(HeroUnit target, float amount, HeroUnit source)
         {
             if (!target.Alive || amount <= 0f) return;
+            amount *= (1f + TraitValue(source, "shieldBonus")) * (1f + Mods.Rule("shield_power"));
             float cap = target.MaxHp * 0.6f; // shields are bounded (spec: healing/barrier bounded)
             target.Shield = SimMath.Min(cap, target.Shield + amount);
             Emit(SimEventType.ShieldGain, target.Pos, Element.Ice, amount, source?.Uid ?? 0, target.Uid, null);

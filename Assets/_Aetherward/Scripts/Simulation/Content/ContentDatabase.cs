@@ -38,6 +38,8 @@ namespace Aetherward.Sim.Content
         public readonly Dictionary<int, string> PairNote = new Dictionary<int, string>();
         public readonly Dictionary<string, FieldDef> Fields = new Dictionary<string, FieldDef>();
         public readonly ElementDef[] ElementDefs = new ElementDef[ElementUtil.Count];
+        public readonly Dictionary<string, TraitDef> Traits = new Dictionary<string, TraitDef>();
+        public readonly List<TraitDef> TraitList = new List<TraitDef>();
         public readonly Dictionary<string, RelicDef> Relics = new Dictionary<string, RelicDef>();
         public readonly List<RelicDef> RelicList = new List<RelicDef>();
         public readonly List<FusionDef> Fusions = new List<FusionDef>();
@@ -48,6 +50,7 @@ namespace Aetherward.Sim.Content
         public readonly Dictionary<string, AffixDef> Affixes = new Dictionary<string, AffixDef>();
         public readonly Dictionary<string, Dictionary<string, string>> Strings = new Dictionary<string, Dictionary<string, string>>();
         public EconomyDef Economy = new EconomyDef();
+        public DifficultyDef Difficulty = new DifficultyDef();
         public ArenaDef Arena = new ArenaDef();
 
         public ReactionDef ReactionFor(Element a, Element b) => ReactionByPair[ElementUtil.PairIndex(a, b)];
@@ -57,7 +60,7 @@ namespace Aetherward.Sim.Content
         /// <summary>Content file names expected under Resources/Content (without extension).</summary>
         public static readonly string[] FileNames =
         {
-            "elements", "heroes", "evolutions", "enemies", "reactions", "relics", "cards", "waves", "events", "economy", "arena",
+            "elements", "traits", "heroes", "evolutions", "enemies", "reactions", "relics", "cards", "waves", "events", "economy", "arena", "difficulty",
             "loc_en", "loc_vi"
         };
 
@@ -65,6 +68,7 @@ namespace Aetherward.Sim.Content
         {
             var db = new ContentDatabase();
             db.LoadElements(Parse(readFile, "elements"));
+            db.LoadTraits(Parse(readFile, "traits"));
             db.LoadHeroes(Parse(readFile, "heroes"));
             db.LoadEvolutions(Parse(readFile, "evolutions"));
             db.LoadEnemies(Parse(readFile, "enemies"));
@@ -75,6 +79,7 @@ namespace Aetherward.Sim.Content
             db.LoadEvents(Parse(readFile, "events"));
             db.LoadEconomy(Parse(readFile, "economy"));
             db.LoadArena(Parse(readFile, "arena"));
+            db.LoadDifficulty(Parse(readFile, "difficulty"));
             db.LoadStrings("en", Parse(readFile, "loc_en"));
             db.LoadStrings("vi", Parse(readFile, "loc_vi"));
             return db;
@@ -134,6 +139,7 @@ namespace Aetherward.Sim.Content
                 Add(Heroes, h.Id, h, "hero");
                 HeroList.Add(h);
             }
+            LoadFields(root["fields"]);
         }
 
         public static void ApplyStatDefaults(float[] s)
@@ -272,9 +278,38 @@ namespace Aetherward.Sim.Content
                 if (ElementDefs[(int)e] == null) throw new FormatException("elements.json is missing " + ElementUtil.Key(e));
         }
 
+        private void LoadTraits(JsonNode root)
+        {
+            foreach (JsonNode n in root["traits"].Items)
+            {
+                string id = n.Str("id");
+                var t = new TraitDef
+                {
+                    Id = id,
+                    NameKey = "trait." + id + ".name",
+                    DescKey = "trait." + id + ".desc",
+                    Rarity = ParseEnum<Rarity>(n.Str("rarity", "common"), "rarity"),
+                    Weight = n.Float("weight", 1f),
+                    RequireElement = ParseElement(n["requires"].Str("element")),
+                    Effects = ParseEffects(n["effects"]),
+                    Behaviour = ParamBag.FromJson(n["behaviour"])
+                };
+                foreach (string r in n["requires"].StringList("roles")) t.RequireRoles.Add(ParseEnum<HeroRole>(r, "role"));
+                Add(Traits, id, t, "trait");
+                TraitList.Add(t);
+            }
+        }
+
         private void LoadReactions(JsonNode root)
         {
-            foreach (JsonNode n in root["fields"].Items)
+            LoadFields(root["fields"]);
+            LoadReactionList(root);
+        }
+
+        /// <summary>Fields may be declared next to reactions or next to the hero skills that spawn them.</summary>
+        private void LoadFields(JsonNode arr)
+        {
+            foreach (JsonNode n in arr.Items)
             {
                 string id = n.Str("id");
                 var f = new FieldDef
@@ -307,7 +342,10 @@ namespace Aetherward.Sim.Content
                 };
                 Add(Fields, id, f, "field");
             }
+        }
 
+        private void LoadReactionList(JsonNode root)
+        {
             foreach (JsonNode n in root["reactions"].Items)
             {
                 string id = n.Str("id");
@@ -528,7 +566,8 @@ namespace Aetherward.Sim.Content
                     TimeLimit = n.Float("timeLimit", 75f),
                     Boss = n.Bool("boss"),
                     Elite = n.Bool("elite"),
-                    Modifiers = n.StringList("modifiers")
+                    Modifiers = n.StringList("modifiers"),
+                    BossPool = n.StringList("bossPool")
                 };
                 foreach (JsonNode l in n["lanes"].Items) w.Lanes.Add(l.AsInt());
                 foreach (string r in n.StringList("rewards")) w.Rewards.Add(ParseEnum<RewardKind>(r, "reward"));
@@ -631,6 +670,29 @@ namespace Aetherward.Sim.Content
                 a.Lanes.Add(lane);
             }
             Arena = a;
+        }
+
+        public static readonly string[] KnownDifficultyModules =
+        {
+            "frenzy", "enemy_speed", "enemy_damage", "enemy_hp", "crystal_max", "shop_prices", "blocked_node", "elite_affix", "boss_enrage",
+            "hazard_shift", "split_lanes", "rarity_shift", "double_elite", "reroll_cost"
+        };
+
+        private void LoadDifficulty(JsonNode n)
+        {
+            var d = new DifficultyDef { HpPerLevel = n.Float("hpPerLevel", 0.08f) };
+            foreach (JsonNode l in n["levels"].Items)
+            {
+                int level = l.Int("level");
+                if (level > d.MaxLevel) d.MaxLevel = level;
+                foreach (JsonNode m in l["modules"].Items)
+                {
+                    string id = m.Str("id");
+                    if (Array.IndexOf(KnownDifficultyModules, id) < 0) throw new FormatException("difficulty.json: unknown module " + id);
+                    d.Modules.Add(new DifficultyModule { Level = level, Id = id, Value = m.Float("value", 1f) });
+                }
+            }
+            Difficulty = d;
         }
 
         private void LoadStrings(string lang, JsonNode n)

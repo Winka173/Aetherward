@@ -45,8 +45,11 @@ def horns(ctx, cx, top, spread, length, color):
               color, lw=4.5, hi_size=0.6)
 
 
+BIG_IDS = ("siegebreaker_golem", "rift_warden", "ignaroth")
+
+
 def enemy_sprite(eid, frame="a"):
-    big = eid in ("siegebreaker_golem", "rift_warden")
+    big = eid in BIG_IDS
     size = 512 if big else 256
     cv = Canvas(size, size)
     ctx = cv.ctx
@@ -323,8 +326,192 @@ def warden(ctx, bob, frame):
     flat(ctx, lambda c: ellipse_path(c, 256, 124 - hov, 8, 11), hex2rgb("#2a0a30"))
 
 
+def mana_leech(ctx, bob, frame):
+    body = hex2rgb("#4a3a8a")
+    belly = hex2rgb("#8a7ad0")
+    siphon = hex2rgb("#ff4ad8")
+    mana = hex2rgb("#6ad8ff")
+    hov = 8 if frame == "b" else 0
+    wig = 6 if frame == "b" else -6
+    flat(ctx, lambda c: ellipse_path(c, 132, 234, 54, 8), (0, 0, 0), 0.25)
+    glow(ctx, 70, 148 - hov, 60, siphon, 0.45)
+    # mana motes being pulled into the mouth
+    for i, (x, y) in enumerate(((22, 96), (14, 150), (30, 206))):
+        glow(ctx, x, y - hov + (wig if i == 1 else 0), 12, mana, 0.8)
+        sparkle(ctx, x, y - hov + (wig if i == 1 else 0), 6, hex2rgb("#e0f8ff"))
+    # tail fins
+    paint(ctx, lambda c: smooth_closed(c, [(196, 196 - hov), (236, 186 - hov), (244, 214 - hov), (226, 210 - hov), (210, 220 - hov)], 0.5),
+          shade(body, 0.15), lw=5, hi=False)
+    # hunched segmented body
+    paint(ctx, lambda c: smooth_closed(c, [(66, 168 - hov), (78, 112 - hov), (118, 78 - hov), (164, 82 - hov), (196, 120 - hov),
+                                             (214, 176 - hov), (204, 212 - hov), (168, 206 - hov), (140, 172 - hov), (110, 186 - hov),
+                                             (82, 190 - hov)], 0.5), body, lw=LW)
+    flat(ctx, lambda c: smooth_closed(c, [(150, 176 - hov), (178, 140 - hov), (200, 180 - hov), (190, 204 - hov), (166, 200 - hov)], 0.5),
+         belly, 0.6)
+    for (x1, y1, x2, y2) in ((112, 86, 104, 116), (142, 80, 138, 112), (170, 92, 160, 120), (192, 122, 176, 140)):
+        stroke(ctx, lambda c, a=(x1, y1, x2, y2): (c.move_to(a[0], a[1] - hov), c.line_to(a[2], a[3] - hov)), shade(body, 0.4), 4)
+    # glowing rune spots
+    for (x, y) in ((126, 108), (156, 112), (182, 150)):
+        glow(ctx, x, y - hov, 10, siphon, 0.7)
+        flat(ctx, lambda c, x=x, y=y: ellipse_path(c, x, y - hov, 4, 4), light(siphon, 0.5))
+    # siphon tendrils reaching outward
+    for (pts) in (((76, 140), (50, 120 + wig), (30, 98)), ((70, 156), (44, 154 - wig), (18, 150 + wig)),
+                  ((78, 172), (56, 192 + wig), (34, 204))):
+        outlined_line(ctx, [(x, y - hov) for x, y in pts], siphon, 6, 12)
+        glow(ctx, pts[-1][0], pts[-1][1] - hov, 9, siphon, 0.9)
+    # sucker mouth
+    glow(ctx, 76, 156 - hov, 30, siphon, 0.8)
+    paint(ctx, lambda c: ellipse_path(c, 80, 156 - hov, 24, 28), shade(body, 0.1), lw=LW, hi=False)
+    paint(ctx, lambda c: ellipse_path(c, 78, 156 - hov, 15, 18), siphon, lw=3.5, hi=False, shade_amt=0)
+    flat(ctx, lambda c: ellipse_path(c, 77, 156 - hov, 8, 10), hex2rgb("#3a0a30"))
+    for k in range(6):
+        a = k * math.pi / 3
+        flat(ctx, lambda c, a=a: poly_path(c, [(78 + math.cos(a) * 15, 156 - hov + math.sin(a) * 18),
+                                               (78 + math.cos(a + 0.25) * 9, 156 - hov + math.sin(a + 0.25) * 11),
+                                               (78 + math.cos(a - 0.25) * 9, 156 - hov + math.sin(a - 0.25) * 11)]), (1, 1, 1))
+    # beady eyes on the hunch
+    for (x, y) in ((100, 112), (114, 102)):
+        paint(ctx, lambda c, x=x, y=y: ellipse_path(c, x, y - hov, 7, 6), hex2rgb("#fff0a0"), lw=3, hi=False, shade_amt=0)
+        flat(ctx, lambda c, x=x, y=y: ellipse_path(c, x - 1, y - hov + 1, 3, 3.5), INK)
+
+
+def crystal_parasite(ctx, bob, frame):
+    body = hex2rgb("#3a1f5a")
+    leg = hex2rgb("#2a1640")
+    crys = hex2rgb("#5ae8ff")
+    st = 8 if frame == "b" else -8
+    flat(ctx, lambda c: ellipse_path(c, 128, 234, 58, 7), (0, 0, 0), 0.25)
+    # many thin legs (three per side, alternating step)
+    for i, (hx, fx) in enumerate(((100, 66), (122, 104), (146, 150), (164, 190), (112, 84), (154, 176))):
+        s = st if i % 2 == 0 else -st
+        outlined_line(ctx, [(hx, 196 + bob), ((hx + fx) / 2 + s * 0.5, 170 + bob), (fx + s, 234)], leg, 4, 9)
+    # crystal shards on the back
+    shards = [((104, 176), (96, 132), (118, 170)), ((116, 170), (126, 112), (140, 168)), ((138, 170), (160, 128), (156, 178)),
+              ((152, 180), (180, 156), (166, 188))]
+    for tri in shards:
+        paint(ctx, lambda c, tri=tri: poly_path(c, [(x, y + bob) for x, y in tri]), crys, lw=3.5, hi_size=0.7)
+    glow(ctx, 128, 140 + bob, 22, crys, 0.5)
+    sparkle(ctx, 124, 124 + bob, 7)
+    # carapace
+    paint(ctx, lambda c: smooth_closed(c, [(84, 200 + bob), (96, 176 + bob), (130, 166 + bob), (168, 176 + bob), (186, 198 + bob),
+                                             (164, 216 + bob), (104, 216 + bob)], 0.5), body, lw=5)
+    stroke(ctx, lambda c: smooth_open(c, [(110, 184 + bob), (134, 178 + bob), (160, 186 + bob)]), light(body, 0.3), 3)
+    # head with mandibles (latching front)
+    for s in (-1, 1):
+        paint(ctx, lambda c, s=s: smooth_closed(c, [(74, 200 + bob + s * 4), (54, 200 + bob + s * 12), (50, 200 + bob + s * 4),
+                                                     (64, 200 + bob)], 0.4), hex2rgb("#c8b8e8"), lw=3, hi=False)
+    paint(ctx, lambda c: ellipse_path(c, 80, 200 + bob, 16, 13), shade(body, 0.1), lw=4.5, hi=False)
+    for (x, y) in ((76, 194), (86, 196), (80, 204)):
+        glow(ctx, x, y + bob, 6, crys, 0.9)
+        flat(ctx, lambda c, x=x, y=y: ellipse_path(c, x, y + bob, 2.6, 2.6), light(crys, 0.6))
+
+
+def ash_imp(ctx, bob, frame):
+    body = hex2rgb("#2a2426")
+    ember = hex2rgb("#ff7a1a")
+    hot = hex2rgb("#ffd24a")
+    fl = 8 if frame == "b" else 0
+    glow(ctx, 128, 150 + bob, 70, ember, 0.35)
+    feet(ctx, 128, 236, 16, 11, body, frame)
+    # head flame
+    paint(ctx, lambda c: smooth_closed(c, [(100, 150 + bob), (98, 112 + bob - fl), (112, 120 + bob), (118, 80 + bob - fl), (134, 108 + bob),
+                                             (146, 70 + bob - fl * 0.5), (152, 116 + bob), (160, 104 + bob - fl), (158, 150 + bob)], 0.45),
+          ember, lw=4.5, hi=False, shade_amt=0)
+    flat(ctx, lambda c: smooth_closed(c, [(112, 148 + bob), (118, 116 + bob - fl * 0.5), (130, 128 + bob), (144, 100 + bob - fl * 0.5),
+                                            (146, 148 + bob)], 0.5), hot)
+    # tiny arms
+    for s in (-1, 1):
+        outlined_line(ctx, [(128 + s * 26, 186 + bob), (128 + s * 42, 196 + bob - (fl if s > 0 else 0)), (128 + s * 46, 182 + bob)], body, 7, 13)
+    # charcoal body
+    paint(ctx, lambda c: smooth_closed(c, [(94, 196 + bob), (98, 152 + bob), (128, 136 + bob), (158, 152 + bob), (162, 196 + bob),
+                                             (146, 226 + bob), (110, 226 + bob)], 0.55), body, lw=5)
+    for s in (-1, 1):
+        paint(ctx, lambda c, s=s: poly_path(c, [(128 + s * 18, 146 + bob), (128 + s * 34, 124 + bob), (128 + s * 28, 152 + bob)]),
+              hex2rgb("#4a3a3a"), lw=3.5, hi=False)
+    # glowing ember cracks
+    for pts in (((108, 196), (118, 206), (112, 218)), ((146, 190), (138, 204), (150, 214)), ((126, 210), (132, 222))):
+        stroke(ctx, lambda c, pts=pts: smooth_open(c, [(x, y + bob) for x, y in pts]), ember, 4)
+        stroke(ctx, lambda c, pts=pts: smooth_open(c, [(x, y + bob) for x, y in pts]), hot, 1.6)
+    angry_eyes(ctx, 128, 172 + bob, 12, 8, color=hot)
+    stroke(ctx, lambda c: smooth_open(c, [(116, 192 + bob), (128, 198 + bob), (140, 192 + bob)]), ember, 3)
+    sparkle(ctx, 170, 100 + bob - fl, 5, hot)
+    sparkle(ctx, 88, 118 + bob + fl * 0.5, 4, hot)
+
+
+def ignaroth(ctx, bob, frame):
+    rock = hex2rgb("#3e2c2a")
+    lava = hex2rgb("#ff7a1a")
+    hot = hex2rgb("#ffd24a")
+    b = bob * 2
+    lift = 14 if frame == "b" else 0
+
+    def cracks(pts_list, w=6):
+        for pts in pts_list:
+            stroke(ctx, lambda c, pts=pts: smooth_open(c, [(x, y + b) for x, y in pts]), lava, w)
+            stroke(ctx, lambda c, pts=pts: smooth_open(c, [(x, y + b) for x, y in pts]), hot, w * 0.4)
+
+    glow(ctx, 256, 250, 240, lava, 0.28)
+    flat(ctx, lambda c: ellipse_path(c, 256, 488, 150, 18), (0, 0, 0), 0.25)
+    # legs (wide stance)
+    step = 8 if frame == "b" else -8
+    for s in (-1, 1):
+        paint(ctx, lambda c, s=s: smooth_closed(c, [(256 + s * 30, 340 + b), (256 + s * 92, 350 + b), (256 + s * 100, 470 + step * s),
+                                                     (256 + s * 46, 470 - step * s * 0)], 0.3), shade(rock, 0.1), lw=LW + 2)
+        paint(ctx, lambda c, s=s: ellipse_path(c, 256 + s * 76, 470 + min(0, step * s), 50, 22), shade(rock, 0.2), lw=LW + 1, hi=False)
+    cracks([((210, 380), (196, 420), (206, 452)), ((300, 384), (318, 420), (310, 450))], 5)
+    # back arms (upper arm behind fists)
+    for s in (-1, 1):
+        outlined_line(ctx, [(256 + s * 110, 190 + b), (256 + s * 160, 250 + b - lift * (s > 0)), (256 + s * 176, 300 + b - lift * (s > 0))],
+                      rock, 46, 60)
+    # V-shaped torso
+    paint(ctx, lambda c: smooth_closed(c, [(118, 186 + b), (160, 150 + b), (256, 136 + b), (352, 150 + b), (394, 186 + b),
+                                             (346, 260 + b), (310, 360 + b), (256, 372 + b), (202, 360 + b), (166, 260 + b)], 0.35), rock, lw=LW + 3)
+    cracks([((256, 200), (240, 240), (262, 280), (248, 330)), ((180, 210), (210, 236), (220, 270)), ((332, 210), (304, 240), (296, 280)),
+            ((262, 280), (290, 300)), ((248, 330), (222, 344))], 7)
+    # molten heart
+    glow(ctx, 256, 262 + b, 70, lava, 0.85)
+    paint(ctx, lambda c: smooth_closed(c, [(256, 236 + b), (280, 262 + b), (256, 294 + b), (232, 262 + b)], 0.4), hot, lw=LW, hi_size=0.7)
+    # spiked pauldrons
+    for s in (-1, 1):
+        for k in range(3):
+            paint(ctx, lambda c, s=s, k=k: poly_path(c, [(256 + s * (100 + k * 22), 160 + b), (256 + s * (110 + k * 30), 96 + b + k * 16),
+                                                          (256 + s * (122 + k * 22), 162 + b)]), hex2rgb("#2a1c1c"), lw=4.5, hi=False)
+        paint(ctx, lambda c, s=s: ellipse_path(c, 256 + s * 132, 184 + b, 58, 44, s * 0.25), shade(rock, 0.05), lw=LW + 2, hi_size=0.6)
+        cracks([((256 + s * 112, 170), (256 + s * 140, 186), (256 + s * 158, 176))], 5)
+    # magma fists
+    for s in (-1, 1):
+        fy = 324 + b - (lift if s > 0 else 0)
+        glow(ctx, 256 + s * 180, fy, 62, lava, 0.75)
+        paint(ctx, lambda c, s=s, fy=fy: smooth_closed(c, [(256 + s * 140, fy - 30), (256 + s * 186, fy - 50), (256 + s * 220, fy - 24),
+                                                           (256 + s * 222, fy + 24), (256 + s * 190, fy + 46), (256 + s * 144, fy + 26)], 0.5),
+              hex2rgb("#e0501a"), lw=LW + 2, hi_size=0.6)
+        for k in range(3):
+            stroke(ctx, lambda c, s=s, fy=fy, k=k: (c.move_to(256 + s * (160 + k * 20), fy - 34 + k * 4),
+                                                   c.line_to(256 + s * (162 + k * 20), fy - 6)), INK, 4)
+        flat(ctx, lambda c, s=s, fy=fy: ellipse_path(c, 256 + s * 186, fy + 12, 22, 16), hot, 0.85)
+    # head
+    paint(ctx, lambda c: smooth_closed(c, [(212, 160 + b), (214, 110 + b), (256, 92 + b), (298, 110 + b), (300, 160 + b), (256, 180 + b)], 0.45),
+          shade(rock, 0.1), lw=LW + 2, hi_size=0.5)
+    # crown of horns and flame
+    for i, (dx, h) in enumerate(((-44, 46), (-22, 64), (0, 84), (22, 64), (44, 46))):
+        glow(ctx, 256 + dx, 104 + b - h * 0.6, 18, lava, 0.8)
+        paint(ctx, lambda c, dx=dx, h=h: smooth_closed(c, [(256 + dx - 10, 106 + b), (256 + dx - 4 + dx * 0.25, 106 + b - h * 0.55),
+                                                           (256 + dx + dx * 0.4, 106 + b - h), (256 + dx + 10, 106 + b)], 0.3),
+              lava if i % 2 else hex2rgb("#2a1c1c"), lw=4.5, hi=i % 2 == 1, hi_size=0.6)
+    flat(ctx, lambda c: smooth_closed(c, [(240, 104 + b), (250, 70 + b - lift * 0.5), (262, 86 + b), (272, 104 + b)], 0.5), hot, 0.9)
+    for s in (-1, 1):
+        glow(ctx, 256 + s * 20, 134 + b, 18, hot, 0.95)
+        paint(ctx, lambda c, s=s: poly_path(c, [(256 + s * 8, 128 + b), (256 + s * 34, 122 + b), (256 + s * 28, 140 + b), (256 + s * 10, 138 + b)]),
+              hot, lw=3.5, hi=False, shade_amt=0)
+    # molten jaw
+    paint(ctx, lambda c: smooth_closed(c, [(232, 154 + b), (280, 154 + b), (272, 168 + b), (240, 168 + b)], 0.4), lava, lw=3.5, hi=False, shade_amt=0)
+    for k in range(4):
+        flat(ctx, lambda c, k=k: poly_path(c, [(238 + k * 12, 154 + b), (246 + k * 12, 154 + b), (242 + k * 12, 162 + b)]), hex2rgb("#fff0c8"))
+
+
 DRAWERS = {
     "grunt": grunt, "runner": runner, "swarmling": swarmling, "shieldbearer": shieldbearer, "hexcaster": hexcaster,
     "sapper": sapper, "warded": warded, "juggernaut": juggernaut, "summoner": summoner, "banner": banner,
     "mimic": mimic, "ravager": ravager, "riftling": riftling, "siegebreaker_golem": golem, "rift_warden": warden,
+    "mana_leech": mana_leech, "crystal_parasite": crystal_parasite, "ash_imp": ash_imp, "ignaroth": ignaroth,
 }

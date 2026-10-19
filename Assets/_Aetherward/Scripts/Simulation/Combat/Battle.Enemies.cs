@@ -28,6 +28,14 @@ namespace Aetherward.Sim.Combat
             }
             if (e.Invulnerable > 0f) e.Invulnerable -= dt;
 
+            if (e.IsBoss && Setup.BossEnrage > 0f && !e.Enraged && e.HpFraction <= 0.25f)
+            {
+                // Ascension 5: a telegraphed last-quarter enrage (never invulnerable, never instant crystal damage).
+                e.Enraged = true;
+                e.Attack *= 1f + Setup.BossEnrage;
+                e.Speed *= 1f + Setup.BossEnrage * 0.6f;
+                Emit(SimEventType.BossPhase, e.Pos, Element.None, 3f, e.Uid, 0, "boss_enrage", false, 2f);
+            }
             if (e.Def.Params.GetString("boss") != null) UpdateBoss(e, dt);
             if (!e.Alive) return;
 
@@ -126,6 +134,7 @@ namespace Aetherward.Sim.Combat
             if (e.Def.Params.Flag("adaptive")) UpdateAdaptive(e, dt);
             TickExpansionStatuses(e, dt);
             if (!e.Alive) return;
+            UpdateEnemyAuras(e, dt);
 
             if (e.BurnTimer > 0f)
             {
@@ -255,6 +264,7 @@ namespace Aetherward.Sim.Combat
             {
                 e.Facing = (Crystal.Pos - e.Pos).Normalized;
                 e.StuckTimer = 0f;
+                if (e.Def.Params.Flag("latch")) Latch(e);
                 if (e.AttackTimer > 0f) return;
                 e.AttackTimer = e.Def.AttackInterval;
                 if (e.Def.Behavior == EnemyBehavior.Ranged) FireBolt(e, null, true, e.CrystalDamage);
@@ -339,6 +349,7 @@ namespace Aetherward.Sim.Combat
 
         private void OnEnemyDeathBehaviour(EnemyUnit e)
         {
+            DeathBurst(e);
             string split = e.Def.Params.GetString("splitInto");
             if (!string.IsNullOrEmpty(split) && Content.Enemies.TryGetValue(split, out EnemyDef def))
             {
@@ -355,6 +366,7 @@ namespace Aetherward.Sim.Combat
             {
                 case "golem": UpdateGolem(e, dt); break;
                 case "warden": UpdateWarden(e, dt); break;
+                case "ignaroth": UpdateIgnaroth(e, dt); break;
             }
         }
 

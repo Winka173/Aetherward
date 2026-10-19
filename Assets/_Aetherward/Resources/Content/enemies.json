@@ -38,7 +38,26 @@
     { "id": "rift_warden", "behavior": "boss", "boss": true, "hp": 2900, "attack": 36, "defense": 28, "speed": 0.5, "attackInterval": 1.5, "range": 0.9,
       "crystalDamage": 140, "radius": 1.05, "tenacity": 0.75, "gold": 0, "essence": 5, "threat": 50,
       "params": { "boss": "warden", "summon": "riftling", "summonCount": 4, "summonInterval": 7.0, "laneInterval": 9.0, "laneMult": 1.2,
-                  "laneSummon": "runner", "laneSummonCount": 4, "sequenceInterval": 10.0, "slamMult": 1.6, "exposedDuration": 4.5, "exposedAmount": 0.5 }, "tags": ["boss"] }
+                  "laneSummon": "runner", "laneSummonCount": 4, "sequenceInterval": 10.0, "slamMult": 1.6, "exposedDuration": 4.5, "exposedAmount": 0.5 }, "tags": ["boss"] },
+
+    // ---------------------------------------------------------------- Expansion Phase 1
+    // Mana Leech: heroes within leechRadius recover skill cooldown 35% slower. Counter: focus it / burst / Steadfast / cleanse.
+    { "id": "mana_leech", "behavior": "melee", "hp": 95, "attack": 8, "defense": 6, "speed": 1.1, "attackInterval": 1.3, "range": 0.55,
+      "crystalDamage": 12, "radius": 0.33, "gold": 2, "threat": 2, "params": { "leechRadius": 2.6, "leechAmount": 0.35, "engage": 0.6 }, "tags": ["disruptor", "arcane_fractures"] },
+    // Crystal Parasite: fast, ignores heroes, latches onto the crystal and gnaws it; latched parasites take 60% less damage
+    // unless a hero guards the core. Counter: a near-core guard, Light (Illuminate) or any cleanse rips it off and stuns it.
+    { "id": "crystal_parasite", "behavior": "runner", "hp": 70, "attack": 4, "defense": 4, "speed": 1.9, "attackInterval": 0.5, "range": 0.4,
+      "crystalDamage": 6, "radius": 0.26, "gold": 2, "threat": 2, "params": { "latch": 1 }, "tags": ["parasite", "voidborn"] },
+    // Ash Imp: Ignaroth's summon; bursts into flame on death, hurting heroes beside it. Counter: kill at range / tanks.
+    { "id": "ash_imp", "behavior": "melee", "hp": 32, "attack": 7, "defense": 0, "speed": 1.7, "attackInterval": 0.9, "range": 0.45,
+      "crystalDamage": 8, "radius": 0.24, "gold": 0, "threat": 0, "resist": { "fire": 0.3 }, "params": { "deathBurst": 1.1, "deathBurstMult": 1.0, "engage": 0.5 },
+      "tags": ["summon", "explosive", "ashen_horde"] },
+    // Ignaroth, the Ember Tyrant (alternative wave-10 boss): lava eruptions, Ash Imps, Overheat phase with vent windows.
+    { "id": "ignaroth", "behavior": "boss", "boss": true, "hp": 1800, "attack": 30, "defense": 26, "speed": 0.6, "attackInterval": 1.5, "range": 0.9,
+      "crystalDamage": 110, "radius": 1.0, "tenacity": 0.7, "gold": 20, "essence": 3, "threat": 30, "resist": { "fire": 0.35 },
+      "params": { "boss": "ignaroth", "lavaInterval": 7.0, "lavaCount": 3, "lavaRadius": 1.3, "lavaMult": 1.3, "lavaDelay": 1.6,
+                  "summon": "ash_imp", "summonCount": 3, "summonInterval": 11.0, "heatAt": 0.5, "heatResist": 0.3, "heatVuln": 0.35,
+                  "auraRadius": 2.2, "auraMult": 0.12, "ventInterval": 12.0, "ventDuration": 3.0, "ventVuln": 0.4 }, "tags": ["boss", "ashen_horde"] }
   ],
   // Elite/element affixes. Element resistance is always partial (never full immunity).
   "affixes": [

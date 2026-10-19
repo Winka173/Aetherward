@@ -65,7 +65,18 @@ namespace Aetherward.Game
         }
 
         /// <summary>Hero card: art, identity, stats, skill and passive text generated from data.</summary>
-        public static void HeroDetail(float x, float y, float w, float h, HeroDef def, string evolutionId = null, int level = 1)
+        /// <summary>Trait name + rule text (behaviour template plus generated stat lines).</summary>
+        public static string TraitText(string traitId)
+        {
+            if (string.IsNullOrEmpty(traitId) || !App.Content.Traits.TryGetValue(traitId, out TraitDef t)) return null;
+            var l = App.Loc;
+            string text = l.PassiveText(t.Behaviour, t.DescKey);
+            List<string> fx = App.Fx.Describe(t.Effects);
+            if (fx.Count > 0) text += " (" + string.Join(", ", fx) + ")";
+            return text;
+        }
+
+        public static void HeroDetail(float x, float y, float w, float h, HeroDef def, string evolutionId = null, int level = 1, string traitId = null)
         {
             var l = App.Loc;
             Ui.Panel(x, y, w, h);
@@ -103,8 +114,18 @@ namespace Aetherward.Game
             yy += Ui.TextHeight(sd, 24, w - 60) + 14;
             Ui.Label(x + 30, yy, w - 60, 40, "<b>" + l.Get("label.passive") + ":</b> " + passiveName, 28, Ui.Teal, TextAnchor.UpperLeft, true);
             yy += 42;
-            Ui.Label(x + 30, yy, w - 60, 140, l.PassiveText(passiveParams, passiveKey), 24, Ui.White);
-            yy += 70;
+            string passiveText = l.PassiveText(passiveParams, passiveKey);
+            Ui.Label(x + 30, yy, w - 60, 140, passiveText, 24, Ui.White);
+            yy += Ui.TextHeight(passiveText, 24, w - 60) + 14;
+            string trait = TraitText(traitId);
+            if (trait != null)
+            {
+                Ui.Icon(x + 30, yy, 40, 40, Art.Tex("Icons/trait_" + traitId));
+                Ui.Label(x + 78, yy, w - 110, 40, "<b>" + l.Get("trait.label") + ":</b> " + l.Get("trait." + traitId + ".name"), 26, Ui.Gold, TextAnchor.MiddleLeft, true);
+                yy += 44;
+                Ui.Label(x + 30, yy, w - 60, 100, trait, 22, Ui.White);
+                yy += Ui.TextHeight(trait, 22, w - 60) + 10;
+            }
             if (evolutionId == null && yy < y + h - 90)
             {
                 Ui.Label(x + 30, yy, w - 60, 40, l.Get("codex.evolutions"), 24, Ui.Muted, TextAnchor.UpperLeft, true);
@@ -118,7 +139,9 @@ namespace Aetherward.Game
             foreach (var rule in Sim.Meta.MetaProfile.Rules)
             {
                 if (rule.Id != contentId) continue;
-                return App.Loc.Format("team.locked_hint", App.Loc.Format("unlock." + rule.Condition, rule.Value));
+                object arg = rule.Value;
+                if (rule.Condition == "defeat_boss" && rule.Param != null) arg = App.Loc.Get("enemy." + rule.Param + ".name");
+                return App.Loc.Format("team.locked_hint", App.Loc.Format("unlock." + rule.Condition, arg));
             }
             return App.Loc.Get("common.locked");
         }

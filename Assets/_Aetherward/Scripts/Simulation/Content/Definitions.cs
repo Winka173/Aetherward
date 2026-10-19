@@ -121,6 +121,27 @@ namespace Aetherward.Sim.Content
         public string Silhouette; // art hint, used by validators
     }
 
+    /// <summary>Run-only hero trait rolled on recruitment (see traits.json).</summary>
+    public sealed class TraitDef
+    {
+        public string Id;
+        public string NameKey;
+        public string DescKey;
+        public Rarity Rarity;
+        public float Weight = 1f;
+        public Element RequireElement;            // None = any
+        public List<HeroRole> RequireRoles = new List<HeroRole>();
+        public List<EffectOp> Effects = new List<EffectOp>();  // stat ops on that hero only
+        public ParamBag Behaviour = new ParamBag();
+
+        public bool EligibleFor(HeroDef h)
+        {
+            if (RequireElement != Element.None && h.Element != RequireElement) return false;
+            if (RequireRoles.Count > 0 && !RequireRoles.Contains(h.Role)) return false;
+            return true;
+        }
+    }
+
     public sealed class EvolutionDef
     {
         public string Id;
@@ -371,6 +392,8 @@ namespace Aetherward.Sim.Content
         public float TimeLimit = 75f;
         public bool Boss;
         public bool Elite;
+        /// <summary>Alternative bosses for this wave; the run picks one per seed (first entry is the authored default).</summary>
+        public List<string> BossPool = new List<string>();
     }
 
     public sealed class EventDef
@@ -391,6 +414,35 @@ namespace Aetherward.Sim.Content
         public float CrystalHpPct;  // negative = cost
         public string GrantRelic;
         public string WaveModifier; // applied to next wave (challenge)
+    }
+
+    /// <summary>One authored Ascension rule; levels are cumulative (see difficulty.json).</summary>
+    public sealed class DifficultyModule
+    {
+        public int Level;
+        public string Id;
+        public float Value = 1f;
+    }
+
+    public sealed class DifficultyDef
+    {
+        public float HpPerLevel = 0.08f;
+        public int MaxLevel;
+        public readonly List<DifficultyModule> Modules = new List<DifficultyModule>();
+
+        /// <summary>Summed value of a module across all levels up to <paramref name="ascension"/> (0 if absent).</summary>
+        public float Value(string id, int ascension)
+        {
+            float v = 0f;
+            foreach (DifficultyModule m in Modules) if (m.Id == id && m.Level <= ascension) v += m.Value;
+            return v;
+        }
+
+        public bool Has(string id, int ascension)
+        {
+            foreach (DifficultyModule m in Modules) if (m.Id == id && m.Level <= ascension) return true;
+            return false;
+        }
     }
 
     public sealed class AffixDef

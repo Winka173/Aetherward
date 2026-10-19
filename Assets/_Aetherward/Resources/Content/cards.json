@@ -101,6 +101,31 @@
     { "id": "pact_of_haste", "type": "cursed_pact", "rarity": "cursed", "drawback": true,
       "effects": [ { "op": "enemy", "speedPct": 0.15 }, { "op": "stat", "stat": "attack_interval", "value": 0.3, "pct": true } ] },
     { "id": "pact_of_glass", "type": "cursed_pact", "rarity": "cursed", "drawback": true,
-      "effects": [ { "op": "stat", "stat": "max_hp", "value": -0.3, "pct": true }, { "op": "stat", "stat": "damage_bonus", "value": 0.5 } ] }
+      "effects": [ { "op": "stat", "stat": "max_hp", "value": -0.3, "pct": true }, { "op": "stat", "stat": "damage_bonus", "value": 0.5 } ] },
+    // ---------------------------------------------------------------- Expansion Phase 1
+    { "id": "dawn_vigil", "type": "team_synergy", "rarity": "common", "requires": { "element": "light" },
+      "effects": [ { "op": "stat", "stat": "max_hp", "value": 0.15, "pct": true, "scope": { "element": "light" } }, { "op": "rule", "rule": "shield_power", "value": 0.1 } ] },
+    { "id": "night_oath", "type": "team_synergy", "rarity": "common", "requires": { "element": "shadow" },
+      "effects": [ { "op": "stat", "stat": "attack", "value": 0.15, "pct": true, "scope": { "element": "shadow" } }, { "op": "rule", "rule": "doom_threshold", "value": 0.01 } ] },
+    { "id": "eclipse_theory", "type": "element_reaction", "rarity": "rare", "requires": { "element": "light" },
+      "effects": [ { "op": "reaction", "reaction": "eclipse", "damagePct": 0.4, "radiusPct": 0.25 } ] },
+    { "id": "hallowed_ground", "type": "element_reaction", "rarity": "rare", "requires": { "element": "earth" },
+      "effects": [ { "op": "reaction", "reaction": "hallowed_bulwark", "durationPct": 0.5, "statusPct": 0.3 } ] },
+    { "id": "spec_seren_lightwell", "type": "hero_specialization", "rarity": "rare", "requires": { "hero": "seren", "minLevel": 2 },
+      "effects": [ { "op": "skill", "hero": "seren", "param": "shieldPct", "add": 0.06 }, { "op": "skill", "hero": "seren", "param": "cleanseRadius", "add": 0.8 } ] },
+    { "id": "spec_nyxara_dread", "type": "hero_specialization", "rarity": "rare", "requires": { "hero": "nyxara", "minLevel": 2 },
+      "effects": [ { "op": "skill", "hero": "nyxara", "param": "marks", "add": 1 } ] },
+    { "id": "spec_ashara_ember_heart", "type": "hero_specialization", "rarity": "rare", "requires": { "hero": "ashara", "minLevel": 2 },
+      "effects": [ { "op": "skill", "hero": "ashara", "param": "heat", "add": 15 } ] },
+    { "id": "spec_nerissa_rising_tide", "type": "hero_specialization", "rarity": "rare", "requires": { "hero": "nerissa", "minLevel": 2 },
+      "effects": [ { "op": "skill", "hero": "nerissa", "param": "healTargets", "add": 1 } ] },
+    { "id": "spec_voltrix_capacitor", "type": "hero_specialization", "rarity": "rare", "requires": { "hero": "voltrix", "minLevel": 2 },
+      "effects": [ { "op": "skill", "hero": "voltrix", "param": "duration", "add": 3 } ] },
+    { "id": "spec_eirwen_rimeguard", "type": "hero_specialization", "rarity": "rare", "requires": { "hero": "eirwen", "minLevel": 2 },
+      "effects": [ { "op": "skill", "hero": "eirwen", "param": "burstMult", "add": 0.5 } ] },
+    { "id": "spec_kael_tailwind", "type": "hero_specialization", "rarity": "rare", "requires": { "hero": "kael", "minLevel": 2 },
+      "effects": [ { "op": "skill", "hero": "kael", "param": "pullRadius", "add": 0.6 } ] },
+    { "id": "spec_borun_buttress", "type": "hero_specialization", "rarity": "rare", "requires": { "hero": "borun", "minLevel": 2 },
+      "effects": [ { "op": "skill", "hero": "borun", "param": "halfLength", "add": 0.4 }, { "op": "skill", "hero": "borun", "param": "duration", "add": 1.5 } ] }
   ]
 }

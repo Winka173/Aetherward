@@ -45,7 +45,8 @@
       "groups": [
         {"enemy": "grunt", "count": 18, "start": 1.0, "interval": 1.12},
         {"enemy": "runner", "count": 9, "start": 6.0, "interval": 0.8},
-        {"enemy": "hexcaster", "count": 6, "start": 10.0, "interval": 1.6},
+        {"enemy": "hexcaster", "count": 3, "start": 10.0, "interval": 1.6},
+        {"enemy": "mana_leech", "count": 2, "start": 11.0, "interval": 2.0},
         {"enemy": "summoner", "count": 3, "start": 14.0, "interval": 4.0}
       ] },
     { "wave": 9, "gold": 18, "lanes": [0, 1, 2, 3], "rewards": ["shop"], "timeLimit": 85, "modifiers": ["resistant_vanguard"],
@@ -55,7 +56,7 @@
         {"enemy": "warded", "count": 5, "start": 12.0, "interval": 1.6, "affix": "stormproof"},
         {"enemy": "grunt", "count": 15, "start": 2.0, "interval": 1.44}
       ] },
-    { "wave": 10, "gold": 22, "essence": 2, "lanes": [0, 1], "boss": true, "rewards": ["evolution"], "timeLimit": 150,
+    { "wave": 10, "bossPool": ["siegebreaker_golem", "ignaroth"], "gold": 22, "essence": 2, "lanes": [0, 1], "boss": true, "rewards": ["evolution"], "timeLimit": 150,
       "groups": [
         {"enemy": "siegebreaker_golem", "count": 1, "lane": 0, "start": 3.0},
         {"enemy": "grunt", "count": 15, "start": 1.0, "interval": 2.4},
@@ -69,6 +70,7 @@
       ] },
     { "wave": 12, "gold": 21, "lanes": [0, 1, 2, 3], "rewards": ["draft"], "timeLimit": 85,
       "groups": [
+        {"enemy": "crystal_parasite", "count": 4, "start": 8.0, "interval": 1.4},
         {"enemy": "hexcaster", "count": 15, "start": 2.0, "interval": 1.28},
         {"enemy": "shieldbearer", "count": 12, "start": 1.0, "interval": 1.6},
         {"enemy": "grunt", "count": 15, "start": 4.0, "interval": 1.28}
@@ -90,6 +92,7 @@
       ] },
     { "wave": 15, "gold": 24, "essence": 2, "lanes": [0, 1, 2, 3], "elite": true, "rewards": ["relic", "pact"], "timeLimit": 100,
       "groups": [
+        {"enemy": "mana_leech", "count": 3, "start": 6.0, "interval": 2.2},
         {"enemy": "ravager", "count": 1, "lane": 0, "start": 6.0, "affix": "unyielding"},
         {"enemy": "ravager", "count": 1, "lane": 1, "start": 18.0, "affix": "bulwark"},
         {"enemy": "banner", "count": 6, "start": 4.0, "interval": 4.0},
@@ -105,6 +108,7 @@
       ] },
     { "wave": 17, "gold": 26, "lanes": [0, 1, 2, 3], "rewards": ["draft"], "timeLimit": 95, "modifiers": ["adaptive_foes"],
       "groups": [
+        {"enemy": "crystal_parasite", "count": 6, "start": 6.0, "interval": 1.2},
         {"enemy": "mimic", "count": 15, "start": 1.0, "interval": 2.0},
         {"enemy": "warded", "count": 11, "start": 4.0, "interval": 2.0, "affix": "windproof"},
         {"enemy": "banner", "count": 4, "start": 8.0, "interval": 4.8},
@@ -112,6 +116,7 @@
       ] },
     { "wave": 18, "gold": 27, "lanes": [0, 1, 2, 3, 4, 5], "rewards": ["draft"], "timeLimit": 100,
       "groups": [
+        {"enemy": "mana_leech", "count": 3, "start": 5.0, "interval": 2.0},
         {"enemy": "sapper", "count": 16, "start": 3.0, "interval": 1.12},
         {"enemy": "juggernaut", "count": 8, "start": 1.0, "interval": 3.2},
         {"enemy": "summoner", "count": 6, "start": 6.0, "interval": 3.2},

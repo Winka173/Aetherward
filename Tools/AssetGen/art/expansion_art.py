@@ -293,7 +293,12 @@ FIELD_STYLE = {
 
 
 # Fields owned by hero skills (heroes.json "fields"); filled in as heroes are added.
-HERO_FIELD_STYLE = {}
+HERO_FIELD_STYLE = {
+    "pylon": (hex2rgb("#5a4ab0"), BOLT2, "rings"), "pylon_network": (hex2rgb("#6a5ad0"), BOLT2, "rays"),
+    "pylon_charger": (hex2rgb("#3a6ad0"), hex2rgb("#7cff9a"), "rings"),
+    "stone_wall": (hex2rgb("#8a6a4a"), hex2rgb("#d9b56a"), "cracks"), "stone_bastion": (hex2rgb("#7a6a5a"), STEEL, "cracks"),
+    "spike_wall": (hex2rgb("#9a6a3a"), hex2rgb("#ffd35a"), "cracks"),
+}
 
 
 def field(fid, s=256, style=None):
@@ -354,8 +359,55 @@ def field(fid, s=256, style=None):
             pts = [(c + math.cos(a0 + t * 0.55) * (r * 0.9 - t * 11), c + math.sin(a0 + t * 0.55) * (r * 0.9 - t * 11)) for t in range(10)]
             stroke(ctx, lambda x, pts=pts: smooth_open(x, pts), b, 6, 0.85)
         flat(ctx, lambda x: ellipse_path(x, c, c, r * 0.16, r * 0.16), VOID2, 0.9)
+    elif pattern == "cracks":
+        for _ in range(7):
+            x0, y0 = c + rnd.uniform(-r * 0.6, r * 0.6), c + rnd.uniform(-r * 0.6, r * 0.6)
+            pts = [(x0, y0)]
+            for k in range(3):
+                pts.append((pts[-1][0] + rnd.uniform(-18, 18), pts[-1][1] + rnd.uniform(-18, 18)))
+            stroke(ctx, lambda x, pts=pts: (x.move_to(*pts[0]), [x.line_to(*q) for q in pts[1:]]), b, 4, 0.85)
+        for _ in range(6):
+            x0, y0 = c + rnd.uniform(-r * 0.55, r * 0.55), c + rnd.uniform(-r * 0.55, r * 0.55)
+            glyphs.g_rock(ctx, x0, y0, rnd.uniform(18, 28), a)
     elif pattern == "rings":
         for k in range(4):
             rr = r * (0.85 - k * 0.2)
             stroke(ctx, lambda x, rr=rr: ellipse_path(x, c, c, rr, rr), b, 4, 0.75)
     return cv
+
+
+# ============================================================================ traits
+
+TRAIT_ART = {
+    # id: (glyph, badge colour, glyph colour)
+    "pyromaniac": ("flame", hex2rgb("#7a2a1a"), FIRE), "twin_caster": ("echo", hex2rgb("#4a2a7a"), ARCANE),
+    "elementalist": ("gem", hex2rgb("#2a4a7a"), None), "guardians_soul": ("shield", hex2rgb("#2a4a6a"), STEEL),
+    "quick_channel": ("hourglass", hex2rgb("#2a5a6a"), None), "steadfast": ("rock", hex2rgb("#5a4a3a"), None),
+    "fragile_genius": ("book", hex2rgb("#5a2a5a"), None), "efficient_ward": ("cross", hex2rgb("#2a6a4a"), None),
+    "last_stand": ("heart", hex2rgb("#6a1a2a"), RED), "executioner": ("dagger", hex2rgb("#3a2a3a"), STEEL),
+    "tactician": ("dots", hex2rgb("#4a4a2a"), GOLD), "arcane_reservoir": ("battery", hex2rgb("#3a2a6a"), ARCANE),
+}
+
+
+def trait_icon(tid, s=96):
+    cv = Canvas(s, s)
+    g, col, gcol = TRAIT_ART[tid]
+    icons.badge(cv.ctx, s, col, "hex")
+    stroke(cv.ctx, lambda c: poly_path(c, [(s / 2 + math.cos(t) * (s / 2 - 14), s / 2 + math.sin(t) * (s / 2 - 14))
+                                            for t in [k * math.pi / 3 + math.pi / 6 for k in range(6)]]), GOLD, 3, 0.8)
+    glyph(cv.ctx, g, s / 2, s / 2, s * 0.56, gcol)
+    return cv
+
+
+# New relic icons reuse the launch relic badge (family frame + rarity ring + glyph).
+icons.RELIC_ART.update({
+    "dawnstone": ("sun", LIGHT, None), "nightfall_censer": ("moon", SHADOW, None), "verdict_scale": ("skull", (0.95, 0.9, 0.92), SHADOW),
+    "sunforged_aegis": ("shield", LIGHT, None), "prism_of_dusk": ("gem", ARCANE, None), "pyre_heart": ("heart", FIRE, None),
+    "overclock_coil": ("battery", STEEL, BOLT2), "tidecaller_pearl": ("drop", WATER2, None), "glacier_plate": ("shield", ICE, None),
+    "zephyr_sash": ("swirl", WIND, None), "masons_level": ("tower", hex2rgb("#9a8f86"), GOLD), "radiant_lens": ("lens", LIGHT2, LIGHT),
+    "shadow_contract": ("scroll", hex2rgb("#3a1a2a"), SHADOW), "eclipse_engine": ("moon", LIGHT, None), "warding_bell": ("bell", ICE2, None),
+    "executioners_oath": ("dagger", STEEL, RED), "kite_banner": ("shield", hex2rgb("#4a6aa0"), GOLD), "focus_crystal": ("gem", hex2rgb("#7fe8ff"), None),
+    "twilight_hourglass": ("hourglass", SHADOW, LIGHT), "cleansing_chime": ("bell", LIGHT, None),
+    "twilight_crown": ("crown", SHADOW, LIGHT), "aegis_of_ages": ("shield", GOLD, None),
+})
+icons.RELIC_EXTRA.update({"eclipse_engine": "gear", "twilight_crown": "moon", "aegis_of_ages": "star"})

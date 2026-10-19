@@ -88,6 +88,7 @@ namespace Aetherward.Sim.Combat
         public void Illuminate(EnemyUnit e, float duration, float weaken, float purge)
         {
             bool fresh = e.IlluminatedTimer <= 0f;
+            if (e.Latched) Detach(e);
             e.IlluminatedTimer = SimMath.Max(e.IlluminatedTimer, duration);
             e.IlluminatedWeaken = SimMath.Max(e.IlluminatedWeaken, SimMath.Clamp(weaken, 0f, 0.5f));
             if (!fresh) return;
@@ -276,6 +277,7 @@ namespace Aetherward.Sim.Combat
             Stats.AddSource("doom_execute", e.Hp);
             if (credit != null) credit.DamageDealt += e.Hp;
             KillEnemy(e, credit);
+            OnDoomExecuted(credit, e);
             FireTrigger("doom_execute", credit, e, e.Pos, null);
             return true;
         }
@@ -329,6 +331,9 @@ namespace Aetherward.Sim.Combat
             e.FieldTimer = e.FieldVuln = e.FieldWeaken = e.FieldReactionAmp = 0f;
             e.SealTimer = 0f;
             e.SpecialCooldownMult = 1f;
+            e.Latched = false;
+            e.Timer2 = 0f;
+            e.Enraged = false;
         }
     }
 }

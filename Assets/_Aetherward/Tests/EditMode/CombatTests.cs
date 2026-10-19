@@ -11,8 +11,11 @@ namespace Aetherward.Tests
         public void ContentLoadsWithExpectedCounts()
         {
             ContentDatabase db = TestContent.Db;
-            Assert.AreEqual(12, db.Heroes.Count);
-            Assert.AreEqual(24, db.Evolutions.Count);
+            // Launch roster (12) plus expansion heroes; every hero always has exactly two evolutions.
+            Assert.GreaterOrEqual(db.Heroes.Count, 20);
+            Assert.AreEqual(db.Heroes.Count * 2, db.Evolutions.Count);
+            foreach (string launch in new[] { "ignis", "cinder", "marina", "tidal", "volt", "raiden", "freya", "glacius", "zephyr", "sylph", "terra", "magnus" })
+                Assert.IsTrue(db.Heroes.ContainsKey(launch), "launch hero id must be preserved: " + launch);
             Assert.AreEqual(20, db.Waves.Count);
             Assert.AreEqual(12, db.Arena.Nodes.Count);
             Assert.GreaterOrEqual(db.Enemies.Count, 10);

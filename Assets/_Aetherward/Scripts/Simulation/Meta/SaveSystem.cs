@@ -206,13 +206,13 @@ namespace Aetherward.Sim.Meta
                     .Set("uid", h.Uid).Set("id", h.DefId).Set("level", h.Level).Set("xp", h.Xp).Set("evo", h.EvolutionId)
                     .Set("hp", h.HpFraction).Set("downed", h.Downed).Set("node", h.Node).Set("joined", h.JoinedWave)
                     .Set("dmg", h.DamageDealt).Set("heal", h.HealingDone).Set("taken", h.DamageTaken).Set("kills", h.Kills)
-                    .Set("reactions", h.Reactions).Set("casts", h.SkillCasts).Set("downs", h.TimesDowned));
+                    .Set("reactions", h.Reactions).Set("casts", h.SkillCasts).Set("downs", h.TimesDowned).Set("trait", h.TraitId));
             }
             JsonNode offers = JsonNode.NewArray();
             foreach (Offer o in s.Offers)
             {
                 offers.Add(JsonNode.NewObject().Set("kind", o.Kind.ToString()).Set("id", o.Id).Set("price", o.Price)
-                    .Set("hero", o.HeroUid).Set("opt", o.OptionIndex).Set("sold", o.Sold).Set("tag", o.Tag));
+                    .Set("hero", o.HeroUid).Set("opt", o.OptionIndex).Set("sold", o.Sold).Set("tag", o.Tag).Set("trait", o.TraitId));
             }
             JsonNode cards = JsonNode.NewObject();
             foreach (string id in s.CardOrder) cards.Set(id, s.CardStacks(id));
@@ -241,8 +241,18 @@ namespace Aetherward.Sim.Meta
                 .Set("goldEarned", s.GoldEarnedTotal).Set("goldSpent", s.GoldSpentTotal).Set("waves", waves)
                 .Set("reactionCounts", IntMap(s.ReactionCounts)).Set("reactionDamage", FloatMap(s.ReactionDamage))
                 .Set("sourceCounts", IntMap(s.SourceActivations)).Set("sourceDamage", FloatMap(s.SourceDamage))
-                .Set("elements", elements).Set("seen", StringArray(s.SeenEnemies)).Set("drafts", s.DraftsTaken);
+                .Set("elements", elements).Set("seen", StringArray(s.SeenEnemies)).Set("drafts", s.DraftsTaken)
+                .Set("bosses", BossMap(s.BossChoices)).Set("blocked", s.BlockedNode);
             WriteEnvelope("run", d);
+        }
+
+        private static JsonNode BossMap(Dictionary<int, string> map)
+        {
+            JsonNode n = JsonNode.NewObject();
+            var keys = new List<int>(map.Keys);
+            keys.Sort();
+            foreach (int k in keys) n.Set(k.ToString(CultureInfo.InvariantCulture), map[k]);
+            return n;
         }
 
         public RunState LoadRun(ContentDatabase db)
@@ -286,7 +296,8 @@ namespace Aetherward.Sim.Meta
                         Uid = h.Int("uid"), DefId = id, Level = h.Int("level", 1), Xp = h.Int("xp"), EvolutionId = evo,
                         HpFraction = h.Float("hp", 1f), Downed = h.Bool("downed"), Node = h.Int("node", -1), JoinedWave = h.Int("joined", 1),
                         DamageDealt = h.Float("dmg"), HealingDone = h.Float("heal"), DamageTaken = h.Float("taken"), Kills = h.Int("kills"),
-                        Reactions = h.Int("reactions"), SkillCasts = h.Int("casts"), TimesDowned = h.Int("downs")
+                        Reactions = h.Int("reactions"), SkillCasts = h.Int("casts"), TimesDowned = h.Int("downs"),
+                        TraitId = db.Traits.ContainsKey(h.Str("trait") ?? "") ? h.Str("trait") : null // retired traits drop gracefully
                     });
                 }
                 foreach (string r in d.StringList("relics")) if (db.Relics.ContainsKey(r)) s.Relics.Add(r);
@@ -304,7 +315,8 @@ namespace Aetherward.Sim.Meta
                     s.Offers.Add(new Offer
                     {
                         Kind = (OfferKind)Enum.Parse(typeof(OfferKind), o.Str("kind")), Id = o.Str("id"), Price = o.Int("price"),
-                        HeroUid = o.Int("hero"), OptionIndex = o.Int("opt"), Sold = o.Bool("sold"), Tag = o.Str("tag")
+                        HeroUid = o.Int("hero"), OptionIndex = o.Int("opt"), Sold = o.Bool("sold"), Tag = o.Str("tag"),
+                        TraitId = db.Traits.ContainsKey(o.Str("trait") ?? "") ? o.Str("trait") : null
                     });
                 }
                 foreach (JsonNode w in d["waves"].Items)
@@ -323,6 +335,12 @@ namespace Aetherward.Sim.Meta
                 var els = d["elements"].Items;
                 for (int i = 0; i < els.Count && i < s.ElementDamage.Length; i++) s.ElementDamage[i] = els[i].AsFloat();
                 s.SeenEnemies.AddRange(d.StringList("seen"));
+                s.BlockedNode = d.Int("blocked", -1);
+                foreach (string k in d["bosses"].Keys)
+                {
+                    string boss = d["bosses"].Str(k);
+                    if (int.TryParse(k, NumberStyles.Integer, CultureInfo.InvariantCulture, out int w) && boss != null && db.Enemies.ContainsKey(boss)) s.BossChoices[w] = boss;
+                }
                 if (s.Heroes.Count == 0) throw new FormatException("run without heroes");
                 return s;
             }

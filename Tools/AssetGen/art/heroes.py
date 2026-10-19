@@ -1,4 +1,4 @@
-"""Procedural hero sprites: 12 humanoid heroes x (idle, cast, downed, evolution A, evolution B) + portraits.
+"""Procedural hero sprites: 20 humanoid heroes x (idle, cast, downed, evolution A, evolution B) + portraits.
 
 Each hero is assembled from parametric parts (body build, outfit, hair/headgear, face, prop) so the
 silhouettes differ by more than colour: hoods vs spikes vs crowns vs helmets, robes vs armour vs
@@ -25,6 +25,12 @@ ELEMENT = {
     "ice": (hex2rgb("#7fd8ff"), hex2rgb("#e8fbff")),
     "wind": (hex2rgb("#2fd39a"), hex2rgb("#c4ffd9")),
     "earth": (hex2rgb("#b9773a"), hex2rgb("#8fc24a")),
+    "light": (hex2rgb("#ffd84a"), hex2rgb("#fff7cc")),
+    "shadow": (hex2rgb("#a3306b"), hex2rgb("#3a0f2c")),
+    "nature": (hex2rgb("#3fa34d"), hex2rgb("#b6ec6a")),
+    "poison": (hex2rgb("#a8e030"), hex2rgb("#6a2a9a")),
+    "arcane": (hex2rgb("#ff5fd2"), hex2rgb("#ffd6f6")),
+    "void": (hex2rgb("#5146d9"), hex2rgb("#140c38")),
 }
 
 HEROES = {
@@ -52,6 +58,24 @@ HEROES = {
                   main="#8a6a4a", second="#5a8a3a", trim="#d9b56a", prop="hammer", eyes="#2a1a0e"),
     "magnus": dict(element="earth", skin="tan", build="huge", outfit="belted", head="mohawk", hair="#c97a2a",
                    main="#6a4a2e", second="#9ac24a", trim="#e0b060", prop="gauntlets", eyes="#2a160a"),
+    # ---- expansion heroes (parts defined in the "expansion parts" section at the end of this file)
+    "seren": dict(element="light", skin="tan", build="broad", outfit="tabard", head="sun_helm", hair="#7a4a24",
+                  main="#c3cadb", second="#e8b730", trim="#fff1b8", prop="sun_shield_sword", eyes="#6a4a10", tabard="#fff6dc"),
+    "nyxara": dict(element="shadow", skin="fair", build="slim", outfit="long_cloak", head="crescent_hood", hair="#2a1030",
+                   main="#2e1d40", second="#a3306b", trim="#f0cfe2", prop="chain_staff", eyes="#c0204a"),
+    "ashara": dict(element="fire", skin="brown", build="broad", outfit="phoenix_plate", head="plume_helm", hair="#3a1a10",
+                   main="#8a2228", second="#ff8a2a", trim="#ffd24a", prop="flame_sabre", eyes="#3a1408"),
+    "nerissa": dict(element="water", skin="deep", build="slim", outfit="sea_robe", head="pearl_veil", hair="#2c2c66",
+                    main="#3fc2a2", second="#1f7a8c", trim="#fff4ea", prop="conch_staff", eyes="#1a4a5a"),
+    "voltrix": dict(element="lightning", skin="light", build="normal", outfit="engineer", head="goggles_messy", hair="#ff8a2a",
+                    main="#3c4a6c", second="#ffd23a", trim="#ffe14a", prop="wrench_staff", eyes="#2a2050", backpack="coils"),
+    "eirwen": dict(element="ice", skin="brown", build="broad", outfit="frost_plate", head="winged_helm", hair="#f2f6ff",
+                   main="#e4f1ff", second="#6fa6e0", trim="#bff4ff", prop="crystal_shield_mace", eyes="#1a3a6a"),
+    "kael": dict(element="wind", skin="light", build="lean", outfit="wraps", head="topknot", hair="#1c1c28",
+                 main="#2c3c4c", second="#e9e3cf", trim="#2fd39a", prop="war_fans", eyes="#173a22", sash="#2fd39a"),
+    "borun": dict(element="earth", skin="deep", build="huge", outfit="apron", head="flat_cap", hair="#b0582a",
+                  main="#5a7a9a", second="#7a5030", trim="#e0b060", prop="stone_gauntlet", eyes="#2a160a",
+                  cap="#6e6a5c", backpack="plans"),
 }
 
 EVOLUTIONS = {
@@ -93,6 +117,8 @@ def torso_path(spec, m, lean=0.0):
     s, w, hp = m["shoulder"], m["waist"], m["hip"]
     top, bottom = 164, 250
     o = spec["outfit"]
+    if o in EXT_TORSO_SHAPES:
+        return ext_torso_path(o, s, w, hp, top, lean)
     if o in ("robe", "gown"):
         bottom = GROUND - 6
         flare = hp + (26 if o == "gown" else 18)
@@ -161,7 +187,11 @@ def draw_torso(ctx, spec, m, lean=0.0):
                 x = CX - 64 + i * 16
                 paint(ctx, lambda c, x=x: smooth_closed(c, [(x - 9, 168), (x + 9, 168), (x + 6, 200), (x, 210), (x - 6, 200)], 0.5),
                       second if i % 2 else light(second, 0.25), lw=3, hi=False)
+    elif o in EXT_OUTFITS:
+        ext_torso_detail(ctx, spec, m, lean)
     ctx.restore()
+    if o in EXT_OUTFITS:
+        ext_torso_overlay(ctx, spec, m, lean)
 
 
 def draw_arm(ctx, spec, m, shoulder, hand, sleeve_color, skin, behind=False):
@@ -237,6 +267,8 @@ def draw_hair_back(ctx, spec):
         hood = hex2rgb(spec["main"]) if h == "hood_point" else hex2rgb(spec["second"])
         paint(ctx, lambda c: smooth_closed(c, [(CX - 70, 150), (CX - 72, 100), (CX - 50, 60), (CX, 44), (CX + 50, 60),
                                                  (CX + 72, 100), (CX + 70, 150), (CX, 160)], 0.5), shade(hood, 0.2), lw=LW)
+    elif h in EXT_HEADS:
+        ext_hair_back(ctx, spec)
 
 
 def draw_hair_front(ctx, spec, element_color):
@@ -299,6 +331,8 @@ def draw_hair_front(ctx, spec, element_color):
     elif h == "mohawk":
         pts = [(CX - 16, 70), (CX - 12, 30), (CX - 2, 8), (CX + 12, 2), (CX + 22, 22), (CX + 18, 60), (CX + 14, 74)]
         paint(ctx, lambda c: smooth_closed(c, pts, 0.5), hair, lw=LW)
+    elif h in EXT_HEADS:
+        ext_hair_front(ctx, spec, element_color)
     if spec.get("crown"):
         def crown(c):
             poly_path(c, [(CX - 40, 70), (CX - 34, 36), (CX - 20, 58), (CX - 8, 24), (CX, 50), (CX + 8, 24), (CX + 20, 58),
@@ -443,9 +477,14 @@ def draw_prop(ctx, spec, hand, pose, element):
                   hex2rgb("#8a8478"), lw=LW, hi_size=0.7)
             for k in range(3):
                 paint(ctx, lambda c, sx=sx, sy=sy, k=k: ellipse_path(c, sx - 14 + k * 14, sy - 16, 6, 5), ec2, lw=2.5, hi=False)
+    elif kind in EXT_PROPS:
+        ext_prop(ctx, spec, hand, pose, element)
 
 
 # ============================================================================ assembly
+
+BETWEEN_ARMS_PROPS = ("tower_shield", "longbow", "sun_shield_sword", "crystal_shield_mace")
+
 
 def hero_sprite(hero_id, pose="idle", evo=None, size=W):
     spec = dict(HEROES[hero_id])
@@ -482,6 +521,7 @@ def hero_sprite(hero_id, pose="idle", evo=None, size=W):
 
     if spec.get("cape"):
         draw_cape(ctx, spec, lean)
+    ext_back_items(ctx, spec, pose, lean)
     draw_hair_back(ctx, spec)
 
     # arms behind/in front depending on pose
@@ -499,7 +539,7 @@ def hero_sprite(hero_id, pose="idle", evo=None, size=W):
 
     draw_legs(ctx, spec, m, pose)
     draw_torso(ctx, spec, m, lean)
-    if spec["prop"] in ("tower_shield", "longbow"):
+    if spec["prop"] in BETWEEN_ARMS_PROPS:
         draw_arm(ctx, spec, m, left_sh, left_hand, sleeve, skin)
         draw_prop(ctx, spec, right_hand, pose, element)
         draw_arm(ctx, spec, m, right_sh, right_hand, sleeve, skin)
@@ -516,6 +556,8 @@ def hero_sprite(hero_id, pose="idle", evo=None, size=W):
             paint(ctx, lambda c, side=side: smooth_closed(c, [(CX + side * (m["shoulder"] - 30) + lean, 162), (CX + side * (m["shoulder"] + 14) + lean, 166),
                                                                (CX + side * (m["shoulder"] + 16) + lean, 196), (CX + side * (m["shoulder"] - 14) + lean, 192)], 0.5),
                   pad, lw=LW, hi_size=0.6)
+    elif spec["outfit"] in EXT_OUTFITS:
+        ext_shoulders(ctx, spec, m, lean)
     if spec.get("scarf"):
         draw_scarf(ctx, spec, 10 if pose == "cast" else 0)
 
@@ -539,7 +581,7 @@ def hero_sprite(hero_id, pose="idle", evo=None, size=W):
     draw_hair_front(ctx, spec, ec)
     ctx.restore()
 
-    if spec["prop"] not in ("tower_shield", "longbow"):
+    if spec["prop"] not in BETWEEN_ARMS_PROPS:
         draw_prop(ctx, spec, right_hand, pose, element)
 
     if pose == "cast":
@@ -609,3 +651,614 @@ def portrait(hero_id, size=192):
     ctx.set_line_width(3)
     ctx.stroke()
     return cv
+
+
+# ============================================================================ expansion parts
+# New head / outfit / prop / back-item kinds used by the expansion heroes (seren, nyxara, ashara, nerissa,
+# voltrix, eirwen, kael, borun). The original drawing functions dispatch here through the EXT_* sets.
+
+EXT_HEADS = ("sun_helm", "crescent_hood", "plume_helm", "pearl_veil", "goggles_messy", "winged_helm", "topknot", "flat_cap")
+EXT_OUTFITS = ("tabard", "long_cloak", "phoenix_plate", "sea_robe", "engineer", "frost_plate", "wraps", "apron")
+EXT_TORSO_SHAPES = ("long_cloak", "sea_robe")
+EXT_PROPS = ("sun_shield_sword", "chain_staff", "flame_sabre", "conch_staff", "wrench_staff", "crystal_shield_mace",
+             "war_fans", "stone_gauntlet")
+
+STONE = hex2rgb("#8f8a86")
+BRASS = hex2rgb("#d9a441")
+COPPER = hex2rgb("#d9803a")
+
+
+def hands_for(spec, pose):
+    """(left_hand, right_hand) exactly as hero_sprite places them."""
+    m = build_metrics(spec["build"])
+    if pose == "cast":
+        return (CX - m["shoulder"] - 32, 150), (CX + m["shoulder"] + 26, 124)
+    return (CX - m["shoulder"] - 10, 236), (CX + m["shoulder"] + 12, 230)
+
+
+def ext_torso_path(o, s, w, hp, top, lean):
+    if o == "long_cloak":
+        bottom = GROUND - 10
+        pts = [(CX - s * 0.6 + lean, top - 4), (CX + s * 0.6 + lean, top - 4), (CX + s + 10 + lean * 0.6, top + 22),
+               (CX + hp + 22, bottom - 20), (CX + hp + 34, bottom + 2), (CX + 20, bottom - 4), (CX - 6, bottom + 4),
+               (CX - hp - 30, bottom), (CX - hp - 22, bottom - 22), (CX - s - 10 + lean * 0.6, top + 22)]
+        return lambda c: smooth_closed(c, pts, 0.4)
+    # sea_robe: flowing robe with a scalloped, wave-like hem that trails to one side
+    bottom = GROUND - 6
+    pts = [(CX - s * 0.62 + lean, top), (CX + s * 0.62 + lean, top), (CX + s + lean * 0.6, top + 16), (CX + w + 2, 214),
+           (CX + hp + 22, bottom - 18), (CX + hp + 40, bottom + 2), (CX + hp + 10, bottom - 6), (CX + 22, bottom + 4),
+           (CX + 4, bottom - 6), (CX - 18, bottom + 4), (CX - hp - 18, bottom - 4), (CX - hp - 8, bottom - 22),
+           (CX - w - 2, 214), (CX - s + lean * 0.6, top + 16)]
+    return lambda c: smooth_closed(c, pts, 0.45)
+
+
+def ext_torso_detail(ctx, spec, m, lean):
+    """Detail painted inside the torso clip."""
+    main, second, trim = hex2rgb(spec["main"]), hex2rgb(spec["second"]), hex2rgb(spec["trim"])
+    o = spec["outfit"]
+    if o == "tabard":
+        # plate under the tabard: segmented chest plates showing at the sides
+        for side in (-1, 1):
+            for i in range(3):
+                y = 186 + i * 16
+                stroke(ctx, lambda c, side=side, y=y: (c.move_to(CX + side * 26, y), c.line_to(CX + side * 56, y + 4)), shade(main, 0.35), 3)
+        flat(ctx, lambda c: rrect_path(c, CX - 60, 232, 120, 12, 5), second)
+        stroke(ctx, lambda c: rrect_path(c, CX - 60, 232, 120, 12, 5), INK, 3)
+    elif o == "long_cloak":
+        # crimson lining showing through the front split, and a dark inner dress
+        flat(ctx, lambda c: poly_path(c, [(CX - 8 + lean, 168), (CX + 8 + lean, 168), (CX + 40, 300), (CX - 40, 300)]), second)
+        flat(ctx, lambda c: poly_path(c, [(CX - 2 + lean, 176), (CX + 2 + lean, 176), (CX + 24, 300), (CX - 24, 300)]), shade(main, 0.4))
+        for side in (-1, 1):
+            stroke(ctx, lambda c, side=side: (c.move_to(CX + side * 8 + lean, 168), c.line_to(CX + side * 40, 300)), INK, 3.5)
+        # sigil stitching on the cloak edge
+        stroke(ctx, lambda c: smooth_open(c, [(CX - 70, 270), (CX - 30, 282), (CX + 10, 278), (CX + 60, 288)]), trim, 3, 0.7)
+    elif o == "phoenix_plate":
+        paint(ctx, lambda c: smooth_closed(c, [(CX - 34, 176), (CX + 34, 176), (CX + 30, 222), (CX, 236), (CX - 30, 222)], 0.4),
+              shade(main, 0.25), lw=4, hi_size=0.6)
+        # flame emblem on the breastplate
+        paint(ctx, lambda c: smooth_closed(c, [(CX, 186), (CX + 10, 202), (CX + 14, 214), (CX, 226), (CX - 14, 214),
+                                                 (CX - 8, 200)], 0.5), second, lw=3, hi=False)
+        flat(ctx, lambda c: smooth_closed(c, [(CX, 202), (CX + 6, 214), (CX, 222), (CX - 6, 214)], 0.5), trim)
+        flat(ctx, lambda c: rrect_path(c, CX - 60, 232, 120, 12, 5), trim)
+        stroke(ctx, lambda c: rrect_path(c, CX - 60, 232, 120, 12, 5), INK, 3)
+    elif o == "sea_robe":
+        flat(ctx, lambda c: poly_path(c, [(CX - 10 + lean * 0.3, 166), (CX + 10 + lean * 0.3, 166), (CX + 34, 300), (CX - 26, 300)]), second)
+        stroke(ctx, lambda c: (c.move_to(CX - 10 + lean * 0.3, 166), c.line_to(CX - 26, 300)), INK, 3)
+        stroke(ctx, lambda c: (c.move_to(CX + 10 + lean * 0.3, 166), c.line_to(CX + 34, 300)), INK, 3)
+        # foam-wave pattern around the hem
+        for k, y in enumerate((258, 272)):
+            pts = [(CX - 90 + i * 15, y + (-5 if (i + k) % 2 else 5)) for i in range(13)]
+            stroke(ctx, lambda c, pts=pts: smooth_open(c, pts), light(main, 0.55), 4)
+        flat(ctx, lambda c: rrect_path(c, CX - 60, 214, 120, 12, 6), trim)
+        stroke(ctx, lambda c: rrect_path(c, CX - 60, 214, 120, 12, 6), INK, 3)
+        paint(ctx, lambda c: ellipse_path(c, CX + 4, 220, 8, 8), hex2rgb("#ffffff"), lw=3, hi_size=0.6)
+    elif o == "engineer":
+        # backpack straps, toolbelt with pouches
+        for side in (-1, 1):
+            flat(ctx, lambda c, side=side: rrect_path(c, CX + side * 26 - 6, 160, 12, 70, 4), hex2rgb("#3a2a20"))
+            stroke(ctx, lambda c, side=side: rrect_path(c, CX + side * 26 - 6, 160, 12, 70, 4), INK, 2.5)
+            paint(ctx, lambda c, side=side: rrect_path(c, CX + side * 26 - 7, 192, 14, 9, 3), BRASS, lw=2.5, hi=False)
+        flat(ctx, lambda c: rrect_path(c, CX - 60, 222, 120, 14, 6), hex2rgb("#6a4428"))
+        stroke(ctx, lambda c: rrect_path(c, CX - 60, 222, 120, 14, 6), INK, 3)
+        for x in (CX - 36, CX + 24):
+            paint(ctx, lambda c, x=x: rrect_path(c, x - 2, 230, 18, 20, 4), hex2rgb("#8a5a34"), lw=3, hi=False)
+        paint(ctx, lambda c: rrect_path(c, CX - 10, 220, 20, 18, 4), BRASS, lw=3, hi=False)
+        # lightning-bolt patch
+        paint(ctx, lambda c: poly_path(c, [(CX - 4, 176), (CX + 10, 176), (CX + 2, 192), (CX + 12, 192), (CX - 6, 212),
+                                             (CX - 1, 196), (CX - 10, 196)]), second, lw=2.5, hi=False, shade_amt=0)
+    elif o == "frost_plate":
+        paint(ctx, lambda c: smooth_closed(c, [(CX - 36, 176), (CX + 36, 176), (CX + 32, 224), (CX, 238), (CX - 32, 224)], 0.4),
+              light(second, 0.35), lw=4, hi_size=0.6)
+        # frost facets on the breastplate
+        for (a, b) in (((CX, 182), (CX, 232)), ((CX - 30, 196), (CX, 210)), ((CX + 30, 196), (CX, 210))):
+            stroke(ctx, lambda c, a=a, b=b: (c.move_to(*a), c.line_to(*b)), (1, 1, 1), 3, 0.8)
+        flat(ctx, lambda c: rrect_path(c, CX - 60, 234, 120, 12, 5), second)
+        stroke(ctx, lambda c: rrect_path(c, CX - 60, 234, 120, 12, 5), INK, 3)
+    elif o == "wraps":
+        # light cloth wraps crossing the chest
+        wrap = second
+        for side in (-1, 1):
+            flat(ctx, lambda c, side=side: poly_path(c, [(CX + side * 40, 164), (CX + side * 24, 164), (CX - side * 34, 226),
+                                                          (CX - side * 18, 226)]), wrap)
+            stroke(ctx, lambda c, side=side: (c.move_to(CX + side * 40, 164), c.line_to(CX - side * 18, 226)), INK, 2.5)
+            stroke(ctx, lambda c, side=side: (c.move_to(CX + side * 24, 164), c.line_to(CX - side * 34, 226)), INK, 2.5)
+    elif o == "apron":
+        # rolled shirt with a button placket
+        stroke(ctx, lambda c: (c.move_to(CX, 166), c.line_to(CX, 200)), shade(main, 0.4), 3)
+
+
+def ext_torso_overlay(ctx, spec, m, lean):
+    """Garment parts that hang outside the torso silhouette (drawn over it)."""
+    main, second, trim = hex2rgb(spec["main"]), hex2rgb(spec["second"]), hex2rgb(spec["trim"])
+    o = spec["outfit"]
+    x0 = CX + lean * 0.3
+    if o == "tabard":
+        tab = hex2rgb(spec.get("tabard", "#fff6dc"))
+        paint(ctx, lambda c: smooth_closed(c, [(x0 - 24, 172), (x0 + 24, 172), (x0 + 26, 270), (x0, 280), (x0 - 26, 270)], 0.2),
+              tab, lw=LW - 1, hi_size=0.5)
+        stroke(ctx, lambda c: smooth_closed(c, [(x0 - 16, 180), (x0 + 16, 180), (x0 + 18, 262), (x0, 270), (x0 - 18, 262)], 0.2), second, 3.5)
+        flat(ctx, lambda c: rrect_path(c, x0 - 26, 232, 52, 12, 4), second)
+        stroke(ctx, lambda c: rrect_path(c, x0 - 26, 232, 52, 12, 4), INK, 3)
+        paint(ctx, lambda c: star_path(c, x0, 204, 15, 9, 8), hex2rgb("#ffd84a"), lw=3, hi=False)
+        paint(ctx, lambda c: ellipse_path(c, x0, 204, 7, 7), hex2rgb("#fff7cc"), lw=2.5, hi=False, shade_amt=0)
+    elif o == "long_cloak":
+        # tall collar points + moon clasp
+        for side in (-1, 1):
+            paint(ctx, lambda c, side=side: smooth_closed(c, [(CX + side * 8 + lean, 168), (CX + side * 44 + lean, 156),
+                                                               (CX + side * 58 + lean, 172), (CX + side * 34 + lean, 184)], 0.4),
+                  shade(main, 0.15), lw=4.5, hi=False)
+        paint(ctx, lambda c: ellipse_path(c, CX + lean, 174, 10, 10), trim, lw=3.5, hi_size=0.6)
+        flat(ctx, lambda c: ellipse_path(c, CX + 4 + lean, 171, 7, 7), shade(main, 0.15))
+    elif o == "sea_robe":
+        # shell pendant
+        paint(ctx, lambda c: smooth_closed(c, [(x0 - 10, 176), (x0 + 10, 176), (x0 + 6, 190), (x0, 194), (x0 - 6, 190)], 0.5),
+              hex2rgb("#ffc8c0"), lw=3, hi_size=0.6)
+    elif o == "frost_plate":
+        # fluffy snow-fur collar
+        fur = hex2rgb("#f6fbff")
+        for i in range(7):
+            t = i / 6.0
+            x = CX - 48 + 96 * t + lean
+            y = 168 + 6 * math.sin(t * math.pi)
+            paint(ctx, lambda c, x=x, y=y: ellipse_path(c, x, y, 16, 13), fur if i % 2 == 0 else light(hex2rgb("#cfe8ff"), 0.4),
+                  lw=4, hi=False, shade_amt=0.15)
+        # armoured faulds below the belt
+        for side in (-1, 1):
+            paint(ctx, lambda c, side=side: smooth_closed(c, [(CX + side * 8, 244), (CX + side * 50, 244), (CX + side * 54, 266),
+                                                               (CX + side * 12, 270)], 0.3), light(main, 0.1), lw=4.5, hi=False)
+    elif o == "wraps":
+        sash = hex2rgb(spec.get("sash", spec["trim"]))
+        # neck scarf wrap
+        paint(ctx, lambda c: smooth_closed(c, [(CX - 40 + lean, 156), (CX + 40 + lean, 156), (CX + 36 + lean, 176), (CX - 36 + lean, 176)], 0.4),
+              sash, lw=4.5)
+        # waist sash with a side knot
+        paint(ctx, lambda c: smooth_closed(c, [(CX - 40, 222), (CX + 40, 222), (CX + 42, 240), (CX - 42, 240)], 0.3), sash, lw=4.5)
+        paint(ctx, lambda c: ellipse_path(c, CX - 30, 232, 9, 9), light(sash, 0.2), lw=3.5, hi=False)
+    elif o == "apron":
+        leather = second
+        for side in (-1, 1):
+            outlined_line(ctx, [(x0 + side * 28, 194), (x0 + side * 22, 164)], shade(leather, 0.2), 6, 11, smooth=False)
+        paint(ctx, lambda c: rrect_path(c, x0 - 38, 190, 76, 90, 12), leather, lw=LW - 1, hi_size=0.5)
+        stroke(ctx, lambda c: rrect_path(c, x0 - 32, 196, 64, 78, 9), trim, 2.2, 0.8)
+        paint(ctx, lambda c: rrect_path(c, x0 - 22, 230, 44, 26, 6), shade(leather, 0.25), lw=3.5, hi=False)
+        # chisel and pencil poking out of the pocket
+        outlined_line(ctx, [(x0 - 10, 232), (x0 - 14, 214)], hex2rgb("#cfd6e6"), 5, 10, smooth=False)
+        outlined_line(ctx, [(x0 + 8, 232), (x0 + 12, 218)], hex2rgb("#ffd23a"), 5, 10, smooth=False)
+        flat(ctx, lambda c: rrect_path(c, x0 - 56, 222, 18, 12, 4), shade(leather, 0.3))
+
+
+def ext_shoulders(ctx, spec, m, lean):
+    main, second, trim = hex2rgb(spec["main"]), hex2rgb(spec["second"]), hex2rgb(spec["trim"])
+    o = spec["outfit"]
+    s = m["shoulder"]
+    if o in ("tabard", "frost_plate"):
+        pad = second if o == "tabard" else light(main, 0.15)
+        for side in (-1, 1):
+            if o == "frost_plate":
+                # ice shard spikes rising off the pauldron
+                for k, (dx, h) in enumerate(((-6, 30), (8, 40), (20, 26))):
+                    bx = CX + side * (s - 6 + dx) + lean
+                    paint(ctx, lambda c, bx=bx, h=h: poly_path(c, [(bx - 7, 172), (bx + side * 4, 172 - h), (bx + 7, 172)]),
+                          light(hex2rgb("#7fd8ff"), 0.3 + 0.2 * (k % 2)), lw=3.5, hi=False)
+            paint(ctx, lambda c, side=side: smooth_closed(c, [(CX + side * (s - 32) + lean, 160), (CX + side * (s + 16) + lean, 164),
+                                                               (CX + side * (s + 20) + lean, 198), (CX + side * (s - 14) + lean, 194)], 0.5),
+                  pad, lw=LW, hi_size=0.6)
+            if o == "tabard":
+                stroke(ctx, lambda c, side=side: smooth_open(c, [(CX + side * (s - 22) + lean, 172), (CX + side * (s + 12) + lean, 178)]),
+                       light(pad, 0.5), 3)
+    elif o == "phoenix_plate":
+        ec, ec2 = ELEMENT[spec["element"]]
+        for side in (-1, 1):
+            ox, oy = CX + side * (s - 8) + lean, 172
+            glow(ctx, ox + side * 30, oy - 20, 50, ec2, 0.35)
+            # fan of flame feathers sweeping up and out
+            for k in range(4):
+                a = -math.pi / 2 + side * (0.45 + k * 0.32)
+                L = 92 - k * 12
+                tip = (ox + math.cos(a) * L, oy + math.sin(a) * L)
+                nx, ny = -math.sin(a), math.cos(a)
+                mid = (ox + math.cos(a) * L * 0.5, oy + math.sin(a) * L * 0.5)
+                pts = [(ox + nx * 7, oy + ny * 7), (mid[0] + nx * 15, mid[1] + ny * 15), tip,
+                       (mid[0] - nx * 15, mid[1] - ny * 15), (ox - nx * 7, oy - ny * 7)]
+                col = ec if k % 2 == 0 else second
+                paint(ctx, lambda c, pts=pts: smooth_closed(c, pts, 0.45), col, lw=4, hi=False)
+                flat(ctx, lambda c, mid=mid, tip=tip, nx=nx, ny=ny: poly_path(c, [(mid[0] + nx * 5, mid[1] + ny * 5), tip,
+                                                                                   (mid[0] - nx * 5, mid[1] - ny * 5)]), ec2, 0.9)
+            paint(ctx, lambda c, side=side: smooth_closed(c, [(CX + side * (s - 30) + lean, 160), (CX + side * (s + 12) + lean, 164),
+                                                               (CX + side * (s + 16) + lean, 196), (CX + side * (s - 14) + lean, 192)], 0.5),
+                  shade(main, 0.1), lw=LW, hi_size=0.6)
+            stroke(ctx, lambda c, side=side: smooth_open(c, [(CX + side * (s - 24) + lean, 174), (CX + side * (s + 10) + lean, 178)]), trim, 4)
+
+
+def ext_back_items(ctx, spec, pose, lean):
+    """Things worn on the back / trailing behind the body (drawn before hair-back and torso)."""
+    ec, ec2 = ELEMENT[spec["element"]]
+    bp = spec.get("backpack")
+    if bp == "coils":
+        paint(ctx, lambda c: rrect_path(c, CX - 52, 150, 104, 72, 14), hex2rgb("#4a4a58"), lw=LW)
+        for side in (-1, 1):
+            x = CX + side * 92
+            if pose == "cast":
+                glow(ctx, x, 70, 46, ec2, 0.7)
+            else:
+                glow(ctx, x, 70, 30, ec2, 0.45)
+            outlined_line(ctx, [(CX + side * 40, 170), (x, 150), (x, 78)], hex2rgb("#5a5a6a"), 10, 17, smooth=False)
+            for k in range(5):
+                y = 140 - k * 12
+                paint(ctx, lambda c, x=x, y=y: ellipse_path(c, x, y, 13, 5), COPPER, lw=3, hi=False)
+            paint(ctx, lambda c, x=x: ellipse_path(c, x, 70, 11, 11), ec2, lw=3.5, hi_size=0.6)
+            zig = [(x + side * 4, 60), (x - side * 6, 50), (x + side * 8, 42), (x, 30)]
+            stroke(ctx, lambda c, zig=zig: (c.move_to(*zig[0]), [c.line_to(*p) for p in zig[1:]]), ec2, 3.5)
+        if pose == "cast":
+            # arc jumping between the two coil tips, over the head
+            pts = [(CX - 92, 66), (CX - 62, 40), (CX - 30, 54), (CX, 22), (CX + 30, 50), (CX + 62, 34), (CX + 92, 66)]
+            stroke(ctx, lambda c: (c.move_to(*pts[0]), [c.line_to(*p) for p in pts[1:]]), ec, 7)
+            stroke(ctx, lambda c: (c.move_to(*pts[0]), [c.line_to(*p) for p in pts[1:]]), ec2, 3)
+    elif bp == "plans":
+        # rolled blueprints in a leather tube, slung diagonally across the back
+        a, b = (CX + 40, 222), (CX - 98, 74)
+        outlined_line(ctx, [a, b], hex2rgb("#7a5030"), 26, 34, smooth=False)
+        ang = math.atan2(b[1] - a[1], b[0] - a[0])
+        ex, ey = b[0] - math.cos(ang) * 4, b[1] - math.sin(ang) * 4
+        paint(ctx, lambda c: ellipse_path(c, ex, ey, 15, 10, ang + math.pi / 2), hex2rgb("#f0e4c4"), lw=4, hi=False)
+        # rolled-paper spiral peeking out of the open end
+        stroke(ctx, lambda c: ellipse_path(c, ex, ey, 7, 4.5, ang + math.pi / 2), hex2rgb("#4a7ac8"), 2.5)
+        for t in (0.72, 0.5):
+            px, py = a[0] + (b[0] - a[0]) * t, a[1] + (b[1] - a[1]) * t
+            outlined_line(ctx, [(px - math.sin(ang) * 15, py + math.cos(ang) * 15), (px + math.sin(ang) * 15, py - math.cos(ang) * 15)],
+                          BRASS, 5, 10, smooth=False)
+    if spec.get("sash"):
+        sash = hex2rgb(spec["sash"])
+        fl = 14 if pose == "cast" else 0
+        # long scarf tail streaming off the neck in the wind
+        paint(ctx, lambda c: smooth_closed(c, [(CX - 20, 158), (CX - 70, 142 - fl), (CX - 112, 112 - fl * 1.5), (CX - 146, 118 - fl * 2),
+                                                 (CX - 128, 132 - fl), (CX - 138, 150 - fl), (CX - 96, 148 - fl), (CX - 56, 174),
+                                                 (CX - 20, 176)], 0.45), sash, lw=4.5, hi_size=0.6)
+        # two sash ends trailing from the waist knot
+        for k in range(2):
+            dy = k * 18
+            paint(ctx, lambda c, dy=dy: smooth_closed(c, [(CX - 40, 226 + dy * 0.3), (CX - 80, 236 + dy - fl * 0.5),
+                                                           (CX - 118 + dy, 222 + dy * 1.4 - fl), (CX - 108 + dy, 240 + dy * 1.4 - fl),
+                                                           (CX - 76, 252 + dy), (CX - 40, 240 + dy * 0.3)], 0.45),
+                  shade(sash, 0.1 * k), lw=4.5, hi=False)
+
+
+def ext_hair_back(ctx, spec):
+    hair = hex2rgb(spec["hair"])
+    main, second, trim = hex2rgb(spec["main"]), hex2rgb(spec["second"]), hex2rgb(spec["trim"])
+    ec, ec2 = ELEMENT[spec["element"]]
+    h = spec["head"]
+    if h == "sun_helm":
+        # radiant sun disc standing behind the helm
+        glow(ctx, CX, 106, 124, ec, 0.45)
+        paint(ctx, lambda c: star_path(c, CX, 106, 100, 78, 12, rot=-math.pi / 2), ec, lw=4.5, hi=False)
+        paint(ctx, lambda c: star_path(c, CX, 106, 92, 74, 12, rot=-math.pi / 2 + math.pi / 12), light(ec, 0.35), lw=3.5, hi=False)
+        paint(ctx, lambda c: ellipse_path(c, CX, 106, 80, 80), ec2, lw=LW, hi_size=0.6)
+        stroke(ctx, lambda c: ellipse_path(c, CX, 106, 71, 71), ec, 4)
+    elif h == "crescent_hood":
+        paint(ctx, lambda c: smooth_closed(c, [(CX - 72, 162), (CX - 78, 100), (CX - 62, 56), (CX, 44), (CX + 62, 56),
+                                                 (CX + 78, 100), (CX + 72, 162), (CX, 172)], 0.5), shade(main, 0.25), lw=LW)
+    elif h == "pearl_veil":
+        veil = light(ec2, 0.55)
+        paint(ctx, lambda c: smooth_closed(c, [(CX - 52, 70), (CX + 52, 70), (CX + 84, 150), (CX + 98, 240), (CX + 70, 232),
+                                                 (CX + 40, 250), (CX - 40, 250), (CX - 72, 234), (CX - 98, 240), (CX - 84, 150)], 0.5),
+              veil, lw=4, alpha=0.6, hi=False)
+        paint(ctx, lambda c: smooth_closed(c, [(CX - 60, 96), (CX + 60, 96), (CX + 72, 150), (CX + 80, 206), (CX + 58, 196),
+                                                 (CX + 66, 220), (CX + 36, 206), (CX - 36, 206), (CX - 64, 222), (CX - 58, 196),
+                                                 (CX - 80, 206), (CX - 72, 150)], 0.5), hair, lw=LW)
+    elif h == "topknot":
+        # ribbon tails, then the knot itself (its base is hidden by the front hair)
+        for k, dy in enumerate((0, 14)):
+            paint(ctx, lambda c, dy=dy: smooth_closed(c, [(CX + 8, 46), (CX + 50, 34 + dy), (CX + 86, 46 + dy * 1.6), (CX + 70, 56 + dy * 1.4),
+                                                           (CX + 44, 50 + dy), (CX + 10, 58)], 0.5), shade(trim, 0.12 * k), lw=4, hi=False)
+        paint(ctx, lambda c: ellipse_path(c, CX, 40, 20, 18), hair, lw=LW)
+        paint(ctx, lambda c: smooth_closed(c, [(CX - 8, 26), (CX - 2, 6), (CX + 10, 2), (CX + 8, 24)], 0.5), hair, lw=4.5)
+
+
+def ext_hair_front(ctx, spec, element_color):
+    hair = hex2rgb(spec["hair"])
+    main, second, trim = hex2rgb(spec["main"]), hex2rgb(spec["second"]), hex2rgb(spec["trim"])
+    ec, ec2 = ELEMENT[spec["element"]]
+    h = spec["head"]
+    if h == "sun_helm":
+        # short hair at the temples, open-faced gilded helm with a sun gem
+        for side in (-1, 1):
+            paint(ctx, lambda c, side=side: smooth_closed(c, [(CX + side * 64, 124), (CX + side * 58, 92), (CX + side * 40, 96),
+                                                               (CX + side * 50, 120)], 0.4), hair, lw=4.5, hi=False)
+        helm = hex2rgb(spec["main"])
+        paint(ctx, lambda c: smooth_closed(c, [(CX - 64, 112), (CX - 60, 68), (CX - 26, 48), (CX + 26, 48), (CX + 60, 68),
+                                                 (CX + 64, 112), (CX + 42, 94), (CX - 42, 94)], 0.5), helm, lw=LW, hi_size=0.7)
+        stroke(ctx, lambda c: smooth_open(c, [(CX - 56, 98), (CX - 30, 86), (CX, 82), (CX + 30, 86), (CX + 56, 98)]), second, 6)
+        paint(ctx, lambda c: smooth_closed(c, [(CX - 6, 50), (CX + 6, 50), (CX + 8, 30), (CX, 20), (CX - 8, 30)], 0.5), second, lw=4)
+        paint(ctx, lambda c: star_path(c, CX, 70, 14, 7, 8), ec, lw=3, hi=False)
+        paint(ctx, lambda c: ellipse_path(c, CX, 70, 6, 6), ec2, lw=2.5, hi=False, shade_amt=0)
+    elif h == "crescent_hood":
+        def hood(c):
+            smooth_closed(c, [(CX - 64, 126), (CX - 68, 82), (CX - 72, 46), (CX - 60, 20), (CX - 26, 8), (CX - 42, 24),
+                              (CX - 46, 42), (CX - 22, 56), (CX, 58), (CX + 22, 56), (CX + 46, 42), (CX + 42, 20),
+                              (CX + 26, 8), (CX + 60, 20), (CX + 72, 46), (CX + 68, 82),
+                              (CX + 64, 126), (CX + 46, 94), (CX, 82), (CX - 46, 94)], 0.35)
+        paint(ctx, hood, main, lw=LW, hi_pos=(-0.2, -0.25))
+        stroke(ctx, lambda c: smooth_open(c, [(CX - 60, 110), (CX - 40, 92), (CX, 84), (CX + 40, 92), (CX + 60, 110)]), second, 5)
+        for side in (-1, 1):
+            # pale moon-edge along each horn
+            stroke(ctx, lambda c, side=side: smooth_open(c, [(CX + side * 62, 70), (CX + side * 62, 34), (CX + side * 48, 18),
+                                                              (CX + side * 30, 11)]), trim, 3.5, 0.9)
+            glow(ctx, CX + side * 28, 12, 22, ec, 0.85)
+        # oath sigil on the brow
+        paint(ctx, lambda c: poly_path(c, [(CX, 60), (CX + 8, 70), (CX, 80), (CX - 8, 70)]), ec, lw=3, hi=False)
+    elif h == "plume_helm":
+        # flame plume crest, then the crimson helm with a nasal guard
+        paint(ctx, lambda c: smooth_closed(c, [(CX + 18, 60), (CX + 26, 34), (CX + 14, 6), (CX + 2, 24), (CX - 10, 6),
+                                                 (CX - 24, 26), (CX - 46, 16), (CX - 48, 42), (CX - 72, 46), (CX - 54, 62),
+                                                 (CX - 20, 62)], 0.45), ec, lw=LW, hi=False)
+        flat(ctx, lambda c: smooth_closed(c, [(CX + 10, 58), (CX + 14, 36), (CX + 4, 30), (CX - 8, 38), (CX - 30, 36),
+                                                (CX - 40, 54), (CX - 14, 60)], 0.5), ec2, 0.95)
+        helm = shade(main, 0.1)
+        paint(ctx, lambda c: smooth_closed(c, [(CX - 66, 126), (CX - 64, 72), (CX - 30, 50), (CX + 30, 50), (CX + 64, 72),
+                                                 (CX + 66, 126), (CX + 48, 100), (CX + 12, 92), (CX - 12, 92), (CX - 48, 100)], 0.5),
+              helm, lw=LW, hi_size=0.7)
+        stroke(ctx, lambda c: smooth_open(c, [(CX - 58, 96), (CX, 82), (CX + 58, 96)]), trim, 5)
+        paint(ctx, lambda c: rrect_path(c, CX - 5, 80, 10, 30, 5), trim, lw=3.5, hi=False)
+    elif h == "pearl_veil":
+        pts = [(CX - 62, 126), (CX - 60, 80), (CX - 30, 56), (CX, 60), (CX + 30, 56), (CX + 60, 80), (CX + 62, 126),
+               (CX + 50, 100), (CX + 28, 82), (CX, 90), (CX - 28, 82), (CX - 50, 100)]
+        paint(ctx, lambda c: smooth_closed(c, pts, 0.45), hair, lw=LW)
+        # pearl circlet
+        stroke(ctx, lambda c: smooth_open(c, [(CX - 58, 86), (CX - 30, 74), (CX, 70), (CX + 30, 74), (CX + 58, 86)]), INK, 7)
+        stroke(ctx, lambda c: smooth_open(c, [(CX - 58, 86), (CX - 30, 74), (CX, 70), (CX + 30, 74), (CX + 58, 86)]), hex2rgb("#e8d3a0"), 3)
+        for (x, y) in ((CX - 44, 79), (CX - 22, 72), (CX + 22, 72), (CX + 44, 79)):
+            paint(ctx, lambda c, x=x, y=y: ellipse_path(c, x, y, 5.5, 5.5), hex2rgb("#fffaf4"), lw=2.5, hi_size=0.6, shade_amt=0.2)
+        paint(ctx, lambda c: smooth_closed(c, [(CX, 62), (CX + 9, 76), (CX, 88), (CX - 9, 76)], 0.6), hex2rgb("#fffaf4"), lw=3, hi_size=0.7)
+        flat(ctx, lambda c: ellipse_path(c, CX, 77, 4, 5), light(ec2, 0.3), 0.8)
+        # veil drapes at the sides of the face
+        for side in (-1, 1):
+            paint(ctx, lambda c, side=side: smooth_closed(c, [(CX + side * 56, 84), (CX + side * 72, 120), (CX + side * 80, 176),
+                                                               (CX + side * 62, 168), (CX + side * 58, 120)], 0.5),
+                  light(ec2, 0.6), lw=3, alpha=0.55, hi=False)
+    elif h == "goggles_messy":
+        pts = [(CX - 60, 118), (CX - 74, 98), (CX - 62, 92), (CX - 78, 70), (CX - 52, 66), (CX - 50, 40), (CX - 24, 50),
+               (CX - 14, 26), (CX + 6, 46), (CX + 26, 26), (CX + 34, 52), (CX + 62, 44), (CX + 56, 66), (CX + 80, 74),
+               (CX + 62, 92), (CX + 72, 110), (CX + 58, 118), (CX + 46, 96), (CX + 24, 104), (CX + 10, 90),
+               (CX - 10, 102), (CX - 26, 90), (CX - 44, 100)]
+        paint(ctx, lambda c: smooth_closed(c, pts, 0.25), hair, lw=LW, hi_pos=(-0.25, -0.3))
+        # goggles pushed up on the forehead
+        stroke(ctx, lambda c: smooth_open(c, [(CX - 62, 90), (CX, 80), (CX + 62, 90)]), INK, 12)
+        stroke(ctx, lambda c: smooth_open(c, [(CX - 62, 90), (CX, 80), (CX + 62, 90)]), hex2rgb("#4a3a30"), 6)
+        for side in (-1, 1):
+            paint(ctx, lambda c, side=side: ellipse_path(c, CX + side * 21, 80, 17, 15), BRASS, lw=4.5, hi_size=0.6)
+            paint(ctx, lambda c, side=side: ellipse_path(c, CX + side * 21, 80, 10, 9), hex2rgb("#9fe8ff"), lw=3, hi=False, shade_amt=0.2)
+            flat(ctx, lambda c, side=side: ellipse_path(c, CX + side * 21 - 3, 77, 3.5, 3), (1, 1, 1))
+    elif h == "winged_helm":
+        for side in (-1, 1):
+            wing = [(CX + side * 54, 100), (CX + side * 64, 64), (CX + side * 90, 20), (CX + side * 102, 40), (CX + side * 92, 58),
+                    (CX + side * 108, 64), (CX + side * 94, 82), (CX + side * 104, 94), (CX + side * 70, 108)]
+            paint(ctx, lambda c, wing=wing: smooth_closed(c, wing, 0.35), light(ec, 0.45), lw=4.5, hi_size=0.6)
+            stroke(ctx, lambda c, side=side: smooth_open(c, [(CX + side * 64, 90), (CX + side * 84, 54)]), ec, 3)
+        helm = light(main, 0.05)
+        paint(ctx, lambda c: smooth_closed(c, [(CX - 66, 146), (CX - 66, 76), (CX - 30, 48), (CX + 30, 48), (CX + 66, 76),
+                                                 (CX + 66, 146), (CX + 50, 138), (CX + 48, 100), (CX, 90), (CX - 48, 100),
+                                                 (CX - 50, 138)], 0.4), helm, lw=LW, hi_size=0.7)
+        stroke(ctx, lambda c: smooth_open(c, [(CX - 56, 94), (CX, 82), (CX + 56, 94)]), second, 6)
+        paint(ctx, lambda c: poly_path(c, [(CX, 54), (CX + 10, 70), (CX, 84), (CX - 10, 70)]), trim, lw=3.5, hi_size=0.6)
+    elif h == "topknot":
+        pts = [(CX - 60, 112), (CX - 58, 74), (CX - 26, 54), (CX + 20, 54), (CX + 56, 72), (CX + 62, 110), (CX + 48, 90),
+               (CX + 30, 98), (CX + 22, 80), (CX - 6, 88), (CX - 26, 80), (CX - 44, 94)]
+        paint(ctx, lambda c: smooth_closed(c, pts, 0.45), hair, lw=LW)
+        paint(ctx, lambda c: rrect_path(c, CX - 13, 50, 26, 10, 4), trim, lw=3.5, hi=False)
+        # headband
+        stroke(ctx, lambda c: smooth_open(c, [(CX - 60, 98), (CX, 86), (CX + 60, 98)]), INK, 10)
+        stroke(ctx, lambda c: smooth_open(c, [(CX - 60, 98), (CX, 86), (CX + 60, 98)]), trim, 5)
+    elif h == "flat_cap":
+        cap = hex2rgb(spec.get("cap", "#6e6a5c"))
+        # thick beard and moustache (over the mouth), then the flat cap
+        paint(ctx, lambda c: smooth_closed(c, [(CX - 58, 110), (CX - 52, 150), (CX - 32, 182), (CX, 196), (CX + 32, 182),
+                                                 (CX + 52, 150), (CX + 58, 110), (CX + 44, 128), (CX + 24, 138), (CX, 136),
+                                                 (CX - 24, 138), (CX - 44, 128)], 0.45), hair, lw=LW, hi_pos=(-0.2, 0.1))
+        for side in (-1, 1):
+            paint(ctx, lambda c, side=side: smooth_closed(c, [(CX, 132), (CX + side * 14, 128), (CX + side * 28, 136),
+                                                               (CX + side * 20, 144), (CX + side * 4, 140)], 0.5), shade(hair, 0.1), lw=3.5, hi=False)
+        stroke(ctx, lambda c: smooth_open(c, [(CX - 8, 152), (CX, 156), (CX + 8, 152)]), INK, 3)
+        paint(ctx, lambda c: smooth_closed(c, [(CX - 64, 98), (CX - 70, 74), (CX - 44, 56), (CX + 6, 50), (CX + 54, 56),
+                                                 (CX + 74, 74), (CX + 66, 96), (CX, 92)], 0.45), cap, lw=LW, hi_size=0.6)
+        stroke(ctx, lambda c: smooth_open(c, [(CX - 40, 60), (CX - 6, 76), (CX + 30, 92)]), shade(cap, 0.3), 3)
+        paint(ctx, lambda c: smooth_closed(c, [(CX + 10, 92), (CX + 60, 84), (CX + 94, 90), (CX + 72, 102), (CX + 14, 102)], 0.4),
+              shade(cap, 0.2), lw=LW - 1, hi=False)
+        paint(ctx, lambda c: ellipse_path(c, CX + 6, 54, 7, 4), shade(cap, 0.25), lw=3, hi=False)
+
+
+def ext_prop(ctx, spec, hand, pose, element):
+    kind = spec["prop"]
+    ec, ec2 = ELEMENT[element]
+    hx, hy = hand
+    lh, rh = hands_for(spec, pose)
+    trim = hex2rgb(spec["trim"])
+    second = hex2rgb(spec["second"])
+    wood = hex2rgb("#8a5a34")
+    metal = hex2rgb("#cfd6e6")
+    cast = pose == "cast"
+
+    def blade_at(x, y, ang, L, half, col, edge=None):
+        tip = (x + math.cos(ang) * L, y + math.sin(ang) * L)
+        nx, ny = -math.sin(ang), math.cos(ang)
+        b = (x + math.cos(ang) * 16, y + math.sin(ang) * 16)
+        pts = [(b[0] + nx * half, b[1] + ny * half), (tip[0] - math.cos(ang) * 16 + nx * half * 0.9, tip[1] - math.sin(ang) * 16 + ny * half * 0.9),
+               tip, (tip[0] - math.cos(ang) * 16 - nx * half * 0.9, tip[1] - math.sin(ang) * 16 - ny * half * 0.9),
+               (b[0] - nx * half, b[1] - ny * half)]
+        paint(ctx, lambda c: poly_path(c, pts), col, lw=4.5, hi_size=0.6)
+        if edge:
+            stroke(ctx, lambda c: (c.move_to(*b), c.line_to(*tip)), edge, 2.5)
+        return b, tip, (nx, ny)
+
+    if kind == "sun_shield_sword":
+        # short sword in the right hand (drawn first so the hand grips it)
+        ang = -1.3 if not cast else -0.95
+        if cast:
+            glow(ctx, hx + math.cos(ang) * 60, hy + math.sin(ang) * 60, 56, ec, 0.6)
+        b, tip, (nx, ny) = blade_at(hx, hy, ang, 96, 8, metal, light(ec2, 0.2) if not cast else ec)
+        outlined_line(ctx, [(b[0] + nx * 18, b[1] + ny * 18), (b[0] - nx * 18, b[1] - ny * 18)], second, 8, 15, smooth=False)
+        paint(ctx, lambda c: ellipse_path(c, hx - math.cos(ang) * 16, hy - math.sin(ang) * 16, 6, 6), second, lw=3, hi=False)
+        if cast:
+            sparkle(ctx, tip[0], tip[1], 12)
+        # kite shield on the left arm with a sun emblem
+        sx, sy = (lh[0] + 4, lh[1] - 24) if not cast else (lh[0] + 6, lh[1] - 36)
+        kite = [(sx - 40, sy - 50), (sx, sy - 60), (sx + 40, sy - 50), (sx + 36, sy + 8), (sx, sy + 68), (sx - 36, sy + 8)]
+        inner = [(sx + (x - sx) * 0.78, sy - 3 + (y - sy) * 0.78) for (x, y) in kite]
+        paint(ctx, lambda c: smooth_closed(c, kite, 0.3), second, lw=LW, hi_size=0.7)
+        paint(ctx, lambda c: smooth_closed(c, inner, 0.3), hex2rgb(spec.get("tabard", "#fff6dc")), lw=3.5, hi_size=0.6)
+        if cast:
+            glow(ctx, sx, sy - 6, 50, ec2, 0.7)
+        paint(ctx, lambda c: star_path(c, sx, sy - 6, 24, 14, 10), ec, lw=3.5, hi=False)
+        paint(ctx, lambda c: ellipse_path(c, sx, sy - 6, 11, 11), light(ec, 0.5), lw=3, hi=False, shade_amt=0.1)
+        sparkle(ctx, sx - 20, sy - 36, 8)
+    elif kind in ("chain_staff", "conch_staff", "wrench_staff"):
+        reach = {"chain_staff": 150, "conch_staff": 132, "wrench_staff": 140}[kind]
+        if cast:
+            reach -= 46 if kind != "chain_staff" else 80
+        top = (hx + 10, hy - reach)
+        bottom = (hx - 4, hy + 40)
+        shaft = {"chain_staff": hex2rgb("#2a1e34"), "conch_staff": hex2rgb("#c8a27a"), "wrench_staff": hex2rgb("#7a8090")}[kind]
+        outlined_line(ctx, [bottom, top], shaft, 9, 16, smooth=False)
+        tx, ty = top
+        if kind == "chain_staff":
+            glow(ctx, tx, ty - 18, 60 if cast else 44, ec, 0.8 if cast else 0.55)
+            # floating chain links drifting up beside the shaft
+            for k in range(4):
+                lx = tx - 26 + (k % 2) * 6 - k * 3
+                ly = ty + 34 + k * 26 - (10 if cast else 0)
+                rot = 0.3 if k % 2 else -0.3
+                rx, ry = (10, 5) if k % 2 else (5, 10)
+                stroke(ctx, lambda c, lx=lx, ly=ly, rot=rot, rx=rx, ry=ry: ellipse_path(c, lx, ly, rx, ry, rot), INK, 8)
+                stroke(ctx, lambda c, lx=lx, ly=ly, rot=rot, rx=rx, ry=ry: ellipse_path(c, lx, ly, rx, ry, rot), hex2rgb("#c9c3d6"), 3.5)
+            # oath sigil: crimson ring holding a crescent
+            stroke(ctx, lambda c: ellipse_path(c, tx, ty - 18, 22, 22), INK, 12)
+            stroke(ctx, lambda c: ellipse_path(c, tx, ty - 18, 22, 22), ec, 6)
+            for k in range(4):
+                a = k * math.pi / 2 + math.pi / 4
+                paint(ctx, lambda c, a=a: poly_path(c, [(tx + math.cos(a) * 20, ty - 18 + math.sin(a) * 20),
+                                                        (tx + math.cos(a) * 32, ty - 18 + math.sin(a) * 32),
+                                                        (tx + math.cos(a + 0.25) * 22, ty - 18 + math.sin(a + 0.25) * 22)]),
+                      ec, lw=2.5, hi=False)
+            def crescent(c):
+                c.new_sub_path()
+                c.arc(tx, ty - 18, 13, math.pi * 0.3, math.pi * 1.7)
+                c.arc_negative(tx + 6, ty - 18, 10, math.pi * 1.6, math.pi * 0.4)
+                c.close_path()
+            paint(ctx, crescent, light(ec, 0.6), lw=3, hi=False)
+            if cast:
+                sparkle(ctx, tx + 18, ty - 44, 10, light(ec, 0.6))
+        elif kind == "conch_staff":
+            glow(ctx, tx, ty - 22, 56 if cast else 42, ec2, 0.75 if cast else 0.5)
+            conch = [(tx - 18, ty + 4), (tx - 24, ty - 16), (tx - 12, ty - 36), (tx + 4, ty - 56), (tx + 16, ty - 34),
+                     (tx + 24, ty - 12), (tx + 14, ty + 6)]
+            paint(ctx, lambda c: smooth_closed(c, conch, 0.5), hex2rgb("#ffe0cc"), lw=4.5, hi_size=0.6)
+            for k in range(3):
+                y = ty - 12 - k * 13
+                stroke(ctx, lambda c, y=y, k=k: smooth_open(c, [(tx - 20 + k * 5, y + 4), (tx, y - 4), (tx + 20 - k * 5, y + 2)]), INK, 2.5)
+            # spikes on the shell shoulder and the pink opening
+            for (px, py) in ((tx - 24, ty - 20), (tx + 22, ty - 22)):
+                paint(ctx, lambda c, px=px, py=py: poly_path(c, [(px, py - 6), (px + (8 if px > tx else -8), py - 2), (px, py + 6)]),
+                      hex2rgb("#ffe0cc"), lw=3, hi=False)
+            paint(ctx, lambda c: ellipse_path(c, tx + 4, ty + 2, 13, 8, -0.2), hex2rgb("#ff9fb4"), lw=3.5, hi=False)
+            if cast:
+                for (bx, by, r) in ((tx - 30, ty - 50, 7), (tx + 30, ty - 60, 5), (tx - 6, ty - 74, 6), (tx + 22, ty - 84, 4)):
+                    stroke(ctx, lambda c, bx=bx, by=by, r=r: ellipse_path(c, bx, by, r, r), (1, 1, 1), 2.5)
+                    paint(ctx, lambda c, bx=bx, by=by, r=r: ellipse_path(c, bx, by, r, r), ec2, lw=0, hi=False, alpha=0.5)
+        else:
+            glow(ctx, tx, ty - 22, 60 if cast else 40, ec2, 0.8 if cast else 0.5)
+            # open-ended wrench jaw
+            def jaw(c):
+                c.new_sub_path()
+                c.arc(tx, ty - 20, 24, -math.pi * 0.3, math.pi * 1.3)
+                c.arc_negative(tx, ty - 20, 11, math.pi * 1.3, -math.pi * 0.3)
+                c.close_path()
+            paint(ctx, jaw, metal, lw=LW - 1, hi_size=0.6)
+            paint(ctx, lambda c: rrect_path(c, tx - 8, ty - 4, 16, 18, 4), BRASS, lw=3.5, hi=False)
+            zig = [(tx - 8, ty - 36), (tx + 4, ty - 26), (tx - 4, ty - 20), (tx + 8, ty - 12)] if not cast else \
+                  [(tx - 6, ty - 26), (tx + 8, ty - 44), (tx - 6, ty - 56), (tx + 12, ty - 72), (tx + 2, ty - 84)]
+            stroke(ctx, lambda c: (c.move_to(*zig[0]), [c.line_to(*p) for p in zig[1:]]), ec, 7)
+            stroke(ctx, lambda c: (c.move_to(*zig[0]), [c.line_to(*p) for p in zig[1:]]), ec2, 3)
+            sparkle(ctx, tx + 20, ty - 44, 8, ec2)
+    elif kind == "flame_sabre":
+        ang = -1.1 if not cast else -1.95
+        ctx.save()
+        ctx.translate(hx, hy)
+        ctx.rotate(ang)
+        glow(ctx, 70, -10, 70, ec, 0.45 if not cast else 0.7)
+        # flame tongues licking off the curved back edge
+        for k, (x, L) in enumerate(((44, 22), (68, 26), (92, 24), (112, 18))):
+            paint(ctx, lambda c, x=x, L=L: smooth_closed(c, [(x - 10, -10 - x * 0.12), (x - 4, -18 - L - x * 0.12), (x + 4, -24 - x * 0.12),
+                                                               (x + 12, -12 - L * 0.6 - x * 0.12), (x + 10, -6 - x * 0.12)], 0.5),
+                  ec if k % 2 == 0 else hex2rgb(spec["second"]), lw=3.5, hi=False)
+        blade = [(16, -9), (60, -16), (100, -24), (130, -40), (112, -14), (70, 0), (16, 7)]
+        paint(ctx, lambda c: smooth_closed(c, blade, 0.3), metal, lw=4.5, hi_size=0.6)
+        stroke(ctx, lambda c: smooth_open(c, [(22, -5), (70, -10), (112, -24)]), ec2, 3)
+        outlined_line(ctx, [(14, -20), (14, 20)], trim, 9, 16, smooth=False)
+        outlined_line(ctx, [(-20, 0), (12, 0)], hex2rgb("#4a2a1a"), 9, 16, smooth=False)
+        paint(ctx, lambda c: ellipse_path(c, -22, 0, 6, 6), trim, lw=3, hi=False)
+        ctx.restore()
+        if cast:
+            sparkle(ctx, hx + math.cos(ang) * 132, hy + math.sin(ang) * 132, 12)
+    elif kind == "crystal_shield_mace":
+        # flanged mace in the right hand
+        ang = -1.25 if not cast else -1.9
+        head = (hx + math.cos(ang) * 78, hy + math.sin(ang) * 78)
+        outlined_line(ctx, [(hx - math.cos(ang) * 16, hy - math.sin(ang) * 16), head], hex2rgb("#5f6f8a"), 9, 16, smooth=False)
+        if cast:
+            glow(ctx, head[0], head[1], 52, ec2, 0.75)
+        paint(ctx, lambda c: star_path(c, head[0], head[1], 28, 18, 8, rot=ang), metal, lw=4.5, hi_size=0.6)
+        paint(ctx, lambda c: ellipse_path(c, head[0], head[1], 11, 11), ec, lw=3.5, hi=False)
+        # hexagonal faceted crystal greatshield on the left arm
+        sx, sy = (lh[0] + 6, lh[1] - 32) if not cast else (lh[0] + 8, lh[1] - 42)
+        hexa = [(sx, sy - 78), (sx + 46, sy - 48), (sx + 46, sy + 42), (sx, sy + 76), (sx - 46, sy + 42), (sx - 46, sy - 48)]
+        glow(ctx, sx, sy, 96, ec2, 0.4 if not cast else 0.7)
+        paint(ctx, lambda c: poly_path(c, hexa), mix(ec, (1, 1, 1), 0.25), lw=LW, alpha=0.95, hi_size=0.8)
+        inner = [(sx + (x - sx) * 0.5, sy + (y - sy) * 0.5) for (x, y) in hexa]
+        paint(ctx, lambda c: poly_path(c, inner), ec2, lw=3.5, hi=False, shade_amt=0.15)
+        for (ox, oy), (ix, iy) in zip(hexa, inner):
+            stroke(ctx, lambda c, ox=ox, oy=oy, ix=ix, iy=iy: (c.move_to(ox, oy), c.line_to(ix, iy)), (1, 1, 1), 2.5, 0.8)
+        sparkle(ctx, sx - 18, sy - 44, 10)
+        sparkle(ctx, sx + 16, sy + 30, 6)
+    elif kind == "war_fans":
+        for side, (fx, fy) in ((1, rh), (-1, lh)):
+            r = 46 if not cast else 54
+            if cast:
+                a0, a1 = -math.pi / 2 - 1.2, -math.pi / 2 + 1.2
+            else:
+                a0, a1 = (-1.75, -0.2) if side > 0 else (-math.pi + 0.2, -math.pi + 1.75)
+            n = 6
+            pts = [(fx, fy)]
+            for i in range(n * 2 + 1):
+                a = a0 + (a1 - a0) * i / (n * 2)
+                rr = r + 8 if i % 2 == 0 else r - 2
+                pts.append((fx + math.cos(a) * rr, fy + math.sin(a) * rr))
+            if cast:
+                glow(ctx, fx, fy - 26, 58, ec2, 0.65)
+            paint(ctx, lambda c, pts=pts: poly_path(c, pts), ec, lw=LW - 1, hi_size=0.6)
+            flat(ctx, lambda c, fx=fx, fy=fy, a0=a0, a1=a1, r=r: (c.move_to(fx, fy), c.arc(fx, fy, r * 0.45, a0, a1), c.close_path()),
+                 hex2rgb("#2c3c4c"), 0.9)
+            for i in range(n + 1):
+                a = a0 + (a1 - a0) * i / n
+                stroke(ctx, lambda c, a=a, fx=fx, fy=fy, r=r: (c.move_to(fx, fy), c.line_to(fx + math.cos(a) * (r + 6), fy + math.sin(a) * (r + 6))),
+                       INK, 2.5)
+            paint(ctx, lambda c, fx=fx, fy=fy: ellipse_path(c, fx, fy, 6, 6), metal, lw=3, hi=False)
+            if cast:
+                for k in range(2):
+                    rr = r + 18 + k * 12
+                    stroke(ctx, lambda c, fx=fx, fy=fy, rr=rr: c.arc(fx, fy - 4, rr, -math.pi / 2 - 0.9, -math.pi / 2 - 0.2), ec2, 4 - k)
+    elif kind == "stone_gauntlet":
+        ox, oy = (hx + 2, hy - 2) if not cast else (hx + 2, hy - 8)
+        glow(ctx, ox, oy, 56, ec2, 0.35 if not cast else 0.75)
+        paint(ctx, lambda c: rrect_path(c, ox - 36, oy - 30, 72, 66, 9), STONE, lw=LW, hi_size=0.6)
+        for k in range(4):
+            paint(ctx, lambda c, k=k: rrect_path(c, ox - 32 + k * 16, oy - 38, 15, 16, 4), light(STONE, 0.15), lw=3.5, hi=False)
+        # cracks and a glowing rune square
+        stroke(ctx, lambda c: (c.move_to(ox - 30, oy + 20), c.line_to(ox - 20, oy + 14), c.line_to(ox - 22, oy + 4)), INK, 2.5)
+        stroke(ctx, lambda c: (c.move_to(ox + 32, oy + 26), c.line_to(ox + 22, oy + 24)), INK, 2.5)
+        paint(ctx, lambda c: rrect_path(c, ox - 11, oy - 6, 22, 22, 4), ec2, lw=3, hi=False, shade_amt=0.15)
+        stroke(ctx, lambda c: (c.move_to(ox - 5, oy), c.line_to(ox + 5, oy + 10), c.move_to(ox + 5, oy), c.line_to(ox - 5, oy + 10)),
+               shade(ec2, 0.5), 2.5)
+        if cast:
+            for (px, py, r) in ((ox - 42, oy - 44, 7), (ox + 44, oy - 36, 6), (ox + 4, oy - 58, 5)):
+                paint(ctx, lambda c, px=px, py=py, r=r: poly_path(c, [(px - r, py), (px, py - r), (px + r, py + 2), (px, py + r)]),
+                      STONE, lw=3, hi=False)

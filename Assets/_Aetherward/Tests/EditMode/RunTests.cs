@@ -21,9 +21,10 @@ namespace Aetherward.Tests
             ContentDatabase db = TestContent.Db;
             int baseRelics = 0, fusions = 0;
             foreach (RelicDef r in db.RelicList) if (r.Fusion) fusions++; else baseRelics++;
-            Assert.AreEqual(25, baseRelics);
-            Assert.AreEqual(3, fusions);
-            Assert.AreEqual(3, db.Fusions.Count);
+            Assert.GreaterOrEqual(baseRelics, 25);
+            Assert.AreEqual(fusions, db.Fusions.Count, "every fusion-only relic has exactly one recipe");
+            foreach (string launch in new[] { "arcane_echo", "phoenix_feather", "tempest_engine", "absolute_zero", "living_monolith" })
+                Assert.IsTrue(db.Relics.ContainsKey(launch), "launch relic id must be preserved: " + launch);
             Assert.GreaterOrEqual(db.Cards.Count, 40);
             Assert.GreaterOrEqual(db.Events.Count, 3);
             foreach (FusionDef f in db.Fusions)

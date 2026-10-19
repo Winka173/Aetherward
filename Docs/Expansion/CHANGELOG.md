@@ -15,3 +15,13 @@
 - `AssetManifest` (C#) liệt kê mọi art/âm thanh nội dung yêu cầu; test `AssetContractTests` kiểm file tồn tại.
 - Sửa lỗi tất định của pipeline art: `vfx.py` dùng `hash()` (bị salt mỗi lần chạy) → `crc32`; 2 texture impact đổi chi tiết ngẫu nhiên một lần.
 - Tài liệu sinh tự động: `ELEMENT_REACTION_MATRIX.md`.
+
+## Phase 1b — Light/Shadow content (2026-10-19)
+- **8 hero mới** (20 tổng): Seren (Light, hộ vệ khiên + thanh tẩy), Nyxara (Shadow, Diệt Vong/xử tử), Ashara (Fire, Nhiệt + hồi sinh mỗi đợt), Nerissa (Water, hồi máu theo số phản ứng), Voltrix (Lightning, cột điện nối mạch), Eirwen (Ice, khiên nổ băng), Kael (Wind, lướt + gom địch), Borun (Earth, tường làm chậm không chặn đường). 16 nhánh tiến hoá đổi cơ chế. Mở khoá qua meta.
+- **12 trait** run-only (roll có trọng số theo độ hiếm, kiểm tra điều kiện nguyên tố/vai trò, RNG riêng không làm lệch offer khác, lưu save).
+- **22 relic** (2 hợp thể mới: Twilight Crown, Aegis of Ages; keystone: Verdict Scale, Radiant Lens, Shadow Contract, Eclipse Engine, Mason's Level), **12 thẻ** (2 cộng hưởng, 2 phản ứng, 8 chuyên môn).
+- **Kẻ địch**: Mana Leech (làm chậm hồi chiêu), Crystal Parasite (bám Pha Lê; phản chế: canh lõi/Ánh Sáng/thanh tẩy), Ash Imp (nổ khi chết); **boss Ignaroth** (dung nham báo trước, Ash Imp, pha Quá Nhiệt + cửa sổ xả nhiệt) — boss đợt 10 chọn theo seed (`bossPool`, lưu save).
+- **Ascension 1–5 dữ liệu** (`difficulty.json`): giữ nguyên hiệu ứng cũ + giá cửa hàng, ô bị khoá, affix elite, boss nổi giận.
+- UI: chọn đội có lọc nguyên tố + phân trang; trait trên thẻ chiêu mộ và bảng hero; ô bị khoá; banner pha boss theo dữ liệu.
+- Tài liệu sinh tự động: `HERO_ROSTER.md`, `CONTENT_MATRIX.csv`; `BALANCE_REPORT.md`.
+- Test: 99/99 (thêm Trait, Enemy, Difficulty, Asset contract).

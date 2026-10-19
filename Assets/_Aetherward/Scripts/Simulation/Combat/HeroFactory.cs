@@ -62,6 +62,14 @@ namespace Aetherward.Sim.Combat
                     if (op.Op == "stat") Accumulate(op, 1, flat, pct);
             }
 
+            if (!string.IsNullOrEmpty(l.TraitId) && content.Traits.TryGetValue(l.TraitId, out TraitDef trait))
+            {
+                h.TraitId = trait.Id;
+                h.Trait = trait;
+                foreach (EffectOp op in trait.Effects)
+                    if (op.Op == "stat") Accumulate(op, 1, flat, pct);
+            }
+
             ApplySkillOps(h, battle.Mods);
 
             foreach (SourcedOp s in battle.Mods.StatOps)

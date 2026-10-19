@@ -58,7 +58,7 @@ namespace Aetherward.Sim.Run
                 Seed = seed,
                 Ascension = ascension,
                 Gold = content.Economy.StartGold,
-                CrystalBaseMaxHp = content.Economy.CrystalHp * (ascension >= 3 ? 0.85f : 1f)
+                CrystalBaseMaxHp = content.Economy.CrystalHp * (1f + content.Difficulty.Value("crystal_max", ascension))
             };
             s.CrystalHp = s.CrystalBaseMaxHp;
             s.CrystalKnownMax = s.CrystalBaseMaxHp;
@@ -73,6 +73,7 @@ namespace Aetherward.Sim.Run
                 // Melee starters guard the inner ring by default, ranged ones take the outer ring.
                 h.Node = content.Heroes[starters[i]].Melee ? innerNodes[inner++ % innerNodes.Length] : outerNodes[outer++ % outerNodes.Length];
             }
+            rc.RollBlockedNode();
             s.Trace("new run seed=" + Pcg32.FormatSeed(seed) + " starters=" + string.Join(",", starters) + " asc=" + ascension);
             return rc;
         }
@@ -86,11 +87,47 @@ namespace Aetherward.Sim.Run
             return h;
         }
 
+        /// <summary>Boss of a pooled wave for this run (chosen once from the seed, persisted in the save).</summary>
+        public string BossFor(WaveDef wave)
+        {
+            if (wave.BossPool.Count == 0) return null;
+            if (State.BossChoices.TryGetValue(wave.Number, out string id) && Content.Enemies.ContainsKey(id)) return id;
+            Pcg32 rng = Pcg32.Derive(State.Seed, "boss:" + wave.Number);
+            id = wave.BossPool[rng.Range(0, wave.BossPool.Count)];
+            State.BossChoices[wave.Number] = id;
+            return id;
+        }
+
+        /// <summary>The enemy actually fought for an authored wave entry (after boss substitution).</summary>
+        public string EnemyFor(WaveDef wave, string enemyId)
+        {
+            string boss = BossFor(wave);
+            return boss != null && enemyId == wave.BossPool[0] ? boss : enemyId;
+        }
+
         public int FreeNode()
         {
             int[] preference = { 4, 8, 0, 2, 1, 3, 6, 10, 5, 7, 9, 11 };
-            foreach (int n in preference) if (State.HeroOnNode(n) == null) return n;
+            foreach (int n in preference) if (n != State.BlockedNode && State.HeroOnNode(n) == null) return n;
             return -1;
+        }
+
+        /// <summary>
+        /// Ascension: telegraph one blocked node for the coming wave (deterministic per seed/wave). Heroes on
+        /// it are moved to a free node; the player sees it during preparation and can rearrange.
+        /// </summary>
+        public void RollBlockedNode()
+        {
+            State.BlockedNode = -1;
+            if (!Content.Difficulty.Has("blocked_node", State.Ascension)) return;
+            Pcg32 rng = Pcg32.Derive(State.Seed, "block:" + State.Wave);
+            State.BlockedNode = rng.Range(0, Content.Arena.Nodes.Count);
+            HeroRunState on = State.HeroOnNode(State.BlockedNode);
+            if (on != null)
+            {
+                on.Node = -1;
+                on.Node = FreeNode();
+            }
         }
 
         // ================================================================== economy helpers
@@ -130,7 +167,8 @@ namespace Aetherward.Sim.Run
             }
         }
 
-        public float PriceScale => (1f + Eco.ShopPriceGrowthPerWave * (State.Wave - 1)) * Math.Max(0.4f, 1f - EconomyParam("shopDiscount"));
+        public float PriceScale => (1f + Eco.ShopPriceGrowthPerWave * (State.Wave - 1)) * Math.Max(0.4f, 1f - EconomyParam("shopDiscount"))
+                                   * (1f + Content.Difficulty.Value("shop_prices", State.Ascension));
 
         public int ReviveCost => (int)Math.Ceiling((Eco.ReviveBaseCost + Eco.ReviveCostPerWave * State.Wave) * Math.Max(0.3f, 1f - EconomyParam("reviveDiscount")));
         public int RepairCost => (int)Math.Ceiling(Eco.RepairCost * PriceScale);
@@ -157,7 +195,7 @@ namespace Aetherward.Sim.Run
         public bool PlaceHero(int heroUid, int node)
         {
             if (State.Phase != RunPhase.Prepare) return false;
-            if (node < 0 || node >= Content.Arena.Nodes.Count) return false;
+            if (node < 0 || node >= Content.Arena.Nodes.Count || node == State.BlockedNode) return false;
             HeroRunState h = State.Hero(heroUid);
             if (h == null) return false;
             HeroRunState occupant = State.HeroOnNode(node);
@@ -232,8 +270,10 @@ namespace Aetherward.Sim.Run
             foreach (string id in State.CardOrder)
                 if (Content.Cards.TryGetValue(id, out CardDef c))
                     foreach (EffectOp op in c.Effects) m.Add(op, id, State.CardStacks(id));
-            if (State.Ascension >= 2) m.EnemySpeedPct += 0.08f;
-            if (State.Ascension >= 4) m.EnemyDamagePct += 0.1f;
+            DifficultyDef d = Content.Difficulty;
+            m.EnemySpeedPct += d.Value("enemy_speed", State.Ascension);
+            m.EnemyDamagePct += d.Value("enemy_damage", State.Ascension);
+            m.EnemyHpPct += d.Value("enemy_hp", State.Ascension);
             return m;
         }
 
@@ -251,8 +291,12 @@ namespace Aetherward.Sim.Run
                 MaxActiveEnemies = Eco.MaxActiveEnemies
             };
             setup.CrystalHp = Math.Min(State.CrystalHp, setup.CrystalMaxHp);
+            string boss = BossFor(wave);
+            if (boss != null && boss != wave.BossPool[0]) setup.Substitutions[wave.BossPool[0]] = boss;
             setup.ExtraWaveModifiers.AddRange(State.NextWaveModifiers);
-            if (State.Ascension >= 1) setup.ExtraWaveModifiers.Add("ascension_frenzy");
+            if (Content.Difficulty.Has("frenzy", State.Ascension)) setup.ExtraWaveModifiers.Add("ascension_frenzy");
+            setup.EliteExtraAffix = Content.Difficulty.Has("elite_affix", State.Ascension);
+            setup.BossEnrage = Content.Difficulty.Value("boss_enrage", State.Ascension);
             foreach (HeroRunState h in State.Heroes)
             {
                 if (h.Node < 0) continue;
@@ -264,7 +308,8 @@ namespace Aetherward.Sim.Run
                     Level = h.Level,
                     EvolutionId = h.EvolutionId,
                     HpFraction = h.HpFraction,
-                    Downed = h.Downed
+                    Downed = h.Downed,
+                    TraitId = h.TraitId
                 });
             }
             return setup;
@@ -350,7 +395,10 @@ namespace Aetherward.Sim.Run
             foreach (string id in Battle.Content.Enemies.Keys)
                 if (b.Stats.CrystalDamageByEnemy.ContainsKey(id) && !State.SeenEnemies.Contains(id)) State.SeenEnemies.Add(id);
             foreach (SpawnGroup g in wave.Groups)
-                if (!State.SeenEnemies.Contains(g.Enemy)) State.SeenEnemies.Add(g.Enemy);
+            {
+                string id = EnemyFor(wave, g.Enemy);
+                if (!State.SeenEnemies.Contains(id)) State.SeenEnemies.Add(id);
+            }
 
             State.Trace("cleared wave " + wave.Number + " gold+" + gold + " essence+" + essence);
             Battle = null;
@@ -430,6 +478,7 @@ namespace Aetherward.Sim.Run
             State.Offers.Clear();
             State.Phase = RunPhase.Prepare;
             State.Wave++;
+            RollBlockedNode();
             AutoPlaceNewHeroes();
         }
 
@@ -457,10 +506,13 @@ namespace Aetherward.Sim.Run
                         State.Offers.Add(new Offer { Kind = OfferKind.Pact, Id = c.Id, Tag = "cursed" });
                     break;
                 case RewardKind.Recruit:
+                {
                     if (State.Heroes.Count >= Eco.MaxHeroes) break;
-                    foreach (string id in PickHeroes(OfferRng("recruit"), 3))
-                        State.Offers.Add(new Offer { Kind = OfferKind.Hero, Id = id, Price = HeroPrice(id) });
+                    // Four choices: the expansion roster is large, so recruitment needs more agency.
+                    foreach (string id in PickHeroes(OfferRng("recruit"), 4))
+                        State.Offers.Add(new Offer { Kind = OfferKind.Hero, Id = id, Price = HeroPrice(id), TraitId = RollTrait(id) });
                     break;
+                }
                 case RewardKind.Relic:
                     foreach (string id in PickRelics(OfferRng("relic"), 3))
                         State.Offers.Add(new Offer { Kind = OfferKind.Relic, Id = id });
@@ -492,7 +544,7 @@ namespace Aetherward.Sim.Run
             Pcg32 rng = OfferRng("shop");
             if (State.Heroes.Count < Eco.MaxHeroes)
                 foreach (string id in PickHeroes(rng, 2))
-                    State.Offers.Add(new Offer { Kind = OfferKind.Hero, Id = id, Price = HeroPrice(id) });
+                    State.Offers.Add(new Offer { Kind = OfferKind.Hero, Id = id, Price = HeroPrice(id), TraitId = RollTrait(id) });
             foreach (string id in PickRelics(rng, 2))
                 State.Offers.Add(new Offer { Kind = OfferKind.Relic, Id = id, Price = RelicPrice(id) });
             foreach (CardDef c in DraftGenerator.Generate(this, rng, 2, false))
@@ -562,6 +614,8 @@ namespace Aetherward.Sim.Run
                     }
                     if (!hasElement) w += 0.6f;
                     if (!hasRole) w += 0.4f;
+                    // Larger roster: favour heroes whose element forms a signature reaction with the team.
+                    if (SignatureSynergy(d.Element)) w += 0.8f;
                     weights[i] = w;
                     total += w;
                 }
@@ -576,6 +630,19 @@ namespace Aetherward.Sim.Run
                 pool.RemoveAt(pick);
             }
             return result;
+        }
+
+        /// <summary>True when an element would create an authored (signature) reaction with someone already in the roster.</summary>
+        public bool SignatureSynergy(Element el)
+        {
+            foreach (HeroRunState o in State.Heroes)
+            {
+                Element other = Content.Heroes[o.DefId].Element;
+                if (other == el) continue;
+                ReactionDef r = Content.ReactionFor(el, other);
+                if (r != null && r.Category == ReactionCategory.Signature) return true;
+            }
+            return false;
         }
 
         private List<string> PickRelics(Pcg32 rng, int count)
@@ -643,7 +710,7 @@ namespace Aetherward.Sim.Run
                 case OfferKind.Hero:
                     if (State.Heroes.Count >= Eco.MaxHeroes || State.HasHero(o.Id)) return false;
                     if (!Spend(o.Price)) return false;
-                    AddRecruit(o.Id);
+                    AddRecruit(o.Id, o.TraitId);
                     break;
                 case OfferKind.Relic:
                     if (!Spend(o.Price)) return false;
@@ -750,14 +817,41 @@ namespace Aetherward.Sim.Run
             State.CrystalKnownMax = max;
         }
 
-        private void AddRecruit(string id)
+        private void AddRecruit(string id, string traitId)
         {
             int avg = 0;
             foreach (HeroRunState h in State.Heroes) avg += h.Level;
             int level = State.Heroes.Count > 0 ? Math.Max(1, avg / State.Heroes.Count - 1) : 1;
             HeroRunState hero = AddHero(id, level);
             hero.Node = FreeNode();
-            State.Trace("recruit " + id + " lvl" + level);
+            if (traitId != null && Content.Traits.TryGetValue(traitId, out TraitDef t) && t.EligibleFor(Content.Heroes[id])) hero.TraitId = traitId;
+            State.Trace("recruit " + id + " lvl" + level + (hero.TraitId != null ? " trait=" + hero.TraitId : ""));
+        }
+
+        /// <summary>Rarity-weighted trait for a recruit; only traits eligible for that hero's element/role.</summary>
+        public string RollTrait(string heroId)
+        {
+            // Own RNG stream per offer: trait rolls never shift the hero/relic/card offer sequences.
+            Pcg32 rng = Pcg32.Derive(State.Seed, "trait:" + State.Wave + ":" + State.TotalRerolls + ":" + heroId);
+            HeroDef def = Content.Heroes[heroId];
+            var pool = new List<TraitDef>();
+            foreach (TraitDef t in Content.TraitList) if (t.EligibleFor(def)) pool.Add(t);
+            if (pool.Count == 0) return null;
+            float total = 0f;
+            var weights = new float[pool.Count];
+            for (int i = 0; i < pool.Count; i++)
+            {
+                float rw = pool[i].Rarity == Rarity.Common ? 1f : pool[i].Rarity == Rarity.Rare ? 0.6f : 0.3f;
+                weights[i] = rw * pool[i].Weight;
+                total += weights[i];
+            }
+            float roll = rng.NextFloat() * total;
+            for (int i = 0; i < pool.Count; i++)
+            {
+                roll -= weights[i];
+                if (roll <= 0f) return pool[i].Id;
+            }
+            return pool[pool.Count - 1].Id;
         }
 
         private bool ApplyEventOption(string eventId, int option)

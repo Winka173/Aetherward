@@ -111,7 +111,7 @@ namespace Aetherward.Sim.Content
                 {
                     float v = (op.Value != 0f ? op.Value : 1f) * stacks;
                     string key = "fx.rule." + op.Rule;
-                    lines.Add(_l.Format(key, Localization.Number(op.Rule == "burn_power" || op.Rule == "overheal_shield" ? v * 100f : v)));
+                    lines.Add(_l.Format(key, Localization.Number(PercentRules.Contains(op.Rule) ? v * 100f : v)));
                     break;
                 }
                 case "skill":
@@ -128,6 +128,27 @@ namespace Aetherward.Sim.Content
                 case "card":
                     lines.Add(_l.Format("fx.card", _l.Get("card." + p.GetString("id") + ".name")));
                     break;
+            }
+        }
+
+        /// <summary>Rules whose value is a fraction shown as a percentage in tooltips.</summary>
+        private static readonly HashSet<string> PercentRules = new HashSet<string>
+        {
+            "burn_power", "overheal_shield", "doom_threshold", "doom_boss", "poison_power", "resonance_bonus", "collapse_radius",
+            "collapse_power", "shield_power", "field_duration", "illuminate_power"
+        };
+
+        /// <summary>Localization key of a status id used by actions (apply_status) and reactions.</summary>
+        public static string StatusKey(string status)
+        {
+            switch (status)
+            {
+                case "illuminate": return "status.illuminated";
+                case "root": return "status.rooted";
+                case "poison": return "status.poisoned";
+                case "mark": return "status.marked";
+                case "seal": return "status.sealed";
+                default: return "status." + status;
             }
         }
 
@@ -180,6 +201,15 @@ namespace Aetherward.Sim.Content
                 case "echo_cast": what = _l.Format("fx.do.echo_cast", Pct(p.Get("power", 0.5f) * s, false)); break;
                 case "execute": what = _l.Format("fx.do.execute", Pct(p.Get("threshold", 0.12f), false)); break;
                 case "slow_all": what = _l.Format("fx.do.slow_all", Num(p.Get("radius", 3f)), Pct(p.Get("slow", 0.3f), false), Num(p.Get("duration", 2f))); break;
+                case "apply_status":
+                {
+                    string status = _l.Get(StatusKey(p.GetString("status")));
+                    what = p.Get("radius") > 0f ? _l.Format("fx.do.apply_status_area", status, Num(p.Get("radius"))) : _l.Format("fx.do.apply_status", status);
+                    break;
+                }
+                case "field": what = _l.Format("fx.do.field", _l.Get("field." + p.GetString("field") + ".name"), Num(p.Get("radius", 1.6f)), Num(p.Get("duration", 3f))); break;
+                case "team_shield": what = _l.Format("fx.do.team_shield", Pct(p.Get("pct", 0.1f) * s, false)); break;
+                case "cleanse_team": what = _l.Get("fx.do.cleanse_team"); break;
                 default: what = op.Action; break;
             }
             string text = when + (qualifiers.Count > 0 ? " (" + string.Join(", ", qualifiers) + ")" : "") + ": " + what;

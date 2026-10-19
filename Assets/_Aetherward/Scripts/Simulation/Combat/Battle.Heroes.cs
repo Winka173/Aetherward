@@ -229,7 +229,8 @@ namespace Aetherward.Sim.Combat
             Emit(SimEventType.BasicAttack, h.Pos, h.Def.Element, 0f, h.Uid, target.Uid, h.Melee ? "melee" : "ranged");
 
             // Element gauge is applied at most every other basic attack: keeps auras readable.
-            if (h.AttackCount % 2 == 0 && !h.Basic.Params.Flag("alwaysApply")) d.Gauge = 0f;
+            bool slipstream = h.PassiveKind == "slipstream" && h.PassiveStacks > 0;
+            if (h.AttackCount % 2 == 0 && !h.Basic.Params.Flag("alwaysApply") && !slipstream) d.Gauge = 0f;
 
             int pierceEvery = (int)(h.Skill.Params.Get("basicPierceEvery") > 0 ? h.Skill.Params.Get("basicPierceEvery") : h.Basic.Params.Get("pierceEvery"));
             if (h.Melee || h.Basic.Kind == "melee")
@@ -245,6 +246,7 @@ namespace Aetherward.Sim.Combat
                 FireProjectile(h, ProjectileKind.Single, target, target.Pos, h.Basic.ProjectileSpeed, 0f, d, "basic");
             }
             OnBasicAttackPassive(h);
+            OnBasicAttackPassiveExt(h, target);
         }
 
         public void Taunt(HeroUnit h, float radius, float duration)
@@ -649,13 +651,20 @@ namespace Aetherward.Sim.Combat
                     cast = true;
                     break;
                 }
+                default:
+                    cast = CastSkillExt(h, s, power, mult, range, el, ref castPos);
+                    break;
             }
 
             if (!cast) return false;
             h.CastCount++;
             h.SkillCasts++;
             Emit(SimEventType.SkillCast, castPos, el, power, h.Uid, 0, s.Kind, false, 0f, echo ? 1 : 0);
-            if (!echo) FireTrigger("skill_cast", h, null, castPos, null);
+            if (!echo)
+            {
+                FireTrigger("skill_cast", h, null, castPos, null);
+                TryTraitEcho(h);
+            }
             return true;
         }
 
@@ -719,6 +728,7 @@ namespace Aetherward.Sim.Combat
                     }
                     break;
             }
+            ApplyBattleStartPassiveExt(h);
         }
 
         private void TickPassive(HeroUnit h, float dt)
@@ -734,6 +744,7 @@ namespace Aetherward.Sim.Combat
             }
             if (h.PassiveKind == "living_fortress" && h.Alive)
                 h.Hp = SimMath.Min(h.MaxHp, h.Hp + h.MaxHp * h.PassiveParams.Get("regen", 0.01f) * dt);
+            TickPassiveExt(h, dt);
         }
 
         /// <summary>Conditional damage bonuses from passives (added to DamageRequest.BonusMult).</summary>
@@ -748,7 +759,7 @@ namespace Aetherward.Sim.Combat
                 case "crushing": return e.ArmorCrackTimer > 0f ? h.PassiveParams.Get("bonus", 0.25f) * e.ArmorCrackStacks : 0f;
                 case "shatter": return e.Frozen ? h.PassiveParams.Get("bonus", 1f) : 0f;
                 case "inferno": return e.Burning ? h.PassiveParams.Get("bonus", 0.35f) : 0f;
-                default: return 0f;
+                default: return PassiveBonusExt(h, e);
             }
         }
 
@@ -772,6 +783,7 @@ namespace Aetherward.Sim.Combat
         private void OnHeroHit(HeroUnit h, EnemyUnit attacker)
         {
             if (!attacker.Alive) return;
+            OnHeroHitExt(h, attacker);
             if (h.ShieldRetaliate > 0f && h.RetaliateTimer <= 0f)
             {
                 h.RetaliateTimer = 0.4f;

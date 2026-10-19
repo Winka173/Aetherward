@@ -179,7 +179,7 @@ namespace Aetherward.Game
                     float pw = 900, ph = 640;
                     float px = Ui.W - pw - 20, py = Ui.H - 220 - ph;
                     Block(px, py, pw, ph);
-                    SharedPanels.HeroDetail(px, py, pw, ph, App.Content.Heroes[h.DefId], h.EvolutionId, h.Level);
+                    SharedPanels.HeroDetail(px, py, pw, ph, App.Content.Heroes[h.DefId], h.EvolutionId, h.Level, h.TraitId);
                     int next = h.Level < App.Content.Economy.LevelCap ? App.Content.Economy.XpToLevel[h.Level] : -1;
                     Ui.Label(px + 30, py + ph - 56, 500, 40, next > 0 ? L.Format("prep.xp", h.Xp, next) : L.Get("prep.max_level"), 22, Ui.Muted);
                     if (Ui.Button(px + pw - 200, py + ph - 100, 170, 80, L.Get("common.close"), Tone.Ghost, true, 24)) _heroInfoUid = -1;
@@ -430,7 +430,8 @@ namespace Aetherward.Game
         {
             RunState s = _rc.State;
             int n = s.Offers.Count;
-            float cw = 460, ch = 620, gap = 36;
+            float gap = 36, ch = 620;
+            float cw = Mathf.Min(460f, (Ui.W - 120f - gap * (n - 1)) / Mathf.Max(1, n));
             float x0 = Ui.W / 2 - (n * cw + (n - 1) * gap) / 2, y = 250;
             for (int i = 0; i < n && !_offersChanged; i++)
             {
@@ -454,6 +455,15 @@ namespace Aetherward.Game
             Ui.Label(x + 144, y + 292, cw - 170, 44, L.Format("label.element_role", L.Element(def.Element), L.Role(def.Role)), 22, Ui.ElementColor(def.Element), TextAnchor.MiddleLeft, true);
             Ui.Label(x + 30, y + 346, cw - 60, 36, L.Get(def.Skill.NameKey), 24, Ui.Gold, TextAnchor.UpperLeft, true);
             Ui.Label(x + 30, y + 380, cw - 60, 200, L.SkillText(def.Skill, def.Skill.DescKey), 20, Ui.White);
+            if (o.TraitId != null)
+            {
+                // Recruit trait strip: icon, name and the rule (traits are rolled per offer, run-only).
+                float ty = y + ch - 100;
+                Ui.DrawRect(x + 18, ty - 4, cw - 36, 92, new Color(0.1f, 0.08f, 0.22f, 0.8f));
+                Ui.Icon(x + 24, ty, 40, 40, Art.Tex("Icons/trait_" + o.TraitId));
+                Ui.Label(x + 70, ty, cw - 96, 40, L.Get("trait." + o.TraitId + ".name"), 22, Ui.Gold, TextAnchor.MiddleLeft, true);
+                Ui.Label(x + 24, ty + 40, cw - 48, 48, SharedPanels.TraitText(o.TraitId), 16, Ui.White);
+            }
             if (o.Sold)
             {
                 Ui.Label(x, y + ch - 80, cw, 60, L.Get("common.sold"), 30, Ui.Muted, TextAnchor.MiddleCenter, true);

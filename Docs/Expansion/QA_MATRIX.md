@@ -12,3 +12,10 @@ Mô phỏng (pure C#) được kiểm chứng bằng `dotnet test`; mọi thứ 
 | Status Illuminated/Doom/Root/Poison/Resonant/Unstable | VERIFIED | IMPLEMENTED_UNVERIFIED | 7 test trong `ElementExpansionTests` |
 | 25 phản ứng mới + field | VERIFIED (kích hoạt, không NaN, trong trần) | IMPLEMENTED_UNVERIFIED | `EveryReactionResolvesWithinCaps`, `RandomTwelveElementStormStaysBounded` |
 | Art/âm thanh nguyên tố mới | VERIFIED (file tồn tại) | IMPLEMENTED_UNVERIFIED (chưa xem trong game) | `AssetContractTests`, `Docs/Previews/expansion_elements.png` |
+| 8 hero Phase 1 + 16 tiến hoá | VERIFIED (cast trong đợt thật) | IMPLEMENTED_UNVERIFIED | `EveryHeroSkillCastsInARealWave`, `EveryEvolutionBuildsAndCasts` |
+| Trait (12) | VERIFIED | IMPLEMENTED_UNVERIFIED | `TraitTests` (6) |
+| Mana Leech / Crystal Parasite / Ash Imp / Ignaroth | VERIFIED | IMPLEMENTED_UNVERIFIED | `EnemyExpansionTests` (6) |
+| Boss pool đợt 10 (tất định, lưu save) | VERIFIED | — | `BossPoolChoiceIsDeterministicSavedAndUsed` |
+| Ascension 1–5 module | VERIFIED | IMPLEMENTED_UNVERIFIED | `DifficultyTests` (5) |
+| Relic/thẻ mới (34) | VERIFIED (validator, mô tả sinh từ dữ liệu) | IMPLEMENTED_UNVERIFIED | `ContentPassesValidation` |
+| Cân bằng Phase 1 | ĐO ĐƯỢC, chưa đạt mục tiêu | — | `BALANCE_REPORT.md` |

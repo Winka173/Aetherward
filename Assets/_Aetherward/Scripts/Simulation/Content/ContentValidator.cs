@@ -16,24 +16,29 @@ namespace Aetherward.Sim.Content
 
         private static readonly HashSet<string> KnownTriggers = new HashSet<string>
         {
-            "skill_cast", "basic_attack", "kill", "crit", "wave_start", "crystal_hit", "hero_downed", "reaction", "periodic"
+            "skill_cast", "basic_attack", "kill", "crit", "wave_start", "crystal_hit", "hero_downed", "reaction", "periodic", "doom_execute"
         };
 
         private static readonly HashSet<string> KnownActions = new HashSet<string>
         {
             "burst", "apply_element", "chain", "heal_team", "crystal_shield", "crystal_heal", "gold", "team_buff", "hero_buff",
-            "revive", "zone", "refund_cooldown", "team_refund_cooldown", "echo_cast", "execute", "slow_all"
+            "revive", "zone", "refund_cooldown", "team_refund_cooldown", "echo_cast", "execute", "slow_all",
+            "apply_status", "field", "team_shield", "cleanse_team"
         };
 
         private static readonly HashSet<string> KnownRules = new HashSet<string>
         {
-            "mirror_reactions", "burn_power", "lingering_elements", "proc_generation_bonus", "overheal_shield", "no_healing"
+            "mirror_reactions", "burn_power", "lingering_elements", "proc_generation_bonus", "overheal_shield", "no_healing",
+            "doom_max", "doom_threshold", "doom_boss", "poison_max", "poison_power", "contagion_targets", "contagion_stacks",
+            "resonance_bonus", "collapse_radius", "collapse_power", "mark_max", "shield_power", "field_duration", "illuminate_power"
         };
 
         private static readonly HashSet<string> KnownSkills = new HashSet<string>
         {
             "fireball", "meteor", "cleave", "duel_strike", "heal_rain", "push_wave", "chain_lightning", "dash_strike",
-            "frost_nova", "ice_shield", "vortex", "pierce_arrow", "stone_barrier", "ground_slam"
+            "frost_nova", "ice_shield", "vortex", "pierce_arrow", "stone_barrier", "ground_slam",
+            // expansion
+            "dawn_aegis", "oath_of_doom", "phoenix_slash", "tide_blessing", "deploy_pylon", "frost_aegis", "gust_step", "raise_wall"
         };
 
         public static readonly HashSet<string> KnownActionOps = new HashSet<string>
@@ -51,6 +56,12 @@ namespace Aetherward.Sim.Content
         public static readonly HashSet<string> KnownStatusChecks = new HashSet<string>
         {
             "illuminated", "doomed", "rooted", "poisoned", "corroded", "resonant", "unstable", "frozen", "chilled", "burning", "wet", "marked", "elite"
+        };
+
+        public static readonly HashSet<string> KnownTraitKeys = new HashSet<string>
+        {
+            "burnDuration", "burningBonus", "echoChance", "echoPower", "echoCooldown", "gaugeBonus", "debuffImmune", "shieldBonus",
+            "healBonus", "lowHpThreshold", "lowHpBonus", "executeBelow", "executeBonus", "allyHaste", "allyRadius", "instantFirstCast"
         };
 
         private static readonly HashSet<string> Consumable = new HashSet<string> { "poison", "doom", "mark", "freeze" };
@@ -169,11 +180,23 @@ namespace Aetherward.Sim.Content
                 }
                 foreach (int l in w.Lanes) if (l < 0 || l >= db.Arena.Lanes.Count) Err("wave " + w.Number + ": bad lane " + l);
                 if (w.TimeLimit < 30f) Err("wave " + w.Number + ": time limit too short");
+                foreach (string b in w.BossPool)
+                    if (!db.Enemies.TryGetValue(b, out EnemyDef bd) || !bd.Boss) Err("wave " + w.Number + ": boss pool entry " + b + " is not a boss");
+                if (w.BossPool.Count > 0 && !w.Groups.Exists(g => g.Enemy == w.BossPool[0])) Err("wave " + w.Number + ": boss pool default must be spawned by the wave");
             }
             foreach (EventDef ev in db.Events.Values)
                 foreach (EventOption o in ev.Options)
                     if (!string.IsNullOrEmpty(o.GrantRelic) && !db.Relics.ContainsKey(o.GrantRelic)) Err("event " + ev.Id + ": unknown relic " + o.GrantRelic);
             if (db.Arena.Nodes.Count != 12) Err("arena must have 12 nodes");
+            foreach (TraitDef t in db.TraitList)
+            {
+                CheckOps(db, "trait " + t.Id, t.Effects, errors);
+                foreach (EffectOp op in t.Effects) if (op.Op != "stat") Err("trait " + t.Id + ": only stat ops allowed");
+                foreach (string k in t.Behaviour.NumberKeys) if (!KnownTraitKeys.Contains(k)) Err("trait " + t.Id + ": unknown behaviour " + k);
+                bool anyEligible = false;
+                foreach (HeroDef h in db.HeroList) anyEligible |= t.EligibleFor(h);
+                if (!anyEligible) Err("trait " + t.Id + ": no eligible hero");
+            }
 
             CheckLocalization(db, errors);
             return errors;
@@ -242,6 +265,11 @@ namespace Aetherward.Sim.Content
                 yield return "status." + d.StatusKey + ".desc";
             }
             foreach (FieldDef f in db.Fields.Values) yield return f.NameKey;
+            foreach (TraitDef t in db.TraitList)
+            {
+                yield return t.NameKey;
+                yield return t.DescKey;
+            }
             foreach (string note in db.PairNote.Values) yield return "pair." + note;
             foreach (RelicDef r in db.RelicList)
             {
@@ -300,6 +328,8 @@ namespace Aetherward.Sim.Content
                 }
                 foreach (ReactionDef r in db.Reactions.Values)
                     CheckResolved(errors, lang, r.Id, ReactionText(l, r));
+                foreach (TraitDef t in db.TraitList)
+                    CheckResolved(errors, lang, "trait " + t.Id, l.PassiveText(t.Behaviour, t.DescKey));
                 l.Missing.Clear();
                 foreach (RelicDef r in db.RelicList) fx.Describe(r.Effects);
                 foreach (CardDef c in db.CardList) fx.Describe(c.Effects);

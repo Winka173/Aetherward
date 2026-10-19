@@ -87,6 +87,70 @@
       "effects": [] },
     { "id": "magnus_shardbreaker", "hero": "magnus", "targeting": "elite",
       "skill": { "kind": "ground_slam", "cooldown": 4.0, "mult": 3.2, "gauge": 1.5, "single": 1, "stun": 0.3, "crackDuration": 6.0, "crackStacks": 1, "crackMax": 3 },
-      "effects": [ { "op": "stat", "stat": "crit_chance", "value": 0.12 } ] }
+      "effects": [ { "op": "stat", "stat": "crit_chance", "value": 0.12 } ] },
+
+    // ---------------------------------------------------------------- Expansion Phase 1
+    { "id": "seren_aegis_of_dawn", "hero": "seren",
+      "skill": { "kind": "dawn_aegis", "cooldown": 8.5, "shieldPct": 0.2, "allShieldPct": 0.14, "allRadius": 3.2, "crystalShield": 0.02 },
+      "effects": [ { "op": "stat", "stat": "max_hp", "value": 0.2, "pct": true } ] },
+    { "id": "seren_purifier", "hero": "seren", "role": "controller",
+      "skill": { "kind": "dawn_aegis", "cooldown": 6.5, "mult": 1.4, "shieldPct": 0.12, "purgeRadius": 3.5, "illuminatedBonus": 0.6 },
+      "passive": { "kind": "purifying_light", "bonus": 0.25 },
+      "effects": [ { "op": "stat", "stat": "attack", "value": 0.2, "pct": true } ] },
+
+    { "id": "nyxara_final_verdict", "hero": "nyxara",
+      "skill": { "kind": "oath_of_doom", "cooldown": 6.0, "marks": 4, "doomStacks": 3, "verdictSpread": 2 },
+      "effects": [ { "op": "stat", "stat": "elemental_mastery", "value": 30 } ] },
+    { "id": "nyxara_covenant", "hero": "nyxara", "targeting": "elite",
+      "skill": { "kind": "oath_of_doom", "cooldown": 5.5, "mult": 1.6, "marks": 1, "doomStacks": 4, "elitesOnly": 1, "brittle": 1, "amount": 0.25, "duration": 5.0 },
+      "passive": { "kind": "covenant", "bonusPerDoom": 0.06, "refund": 0.25 },
+      "effects": [ { "op": "stat", "stat": "attack", "value": 0.15, "pct": true } ] },
+
+    { "id": "ashara_vengeance_flames", "hero": "ashara",
+      "skill": { "kind": "phoenix_slash", "cooldown": 5.0, "mult": 1.9 },
+      "passive": { "kind": "phoenix_heat", "hitHeat": 4, "damageHeat": 60, "burstMult": 2.4, "burstRadius": 2.4, "rebirth": 0.4, "rebirthBurst": 2.0 },
+      "effects": [ { "op": "stat", "stat": "attack", "value": 0.15, "pct": true } ] },
+    { "id": "ashara_rebirth_ward", "hero": "ashara", "role": "guardian",
+      "skill": { "kind": "phoenix_slash", "taunt": 2.0, "tauntRadius": 2.2 },
+      "passive": { "kind": "phoenix_heat", "hitHeat": 3, "damageHeat": 60, "burstMult": 1.4, "burstRadius": 2.2, "rebirth": 0.55, "wardShield": 0.15, "wardRadius": 3.0, "rebirthCrystalShield": 0.03 },
+      "effects": [ { "op": "stat", "stat": "max_hp", "value": 0.25, "pct": true }, { "op": "stat", "stat": "threat", "value": 1.2 } ] },
+
+    { "id": "nerissa_pure_healer", "hero": "nerissa", "role": "healer",
+      "skill": { "kind": "tide_blessing", "mult": 0.3, "healPct": 0.14, "healTargets": 3 },
+      "passive": { "kind": "reaction_tide", "every": 5, "healPct": 0.08, "crystalPct": 0.006 },
+      "effects": [ { "op": "stat", "stat": "heal_power", "value": 0.2, "pct": true } ] },
+    { "id": "nerissa_catalyst_conductor", "hero": "nerissa", "role": "controller",
+      "skill": { "kind": "tide_blessing", "gauge": 1.6, "radius": 2.6, "reactionVuln": 0.25, "vulnDuration": 4.0, "healPct": 0.04, "healTargets": 1 },
+      "passive": { "kind": "catalyst_tide", "every": 6, "refund": 0.5 },
+      "effects": [ { "op": "stat", "stat": "elemental_mastery", "value": 60 } ] },
+
+    { "id": "voltrix_electric_network", "hero": "voltrix",
+      "skill": { "kind": "deploy_pylon", "cooldown": 5.0, "duration": 9.0, "field": "pylon_network" },
+      "effects": [ { "op": "stat", "stat": "attack", "value": 0.1, "pct": true } ] },
+    { "id": "voltrix_ally_charger", "hero": "voltrix", "role": "support",
+      "skill": { "kind": "deploy_pylon", "field": "pylon_charger" },
+      "effects": [ { "op": "stat", "stat": "skill_cooldown", "value": 0.1, "pct": true } ] },
+
+    { "id": "eirwen_ice_bulwark", "hero": "eirwen",
+      "skill": { "kind": "frost_aegis", "cooldown": 7.5, "shieldPct": 0.3, "allyShieldPct": 0.28, "crystalShield": 0.03, "burstStun": 0.6 },
+      "effects": [ { "op": "stat", "stat": "defense", "value": 12 } ] },
+    { "id": "eirwen_shatter_counter", "hero": "eirwen", "role": "bruiser",
+      "skill": { "kind": "frost_aegis", "cooldown": 6.5, "burstMult": 2.4, "frozenBonus": 1.0, "burstGauge": 2.0 },
+      "passive": { "kind": "shatter_rhythm", "every": 3, "radius": 1.4, "mult": 0.8 },
+      "effects": [ { "op": "stat", "stat": "attack", "value": 0.2, "pct": true } ] },
+
+    { "id": "kael_precision_assassin", "hero": "kael", "targeting": "elite",
+      "skill": { "kind": "gust_step", "cooldown": 5.0, "mult": 3.2, "single": 1, "executeBelow": 0.3, "executeBonus": 0.6 },
+      "effects": [ { "op": "stat", "stat": "crit_chance", "value": 0.1 } ] },
+    { "id": "kael_storm_shepherd", "hero": "kael", "role": "controller",
+      "skill": { "kind": "gust_step", "cooldown": 6.0, "mult": 1.0, "pullRadius": 3.2, "pull": 3.6, "vortex": 1.5 },
+      "effects": [ { "op": "stat", "stat": "elemental_mastery", "value": 40 } ] },
+
+    { "id": "borun_fortifier", "hero": "borun",
+      "skill": { "kind": "raise_wall", "duration": 6.5, "halfLength": 1.4, "field": "stone_bastion" },
+      "effects": [ { "op": "stat", "stat": "defense", "value": 10 } ] },
+    { "id": "borun_spike_mason", "hero": "borun", "role": "controller",
+      "skill": { "kind": "raise_wall", "cooldown": 5.5, "mult": 0.9, "duration": 3.5, "field": "spike_wall" },
+      "effects": [ { "op": "stat", "stat": "attack", "value": 0.15, "pct": true } ] }
   ]
 }

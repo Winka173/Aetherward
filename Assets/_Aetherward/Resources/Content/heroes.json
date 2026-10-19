@@ -110,6 +110,94 @@
       "skill": { "kind": "ground_slam", "cooldown": 6.0, "mult": 1.7, "gauge": 1.0, "radius": 1.7, "stun": 0.45, "crackDuration": 4.0, "crackStacks": 1, "crackMax": 1 },
       "passive": { "kind": "crushing", "bonus": 0.25 },
       "evolutions": ["magnus_quake_champion", "magnus_shardbreaker"]
+        },
+
+    // ---------------------------------------------------------------- Expansion Phase 1: Heroes Unbound
+    {
+      "id": "seren", "element": "light", "role": "guardian", "targeting": "nearest_to_crystal", "melee": true, "starter": false, "cost": 7,
+      "silhouette": "sun-disc halo helm, kite shield, tabard",
+      "stats": { "max_hp": 700, "attack": 19, "defense": 34, "attack_interval": 1.2, "range": 0.8, "leash_radius": 1.8, "threat": 2.8, "damage_reduction": 0.08, "move_speed": 2.3 },
+      "basic": { "kind": "melee", "mult": 1.0, "gauge": 1.0 },
+      "skill": { "kind": "dawn_aegis", "cooldown": 7.5, "mult": 0.9, "gauge": 1.0, "radius": 2.6, "shieldPct": 0.22, "allyRange": 4.5, "cleanseRadius": 2.8 },
+      "passive": { "kind": "radiant_guard", "reduction": 0.1, "radius": 3.5 },
+      "evolutions": ["seren_aegis_of_dawn", "seren_purifier"]
+    },
+    {
+      "id": "nyxara", "element": "shadow", "role": "assassin", "targeting": "execute", "melee": false, "starter": false, "cost": 7,
+      "silhouette": "crescent hood, floating oath-chains, tall staff",
+      "stats": { "max_hp": 350, "attack": 30, "defense": 9, "attack_interval": 1.05, "range": 4.8, "elemental_mastery": 30, "threat": 0.8, "crit_chance": 0.12 },
+      "basic": { "kind": "projectile", "mult": 1.0, "gauge": 1.0, "speed": 11 },
+      "skill": { "kind": "oath_of_doom", "cooldown": 6.0, "mult": 1.1, "gauge": 0.5, "marks": 3, "doomStacks": 2 },
+      "passive": { "kind": "binding_oath", "refund": 0.25, "bonusPerDoom": 0.04 },
+      "evolutions": ["nyxara_final_verdict", "nyxara_covenant"]
+    },
+    {
+      "id": "ashara", "element": "fire", "role": "bruiser", "targeting": "nearest_to_crystal", "melee": true, "starter": false, "cost": 7,
+      "silhouette": "phoenix-wing pauldrons, flame plume helm, sabre",
+      "stats": { "max_hp": 640, "attack": 26, "defense": 26, "attack_interval": 1.0, "range": 0.8, "leash_radius": 2.0, "threat": 2.0, "move_speed": 2.6, "crit_chance": 0.06 },
+      "basic": { "kind": "melee", "mult": 1.0, "gauge": 1.0 },
+      "skill": { "kind": "phoenix_slash", "cooldown": 6.0, "mult": 1.4, "gauge": 1.0, "radius": 1.6, "heat": 25 },
+      "passive": { "kind": "phoenix_heat", "hitHeat": 3, "damageHeat": 30, "burstMult": 1.5, "burstRadius": 2.2, "rebirth": 0.4 },
+      "evolutions": ["ashara_vengeance_flames", "ashara_rebirth_ward"]
+    },
+    {
+      "id": "nerissa", "element": "water", "role": "support", "targeting": "cluster", "melee": false, "starter": false, "cost": 7,
+      "silhouette": "pearl circlet, oracle veil, conch staff",
+      "stats": { "max_hp": 340, "attack": 21, "defense": 9, "attack_interval": 1.15, "range": 4.5, "elemental_mastery": 50, "threat": 0.7, "heal_power": 1.0 },
+      "basic": { "kind": "projectile", "mult": 1.0, "gauge": 1.0, "speed": 9 },
+      "skill": { "kind": "tide_blessing", "cooldown": 6.5, "mult": 0.5, "gauge": 1.2, "radius": 2.2, "healPct": 0.08, "healTargets": 2, "healBelow": 0.92 },
+      "passive": { "kind": "reaction_tide", "every": 8, "healPct": 0.05, "crystalPct": 0.004 },
+      "evolutions": ["nerissa_pure_healer", "nerissa_catalyst_conductor"]
+    },
+    {
+      "id": "voltrix", "element": "lightning", "role": "mage", "targeting": "cluster", "melee": false, "starter": false, "cost": 7,
+      "silhouette": "goggles, toolbelt, backpack coil, wrench-staff",
+      "stats": { "max_hp": 330, "attack": 25, "defense": 9, "attack_interval": 1.05, "range": 4.4, "elemental_mastery": 40, "threat": 0.7 },
+      "basic": { "kind": "projectile", "mult": 1.0, "gauge": 1.0, "speed": 13 },
+      "skill": { "kind": "deploy_pylon", "cooldown": 5.5, "mult": 0.9, "gauge": 0.5, "radius": 2.2, "duration": 8.0, "field": "pylon" },
+      "passive": { "kind": "overclock", "perPylon": 0.08 },
+      "evolutions": ["voltrix_electric_network", "voltrix_ally_charger"]
+    },
+    {
+      "id": "eirwen", "element": "ice", "role": "guardian", "targeting": "nearest_to_crystal", "melee": true, "starter": false, "cost": 7,
+      "silhouette": "winged frost helm, crystal greatshield, mace",
+      "stats": { "max_hp": 700, "attack": 18, "defense": 32, "attack_interval": 1.2, "range": 0.8, "leash_radius": 1.7, "threat": 2.6, "damage_reduction": 0.06, "move_speed": 2.2 },
+      "basic": { "kind": "melee", "mult": 1.0, "gauge": 1.0 },
+      "skill": { "kind": "frost_aegis", "cooldown": 7.0, "mult": 1.0, "gauge": 1.0, "shieldPct": 0.18, "allyShieldPct": 0.2, "allyRange": 3.5, "burstMult": 1.4, "burstRadius": 2.0, "taunt": 1.5, "tauntRadius": 2.0 },
+      "passive": { "kind": "glacial_resolve", "slow": 0.2 },
+      "evolutions": ["eirwen_ice_bulwark", "eirwen_shatter_counter"]
+    },
+    {
+      "id": "kael", "element": "wind", "role": "assassin", "targeting": "cluster", "melee": true, "starter": false, "cost": 7,
+      "silhouette": "flowing sash, twin war-fans, bare feet",
+      "stats": { "max_hp": 420, "attack": 31, "defense": 12, "attack_interval": 0.85, "range": 0.8, "leash_radius": 3.2, "threat": 1.0, "crit_chance": 0.15, "crit_multiplier": 1.7, "move_speed": 4.2 },
+      "basic": { "kind": "melee", "mult": 1.0, "gauge": 0.8 },
+      "skill": { "kind": "gust_step", "cooldown": 5.5, "mult": 1.3, "gauge": 1.0, "pullRadius": 2.0, "pull": 3.0 },
+      "passive": { "kind": "slipstream", "hits": 3, "bonus": 0.4 },
+      "evolutions": ["kael_precision_assassin", "kael_storm_shepherd"]
+    },
+    {
+      "id": "borun", "element": "earth", "role": "guardian", "targeting": "nearest_to_crystal", "melee": false, "starter": false, "cost": 7,
+      "silhouette": "stocky, mason apron, square stone gauntlet, plans tube",
+      "stats": { "max_hp": 560, "attack": 26, "defense": 28, "attack_interval": 1.1, "range": 3.4, "threat": 1.6, "move_speed": 2.2 },
+      "basic": { "kind": "projectile", "mult": 1.0, "gauge": 1.0, "speed": 9 },
+      "skill": { "kind": "raise_wall", "cooldown": 7.0, "mult": 0.5, "gauge": 1.0, "duration": 4.5, "halfLength": 1.2, "width": 0.45, "ahead": 1.2, "field": "stone_wall" },
+      "passive": { "kind": "fortify", "reduction": 0.12 },
+      "evolutions": ["borun_fortifier", "borun_spike_mason"]
     }
+  ],
+
+  // Persistent fields spawned by hero skills (same schema as reactions.json "fields").
+  "fields": [
+    { "id": "pylon", "element": "lightning", "tick": 1.0, "zap": 1.0, "maxCount": 3, "params": { "pylon": 1, "linkMult": 0.35, "linkRange": 4.5, "zapGauge": 0.5 } },
+    { "id": "pylon_network", "element": "lightning", "tick": 1.0, "zap": 1.0, "maxCount": 4, "params": { "pylon": 1, "linkMult": 0.6, "linkRange": 5.5, "zapGauge": 0.5 } },
+    { "id": "pylon_charger", "element": "lightning", "tick": 1.0, "zap": 0.8, "heroHaste": 0.12, "maxCount": 3, "params": { "pylon": 1, "linkMult": 0.2, "linkRange": 4.5, "zapGauge": 0.5, "zapRefund": 0.25, "refundRadius": 2.6 } },
+    { "id": "stone_wall", "element": "earth", "shape": "line", "tick": 0.5, "slow": 0.75, "damageMult": 0.2, "maxCount": 2, "params": { "wall": 1 },
+      "onTick": [{ "op": "status", "status": "armor_crack", "duration": 2, "stacks": 1, "max": 2 }] },
+    { "id": "stone_bastion", "element": "earth", "shape": "line", "tick": 0.5, "slow": 0.75, "damageMult": 0.35, "heroDamageReduction": 0.15, "maxCount": 3, "params": { "wall": 1 },
+      "onTick": [{ "op": "status", "status": "armor_crack", "duration": 2, "stacks": 1, "max": 2 }] },
+    { "id": "spike_wall", "element": "earth", "shape": "line", "tick": 0.5, "slow": 0.7, "maxCount": 2, "params": { "wall": 1 },
+      "onEnd": [{ "op": "damage", "area": true, "element": "earth", "mult": 1.6, "radius": 1.6 },
+                { "op": "status", "area": true, "status": "stun", "duration": 0.6, "radius": 1.6 }] }
   ]
 }

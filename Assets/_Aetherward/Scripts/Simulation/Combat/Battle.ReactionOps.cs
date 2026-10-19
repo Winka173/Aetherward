@@ -117,6 +117,7 @@ namespace Aetherward.Sim.Combat
                     break;
                 case "cleanse":
                     ForHeroesNear(ctx.Pos, p.Get("heroRadius", 2.6f), false, CleanseHero);
+                    DetachNear(ctx.Pos, p.Get("heroRadius", 2.6f) + 1f);
                     break;
                 case "refund":
                 {
@@ -370,6 +371,8 @@ namespace Aetherward.Sim.Combat
                     break;
                 }
             }
+            // Skill/relic fields (not reaction zones) last longer with "field_duration" (e.g. Mason's Level).
+            if (owner != null && (tag == null || !Content.Reactions.ContainsKey(tag))) duration *= 1f + Mods.Rule("field_duration");
             var z = new Zone
             {
                 Uid = _nextFxUid++,
@@ -448,6 +451,7 @@ namespace Aetherward.Sim.Combat
 
             if (!tick) return;
             z.TickTimer = f.Tick;
+            UpdateFieldLinks(z);
             var ctx = new ActionContext
             {
                 Tag = z.Tag,
@@ -519,7 +523,7 @@ namespace Aetherward.Sim.Combat
             {
                 Tag = z.Tag,
                 Source = z.Owner,
-                Pos = z.Pos,
+                Pos = z.Line ? Vec2.Lerp(z.Pos, z.End, 0.5f) : z.Pos,
                 Generation = System.Math.Max(1, z.Generation),
                 Radius = z.Radius,
                 Duration = z.Duration,

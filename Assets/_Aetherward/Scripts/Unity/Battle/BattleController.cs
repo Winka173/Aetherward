@@ -468,6 +468,17 @@ namespace Aetherward.Game
                         App.Audio.Play("boss_roar", 1f, 0f);
                         Shake(0.5f);
                     }
+                    else if (e.Id != null && l.Has("hud." + e.Id))
+                    {
+                        // Data-named boss phases: "*_vent"/"*_exposed" are counter windows (green), others threats (red).
+                        bool window = e.Id.EndsWith("_vent") || e.Id.EndsWith("_exposed");
+                        Banner(l.Get("hud." + e.Id), window ? Ui.Good : Ui.Bad, 2f);
+                        if (!window)
+                        {
+                            App.Audio.Play("boss_roar", 1f, 0f);
+                            Shake(0.45f);
+                        }
+                    }
                     break;
             }
         }
@@ -774,6 +785,13 @@ namespace Aetherward.Game
                 string sprite = occ != null ? "World/node_occupied" : "World/node_empty";
                 if (prep && (_dragUid >= 0 || _selectedUid >= 0) && NearestNode(_dragUid >= 0 ? _dragPos : Vector3.one * 999f) == i) sprite = "World/node_highlight";
                 else if (prep && _selectedUid >= 0 && occ == null) sprite = "World/node_highlight";
+                if (i == _rc.State.BlockedNode)
+                {
+                    // Ascension blocked node: dark red, no highlight, cannot be used this wave.
+                    _nodes[i].sprite = Art.Sprite("World/node_empty");
+                    _nodes[i].color = new Color(0.9f, 0.2f, 0.25f, prep ? 0.85f : 0.4f);
+                    continue;
+                }
                 _nodes[i].sprite = Art.Sprite(sprite);
                 float pulse = prep && occ == null ? 0.75f + 0.25f * Mathf.Sin(Time.time * 3f + i) : 0.45f;
                 _nodes[i].color = new Color(1, 1, 1, prep ? pulse : 0.35f);

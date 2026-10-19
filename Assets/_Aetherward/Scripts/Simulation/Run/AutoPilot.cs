@@ -69,6 +69,33 @@ namespace Aetherward.Sim.Run
             },
             new Strategy
             {
+                Name = "eclipse",
+                Starters = new[] { "seren", "nyxara" },
+                RecruitPriority = new[] { "ashara", "nerissa", "terra", "volt", "marina", "kael" },
+                RelicPriority = new[] { "dawnstone", "nightfall_censer", "eclipse_engine", "verdict_scale", "radiant_lens", "sunforged_aegis" },
+                CardPriority = new[] { "eclipse_theory", "night_oath", "dawn_vigil", "spec_nyxara_dread", "spec_seren_lightwell", "catalyst_surge" },
+                EvolutionPriority = new[] { "nyxara_final_verdict", "seren_purifier", "ashara_vengeance_flames", "nerissa_catalyst_conductor" }
+            },
+            new Strategy
+            {
+                Name = "engineers",
+                Starters = new[] { "borun", "voltrix" },
+                RecruitPriority = new[] { "eirwen", "nerissa", "freya", "marina", "seren", "zephyr" },
+                RelicPriority = new[] { "masons_level", "overclock_coil", "glacier_plate", "warding_bell", "thunder_relay" },
+                CardPriority = new[] { "spec_voltrix_capacitor", "spec_borun_buttress", "spec_eirwen_rimeguard", "static_field", "permafrost" },
+                EvolutionPriority = new[] { "voltrix_electric_network", "borun_fortifier", "eirwen_ice_bulwark", "nerissa_pure_healer" }
+            },
+            new Strategy
+            {
+                Name = "phoenix_gale",
+                Starters = new[] { "ashara", "kael" },
+                RecruitPriority = new[] { "ignis", "zephyr", "nerissa", "seren", "sylph", "cinder" },
+                RelicPriority = new[] { "pyre_heart", "zephyr_sash", "executioners_oath", "eternal_ember", "war_drum" },
+                CardPriority = new[] { "spec_ashara_ember_heart", "spec_kael_tailwind", "pyre_covenant", "gale_banner", "keen_edge" },
+                EvolutionPriority = new[] { "ashara_rebirth_ward", "kael_storm_shepherd", "ignis_ember_weaver" }
+            },
+            new Strategy
+            {
                 Name = "balanced",
                 Starters = new[] { "terra", "ignis" },
                 RecruitPriority = new[] { "marina", "volt", "freya", "sylph", "cinder", "zephyr" },
@@ -246,6 +273,18 @@ namespace Aetherward.Sim.Run
             return best;
         }
 
+        /// <summary>Relics that weaken the Crystal or strengthen enemies are risk-reward picks.</summary>
+        private static bool HasDrawback(List<EffectOp> ops)
+        {
+            foreach (EffectOp op in ops)
+            {
+                if (op.Op == "enemy") return true;
+                if (op.Op == "crystal" && op.Params.Get("maxHpPct") < 0f) return true;
+                if (op.Op == "stat" && op.Value < 0f) return true;
+            }
+            return false;
+        }
+
         private int BestHero(List<Offer> offers)
         {
             int best = -1;
@@ -253,7 +292,9 @@ namespace Aetherward.Sim.Run
             for (int i = 0; i < offers.Count; i++)
             {
                 if (offers[i].Price > _rc.State.Gold) continue;
-                float score = Priority(_strategy.RecruitPriority, offers[i].Id) + _rng.NextFloat();
+                HeroDef d = _rc.Content.Heroes[offers[i].Id];
+                // Off-plan recruits are judged like a player would: synergy and filling missing roles.
+                float score = Priority(_strategy.RecruitPriority, offers[i].Id) + (_rc.SignatureSynergy(d.Element) ? 1.5f : 0f) + _rng.NextFloat();
                 if (score > bestScore) { bestScore = score; best = i; }
             }
             return best;
@@ -267,7 +308,7 @@ namespace Aetherward.Sim.Run
             {
                 RelicDef r = _rc.Content.Relics[offers[i].Id];
                 float score = Priority(_strategy.RelicPriority, r.Id) * 2f + (int)r.Rarity * 0.5f + (_rc.CompletesFusion(r.Id) ? 4f : 0f) + _rng.NextFloat();
-                if (r.Id == "glass_cannon" && !_strategy.TakePacts) score -= 3f;
+                if (!_strategy.TakePacts && HasDrawback(r.Effects)) score -= 3f; // risk relics only for risk-taking plans
                 if (score > bestScore) { bestScore = score; best = i; }
             }
             return best;
@@ -288,6 +329,7 @@ namespace Aetherward.Sim.Run
             WaveDef wave = rc.Content.Waves[Math.Min(s.Wave, rc.Content.Waves.Count) - 1];
             List<int> lanes = Battle.LanesForWave(wave);
             var taken = new HashSet<int>();
+            if (s.BlockedNode >= 0) taken.Add(s.BlockedNode);
             var melee = new List<HeroRunState>();
             var ranged = new List<HeroRunState>();
             foreach (HeroRunState h in s.Heroes)

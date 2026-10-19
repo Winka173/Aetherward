@@ -47,6 +47,7 @@ namespace Aetherward.Balance
             {
                 Catalog.Write(db, Path.Combine(root, "Docs", "CONTENT_CATALOG.md"));
                 ReactionMatrix.Write(db, Path.Combine(root, "Docs", "Expansion", "ELEMENT_REACTION_MATRIX.md"));
+                ExpansionDocs.Write(db, root);
                 return 0;
             }
             if (Array.IndexOf(args, "--perf") >= 0)
@@ -76,7 +77,7 @@ namespace Aetherward.Balance
                 {
                     ulong seed = 1000UL + (ulong)r * 7919UL;
                     var sw = Stopwatch.StartNew();
-                    RunController rc = RunController.NewRun(db, seed, st.Starters, ascension, RunUnlocks.Everything(db));
+                    RunController rc = RunController.NewRun(db, seed, st.Starters, ascension, Unlocks(db, args));
                     var pilot = new AutoPilot(rc, st);
                     bool ok = pilot.PlayToEnd();
                     sw.Stop();
@@ -131,6 +132,25 @@ namespace Aetherward.Balance
             string dir = Directory.GetCurrentDirectory();
             while (dir != null && !Directory.Exists(Path.Combine(dir, "Assets", "_Aetherward"))) dir = Path.GetDirectoryName(dir);
             return dir ?? throw new DirectoryNotFoundException("repo root not found");
+        }
+
+        /// <summary>--launch-pool restricts offers to launch heroes/relics (diagnostic: isolates content dilution).</summary>
+        private static RunUnlocks Unlocks(ContentDatabase db, string[] args)
+        {
+            RunUnlocks all = RunUnlocks.Everything(db);
+            bool pool = Array.IndexOf(args, "--launch-pool") >= 0;
+            if (pool || Array.IndexOf(args, "--launch-heroes") >= 0)
+            {
+                var launchHeroes = new[] { "ignis", "cinder", "marina", "tidal", "volt", "raiden", "freya", "glacius", "zephyr", "sylph", "terra", "magnus" };
+                all.Heroes.Clear();
+                foreach (string h in launchHeroes) all.Heroes.Add(h);
+            }
+            if (pool || Array.IndexOf(args, "--launch-relics") >= 0)
+            {
+                all.Relics.Clear();
+                for (int i = 0; i < db.RelicList.Count && i < 28; i++) all.Relics.Add(db.RelicList[i].Id);
+            }
+            return all;
         }
     }
 }

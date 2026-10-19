@@ -61,8 +61,24 @@ namespace Aetherward.Sim.Meta
             new UnlockRule { Id = "relic:arcane_echo", Condition = "reach_wave", Value = 8 },
             new UnlockRule { Id = "relic:glass_cannon", Condition = "hero_runs", Value = 3 },
             new UnlockRule { Id = "relic:phoenix_feather", Condition = "reach_wave", Value = 15 },
-            new UnlockRule { Id = "relic:elemental_mirror", Condition = "distinct_reactions", Value = 12 }
+            new UnlockRule { Id = "relic:elemental_mirror", Condition = "distinct_reactions", Value = 12 },
+            // Expansion Phase 1
+            new UnlockRule { Id = "hero:seren", Condition = "reach_wave", Value = 4 },
+            new UnlockRule { Id = "hero:nyxara", Condition = "distinct_reactions", Value = 5 },
+            new UnlockRule { Id = "hero:ashara", Condition = "hero_runs", Value = 2 },
+            new UnlockRule { Id = "hero:nerissa", Condition = "total_reactions", Value = 120 },
+            new UnlockRule { Id = "hero:voltrix", Condition = "reach_wave", Value = 8 },
+            new UnlockRule { Id = "hero:eirwen", Condition = "reach_wave", Value = 12 },
+            new UnlockRule { Id = "hero:kael", Condition = "distinct_reactions", Value = 10 },
+            new UnlockRule { Id = "hero:borun", Condition = "reach_wave", Value = 14 },
+            new UnlockRule { Id = "relic:verdict_scale", Condition = "distinct_reactions", Value = 15 },
+            new UnlockRule { Id = "relic:radiant_lens", Condition = "reach_wave", Value = 18 },
+            new UnlockRule { Id = "relic:shadow_contract", Condition = "defeat_boss", Param = "ignaroth" },
+            new UnlockRule { Id = "relic:eclipse_engine", Condition = "victory", Value = 1 }
         };
+
+        /// <summary>Highest Ascension that can be unlocked (data: difficulty.json).</summary>
+        public static int MaxAscension = 5;
 
         public static MetaProfile CreateDefault(ContentDatabase db)
         {
@@ -98,7 +114,8 @@ namespace Aetherward.Sim.Meta
             if (results.Victory)
             {
                 Victories++;
-                if (MaxAscensionUnlocked <= s.Ascension && s.Ascension < 5) MaxAscensionUnlocked = s.Ascension + 1;
+                int cap = System.Math.Max(MaxAscension, rc.Content.Difficulty.MaxLevel);
+                if (MaxAscensionUnlocked <= s.Ascension && s.Ascension < cap) MaxAscensionUnlocked = s.Ascension + 1;
             }
             int reached = results.Victory ? rc.Content.Waves.Count : s.Wave;
             if (reached > BestWave) BestWave = reached;
@@ -143,8 +160,18 @@ namespace Aetherward.Sim.Meta
             History.Insert(0, entry);
             while (History.Count > MaxHistory) History.RemoveAt(History.Count - 1);
 
-            bool killedGolem = false;
-            foreach (WaveRecord w in s.WaveLog) if (w.Wave == 10 && w.Cleared) killedGolem = true;
+            // Every boss actually fought and beaten this run (boss pools resolved per seed).
+            foreach (WaveRecord w in s.WaveLog)
+            {
+                if (!w.Cleared || w.Wave < 1 || w.Wave > rc.Content.Waves.Count) continue;
+                WaveDef wd = rc.Content.Waves[w.Wave - 1];
+                if (!wd.Boss) continue;
+                foreach (SpawnGroup g in wd.Groups)
+                {
+                    string id = rc.EnemyFor(wd, g.Enemy);
+                    if (rc.Content.Enemies.TryGetValue(id, out EnemyDef ed) && ed.Boss) Codex.Add("defeated:" + id);
+                }
+            }
 
             var unlocked = new List<string>();
             foreach (UnlockRule rule in Rules)
@@ -157,7 +184,7 @@ namespace Aetherward.Sim.Meta
                     case "reach_wave": met = BestWave >= rule.Value; break;
                     case "total_reactions": met = TotalReactions >= rule.Value; break;
                     case "distinct_reactions": met = DistinctReactionsSeen >= rule.Value; break;
-                    case "defeat_boss": met = killedGolem || Codex.Contains("defeated:" + rule.Param); break;
+                    case "defeat_boss": met = Codex.Contains("defeated:" + rule.Param); break;
                     case "hero_runs": met = TotalRuns >= rule.Value; break;
                     case "victory": met = Victories > 0; break;
                     default: met = false; break;
@@ -167,8 +194,6 @@ namespace Aetherward.Sim.Meta
                 else UnlockedRelics.Add(rule.Id.Substring(6));
                 unlocked.Add(rule.Id);
             }
-            if (killedGolem) Codex.Add("defeated:siegebreaker_golem");
-            if (results.Victory) Codex.Add("defeated:rift_warden");
             return unlocked;
         }
     }

@@ -5,3 +5,5 @@
 | K-01 | Cao | Chưa mở project trong Unity 6000.4.8f1: mọi thay đổi Unity chỉ được type-check với DLL 2021.3 | Mở project → Console; `Aetherward > Validate Content and Art`; `Play From Boot` |
 | K-02 | Trung bình | Chưa có build Windows/Android/iOS | `Aetherward > Build > …` trên máy có module |
 | K-03 | Trung bình | Art/VFX mới chỉ xem được qua contact sheet, chưa xem trên màn hình game | `Docs/Previews/` |
+| K-04 | Trung bình | Khi mở khoá toàn bộ nội dung, lối chơi kịch bản thắng ít hơn baseline (pool hero/relic loãng, đội nhiều cặp Generic) | `dotnet run --project Tools/SimHarness/Balance -c Release -- --runs 30` so với `--launch-pool`; xem `BALANCE_REPORT.md` |
+| K-05 | Thấp | Tư thế gục của Borun (và Magnus từ MVP) bị cắt nhẹ ở đáy canvas | `Docs/Previews/heroes.png` |

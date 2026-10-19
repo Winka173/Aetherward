@@ -91,6 +91,7 @@ namespace Aetherward.Sim.Combat
         public int ComboCount;
         public float RedirectTimer;   // Gloom Sentinel guard internal cooldown
         public string TraitId;
+        public TraitDef Trait;
         public Element SecondaryElement; // Elemental Awakening (run-only)
 
         // Per-wave statistics; aggregated into run results.
@@ -217,6 +218,9 @@ namespace Aetherward.Sim.Combat
         public float FieldWeaken;
         public float FieldReactionAmp;
         public float SealTimer;       // abilities suppressed (Astral Seal / Portal Seal)
+        public bool Latched;          // Crystal Parasite attached to the crystal
+        public bool Enraged;          // Ascension boss enrage triggered
+        public float Timer2;          // secondary behaviour timer (auras, boss summons)
         public float SpecialCooldownMult = 1f;
 
         public bool IsBoss => Def.Boss;

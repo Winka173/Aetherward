@@ -38,16 +38,16 @@ UI = {
     "team.ascension": ("Ascension {0}", "Thăng cấp {0}"), "team.ascension_none": ("Normal", "Thường"),
     "team.ascension_desc.0": ("Standard difficulty.", "Độ khó tiêu chuẩn."),
     "team.ascension_desc.1": ("Enemies move 10% faster.", "Kẻ địch nhanh hơn 10%."),
-    "team.ascension_desc.2": ("+ Enemies +8% more speed.", "+ Kẻ địch thêm 8% tốc độ."),
-    "team.ascension_desc.3": ("+ Crystal starts with 15% less max HP.", "+ Pha Lê bắt đầu với ít hơn 15% HP tối đa."),
-    "team.ascension_desc.4": ("+ Enemies deal 10% more damage.", "+ Kẻ địch gây thêm 10% sát thương."),
-    "team.ascension_desc.5": ("+ All of the above; enemy HP scales 8% per level.", "+ Tất cả như trên; HP kẻ địch tăng 8% mỗi cấp."),
+    "team.ascension_desc.2": ("+ Enemies +8% more speed; shop prices +15%.", "+ Kẻ địch thêm 8% tốc độ; giá cửa hàng +15%."),
+    "team.ascension_desc.3": ("+ Crystal starts with 15% less max HP; one defense node is blocked each wave (shown in preparation).", "+ Pha Lê bắt đầu với ít hơn 15% HP tối đa; mỗi đợt một ô phòng thủ bị khoá (hiện khi chuẩn bị)."),
+    "team.ascension_desc.4": ("+ Enemies deal 10% more damage; elites carry an affix.", "+ Kẻ địch gây thêm 10% sát thương; elite mang thêm thuộc tính."),
+    "team.ascension_desc.5": ("+ Bosses enrage below 25% HP (+25% damage). Enemy HP scales 8% per level.", "+ Boss nổi giận khi dưới 25% HP (+25% sát thương). HP kẻ địch tăng 8% mỗi cấp."),
     "team.locked_hint": ("Unlock: {0}", "Mở khoá: {0}"),
     "team.pick_two": ("Pick two heroes", "Hãy chọn hai anh hùng"),
     # --- unlock conditions
     "unlock.reach_wave": ("reach wave {0}", "đạt đợt {0}"), "unlock.total_reactions": ("trigger {0} reactions in total", "gây tổng cộng {0} phản ứng"),
     "unlock.distinct_reactions": ("discover {0} different reactions", "khám phá {0} loại phản ứng"),
-    "unlock.defeat_boss": ("defeat the Siegebreaker Golem", "hạ Golem Phá Thành"), "unlock.hero_runs": ("play {0} runs", "chơi {0} lượt"),
+    "unlock.defeat_boss": ("defeat {0}", "hạ {0}"), "unlock.hero_runs": ("play {0} runs", "chơi {0} lượt"),
     "unlock.victory": ("win a run", "thắng một lượt"),
     # --- HUD
     "hud.crystal": ("Crystal", "Pha Lê"), "hud.wave": ("WAVE {0}", "ĐỢT {0}"), "hud.enemies": ("Enemies {0}", "Kẻ địch {0}"),
@@ -289,6 +289,34 @@ def main():
         add("field.%s.name" % fid, pair)
     for nid, pair in X.PAIR_NOTES.items():
         add("pair.%s" % nid, pair)
+    for hid, h in X.HEROES_X.items():
+        add("hero.%s.name" % hid, h["name"])
+        add("hero.%s.title" % hid, h["title"])
+        add("hero.%s.skill.name" % hid, h["skill"])
+        add("hero.%s.skill.desc" % hid, h["skill_desc"])
+        add("hero.%s.passive.name" % hid, h["passive"])
+        add("hero.%s.passive.desc" % hid, h["passive_desc"])
+    for eid, (name, desc, sname, sdesc) in X.EVOLUTIONS_X.items():
+        add("evo.%s.name" % eid, name)
+        add("evo.%s.desc" % eid, desc)
+        add("evo.%s.skill.name" % eid, sname)
+        add("evo.%s.skill.desc" % eid, sdesc)
+    for pk, pair in X.EVO_PASSIVES_X.items():
+        add("passive.%s.desc" % pk, pair)
+    for fid, pair in X.FIELDS_X.items():
+        add("field.%s.name" % fid, pair)
+    for eid, (name, desc) in X.ENEMIES_X.items():
+        add("enemy.%s.name" % eid, name)
+        add("enemy.%s.desc" % eid, desc)
+    for rid, (n_en, n_vi, d_en, d_vi) in X.RELICS_X.items():
+        add("relic.%s.name" % rid, (n_en, n_vi))
+        add("relic.%s.desc" % rid, (d_en, d_vi))
+    for cid, (n_en, n_vi, d_en, d_vi) in X.CARDS_X.items():
+        add("card.%s.name" % cid, (n_en, n_vi))
+        add("card.%s.desc" % cid, (d_en, d_vi))
+    for tid, (name, desc) in X.TRAITS.items():
+        add("trait.%s.name" % tid, name)
+        add("trait.%s.desc" % tid, desc)
 
     for lang, table in (("en", en), ("vi", vi)):
         with open(os.path.join(OUT, "loc_%s.json" % lang), "w", encoding="utf-8") as f:

@@ -74,7 +74,7 @@ def main():
 
     enemy_paths = []
     for eid in enemies.DRAWERS:
-        big = eid in ("siegebreaker_golem", "rift_warden")
+        big = eid in ("siegebreaker_golem", "rift_warden", "ignaroth")
         pivot = (0.5, (512 - 486) / 512.0) if big else (0.5, (256 - 236) / 256.0)
         for fr in ("a", "b"):
             p = save(enemies.enemy_sprite(eid, fr), "Enemies/%s_%s" % (eid, fr), 160, pivot, kind="enemies.py")
@@ -138,6 +138,8 @@ def main():
         fid = f["id"]
         style = xa.FIELD_STYLE.get(fid) or xa.HERO_FIELD_STYLE.get(fid)
         x_paths.append(save(xa.field(fid, style=style), "Vfx/field_%s" % fid, 128, kind="expansion_art.py"))
+    for t in content("traits")["traits"]:
+        x_paths.append(save(xa.trait_icon(t["id"]), "Icons/trait_%s" % t["id"], 240, kind="expansion_art.py"))
     sheet(x_paths, 10, 120, "expansion_elements.png", (0.16, 0.18, 0.28))
 
     relic_paths = []

@@ -23,6 +23,8 @@ namespace Aetherward.Game
         private Page _page = Page.Main;
         private readonly List<string> _picked = new List<string>();
         private string _focusHero;
+        private Element _teamFilter = Element.None;
+        private int _teamPage;
         private ulong _seed;
         private int _ascension;
         private bool _hasSave;
@@ -145,20 +147,49 @@ namespace Aetherward.Game
             Ui.DrawRect(0, 0, Ui.W, Ui.H, new Color(0.04f, 0.05f, 0.12f, 0.7f));
             Ui.Label(60, 30, Ui.W - 120, 70, l.Get("team.title"), 50, Ui.Gold, TextAnchor.UpperLeft, true);
             Ui.Label(60, 96, Ui.W - 120, 40, l.Get("team.subtitle"), 26, Ui.Muted);
-            float gx = 60, gy = 160, cell = 168;
-            int cols = 4;
-            for (int i = 0; i < db.HeroList.Count; i++)
+            // Element filter chips (All + 12 elements) and a paged grid: scales to the full 36-hero roster.
+            float gx = 60, gy = 150, cell = 124;
+            int cols = 5;
+            float chip = 52;
+            if (Ui.Button(gx, gy, 92, chip, l.Get("team.filter_all"), _teamFilter == Element.None ? Tone.Secondary : Tone.Ghost, true, 20))
             {
-                HeroDef h = db.HeroList[i];
-                float x = gx + (i % cols) * (cell + 16), y = gy + (i / cols) * (cell + 52);
+                _teamFilter = Element.None;
+                _teamPage = 0;
+            }
+            for (int k = 0; k < ElementUtil.All.Length; k++)
+            {
+                Element el = ElementUtil.All[k];
+                float cx = gx + 100 + k * (chip + 4);
+                if (_teamFilter == el) Ui.DrawRect(cx - 3, gy - 3, chip + 6, chip + 6, new Color(1f, 0.83f, 0.35f, 0.8f));
+                Ui.Icon(cx, gy, chip, chip, Art.ElementIcon(el));
+                if (Ui.Hit(cx, gy, chip, chip))
+                {
+                    _teamFilter = _teamFilter == el ? Element.None : el;
+                    _teamPage = 0;
+                }
+            }
+            var shown = new List<HeroDef>();
+            foreach (HeroDef h in db.HeroList) if (_teamFilter == Element.None || h.Element == _teamFilter) shown.Add(h);
+            float top = gy + chip + 18;
+            int rows = Mathf.Max(1, Mathf.FloorToInt((Ui.H - 170 - top) / (cell + 40)));
+            int perPage = rows * cols;
+            int pages = Mathf.Max(1, (shown.Count + perPage - 1) / perPage);
+            _teamPage = Mathf.Clamp(_teamPage, 0, pages - 1);
+            for (int n = 0; n < perPage; n++)
+            {
+                int i = _teamPage * perPage + n;
+                if (i >= shown.Count) break;
+                HeroDef h = shown[i];
+                float x = gx + (n % cols) * (cell + 14), y = top + (n / cols) * (cell + 40);
                 bool unlocked = App.Meta.UnlockedHeroes.Contains(h.Id);
                 bool picked = _picked.Contains(h.Id);
                 if (picked) Ui.DrawRect(x - 6, y - 6, cell + 12, cell + 12, new Color(1f, 0.83f, 0.35f, 0.8f));
+                else if (_focusHero == h.Id) Ui.DrawRect(x - 4, y - 4, cell + 8, cell + 8, new Color(0.5f, 0.8f, 1f, 0.45f));
                 Ui.Icon(x, y, cell, cell, Art.Portrait(h.Id), unlocked ? (Color?)null : new Color(0.3f, 0.3f, 0.35f, 1f));
-                Ui.Icon(x + cell - 52, y + cell - 52, 52, 52, Art.ElementIcon(h.Element));
-                Ui.Label(x - 10, y + cell + 4, cell + 20, 40, l.Get(h.NameKey), 26, unlocked ? Ui.White : Ui.Muted, TextAnchor.UpperCenter, true);
-                if (!unlocked) Ui.Icon(x + cell / 2 - 32, y + cell / 2 - 32, 64, 64, Art.Icon("lock"));
-                if (Ui.Hit(x, y, cell, cell + 40))
+                Ui.Icon(x + cell - 40, y + cell - 40, 40, 40, Art.ElementIcon(h.Element));
+                Ui.Label(x - 8, y + cell + 2, cell + 16, 36, l.Get(h.NameKey), 22, unlocked ? Ui.White : Ui.Muted, TextAnchor.UpperCenter, true);
+                if (!unlocked) Ui.Icon(x + cell / 2 - 26, y + cell / 2 - 26, 52, 52, Art.Icon("lock"));
+                if (Ui.Hit(x, y, cell, cell + 36))
                 {
                     _focusHero = h.Id;
                     if (unlocked)
@@ -173,12 +204,19 @@ namespace Aetherward.Game
                     }
                 }
             }
+            if (pages > 1)
+            {
+                float py = top + rows * (cell + 40) - 6;
+                if (Ui.Button(gx, py, 90, 56, "<", Tone.Ghost, _teamPage > 0, 26)) _teamPage--;
+                Ui.Label(gx + 100, py, 200, 56, (_teamPage + 1) + " / " + pages, 24, Ui.Muted, TextAnchor.MiddleCenter, false, true, true);
+                if (Ui.Button(gx + 310, py, 90, 56, ">", Tone.Ghost, _teamPage < pages - 1, 26)) _teamPage++;
+            }
             float dx = gx + cols * (cell + 16) + 30, dw = Ui.W - dx - 60;
             string focus = _focusHero ?? (_picked.Count > 0 ? _picked[_picked.Count - 1] : db.HeroList[0].Id);
             HeroDef fd = db.Heroes[focus];
-            SharedPanels.HeroDetail(dx, 160, dw, 660, fd);
+            SharedPanels.HeroDetail(dx, 150, dw, 720, fd);
             if (!App.Meta.UnlockedHeroes.Contains(focus))
-                Ui.Label(dx + 30, 160 + 600, dw - 60, 40, SharedPanels.UnlockHint("hero:" + focus), 24, Ui.Bad);
+                Ui.Label(dx + 30, 150 + 670, dw - 60, 40, SharedPanels.UnlockHint("hero:" + focus), 24, Ui.Bad);
 
             float by = Ui.H - 140;
             if (Ui.Button(60, by, 240, 96, l.Get("common.back"), Tone.Ghost)) _page = Page.Main;
@@ -190,7 +228,7 @@ namespace Aetherward.Game
                 float ax = 680;
                 if (Ui.Button(ax, by + 8, 80, 80, "−", Tone.Ghost, _ascension > 0, 34)) _ascension--;
                 Ui.Label(ax + 90, by, 300, 50, _ascension == 0 ? l.Get("team.ascension_none") : l.Format("team.ascension", _ascension), 28, Ui.Gold, TextAnchor.MiddleCenter, true);
-                Ui.Label(ax + 90, by + 46, 300, 50, l.Get("team.ascension_desc." + Mathf.Min(_ascension, 5)), 18, Ui.Muted, TextAnchor.UpperCenter);
+                Ui.Label(ax + 90, by + 46, 300, 50, l.Get("team.ascension_desc." + Mathf.Min(_ascension, App.Content.Difficulty.MaxLevel)), 18, Ui.Muted, TextAnchor.UpperCenter);
                 if (Ui.Button(ax + 400, by + 8, 80, 80, "+", Tone.Ghost, _ascension < maxAsc, 34)) _ascension++;
             }
             bool ready = _picked.Count == 2;

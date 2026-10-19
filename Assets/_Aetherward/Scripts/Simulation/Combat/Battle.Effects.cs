@@ -666,6 +666,37 @@ namespace Aetherward.Sim.Combat
                         DealDamage(enemy, new DamageRequest { Source = hero, Attack = enemy.Hp + enemy.Shield + 1f, Multiplier = 1f, Kind = DamageKind.Trigger, IgnoreDefense = true, Generation = MaxProcGeneration, SourceTag = src.Source });
                     }
                     break;
+                case "apply_status":
+                {
+                    // Status on the triggering enemy, or on everything in radius when radius > 0.
+                    string status = p.GetString("status");
+                    float r = p.Get("radius");
+                    if (r <= 0f)
+                    {
+                        if (enemy != null && enemy.Alive) ApplyStatus(enemy, status, p, stacks, hero, MaxProcGeneration);
+                        break;
+                    }
+                    List<EnemyUnit> hits = RentList();
+                    QueryEnemies(pos, r, hits);
+                    for (int i = 0; i < hits.Count; i++) ApplyStatus(hits[i], status, p, stacks, hero, MaxProcGeneration);
+                    ReturnList(hits);
+                    break;
+                }
+                case "field":
+                {
+                    if (!Content.Fields.TryGetValue(p.GetString("field") ?? "", out FieldDef f)) break;
+                    float atk = hero != null ? hero.Stat(StatId.Attack) : 25f * WaveLevelScale;
+                    SpawnField(f, pos, p.Get("radius", 1.6f), p.Get("duration", 3f), hero, atk * p.Get("power", 0.5f) * stacks, MaxProcGeneration, src.Source, null);
+                    break;
+                }
+                case "team_shield":
+                    for (int i = 0; i < Heroes.Count; i++)
+                        if (Heroes[i].Alive) AddHeroShield(Heroes[i], Heroes[i].MaxHp * p.Get("pct", 0.1f) * stacks, null);
+                    break;
+                case "cleanse_team":
+                    for (int i = 0; i < Heroes.Count; i++) if (Heroes[i].Alive) CleanseHero(Heroes[i]);
+                    DetachNear(Crystal.Pos, Crystal.Radius + 1.5f);
+                    break;
                 case "slow_all":
                 {
                     List<EnemyUnit> hits = RentList();

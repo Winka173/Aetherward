@@ -14,6 +14,7 @@ namespace Aetherward.Sim.Combat
         public string EvolutionId;
         public float HpFraction = 1f;
         public bool Downed;
+        public string TraitId;
     }
 
     public sealed class BattleSetup
@@ -28,6 +29,12 @@ namespace Aetherward.Sim.Combat
         public int Ascension;
         public readonly List<string> ExtraWaveModifiers = new List<string>();
         public int MaxActiveEnemies = 160;
+        /// <summary>Enemy id replacements for this battle (boss pools, biome variants).</summary>
+        public readonly Dictionary<string, string> Substitutions = new Dictionary<string, string>();
+        /// <summary>Ascension: elites gain one extra compatible affix.</summary>
+        public bool EliteExtraAffix;
+        /// <summary>Ascension: bosses enrage below 25% HP by this amount (0 = off).</summary>
+        public float BossEnrage;
     }
 
     public enum BattleOutcome
@@ -107,7 +114,7 @@ namespace Aetherward.Sim.Combat
 
             EconomyDef eco = Content.Economy;
             int w = Wave.Number - 1;
-            float asc = 1f + 0.08f * setup.Ascension;
+            float asc = 1f + Content.Difficulty.HpPerLevel * setup.Ascension;
             _enemyHpScale = (1f + eco.EnemyHpGrowth * w + eco.EnemyHpGrowthQuad * w * w) * asc * (1f + Mods.EnemyHpPct);
             _enemyDamageScale = (1f + eco.EnemyDamageGrowth * w) * asc * (1f + Mods.EnemyDamagePct);
             WaveLevelScale = 1f + eco.ReactionLevelGrowth * w;
@@ -139,6 +146,7 @@ namespace Aetherward.Sim.Combat
             }
             // Team auras (e.g. Zephyr's tailwind) are applied as permanent buffs at battle start.
             foreach (HeroUnit h in Heroes) ApplyBattleStartPassive(h);
+            foreach (HeroUnit h in Heroes) ApplyBattleStartTrait(h);
         }
 
         private void BuildSchedule()
@@ -149,8 +157,9 @@ namespace Aetherward.Sim.Combat
             bool swarmMod = HasWaveModifier("swarm");
             foreach (SpawnGroup g in Wave.Groups)
             {
-                if (!Content.Enemies.TryGetValue(g.Enemy, out EnemyDef def))
-                    throw new InvalidOperationException("Wave " + Wave.Number + " references unknown enemy " + g.Enemy);
+                string enemyId = Setup.Substitutions.TryGetValue(g.Enemy, out string sub) ? sub : g.Enemy;
+                if (!Content.Enemies.TryGetValue(enemyId, out EnemyDef def))
+                    throw new InvalidOperationException("Wave " + Wave.Number + " references unknown enemy " + enemyId);
                 int count = g.Count;
                 if (swarmMod && !def.Boss) count += count / 4;
                 for (int i = 0; i < count; i++)
@@ -280,6 +289,13 @@ namespace Aetherward.Sim.Combat
             if (HasWaveModifier("haste")) e.Speed *= 1.2f;
             if (HasWaveModifier("armored")) e.Defense += 25f;
             if (HasWaveModifier("ascension_frenzy")) e.Speed *= 1.1f;
+            if (Setup.EliteExtraAffix && e.Elite && !def.Boss && string.IsNullOrEmpty(e.Affix) && Content.Affixes.Count > 0)
+            {
+                // Ascension: elites carry one affix (sorted ids + battle RNG: deterministic).
+                var ids = new List<string>(Content.Affixes.Keys);
+                ids.Sort(string.CompareOrdinal);
+                e.Affix = ids[Rng.Range(0, ids.Count)];
+            }
             ApplyAffix(e);
             e.Hp = e.MaxHp;
             e.AttackTimer = def.AttackInterval * Rng.Range(0.3f, 1f);
