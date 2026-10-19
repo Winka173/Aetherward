@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Compile-check ONLY: type-checks the Unity runtime + editor scripts against Unity reference
+       assemblies placed in Tools/UnityRefs (not committed; see Tools/fetch_unity_refs.sh).
+       It never runs and is not a substitute for opening the project in Unity 6000.4.8f1. -->
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <LangVersion>9.0</LangVersion>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <NoWarn>CS0618;CS0649;CS0414</NoWarn>
+    <DefineConstants>$(DefineConstants);UNITY_EDITOR;UNITY_2021_1_OR_NEWER</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="../../../Assets/_Aetherward/Scripts/Unity/**/*.cs" />
+    <Compile Include="../../../Assets/_Aetherward/Scripts/Editor/**/*.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="UnityEngine"><HintPath>../../UnityRefs/UnityEngine.dll</HintPath></Reference>
+    <Reference Include="UnityEditor"><HintPath>../../UnityRefs/UnityEditor.dll</HintPath></Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="../Simulation/Aetherward.Simulation.csproj" />
+  </ItemGroup>
+</Project>

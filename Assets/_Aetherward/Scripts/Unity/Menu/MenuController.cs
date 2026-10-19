@@ -1,0 +1,352 @@
+using System;
+using System.Collections.Generic;
+using Aetherward.Sim.Content;
+using Aetherward.Sim.Core;
+using Aetherward.Sim.Meta;
+using Aetherward.Sim.Run;
+using UnityEngine;
+
+namespace Aetherward.Game
+{
+    /// <summary>Main menu, starting-team selection, codex, run history and settings.</summary>
+    public sealed class MenuController : MonoBehaviour
+    {
+        private enum Page
+        {
+            Main,
+            Team,
+            Codex,
+            History,
+            Settings
+        }
+
+        private Page _page = Page.Main;
+        private readonly List<string> _picked = new List<string>();
+        private string _focusHero;
+        private ulong _seed;
+        private int _ascension;
+        private bool _hasSave;
+        private int _codexTab;
+        private string _codexFocus;
+        private float _historyScroll;
+        private Transform _backdrop;
+
+        private void Start()
+        {
+            Camera cam = GameRoot.EnsureCamera(new Color(0.12f, 0.2f, 0.18f));
+            cam.orthographicSize = 6.2f;
+            _backdrop = BuildBackdrop();
+            App.Audio.PlayMusic("menu_loop");
+            _hasSave = App.HasSavedRun;
+            _seed = Pcg32.SeedFromTime(DateTime.UtcNow);
+            _ascension = 0;
+        }
+
+        private static Transform BuildBackdrop()
+        {
+            var root = new GameObject("MenuBackdrop").transform;
+            Sr(root, "World/arena_background", Vector3.zero, 1f, -100);
+            Sr(root, "World/crystal_intact", new Vector3(0, -0.5f, 0), 1.2f, 10);
+            string[] show = { "ignis", "marina", "terra", "volt", "freya", "sylph" };
+            Vector3[] pos = { new Vector3(-4.2f, -1.4f), new Vector3(4.2f, -1.4f), new Vector3(-2.4f, -2.6f), new Vector3(2.4f, -2.6f), new Vector3(-6f, -0.4f), new Vector3(6f, -0.4f) };
+            for (int i = 0; i < show.Length; i++)
+            {
+                var r = Sr(root, "Heroes/" + show[i] + "_idle", pos[i], 1.05f, 20 - (int)(pos[i].y * 2));
+                r.flipX = pos[i].x > 0;
+                r.gameObject.AddComponent<IdleBob>().Phase = i * 0.7f;
+            }
+            return root;
+        }
+
+        private static SpriteRenderer Sr(Transform parent, string sprite, Vector3 pos, float scale, int order)
+        {
+            var go = new GameObject(sprite);
+            go.transform.SetParent(parent, false);
+            go.transform.localPosition = pos;
+            go.transform.localScale = Vector3.one * scale;
+            var r = go.AddComponent<SpriteRenderer>();
+            r.sprite = Art.Sprite(sprite);
+            r.sortingOrder = order;
+            return r;
+        }
+
+        private void Update()
+        {
+            if (_backdrop != null) _backdrop.position = new Vector3(Mathf.Sin(Time.time * 0.07f) * 0.4f, Mathf.Sin(Time.time * 0.05f) * 0.2f, 0);
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                if (_page != Page.Main) _page = Page.Main;
+            }
+        }
+
+        private void OnGUI()
+        {
+            Ui.Begin();
+            switch (_page)
+            {
+                case Page.Main: DrawMain(); break;
+                case Page.Team: DrawTeam(); break;
+                case Page.Codex: DrawCodex(); break;
+                case Page.History: DrawHistory(); break;
+                case Page.Settings:
+                    Ui.DrawRect(0, 0, Ui.W, Ui.H, new Color(0, 0, 0, 0.45f));
+                    if (SharedPanels.Settings(Ui.W / 2 - 560, 60, 1120, 960)) _page = Page.Main;
+                    break;
+            }
+        }
+
+        // ------------------------------------------------------------------ main
+
+        private void DrawMain()
+        {
+            var l = App.Loc;
+            Ui.DrawRect(0, 0, Ui.W, Ui.H, new Color(0.04f, 0.05f, 0.12f, 0.35f));
+            Ui.Icon(Ui.W / 2 - 420, 40, 840, 262, Art.Tex("UI/title_emblem"));
+            Ui.Label(0, 150, Ui.W, 140, l.Get("game.title"), 112, Ui.Gold, TextAnchor.MiddleCenter, true);
+            Ui.Label(0, 286, Ui.W, 50, l.Get("game.tagline"), 32, Ui.White, TextAnchor.MiddleCenter);
+            float bw = 520, bh = 100, bx = Ui.W / 2 - bw / 2, by = 390;
+            if (_hasSave)
+            {
+                if (Ui.Button(bx, by, bw, bh, l.Get("menu.continue"), Tone.Primary, true, 36)) ContinueRun();
+                by += bh + 18;
+            }
+            if (Ui.Button(bx, by, bw, bh, l.Get("menu.new_run"), _hasSave ? Tone.Secondary : Tone.Primary, true, 36))
+            {
+                _picked.Clear();
+                _focusHero = null;
+                _seed = Pcg32.SeedFromTime(DateTime.UtcNow);
+                _page = Page.Team;
+            }
+            by += bh + 18;
+            if (Ui.Button(bx, by, bw / 2 - 9, bh, l.Get("menu.codex"), Tone.Ghost, true, 30)) _page = Page.Codex;
+            if (Ui.Button(bx + bw / 2 + 9, by, bw / 2 - 9, bh, l.Get("menu.history"), Tone.Ghost, true, 30)) _page = Page.History;
+            by += bh + 18;
+            if (Ui.Button(bx, by, Application.isMobilePlatform ? bw : bw / 2 - 9, bh, l.Get("menu.settings"), Tone.Ghost, true, 30)) _page = Page.Settings;
+            if (!Application.isMobilePlatform && Ui.Button(bx + bw / 2 + 9, by, bw / 2 - 9, bh, l.Get("menu.quit"), Tone.Danger, true, 30)) Application.Quit();
+            MetaProfile m = App.Meta;
+            Ui.Label(0, Ui.H - 90, Ui.W, 40, l.Format("menu.stats", m.TotalRuns, m.Victories, m.BestWave), 24, Ui.Muted, TextAnchor.MiddleCenter);
+            Ui.Label(0, Ui.H - 52, Ui.W - 30, 36, l.Format("menu.version", App.Version), 20, Ui.Muted, TextAnchor.MiddleRight);
+            if (App.SaveWasReset) Ui.Label(0, Ui.H - 140, Ui.W, 40, l.Get("menu.save_reset"), 22, Ui.Bad, TextAnchor.MiddleCenter);
+        }
+
+        private void ContinueRun()
+        {
+            if (App.ResumeRun() != null) GameRoot.Instance.GoTo(AppScreen.Battle);
+            else _hasSave = false;
+        }
+
+        // ------------------------------------------------------------------ team select
+
+        private void DrawTeam()
+        {
+            var l = App.Loc;
+            ContentDatabase db = App.Content;
+            Ui.DrawRect(0, 0, Ui.W, Ui.H, new Color(0.04f, 0.05f, 0.12f, 0.7f));
+            Ui.Label(60, 30, Ui.W - 120, 70, l.Get("team.title"), 50, Ui.Gold, TextAnchor.UpperLeft, true);
+            Ui.Label(60, 96, Ui.W - 120, 40, l.Get("team.subtitle"), 26, Ui.Muted);
+            float gx = 60, gy = 160, cell = 168;
+            int cols = 4;
+            for (int i = 0; i < db.HeroList.Count; i++)
+            {
+                HeroDef h = db.HeroList[i];
+                float x = gx + (i % cols) * (cell + 16), y = gy + (i / cols) * (cell + 52);
+                bool unlocked = App.Meta.UnlockedHeroes.Contains(h.Id);
+                bool picked = _picked.Contains(h.Id);
+                if (picked) Ui.DrawRect(x - 6, y - 6, cell + 12, cell + 12, new Color(1f, 0.83f, 0.35f, 0.8f));
+                Ui.Icon(x, y, cell, cell, Art.Portrait(h.Id), unlocked ? (Color?)null : new Color(0.3f, 0.3f, 0.35f, 1f));
+                Ui.Icon(x + cell - 52, y + cell - 52, 52, 52, Art.ElementIcon(h.Element));
+                Ui.Label(x - 10, y + cell + 4, cell + 20, 40, l.Get(h.NameKey), 26, unlocked ? Ui.White : Ui.Muted, TextAnchor.UpperCenter, true);
+                if (!unlocked) Ui.Icon(x + cell / 2 - 32, y + cell / 2 - 32, 64, 64, Art.Icon("lock"));
+                if (Ui.Hit(x, y, cell, cell + 40))
+                {
+                    _focusHero = h.Id;
+                    if (unlocked)
+                    {
+                        if (picked) _picked.Remove(h.Id);
+                        else if (_picked.Count < 2) _picked.Add(h.Id);
+                        else
+                        {
+                            _picked.RemoveAt(0);
+                            _picked.Add(h.Id);
+                        }
+                    }
+                }
+            }
+            float dx = gx + cols * (cell + 16) + 30, dw = Ui.W - dx - 60;
+            string focus = _focusHero ?? (_picked.Count > 0 ? _picked[_picked.Count - 1] : db.HeroList[0].Id);
+            HeroDef fd = db.Heroes[focus];
+            SharedPanels.HeroDetail(dx, 160, dw, 660, fd);
+            if (!App.Meta.UnlockedHeroes.Contains(focus))
+                Ui.Label(dx + 30, 160 + 600, dw - 60, 40, SharedPanels.UnlockHint("hero:" + focus), 24, Ui.Bad);
+
+            float by = Ui.H - 140;
+            if (Ui.Button(60, by, 240, 96, l.Get("common.back"), Tone.Ghost)) _page = Page.Main;
+            Ui.Label(330, by, 420, 46, l.Format("common.seed", Pcg32.FormatSeed(_seed)), 26, Ui.Muted, TextAnchor.MiddleLeft, false, true, true);
+            if (Ui.Button(330, by + 46, 300, 60, l.Get("team.random_seed"), Tone.Ghost, true, 22)) _seed = Pcg32.SeedFromTime(DateTime.UtcNow.AddTicks(UnityEngine.Random.Range(1, 99999)));
+            int maxAsc = App.Meta.MaxAscensionUnlocked;
+            if (maxAsc > 0)
+            {
+                float ax = 680;
+                if (Ui.Button(ax, by + 8, 80, 80, "−", Tone.Ghost, _ascension > 0, 34)) _ascension--;
+                Ui.Label(ax + 90, by, 300, 50, _ascension == 0 ? l.Get("team.ascension_none") : l.Format("team.ascension", _ascension), 28, Ui.Gold, TextAnchor.MiddleCenter, true);
+                Ui.Label(ax + 90, by + 46, 300, 50, l.Get("team.ascension_desc." + Mathf.Min(_ascension, 5)), 18, Ui.Muted, TextAnchor.UpperCenter);
+                if (Ui.Button(ax + 400, by + 8, 80, 80, "+", Tone.Ghost, _ascension < maxAsc, 34)) _ascension++;
+            }
+            bool ready = _picked.Count == 2;
+            if (Ui.Button(Ui.W - 480, by, 420, 96, ready ? l.Get("team.start") : l.Get("team.pick_two"), Tone.Primary, ready, 32))
+            {
+                App.ClearRun();
+                App.Run = RunController.NewRun(App.Content, _seed, _picked, _ascension, App.Meta.ToRunUnlocks());
+                App.SaveRun();
+                GameRoot.Instance.GoTo(AppScreen.Battle);
+            }
+        }
+
+        // ------------------------------------------------------------------ codex
+
+        private void DrawCodex()
+        {
+            var l = App.Loc;
+            ContentDatabase db = App.Content;
+            MetaProfile m = App.Meta;
+            Ui.DrawRect(0, 0, Ui.W, Ui.H, new Color(0.04f, 0.05f, 0.12f, 0.8f));
+            Ui.Label(60, 30, 600, 70, l.Get("codex.title"), 50, Ui.Gold, TextAnchor.UpperLeft, true);
+            string[] tabs = { "codex.heroes", "codex.reactions", "codex.relics", "codex.enemies" };
+            for (int i = 0; i < tabs.Length; i++)
+                if (Ui.Button(60 + i * 250, 110, 240, 80, l.Get(tabs[i]), _codexTab == i ? Tone.Secondary : Tone.Ghost, true, 26))
+                {
+                    _codexTab = i;
+                    _codexFocus = null;
+                }
+            var entries = new List<(string id, string key, Texture tex, bool known)>();
+            if (_codexTab == 0)
+                foreach (HeroDef h in db.HeroList) entries.Add((h.Id, h.NameKey, Art.Portrait(h.Id), m.Codex.Contains("hero:" + h.Id) || m.UnlockedHeroes.Contains(h.Id)));
+            else if (_codexTab == 1)
+                foreach (ReactionDef r in db.Reactions.Values) entries.Add((r.Id, r.NameKey, Art.Tex("Icons/reaction_" + r.Id), m.Codex.Contains("reaction:" + r.Id)));
+            else if (_codexTab == 2)
+                foreach (RelicDef r in db.RelicList) entries.Add((r.Id, r.NameKey, Art.Tex("Relics/" + r.Id), m.Codex.Contains("relic:" + r.Id)));
+            else
+                foreach (EnemyDef e in db.Enemies.Values) entries.Add((e.Id, e.NameKey, Art.Tex("Enemies/" + e.Id + "_a"), m.Codex.Contains("enemy:" + e.Id)));
+            int known = 0;
+            foreach (var e in entries) if (e.known) known++;
+            Ui.Label(1100, 120, Ui.W - 1160, 60, l.Format("codex.progress", known, entries.Count), 26, Ui.Muted, TextAnchor.MiddleRight);
+            float cell = 120, gx = 60, gy = 220;
+            int cols = 7;
+            for (int i = 0; i < entries.Count; i++)
+            {
+                var e = entries[i];
+                float x = gx + (i % cols) * (cell + 14), y = gy + (i / cols) * (cell + 14);
+                Ui.DrawRect(x, y, cell, cell, _codexFocus == e.id ? new Color(1f, 0.83f, 0.35f, 0.5f) : new Color(0.15f, 0.17f, 0.3f, 0.85f));
+                Ui.Icon(x + 8, y + 8, cell - 16, cell - 16, e.tex, e.known ? (Color?)null : new Color(0, 0, 0, 0.85f));
+                if (Ui.Hit(x, y, cell, cell)) _codexFocus = e.id;
+            }
+            float dx = gx + cols * (cell + 14) + 20, dw = Ui.W - dx - 60;
+            if (_codexFocus != null)
+            {
+                var entry = entries.Find(e => e.id == _codexFocus);
+                if (entry.id != null)
+                {
+                    if (!entry.known)
+                    {
+                        Ui.Panel(dx, 220, dw, 300);
+                        Ui.Label(dx, 300, dw, 80, l.Get("codex.undiscovered"), 36, Ui.Muted, TextAnchor.MiddleCenter, true);
+                    }
+                    else if (_codexTab == 0) SharedPanels.HeroDetail(dx, 220, dw, 700, db.Heroes[entry.id]);
+                    else DrawCodexEntry(dx, 220, dw, entry.id, entry.tex);
+                }
+            }
+            else if (_codexTab == 1)
+            {
+                Ui.Panel(dx, 220, dw, 360);
+                Ui.Label(dx + 30, 250, dw - 60, 320, l.Get("codex.reaction_formula"), 24, Ui.White);
+            }
+            if (Ui.Button(60, Ui.H - 130, 240, 96, l.Get("common.back"), Tone.Ghost)) _page = Page.Main;
+        }
+
+        private void DrawCodexEntry(float x, float y, float w, string id, Texture tex)
+        {
+            var l = App.Loc;
+            ContentDatabase db = App.Content;
+            Ui.Panel(x, y, w, 640);
+            Ui.Icon(x + 30, y + 30, 160, 160, tex);
+            string title, body;
+            if (_codexTab == 1)
+            {
+                ReactionDef r = db.Reactions[id];
+                title = l.Get(r.NameKey);
+                body = l.Element(r.A) + " + " + l.Element(r.B) + "\n\n" + ContentValidator.ReactionText(l, r);
+            }
+            else if (_codexTab == 2)
+            {
+                RelicDef r = db.Relics[id];
+                title = l.Get(r.NameKey);
+                body = l.Rarity(r.Rarity) + " · " + l.Get("family." + r.Family.ToString().ToLowerInvariant()) + "\n<i>" + l.Get(r.DescKey) + "</i>\n\n" +
+                       EffectDescriber.Join(App.Fx.Describe(r.Effects));
+            }
+            else
+            {
+                EnemyDef e = db.Enemies[id];
+                title = l.Get(e.NameKey);
+                body = l.Get(e.DescKey);
+            }
+            Ui.Label(x + 210, y + 40, w - 240, 60, title, 40, Ui.Gold, TextAnchor.UpperLeft, true);
+            Ui.Label(x + 30, y + 220, w - 60, 400, body, 24, Ui.White);
+        }
+
+        // ------------------------------------------------------------------ history
+
+        private void DrawHistory()
+        {
+            var l = App.Loc;
+            Ui.DrawRect(0, 0, Ui.W, Ui.H, new Color(0.04f, 0.05f, 0.12f, 0.8f));
+            Ui.Label(60, 30, 800, 70, l.Get("history.title"), 50, Ui.Gold, TextAnchor.UpperLeft, true);
+            List<RunHistoryEntry> hist = App.Meta.History;
+            if (hist.Count == 0) Ui.Label(60, 160, Ui.W - 120, 60, l.Get("history.empty"), 30, Ui.Muted);
+            float y = 140 - _historyScroll;
+            foreach (RunHistoryEntry h in hist)
+            {
+                if (y > 120 && y < Ui.H - 220)
+                {
+                    Ui.Panel(60, y, Ui.W - 120, 110, h.Victory ? "glass" : "dark");
+                    Ui.Label(90, y + 14, 260, 40, h.Victory ? l.Get("results.victory") : l.Get("results.defeat"), 30, h.Victory ? Ui.Good : Ui.Bad, TextAnchor.UpperLeft, true);
+                    Ui.Label(90, y + 56, 400, 40, l.Format("results.seed", h.Seed, h.Version), 20, Ui.Muted);
+                    string mvp = h.Mvp != null ? l.Get("hero." + h.Mvp + ".name") : "-";
+                    Ui.Label(380, y + 14, 900, 40, l.Format("history.row", DateTimeOffset.FromUnixTimeSeconds(h.UnixTime).ToLocalTime().ToString("yyyy-MM-dd"), h.Wave, h.Reactions, mvp), 24, Ui.White);
+                    float hx = 380;
+                    foreach (string hero in h.Heroes)
+                    {
+                        Ui.Icon(hx, y + 54, 48, 48, Art.Portrait(hero));
+                        hx += 52;
+                    }
+                }
+                y += 124;
+            }
+            float maxScroll = Mathf.Max(0, hist.Count * 124 - (Ui.H - 380));
+            if (Ui.Button(Ui.W - 300, Ui.H - 130, 110, 96, "▲", Tone.Ghost, _historyScroll > 0)) _historyScroll = Mathf.Max(0, _historyScroll - 372);
+            if (Ui.Button(Ui.W - 180, Ui.H - 130, 110, 96, "▼", Tone.Ghost, _historyScroll < maxScroll)) _historyScroll = Mathf.Min(maxScroll, _historyScroll + 372);
+            if (Ui.Button(60, Ui.H - 130, 240, 96, l.Get("common.back"), Tone.Ghost)) _page = Page.Main;
+        }
+    }
+
+    /// <summary>Gentle idle bob and breathing squash for decorative sprites.</summary>
+    public sealed class IdleBob : MonoBehaviour
+    {
+        public float Phase;
+        private Vector3 _basePos;
+        private Vector3 _baseScale;
+
+        private void Start()
+        {
+            _basePos = transform.localPosition;
+            _baseScale = transform.localScale;
+        }
+
+        private void Update()
+        {
+            float t = Time.time * 2.2f + Phase;
+            transform.localPosition = _basePos + new Vector3(0, Mathf.Abs(Mathf.Sin(t)) * 0.06f, 0);
+            float s = Mathf.Sin(t * 2f) * 0.015f;
+            transform.localScale = new Vector3(_baseScale.x * (1f - s), _baseScale.y * (1f + s), 1f);
+        }
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "name": "Aetherward.Editor",
+    "rootNamespace": "Aetherward.EditorTools",
+    "references": [
+        "Aetherward.Simulation",
+        "Aetherward.Game"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

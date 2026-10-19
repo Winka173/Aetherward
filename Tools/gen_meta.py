@@ -61,7 +61,7 @@ def texture_meta(g, sprite, ppu, pivot, border, filter_mode, max_size):
             f"    flipGreenChannel: 0\n  isReadable: 0\n  streamingMipmaps: 0\n  streamingMipmapsPriority: 0\n  vTOnly: 0\n  ignoreMipmapLimit: 0\n"
             f"  grayScaleToAlpha: 0\n  generateCubemap: 6\n  cubemapConvolution: 0\n  seamlessCubemap: 0\n  textureFormat: 1\n  maxTextureSize: {max_size}\n"
             f"  textureSettings:\n    serializedVersion: 2\n    filterMode: {filter_mode}\n    aniso: 1\n    mipBias: 0\n    wrapU: 1\n    wrapV: 1\n    wrapW: 1\n"
-            f"  nPOTScale: 0\n  lightmap: 0\n  compressionQuality: 50\n  spriteMode: {1 if sprite else 0}\n  spriteExtrude: 1\n  spriteMeshType: 1\n"
+            f"  nPOTScale: 0\n  lightmap: 0\n  compressionQuality: 50\n  spriteMode: {1 if sprite else 0}\n  spriteExtrude: 1\n  spriteMeshType: {0 if any(border) else 1}\n"
             f"  alignment: 9\n  spritePivot: {{x: {px}, y: {py}}}\n  spritePixelsToUnits: {ppu}\n  spriteBorder: {{x: {bl}, y: {bb}, z: {br}, w: {bt}}}\n"
             f"  spriteGenerateFallbackPhysicsShape: 0\n  alphaUsage: 1\n  alphaIsTransparency: 1\n  spriteTessellationDetail: -1\n"
             f"  textureType: {tex_type}\n  textureShape: 1\n  singleChannelComponent: 0\n  flipbookRows: 1\n  flipbookColumns: 1\n"

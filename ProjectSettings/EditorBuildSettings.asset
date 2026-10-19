@@ -6,15 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/ArcaneBrigade/Scenes/RunBoot.unity
-    guid: ef6b0c13e98cd5c48b113e77593c84f4
+    path: Assets/_Aetherward/Scenes/Boot.unity
+    guid: 27a0db740c48205f3c07bd755b9c0bac
   - enabled: 1
-    path: Assets/ArcaneBrigade/Scenes/RunFrontend.unity
-    guid: f7fc4f920425dd748afbbcbdf6256198
+    path: Assets/_Aetherward/Scenes/MainMenu.unity
+    guid: aba42f119703b9e27b410f2fb6437e4c
   - enabled: 1
-    path: Assets/ArcaneBrigade/Scenes/RunArena.unity
-    guid: dfc4b38a589b7fe4b9c2cf5d29e4e117
+    path: Assets/_Aetherward/Scenes/Battle.unity
+    guid: 178ac2fc0f757ac72db0202c2ada8d7e
   - enabled: 1
-    path: Assets/ArcaneBrigade/Scenes/WaitingRoom.unity
-    guid: b019ce53412620e4685db875c90a46f1
+    path: Assets/_Aetherward/Scenes/Results.unity
+    guid: c4e8fbb061852525c8f5efc27258f0b2
   m_configObjects: {}

@@ -211,6 +211,16 @@ namespace Aetherward.Sim.Run
             return true;
         }
 
+        /// <summary>Ends the run as a defeat at the player's request (counts as a finished run).</summary>
+        public void Abandon()
+        {
+            if (State.Finished) return;
+            Battle = null;
+            State.DefeatSource = "abandoned";
+            State.Phase = RunPhase.Defeat;
+            State.Trace("abandoned at wave " + State.Wave);
+        }
+
         // ================================================================== battle
 
         public BattleModifiers BuildModifiers()
