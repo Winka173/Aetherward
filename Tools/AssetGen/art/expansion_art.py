@@ -414,3 +414,20 @@ icons.RELIC_ART.update({
     "twilight_crown": ("crown", SHADOW, LIGHT), "aegis_of_ages": ("shield", GOLD, None),
 })
 icons.RELIC_EXTRA.update({"eclipse_engine": "gear", "twilight_crown": "moon", "aegis_of_ages": "star"})
+
+# Expansion Phase 2: Nature/Poison relics, cards and hero skill fields.
+icons.RELIC_ART.update({
+    "verdant_seed": ("sprout", NATURE2, None), "venom_vial": ("drop", POISON, None), "thornmail": ("shield", NATURE, NATURE2),
+    "plague_bell": ("bell", POISON, None), "blight_lantern": ("lens", POISON, NATURE2), "gardeners_trowel": ("sprout", hex2rgb("#a0703f"), NATURE2),
+    "antidote_flask": ("drop", hex2rgb("#7cff9a"), None), "worldroot_heart": ("heart", NATURE, None), "rot_bloom": ("leaf", POISON, NATURE),
+})
+icons.RELIC_EXTRA.update({"plague_bell": "skull", "worldroot_heart": "sprout", "rot_bloom": "skull"})
+icons.CARD_ART.update({
+    "wild_growth": ("sprout", NATURE2), "toxic_pact": ("drop", POISON), "overgrowth_theory": ("leaf", NATURE),
+    "toxic_shock_theory": ("bolt", POISON), "spec_liora_bramble": ("sprout", NATURE), "spec_thalen_heartwood": ("shield", NATURE),
+    "spec_vesper_potency": ("drop", POISON), "spec_sable_triage": ("cross", POISON),
+})
+HERO_FIELD_STYLE.update({
+    "toxic_patch": (hex2rgb("#7a9a2a"), POISON, "bubbles"), "lingering_miasma": (hex2rgb("#5a3a7a"), POISON, "bubbles"),
+    "spore_garden": (NATURE, NATURE2, "leaves"),
+})

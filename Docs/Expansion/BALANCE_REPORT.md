@@ -41,3 +41,23 @@ Mọi số liệu là **mô phỏng headless** (`Tools/SimHarness/Balance`, Auto
 - Lần trộn đầu kẻ địch mới vào đợt thường khiến Siege Colossus một mình gây 44 thất bại ở đợt 17 ⇒ giảm (HP 360, thủ 25, tầm 5.5 m, nã mỗi 6 s, sức 0.8×), lùi thời điểm xuất hiện; bớt Splitter/Burrower/Devourer ở đợt 6/13; Void Priest đợt 18 còn 1.
 - Molten ban đầu 2/180 vì ô đặt xa làn ⇒ dời ô (xem `BIOMES.md`).
 - Vẫn thấp hơn trước ~15% (nhiễu 30 seed khá lớn); điểm nghẽn chính vẫn là các đợt cũ (9, 14, 18 — Sapper). Hero Nature/Poison (Phase 2b) có phản chế trực tiếp (Rooted, Corroded). Cân bằng tổng ở Phase 5 (K-04).
+
+## Phase 2b (Liora, Thalen, Vesper, Sable; 9 relic, 8 thẻ)
+Sát thương mỗi hero (đợt 8, cấp 3, cùng Terra, 60 s, trung bình 4 seed): hero mới nằm trong khoảng của roster cũ (Thalen 765 ~ Borun 536/Terra 1034; Liora 1016; Sable 1067 + hồi máu; Vesper 1745). ⇒ Không phải hero quá yếu/mạnh.
+
+| Lối chơi | Toàn bộ nội dung | `--launch-pool` |
+|---|---|---|
+| thunderstorm | 10/30 | 12/30 |
+| frozen_fortress | 10/30 | 20/30 |
+| magma_engine | 7/30 | 20/30 |
+| mixed_burst | 10/30 | 16/30 |
+| glass_cannon | 8/30 | 9/30 |
+| eclipse | 1/30 | 9/30 |
+| engineers | 1/30 | 7/30 |
+| phoenix_gale | 1/30 | 9/30 |
+| verdant_plague (mới) | 1/30 | 2/30 |
+| thorn_doctor (mới) | 0/30 | 1/30 |
+| balanced | 14/30 | 15/30 |
+
+- Khoảng cách lớn giữa hai cột xác nhận nguyên nhân chính là **loãng pool** (24 hero, 59 relic). Đã thêm trọng số relic theo nguyên tố và chiêu mộ theo số Signature — các lối chơi launch tăng nhẹ (60→63 tổng).
+- Các lối chơi khởi đầu bằng 2 hero mở rộng (eclipse, engineers, phoenix, verdant_plague, thorn_doctor) **rất yếu với AutoPilot** (~0–1/30). Một phần do danh sách ưu tiên của bot; một phần do cặp khởi đầu thiếu sát thương diện rộng sớm. **Chưa giải quyết** — mục tiêu chính của pass cân bằng Phase 5 (K-04).

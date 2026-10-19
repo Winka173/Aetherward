@@ -35,3 +35,13 @@
 - Balance harness: `--biome <id>`.
 - Sửa test `TwinCasterEchoesWithACooldown` (trước dựa vào 1 seed, nay cộng 6 seed, cùng cửa sổ 40 s).
 - Test: 124/124 (thêm `BiomeTests` 10, `EnemyPhase2Tests` 15).
+
+## Phase 2b — Nature/Poison (2026-10-19)
+- **4 hero mới** (24 tổng): Liora (Nature, Rễ Nở Hoa trói cả nhóm; Rễ Sâu +30% lên kẻ bị trói), Thalen (Nature, Tường Gai: khiên + gai phản sát thương + khiêu khích; Da Vỏ Cây giảm sát thương theo máu đã mất), Vesper (Poison, Bình Xúc Tác: độc + vũng độc; Xúc Tác +4%/tầng độc, tối đa 30%), Sable (Poison, Chữa Bằng Dịch: lây độc rồi hồi máu theo số kẻ trúng độc, đổi lại người được hồi bị Sốt; Thầy Thuốc Dịch Hạch hồi khi kẻ trúng độc chết). 8 tiến hoá đổi cơ chế (Rừng Hoang, Vườn Bào Tử, Pháo Đài Gai, Xung Phong Rậm Rạp, Hỗn Hợp Dễ Nổ, Chướng Khí, Đại Dịch, Phương Thuốc).
+- Boss không bao giờ bị trói tại chỗ (chỉ bị làm chậm); kẻ bay miễn trói.
+- **9 relic** (keystone Plague Bell, Worldroot Heart; hợp thể Rot Bloom = Verdant Seed + Venom Vial), **8 thẻ**; luật mới `root_duration`.
+- Đề nghị relic theo nguyên tố của đội (relic gắn thẻ nguyên tố: ×2 nếu khớp, ×0.5 nếu không), chiêu mộ ưu tiên theo số phản ứng Signature tạo được với đội — để danh mục lớn vẫn ra lựa chọn phù hợp.
+- AutoPilot: lối chơi `verdant_plague` (Liora+Vesper), `thorn_doctor` (Thalen+Sable).
+- Lỗi bắt được nhờ test: `heal_power` của Sable là 0.1 (hệ số nhân ⇒ chỉ hồi 10%) → 1.1.
+- Affix tương thích: elite không nhận affix kháng nguyên tố mà nó đã kháng ≥30%, không nhận affix tốc độ nếu đã nhanh/bay/bứt tốc, summon không có affix; kháng sau affix bị chặn ở 75% (trước đây Flame Devourer + fireproof = miễn nhiễm Lửa). Validator kiểm affix ghi sẵn trong đợt.
+- Test: 136/136 (thêm `NatureHeroTests` 11, test affix).

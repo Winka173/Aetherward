@@ -124,6 +124,28 @@
       "effects": [ { "op": "stat", "stat": "skill_cooldown", "value": 0.25, "pct": true }, { "op": "crystal", "maxHpPct": -0.15 } ] },
     { "id": "cleansing_chime", "family": "defense", "rarity": "rare", "price": 14, "tags": ["light"],
       "effects": [ { "op": "trigger", "on": "periodic", "action": "cleanse_team", "interval": 8.0 } ] },
+    // ---------------------------------------------------------------- Expansion Phase 2 (Nature/Poison)
+    { "id": "verdant_seed", "family": "element", "rarity": "rare", "price": 15, "tags": ["nature"],
+      "effects": [ { "op": "rule", "rule": "root_duration", "value": 0.3 }, { "op": "stat", "stat": "attack", "value": 0.12, "pct": true, "scope": { "element": "nature" } } ] },
+    { "id": "venom_vial", "family": "element", "rarity": "rare", "price": 15, "tags": ["poison"],
+      "effects": [ { "op": "rule", "rule": "poison_power", "value": 0.25 }, { "op": "rule", "rule": "poison_max", "value": 2 } ] },
+    { "id": "thornmail", "family": "defense", "rarity": "rare", "price": 14, "tags": ["nature", "guardian"],
+      "effects": [ { "op": "stat", "stat": "defense", "value": 0.15, "pct": true, "scope": { "element": "nature" } },
+                   { "op": "stat", "stat": "max_hp", "value": 0.1, "pct": true, "scope": { "role": "guardian" } } ] },
+    { "id": "plague_bell", "family": "combat", "rarity": "epic", "price": 18, "starter": false, "tags": ["keystone", "poison"],
+      "effects": [ { "op": "rule", "rule": "contagion_targets", "value": 1 }, { "op": "rule", "rule": "contagion_stacks", "value": 1 } ] },
+    { "id": "blight_lantern", "family": "element", "rarity": "rare", "price": 15, "tags": ["nature", "poison", "reaction"],
+      "effects": [ { "op": "reaction", "reaction": "blight_garden", "durationPct": 0.5, "damagePct": 0.3 } ] },
+    { "id": "gardeners_trowel", "family": "defense", "rarity": "common", "price": 11, "tags": ["field"],
+      "effects": [ { "op": "rule", "rule": "field_duration", "value": 0.15 }, { "op": "stat", "stat": "heal_power", "value": 0.1, "pct": true } ] },
+    { "id": "antidote_flask", "family": "defense", "rarity": "rare", "price": 14,
+      "effects": [ { "op": "trigger", "on": "wave_start", "action": "cleanse_team" }, { "op": "trigger", "on": "wave_start", "action": "team_shield", "pct": 0.06 } ] },
+    { "id": "worldroot_heart", "family": "element", "rarity": "legendary", "price": 22, "starter": false, "tags": ["keystone", "nature"],
+      "effects": [ { "op": "rule", "rule": "root_duration", "value": 0.5 },
+                   { "op": "trigger", "on": "reaction", "reaction": "overgrowth", "action": "heal_team", "pct": 0.02, "cooldown": 3.0 } ] },
+    { "id": "rot_bloom", "family": "element", "rarity": "legendary", "price": 0, "fusion": true, "tags": ["nature", "poison"],
+      "effects": [ { "op": "rule", "rule": "poison_power", "value": 0.4 }, { "op": "rule", "rule": "root_duration", "value": 0.4 },
+                   { "op": "reaction", "reaction": "blight_garden", "damagePct": 0.6 } ] },
     { "id": "twilight_crown", "family": "element", "rarity": "legendary", "price": 0, "fusion": true, "tags": ["light", "shadow"],
       "effects": [ { "op": "reaction", "reaction": "eclipse", "damagePct": 0.6, "radiusPct": 0.3, "durationPct": 0.4 }, { "op": "rule", "rule": "doom_max", "value": 2 },
                    { "op": "trigger", "on": "reaction", "reaction": "eclipse", "action": "crystal_shield", "pct": 0.03, "cooldown": 4.0 } ] },
@@ -136,6 +158,7 @@
     { "a": "frozen_crown", "b": "frozen_heart", "result": "absolute_zero" },
     { "a": "stoneheart", "b": "crystal_growth", "result": "living_monolith" },
     { "a": "dawnstone", "b": "nightfall_censer", "result": "twilight_crown" },
-    { "a": "glacier_plate", "b": "warding_bell", "result": "aegis_of_ages" }
+    { "a": "glacier_plate", "b": "warding_bell", "result": "aegis_of_ages" },
+    { "a": "verdant_seed", "b": "venom_vial", "result": "rot_bloom" }
   ]
 }

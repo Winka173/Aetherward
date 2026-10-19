@@ -96,6 +96,24 @@ namespace Aetherward.Sim.Run
             },
             new Strategy
             {
+                Name = "verdant_plague",
+                Starters = new[] { "liora", "vesper" },
+                RecruitPriority = new[] { "marina", "volt", "thalen", "sable", "ignis", "terra" },
+                RelicPriority = new[] { "verdant_seed", "venom_vial", "blight_lantern", "plague_bell", "worldroot_heart", "chain_conductor" },
+                CardPriority = new[] { "wild_growth", "toxic_pact", "spec_liora_bramble", "spec_vesper_potency", "toxic_shock_theory", "overgrowth_theory" },
+                EvolutionPriority = new[] { "liora_wildwood", "vesper_lingering_miasma", "sable_pandemic", "thalen_bramble_fortress" }
+            },
+            new Strategy
+            {
+                Name = "thorn_doctor",
+                Starters = new[] { "thalen", "sable" },
+                RecruitPriority = new[] { "liora", "ignis", "volt", "vesper", "marina", "seren" },
+                RelicPriority = new[] { "thornmail", "antidote_flask", "venom_vial", "gardeners_trowel", "warding_bell", "chain_conductor" },
+                CardPriority = new[] { "spec_thalen_heartwood", "spec_sable_triage", "toxic_pact", "wild_growth", "toxic_shock_theory" },
+                EvolutionPriority = new[] { "thalen_bramble_fortress", "sable_remedy", "liora_spore_garden", "vesper_volatile_mixture" }
+            },
+            new Strategy
+            {
                 Name = "balanced",
                 Starters = new[] { "terra", "ignis" },
                 RecruitPriority = new[] { "marina", "volt", "freya", "sylph", "cinder", "zephyr" },

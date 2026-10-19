@@ -135,7 +135,7 @@ namespace Aetherward.Sim.Content
         private static readonly HashSet<string> PercentRules = new HashSet<string>
         {
             "burn_power", "overheal_shield", "doom_threshold", "doom_boss", "poison_power", "resonance_bonus", "collapse_radius",
-            "collapse_power", "shield_power", "field_duration", "illuminate_power"
+            "collapse_power", "shield_power", "field_duration", "illuminate_power", "root_duration"
         };
 
         /// <summary>Localization key of a status id used by actions (apply_status) and reactions.</summary>

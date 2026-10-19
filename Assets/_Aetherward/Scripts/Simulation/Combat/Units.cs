@@ -92,6 +92,11 @@ namespace Aetherward.Sim.Combat
         public int RampTargetUid;
         public int ComboCount;
         public float RedirectTimer;   // Gloom Sentinel guard internal cooldown
+        public float ThornTimer;      // Thornguard: thorns reflect damage while > 0
+        public float ThornMult;
+        public float ThornRoot;
+        public float ThornCooldown;
+        public float DoctorCooldown;  // Plague Doctor passive heal internal cooldown
         public string TraitId;
         public TraitDef Trait;
         public Element SecondaryElement; // Elemental Awakening (run-only)

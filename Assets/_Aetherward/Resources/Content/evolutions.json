@@ -151,6 +151,35 @@
       "effects": [ { "op": "stat", "stat": "defense", "value": 10 } ] },
     { "id": "borun_spike_mason", "hero": "borun", "role": "controller",
       "skill": { "kind": "raise_wall", "cooldown": 5.5, "mult": 0.9, "duration": 3.5, "field": "spike_wall" },
-      "effects": [ { "op": "stat", "stat": "attack", "value": 0.15, "pct": true } ] }
+      "effects": [ { "op": "stat", "stat": "attack", "value": 0.15, "pct": true } ] },
+
+    { "id": "liora_wildwood", "hero": "liora",
+      "skill": { "kind": "root_bloom", "radius": 2.7, "rootDuration": 1.8, "mult": 1.5 },
+      "effects": [ { "op": "stat", "stat": "attack", "value": 0.12, "pct": true } ] },
+    { "id": "liora_spore_garden", "hero": "liora", "role": "support",
+      "skill": { "kind": "root_bloom", "cooldown": 6.5, "mult": 1.0, "field": "spore_garden", "fieldRadius": 2.0, "fieldDuration": 5.0 },
+      "effects": [ { "op": "stat", "stat": "heal_power", "value": 0.15, "pct": true } ] },
+
+    { "id": "thalen_bramble_fortress", "hero": "thalen",
+      "skill": { "kind": "thorn_wall", "duration": 7.0, "reflectMult": 0.7, "thornRoot": 0.6, "shieldPct": 0.22 },
+      "effects": [ { "op": "stat", "stat": "defense", "value": 12 } ] },
+    { "id": "thalen_overgrowth_charge", "hero": "thalen", "role": "bruiser",
+      "skill": { "kind": "thorn_wall", "cooldown": 6.5, "mult": 1.6, "lashRadius": 1.8, "lashRange": 2.5, "rootDuration": 1.2, "shieldPct": 0.1 },
+      "effects": [ { "op": "stat", "stat": "attack", "value": 0.25, "pct": true } ] },
+
+    { "id": "vesper_volatile_mixture", "hero": "vesper",
+      "skill": { "kind": "catalyst_flask", "detonatePerStack": 0.35, "mult": 1.2, "field": "" },
+      "passive": { "kind": "catalysis", "perStack": 0.05, "cap": 0.35 },
+      "effects": [ { "op": "stat", "stat": "attack", "value": 0.15, "pct": true } ] },
+    { "id": "vesper_lingering_miasma", "hero": "vesper", "role": "controller",
+      "skill": { "kind": "catalyst_flask", "radius": 2.2, "stacks": 3, "field": "lingering_miasma", "fieldRadius": 2.0, "fieldDuration": 6.0 },
+      "effects": [ { "op": "stat", "stat": "elemental_mastery", "value": 40 } ] },
+
+    { "id": "sable_pandemic", "hero": "sable", "role": "controller",
+      "skill": { "kind": "plague_cure", "radius": 2.6, "stacks": 4, "mult": 1.0, "healPct": 0.05 },
+      "effects": [ { "op": "stat", "stat": "status_power", "value": 0.25 } ] },
+    { "id": "sable_remedy", "hero": "sable",
+      "skill": { "kind": "plague_cure", "healPct": 0.12, "healPerPoisoned": 0.025, "fever": 0, "cleanse": 1, "hasteBuff": 0.15, "buffDuration": 4.0 },
+      "effects": [ { "op": "stat", "stat": "heal_power", "value": 0.2, "pct": true } ] }
   ]
 }

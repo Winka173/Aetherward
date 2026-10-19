@@ -312,5 +312,29 @@ namespace Aetherward.Tests
             Assert.Less(minDefense, b.Content.Enemies["gravemaw"].Defense, "defense drops while exposed");
             Assert.AreNotEqual(BattleOutcome.Running, b.Outcome);
         }
+
+        [Test]
+        public void ElitesNeverRollIncompatibleAffixesOrReachImmunity()
+        {
+            ContentDatabase db = TestContent.Db;
+            Assert.IsFalse(Battle.AffixCompatible(db.Enemies["flame_devourer"], db.Affixes["fireproof"]), "already resists Fire");
+            Assert.IsFalse(Battle.AffixCompatible(db.Enemies["goblin_sprinter"], db.Affixes["hasted"]), "sprinters are fast enough");
+            Assert.IsFalse(Battle.AffixCompatible(db.Enemies["storm_harpy"], db.Affixes["hasted"]));
+            Assert.IsTrue(Battle.AffixCompatible(db.Enemies["grunt"], db.Affixes["fireproof"]));
+            BattleSetup s = TestContent.Setup(1, 3);
+            s.Wave = new WaveDef { Number = 1, TimeLimit = 999f };
+            s.EliteExtraAffix = true;
+            Battle b = new Battle(s);
+            foreach (EnemyDef def in db.Enemies.Values)
+            {
+                if (def.Boss) continue;
+                for (int k = 0; k < 6; k++)
+                {
+                    EnemyUnit e = b.SpawnEnemy(def, 0, true, null, new Vec2(9f, 0f));
+                    if (e.Affix != null) Assert.IsTrue(Battle.AffixCompatible(def, db.Affixes[e.Affix]), def.Id + " got " + e.Affix);
+                    foreach (float r in e.Resist) Assert.LessOrEqual(r, Battle.MaxResist + 1e-4f, def.Id);
+                }
+            }
+        }
     }
 }

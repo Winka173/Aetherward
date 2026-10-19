@@ -31,7 +31,7 @@ namespace Aetherward.Sim.Content
         {
             "mirror_reactions", "burn_power", "lingering_elements", "proc_generation_bonus", "overheal_shield", "no_healing",
             "doom_max", "doom_threshold", "doom_boss", "poison_max", "poison_power", "contagion_targets", "contagion_stacks",
-            "resonance_bonus", "collapse_radius", "collapse_power", "mark_max", "shield_power", "field_duration", "illuminate_power"
+            "resonance_bonus", "collapse_radius", "collapse_power", "mark_max", "shield_power", "field_duration", "illuminate_power", "root_duration"
         };
 
         private static readonly HashSet<string> KnownSkills = new HashSet<string>
@@ -39,7 +39,8 @@ namespace Aetherward.Sim.Content
             "fireball", "meteor", "cleave", "duel_strike", "heal_rain", "push_wave", "chain_lightning", "dash_strike",
             "frost_nova", "ice_shield", "vortex", "pierce_arrow", "stone_barrier", "ground_slam",
             // expansion
-            "dawn_aegis", "oath_of_doom", "phoenix_slash", "tide_blessing", "deploy_pylon", "frost_aegis", "gust_step", "raise_wall"
+            "dawn_aegis", "oath_of_doom", "phoenix_slash", "tide_blessing", "deploy_pylon", "frost_aegis", "gust_step", "raise_wall",
+            "root_bloom", "thorn_wall", "catalyst_flask", "plague_cure"
         };
 
         public static readonly HashSet<string> KnownActionOps = new HashSet<string>
@@ -178,6 +179,9 @@ namespace Aetherward.Sim.Content
                     if (!db.Enemies.ContainsKey(g.Enemy)) Err("wave " + w.Number + ": unknown enemy " + g.Enemy);
                     if (g.Lane >= db.Arena.Lanes.Count) Err("wave " + w.Number + ": lane out of range");
                     if (!string.IsNullOrEmpty(g.Affix) && !db.Affixes.ContainsKey(g.Affix)) Err("wave " + w.Number + ": unknown affix " + g.Affix);
+                    else if (!string.IsNullOrEmpty(g.Affix) && db.Enemies.TryGetValue(g.Enemy, out EnemyDef ad) && !ad.Boss
+                             && !Combat.Battle.AffixCompatible(ad, db.Affixes[g.Affix]))
+                        Err("wave " + w.Number + ": affix " + g.Affix + " is incompatible with " + g.Enemy);
                 }
                 foreach (int l in w.Lanes) if (l < 0 || l >= db.Arena.Lanes.Count) Err("wave " + w.Number + ": bad lane " + l);
                 if (w.TimeLimit < 30f) Err("wave " + w.Number + ": time limit too short");

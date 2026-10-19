@@ -194,6 +194,35 @@ HEROES_X = {
                     "Dựng tường đá {duration}s chắn đường kẻ địch đi đầu. Kẻ đi qua bị làm chậm mạnh và nứt giáp; tường không bao giờ chặn kín làn. Hồi chiêu {cooldown}s."),
         passive=("Fortify", "Gia Cố"),
         passive_desc=("While one of his walls stands, the Crystal takes {reduction%} less damage.", "Khi còn tường của ông, Pha Lê nhận ít hơn {reduction%} sát thương.")),
+    "liora": dict(
+        name=("Liora", "Liora"), title=("Grove Warden", "Hộ Vệ Rừng Thiêng"),
+        skill=("Root Bloom", "Rễ Nở Hoa"),
+        skill_desc=("Vines burst under the densest group: enemies within {radius} m take {mult%} Attack as Nature and are Rooted for {rootDuration}s. Cooldown {cooldown}s.",
+                    "Dây leo bùng lên dưới nhóm đông nhất: kẻ địch trong {radius} m nhận {mult%} Công sát thương Tự Nhiên và bị Trói Rễ {rootDuration}s. Hồi chiêu {cooldown}s."),
+        passive=("Deep Roots", "Rễ Sâu"),
+        passive_desc=("+{bonus%} damage to Rooted enemies.", "+{bonus%} sát thương lên kẻ bị Trói Rễ.")),
+    "thalen": dict(
+        name=("Thalen", "Thalen"), title=("Thornguard", "Hiệp Sĩ Gai"),
+        skill=("Thorn Wall", "Tường Gai"),
+        skill_desc=("Gains a bark shield of {shieldPct%} max HP and thorns for {duration}s: attackers take {reflectMult%} Attack as Nature. Taunts enemies within {tauntRadius} m. Cooldown {cooldown}s.",
+                    "Nhận khiên vỏ cây {shieldPct%} HP tối đa và gai trong {duration}s: kẻ tấn công nhận {reflectMult%} Công sát thương Tự Nhiên. Khiêu khích kẻ địch trong {tauntRadius} m. Hồi chiêu {cooldown}s."),
+        passive=("Barkskin", "Da Vỏ Cây"),
+        passive_desc=("Takes up to {max%} less damage as his health drops.", "Nhận ít sát thương hơn (tối đa {max%}) khi máu càng thấp.")),
+    "vesper": dict(
+        name=("Vesper", "Vesper"), title=("Alchemist", "Nhà Giả Kim"),
+        skill=("Catalyst Flask", "Bình Xúc Tác"),
+        skill_desc=("Throws a flask at the densest group: {mult%} Attack as Poison in {radius} m, {stacks} Poison stacks, and a toxic patch for {fieldDuration}s. Cooldown {cooldown}s.",
+                    "Ném bình vào nhóm đông nhất: {mult%} Công sát thương Độc trong {radius} m, {stacks} tầng Độc, và để lại vũng độc {fieldDuration}s. Hồi chiêu {cooldown}s."),
+        passive=("Catalysis", "Xúc Tác"),
+        passive_desc=("+{perStack%} damage per Poison stack on the target (up to {cap%}).", "+{perStack%} sát thương mỗi tầng Độc trên mục tiêu (tối đa {cap%}).")),
+    "sable": dict(
+        name=("Sable", "Sable"), title=("Plague Doctor", "Bác Sĩ Dịch Hạch"),
+        skill=("Plague Cure", "Chữa Bằng Dịch"),
+        skill_desc=("Infects enemies within {radius} m ({mult%} Attack, {stacks} Poison stacks), then heals the most hurt ally for {healPct%} max HP +{healPerPoisoned%} per poisoned enemy nearby (max {countMax}). The healed ally runs a Fever: +{fever%} damage taken for {feverDuration}s. Cooldown {cooldown}s.",
+                    "Lây bệnh cho kẻ địch trong {radius} m ({mult%} Công, {stacks} tầng Độc), rồi hồi cho đồng minh yếu nhất {healPct%} HP tối đa +{healPerPoisoned%} mỗi kẻ địch trúng độc gần đó (tối đa {countMax}). Người được hồi bị Sốt: nhận thêm {fever%} sát thương trong {feverDuration}s. Hồi chiêu {cooldown}s."),
+        passive=("Plague Doctor", "Thầy Thuốc Dịch Hạch"),
+        passive_desc=("When a poisoned enemy dies within {radius} m, the most hurt ally heals {healPct%} max HP (every {cooldown}s at most).",
+                      "Khi kẻ địch trúng độc chết trong {radius} m, đồng minh yếu nhất hồi {healPct%} HP tối đa (tối đa mỗi {cooldown}s một lần).")),
 }
 
 EVOLUTIONS_X = {
@@ -277,6 +306,46 @@ EVOLUTIONS_X = {
         ("Spike Wall", "Tường Gai"),
         ("Raises a {duration}s wall; when it crumbles it erupts, damaging and stunning enemies nearby for 0.6s. Cooldown {cooldown}s.",
          "Dựng tường {duration}s; khi sụp sẽ nổ gai, gây sát thương và choáng kẻ địch gần đó 0.6s. Hồi chiêu {cooldown}s.")),
+    "liora_wildwood": (("Wildwood", "Rừng Hoang"),
+        ("Bigger, longer roots and more damage.", "Rễ rộng hơn, giữ lâu hơn và mạnh hơn."),
+        ("Wildwood Bloom", "Hoa Rừng Hoang"),
+        ("Vines in {radius} m: {mult%} Attack as Nature and Root for {rootDuration}s. Cooldown {cooldown}s.",
+         "Dây leo trong {radius} m: {mult%} Công sát thương Tự Nhiên và Trói Rễ {rootDuration}s. Hồi chiêu {cooldown}s.")),
+    "liora_spore_garden": (("Spore Garden", "Vườn Bào Tử"),
+        ("Becomes a support: her bloom leaves a garden that roots enemies and mends allies.", "Trở thành hỗ trợ: hoa để lại khu vườn trói kẻ địch và hồi máu đồng minh."),
+        ("Garden Bloom", "Hoa Vườn"),
+        ("Vines in {radius} m ({mult%} Attack, Root {rootDuration}s) and a spore garden of {fieldRadius} m for {fieldDuration}s that slows and roots enemies and heals allies inside. Cooldown {cooldown}s.",
+         "Dây leo trong {radius} m ({mult%} Công, Trói Rễ {rootDuration}s) và một vườn bào tử {fieldRadius} m trong {fieldDuration}s làm chậm, trói kẻ địch và hồi máu đồng minh bên trong. Hồi chiêu {cooldown}s.")),
+    "thalen_bramble_fortress": (("Bramble Fortress", "Pháo Đài Gai"),
+        ("Longer thorns that also root attackers.", "Gai lâu hơn và trói rễ kẻ tấn công."),
+        ("Bramble Wall", "Tường Bụi Gai"),
+        ("Shield {shieldPct%} max HP; thorns for {duration}s reflect {reflectMult%} Attack and Root attackers for {thornRoot}s. Taunts within {tauntRadius} m. Cooldown {cooldown}s.",
+         "Khiên {shieldPct%} HP tối đa; gai trong {duration}s phản {reflectMult%} Công và Trói Rễ kẻ tấn công {thornRoot}s. Khiêu khích trong {tauntRadius} m. Hồi chiêu {cooldown}s.")),
+    "thalen_overgrowth_charge": (("Overgrowth Charge", "Xung Phong Rậm Rạp"),
+        ("Becomes a bruiser: whips the densest group at range before raising thorns.", "Trở thành đấu sĩ: quất vào nhóm đông nhất từ xa trước khi dựng gai."),
+        ("Thorn Lash", "Roi Gai"),
+        ("Lashes enemies within {lashRadius} m of the densest group in reach for {mult%} Attack as Nature and Roots them for {rootDuration}s, then gains a {shieldPct%} shield and thorns. Cooldown {cooldown}s.",
+         "Quất kẻ địch trong {lashRadius} m quanh nhóm đông nhất trong tầm, gây {mult%} Công sát thương Tự Nhiên và Trói Rễ {rootDuration}s, rồi nhận khiên {shieldPct%} và gai. Hồi chiêu {cooldown}s.")),
+    "vesper_volatile_mixture": (("Volatile Mixture", "Hỗn Hợp Dễ Nổ"),
+        ("Flasks detonate poison already on enemies instead of leaving a patch.", "Bình kích nổ độc sẵn có trên kẻ địch thay vì để lại vũng độc."),
+        ("Volatile Flask", "Bình Dễ Nổ"),
+        ("{mult%} Attack as Poison in {radius} m; consumes half of each target's Poison for +{detonatePerStack%} damage per stack, then applies {stacks} stacks. Cooldown {cooldown}s.",
+         "{mult%} Công sát thương Độc trong {radius} m; tiêu một nửa số tầng Độc của mỗi mục tiêu để gây thêm {detonatePerStack%} mỗi tầng, rồi gắn {stacks} tầng. Hồi chiêu {cooldown}s.")),
+    "vesper_lingering_miasma": (("Lingering Miasma", "Chướng Khí Dai Dẳng"),
+        ("A wider flask and a lasting miasma that slows and weakens enemies.", "Bình rộng hơn và chướng khí lâu tan làm chậm, làm yếu kẻ địch."),
+        ("Miasma Flask", "Bình Chướng Khí"),
+        ("{mult%} Attack as Poison in {radius} m and {stacks} stacks; leaves a {fieldRadius} m miasma for {fieldDuration}s. Cooldown {cooldown}s.",
+         "{mult%} Công sát thương Độc trong {radius} m và {stacks} tầng; để lại chướng khí {fieldRadius} m trong {fieldDuration}s. Hồi chiêu {cooldown}s.")),
+    "sable_pandemic": (("Pandemic", "Đại Dịch"),
+        ("Becomes a controller: a wide, heavy infection with a smaller heal.", "Trở thành khống chế: lây bệnh rộng và nặng, hồi máu ít hơn."),
+        ("Pandemic", "Đại Dịch"),
+        ("Infects enemies within {radius} m ({mult%} Attack, {stacks} Poison stacks); heals the most hurt ally {healPct%} +{healPerPoisoned%} per poisoned enemy, with Fever (+{fever%} damage taken). Cooldown {cooldown}s.",
+         "Lây bệnh cho kẻ địch trong {radius} m ({mult%} Công, {stacks} tầng Độc); hồi cho đồng minh yếu nhất {healPct%} +{healPerPoisoned%} mỗi kẻ trúng độc, kèm Sốt (+{fever%} sát thương nhận vào). Hồi chiêu {cooldown}s.")),
+    "sable_remedy": (("Remedy", "Phương Thuốc"),
+        ("A true cure: bigger heals with no Fever, a cleanse and a haste.", "Thuốc thật sự: hồi nhiều hơn, không Sốt, thanh tẩy và tăng tốc."),
+        ("Remedy", "Phương Thuốc"),
+        ("Infects enemies within {radius} m ({stacks} stacks); heals the most hurt ally {healPct%} +{healPerPoisoned%} per poisoned enemy, cleanses them and grants {hasteBuff%} attack speed for {buffDuration}s. Cooldown {cooldown}s.",
+         "Lây bệnh cho kẻ địch trong {radius} m ({stacks} tầng); hồi cho đồng minh yếu nhất {healPct%} +{healPerPoisoned%} mỗi kẻ trúng độc, thanh tẩy và tăng {hasteBuff%} tốc đánh trong {buffDuration}s. Hồi chiêu {cooldown}s.")),
 }
 
 EVO_PASSIVES_X = {
@@ -289,6 +358,7 @@ EVO_PASSIVES_X = {
                       "Mỗi {every} phản ứng hồi {healPct%} HP tối đa cho cả đội và {crystalPct%} cho Pha Lê."),
     "catalyst_tide": ("Every {every} reactions refund {refund}s of every ally's cooldown.", "Mỗi {every} phản ứng hoàn {refund}s hồi chiêu cho mọi đồng minh."),
     "shatter_rhythm": ("Every {every} basic attacks slam for {mult%} Attack as Ice in {radius} m.", "Mỗi {every} đòn đánh thường giáng đòn Băng {mult%} Công trong {radius} m."),
+    "catalysis": ("+{perStack%} damage per Poison stack on the target (up to {cap%}).", "+{perStack%} sát thương mỗi tầng Độc trên mục tiêu (tối đa {cap%})."),
 }
 
 FIELDS_X = {
@@ -384,6 +454,7 @@ ENEMIES_X.update({
 })
 
 FIELDS_X.update({
+    "toxic_patch": ("toxic patch", "vũng độc"), "lingering_miasma": ("miasma", "chướng khí"), "spore_garden": ("spore garden", "vườn bào tử"),
     "spore_cloud": ("spore cloud", "đám bào tử"), "ice_cover": ("ice cover", "tấm chắn băng"),
 })
 
@@ -439,6 +510,15 @@ RELICS_X = {
     "cleansing_chime": ("Cleansing Chime", "Chuông Thanh Tẩy", "Rings away curses, drains and parasites.", "Rung tan lời nguyền, sự hút năng lượng và ký sinh."),
     "twilight_crown": ("Twilight Crown", "Vương Miện Chạng Vạng", "Fusion of Dawnstone and Nightfall Censer.", "Hợp thể từ Đá Bình Minh và Lư Hương Hoàng Hôn."),
     "aegis_of_ages": ("Aegis of Ages", "Khiên Vạn Đại", "Fusion of Glacier Plate and Warding Bell.", "Hợp thể từ Giáp Sông Băng và Chuông Hộ Thân."),
+    "verdant_seed": ("Verdant Seed", "Hạt Giống Xanh", "It sprouts in any soil, even stone.", "Nảy mầm trên mọi đất, kể cả đá."),
+    "venom_vial": ("Venom Vial", "Lọ Nọc Độc", "One drop for the blade, one for the arrow.", "Một giọt cho lưỡi kiếm, một giọt cho mũi tên."),
+    "thornmail": ("Thornmail", "Giáp Gai", "Woven from brambles that never stop growing.", "Dệt từ bụi gai không bao giờ ngừng mọc."),
+    "plague_bell": ("Plague Bell", "Chuông Dịch Hạch", "Each toll carries the sickness further.", "Mỗi tiếng chuông mang bệnh dịch đi xa hơn."),
+    "blight_lantern": ("Blight Lantern", "Đèn Tàn Lụi", "Its light makes rot bloom.", "Ánh sáng của nó khiến mục rữa nở hoa."),
+    "gardeners_trowel": ("Gardener's Trowel", "Bay Làm Vườn", "Tend the ground and it will tend you.", "Chăm đất thì đất sẽ chăm lại bạn."),
+    "antidote_flask": ("Antidote Flask", "Bình Giải Độc", "Shake well before every battle.", "Lắc đều trước mỗi trận."),
+    "worldroot_heart": ("Worldroot Heart", "Trái Tim Rễ Thế Giới", "The oldest tree remembers every root.", "Cây cổ nhất nhớ từng chiếc rễ."),
+    "rot_bloom": ("Rot Bloom", "Hoa Mục Rữa", "Life and decay, grown on one stem.", "Sự sống và mục rữa, mọc trên cùng một thân."),
 }
 
 CARDS_X = {
@@ -454,6 +534,14 @@ CARDS_X = {
     "spec_eirwen_rimeguard": ("Eirwen: Rimeguard", "Eirwen: Hộ Vệ Sương Muối", "", ""),
     "spec_kael_tailwind": ("Kael: Tailwind", "Kael: Gió Thuận", "", ""),
     "spec_borun_buttress": ("Borun: Buttress", "Borun: Trụ Chống", "", ""),
+    "wild_growth": ("Wild Growth", "Sinh Trưởng Hoang Dã", "", ""),
+    "toxic_pact": ("Toxic Pact", "Hiệp Ước Độc", "", ""),
+    "overgrowth_theory": ("Overgrowth Theory", "Thuyết Rậm Rạp", "", ""),
+    "toxic_shock_theory": ("Toxic Shock Theory", "Thuyết Sốc Độc", "", ""),
+    "spec_liora_bramble": ("Liora: Bramble Bloom", "Liora: Hoa Bụi Gai", "", ""),
+    "spec_thalen_heartwood": ("Thalen: Heartwood", "Thalen: Lõi Gỗ", "", ""),
+    "spec_vesper_potency": ("Vesper: Potency", "Vesper: Đậm Đặc", "", ""),
+    "spec_sable_triage": ("Sable: Triage", "Sable: Phân Loại Thương", "", ""),
 }
 
 UI_X.update({
@@ -476,6 +564,7 @@ UI_X.update({
     "fx.rule.mark_max": ("Burn Marks stack {0} more times", "Dấu Bỏng cộng dồn thêm {0} tầng"),
     "fx.rule.shield_power": ("Shields are {0}% stronger", "Khiên mạnh hơn {0}%"),
     "fx.rule.field_duration": ("Skill fields (pylons, walls...) last {0}% longer", "Vùng kỹ năng (cột điện, tường...) kéo dài thêm {0}%"),
+    "fx.rule.root_duration": ("Roots last {0}% longer", "Trói Rễ kéo dài thêm {0}%"),
     "fx.rule.illuminate_power": ("Illuminated enemies take {0}% more damage", "Kẻ bị Chiếu Sáng nhận thêm {0}% sát thương"),
     "status.slow": ("Slowed", "Bị Chậm"), "status.vulnerable": ("Vulnerable", "Dễ Tổn Thương"), "status.reaction_vuln": ("Catalysed", "Bị Xúc Tác"),
 })
@@ -484,7 +573,9 @@ UI_X.update({
     "skillparam.shieldPct": ("shield", "khiên"), "skillparam.cleanseRadius": ("cleanse radius (m)", "bán kính thanh tẩy (m)"),
     "skillparam.marks": ("oath targets", "số mục tiêu trói"), "skillparam.heat": ("Heat per slash", "Nhiệt mỗi nhát chém"),
     "skillparam.healTargets": ("healed allies", "số đồng minh được hồi"), "skillparam.burstMult": ("frost burst", "vụ nổ băng"),
-    "skillparam.pullRadius": ("gust radius (m)", "bán kính gió kéo (m)"), "skillparam.halfLength": ("wall half-length (m)", "nửa chiều dài tường (m)"),
+    "skillparam.pullRadius": ("gust radius (m)", "bán kính gió kéo (m)"),
+    "skillparam.rootDuration": ("root duration (s)", "thời gian trói rễ (s)"), "skillparam.reflectMult": ("thorn reflect", "phản sát thương gai"),
+    "skillparam.stacks": ("Poison stacks", "tầng Độc"), "skillparam.healPct": ("heal", "hồi máu"), "skillparam.fever": ("Fever", "Sốt"), "skillparam.halfLength": ("wall half-length (m)", "nửa chiều dài tường (m)"),
 })
 
 UI_X.update({

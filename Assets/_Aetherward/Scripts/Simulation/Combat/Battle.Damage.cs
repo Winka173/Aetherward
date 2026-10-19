@@ -634,7 +634,7 @@ namespace Aetherward.Sim.Combat
             if (h == null || !h.Alive) return;
             float def = h.Stat(StatId.Defense);
             amount *= 100f / (100f + SimMath.Max(0f, def));
-            float dr = h.Stat(StatId.DamageReduction) + (h.FieldTimer > 0f ? h.FieldDamageReduction : 0f) + HeroGuardReduction(h);
+            float dr = h.Stat(StatId.DamageReduction) + (h.FieldTimer > 0f ? h.FieldDamageReduction : 0f) + HeroGuardReduction(h) + SelfPassiveReduction(h);
             amount *= 1f - SimMath.Clamp(dr, 0f, 0.75f);
             if (h.FeverTimer > 0f) amount *= 1f + h.FeverAmount;
             if (attacker != null)

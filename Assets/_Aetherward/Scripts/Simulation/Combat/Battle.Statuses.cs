@@ -125,7 +125,7 @@ namespace Aetherward.Sim.Combat
                 return;
             }
             if (e.RootImmune > 0f || e.Def.Params.Flag("flying")) return;
-            float d = duration * (1f - e.Tenacity);
+            float d = duration * (1f - e.Tenacity) * (1f + Mods.Rule("root_duration"));
             if (d <= 0.05f) return;
             e.RootTimer = SimMath.Max(e.RootTimer, d);
         }

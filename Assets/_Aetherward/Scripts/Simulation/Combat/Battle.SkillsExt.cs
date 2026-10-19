@@ -24,7 +24,11 @@ namespace Aetherward.Sim.Combat
                 case "frost_aegis": return CastFrostAegis(h, s, power, ref castPos);
                 case "gust_step": return CastGustStep(h, s, mult, el, ref castPos);
                 case "raise_wall": return CastRaiseWall(h, s, mult, ref castPos);
-                default: return false;
+                default:
+                {
+                    bool cast = CastSkillNature(h, s, power, mult, el, ref castPos, out bool handled);
+                    return handled && cast;
+                }
             }
         }
 
@@ -346,7 +350,7 @@ namespace Aetherward.Sim.Combat
                 case "binding_oath": return e.DoomStacks > 0 ? h.PassiveParams.Get("bonusPerDoom", 0.04f) * e.DoomStacks : 0f;
                 case "covenant": return (e.IsBoss || e.Elite) ? h.PassiveParams.Get("bonusPerDoom", 0.06f) * e.DoomStacks : 0f;
                 case "slipstream": return h.PassiveStacks > 0 ? h.PassiveParams.Get("bonus", 0.4f) : 0f;
-                default: return 0f;
+                default: return PassiveBonusNature(h, e);
             }
         }
 
@@ -379,6 +383,7 @@ namespace Aetherward.Sim.Combat
 
         private void OnHeroHitExt(HeroUnit h, EnemyUnit attacker)
         {
+            ThornsOnHit(h, attacker);
             if (h.PassiveKind == "glacial_resolve" && h.Shield > 0f && attacker.Alive)
             {
                 Slow(attacker, h.PassiveParams.Get("slow", 0.2f), 1f);

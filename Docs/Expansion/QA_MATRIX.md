@@ -23,3 +23,5 @@ Mô phỏng (pure C#) được kiểm chứng bằng `dotnet test`; mọi thứ 
 | 14 kẻ địch Phase 2 | VERIFIED | IMPLEMENTED_UNVERIFIED (sprite chỉ xem qua contact sheet) | `EnemyPhase2Tests` |
 | Seraphyne / Gravemaw | VERIFIED (pha, cửa sổ, không kẹt) | IMPLEMENTED_UNVERIFIED | `SeraphyneRaises…`, `StatuesGuard…`, `GravemawVents…` |
 | Cân bằng Phase 2a | ĐO ĐƯỢC | — | `BALANCE_REPORT.md`, `BIOMES.md` |
+| 4 hero Nature/Poison + 8 tiến hoá | VERIFIED | IMPLEMENTED_UNVERIFIED | `NatureHeroTests` (11), `EveryHeroSkillCastsInARealWave`, `EveryEvolutionBuildsAndCasts` |
+| 9 relic + 8 thẻ Nature/Poison | VERIFIED (validator) | IMPLEMENTED_UNVERIFIED | `ContentPassesValidation`, `NaturePoisonRelicsChangeTheRules` |

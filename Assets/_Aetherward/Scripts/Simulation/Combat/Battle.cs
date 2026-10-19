@@ -304,9 +304,10 @@ namespace Aetherward.Sim.Combat
             if (Setup.EliteExtraAffix && e.Elite && !def.Boss && string.IsNullOrEmpty(e.Affix) && Content.Affixes.Count > 0)
             {
                 // Ascension: elites carry one affix (sorted ids + battle RNG: deterministic).
-                var ids = new List<string>(Content.Affixes.Keys);
+                var ids = new List<string>();
+                foreach (AffixDef a in Content.Affixes.Values) if (AffixCompatible(def, a)) ids.Add(a.Id);
                 ids.Sort(string.CompareOrdinal);
-                e.Affix = ids[Rng.Range(0, ids.Count)];
+                if (ids.Count > 0) e.Affix = ids[Rng.Range(0, ids.Count)];
             }
             ApplyAffix(e);
             e.Hp = e.MaxHp;
@@ -327,7 +328,26 @@ namespace Aetherward.Sim.Combat
             e.Tenacity = SimMath.Clamp(e.Tenacity + a.Params.Get("tenacity"), 0f, 0.9f);
             string resistEl = a.Params.GetString("resistElement");
             if (!string.IsNullOrEmpty(resistEl))
-                e.Resist[(int)ContentDatabase.ParseElement(resistEl)] += a.Params.Get("resist", 0.5f);
+            {
+                int k = (int)ContentDatabase.ParseElement(resistEl);
+                e.Resist[k] = SimMath.Min(MaxResist, e.Resist[k] + a.Params.Get("resist", 0.5f)); // never immune
+            }
+        }
+
+        /// <summary>Resistance cap shared with the content validator: nothing is ever fully immune.</summary>
+        public const float MaxResist = 0.75f;
+
+        /// <summary>
+        /// Affix compatibility: no resist affix on an element the enemy already resists (it would stack
+        /// toward immunity), no speed affix on sprinters/flyers/fast runners, no affixes on summons.
+        /// </summary>
+        public static bool AffixCompatible(EnemyDef def, AffixDef a)
+        {
+            if (def.Boss || def.Tags.Contains("summon")) return false;
+            string resistEl = a.Params.GetString("resistElement");
+            if (!string.IsNullOrEmpty(resistEl) && def.Resist[(int)ContentDatabase.ParseElement(resistEl)] >= 0.3f) return false;
+            if (a.Params.Get("speedPct") > 0f && (def.Speed >= 1.5f || def.Params.Has("sprintEvery") || def.Params.Flag("flying"))) return false;
+            return true;
         }
 
         private static void ResetEnemy(EnemyUnit e)

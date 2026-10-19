@@ -26,6 +26,7 @@ namespace Aetherward.Sim.Combat
             }
             if (h.EchoCooldown > 0f) h.EchoCooldown -= dt;
             if (h.RedirectTimer > 0f) h.RedirectTimer -= dt;
+            TickNatureHero(h, dt);
         }
 
         /// <summary>

@@ -184,6 +184,44 @@
       "skill": { "kind": "raise_wall", "cooldown": 7.0, "mult": 0.5, "gauge": 1.0, "duration": 4.5, "halfLength": 1.2, "width": 0.45, "ahead": 1.2, "field": "stone_wall" },
       "passive": { "kind": "fortify", "reduction": 0.12 },
       "evolutions": ["borun_fortifier", "borun_spike_mason"]
+    },
+    {
+      "id": "liora", "element": "nature", "role": "controller", "targeting": "cluster", "melee": false, "starter": false, "cost": 7,
+      "silhouette": "leaf-crowned druid, gnarled staff with blossoms, moss cloak",
+      "stats": { "max_hp": 430, "attack": 27, "defense": 12, "attack_interval": 1.1, "range": 4.2, "threat": 1.0, "move_speed": 2.4 },
+      "basic": { "kind": "projectile", "mult": 1.0, "gauge": 1.0, "speed": 9 },
+      "skill": { "kind": "root_bloom", "cooldown": 7.0, "mult": 1.3, "gauge": 1.0, "radius": 2.0, "rootDuration": 1.2 },
+      "passive": { "kind": "deep_roots", "bonus": 0.3 },
+      "evolutions": ["liora_wildwood", "liora_spore_garden"]
+    },
+    {
+      "id": "thalen", "element": "nature", "role": "guardian", "targeting": "nearest_to_crystal", "melee": true, "starter": false, "cost": 7,
+      "silhouette": "bark-armoured treant knight, thorn shield, antler helm",
+      "stats": { "max_hp": 760, "attack": 22, "defense": 34, "attack_interval": 1.25, "range": 0.8, "leash_radius": 1.7, "threat": 2.8, "move_speed": 2.0 },
+      "basic": { "kind": "melee", "mult": 1.0, "gauge": 1.0 },
+      "skill": { "kind": "thorn_wall", "cooldown": 8.0, "mult": 0.8, "gauge": 1.0, "shieldPct": 0.15, "duration": 5.0, "reflectMult": 0.6, "taunt": 1.5, "tauntRadius": 2.2 },
+      "passive": { "kind": "barkskin", "max": 0.2, "perMissing": 0.4 },
+      "evolutions": ["thalen_bramble_fortress", "thalen_overgrowth_charge"]
+    },
+    {
+      "id": "vesper", "element": "poison", "role": "controller", "targeting": "cluster", "melee": false, "starter": false, "cost": 7,
+      "silhouette": "goggled alchemist, bandolier of glowing flasks, long coat",
+      "stats": { "max_hp": 400, "attack": 28, "defense": 10, "attack_interval": 1.05, "range": 4.0, "threat": 0.9, "move_speed": 2.4 },
+      "basic": { "kind": "projectile", "mult": 1.0, "gauge": 1.0, "speed": 8 },
+      "skill": { "kind": "catalyst_flask", "cooldown": 6.5, "mult": 1.0, "gauge": 1.2, "radius": 1.8, "stacks": 2, "poisonDuration": 6.0,
+                 "field": "toxic_patch", "fieldRadius": 1.6, "fieldDuration": 4.0 },
+      "passive": { "kind": "catalysis", "perStack": 0.04, "cap": 0.3 },
+      "evolutions": ["vesper_volatile_mixture", "vesper_lingering_miasma"]
+    },
+    {
+      "id": "sable", "element": "poison", "role": "support", "targeting": "cluster", "melee": false, "starter": false, "cost": 7,
+      "silhouette": "plague doctor mask, raven-feather mantle, censer of green smoke",
+      "stats": { "max_hp": 470, "attack": 22, "defense": 14, "attack_interval": 1.15, "range": 4.0, "threat": 1.1, "heal_power": 1.1, "move_speed": 2.4 },
+      "basic": { "kind": "projectile", "mult": 1.0, "gauge": 1.0, "speed": 8 },
+      "skill": { "kind": "plague_cure", "cooldown": 7.0, "mult": 0.9, "gauge": 1.0, "radius": 1.8, "stacks": 2, "poisonDuration": 6.0,
+                 "healPct": 0.08, "healPerPoisoned": 0.02, "countMax": 6, "fever": 0.15, "feverDuration": 3.0 },
+      "passive": { "kind": "plague_doctor", "radius": 5.0, "healPct": 0.03, "cooldown": 1.5 },
+      "evolutions": ["sable_pandemic", "sable_remedy"]
     }
   ],
 
@@ -196,6 +234,12 @@
       "onTick": [{ "op": "status", "status": "armor_crack", "duration": 2, "stacks": 1, "max": 2 }] },
     { "id": "stone_bastion", "element": "earth", "shape": "line", "tick": 0.5, "slow": 0.75, "damageMult": 0.35, "heroDamageReduction": 0.15, "maxCount": 3, "params": { "wall": 1 },
       "onTick": [{ "op": "status", "status": "armor_crack", "duration": 2, "stacks": 1, "max": 2 }] },
+    { "id": "toxic_patch", "element": "poison", "tick": 0.6, "damageMult": 0.12, "maxCount": 2,
+      "onTick": [{ "op": "status", "status": "poison", "stacks": 1, "duration": 4 }] },
+    { "id": "lingering_miasma", "element": "poison", "tick": 0.6, "damageMult": 0.15, "slow": 0.25, "enemyWeaken": 0.15, "maxCount": 2,
+      "onTick": [{ "op": "status", "status": "poison", "stacks": 1, "duration": 5 }] },
+    { "id": "spore_garden", "element": "nature", "tick": 0.5, "slow": 0.3, "heroHealPct": 0.006, "maxCount": 2,
+      "onTick": [{ "op": "status", "status": "root", "duration": 0.6 }] },
     { "id": "spike_wall", "element": "earth", "shape": "line", "tick": 0.5, "slow": 0.7, "maxCount": 2, "params": { "wall": 1 },
       "onEnd": [{ "op": "damage", "area": true, "element": "earth", "mult": 1.6, "radius": 1.6 },
                 { "op": "status", "area": true, "status": "stun", "duration": 0.6, "radius": 1.6 }] }

@@ -98,6 +98,7 @@ namespace Aetherward.Sim.Combat
         {
             string field = e.Def.Params.GetString("deathField");
             if (field != null && Content.Fields.TryGetValue(field, out FieldDef f)) SpawnField(f, e.Pos, 1.6f, 4f, null, 0f, 0, "death_" + e.Def.Id, null);
+            OnEnemyDeathNature(e);
             if (e.Def.Params.Flag("statue")) _statuesAlive = System.Math.Max(0, _statuesAlive - 1);
             for (int i = 0; i < Enemies.Count; i++) if (Enemies[i].LinkedTo == e) Enemies[i].LinkedTo = null;
             // A guarded boss's statues shatter with her, so an out-of-reach statue can never stall the wave.

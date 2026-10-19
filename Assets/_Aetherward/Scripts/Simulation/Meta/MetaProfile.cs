@@ -78,7 +78,14 @@ namespace Aetherward.Sim.Meta
             new UnlockRule { Id = "relic:eclipse_engine", Condition = "victory", Value = 1 },
             // Expansion Phase 2: battlefields
             new UnlockRule { Id = "biome:molten_crater", Condition = "reach_wave", Value = 7 },
-            new UnlockRule { Id = "biome:frostfall_bastion", Condition = "reach_wave", Value = 11 }
+            new UnlockRule { Id = "biome:frostfall_bastion", Condition = "reach_wave", Value = 11 },
+            // Expansion Phase 2: Nature / Poison
+            new UnlockRule { Id = "hero:liora", Condition = "reach_wave", Value = 9 },
+            new UnlockRule { Id = "hero:thalen", Condition = "hero_runs", Value = 5 },
+            new UnlockRule { Id = "hero:vesper", Condition = "total_reactions", Value = 250 },
+            new UnlockRule { Id = "hero:sable", Condition = "reach_wave", Value = 16 },
+            new UnlockRule { Id = "relic:plague_bell", Condition = "distinct_reactions", Value = 20 },
+            new UnlockRule { Id = "relic:worldroot_heart", Condition = "reach_wave", Value = 19 }
         };
 
         /// <summary>Highest Ascension that can be unlocked (data: difficulty.json).</summary>

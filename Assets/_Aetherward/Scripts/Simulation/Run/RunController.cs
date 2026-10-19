@@ -639,7 +639,7 @@ namespace Aetherward.Sim.Run
                     if (!hasElement) w += 0.6f;
                     if (!hasRole) w += 0.4f;
                     // Larger roster: favour heroes whose element forms a signature reaction with the team.
-                    if (SignatureSynergy(d.Element)) w += 0.8f;
+                    w += 0.6f * System.Math.Min(3, SignatureCount(d.Element));
                     weights[i] = w;
                     total += w;
                 }
@@ -654,6 +654,22 @@ namespace Aetherward.Sim.Run
                 pool.RemoveAt(pick);
             }
             return result;
+        }
+
+        /// <summary>Distinct roster elements an element would form an authored (signature) reaction with.</summary>
+        public int SignatureCount(Element el)
+        {
+            int n = 0;
+            ulong seen = 0;
+            foreach (HeroRunState o in State.Heroes)
+            {
+                Element other = Content.Heroes[o.DefId].Element;
+                if (other == el || (seen & (1UL << (int)other)) != 0) continue;
+                seen |= 1UL << (int)other;
+                ReactionDef r = Content.ReactionFor(el, other);
+                if (r != null && r.Category == ReactionCategory.Signature) n++;
+            }
+            return n;
         }
 
         /// <summary>True when an element would create an authored (signature) reaction with someone already in the roster.</summary>
@@ -683,6 +699,7 @@ namespace Aetherward.Sim.Run
                 {
                     float w = DraftGenerator.RarityWeight(pool[i].Rarity, State.Wave);
                     if (CompletesFusion(pool[i].Id)) w *= 1.8f; // gently surface curated fusions
+                    w *= ElementRelevance(pool[i]);
                     weights[i] = w;
                     total += w;
                 }
@@ -697,6 +714,23 @@ namespace Aetherward.Sim.Run
                 pool.RemoveAt(pick);
             }
             return result;
+        }
+
+        /// <summary>
+        /// Element-tagged relics lean toward the team's elements (x2 when one matches, x0.5 when none
+        /// does) so a large catalog keeps offers relevant; untagged relics are unaffected.
+        /// </summary>
+        private float ElementRelevance(RelicDef r)
+        {
+            bool tagged = false;
+            foreach (string tag in r.Tags)
+            {
+                if (!ElementUtil.TryParse(tag, out Element el) || el == Element.None) continue;
+                tagged = true;
+                foreach (HeroRunState h in State.Heroes)
+                    if (Content.Heroes[h.DefId].Element == el) return 2f;
+            }
+            return tagged ? 0.5f : 1f;
         }
 
         private bool FusedAway(string relicId)
