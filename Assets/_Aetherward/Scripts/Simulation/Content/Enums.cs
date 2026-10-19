@@ -118,7 +118,8 @@ namespace Aetherward.Sim.Content
         Relic,
         Evolution,
         Event,
-        Pact
+        Pact,
+        CrystalEvolution
     }
 
     public static class ElementUtil

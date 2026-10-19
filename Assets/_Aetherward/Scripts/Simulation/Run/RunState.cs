@@ -45,7 +45,8 @@ namespace Aetherward.Sim.Run
         Revive,
         Evolution,
         EventOption,
-        Pact
+        Pact,
+        CrystalPath
     }
 
     /// <summary>One selectable item on a reward/shop screen.</summary>
@@ -142,6 +143,8 @@ namespace Aetherward.Sim.Run
         public string BiomeId;
         public GameMode Mode;
         public Combat.TeamTactic Tactic;
+        public string CrystalPath;                                    // Crystal Evolution choice (null = not chosen)
+        public bool CrystalEvolutionEnabled = FeatureFlags.CrystalEvolution;
         /// <summary>Optional shop lock: one hero/relic/card offer carried into the next shop at its price.</summary>
         public Offer LockedOffer;
         /// <summary>Real seconds spent outside combat (prepare/reward screens), measured by the client.</summary>

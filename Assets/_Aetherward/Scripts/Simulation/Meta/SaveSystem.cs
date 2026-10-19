@@ -262,6 +262,7 @@ namespace Aetherward.Sim.Meta
                 .Set("mode", s.Mode.ToString()).Set("daily", s.DailyKey).Set("modeMods", StringArray(s.ModeModifiers))
                 .Set("heroPool", StringArray(s.HeroPool)).Set("relicPool", StringArray(s.RelicPool))
                 .Set("menuSeconds", Math.Round(s.MenuSeconds, 1)).Set("tactic", s.Tactic.ToString())
+                .Set("crystalPath", s.CrystalPath).Set("crystalEvo", s.CrystalEvolutionEnabled)
                 .Set("lock", s.LockedOffer == null ? JsonNode.NewObject() : JsonNode.NewObject().Set("kind", s.LockedOffer.Kind.ToString()).Set("id", s.LockedOffer.Id)
                     .Set("price", s.LockedOffer.Price).Set("trait", s.LockedOffer.TraitId));
             WriteEnvelope("run", d);
@@ -372,6 +373,9 @@ namespace Aetherward.Sim.Meta
                 foreach (string r in d.StringList("relicPool")) if (db.Relics.ContainsKey(r)) s.RelicPool.Add(r);
                 s.MenuSeconds = d.Float("menuSeconds");
                 s.Tactic = Enum.TryParse(d.Str("tactic") ?? "Balanced", out Combat.TeamTactic tac) ? tac : Combat.TeamTactic.Balanced;
+                string cp = d.Str("crystalPath");
+                s.CrystalPath = Combat.CrystalPaths.IsValid(cp) ? cp : null;
+                s.CrystalEvolutionEnabled = d.Bool("crystalEvo", FeatureFlags.CrystalEvolution);
                 JsonNode lk = d["lock"];
                 if (lk.Kind == JsonKind.Object && lk.Has("id") && Enum.TryParse(lk.Str("kind") ?? "", out OfferKind lkind))
                     s.LockedOffer = new Offer { Kind = lkind, Id = lk.Str("id"), Price = lk.Int("price"), TraitId = lk.Str("trait"), Tag = "locked" };

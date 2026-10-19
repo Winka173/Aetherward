@@ -38,9 +38,11 @@ namespace Aetherward.Sim.Combat
         public BiomeDef Biome;
         /// <summary>Ascension: bosses enrage below 25% HP by this amount (0 = off).</summary>
         public float BossEnrage;
+        /// <summary>Ascension "double_elite": every Nth regular spawn is elite (0 = off).</summary>
         public int EliteEvery;
+        public string CrystalPath;                // Crystal Evolution path id (null = none)
         public TeamTactic Tactic;                 // soft targeting weights chosen before the wave
-        public bool UtilityTargeting = true;      // feature flag: utility scoring for basic-attack targets        // Ascension "double_elite": every Nth regular spawn is elite (0 = off)
+        public bool UtilityTargeting = true;      // feature flag: utility scoring for basic-attack targets
         public float HazardShift;     // Ascension "hazard_shift": biome hazards fire this much more often
     }
 
@@ -146,6 +148,7 @@ namespace Aetherward.Sim.Combat
             Crystal.DamageReduction = SimMath.Clamp(Mods.CrystalReduction, 0f, 0.6f);
             Crystal.Regen = Mods.CrystalRegen;
             Crystal.Thorns = Mods.CrystalThorns;
+            SetupCrystalPath();
         }
 
         private void SetupHeroes()
@@ -228,6 +231,7 @@ namespace Aetherward.Sim.Combat
             Grid.Rebuild(Enemies);
 
             UpdateCrystal(dt);
+            UpdateCrystalPath(dt);
             for (int i = 0; i < Heroes.Count; i++) UpdateHero(Heroes[i], dt);
             for (int i = 0; i < Enemies.Count; i++) UpdateEnemy(Enemies[i], dt);
             SeparateEnemies();

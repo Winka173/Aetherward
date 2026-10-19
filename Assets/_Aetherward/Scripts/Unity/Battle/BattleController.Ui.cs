@@ -339,7 +339,29 @@ namespace Aetherward.Game
                 case RewardKind.Shop: DrawShop(); break;
                 case RewardKind.Evolution: DrawEvolutionReward(); break;
                 case RewardKind.Event: DrawEvent(); break;
+                case RewardKind.CrystalEvolution: DrawCrystalPaths(); break;
             }
+        }
+
+        /// <summary>Crystal Evolution: three permanent, exclusive Crystal paths (one pick per run).</summary>
+        private void DrawCrystalPaths()
+        {
+            RunState s = _rc.State;
+            int n = s.Offers.Count;
+            float cw = 440, ch = 460, gap = 40;
+            float x0 = Ui.W / 2 - (n * cw + (n - 1) * gap) / 2, y = 280;
+            Ui.Label(0, 220, Ui.W, 40, L.Get("crystal.permanent"), 24, Ui.Muted, TextAnchor.UpperCenter);
+            for (int i = 0; i < n && !_offersChanged; i++)
+            {
+                Offer o = s.Offers[i];
+                float x = x0 + i * (cw + gap);
+                Ui.CardFrame(x, y, cw, ch, "epic", _focusOffer == i);
+                Ui.Label(x + 30, y + 30, cw - 60, 50, L.Get("crystal." + o.Id), 32, Ui.Gold, TextAnchor.UpperCenter, true);
+                Ui.Label(x + 30, y + 110, cw - 60, ch - 140, L.Get("crystal." + o.Id + ".desc"), 23, Ui.White);
+                if (Ui.Hit(x, y, cw, ch)) _focusOffer = i;
+                if (Ui.Button(x + 30, y + ch + 14, cw - 60, 96, L.Get("reward.take"), Tone.Primary, true, 26)) Choose(i);
+            }
+            if (!_offersChanged) RewardFooter(false, "common.skip");
         }
 
         private void RewardFooter(bool canReroll, string skipKey, bool skipDanger = false)

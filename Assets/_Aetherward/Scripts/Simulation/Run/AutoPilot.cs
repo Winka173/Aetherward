@@ -185,26 +185,30 @@ namespace Aetherward.Sim.Run
         {
             for (int step = 0; step < maxSteps; step++)
             {
-                RunState s = _rc.State;
-                switch (s.Phase)
-                {
-                    case RunPhase.Prepare:
-                        Prepare();
-                        if (_rc.StartWave() == null) return false;
-                        break;
-                    case RunPhase.Battle:
-                        _rc.Battle.RunToEnd();
-                        _rc.ResolveBattle();
-                        break;
-                    case RunPhase.Reward:
-                        HandleReward();
-                        break;
-                    case RunPhase.Victory:
-                    case RunPhase.Defeat:
-                        return true;
-                }
+                RunPhase p = _rc.State.Phase;
+                if (p == RunPhase.Victory || p == RunPhase.Defeat) return true;
+                if (!Step()) return false;
             }
             return false;
+        }
+
+        /// <summary>Advances one decision or battle; false when the run cannot continue (failed wave start).</summary>
+        public bool Step()
+        {
+            switch (_rc.State.Phase)
+            {
+                case RunPhase.Prepare:
+                    Prepare();
+                    return _rc.StartWave() != null;
+                case RunPhase.Battle:
+                    _rc.Battle.RunToEnd();
+                    _rc.ResolveBattle();
+                    return true;
+                case RunPhase.Reward:
+                    HandleReward();
+                    return true;
+            }
+            return true;
         }
 
         public void Prepare()
@@ -274,6 +278,15 @@ namespace Aetherward.Sim.Run
                     Shop();
                     _rc.Skip();
                     break;
+                case RewardKind.CrystalEvolution:
+                {
+                    // Hurt Crystal -> Bastion; otherwise Pulse (Random policy rolls). Thorn is left to players.
+                    string want = _strategy.Policy == DraftPolicy.Random ? Combat.CrystalPaths.All[_rng.Range(0, 3)]
+                        : s.CrystalHp < _rc.CrystalMaxHp * 0.6f ? Combat.CrystalPaths.Bastion : Combat.CrystalPaths.Pulse;
+                    int idx = offers.FindIndex(o => o.Id == want);
+                    if (idx < 0 || !_rc.Choose(idx)) _rc.Skip();
+                    break;
+                }
             }
             if (s.Phase == RunPhase.Reward && ReferenceEquals(offers, s.Offers) && s.CurrentReward == RewardKind.Draft) _rc.Skip();
         }

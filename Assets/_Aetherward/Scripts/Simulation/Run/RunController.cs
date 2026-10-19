@@ -532,6 +532,8 @@ namespace Aetherward.Sim.Run
             setup.BossEnrage = Content.Difficulty.Value("boss_enrage", State.Ascension);
             setup.EliteEvery = (int)Content.Difficulty.Value("double_elite", State.Ascension);
             setup.Tactic = State.Tactic;
+            setup.CrystalPath = State.CrystalPath;
+            setup.UtilityTargeting = FeatureFlags.UtilityTargeting;
             setup.HazardShift = Content.Difficulty.Value("hazard_shift", State.Ascension);
             foreach (HeroRunState h in State.Heroes)
             {
@@ -652,6 +654,8 @@ namespace Aetherward.Sim.Run
             // for a long stretch, add a recruit offer (no softlock on RNG).
             if (State.Heroes.Count < 3 && wave.Number >= 3 && !State.PendingRewards.Contains(RewardKind.Recruit) && !State.PendingRewards.Contains(RewardKind.Shop))
                 State.PendingRewards.Add(RewardKind.Recruit);
+            if (State.CrystalEvolutionEnabled && State.CrystalPath == null && wave.Number >= Combat.CrystalPaths.OfferAfterWave)
+                State.PendingRewards.Insert(0, RewardKind.CrystalEvolution);
             AdvanceReward();
         }
 
@@ -767,6 +771,9 @@ namespace Aetherward.Sim.Run
                     break;
                 case RewardKind.Evolution:
                     RefreshEvolutionOffers();
+                    break;
+                case RewardKind.CrystalEvolution:
+                    foreach (string id in Combat.CrystalPaths.All) State.Offers.Add(new Offer { Kind = OfferKind.CrystalPath, Id = id });
                     break;
                 case RewardKind.Event:
                 {
@@ -1059,6 +1066,11 @@ namespace Aetherward.Sim.Run
                     return Evolve(o.HeroUid, o.Id);
                 case OfferKind.EventOption:
                     if (!ApplyEventOption(o.Id, o.OptionIndex)) return false;
+                    break;
+                case OfferKind.CrystalPath:
+                    // Permanent and exclusive: the first choice sticks for the whole run.
+                    if (State.CrystalPath != null || !Combat.CrystalPaths.IsValid(o.Id)) return false;
+                    State.CrystalPath = o.Id;
                     break;
             }
             o.Sold = true;

@@ -40,6 +40,9 @@ namespace Aetherward.Balance
             string contentDir = Path.Combine(root, "Assets", "_Aetherward", "Resources", "Content");
             ContentDatabase db = ContentDatabase.Load(n => File.ReadAllText(Path.Combine(contentDir, n + ".json")));
 
+            // Feature flags (A/B): --no-crystal-evo disables Crystal Evolution, --legacy-targeting the utility AI.
+            if (Array.IndexOf(args, "--no-crystal-evo") >= 0) Aetherward.Sim.Run.FeatureFlags.CrystalEvolution = false;
+            if (Array.IndexOf(args, "--legacy-targeting") >= 0) Aetherward.Sim.Run.FeatureFlags.UtilityTargeting = false;
             if (Array.IndexOf(args, "--batch") >= 0) return Batch.Run(db, root, contentDir, args);
             if (Array.IndexOf(args, "--validate") >= 0) return Validate.Run(db, root);
             if (Array.IndexOf(args, "--breakdown") >= 0) return Breakdown.Run(db, root, args);
