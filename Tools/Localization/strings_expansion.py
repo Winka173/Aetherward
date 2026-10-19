@@ -838,7 +838,7 @@ UI_X.update({
     "feedback.too_long": ("Too long", "Quá dài"), "feedback.want_again": ("Play again!", "Muốn chơi tiếp!"),
     "reward.crystalevolution": ("Crystal Evolution", "Tiến hoá Pha lê"),
     "crystal.permanent": ("Choose one path. It is permanent for this run.", "Chọn một nhánh. Lựa chọn giữ nguyên đến hết lượt chơi."),
-    "crystal.bastion": ("Bastion", "Thành Luỹ"), "crystal.bastion.desc": ("The Crystal takes 10% less damage and regenerates 0.2% of its max HP per second.", "Pha lê nhận ít hơn 10% sát thương và hồi 0,2% HP tối đa mỗi giây."),
+    "crystal.bastion": ("Bastion", "Thành Luỹ"), "crystal.bastion.desc": ("The Crystal takes 7% less damage and regenerates 0.15% of its max HP per second.", "Pha lê nhận ít hơn 7% sát thương và hồi 0,15% HP tối đa mỗi giây."),
     "crystal.pulse": ("Aether Pulse", "Xung Ether"), "crystal.pulse.desc": ("Every 6 s the Crystal releases an Arcane nova that hits all enemies within 3.2 m.", "Mỗi 6 giây Pha lê phát xung Huyền bí gây sát thương mọi kẻ địch trong 3,2 m."),
     "crystal.thorn": ("Thornheart", "Tim Gai"), "crystal.thorn.desc": ("Enemies that strike the Crystal take heavy Earth damage in return.", "Kẻ địch đánh Pha lê nhận lại sát thương Đất lớn."),
     "tactic.balanced": ("Balanced", "Cân bằng"), "tactic.balanced.desc": ("heroes weigh every factor evenly.", "anh hùng cân nhắc đều mọi yếu tố."),

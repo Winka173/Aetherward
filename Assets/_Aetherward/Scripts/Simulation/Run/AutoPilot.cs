@@ -172,6 +172,9 @@ namespace Aetherward.Sim.Run
         /// <summary>Bot reads the visible wave preview and picks a team tactic (off by default to keep baselines comparable).</summary>
         public static bool UseTactics;
 
+        /// <summary>Balance experiments: always take this Crystal path (null = heuristic).</summary>
+        public static string ForceCrystalPath;
+
         private readonly RunController _rc;
         private readonly Strategy _strategy;
         private readonly Pcg32 _rng;
@@ -298,8 +301,8 @@ namespace Aetherward.Sim.Run
                 case RewardKind.CrystalEvolution:
                 {
                     // Hurt Crystal -> Bastion; otherwise Pulse (Random policy rolls). Thorn is left to players.
-                    string want = _strategy.Policy == DraftPolicy.Random ? Combat.CrystalPaths.All[_rng.Range(0, 3)]
-                        : s.CrystalHp < _rc.CrystalMaxHp * 0.6f ? Combat.CrystalPaths.Bastion : Combat.CrystalPaths.Pulse;
+                    string want = ForceCrystalPath ?? (_strategy.Policy == DraftPolicy.Random ? Combat.CrystalPaths.All[_rng.Range(0, 3)]
+                        : s.CrystalHp < _rc.CrystalMaxHp * 0.6f ? Combat.CrystalPaths.Bastion : Combat.CrystalPaths.Pulse);
                     int idx = offers.FindIndex(o => o.Id == want);
                     if (idx < 0 || !_rc.Choose(idx)) _rc.Skip();
                     break;

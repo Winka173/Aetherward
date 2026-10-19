@@ -60,12 +60,12 @@ namespace Aetherward.Sim.Combat
         /// <summary>Clearing this wave offers the choice (once per run).</summary>
         public const int OfferAfterWave = 6;
 
-        public const float BastionReduction = 0.10f;
-        public const float BastionRegenPct = 0.002f;   // of max HP per second
+        public const float BastionReduction = 0.07f;
+        public const float BastionRegenPct = 0.0015f;  // of max HP per second
         public const float PulseInterval = 6f;
         public const float PulseRadius = 3.2f;
-        public const float PulseAttack = 40f;          // Arcane, scaled by wave level
-        public const float ThornAttack = 30f;          // added to Crystal thorns (scaled by wave level)
+        public const float PulseAttack = 55f;          // Arcane, scaled by wave level
+        public const float ThornAttack = 45f;          // added to Crystal thorns (scaled by wave level)
 
         public static bool IsValid(string id) => id == Bastion || id == Pulse || id == Thorn;
     }

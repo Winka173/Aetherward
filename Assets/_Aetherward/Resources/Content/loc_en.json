@@ -263,7 +263,7 @@
   "common.wave": "Wave {0}/{1}",
   "common.yes": "Yes",
   "crystal.bastion": "Bastion",
-  "crystal.bastion.desc": "The Crystal takes 10% less damage and regenerates 0.2% of its max HP per second.",
+  "crystal.bastion.desc": "The Crystal takes 7% less damage and regenerates 0.15% of its max HP per second.",
   "crystal.permanent": "Choose one path. It is permanent for this run.",
   "crystal.pulse": "Aether Pulse",
   "crystal.pulse.desc": "Every 6 s the Crystal releases an Arcane nova that hits all enemies within 3.2 m.",

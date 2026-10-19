@@ -26,10 +26,10 @@ The AI inspector (Settings → Show ranges) shows each hero's components, its ru
 ## 2. Crystal Evolution (after wave 6, once per run)
 | Path | Effect | When to pick |
 |---|---|---|
-| Bastion | −10% damage taken, regenerates 0.2% max HP per second | The Crystal is often hit by leakers/sappers |
-| Aether Pulse | every 6 s, an Arcane nova (40 × wave scale) hits enemies within 3.2 m | Many small enemies reach the Crystal |
-| Thornheart | +30 thorns (Earth, × wave scale) back at every attacker | Bruiser/siege enemies stand and hit the Crystal |
-The choice is permanent and exclusive. It is saved with the run. Feature flag: `FeatureFlags.CrystalEvolution`.
+| Bastion | −7% damage taken, regenerates 0.15% max HP per second | The Crystal is often hit by leakers/sappers |
+| Aether Pulse | every 6 s, an Arcane nova (55 × wave scale) hits enemies within 3.2 m | Many small enemies reach the Crystal |
+| Thornheart | +45 thorns (Earth, × wave scale) back at every attacker | Bruiser/siege enemies stand and hit the Crystal |
+The choice is permanent and exclusive. It is saved with the run. Feature flag: `FeatureFlags.CrystalEvolution`. Tuned so that no path dominates: forcing each path (150 seeds × 12 lineups × scripted/greedy) gives Bastion 16.8/13.8%, Pulse 15.1/12.4%, Thorn 14.6/12.6% (overlapping CIs). An earlier version had Bastion ahead by ~5 points.
 
 ## 3. Shop & draft
 - **Lock** one item: it survives rerolls and waits in the next shop at its old price. Buying it clears the lock.
