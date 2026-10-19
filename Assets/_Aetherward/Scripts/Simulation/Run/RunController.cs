@@ -654,6 +654,12 @@ namespace Aetherward.Sim.Run
                 result.Add(pool[pick]);
                 pool.RemoveAt(pick);
             }
+            // Synergy guarantee: at least one recruit forms a signature reaction with the roster when any can.
+            if (result.Count > 1 && !result.Exists(id => SignatureCount(Content.Heroes[id].Element) > 0))
+            {
+                var synergy = pool.FindAll(id => SignatureCount(Content.Heroes[id].Element) > 0);
+                if (synergy.Count > 0) result[result.Count - 1] = synergy[rng.Range(0, synergy.Count)];
+            }
             return result;
         }
 
@@ -714,14 +720,20 @@ namespace Aetherward.Sim.Run
                 result.Add(pool[pick].Id);
                 pool.RemoveAt(pick);
             }
+            // Relevance guarantee: if nothing offered matches the team's elements but something could, swap the last pick.
+            if (result.Count > 1 && !result.Exists(id => ElementRelevance(Content.Relics[id]) > 1f))
+            {
+                var relevant = pool.FindAll(r => ElementRelevance(r) > 1f);
+                if (relevant.Count > 0) result[result.Count - 1] = relevant[rng.Range(0, relevant.Count)].Id;
+            }
             return result;
         }
 
         /// <summary>
-        /// Element-tagged relics lean toward the team's elements (x2 when one matches, x0.5 when none
+        /// Element-tagged relics lean toward the team's elements (x3 when one matches, x0.3 when none
         /// does) so a large catalog keeps offers relevant; untagged relics are unaffected.
         /// </summary>
-        private float ElementRelevance(RelicDef r)
+        public float ElementRelevance(RelicDef r)
         {
             bool tagged = false;
             foreach (string tag in r.Tags)
@@ -729,9 +741,9 @@ namespace Aetherward.Sim.Run
                 if (!ElementUtil.TryParse(tag, out Element el) || el == Element.None) continue;
                 tagged = true;
                 foreach (HeroRunState h in State.Heroes)
-                    if (Content.Heroes[h.DefId].Element == el) return 2f;
+                    if (Content.Heroes[h.DefId].Element == el) return 3f;
             }
-            return tagged ? 0.5f : 1f;
+            return tagged ? 0.3f : 1f;
         }
 
         private bool FusedAway(string relicId)

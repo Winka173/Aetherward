@@ -61,3 +61,17 @@ Sát thương mỗi hero (đợt 8, cấp 3, cùng Terra, 60 s, trung bình 4 se
 
 - Khoảng cách lớn giữa hai cột xác nhận nguyên nhân chính là **loãng pool** (24 hero, 59 relic). Đã thêm trọng số relic theo nguyên tố và chiêu mộ theo số Signature — các lối chơi launch tăng nhẹ (60→63 tổng).
 - Các lối chơi khởi đầu bằng 2 hero mở rộng (eclipse, engineers, phoenix, verdant_plague, thorn_doctor) **rất yếu với AutoPilot** (~0–1/30). Một phần do danh sách ưu tiên của bot; một phần do cặp khởi đầu thiếu sát thương diện rộng sớm. **Chưa giải quyết** — mục tiêu chính của pass cân bằng Phase 5 (K-04).
+
+## Phase 3 (36 hero, 81 relic, 80 thẻ)
+| Cấu hình (balanced, 60 seed) | Thắng |
+|---|---|
+| Cuối Phase 2 (`5f504a9`) | 24/60 |
+| Phase 3 logic (`0f3984f`) | 7/60 |
+| `0f3984f` bỏ 12 hero P3 | 13/60 |
+| `0f3984f` bỏ 12 hero + 17 relic P3 | 22/60 (≈ trước) |
+| Hiện tại (đề nghị theo nguyên tố ×3/×0.3, bảo đảm ≥1 relic hợp đội & ≥1 hero Signature mỗi lượt đề nghị, bot đánh giá vai trò/độ liên quan) | 13/60 |
+
+Toàn bộ 12 lối chơi (30 seed): 26–32/360 (~8%); `--launch-pool`: 117/360 (~33%).
+- **Bisect đã đo**: không có hero/relic P3 nào "hỏng" riêng lẻ; sát thương từng hero mới nằm trong dải roster (đã buff nhẹ Mirel, Oriane, Isolde, Veyra). Sụt giảm là **loãng pool nhân lên** (hero và relic mỗi loại ~½ tỉ lệ thắng). Sự kiện Elemental Shrine không phải nguyên nhân.
+- Thử đảo trọng số chiêu mộ sang "cùng nguyên tố" — không đổi (10/60), đã hoàn tác.
+- Ý nghĩa: người chơi mới chỉ có hero/relic khởi đầu (mở dần) ⇒ gần cột launch; với toàn bộ nội dung, AutoPilot không xây được đội nhất quán. **Chưa giải quyết** — mục tiêu số 1 của Phase 5 (K-04, mức Cao).

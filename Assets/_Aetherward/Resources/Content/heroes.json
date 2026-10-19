@@ -237,7 +237,7 @@
       "silhouette": "conductor's baton, orbiting rune rings, tailcoat with glyphs",
       "stats": { "max_hp": 440, "attack": 24, "defense": 13, "attack_interval": 1.15, "range": 4.2, "threat": 1.0, "elemental_mastery": 40, "move_speed": 2.4 },
       "basic": { "kind": "projectile", "mult": 1.0, "gauge": 1.2, "speed": 9 },
-      "skill": { "kind": "rune_circle", "cooldown": 8.0, "mult": 0.8, "gauge": 1.2, "radius": 2.0, "field": "rune_circle", "fieldRadius": 2.2, "fieldDuration": 5.0 },
+      "skill": { "kind": "rune_circle", "cooldown": 7.0, "mult": 1.2, "gauge": 1.2, "radius": 2.0, "field": "rune_circle", "fieldRadius": 2.2, "fieldDuration": 5.0 },
       "passive": { "kind": "rune_conductor", "every": 4, "refund": 0.8 },
       "evolutions": ["oriane_grand_conductor", "oriane_sigil_warden"]
     },
@@ -273,9 +273,9 @@
     {
       "id": "mirel", "element": "water", "role": "controller", "targeting": "nearest_to_crystal", "melee": false, "starter": false, "cost": 7,
       "silhouette": "river priestess, shell crown, flowing water ribbons",
-      "stats": { "max_hp": 430, "attack": 25, "defense": 12, "attack_interval": 1.1, "range": 4.0, "threat": 1.0, "move_speed": 2.4 },
+      "stats": { "max_hp": 430, "attack": 28, "defense": 12, "attack_interval": 1.05, "range": 4.0, "threat": 1.0, "move_speed": 2.4 },
       "basic": { "kind": "projectile", "mult": 1.0, "gauge": 1.0, "speed": 9 },
-      "skill": { "kind": "river_surge", "cooldown": 8.0, "mult": 1.0, "gauge": 1.2, "radius": 2.0, "push": 1.6,
+      "skill": { "kind": "river_surge", "cooldown": 7.0, "mult": 1.5, "gauge": 1.2, "radius": 2.0, "push": 1.6,
                  "field": "river_stream", "fieldRadius": 1.8, "fieldDuration": 4.0 },
       "passive": { "kind": "tidecaller", "bonus": 0.25 },
       "evolutions": ["mirel_flood_warden", "mirel_healing_streams"]
@@ -283,7 +283,7 @@
     {
       "id": "veyra", "element": "lightning", "role": "ranger", "targeting": "elite", "melee": false, "starter": false, "cost": 7,
       "silhouette": "long recurve bow strung with lightning, visor, quiver of copper arrows",
-      "stats": { "max_hp": 380, "attack": 28, "defense": 10, "attack_interval": 0.9, "range": 5.0, "threat": 0.9, "crit_chance": 0.1, "move_speed": 2.6 },
+      "stats": { "max_hp": 380, "attack": 31, "defense": 10, "attack_interval": 0.85, "range": 5.0, "threat": 0.9, "crit_chance": 0.1, "move_speed": 2.6 },
       "basic": { "kind": "projectile", "mult": 1.0, "gauge": 0.8, "speed": 13 },
       "skill": { "kind": "charged_shot", "cooldown": 7.0, "mult": 2.2, "gauge": 1.5, "perRamp": 0.15 },
       "passive": { "kind": "arcshot", "perStack": 0.06, "maxStacks": 6 },
@@ -294,7 +294,7 @@
       "silhouette": "frost lance, crystalline pauldron, braided white hair",
       "stats": { "max_hp": 400, "attack": 29, "defense": 11, "attack_interval": 1.1, "range": 4.2, "threat": 0.9, "move_speed": 2.4 },
       "basic": { "kind": "projectile", "mult": 1.0, "gauge": 1.0, "speed": 10 },
-      "skill": { "kind": "shatter_lance", "cooldown": 6.5, "mult": 1.6, "gauge": 1.0, "chillGauge": 2.0, "frozenBonus": 1.2, "shardRadius": 1.6, "shardMult": 0.6, "brittle": 0.2 },
+      "skill": { "kind": "shatter_lance", "cooldown": 5.5, "mult": 2.0, "gauge": 1.0, "chillGauge": 2.0, "frozenBonus": 1.2, "shardRadius": 1.6, "shardMult": 0.6, "brittle": 0.2 },
       "passive": { "kind": "frostbreaker", "bonus": 0.25 },
       "evolutions": ["isolde_shatter_burst", "isolde_glacial_engine"]
     },

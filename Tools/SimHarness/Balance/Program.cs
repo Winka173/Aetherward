@@ -152,6 +152,13 @@ namespace Aetherward.Balance
                 all.Relics.Clear();
                 for (int i = 0; i < db.RelicList.Count && i < 28; i++) all.Relics.Add(db.RelicList[i].Id);
             }
+            int ex = Array.IndexOf(args, "--exclude");
+            if (ex >= 0 && ex + 1 < args.Length)
+                foreach (string id in args[ex + 1].Split(','))
+                {
+                    all.Heroes.Remove(id);
+                    all.Relics.Remove(id);
+                }
             return all;
         }
     }

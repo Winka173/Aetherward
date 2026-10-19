@@ -321,10 +321,26 @@ namespace Aetherward.Sim.Run
                 if (offers[i].Price > _rc.State.Gold) continue;
                 HeroDef d = _rc.Content.Heroes[offers[i].Id];
                 // Off-plan recruits are judged like a player would: synergy and filling missing roles.
-                float score = Priority(_strategy.RecruitPriority, offers[i].Id) + (_rc.SignatureSynergy(d.Element) ? 1.5f : 0f) + _rng.NextFloat();
+                float score = Priority(_strategy.RecruitPriority, offers[i].Id) + 0.8f * Math.Min(3, _rc.SignatureCount(d.Element))
+                              + RoleNeed(d.Role) + _rng.NextFloat();
                 if (score > bestScore) { bestScore = score; best = i; }
             }
             return best;
+        }
+
+        /// <summary>A front-liner first, then sustain: what a player looks for when the plan's heroes are not offered.</summary>
+        private float RoleNeed(HeroRole role)
+        {
+            bool guard = false, sustain = false;
+            foreach (HeroRunState h in _rc.State.Heroes)
+            {
+                HeroRole r = _rc.Content.Heroes[h.DefId].Role;
+                guard |= r == HeroRole.Guardian || r == HeroRole.Bruiser;
+                sustain |= r == HeroRole.Healer || r == HeroRole.Support;
+            }
+            if (!guard && (role == HeroRole.Guardian || role == HeroRole.Bruiser)) return 1.2f;
+            if (!sustain && (role == HeroRole.Healer || role == HeroRole.Support)) return 0.8f;
+            return 0f;
         }
 
         private int BestRelic(List<Offer> offers)
@@ -334,7 +350,8 @@ namespace Aetherward.Sim.Run
             for (int i = 0; i < offers.Count; i++)
             {
                 RelicDef r = _rc.Content.Relics[offers[i].Id];
-                float score = Priority(_strategy.RelicPriority, r.Id) * 2f + (int)r.Rarity * 0.5f + (_rc.CompletesFusion(r.Id) ? 4f : 0f) + _rng.NextFloat();
+                float score = Priority(_strategy.RelicPriority, r.Id) * 2f + (int)r.Rarity * 0.5f + (_rc.CompletesFusion(r.Id) ? 4f : 0f)
+                              + (_rc.ElementRelevance(r) - 1f) * 1.5f + _rng.NextFloat();
                 if (!_strategy.TakePacts && HasDrawback(r.Effects)) score -= 3f; // risk relics only for risk-taking plans
                 if (score > bestScore) { bestScore = score; best = i; }
             }
