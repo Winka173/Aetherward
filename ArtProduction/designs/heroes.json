@@ -1,0 +1,183 @@
+{
+  "_doc": "Per-hero design direction for the Dark Mythic redraw (lead-authored). Data facts (name, element, role, silhouette note, evolution names/descriptions, role changes) are added automatically by handoff.py brief from Resources/Content. 'base' = idle/attack/cast/downed look; 'evoA'/'evoB' = what changes. Accent = element colour from elements.json, <= 20% of the figure.",
+  "ignis": {
+    "base": "Lean mage in layered charcoal and oxblood robes flaring to the floor, ash-grey mantle, tall pointed hood with a stiff peak bending back, face half-shadowed and lit from below by an ember orb caged in claw prongs on a blackened-iron staff that rises above the hood. Ember seams at hem and cuffs. Attack: staff thrust toward +X, orb flaring (no projectile).",
+    "evoA": "Meteor Archmage: stiff high collar of basalt plates, three molten rock fragments orbiting above the hood, longer staff crowned with a cracked magma stone, robes deepen to crimson with magma-crack trims.",
+    "evoB": "Ember Weaver: hood opens into a draped veil, burning threads woven between the fingers loop outside the body outline, shorter spindle-staff topped with a spiral, palette shifts to amber-gold and ash-white."
+  },
+  "cinder": {
+    "base": "Broad-shouldered vanguard in blackened half-plate with ember-glowing rivets, scorched red sash, cropped spiky ash hair, a FLAMING GREATSWORD (oversized, notched, flame running along the fuller) carried two-handed. Inverted-triangle bruiser shape. Attack: greatsword at the end of a horizontal cleave toward +X.",
+    "evoA": "Inferno Duelist (becomes assassin): sheds the heavy plate for a fitted leather coat and one pauldron, the greatsword reforged into two curved flame sabres, scarf tails of smoke, low lunging stance - silhouette becomes compact and fast.",
+    "evoB": "Ash Guardian (becomes guardian): full ash-grey tower plate, a great round ember-core shield on the left arm, greatsword shortened to a broad cleaver, cinder-cloak; silhouette becomes a wide wall."
+  },
+  "marina": {
+    "base": "Calm healer in layered sea-blue and slate robes with pale sea-foam trim, a suspended halo-ring of water droplets behind head and shoulders, staff crowned with a curling wave crest of pale shell and coral. Attack: staff swept forward toward +X, droplets leaving the crest (on the body layer only).",
+    "evoA": "Tide Saint: the droplet halo becomes a full standing ring of slowly falling rain, a long pearl-white stole, a reliquary shell lantern hangs from the staff - more sacred and vertical.",
+    "evoB": "Torrent Caller (becomes mage): robes tighten into a battle vestment with coral pauldrons, the wave crest grows into a jagged trident-like crest, water ribbons coil around the arms - aggressive, forward-leaning."
+  },
+  "tidal": {
+    "base": "Hooded wavebinder in a dark teal oilcloth coat and a face wrap, TWIN WATER WHIPS of living water coiling from bronze grips in both hands. Asymmetric controller shape with whip arcs outside the body. Attack: one whip lashing toward +X.",
+    "evoA": "Floodbreaker: heavier coat with a stormglass breastplate, whips thicken into a single great wave-flail with a crest, hood edged with barnacle-bronze.",
+    "evoB": "Healing Spring (becomes healer): hood drops to show a calm face, coat lightens to sea-foam and white, the whips soften into floating ribbons of clear water that circle the body like a spring."
+  },
+  "volt": {
+    "base": "Storm mage with spiky storm-grey hair crackling at the tips, a long charcoal coat with copper conductor plates, FLOATING CONDUCTOR RODS (three copper rods) hovering behind the shoulders. Accent violet lightning with gold sparks. Attack: arm thrust toward +X, rods aligned.",
+    "evoA": "Tempest Lord: the coat becomes a high-collared storm mantle, rods multiply into a crown-like ring of six, a small thundercloud gathers above the head.",
+    "evoB": "Circuit Conductor: rods join into a ring of linked copper coils on the back, conductor gauntlets with glowing circuitry lines, goggles pushed up - engineered, precise."
+  },
+  "raiden": {
+    "base": "Lean, compact thunder assassin in dark fitted leathers, a long violet SCARF streaming behind, half-mask, TWIN DAGGERS with lightning-forked blades held reverse-grip. Low crouched stance. Attack: dashing slash, both daggers extended toward +X.",
+    "evoA": "Stormblade: daggers lengthen into twin short swords trailing static, scarf splits into two lightning-ribbon tails, light shoulder guard with a storm sigil.",
+    "evoB": "Static Executioner: hooded executioner's mantle over the leathers, one dagger becomes a heavy hooked blade, a pale bone mask - menacing and still."
+  },
+  "freya": {
+    "base": "Frost regent with a tall CRYSTAL CROWN of ice spires, a long pale-blue cape trailing ice crystals, fitted silver-white gown with frost-lace, a slim ice sceptre. Asymmetric controller with cape mass behind. Attack: sceptre pointed toward +X, crown flaring.",
+    "evoA": "Blizzard Witch: cape becomes a torn storm of snow and shards, crown grows wild and jagged, wind-blown hair, the sceptre becomes a frost-gnarled stave.",
+    "evoB": "Crystalbinder (becomes support): faceted crystal pauldrons, orbiting ice-crystal shards around the shoulders like a ward, crown becomes a clean halo of prisms."
+  },
+  "glacius": {
+    "base": "Glacier sentinel in heavy frost-steel full plate, closed helm with an ice-crest, a huge ICE TOWER SHIELD (taller than half the body) on the left arm, short frost mace. Widest guardian trapezoid. Attack: shield bash forward toward +X.",
+    "evoA": "Permafrost Sentinel: shield gains a crown of glacier spikes and a rime aura, plate thickens with ice layers, frosty breath from the visor.",
+    "evoB": "Shatter Knight (becomes bruiser): shield is replaced by a massive two-handed ice warhammer, plate opens at the arms, cracked-ice pauldrons - offensive, forward-leaning."
+  },
+  "zephyr": {
+    "base": "Windward sage in a FEATHERED MANTLE of grey and teal feathers, long light robes moving in wind, an oversized war FAN of bone and silk. Calm vertical support with a soft air-ring behind. Attack: fan sweep toward +X.",
+    "evoA": "Cyclone Sage: mantle feathers lengthen into wing-like sweeps, a slow vortex of leaves circles the body, the fan doubles in size.",
+    "evoB": "Gale Tactician: a fitted tactician's coat with banner-cloth tails, twin smaller fans, a feathered command circlet - disciplined, upright."
+  },
+  "sylph": {
+    "base": "Lean ranger with a short hooded cloak with wind-torn edges and teal lining, leather jerkin and bracers, a LONGBOW as tall as the body held diagonally, quiver of pale-fletched arrows, stance turned sideways. Attack: bow at full extension after release toward +X (no arrow in flight).",
+    "evoA": "Tempest Archer: a recurve war-bow with wind-carved limbs, three arrows nocked in a fan, a longer cloak splitting into streamers.",
+    "evoB": "Wind Dancer: lighter, sleeveless, sash tails, a compact horn bow, ankle wraps, poised on the toes - fast and airy."
+  },
+  "terra": {
+    "base": "Broad armoured warden in dark bronze-steel plate, carved STONE SLAB PAULDRONS with glyphs and moss flecks, closed helm with a visor slit and two short stone-horn crests, ochre tabard, a huge two-handed glyph-carved stone MAUL resting head-down. Wide and low. Attack: maul at the end of a downward slam toward +X.",
+    "evoA": "Bedrock Warden: a carved stone aegis (half-shield, half-wall) on the back with a glowing crystal-protection glyph, pauldrons grow into stacked plinths, the maul head becomes a monolith.",
+    "evoB": "Living Fortress: armour overgrown with rock and moss like a walking rampart, small battlement-like crests on the shoulders, the maul fused into a stone gauntlet arm."
+  },
+  "magnus": {
+    "base": "Quake fist bruiser: bare massive arms with earth-glyph tattoos, HUGE STONE GAUNTLETS, a thick leather belt with a carved stone buckle, mohawk, wrapped legs. Inverted triangle with fists breaking the outline. Attack: right gauntlet punch extended to +X.",
+    "evoA": "Quake Champion: gauntlets grow into boulder fists, a champion's stone belt plate, shoulders cracked with glowing seams.",
+    "evoB": "Shardbreaker: one gauntlet becomes a spiked breaker-pick, crystal-shard studs on the knuckles, lighter armour, a focused hunting stance."
+  },
+  "seren": {
+    "base": "Dawn warden (she) in polished pale-gold and ivory plate, a SUN-DISC HALO HELM, a large kite shield with a sunburst, white tabard with gold trim, arming sword. Guardian trapezoid with the halo above. Attack: sword thrust toward +X behind the shield.",
+    "evoA": "Aegis of Dawn: the halo becomes a radiant disc behind the whole body, the shield grows into a tower of light-forged gold, long white cape.",
+    "evoB": "Purifier (becomes controller): helm opens into a circlet, plate lightens, a long purifying lantern-spear replaces the sword, floating sun-runes around her - offensive light."
+  },
+  "nyxara": {
+    "base": "Oathbinder assassin with a CRESCENT HOOD, a slim black-and-wine coat, FLOATING OATH-CHAINS of dark silver orbiting the body, a slim crescent-headed staff. Compact and low. Attack: staff slash with a chain whipping toward +X.",
+    "evoA": "Final Verdict: an executioner's crescent blade on the staff, chains carry small doom-seals, a tattered judge's mantle.",
+    "evoB": "Covenant of Ruin: a single massive oath-chain wrapped around the arm ending in a heavy seal-weight, a cracked mask, brittle-black armour shards."
+  },
+  "ashara": {
+    "base": "Phoenix knight (she) with PHOENIX-WING PAULDRONS of layered bronze feathers, a tall red plume helm, a curved SABRE, crimson and gold surcoat. Bruiser with wing-shaped shoulders breaking the outline. Attack: sabre at the end of a rising slash toward +X.",
+    "evoA": "Vengeance Flames: the wing pauldrons burn at the edges, the plume becomes living fire, cracked armour shows ember skin - fury.",
+    "evoB": "Rebirth Ward (becomes guardian): a round phoenix shield with an egg-like ember core, wings fold forward like a protective cloak, a calmer helm."
+  },
+  "nerissa": {
+    "base": "Tide oracle with a PEARL CIRCLET and a translucent ORACLE VEIL, flowing pale-aqua robes, a CONCH STAFF with a spiral shell head. Calm vertical support with floating water droplets. Attack: conch staff pointed toward +X.",
+    "evoA": "Pure Healer (becomes healer): veil becomes a long tidal mantle, a ring of pearls orbits the circlet, white and silver robes.",
+    "evoB": "Catalyst Conductor (becomes controller): the conch staff becomes a coral-branched catalyst rod, the veil tightens into a hooded cowl, dark-teal robes with bioluminescent trims."
+  },
+  "voltrix": {
+    "base": "Storm engineer with brass GOGGLES, a heavy TOOLBELT, a BACKPACK COIL (copper tesla coil rising above the shoulder), a long WRENCH-STAFF. Asymmetric mage with the coil breaking the outline. Attack: wrench-staff extended to +X, coil charged.",
+    "evoA": "Electric Network: the backpack sprouts three small pylon antennae linked by arcs, a longer insulated coat, goggles down.",
+    "evoB": "Ally Charger (becomes support): a harness of charge-batteries glowing gold, a lighter frame, the wrench-staff becomes a conductor baton with a lightning orb."
+  },
+  "eirwen": {
+    "base": "Frost paladin with a WINGED FROST HELM, a faceted CRYSTAL GREATSHIELD, a flanged MACE, silver-blue plate with a white surcoat. Guardian trapezoid. Attack: mace strike toward +X over the shield.",
+    "evoA": "Ice Bulwark: the greatshield grows ice wings at its edges, the helm wings lengthen, heavier plate with frost-runes.",
+    "evoB": "Shatter Counter (becomes bruiser): the shield becomes a spiked buckler, the mace becomes a two-handed crystal warhammer, an aggressive stance with cracked ice on the armour."
+  },
+  "kael": {
+    "base": "Gale dancer with a long FLOWING SASH, TWIN WAR-FANS of steel ribs and teal silk, BARE FEET, light wrapped clothing. Compact assassin in a spinning stance. Attack: both fans slashing toward +X.",
+    "evoA": "Precision Assassin: fans fold into a single long bladed fan, a half-mask, tighter wraps, minimal silhouette.",
+    "evoB": "Storm Shepherd (becomes controller): a shepherd's crook-fan, a wide wind-cloak, small cyclones at the feet (on the body), calmer posture."
+  },
+  "borun": {
+    "base": "Stocky stone architect with a MASON APRON, a single massive STONE GAUNTLET, a PLANS TUBE slung on the back, chisels on the belt, short beard. Short wide guardian. Attack: gauntlet palm pushing toward +X.",
+    "evoA": "Fortifier: a carried wall-section shield of fitted bricks, a builder's helm with a lamp, heavier apron plates.",
+    "evoB": "Spike Mason (becomes controller): stone spikes grow from the gauntlet and the shoulders, a rolled blueprint glowing with earth-runes in hand."
+  },
+  "liora": {
+    "base": "Grove warden druid with a LEAF CROWN, a MOSS CLOAK, a BLOSSOM STAFF with pale flowers on dark wood, bark-bracer arms. Asymmetric controller with hanging vines. Attack: staff thrust toward +X, petals on the body layer.",
+    "evoA": "Wildwood: the staff grows into a gnarled young tree, roots trail from the hem, an antler-branch crown.",
+    "evoB": "Spore Garden (becomes support): the cloak blooms with glowing mushrooms and spores, a softer hood of petals, a lantern of fungus hangs from the staff."
+  },
+  "thalen": {
+    "base": "Treant knight in BARK ARMOUR, a THORN SHIELD of woven brambles, an ANTLER HELM, a short wooden blade. Massive guardian trapezoid. Attack: shield push with thorns toward +X.",
+    "evoA": "Bramble Fortress: thorns grow over the whole shield and shoulders, a crown of branches, a heavier rooted stance.",
+    "evoB": "Overgrowth Charge (becomes bruiser): the shield is replaced by a long thorn whip coiled on the arm, leaner bark armour, a charging stance."
+  },
+  "vesper": {
+    "base": "Goggled alchemist in a LONG COAT stained with green, a FLASK BANDOLIER across the chest, leather gloves, a mixing staff. Asymmetric controller with coat tails. Attack: flask throw arm extended to +X (flask still in hand).",
+    "evoA": "Volatile Mixture: an explosive-flask harness, scorched coat, a blast mask, a bigger unstable flask in hand.",
+    "evoB": "Lingering Miasma: a long hooded coat leaking pale green mist at the hem (on the body), a censer on a chain."
+  },
+  "sable": {
+    "base": "Plague doctor with a beaked PLAGUE MASK, a RAVEN MANTLE of black feathers, a GREEN-SMOKE CENSER on a chain, a long cane. Vertical support with smoke wisps on the body. Attack: censer swung toward +X.",
+    "evoA": "Pandemic (becomes controller): a larger tattered raven cloak, two censers, a cracked mask leaking sickly light.",
+    "evoB": "Remedy: a white-banded mask, clean apothecary sash with vials, the censer burns pale cleansing smoke."
+  },
+  "caelis": {
+    "base": "Echo savant in VIOLET ROBES with a MIRRORED CIRCLET, a FLOATING RUNE-BOOK open beside the shoulder, slender hands with rune rings. Mage triangle. Attack: hand extended to +X with the book's pages fanned.",
+    "evoA": "Mirror Savant (becomes support): small mirror shards orbit the body reflecting ghost-images, a taller circlet of mirrors.",
+    "evoB": "Arcane Barrage: three floating books, a battle-cut robe, magenta rune sigils on the sleeves."
+  },
+  "oriane": {
+    "base": "Rune conductor in a GLYPH TAILCOAT with long tails, a conductor's BATON, ORBITING RUNE RINGS around the body. Support vertical with ring arcs. Attack: baton flick toward +X.",
+    "evoA": "Grand Conductor: rings multiply into a gyroscope of three around the body, a tall collar, a longer baton.",
+    "evoB": "Sigil Warden (becomes guardian): a rune-ring becomes a solid sigil shield on the arm, plate under the tailcoat, a sterner stance."
+  },
+  "zerith": {
+    "base": "Hooded rift-walker with a STAR CLOAK (black with tiny void-stars), a BLACK-STAR GAUNTLET, a face lost in shadow except two violet points. Asymmetric controller. Attack: gauntlet palm open toward +X.",
+    "evoA": "Singularity Lord: a small singularity orbits the gauntlet, the cloak edges dissolve into void, a broken halo of stars.",
+    "evoB": "Rift Walker (becomes mage): the hood opens, rift-cracks run across the cloak, two gauntlets, a lighter forward stance."
+  },
+  "maelis": {
+    "base": "Void sentinel in OBSIDIAN PLATE, a PORTAL TOWER SHIELD whose face is a swirling void, a VOID HALO above the helm. Guardian trapezoid. Attack: shield bash toward +X.",
+    "evoA": "Null Bastion: the shield doubles in width with obsidian fins, the halo becomes a wide dark ring, heavier plate.",
+    "evoB": "Portal Keeper (becomes controller): the shield becomes a ring-portal frame held aloft, a lighter cloak, drawing-in pose."
+  },
+  "solenne": {
+    "base": "Ember scribe with a BURNING QUILL, a SCROLL BELT of charred scrolls, INKY SLEEVES that fade into ember-lit ink, a scribe's robe. Mage triangle. Attack: quill slash toward +X writing an ember line (on the body layer only).",
+    "evoA": "Inferno Script: a huge scroll unrolled around the body burning at the edges, a quill like a flaming spear.",
+    "evoB": "Kindling Scribe (becomes support): a lantern-book, warmer robes, banner-scrolls on the back like a rally standard."
+  },
+  "mirel": {
+    "base": "River priestess with a SHELL CROWN, WATER RIBBONS floating around the arms, layered blue robes like river currents, bare feet in a ring of droplets (body only). Asymmetric controller. Attack: ribbons lashing toward +X.",
+    "evoA": "Flood Warden: heavier ribbons like a river around the body, a tall shell-spire crown.",
+    "evoB": "Healing Streams (becomes healer): softer white-blue robes, a reed staff with a flowing water ribbon, calm posture."
+  },
+  "veyra": {
+    "base": "Arcshot ranger with a LIGHTNING RECURVE BOW of copper and dark wood, a VISOR, a COPPER QUIVER, fitted leathers. Narrow ranger with a diagonal bow line. Attack: release toward +X (no arrow in flight).",
+    "evoA": "Boss Hunter (becomes assassin): a heavy longbow with a stabiliser and a hunter's cloak with trophies, a long-range stance.",
+    "evoB": "Split Conductor: a double-limbed bow with forked tips, arcing copper coils on the quiver."
+  },
+  "isolde": {
+    "base": "Frostbreaker mage with a FROST LANCE (long crystalline spear), a CRYSTAL PAULDRON on one shoulder, a long WHITE BRAID, fitted pale robes. Mage triangle broken by the lance. Attack: lance thrust toward +X.",
+    "evoA": "Shatter Burst: the lance tip becomes a cluster of shards, cracked-ice gauntlets, an explosive frost halo.",
+    "evoB": "Glacial Engine (becomes controller): an orbiting glacier core behind the back, the lance becomes a staff with a frozen engine-crystal."
+  },
+  "aeris": {
+    "base": "Tempest oracle with a WIND-CHIME STAFF (hanging bronze chimes), a FLOATING VEIL, FEATHERED SANDALS, layered light robes. Vertical support with the veil above. Attack: staff swing toward +X, chimes flying out.",
+    "evoA": "Zone Weaver: wind-woven ribbons extend like a loom around the body, a taller chime staff.",
+    "evoB": "Gale Curse (becomes controller): a darker veil like a storm cloud, chimes become rusted bells, a hunched cursing pose."
+  },
+  "doran": {
+    "base": "Granite fist (he) with GRANITE GAUNTLETS, STONE-SKIN ARMS cracked with glowing seams, a ROPE BELT, a simple wrapped tunic. Inverted-triangle bruiser. Attack: gauntlet punch extended to +X.",
+    "evoA": "Juggernaut (becomes guardian): stone plates grow over the chest and shoulders like armour, a stone shield-fist, a heavy stance.",
+    "evoB": "Fracture Striker: crystalline fracture lines across the arms, knuckle spikes, a lean striking stance."
+  },
+  "elowen": {
+    "base": "Sun cantor with SUN-EMBROIDERED ROBES, a GOLDEN SONGBOOK held open, RADIANT HAIR with light motes, a sunburst brooch. Vertical support with a soft halo. Attack: book thrust toward +X, a beam of light from the pages (on the body).",
+    "evoA": "Dawn Choir (becomes healer): a choir halo of three floating songbooks, a long white-gold cape.",
+    "evoB": "Solar Lance (becomes mage): the book becomes a golden lance-staff of focused light, a fitted battle robe, a sharp forward stance."
+  },
+  "morven": {
+    "base": "Gloom sentinel (he) in TATTERED BLACK MAIL, a CHAINED LANTERN with a cold violet flame, a CRESCENT GLAIVE. Guardian trapezoid. Attack: glaive sweep toward +X, the lantern swinging.",
+    "evoA": "Dread Bulwark: a dread tower shield with a skull-less mourning crest, heavier mail, the lantern on the shield.",
+    "evoB": "Soul Tithe (becomes bruiser): the glaive grows a hooked soul-reaper blade, souls coil in the lantern, a hunched aggressive stance."
+  }
+}

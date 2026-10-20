@@ -1,0 +1,2176 @@
+{
+ "batch": "B15",
+ "generatedBy": "Tools/ArtPipeline/handoff.py request",
+ "camera": null,
+ "groups": [
+  {
+   "id": "cards",
+   "title": "Cards",
+   "priority": "P1",
+   "required": true,
+   "assets": [
+    {
+     "id": "Cards/arcane_accord",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/arcane_accord.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "dea685a20168a711ba8f02106e5bcebb",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/arcane_accord.png"
+    },
+    {
+     "id": "Cards/arcane_attunement",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/arcane_attunement.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "035eadb4588c284d1c20ce8c9175f77c",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/arcane_attunement.png"
+    },
+    {
+     "id": "Cards/bedrock_oath",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/bedrock_oath.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "e997d2ad8526cb7cd1a313e61d45c8da",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/bedrock_oath.png"
+    },
+    {
+     "id": "Cards/bounty_hunter",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/bounty_hunter.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "463e6b9027c225f51ff674e4d4216601",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/bounty_hunter.png"
+    },
+    {
+     "id": "Cards/catalyst_surge",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/catalyst_surge.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "e3e42f78f4286e54f82c05b3ebea7030",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/catalyst_surge.png"
+    },
+    {
+     "id": "Cards/crystal_lattice",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/crystal_lattice.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "6fdf01b61a2b7a690c741619c7bec855",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/crystal_lattice.png"
+    },
+    {
+     "id": "Cards/dawn_vigil",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/dawn_vigil.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "79c054dd03cdb64487f9fb182313b499",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/dawn_vigil.png"
+    },
+    {
+     "id": "Cards/echoing_chant",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/echoing_chant.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "39b0156ce622802a003deb7e71b5e2e4",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/echoing_chant.png"
+    },
+    {
+     "id": "Cards/eclipse_theory",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/eclipse_theory.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "e0e8d7fa7f0694f983d6f2766b74a8ec",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/eclipse_theory.png"
+    },
+    {
+     "id": "Cards/elemental_overflow",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/elemental_overflow.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "52019b41da1a5f92b3798c2453749b5a",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/elemental_overflow.png"
+    },
+    {
+     "id": "Cards/empowered_spells",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/empowered_spells.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "96f04dd34be5429f7abf0813837b74ad",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/empowered_spells.png"
+    },
+    {
+     "id": "Cards/fortress_doctrine",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/fortress_doctrine.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "4a53f2ba55928cf9e05bf79cb2774aa6",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/fortress_doctrine.png"
+    },
+    {
+     "id": "Cards/gale_banner",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/gale_banner.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "2571ec93dbd6beb42db45e0219c9a301",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/gale_banner.png"
+    },
+    {
+     "id": "Cards/glacial_vow",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/glacial_vow.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "b3b7ea414ac696e1c10360a3b73fd290",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/glacial_vow.png"
+    },
+    {
+     "id": "Cards/hallowed_ground",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/hallowed_ground.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "9afb09be6693d5014b04b07006a29b55",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/hallowed_ground.png"
+    },
+    {
+     "id": "Cards/heavy_impact",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/heavy_impact.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "e472ac26126737037324bc56f48b0006",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/heavy_impact.png"
+    },
+    {
+     "id": "Cards/keen_edge",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/keen_edge.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "af7d6e52d294a90cdcdc98927036d09b",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/keen_edge.png"
+    },
+    {
+     "id": "Cards/lingering_elements",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/lingering_elements.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "7d850a9ddfc8b2f610cd650e9fe7f201",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/lingering_elements.png"
+    },
+    {
+     "id": "Cards/long_reach",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/long_reach.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "99755a2212d96e90fa07c505bc4a4d87",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/long_reach.png"
+    },
+    {
+     "id": "Cards/magma_core",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/magma_core.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "ffaafd2bd3ccf32bf5f38f779866f1ce",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/magma_core.png"
+    },
+    {
+     "id": "Cards/mender_training",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/mender_training.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "cbadf007353f173e40b7b7f85f4e66cf",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/mender_training.png"
+    },
+    {
+     "id": "Cards/night_oath",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/night_oath.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "b99ab70d530028e99e06d93c0828c561",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/night_oath.png"
+    },
+    {
+     "id": "Cards/overcharge",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/overcharge.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "88f60320497efb55a68141eaeb0ed2ce",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/overcharge.png"
+    },
+    {
+     "id": "Cards/overgrowth_theory",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/overgrowth_theory.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "b2678bb657c8433810d3b3a76e354504",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/overgrowth_theory.png"
+    },
+    {
+     "id": "Cards/overheal_barrier",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/overheal_barrier.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "4e6c2318ae05ba3b1dcd6f2b9e605f2d",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/overheal_barrier.png"
+    },
+    {
+     "id": "Cards/pact_of_cinders",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/pact_of_cinders.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "9a657720b3fc5db469bf2400035e762f",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/pact_of_cinders.png"
+    },
+    {
+     "id": "Cards/pact_of_glass",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/pact_of_glass.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "a47a61a0e1bece3b154e194f567a3912",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/pact_of_glass.png"
+    },
+    {
+     "id": "Cards/pact_of_haste",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/pact_of_haste.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "8d28c5258c5c4c003ea4b8ce1b408fd0",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/pact_of_haste.png"
+    },
+    {
+     "id": "Cards/pact_of_hunger",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/pact_of_hunger.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "10c83e90b98ff9efe7ab27dd19d78170",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/pact_of_hunger.png"
+    },
+    {
+     "id": "Cards/permafrost",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/permafrost.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "b5e7eeac566b0da2b9c566352644bc54",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/permafrost.png"
+    },
+    {
+     "id": "Cards/pyre_covenant",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/pyre_covenant.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "11237aa62fb3f5ee9e5d6dd77fd1a045",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/pyre_covenant.png"
+    },
+    {
+     "id": "Cards/quick_cast",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/quick_cast.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "e041ca896c180956936ea9275be6db21",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/quick_cast.png"
+    },
+    {
+     "id": "Cards/reinforced_plate",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/reinforced_plate.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "f63b4a23492f7c34a8acf23e73a044f9",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/reinforced_plate.png"
+    },
+    {
+     "id": "Cards/sharpened_focus",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/sharpened_focus.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "78f5bd1ed5435c267745f3c1ca5c6847",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/sharpened_focus.png"
+    },
+    {
+     "id": "Cards/spec_aeris_long_drift",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/spec_aeris_long_drift.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "1617ce4e1a097870338c6dd84b38af46",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/spec_aeris_long_drift.png"
+    },
+    {
+     "id": "Cards/spec_ashara_ember_heart",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/spec_ashara_ember_heart.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "afddd678c1d8b12224221abc7f6b412d",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/spec_ashara_ember_heart.png"
+    },
+    {
+     "id": "Cards/spec_borun_buttress",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/spec_borun_buttress.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "b446b214fbffb6a3a65c8e2e197c9cd7",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/spec_borun_buttress.png"
+    },
+    {
+     "id": "Cards/spec_caelis_resonant_echo",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/spec_caelis_resonant_echo.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "f9a2c29d9b7ed8912dba4b4cf11fa0fb",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/spec_caelis_resonant_echo.png"
+    },
+    {
+     "id": "Cards/spec_cinder_wildfire",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/spec_cinder_wildfire.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "e8f06e3877b56d3691f31e824c2b523b",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/spec_cinder_wildfire.png"
+    },
+    {
+     "id": "Cards/spec_doran_aftershock",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/spec_doran_aftershock.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "0833923f986b3bcb3bd06bcc64c2b54f",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/spec_doran_aftershock.png"
+    },
+    {
+     "id": "Cards/spec_eirwen_rimeguard",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/spec_eirwen_rimeguard.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "cbaf233ff5bdc2c4809eeb6072379a8b",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/spec_eirwen_rimeguard.png"
+    },
+    {
+     "id": "Cards/spec_elowen_bright_choir",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/spec_elowen_bright_choir.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "5cb475a3801938ace15af17d1dd562cb",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/spec_elowen_bright_choir.png"
+    },
+    {
+     "id": "Cards/spec_freya_whiteout",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/spec_freya_whiteout.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "ef700ec225eb1f4b2bdf8033b633a54c",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/spec_freya_whiteout.png"
+    },
+    {
+     "id": "Cards/spec_glacius_aegis",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/spec_glacius_aegis.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "99656992bbdb3163e512bdabdeb10478",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/spec_glacius_aegis.png"
+    },
+    {
+     "id": "Cards/spec_ignis_pyroclasm",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/spec_ignis_pyroclasm.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "5f7402c7f41f21e13d8863d67551c91e",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/spec_ignis_pyroclasm.png"
+    },
+    {
+     "id": "Cards/spec_isolde_deep_cold",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/spec_isolde_deep_cold.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "2cd030b958ea55fa91aef7c440684d32",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/spec_isolde_deep_cold.png"
+    },
+    {
+     "id": "Cards/spec_kael_tailwind",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/spec_kael_tailwind.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "81b6c12e4115e793cdeee91630ce8cc8",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/spec_kael_tailwind.png"
+    },
+    {
+     "id": "Cards/spec_liora_bramble",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/spec_liora_bramble.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "d94b492eb26c67af741d65d41bad1743",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/spec_liora_bramble.png"
+    },
+    {
+     "id": "Cards/spec_maelis_long_seal",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/spec_maelis_long_seal.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "0ea266e94432b5c5802efaa813fb3e4e",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/spec_maelis_long_seal.png"
+    },
+    {
+     "id": "Cards/spec_magnus_fault_line",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/spec_magnus_fault_line.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "1a296db7f1c8bbd9cc37b2a83b742b8a",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/spec_magnus_fault_line.png"
+    },
+    {
+     "id": "Cards/spec_marina_monsoon",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/spec_marina_monsoon.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "e543e248a3780da5c6027a7ed8d1fa80",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/spec_marina_monsoon.png"
+    },
+    {
+     "id": "Cards/spec_mirel_high_tide",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/spec_mirel_high_tide.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "5d6626f3bcc8996c9c35944df514004f",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/spec_mirel_high_tide.png"
+    },
+    {
+     "id": "Cards/spec_morven_wide_mire",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/spec_morven_wide_mire.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "5f4ce0b5a4d612d01658211c12d8c619",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/spec_morven_wide_mire.png"
+    },
+    {
+     "id": "Cards/spec_nerissa_rising_tide",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/spec_nerissa_rising_tide.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "7af6ce86721c609be780258ef52d17cc",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/spec_nerissa_rising_tide.png"
+    },
+    {
+     "id": "Cards/spec_nyxara_dread",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/spec_nyxara_dread.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "f66fc765f5cf865b366dbd8b8a20f4f6",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/spec_nyxara_dread.png"
+    },
+    {
+     "id": "Cards/spec_oriane_wide_circle",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/spec_oriane_wide_circle.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "16c400f705ec7e2b5389e4940f19c3cc",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/spec_oriane_wide_circle.png"
+    },
+    {
+     "id": "Cards/spec_raiden_afterimage",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/spec_raiden_afterimage.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "ab252f4ed85d799d27c9a57502c8eb00",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/spec_raiden_afterimage.png"
+    },
+    {
+     "id": "Cards/spec_sable_triage",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/spec_sable_triage.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "bb53b8804c4d5956cf83935cee2a3108",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/spec_sable_triage.png"
+    },
+    {
+     "id": "Cards/spec_seren_lightwell",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/spec_seren_lightwell.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "db53e29e2b9415663b6d7c7836d0cb8c",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/spec_seren_lightwell.png"
+    },
+    {
+     "id": "Cards/spec_solenne_bright_ink",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/spec_solenne_bright_ink.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "5498d03da521e7ff2686699a51061af6",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/spec_solenne_bright_ink.png"
+    },
+    {
+     "id": "Cards/spec_sylph_volley",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/spec_sylph_volley.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "1de2aca9002c65f52e2c5fa770840197",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/spec_sylph_volley.png"
+    },
+    {
+     "id": "Cards/spec_terra_sanctum",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/spec_terra_sanctum.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "7f7e57d09ead5ff7c6079142af601d32",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/spec_terra_sanctum.png"
+    },
+    {
+     "id": "Cards/spec_thalen_heartwood",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/spec_thalen_heartwood.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "677083d26207f81f1ba5686656f8fd2b",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/spec_thalen_heartwood.png"
+    },
+    {
+     "id": "Cards/spec_tidal_riptide",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/spec_tidal_riptide.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "ddec25f02a90d5ad2c2b3dabfde209de",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/spec_tidal_riptide.png"
+    },
+    {
+     "id": "Cards/spec_vesper_potency",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/spec_vesper_potency.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "4fdf7010730bb04025deaed4776f6617",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/spec_vesper_potency.png"
+    },
+    {
+     "id": "Cards/spec_veyra_overcharge_ramp",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/spec_veyra_overcharge_ramp.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "fd1d8ab1ffcf7abd7b19ac2cb6329881",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/spec_veyra_overcharge_ramp.png"
+    },
+    {
+     "id": "Cards/spec_volt_arc_lattice",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/spec_volt_arc_lattice.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "c43c3d46ffe19db5b81f0be4c664d579",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/spec_volt_arc_lattice.png"
+    },
+    {
+     "id": "Cards/spec_voltrix_capacitor",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/spec_voltrix_capacitor.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "f526d045521758ef6d312f002c2d67f6",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/spec_voltrix_capacitor.png"
+    },
+    {
+     "id": "Cards/spec_zephyr_eye_of_storm",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/spec_zephyr_eye_of_storm.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "f15f3a80fc14ccd59f17af01ceb0792e",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/spec_zephyr_eye_of_storm.png"
+    },
+    {
+     "id": "Cards/spec_zerith_event_pull",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/spec_zerith_event_pull.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "e6d3b6b38d62fc17ee17183dd320508a",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/spec_zerith_event_pull.png"
+    },
+    {
+     "id": "Cards/static_field",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/static_field.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "47c9b2c15cdf0663f778cf84a7cb4ced",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/static_field.png"
+    },
+    {
+     "id": "Cards/steam_engine",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/steam_engine.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "15249442577621def0ed1b22e4d8e92c",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/steam_engine.png"
+    },
+    {
+     "id": "Cards/storm_choir",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/storm_choir.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "7a1c04484f76beb27be5b63d6815f3ed",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/storm_choir.png"
+    },
+    {
+     "id": "Cards/storm_front",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/storm_front.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "46ab6994ec7bf2d9209d145583a376b4",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/storm_front.png"
+    },
+    {
+     "id": "Cards/swift_hands",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/swift_hands.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "100362ed46229da704c12f3ba6d6ec69",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/swift_hands.png"
+    },
+    {
+     "id": "Cards/tidebound",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/tidebound.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "b981c81baaa9e9e0334155e01bb20411",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/tidebound.png"
+    },
+    {
+     "id": "Cards/toxic_pact",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/toxic_pact.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "7796ec766516fef00be8b3b78aed1a33",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/toxic_pact.png"
+    },
+    {
+     "id": "Cards/toxic_shock_theory",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/toxic_shock_theory.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "7d94ac72cdbc51172cf01362830ec1f1",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/toxic_shock_theory.png"
+    },
+    {
+     "id": "Cards/void_covenant",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/void_covenant.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "928630781f3c70249a95ea65a6a35273",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/void_covenant.png"
+    },
+    {
+     "id": "Cards/wild_growth",
+     "livePath": "Assets/_Aetherward/Resources/Art/Cards/wild_growth.png",
+     "size": [
+      160,
+      160
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.8,
+      0.8
+     ],
+     "guid": "5ea60c63f66c9c0f1a869451d054c463",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Cards/wild_growth.png"
+    }
+   ]
+  }
+ ],
+ "assetCount": 80
+}

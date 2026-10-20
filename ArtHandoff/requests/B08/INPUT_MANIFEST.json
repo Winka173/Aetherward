@@ -1,0 +1,1099 @@
+{
+ "batch": "B08",
+ "generatedBy": "Tools/ArtPipeline/handoff.py request",
+ "camera": null,
+ "groups": [
+  {
+   "id": "launch",
+   "title": "Launch enemies and the Ravager elite",
+   "priority": "P1",
+   "required": true,
+   "assets": [
+    {
+     "id": "Enemies/runner_a",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/runner_a.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "c6387356a9c93228a974009ccf926d30",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.Ui.cs:349",
+      "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:127",
+      "Assets/_Aetherward/Scripts/Unity/Menu/MenuController.cs:336"
+     ],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/runner_a.png",
+     "guide": "ArtHandoff/requests/B08/references/guides/unit__Enemies__runner_a.png"
+    },
+    {
+     "id": "Enemies/runner_b",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/runner_b.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "0bc479415541e9c6ea8b50a1752e3a00",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:128"
+     ],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/runner_b.png",
+     "guide": "ArtHandoff/requests/B08/references/guides/unit__Enemies__runner_b.png"
+    },
+    {
+     "id": "Enemies/swarmling_a",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/swarmling_a.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "ed0ea0a1f97a7ca352b011ab005d88d7",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.Ui.cs:349",
+      "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:127",
+      "Assets/_Aetherward/Scripts/Unity/Menu/MenuController.cs:336"
+     ],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/swarmling_a.png",
+     "guide": "ArtHandoff/requests/B08/references/guides/unit__Enemies__swarmling_a.png"
+    },
+    {
+     "id": "Enemies/swarmling_b",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/swarmling_b.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "76b9bf0be706544dc728639dcbc36dfc",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:128"
+     ],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/swarmling_b.png",
+     "guide": "ArtHandoff/requests/B08/references/guides/unit__Enemies__swarmling_b.png"
+    },
+    {
+     "id": "Enemies/shieldbearer_a",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/shieldbearer_a.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "075ba38cfbee727caf169c0c64f196f1",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.Ui.cs:349",
+      "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:127",
+      "Assets/_Aetherward/Scripts/Unity/Menu/MenuController.cs:336"
+     ],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/shieldbearer_a.png",
+     "guide": "ArtHandoff/requests/B08/references/guides/unit__Enemies__shieldbearer_a.png"
+    },
+    {
+     "id": "Enemies/shieldbearer_b",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/shieldbearer_b.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "8fbd11afeb3a7d7dd4fa87b4c7ef4e9c",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:128"
+     ],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/shieldbearer_b.png",
+     "guide": "ArtHandoff/requests/B08/references/guides/unit__Enemies__shieldbearer_b.png"
+    },
+    {
+     "id": "Enemies/sapper_a",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/sapper_a.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "888cb2f4d285db3f9426a810dedbdb5d",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.Ui.cs:349",
+      "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:127",
+      "Assets/_Aetherward/Scripts/Unity/Menu/MenuController.cs:336"
+     ],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/sapper_a.png",
+     "guide": "ArtHandoff/requests/B08/references/guides/unit__Enemies__sapper_a.png"
+    },
+    {
+     "id": "Enemies/sapper_b",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/sapper_b.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "40e01739e287dcd61b1be046767056b7",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:128"
+     ],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/sapper_b.png",
+     "guide": "ArtHandoff/requests/B08/references/guides/unit__Enemies__sapper_b.png"
+    },
+    {
+     "id": "Enemies/warded_a",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/warded_a.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "108e5f1da4cf7ace83ea51a25a0f024f",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.Ui.cs:349",
+      "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:127",
+      "Assets/_Aetherward/Scripts/Unity/Menu/MenuController.cs:336"
+     ],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/warded_a.png",
+     "guide": "ArtHandoff/requests/B08/references/guides/unit__Enemies__warded_a.png"
+    },
+    {
+     "id": "Enemies/warded_b",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/warded_b.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "9b36cb35ea5075b55e576cd9ac41e043",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:128"
+     ],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/warded_b.png",
+     "guide": "ArtHandoff/requests/B08/references/guides/unit__Enemies__warded_b.png"
+    },
+    {
+     "id": "Enemies/summoner_a",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/summoner_a.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "1f8f92d30729b4b548797d3624efeda4",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.Ui.cs:349",
+      "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:127",
+      "Assets/_Aetherward/Scripts/Unity/Menu/MenuController.cs:336"
+     ],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/summoner_a.png",
+     "guide": "ArtHandoff/requests/B08/references/guides/unit__Enemies__summoner_a.png"
+    },
+    {
+     "id": "Enemies/summoner_b",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/summoner_b.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "e3d15baf730cae9749a4401cb06b1944",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:128"
+     ],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/summoner_b.png",
+     "guide": "ArtHandoff/requests/B08/references/guides/unit__Enemies__summoner_b.png"
+    },
+    {
+     "id": "Enemies/banner_a",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/banner_a.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "d30e4aa2ec91e30af1ccf04c0a9c4c57",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.Ui.cs:349",
+      "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:127",
+      "Assets/_Aetherward/Scripts/Unity/Menu/MenuController.cs:336"
+     ],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/banner_a.png",
+     "guide": "ArtHandoff/requests/B08/references/guides/unit__Enemies__banner_a.png"
+    },
+    {
+     "id": "Enemies/banner_b",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/banner_b.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "474b7c22f52b9f9130b21b80cff3703a",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:128"
+     ],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/banner_b.png",
+     "guide": "ArtHandoff/requests/B08/references/guides/unit__Enemies__banner_b.png"
+    },
+    {
+     "id": "Enemies/mimic_a",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/mimic_a.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "9ccbffa74cd23430104dabfce6d88766",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.Ui.cs:349",
+      "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:127",
+      "Assets/_Aetherward/Scripts/Unity/Menu/MenuController.cs:336"
+     ],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/mimic_a.png",
+     "guide": "ArtHandoff/requests/B08/references/guides/unit__Enemies__mimic_a.png"
+    },
+    {
+     "id": "Enemies/mimic_b",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/mimic_b.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "1269d6ed7f22af42dd7d0cadc51f43a5",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:128"
+     ],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/mimic_b.png",
+     "guide": "ArtHandoff/requests/B08/references/guides/unit__Enemies__mimic_b.png"
+    },
+    {
+     "id": "Enemies/riftling_a",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/riftling_a.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "4d2cd3d0734b74653f6f992d7d9f75d7",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.Ui.cs:349",
+      "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:127",
+      "Assets/_Aetherward/Scripts/Unity/Menu/MenuController.cs:336"
+     ],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/riftling_a.png",
+     "guide": "ArtHandoff/requests/B08/references/guides/unit__Enemies__riftling_a.png"
+    },
+    {
+     "id": "Enemies/riftling_b",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/riftling_b.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "d5dc32e255a1f0e8b9ba3762f463f0f4",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:128"
+     ],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/riftling_b.png",
+     "guide": "ArtHandoff/requests/B08/references/guides/unit__Enemies__riftling_b.png"
+    },
+    {
+     "id": "Enemies/ravager_a",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/ravager_a.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "fcf22ed52ab414fd2cc467b841ee5e03",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.Ui.cs:349",
+      "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:127",
+      "Assets/_Aetherward/Scripts/Unity/Menu/MenuController.cs:336"
+     ],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/ravager_a.png",
+     "guide": "ArtHandoff/requests/B08/references/guides/unit__Enemies__ravager_a.png"
+    },
+    {
+     "id": "Enemies/ravager_b",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/ravager_b.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "347c6e4f4c7fd06f73a66cf136189682",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:128"
+     ],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/ravager_b.png",
+     "guide": "ArtHandoff/requests/B08/references/guides/unit__Enemies__ravager_b.png"
+    },
+    {
+     "id": "Enemies/runner_attack",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/runner_attack.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "new": true,
+     "like": "Enemies/runner_a",
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/runner_a.png",
+     "guide": "ArtHandoff/requests/B08/references/guides/unit__Enemies__runner_attack.png"
+    },
+    {
+     "id": "Enemies/swarmling_attack",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/swarmling_attack.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "new": true,
+     "like": "Enemies/swarmling_a",
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/swarmling_a.png",
+     "guide": "ArtHandoff/requests/B08/references/guides/unit__Enemies__swarmling_attack.png"
+    },
+    {
+     "id": "Enemies/shieldbearer_attack",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/shieldbearer_attack.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "new": true,
+     "like": "Enemies/shieldbearer_a",
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/shieldbearer_a.png",
+     "guide": "ArtHandoff/requests/B08/references/guides/unit__Enemies__shieldbearer_attack.png"
+    },
+    {
+     "id": "Enemies/sapper_attack",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/sapper_attack.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "new": true,
+     "like": "Enemies/sapper_a",
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/sapper_a.png",
+     "guide": "ArtHandoff/requests/B08/references/guides/unit__Enemies__sapper_attack.png"
+    },
+    {
+     "id": "Enemies/warded_attack",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/warded_attack.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "new": true,
+     "like": "Enemies/warded_a",
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/warded_a.png",
+     "guide": "ArtHandoff/requests/B08/references/guides/unit__Enemies__warded_attack.png"
+    },
+    {
+     "id": "Enemies/summoner_attack",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/summoner_attack.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "new": true,
+     "like": "Enemies/summoner_a",
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/summoner_a.png",
+     "guide": "ArtHandoff/requests/B08/references/guides/unit__Enemies__summoner_attack.png"
+    },
+    {
+     "id": "Enemies/banner_attack",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/banner_attack.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "new": true,
+     "like": "Enemies/banner_a",
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/banner_a.png",
+     "guide": "ArtHandoff/requests/B08/references/guides/unit__Enemies__banner_attack.png"
+    },
+    {
+     "id": "Enemies/mimic_attack",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/mimic_attack.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "new": true,
+     "like": "Enemies/mimic_a",
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/mimic_a.png",
+     "guide": "ArtHandoff/requests/B08/references/guides/unit__Enemies__mimic_attack.png"
+    },
+    {
+     "id": "Enemies/riftling_attack",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/riftling_attack.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "new": true,
+     "like": "Enemies/riftling_a",
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/riftling_a.png",
+     "guide": "ArtHandoff/requests/B08/references/guides/unit__Enemies__riftling_attack.png"
+    },
+    {
+     "id": "Enemies/ravager_attack",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/ravager_attack.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "new": true,
+     "like": "Enemies/ravager_a",
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/ravager_a.png",
+     "guide": "ArtHandoff/requests/B08/references/guides/unit__Enemies__ravager_attack.png"
+    }
+   ]
+  },
+  {
+   "id": "b01_attack",
+   "title": "Attack frames for the B01 enemies",
+   "priority": "P1",
+   "required": true,
+   "assets": [
+    {
+     "id": "Enemies/grunt_attack",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/grunt_attack.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "new": true,
+     "like": "Enemies/grunt_a",
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/grunt_a.png",
+     "guide": "ArtHandoff/requests/B08/references/guides/unit__Enemies__grunt_attack.png"
+    },
+    {
+     "id": "Enemies/juggernaut_attack",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/juggernaut_attack.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "new": true,
+     "like": "Enemies/juggernaut_a",
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/juggernaut_a.png",
+     "guide": "ArtHandoff/requests/B08/references/guides/unit__Enemies__juggernaut_attack.png"
+    },
+    {
+     "id": "Enemies/hexcaster_attack",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/hexcaster_attack.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "new": true,
+     "like": "Enemies/hexcaster_a",
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/hexcaster_a.png",
+     "guide": "ArtHandoff/requests/B08/references/guides/unit__Enemies__hexcaster_attack.png"
+    },
+    {
+     "id": "Enemies/storm_harpy_attack",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/storm_harpy_attack.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "flyer": true,
+     "new": true,
+     "like": "Enemies/storm_harpy_a",
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/storm_harpy_a.png",
+     "guide": "ArtHandoff/requests/B08/references/guides/unit__Enemies__storm_harpy_attack.png"
+    }
+   ]
+  }
+ ],
+ "assetCount": 34
+}

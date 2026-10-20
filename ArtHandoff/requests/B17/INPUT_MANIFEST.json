@@ -1,0 +1,669 @@
+{
+ "batch": "B17",
+ "generatedBy": "Tools/ArtPipeline/handoff.py request",
+ "camera": null,
+ "groups": [
+  {
+   "id": "ui",
+   "title": "UI",
+   "priority": "P1",
+   "required": true,
+   "assets": [
+    {
+     "id": "UI/button_danger_disabled",
+     "livePath": "Assets/_Aetherward/Resources/Art/UI/button_danger_disabled.png",
+     "size": [
+      192,
+      96
+     ],
+     "mode": "RGBA",
+     "ppu": 100,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      36,
+      36,
+      36,
+      36
+     ],
+     "worldSize": [
+      1.92,
+      0.96
+     ],
+     "guid": "ca07eb74bd6485c9556072240e917e38",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/UI/Ui.cs:111",
+      "Assets/_Aetherward/Scripts/Unity/UI/Ui.cs:112",
+      "Assets/_Aetherward/Scripts/Unity/UI/Ui.cs:113",
+      "Assets/_Aetherward/Scripts/Unity/UI/Ui.cs:124"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/UI/button_danger_disabled.png"
+    },
+    {
+     "id": "UI/button_danger_hover",
+     "livePath": "Assets/_Aetherward/Resources/Art/UI/button_danger_hover.png",
+     "size": [
+      192,
+      96
+     ],
+     "mode": "RGBA",
+     "ppu": 100,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      36,
+      36,
+      36,
+      36
+     ],
+     "worldSize": [
+      1.92,
+      0.96
+     ],
+     "guid": "a55306f905ed8f4e8d93f14fb0229ec6",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/UI/Ui.cs:111",
+      "Assets/_Aetherward/Scripts/Unity/UI/Ui.cs:112",
+      "Assets/_Aetherward/Scripts/Unity/UI/Ui.cs:113",
+      "Assets/_Aetherward/Scripts/Unity/UI/Ui.cs:124"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/UI/button_danger_hover.png"
+    },
+    {
+     "id": "UI/button_danger_normal",
+     "livePath": "Assets/_Aetherward/Resources/Art/UI/button_danger_normal.png",
+     "size": [
+      192,
+      96
+     ],
+     "mode": "RGBA",
+     "ppu": 100,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      36,
+      36,
+      36,
+      36
+     ],
+     "worldSize": [
+      1.92,
+      0.96
+     ],
+     "guid": "0096e2d6b03e25d7867ae1c5ca770771",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/UI/Ui.cs:111",
+      "Assets/_Aetherward/Scripts/Unity/UI/Ui.cs:112",
+      "Assets/_Aetherward/Scripts/Unity/UI/Ui.cs:113",
+      "Assets/_Aetherward/Scripts/Unity/UI/Ui.cs:124"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/UI/button_danger_normal.png"
+    },
+    {
+     "id": "UI/button_danger_pressed",
+     "livePath": "Assets/_Aetherward/Resources/Art/UI/button_danger_pressed.png",
+     "size": [
+      192,
+      96
+     ],
+     "mode": "RGBA",
+     "ppu": 100,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      36,
+      36,
+      36,
+      36
+     ],
+     "worldSize": [
+      1.92,
+      0.96
+     ],
+     "guid": "4877c768dc85267a3d00dc60911f541e",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/UI/Ui.cs:111",
+      "Assets/_Aetherward/Scripts/Unity/UI/Ui.cs:112",
+      "Assets/_Aetherward/Scripts/Unity/UI/Ui.cs:113",
+      "Assets/_Aetherward/Scripts/Unity/UI/Ui.cs:124"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/UI/button_danger_pressed.png"
+    },
+    {
+     "id": "UI/button_ghost_disabled",
+     "livePath": "Assets/_Aetherward/Resources/Art/UI/button_ghost_disabled.png",
+     "size": [
+      192,
+      96
+     ],
+     "mode": "RGBA",
+     "ppu": 100,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      36,
+      36,
+      36,
+      36
+     ],
+     "worldSize": [
+      1.92,
+      0.96
+     ],
+     "guid": "7bcf2e8eba72d8bcfe140414925a6b11",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/UI/Ui.cs:111",
+      "Assets/_Aetherward/Scripts/Unity/UI/Ui.cs:112",
+      "Assets/_Aetherward/Scripts/Unity/UI/Ui.cs:113",
+      "Assets/_Aetherward/Scripts/Unity/UI/Ui.cs:124"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/UI/button_ghost_disabled.png"
+    },
+    {
+     "id": "UI/button_ghost_hover",
+     "livePath": "Assets/_Aetherward/Resources/Art/UI/button_ghost_hover.png",
+     "size": [
+      192,
+      96
+     ],
+     "mode": "RGBA",
+     "ppu": 100,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      36,
+      36,
+      36,
+      36
+     ],
+     "worldSize": [
+      1.92,
+      0.96
+     ],
+     "guid": "b0147659375dcb62c132ef3ce62f224d",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/UI/Ui.cs:111",
+      "Assets/_Aetherward/Scripts/Unity/UI/Ui.cs:112",
+      "Assets/_Aetherward/Scripts/Unity/UI/Ui.cs:113",
+      "Assets/_Aetherward/Scripts/Unity/UI/Ui.cs:124"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/UI/button_ghost_hover.png"
+    },
+    {
+     "id": "UI/button_ghost_normal",
+     "livePath": "Assets/_Aetherward/Resources/Art/UI/button_ghost_normal.png",
+     "size": [
+      192,
+      96
+     ],
+     "mode": "RGBA",
+     "ppu": 100,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      36,
+      36,
+      36,
+      36
+     ],
+     "worldSize": [
+      1.92,
+      0.96
+     ],
+     "guid": "e6ad76bdd5efc00a2e7bc0c7c935d560",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/UI/Ui.cs:111",
+      "Assets/_Aetherward/Scripts/Unity/UI/Ui.cs:112",
+      "Assets/_Aetherward/Scripts/Unity/UI/Ui.cs:113",
+      "Assets/_Aetherward/Scripts/Unity/UI/Ui.cs:124"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/UI/button_ghost_normal.png"
+    },
+    {
+     "id": "UI/button_ghost_pressed",
+     "livePath": "Assets/_Aetherward/Resources/Art/UI/button_ghost_pressed.png",
+     "size": [
+      192,
+      96
+     ],
+     "mode": "RGBA",
+     "ppu": 100,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      36,
+      36,
+      36,
+      36
+     ],
+     "worldSize": [
+      1.92,
+      0.96
+     ],
+     "guid": "760711407bf0f955f5f1e796f0eb2163",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/UI/Ui.cs:111",
+      "Assets/_Aetherward/Scripts/Unity/UI/Ui.cs:112",
+      "Assets/_Aetherward/Scripts/Unity/UI/Ui.cs:113",
+      "Assets/_Aetherward/Scripts/Unity/UI/Ui.cs:124"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/UI/button_ghost_pressed.png"
+    },
+    {
+     "id": "UI/button_secondary_disabled",
+     "livePath": "Assets/_Aetherward/Resources/Art/UI/button_secondary_disabled.png",
+     "size": [
+      192,
+      96
+     ],
+     "mode": "RGBA",
+     "ppu": 100,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      36,
+      36,
+      36,
+      36
+     ],
+     "worldSize": [
+      1.92,
+      0.96
+     ],
+     "guid": "8a8082e07ea942d33f180cd14da0ea76",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/UI/Ui.cs:111",
+      "Assets/_Aetherward/Scripts/Unity/UI/Ui.cs:112",
+      "Assets/_Aetherward/Scripts/Unity/UI/Ui.cs:113",
+      "Assets/_Aetherward/Scripts/Unity/UI/Ui.cs:124"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/UI/button_secondary_disabled.png"
+    },
+    {
+     "id": "UI/button_secondary_hover",
+     "livePath": "Assets/_Aetherward/Resources/Art/UI/button_secondary_hover.png",
+     "size": [
+      192,
+      96
+     ],
+     "mode": "RGBA",
+     "ppu": 100,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      36,
+      36,
+      36,
+      36
+     ],
+     "worldSize": [
+      1.92,
+      0.96
+     ],
+     "guid": "2605c2e3f0963f1dc54cbcfcd2381211",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/UI/Ui.cs:111",
+      "Assets/_Aetherward/Scripts/Unity/UI/Ui.cs:112",
+      "Assets/_Aetherward/Scripts/Unity/UI/Ui.cs:113",
+      "Assets/_Aetherward/Scripts/Unity/UI/Ui.cs:124"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/UI/button_secondary_hover.png"
+    },
+    {
+     "id": "UI/button_secondary_normal",
+     "livePath": "Assets/_Aetherward/Resources/Art/UI/button_secondary_normal.png",
+     "size": [
+      192,
+      96
+     ],
+     "mode": "RGBA",
+     "ppu": 100,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      36,
+      36,
+      36,
+      36
+     ],
+     "worldSize": [
+      1.92,
+      0.96
+     ],
+     "guid": "c297b55f6fe497d8951ca22dbb9a7f83",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/UI/Ui.cs:111",
+      "Assets/_Aetherward/Scripts/Unity/UI/Ui.cs:112",
+      "Assets/_Aetherward/Scripts/Unity/UI/Ui.cs:113",
+      "Assets/_Aetherward/Scripts/Unity/UI/Ui.cs:124"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/UI/button_secondary_normal.png"
+    },
+    {
+     "id": "UI/button_secondary_pressed",
+     "livePath": "Assets/_Aetherward/Resources/Art/UI/button_secondary_pressed.png",
+     "size": [
+      192,
+      96
+     ],
+     "mode": "RGBA",
+     "ppu": 100,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      36,
+      36,
+      36,
+      36
+     ],
+     "worldSize": [
+      1.92,
+      0.96
+     ],
+     "guid": "d270fdf7258606b5b27c8899a9bbd480",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/UI/Ui.cs:111",
+      "Assets/_Aetherward/Scripts/Unity/UI/Ui.cs:112",
+      "Assets/_Aetherward/Scripts/Unity/UI/Ui.cs:113",
+      "Assets/_Aetherward/Scripts/Unity/UI/Ui.cs:124"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/UI/button_secondary_pressed.png"
+    },
+    {
+     "id": "UI/card_common",
+     "livePath": "Assets/_Aetherward/Resources/Art/UI/card_common.png",
+     "size": [
+      256,
+      360
+     ],
+     "mode": "RGBA",
+     "ppu": 100,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      48,
+      48,
+      48,
+      80
+     ],
+     "worldSize": [
+      2.56,
+      3.6
+     ],
+     "guid": "3d38f3794e6d2b493571744f3ff01734",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/UI/Ui.cs:130"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/UI/card_common.png"
+    },
+    {
+     "id": "UI/card_cursed",
+     "livePath": "Assets/_Aetherward/Resources/Art/UI/card_cursed.png",
+     "size": [
+      256,
+      360
+     ],
+     "mode": "RGBA",
+     "ppu": 100,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      48,
+      48,
+      48,
+      80
+     ],
+     "worldSize": [
+      2.56,
+      3.6
+     ],
+     "guid": "f72b4161dd0819cdfeb63547809ff62e",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/UI/Ui.cs:130"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/UI/card_cursed.png"
+    },
+    {
+     "id": "UI/card_epic",
+     "livePath": "Assets/_Aetherward/Resources/Art/UI/card_epic.png",
+     "size": [
+      256,
+      360
+     ],
+     "mode": "RGBA",
+     "ppu": 100,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      48,
+      48,
+      48,
+      80
+     ],
+     "worldSize": [
+      2.56,
+      3.6
+     ],
+     "guid": "f7336796700e7fe576de3ceba6f280cf",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/UI/Ui.cs:130"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/UI/card_epic.png"
+    },
+    {
+     "id": "UI/card_legendary",
+     "livePath": "Assets/_Aetherward/Resources/Art/UI/card_legendary.png",
+     "size": [
+      256,
+      360
+     ],
+     "mode": "RGBA",
+     "ppu": 100,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      48,
+      48,
+      48,
+      80
+     ],
+     "worldSize": [
+      2.56,
+      3.6
+     ],
+     "guid": "0504323d4d3427eb5f0cd26aa0deee08",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/UI/Ui.cs:130"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/UI/card_legendary.png"
+    },
+    {
+     "id": "UI/panel_danger",
+     "livePath": "Assets/_Aetherward/Resources/Art/UI/panel_danger.png",
+     "size": [
+      128,
+      128
+     ],
+     "mode": "RGBA",
+     "ppu": 100,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      40,
+      40,
+      40,
+      40
+     ],
+     "worldSize": [
+      1.28,
+      1.28
+     ],
+     "guid": "8476d4a1783c0179523299fed38dbc99",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/UI/Ui.cs:99",
+      "Assets/_Aetherward/Scripts/Unity/UI/Ui.cs:100",
+      "Assets/_Aetherward/Scripts/Unity/UI/Ui.cs:101",
+      "Assets/_Aetherward/Scripts/Unity/UI/Ui.cs:102"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/UI/panel_danger.png"
+    },
+    {
+     "id": "UI/panel_glass",
+     "livePath": "Assets/_Aetherward/Resources/Art/UI/panel_glass.png",
+     "size": [
+      128,
+      128
+     ],
+     "mode": "RGBA",
+     "ppu": 100,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      40,
+      40,
+      40,
+      40
+     ],
+     "worldSize": [
+      1.28,
+      1.28
+     ],
+     "guid": "cd7456361b0d82b8d67ac4e97f48ab24",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/UI/Ui.cs:99",
+      "Assets/_Aetherward/Scripts/Unity/UI/Ui.cs:100",
+      "Assets/_Aetherward/Scripts/Unity/UI/Ui.cs:101",
+      "Assets/_Aetherward/Scripts/Unity/UI/Ui.cs:102"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/UI/panel_glass.png"
+    },
+    {
+     "id": "UI/panel_light",
+     "livePath": "Assets/_Aetherward/Resources/Art/UI/panel_light.png",
+     "size": [
+      128,
+      128
+     ],
+     "mode": "RGBA",
+     "ppu": 100,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      40,
+      40,
+      40,
+      40
+     ],
+     "worldSize": [
+      1.28,
+      1.28
+     ],
+     "guid": "1b925c3e33ae882a59715af33f24295f",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/UI/Ui.cs:99",
+      "Assets/_Aetherward/Scripts/Unity/UI/Ui.cs:100",
+      "Assets/_Aetherward/Scripts/Unity/UI/Ui.cs:101",
+      "Assets/_Aetherward/Scripts/Unity/UI/Ui.cs:102"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/UI/panel_light.png"
+    },
+    {
+     "id": "UI/title_emblem",
+     "livePath": "Assets/_Aetherward/Resources/Art/UI/title_emblem.png",
+     "size": [
+      1024,
+      320
+     ],
+     "mode": "RGBA",
+     "ppu": 100,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      10.24,
+      3.2
+     ],
+     "guid": "f4ce113391d23ab034c30c490d5da7ac",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Core/GameRoot.cs:172",
+      "Assets/_Aetherward/Scripts/Unity/Menu/MenuController.cs:112"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/UI/title_emblem.png"
+    },
+    {
+     "id": "UI/vignette",
+     "livePath": "Assets/_Aetherward/Resources/Art/UI/vignette.png",
+     "size": [
+      512,
+      288
+     ],
+     "mode": "RGBA",
+     "ppu": 100,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      5.12,
+      2.88
+     ],
+     "guid": "f97135b16998419806b67c277c99e042",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/UI/vignette.png"
+    }
+   ]
+  }
+ ],
+ "assetCount": 21
+}

@@ -3,7 +3,8 @@
 
   request --batch B01        expand ArtHandoff/requests/B01/batch.json into INPUT_MANIFEST.json (facts read from
                              the live project: size, PPU, pivot, border, .meta GUID, code references), copy the
-                             current sprites to references/current/ and draw layout/scale guides into references/guides/
+                             draw layout/scale guides into references/guides/ (current sprites are referenced by live path)
+  brief   --batch B02        write CODEX_ART_REQUEST.md from batch.json + COMMON_CONTRACT + game data + ArtProduction/designs
   intake  --batch B01        check ArtHandoff/returns/B01 against the request (manifest, files, size, alpha, foot row,
                              write scope), stage the returned exports over a copy of the live art in Temp/ArtStage-B01
                              and run the Art Quality Validator on that stage. Never touches Assets/.
@@ -100,9 +101,17 @@ def font(size):
     return ImageFont.load_default()
 
 
-def layout_guide(path, size, ppu):
-    """Battlefield guide at the background's own pixel grid: lanes, nodes, crystal, camera views."""
-    arena = jsonc(ARENA)
+def biome_for_background(asset):
+    for b in jsonc(os.path.join(A.CONTENT, "biomes.json"))["biomes"]:
+        if b.get("background") == asset:
+            return b
+    return None
+
+
+def layout_guide(path, size, ppu, biome=None):
+    """Battlefield guide at the background's own pixel grid: lanes, nodes, crystal, camera views,
+    plus the biome's hazard points, special nodes and covers when the biome has its own arena."""
+    arena = biome["arena"] if biome and isinstance(biome.get("arena"), dict) else jsonc(ARENA)
     W, H = size
     img = Image.new("RGBA", (W, H), (24, 26, 30, 255))
     d = ImageDraw.Draw(img)
@@ -136,6 +145,24 @@ def layout_guide(path, size, ppu):
         d.text((cx - 8, cy - 12), str(i), fill=(120, 255, 160, 255), font=font(22))
         # hero stands here: 2.0 x 2.0 unit sprite, feet at the node
         d.rectangle([cx - 0.5 * ppu, cy - 1.75 * ppu, cx + 0.5 * ppu, cy], outline=(120, 255, 160, 90), width=1)
+    if biome:
+        special = {t["node"]: t["trait"] for t in biome.get("nodeTraits", [])}
+        for i, tr in special.items():
+            x, y = arena["nodes"][i]
+            d.text((px(x, y)[0] + 30, px(x, y)[1] - 10), tr, fill=(255, 230, 120, 255), font=font(20))
+        for hz in biome.get("hazards", []):
+            for x, y in hz.get("points", []):
+                r = hz.get("radius", 1.0) * ppu
+                c = px(x, y)
+                d.ellipse([c[0] - r, c[1] - r * 0.62, c[0] + r, c[1] + r * 0.62], outline=(255, 170, 40, 255), width=3)
+                d.text((c[0] - r, c[1] - r * 0.62 - 24), hz["kind"], fill=(255, 170, 40, 255), font=font(18))
+        for cv in biome.get("covers", []):
+            c, r = px(*cv["pos"]), cv["radius"] * ppu
+            d.ellipse([c[0] - r, c[1] - r * 0.62, c[0] + r, c[1] + r * 0.62], outline=(160, 220, 255, 255), width=3)
+            d.text((c[0] - r, c[1] + r * 0.62), "cover", fill=(160, 220, 255, 255), font=font(18))
+        for ls in biome.get("laneSchedule", []):
+            lane = arena["lanes"][ls["lane"]]
+            d.text(px(*lane["points"][1]), "opens at wave %d" % ls["opensAt"], fill=(255, 255, 255, 255), font=font(20))
     cx, cy = px(0, -0.55)
     d.rectangle([cx - 1.0 * ppu, cy - 2.5 * ppu + 0.07 * 2.5 * ppu, cx + 1.0 * ppu, cy + 0.07 * 2.5 * ppu], outline=(120, 220, 255, 255), width=3)
     r = arena["crystalRadius"] * ppu
@@ -168,37 +195,209 @@ def cmd_request(a):
     rq = os.path.join(HANDOFF, "requests", a.batch)
     spec = A.read_json(os.path.join(rq, "batch.json"))
     settings = A.read_json(A.SETTINGS)
-    cur = os.path.join(rq, "references", "current")
     gd = os.path.join(rq, "references", "guides")
-    os.makedirs(cur, exist_ok=True)
     os.makedirs(gd, exist_ok=True)
     groups = []
     for g in spec["groups"]:
         assets = []
-        for pat in g["assets"]:
+        for pat in g.get("assets", []):
             hits = sorted(os.path.relpath(p, A.ART).replace("\\", "/")[:-4]
                           for p in glob.glob(os.path.join(A.ART, pat + ".png")))
             if not hits:
                 raise SystemExit("pattern matches no live asset: " + pat)
             for asset in hits:
                 f = asset_facts(asset, settings)
-                dst = os.path.join(cur, asset.replace("/", "__") + ".png")
-                shutil.copyfile(os.path.join(A.ART, asset + ".png"), dst)
-                f["currentReference"] = os.path.relpath(dst, A.ROOT).replace("\\", "/")
+                f["currentReference"] = f["livePath"]
                 if "footRowFromTop" in f:
                     gp = os.path.join(gd, "unit__" + asset.replace("/", "__") + ".png")
                     unit_guide(gp, f, asset)
                     f["guide"] = os.path.relpath(gp, A.ROOT).replace("\\", "/")
                 if asset.startswith("World/") and f["mode"] == "RGB":
                     gp = os.path.join(gd, "layout__" + asset.replace("/", "__") + ".png")
-                    layout_guide(gp, f["size"], f["ppu"])
+                    layout_guide(gp, f["size"], f["ppu"], biome_for_background(asset))
                     f["guide"] = os.path.relpath(gp, A.ROOT).replace("\\", "/")
                 assets.append(f)
-        groups.append(dict({k: v for k, v in g.items() if k != "assets"}, assets=assets))
+        # new animation frames: the contract (size/PPU/pivot/border) is copied from a live sibling ("like")
+        for n in g.get("new", []):
+            f = asset_facts(n["like"], settings)
+            f.update({"id": n["id"], "livePath": LIVE_REL + n["id"] + ".png", "guid": None, "codeRefs": [], "new": True, "like": n["like"]})
+            f["currentReference"] = LIVE_REL + n["like"] + ".png"
+            if "footRowFromTop" in f:
+                gp = os.path.join(gd, "unit__" + n["id"].replace("/", "__") + ".png")
+                unit_guide(gp, f, n["id"] + " (new)")
+                f["guide"] = os.path.relpath(gp, A.ROOT).replace("\\", "/")
+            assets.append(f)
+        groups.append(dict({k: v for k, v in g.items() if k not in ("assets", "new")}, assets=assets))
     out = {"batch": a.batch, "generatedBy": "Tools/ArtPipeline/handoff.py request", "camera": spec.get("camera"),
            "groups": groups, "assetCount": sum(len(g["assets"]) for g in groups)}
     A.dump_json(out, os.path.join(rq, "INPUT_MANIFEST.json"), indent=1)
     log("%s: %d assets in %d groups -> INPUT_MANIFEST.json" % (a.batch, out["assetCount"], len(groups)))
+    return 0
+
+
+# ------------------------------------------------------------------------------------------------ brief
+
+DESIGNS = os.path.join(A.ROOT, "ArtProduction", "designs")
+ROLE_SHAPES = {
+    "guardian": "wide trapezoid, >= 1.35x a mage's width, shield or slab mass, low centre of gravity, heavy pauldrons",
+    "bruiser": "inverted triangle, huge arms or weapon, forward-leaning stance",
+    "mage": "tall triangle (robe flares to the floor), staff or focus rising above the head",
+    "healer": "vertical and calm, halo / orbiting ring / aura element above or behind the shoulders",
+    "support": "vertical and calm, halo / orbiting ring / aura element above or behind the shoulders",
+    "ranger": "narrow body, long diagonal bow line or long weapon, light cloak, stance turned sideways",
+    "assassin": "compact, crouched and low, angled blades, scarf or sash tails for speed",
+    "controller": "asymmetric, floating objects, ribbons or chains around the body",
+}
+ENEMY_SUFFIXES = ("_attack", "_tell", "_a", "_b")
+
+
+class Content:
+    def __init__(self):
+        c = A.CONTENT
+        loc = jsonc(os.path.join(c, "loc_en.json"))
+        self.loc = loc.get("entries", loc)
+        self.heroes = {h["id"]: h for h in jsonc(os.path.join(c, "heroes.json"))["heroes"]}
+        ev = jsonc(os.path.join(c, "evolutions.json"))
+        self.evos = {e["id"]: e for e in ev.get("evolutions", ev)}
+        self.enemies = {e["id"]: e for e in jsonc(os.path.join(c, "enemies.json"))["enemies"]}
+        self.hero_design = A.read_json(os.path.join(DESIGNS, "heroes.json"))
+        self.enemy_design = A.read_json(os.path.join(DESIGNS, "enemies.json"))
+
+    def t(self, key, default=""):
+        return str(self.loc.get(key, default)).replace("\n", " ")
+
+
+def subject(asset_id):
+    cat, name = asset_id.split("/", 1)
+    if cat in ("Heroes", "Portraits"):
+        return cat, name.split("_")[0]
+    if cat == "Enemies":
+        for suf in ENEMY_SUFFIXES:
+            if name.endswith(suf):
+                return cat, name[: -len(suf)]
+    return cat, name
+
+
+def frame_table(assets):
+    rows = ["| Asset | Size | PPU | Foot row | Status | Current ref (size/purpose only) |", "|---|---|---|---|---|---|"]
+    for f in assets:
+        foot = str(f.get("footRowFromTop", "-")) + (" (flyer: lift >= 10%)" if f.get("flyer") else "")
+        status = "**new** (like `%s`)" % f["like"] if f.get("new") else "redraw"
+        rows.append("| `%s` | %dx%d | %s | %s | %s | `%s` |" % (f["id"], f["size"][0], f["size"][1], f["ppu"], foot, status,
+                                                              f["currentReference"]))
+    return "\n".join(rows)
+
+
+def hero_block(C, hid, assets):
+    h = C.heroes[hid]
+    d = C.hero_design.get(hid, {})
+    role = h["role"]
+    out = ["#### %s — \"%s\" (`%s`)" % (C.t("hero.%s.name" % hid, hid), C.t("hero.%s.title" % hid), hid),
+           "- Data: element **%s**, role **%s**, %s, silhouette note \"%s\"." % (h["element"], role, "melee" if h.get("melee") else "ranged",
+                                                                             h.get("silhouette", "")),
+           "- Role shape: " + ROLE_SHAPES.get(role, ""),
+           "- Base design: " + d.get("base", "(lead: missing design)")]
+    for slot, eid in zip(("evoA", "evoB"), h.get("evolutions", [])):
+        e = C.evos.get(eid, {})
+        rc = e.get("role")
+        out.append("- %s = **%s**%s — %s Design: %s" % (
+            slot, C.t("evo.%s.name" % eid, eid), (" (becomes **%s**: %s)" % (rc, ROLE_SHAPES.get(rc, ""))) if rc else "",
+            C.t("evo.%s.desc" % eid), d.get(slot, "(lead: missing design)")))
+    out += ["", frame_table(assets), ""]
+    return out
+
+
+def enemy_block(C, eid, assets):
+    e = C.enemies[eid]
+    d = C.enemy_design.get(eid, {})
+    tags = [t for t in e.get("tags", [])]
+    out = ["#### %s (`%s`)%s" % (C.t("enemy.%s.name" % eid, eid), eid, " — BOSS" if e.get("boss") else ""),
+           "- Data: behaviour **%s**, tags %s, radius %s. \"%s\"" % (e.get("behavior"), ", ".join(tags), e.get("radius"), C.t("enemy.%s.desc" % eid)),
+           "- Size class: **%s**. Design: %s" % (d.get("size", "?"), d.get("design", "(lead: missing design)")), "", frame_table(assets), ""]
+    return out
+
+
+LOC_KEYS = {"Cards": ("card.%s.name", "card.%s.desc"), "Relics": ("relic.%s.name", "relic.%s.desc")}
+
+
+def generic_rows(C, assets):
+    rows = ["| Asset | Size | PPU | 9-slice | Meaning (from game data) | Current ref |", "|---|---|---|---|---|---|"]
+    for f in assets:
+        cat, name = f["id"].split("/", 1)
+        meaning = ""
+        if cat in LOC_KEYS:
+            meaning = "%s — %s" % (C.t(LOC_KEYS[cat][0] % name, name), C.t(LOC_KEYS[cat][1] % name))
+        elif cat == "Icons":
+            kind, _, key = name.partition("_")
+            meaning = {"element": lambda: C.t("element." + key, key) + " element",
+                       "reaction": lambda: "%s — %s" % (C.t("reaction.%s.name" % key, key), C.t("reaction.%s.desc" % key)),
+                       "status": lambda: "%s — %s" % (C.t("status." + key, key), C.t("status.%s.desc" % key)),
+                       "trait": lambda: "%s — %s" % (C.t("trait.%s.name" % key, key), C.t("trait.%s.desc" % key)),
+                       "role": lambda: C.t("role." + key, key) + " role",
+                       "ui": lambda: "UI glyph: " + key.replace("_", " ")}.get(kind, lambda: name)()
+        elif cat == "Vfx":
+            kind, _, key = name.partition("_")
+            meaning = {"field": lambda: "ground field: " + C.t("field.%s.name" % key, key), "zone": lambda: "ground zone: " + C.t("zone." + key, key),
+                       "impact": lambda: key + " basic-hit impact", "projectile": lambda: key + " projectile (points +X)"}.get(kind, lambda: name)()
+        border = f.get("border", [0, 0, 0, 0])
+        rows.append("| `%s` | %dx%d | %s | %s | %s | `%s` |" % (f["id"], f["size"][0], f["size"][1], f["ppu"],
+                                                              "-" if not any(border) else str(border), meaning.replace("|", "/"), f["currentReference"]))
+    return rows
+
+
+def cmd_brief(a):
+    rq = os.path.join(HANDOFF, "requests", a.batch)
+    spec = A.read_json(os.path.join(rq, "batch.json"))
+    man = A.read_json(os.path.join(rq, "INPUT_MANIFEST.json"))
+    C = Content()
+    b = a.batch
+    L = ["# CODEX ART REQUEST — Batch %s: %s" % (b, spec["title"]), "",
+         "| | |", "|---|---|",
+         "| batch_id | `%s` |" % b,
+         "| From → To | Claude Code (lead: integration, QA, animation) → Codex (GPT-6.1 Sol, art production) |",
+         "| Writable folder | `C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\returns\\%s\\` — **only this folder** |" % b,
+         "| Priority | %s |" % spec.get("priority", "normal"),
+         "| Depends on | %s |" % spec.get("depends", "B01 style lock"),
+         "| Goal | %s |" % spec["goal"], "",
+         "Together with `ArtHandoff/requests/COMMON_CONTRACT.md` (binding) this file is self-contained.",
+         "Generated by `Tools/ArtPipeline/handoff.py brief` from `batch.json`, the game data and `ArtProduction/designs/`.", "",
+         "## 1. Read first",
+         "1. `ArtHandoff/requests/COMMON_CONTRACT.md` — technical contract, animation-frame rules, method, scope, done.",
+         "2. `ArtProduction/ART_BIBLE.md` — the style.",
+         "3. `ArtHandoff/returns/B01/README.md` § Style lock and `ArtHandoff/returns/B01/DELIVERABLE_MANIFEST.json` → `styleLock` — reuse verbatim.",
+         "4. `ArtHandoff/requests/%s/INPUT_MANIFEST.json` — the exact %d assets with size, PPU, pivot, border, foot row, flyer flag, guides." % (b, man["assetCount"]),
+         "5. `ArtHandoff/requests/%s/references/guides/` — per-unit canvas guides (foot row, centre line, icon box)." % b, "",
+         "## 2. Style references (attach to image generation as reference images)"]
+    L += ["- `%s`" % r for r in spec.get("styleRefs", [])] or ["- the B01 exports in `ArtHandoff/returns/B01/exports/Art/`"]
+    if spec.get("notes"):
+        L += ["", "## 3. Batch notes", spec["notes"]]
+    L += ["", "## 4. Assets"]
+    for g in man["groups"]:
+        L += ["", "### %s (%s)" % (g.get("title", g["id"]), g.get("priority", "")), g.get("design", "")]
+        by = {}
+        for f in g["assets"]:
+            by.setdefault(subject(f["id"]), []).append(f)
+        generic = []
+        for (cat, sid), fs in by.items():
+            if cat == "Heroes" and sid in C.heroes:
+                L += hero_block(C, sid, fs)
+            elif cat == "Enemies" and sid in C.enemies:
+                L += enemy_block(C, sid, fs)
+            else:
+                generic += fs
+        if generic:
+            L += generic_rows(C, generic) + [""]
+    L += ["## 5. Return, self-QA, done",
+          "- Return everything to `ArtHandoff/returns/%s/` with the layout of COMMON_CONTRACT §8 and the manifest template "
+          "`ArtHandoff/requests/B01/DELIVERABLE_MANIFEST.template.json`." % b,
+          "- Self-QA (repo root):", "```",
+          "python Tools\\ArtPipeline\\handoff.py preview --batch %s --overlay ArtHandoff\\returns\\%s\\exports\\Art --out ArtHandoff\\returns\\%s\\previews --tag %s" % (b, b, b, b.lower()),
+          "python Tools\\ArtPipeline\\handoff.py intake  --batch %s --stage-dir ArtHandoff\\returns\\%s\\_work\\stage --qa-dir ArtHandoff\\returns\\%s\\qa" % (b, b, b),
+          "```",
+          "- Done = COMMON_CONTRACT §9. The last message of the run: delivered/blocked counts, the intake result, the top three risks.", ""]
+    path = os.path.join(rq, "CODEX_ART_REQUEST.md")
+    A.write_text(path, "\n".join(L))
+    log("%s: brief -> %s" % (b, os.path.relpath(path, A.ROOT)))
     return 0
 
 
@@ -311,26 +510,60 @@ def sheet(art, ids, height_px, mode):
     return out
 
 
+def stack(images, bg=(0, 0, 0, 255)):
+    W = max(i.width for i in images)
+    out = Image.new("RGBA", (W, sum(i.height for i in images)), bg)
+    y = 0
+    for i in images:
+        out.alpha_composite(i, (0, y))
+        y += i.height
+    return out
+
+
+def flat_sheet(art, ids, per_row=10):
+    """Non-unit assets (icons, cards, relics, UI, VFX) at native size and at 50%, on dark and light backdrops."""
+    rows = []
+    for k in range(0, len(ids), per_row):
+        chunk = [art.get(i)[0] for i in ids[k:k + per_row]]
+        cell = max(max(c.width, c.height) for c in chunk) + 12
+        for bgc in ((34, 36, 40, 255), (150, 150, 150, 255)):
+            row = Image.new("RGBA", (cell * len(chunk) + cell // 2 * len(chunk), cell), bgc)
+            x = 0
+            for c in chunk:
+                row.alpha_composite(c, (x + 6, (cell - c.height) // 2))
+                half = c.resize((max(1, c.width // 2), max(1, c.height // 2)), Image.LANCZOS)
+                row.alpha_composite(half, (x + cell + 6, (cell - half.height) // 2))
+                x += cell + cell // 2
+            rows.append(row)
+    return stack(rows)
+
+
 def cmd_preview(a):
     rq = os.path.join(HANDOFF, "requests", a.batch)
-    layout = A.read_json(os.path.join(rq, "benchmark_layout.json"))
+    lp = os.path.join(rq, "benchmark_layout.json")
+    layout = A.read_json(lp if os.path.exists(lp) else os.path.join(HANDOFF, "requests", "B01", "benchmark_layout.json"))
     req = A.read_json(os.path.join(rq, "INPUT_MANIFEST.json"))
-    art = ArtSet(a.overlay, A.read_json(A.SETTINGS))
+    settings = A.read_json(A.SETTINGS)
+    for g in req["groups"]:
+        for f in g["assets"]:
+            if f.get("new"):   # new frames borrow the PPU/pivot of their live sibling
+                settings[LIVE_REL + f["id"] + ".png"] = settings[LIVE_REL + f["like"] + ".png"]
+    art = ArtSet(a.overlay, settings)
     os.makedirs(a.out, exist_ok=True)
     tag = a.tag or ("overlay" if a.overlay else "live")
     note = "OFFLINE COMPOSITE (handoff.py preview, %s art) - not a Unity screenshot" % tag
     for h in (1080, 720):
         render_scene(art, layout, h, note).save(os.path.join(a.out, "scene_%s_%dp.png" % (tag, h)))
-    chars = [f["id"] for g in req["groups"] for f in g["assets"] if f["id"].startswith(("Heroes/", "Enemies/", "World/crystal_"))]
+    ids = [f["id"] for g in req["groups"] for f in g["assets"] if os.path.exists(art.path(f["id"]))]
+    chars = [i for i in ids if i.startswith(("Heroes/", "Enemies/", "World/crystal_"))]
     for mode in ("colour", "silhouette", "gray"):
-        rows = [sheet(art, chars, h, mode) for h in (1080, 720)]
-        W = max(r.width for r in rows)
-        out = Image.new("RGBA", (W, sum(r.height for r in rows)), (0, 0, 0, 255))
-        y = 0
-        for r in rows:
-            out.alpha_composite(r, (0, y))
-            y += r.height
-        out.convert("RGB").save(os.path.join(a.out, "units_%s_%s.png" % (tag, mode)))
+        if chars:
+            rows = [sheet(art, chars[k:k + 14], h, mode) for k in range(0, len(chars), 14) for h in (1080, 720)]
+            stack(rows).convert("RGB").save(os.path.join(a.out, "units_%s_%s.png" % (tag, mode)))
+    flats = [i for i in ids if i.split("/")[0] in ("Icons", "Cards", "Relics", "UI", "Vfx", "Portraits") or
+             (i.startswith("World/") and art.get(i)[0].width <= 512)]
+    if flats:
+        flat_sheet(art, flats).convert("RGB").save(os.path.join(a.out, "flat_%s.png" % tag))
     log("preview (%s) -> %s" % (tag, a.out))
     return 0
 
@@ -412,7 +645,8 @@ def cmd_intake(a):
     # write scope: nothing outside ArtHandoff/returns/<batch> may change
     r = subprocess.run(["git", "status", "--porcelain", "--untracked-files=all"], cwd=A.ROOT, capture_output=True, text=True)
     stray = [ln[3:].strip('"') for ln in r.stdout.splitlines()]
-    stray = [s for s in stray if s and not s.startswith(("ArtHandoff/returns/" + a.batch + "/", "Temp/"))
+    # other batches may be returning in parallel; each Codex sandbox can only write its own returns/<batch>/
+    stray = [s for s in stray if s and not s.startswith(("ArtHandoff/returns/", "Temp/"))
              and not any(fnmatch.fnmatch(s, pat) for pat in (a.allow or []))]
     report = {"batch": a.batch, "delivered": len(delivered), "requested": sum(len(g["assets"]) for g in req["groups"]),
               "blocking": problems, "notes": notes, "rows": rows, "strayWorkingTreeChanges": stray, "stage": os.path.relpath(stage, A.ROOT)}
@@ -442,13 +676,15 @@ def main():
     i.add_argument("--allow", nargs="*", help="extra working-tree paths (fnmatch) that may have changed")
     i.add_argument("--stage-dir", default=None, help="default Temp/ArtStage-<batch>")
     i.add_argument("--qa-dir", default=None, help="default ArtProduction/reviews/<batch>")
+    br = sub.add_parser("brief")
+    br.add_argument("--batch", required=True)
     v = sub.add_parser("preview")
     v.add_argument("--batch", required=True)
     v.add_argument("--overlay", default=None, help="Art-root-shaped dir whose PNGs replace live ones (e.g. ArtHandoff/returns/B01/exports/Art)")
     v.add_argument("--out", required=True)
     v.add_argument("--tag", default=None)
     a = p.parse_args()
-    return {"request": cmd_request, "intake": cmd_intake, "preview": cmd_preview}[a.cmd](a)
+    return {"request": cmd_request, "brief": cmd_brief, "intake": cmd_intake, "preview": cmd_preview}[a.cmd](a)
 
 
 if __name__ == "__main__":

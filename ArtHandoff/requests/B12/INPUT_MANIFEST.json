@@ -1,0 +1,257 @@
+{
+ "batch": "B12",
+ "generatedBy": "Tools/ArtPipeline/handoff.py request",
+ "camera": null,
+ "groups": [
+  {
+   "id": "biomes",
+   "title": "Biome battlefields",
+   "priority": "P1",
+   "required": true,
+   "assets": [
+    {
+     "id": "World/bg_molten_crater",
+     "livePath": "Assets/_Aetherward/Resources/Art/World/bg_molten_crater.png",
+     "size": [
+      2400,
+      1360
+     ],
+     "mode": "RGB",
+     "ppu": 80,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      30.0,
+      17.0
+     ],
+     "guid": "98983948278953a3b51fa5cc604d5a40",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/World/bg_molten_crater.png",
+     "guide": "ArtHandoff/requests/B12/references/guides/layout__World__bg_molten_crater.png"
+    },
+    {
+     "id": "World/bg_frostfall_bastion",
+     "livePath": "Assets/_Aetherward/Resources/Art/World/bg_frostfall_bastion.png",
+     "size": [
+      2400,
+      1360
+     ],
+     "mode": "RGB",
+     "ppu": 80,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      30.0,
+      17.0
+     ],
+     "guid": "79989a797e538bd2bfdc120a113c4eaa",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/World/bg_frostfall_bastion.png",
+     "guide": "ArtHandoff/requests/B12/references/guides/layout__World__bg_frostfall_bastion.png"
+    },
+    {
+     "id": "World/bg_shattered_aether",
+     "livePath": "Assets/_Aetherward/Resources/Art/World/bg_shattered_aether.png",
+     "size": [
+      2400,
+      1360
+     ],
+     "mode": "RGB",
+     "ppu": 80,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      30.0,
+      17.0
+     ],
+     "guid": "0e56a6954a26f36ad39f749592df4e97",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/World/bg_shattered_aether.png",
+     "guide": "ArtHandoff/requests/B12/references/guides/layout__World__bg_shattered_aether.png"
+    },
+    {
+     "id": "World/bg_stormspire_citadel",
+     "livePath": "Assets/_Aetherward/Resources/Art/World/bg_stormspire_citadel.png",
+     "size": [
+      2400,
+      1360
+     ],
+     "mode": "RGB",
+     "ppu": 80,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      30.0,
+      17.0
+     ],
+     "guid": "5c693ca426231f2da15b389d4c54388c",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/World/bg_stormspire_citadel.png",
+     "guide": "ArtHandoff/requests/B12/references/guides/layout__World__bg_stormspire_citadel.png"
+    },
+    {
+     "id": "World/bg_sunken_archive",
+     "livePath": "Assets/_Aetherward/Resources/Art/World/bg_sunken_archive.png",
+     "size": [
+      2400,
+      1360
+     ],
+     "mode": "RGB",
+     "ppu": 80,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      30.0,
+      17.0
+     ],
+     "guid": "363683a3a3849311cead00781bce4f9e",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/World/bg_sunken_archive.png",
+     "guide": "ArtHandoff/requests/B12/references/guides/layout__World__bg_sunken_archive.png"
+    }
+   ]
+  },
+  {
+   "id": "crystal_paths",
+   "title": "Crystal Evolution overlays (new)",
+   "priority": "P2",
+   "required": true,
+   "assets": [
+    {
+     "id": "World/crystal_path_bastion",
+     "livePath": "Assets/_Aetherward/Resources/Art/World/crystal_path_bastion.png",
+     "size": [
+      320,
+      400
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.5
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 372,
+     "new": true,
+     "like": "World/crystal_intact",
+     "currentReference": "Assets/_Aetherward/Resources/Art/World/crystal_intact.png",
+     "guide": "ArtHandoff/requests/B12/references/guides/unit__World__crystal_path_bastion.png"
+    },
+    {
+     "id": "World/crystal_path_pulse",
+     "livePath": "Assets/_Aetherward/Resources/Art/World/crystal_path_pulse.png",
+     "size": [
+      320,
+      400
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.5
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 372,
+     "new": true,
+     "like": "World/crystal_intact",
+     "currentReference": "Assets/_Aetherward/Resources/Art/World/crystal_intact.png",
+     "guide": "ArtHandoff/requests/B12/references/guides/unit__World__crystal_path_pulse.png"
+    },
+    {
+     "id": "World/crystal_path_thorn",
+     "livePath": "Assets/_Aetherward/Resources/Art/World/crystal_path_thorn.png",
+     "size": [
+      320,
+      400
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.5
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 372,
+     "new": true,
+     "like": "World/crystal_intact",
+     "currentReference": "Assets/_Aetherward/Resources/Art/World/crystal_intact.png",
+     "guide": "ArtHandoff/requests/B12/references/guides/unit__World__crystal_path_thorn.png"
+    }
+   ]
+  }
+ ],
+ "assetCount": 8
+}

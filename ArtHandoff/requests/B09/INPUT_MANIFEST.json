@@ -1,0 +1,1173 @@
+{
+ "batch": "B09",
+ "generatedBy": "Tools/ArtPipeline/handoff.py request",
+ "camera": null,
+ "groups": [
+  {
+   "id": "factions1",
+   "title": "Iron Legion, Ashen Horde, Voidborn",
+   "priority": "P1",
+   "required": true,
+   "assets": [
+    {
+     "id": "Enemies/goblin_sprinter_a",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/goblin_sprinter_a.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "8a098bf76ed83596076fa35b2c9b1d73",
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/goblin_sprinter_a.png",
+     "guide": "ArtHandoff/requests/B09/references/guides/unit__Enemies__goblin_sprinter_a.png"
+    },
+    {
+     "id": "Enemies/goblin_sprinter_b",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/goblin_sprinter_b.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "b83a2f1273b0ff6069c7f20846b3e0c7",
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/goblin_sprinter_b.png",
+     "guide": "ArtHandoff/requests/B09/references/guides/unit__Enemies__goblin_sprinter_b.png"
+    },
+    {
+     "id": "Enemies/ironback_golem_a",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/ironback_golem_a.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "8962b29377780839b149822df9269e4e",
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/ironback_golem_a.png",
+     "guide": "ArtHandoff/requests/B09/references/guides/unit__Enemies__ironback_golem_a.png"
+    },
+    {
+     "id": "Enemies/ironback_golem_b",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/ironback_golem_b.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "822b95f05c445ea658bf6fb3f269689f",
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/ironback_golem_b.png",
+     "guide": "ArtHandoff/requests/B09/references/guides/unit__Enemies__ironback_golem_b.png"
+    },
+    {
+     "id": "Enemies/stone_burrower_a",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/stone_burrower_a.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "debd082f0797f883d2a8bee14734c8f8",
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/stone_burrower_a.png",
+     "guide": "ArtHandoff/requests/B09/references/guides/unit__Enemies__stone_burrower_a.png"
+    },
+    {
+     "id": "Enemies/stone_burrower_b",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/stone_burrower_b.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "450e2e186e9495609307fd083d678037",
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/stone_burrower_b.png",
+     "guide": "ArtHandoff/requests/B09/references/guides/unit__Enemies__stone_burrower_b.png"
+    },
+    {
+     "id": "Enemies/siege_colossus_a",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/siege_colossus_a.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "2dc423802e3fbbb7ccc886324ef7a55c",
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/siege_colossus_a.png",
+     "guide": "ArtHandoff/requests/B09/references/guides/unit__Enemies__siege_colossus_a.png"
+    },
+    {
+     "id": "Enemies/siege_colossus_b",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/siege_colossus_b.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "f1a23c94532a016ff435447fe2b7bfd7",
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/siege_colossus_b.png",
+     "guide": "ArtHandoff/requests/B09/references/guides/unit__Enemies__siege_colossus_b.png"
+    },
+    {
+     "id": "Enemies/ash_imp_a",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/ash_imp_a.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "d1fa8944e7c267e0325e5be51cceadd7",
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/ash_imp_a.png",
+     "guide": "ArtHandoff/requests/B09/references/guides/unit__Enemies__ash_imp_a.png"
+    },
+    {
+     "id": "Enemies/ash_imp_b",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/ash_imp_b.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "69a980afe6b40e4244f604dce2df8849",
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/ash_imp_b.png",
+     "guide": "ArtHandoff/requests/B09/references/guides/unit__Enemies__ash_imp_b.png"
+    },
+    {
+     "id": "Enemies/flame_devourer_a",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/flame_devourer_a.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "dbef7f9c2d17dc1fb8d3408dd71de5d3",
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/flame_devourer_a.png",
+     "guide": "ArtHandoff/requests/B09/references/guides/unit__Enemies__flame_devourer_a.png"
+    },
+    {
+     "id": "Enemies/flame_devourer_b",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/flame_devourer_b.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "185604a29b660654005e959a8a62f7e9",
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/flame_devourer_b.png",
+     "guide": "ArtHandoff/requests/B09/references/guides/unit__Enemies__flame_devourer_b.png"
+    },
+    {
+     "id": "Enemies/ember_hound_a",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/ember_hound_a.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "8764a0fff64d8b3019f5f649c9c126ee",
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/ember_hound_a.png",
+     "guide": "ArtHandoff/requests/B09/references/guides/unit__Enemies__ember_hound_a.png"
+    },
+    {
+     "id": "Enemies/ember_hound_b",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/ember_hound_b.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "b8778e7f61604c72548546b139fc80d1",
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/ember_hound_b.png",
+     "guide": "ArtHandoff/requests/B09/references/guides/unit__Enemies__ember_hound_b.png"
+    },
+    {
+     "id": "Enemies/crystal_parasite_a",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/crystal_parasite_a.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "a037d8957655ae23b1907da43cd24029",
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/crystal_parasite_a.png",
+     "guide": "ArtHandoff/requests/B09/references/guides/unit__Enemies__crystal_parasite_a.png"
+    },
+    {
+     "id": "Enemies/crystal_parasite_b",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/crystal_parasite_b.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "ac1fa3e55fa44f25860b4f5e5248f5a4",
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/crystal_parasite_b.png",
+     "guide": "ArtHandoff/requests/B09/references/guides/unit__Enemies__crystal_parasite_b.png"
+    },
+    {
+     "id": "Enemies/spirit_splitter_a",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/spirit_splitter_a.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "3e92fb72536a04d1dfe5862c6dadefac",
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/spirit_splitter_a.png",
+     "guide": "ArtHandoff/requests/B09/references/guides/unit__Enemies__spirit_splitter_a.png"
+    },
+    {
+     "id": "Enemies/spirit_splitter_b",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/spirit_splitter_b.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "dfea0c052d3cea4e15b9b2c3685bedd8",
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/spirit_splitter_b.png",
+     "guide": "ArtHandoff/requests/B09/references/guides/unit__Enemies__spirit_splitter_b.png"
+    },
+    {
+     "id": "Enemies/spirit_wisp_a",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/spirit_wisp_a.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "d51801515d2321e4d12c19496c6e948c",
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/spirit_wisp_a.png",
+     "guide": "ArtHandoff/requests/B09/references/guides/unit__Enemies__spirit_wisp_a.png"
+    },
+    {
+     "id": "Enemies/spirit_wisp_b",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/spirit_wisp_b.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "69d61f1f9cb0cbec7c51c40c83cffe10",
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/spirit_wisp_b.png",
+     "guide": "ArtHandoff/requests/B09/references/guides/unit__Enemies__spirit_wisp_b.png"
+    },
+    {
+     "id": "Enemies/void_priest_a",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/void_priest_a.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "b7e4b7f76cae4bb6e16a67ea2c30b1b3",
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/void_priest_a.png",
+     "guide": "ArtHandoff/requests/B09/references/guides/unit__Enemies__void_priest_a.png"
+    },
+    {
+     "id": "Enemies/void_priest_b",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/void_priest_b.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "5de69a96807501b6d20c342a4b8620ee",
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/void_priest_b.png",
+     "guide": "ArtHandoff/requests/B09/references/guides/unit__Enemies__void_priest_b.png"
+    },
+    {
+     "id": "Enemies/soul_binder_a",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/soul_binder_a.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "584f165881c8559f081073307d05c5d9",
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/soul_binder_a.png",
+     "guide": "ArtHandoff/requests/B09/references/guides/unit__Enemies__soul_binder_a.png"
+    },
+    {
+     "id": "Enemies/soul_binder_b",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/soul_binder_b.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "c9d8342744ad374dbacf0594a3a07845",
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/soul_binder_b.png",
+     "guide": "ArtHandoff/requests/B09/references/guides/unit__Enemies__soul_binder_b.png"
+    },
+    {
+     "id": "Enemies/rift_summoner_a",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/rift_summoner_a.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "b833673df856f3fdfd0039fcd2b86b01",
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/rift_summoner_a.png",
+     "guide": "ArtHandoff/requests/B09/references/guides/unit__Enemies__rift_summoner_a.png"
+    },
+    {
+     "id": "Enemies/rift_summoner_b",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/rift_summoner_b.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "fd02a3cc0ba930c37274c49ae0653507",
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/rift_summoner_b.png",
+     "guide": "ArtHandoff/requests/B09/references/guides/unit__Enemies__rift_summoner_b.png"
+    },
+    {
+     "id": "Enemies/goblin_sprinter_attack",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/goblin_sprinter_attack.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "new": true,
+     "like": "Enemies/goblin_sprinter_a",
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/goblin_sprinter_a.png",
+     "guide": "ArtHandoff/requests/B09/references/guides/unit__Enemies__goblin_sprinter_attack.png"
+    },
+    {
+     "id": "Enemies/ironback_golem_attack",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/ironback_golem_attack.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "new": true,
+     "like": "Enemies/ironback_golem_a",
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/ironback_golem_a.png",
+     "guide": "ArtHandoff/requests/B09/references/guides/unit__Enemies__ironback_golem_attack.png"
+    },
+    {
+     "id": "Enemies/stone_burrower_attack",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/stone_burrower_attack.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "new": true,
+     "like": "Enemies/stone_burrower_a",
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/stone_burrower_a.png",
+     "guide": "ArtHandoff/requests/B09/references/guides/unit__Enemies__stone_burrower_attack.png"
+    },
+    {
+     "id": "Enemies/siege_colossus_attack",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/siege_colossus_attack.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "new": true,
+     "like": "Enemies/siege_colossus_a",
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/siege_colossus_a.png",
+     "guide": "ArtHandoff/requests/B09/references/guides/unit__Enemies__siege_colossus_attack.png"
+    },
+    {
+     "id": "Enemies/ash_imp_attack",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/ash_imp_attack.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "new": true,
+     "like": "Enemies/ash_imp_a",
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/ash_imp_a.png",
+     "guide": "ArtHandoff/requests/B09/references/guides/unit__Enemies__ash_imp_attack.png"
+    },
+    {
+     "id": "Enemies/flame_devourer_attack",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/flame_devourer_attack.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "new": true,
+     "like": "Enemies/flame_devourer_a",
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/flame_devourer_a.png",
+     "guide": "ArtHandoff/requests/B09/references/guides/unit__Enemies__flame_devourer_attack.png"
+    },
+    {
+     "id": "Enemies/ember_hound_attack",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/ember_hound_attack.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "new": true,
+     "like": "Enemies/ember_hound_a",
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/ember_hound_a.png",
+     "guide": "ArtHandoff/requests/B09/references/guides/unit__Enemies__ember_hound_attack.png"
+    },
+    {
+     "id": "Enemies/crystal_parasite_attack",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/crystal_parasite_attack.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "new": true,
+     "like": "Enemies/crystal_parasite_a",
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/crystal_parasite_a.png",
+     "guide": "ArtHandoff/requests/B09/references/guides/unit__Enemies__crystal_parasite_attack.png"
+    },
+    {
+     "id": "Enemies/spirit_splitter_attack",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/spirit_splitter_attack.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "new": true,
+     "like": "Enemies/spirit_splitter_a",
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/spirit_splitter_a.png",
+     "guide": "ArtHandoff/requests/B09/references/guides/unit__Enemies__spirit_splitter_attack.png"
+    },
+    {
+     "id": "Enemies/spirit_wisp_attack",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/spirit_wisp_attack.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "new": true,
+     "like": "Enemies/spirit_wisp_a",
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/spirit_wisp_a.png",
+     "guide": "ArtHandoff/requests/B09/references/guides/unit__Enemies__spirit_wisp_attack.png"
+    },
+    {
+     "id": "Enemies/void_priest_attack",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/void_priest_attack.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "new": true,
+     "like": "Enemies/void_priest_a",
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/void_priest_a.png",
+     "guide": "ArtHandoff/requests/B09/references/guides/unit__Enemies__void_priest_attack.png"
+    },
+    {
+     "id": "Enemies/soul_binder_attack",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/soul_binder_attack.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "new": true,
+     "like": "Enemies/soul_binder_a",
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/soul_binder_a.png",
+     "guide": "ArtHandoff/requests/B09/references/guides/unit__Enemies__soul_binder_attack.png"
+    },
+    {
+     "id": "Enemies/rift_summoner_attack",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/rift_summoner_attack.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "new": true,
+     "like": "Enemies/rift_summoner_a",
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/rift_summoner_a.png",
+     "guide": "ArtHandoff/requests/B09/references/guides/unit__Enemies__rift_summoner_attack.png"
+    }
+   ]
+  }
+ ],
+ "assetCount": 39
+}

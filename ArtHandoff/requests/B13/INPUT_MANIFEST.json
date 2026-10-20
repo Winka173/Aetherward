@@ -1,0 +1,1928 @@
+{
+ "batch": "B13",
+ "generatedBy": "Tools/ArtPipeline/handoff.py request",
+ "camera": null,
+ "groups": [
+  {
+   "id": "vfx",
+   "title": "VFX",
+   "priority": "P1",
+   "required": true,
+   "assets": [
+    {
+     "id": "Vfx/coin",
+     "livePath": "Assets/_Aetherward/Resources/Art/Vfx/coin.png",
+     "size": [
+      48,
+      48
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.3,
+      0.3
+     ],
+     "guid": "5e8f0ccd860d941f8c9d6d6ca0ba2821",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:402"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Vfx/coin.png"
+    },
+    {
+     "id": "Vfx/field_blight_garden",
+     "livePath": "Assets/_Aetherward/Resources/Art/Vfx/field_blight_garden.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 128,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "3f6ac09c3a13d27166baf3e0b0211d1e",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:720"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Vfx/field_blight_garden.png"
+    },
+    {
+     "id": "Vfx/field_deep_rift",
+     "livePath": "Assets/_Aetherward/Resources/Art/Vfx/field_deep_rift.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 128,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "2dea79e4b047bf7576ee6c2eea11cd05",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:720"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Vfx/field_deep_rift.png"
+    },
+    {
+     "id": "Vfx/field_dread_mire",
+     "livePath": "Assets/_Aetherward/Resources/Art/Vfx/field_dread_mire.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 128,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "aada50cd18d739496102f33e94a82e21",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:720"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Vfx/field_dread_mire.png"
+    },
+    {
+     "id": "Vfx/field_eclipse",
+     "livePath": "Assets/_Aetherward/Resources/Art/Vfx/field_eclipse.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 128,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "4495d5d6b20cdc93e1b2a239f0c1e23f",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:720"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Vfx/field_eclipse.png"
+    },
+    {
+     "id": "Vfx/field_ember_patch",
+     "livePath": "Assets/_Aetherward/Resources/Art/Vfx/field_ember_patch.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 128,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "c8c8b9c9d8431e4d5a2a76dd21c1f67d",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:720"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Vfx/field_ember_patch.png"
+    },
+    {
+     "id": "Vfx/field_flood_stream",
+     "livePath": "Assets/_Aetherward/Resources/Art/Vfx/field_flood_stream.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 128,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "4c5d8744f8a5838f4e5d63dfd29a3507",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:720"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Vfx/field_flood_stream.png"
+    },
+    {
+     "id": "Vfx/field_frost_roots",
+     "livePath": "Assets/_Aetherward/Resources/Art/Vfx/field_frost_roots.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 128,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "1370aaa7f3e18273616ceb3a1f798107",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:720"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Vfx/field_frost_roots.png"
+    },
+    {
+     "id": "Vfx/field_gale_snare",
+     "livePath": "Assets/_Aetherward/Resources/Art/Vfx/field_gale_snare.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 128,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "b268ecd321dee2806b0fd02864fb6a79",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:720"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Vfx/field_gale_snare.png"
+    },
+    {
+     "id": "Vfx/field_gloom_mire",
+     "livePath": "Assets/_Aetherward/Resources/Art/Vfx/field_gloom_mire.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 128,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "ea038acba30bfd79bd79a39800dedf76",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:720"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Vfx/field_gloom_mire.png"
+    },
+    {
+     "id": "Vfx/field_grand_rune",
+     "livePath": "Assets/_Aetherward/Resources/Art/Vfx/field_grand_rune.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 128,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "d77f36d7c3da9694b073b3a7ccc2193e",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:720"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Vfx/field_grand_rune.png"
+    },
+    {
+     "id": "Vfx/field_gravity_well",
+     "livePath": "Assets/_Aetherward/Resources/Art/Vfx/field_gravity_well.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 128,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "b19932bfc2787c4d25db561640644e9d",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:720"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Vfx/field_gravity_well.png"
+    },
+    {
+     "id": "Vfx/field_hallowed_ward",
+     "livePath": "Assets/_Aetherward/Resources/Art/Vfx/field_hallowed_ward.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 128,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "18c9797324649436fa457f5efc925c32",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:720"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Vfx/field_hallowed_ward.png"
+    },
+    {
+     "id": "Vfx/field_healing_stream",
+     "livePath": "Assets/_Aetherward/Resources/Art/Vfx/field_healing_stream.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 128,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "9c74fbbc11733fe3e3f1a08abd207977",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:720"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Vfx/field_healing_stream.png"
+    },
+    {
+     "id": "Vfx/field_ice_cover",
+     "livePath": "Assets/_Aetherward/Resources/Art/Vfx/field_ice_cover.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 128,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "928d0ef9753652fb6b34b92d5657fe66",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:720"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Vfx/field_ice_cover.png"
+    },
+    {
+     "id": "Vfx/field_lingering_miasma",
+     "livePath": "Assets/_Aetherward/Resources/Art/Vfx/field_lingering_miasma.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 128,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "746f37d2b2726631bb56c371b6cf6f05",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:720"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Vfx/field_lingering_miasma.png"
+    },
+    {
+     "id": "Vfx/field_null_bastion",
+     "livePath": "Assets/_Aetherward/Resources/Art/Vfx/field_null_bastion.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 128,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "5839643bf6f1b6b3665e1f57165e7b10",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:720"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Vfx/field_null_bastion.png"
+    },
+    {
+     "id": "Vfx/field_overgrowth",
+     "livePath": "Assets/_Aetherward/Resources/Art/Vfx/field_overgrowth.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 128,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "53f2d802c64270580a57a74c31e43562",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:720"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Vfx/field_overgrowth.png"
+    },
+    {
+     "id": "Vfx/field_portal_ward",
+     "livePath": "Assets/_Aetherward/Resources/Art/Vfx/field_portal_ward.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 128,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "55ea1f17a5c98c490da752ff9297480e",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:720"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Vfx/field_portal_ward.png"
+    },
+    {
+     "id": "Vfx/field_pylon",
+     "livePath": "Assets/_Aetherward/Resources/Art/Vfx/field_pylon.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 128,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "6c561788f4cb3b9cb7cda94e946d32f7",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:720"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Vfx/field_pylon.png"
+    },
+    {
+     "id": "Vfx/field_pylon_charger",
+     "livePath": "Assets/_Aetherward/Resources/Art/Vfx/field_pylon_charger.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 128,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "71557798e1a16dd77b614c462310adb1",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:720"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Vfx/field_pylon_charger.png"
+    },
+    {
+     "id": "Vfx/field_pylon_network",
+     "livePath": "Assets/_Aetherward/Resources/Art/Vfx/field_pylon_network.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 128,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "5c80998a945b72ba7b80d9628a18d225",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:720"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Vfx/field_pylon_network.png"
+    },
+    {
+     "id": "Vfx/field_rift",
+     "livePath": "Assets/_Aetherward/Resources/Art/Vfx/field_rift.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 128,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "83d63c8e541e505dc24c9bb35513fb8c",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:720"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Vfx/field_rift.png"
+    },
+    {
+     "id": "Vfx/field_river_stream",
+     "livePath": "Assets/_Aetherward/Resources/Art/Vfx/field_river_stream.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 128,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "78ded0b878225fbadad79ffef472dcfb",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:720"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Vfx/field_river_stream.png"
+    },
+    {
+     "id": "Vfx/field_rune_circle",
+     "livePath": "Assets/_Aetherward/Resources/Art/Vfx/field_rune_circle.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 128,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "c2f3e9c25da867ac187aec064a47b0e4",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:720"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Vfx/field_rune_circle.png"
+    },
+    {
+     "id": "Vfx/field_sanctuary",
+     "livePath": "Assets/_Aetherward/Resources/Art/Vfx/field_sanctuary.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 128,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "7212b3ed9a58b75831f9f0526f9e5fec",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:720"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Vfx/field_sanctuary.png"
+    },
+    {
+     "id": "Vfx/field_sigil_ward",
+     "livePath": "Assets/_Aetherward/Resources/Art/Vfx/field_sigil_ward.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 128,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "273732d16e38e4d11fd4596ab190ba25",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:720"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Vfx/field_sigil_ward.png"
+    },
+    {
+     "id": "Vfx/field_singularity",
+     "livePath": "Assets/_Aetherward/Resources/Art/Vfx/field_singularity.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 128,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "dbec2f50fbc0cab13e897513bd14e5f0",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:720"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Vfx/field_singularity.png"
+    },
+    {
+     "id": "Vfx/field_spike_wall",
+     "livePath": "Assets/_Aetherward/Resources/Art/Vfx/field_spike_wall.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 128,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "90f59bc029303154776093256614fb69",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:720"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Vfx/field_spike_wall.png"
+    },
+    {
+     "id": "Vfx/field_spore_cloud",
+     "livePath": "Assets/_Aetherward/Resources/Art/Vfx/field_spore_cloud.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 128,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "ad53be5cd7d41f9f5f19c3fa7b37de42",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:720"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Vfx/field_spore_cloud.png"
+    },
+    {
+     "id": "Vfx/field_spore_garden",
+     "livePath": "Assets/_Aetherward/Resources/Art/Vfx/field_spore_garden.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 128,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "9c2f77ff1bd1bc860175c966a9922bde",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:720"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Vfx/field_spore_garden.png"
+    },
+    {
+     "id": "Vfx/field_stone_bastion",
+     "livePath": "Assets/_Aetherward/Resources/Art/Vfx/field_stone_bastion.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 128,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "ce1168ebc3ddde31de8d7cc5776de63f",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:720"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Vfx/field_stone_bastion.png"
+    },
+    {
+     "id": "Vfx/field_stone_wall",
+     "livePath": "Assets/_Aetherward/Resources/Art/Vfx/field_stone_wall.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 128,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "0d82217789f3bd2c68d84962a4ff9cab",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:720"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Vfx/field_stone_wall.png"
+    },
+    {
+     "id": "Vfx/field_toxic_patch",
+     "livePath": "Assets/_Aetherward/Resources/Art/Vfx/field_toxic_patch.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 128,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "7c4486d21460271ff3dc34fbe0cf4137",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:720"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Vfx/field_toxic_patch.png"
+    },
+    {
+     "id": "Vfx/field_void_ward",
+     "livePath": "Assets/_Aetherward/Resources/Art/Vfx/field_void_ward.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 128,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "b94a566cca7664268f7f98ececa75be8",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:720"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Vfx/field_void_ward.png"
+    },
+    {
+     "id": "Vfx/field_wildfire",
+     "livePath": "Assets/_Aetherward/Resources/Art/Vfx/field_wildfire.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 128,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "3dbdcfa357874c7339cb4e6cf27f0e86",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:720"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Vfx/field_wildfire.png"
+    },
+    {
+     "id": "Vfx/impact_arcane",
+     "livePath": "Assets/_Aetherward/Resources/Art/Vfx/impact_arcane.png",
+     "size": [
+      192,
+      192
+     ],
+     "mode": "RGBA",
+     "ppu": 192,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.0,
+      1.0
+     ],
+     "guid": "9ac7f06c2421414c19cb2aac37bc5855",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:364",
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:399",
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:487",
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:518",
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:522",
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:528"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Vfx/impact_arcane.png"
+    },
+    {
+     "id": "Vfx/impact_ice",
+     "livePath": "Assets/_Aetherward/Resources/Art/Vfx/impact_ice.png",
+     "size": [
+      192,
+      192
+     ],
+     "mode": "RGBA",
+     "ppu": 192,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.0,
+      1.0
+     ],
+     "guid": "f1f65bcdefee0394765db9dad83b89c2",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:364",
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:399",
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:487",
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:518",
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:522",
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:528"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Vfx/impact_ice.png"
+    },
+    {
+     "id": "Vfx/impact_light",
+     "livePath": "Assets/_Aetherward/Resources/Art/Vfx/impact_light.png",
+     "size": [
+      192,
+      192
+     ],
+     "mode": "RGBA",
+     "ppu": 192,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.0,
+      1.0
+     ],
+     "guid": "0124d0c729f7f05d5584dd41788da43e",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:364",
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:399",
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:487",
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:518",
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:522",
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:528"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Vfx/impact_light.png"
+    },
+    {
+     "id": "Vfx/impact_lightning",
+     "livePath": "Assets/_Aetherward/Resources/Art/Vfx/impact_lightning.png",
+     "size": [
+      192,
+      192
+     ],
+     "mode": "RGBA",
+     "ppu": 192,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.0,
+      1.0
+     ],
+     "guid": "b503e96a25329e7e49b7c9d3fafb3b0e",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:364",
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:399",
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:487",
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:517",
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:518",
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:522"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Vfx/impact_lightning.png"
+    },
+    {
+     "id": "Vfx/impact_nature",
+     "livePath": "Assets/_Aetherward/Resources/Art/Vfx/impact_nature.png",
+     "size": [
+      192,
+      192
+     ],
+     "mode": "RGBA",
+     "ppu": 192,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.0,
+      1.0
+     ],
+     "guid": "5f23dae2f22fcb06435bfbf084d3f581",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:364",
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:399",
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:487",
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:518",
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:522",
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:528"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Vfx/impact_nature.png"
+    },
+    {
+     "id": "Vfx/impact_poison",
+     "livePath": "Assets/_Aetherward/Resources/Art/Vfx/impact_poison.png",
+     "size": [
+      192,
+      192
+     ],
+     "mode": "RGBA",
+     "ppu": 192,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.0,
+      1.0
+     ],
+     "guid": "1e5491b8e1f3b64936e1a0c6e531556f",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:364",
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:399",
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:487",
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:518",
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:522",
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:528"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Vfx/impact_poison.png"
+    },
+    {
+     "id": "Vfx/impact_shadow",
+     "livePath": "Assets/_Aetherward/Resources/Art/Vfx/impact_shadow.png",
+     "size": [
+      192,
+      192
+     ],
+     "mode": "RGBA",
+     "ppu": 192,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.0,
+      1.0
+     ],
+     "guid": "1a22bf5267b886ba1604ff758156e3b2",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:364",
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:399",
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:487",
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:518",
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:522",
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:528"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Vfx/impact_shadow.png"
+    },
+    {
+     "id": "Vfx/impact_void",
+     "livePath": "Assets/_Aetherward/Resources/Art/Vfx/impact_void.png",
+     "size": [
+      192,
+      192
+     ],
+     "mode": "RGBA",
+     "ppu": 192,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.0,
+      1.0
+     ],
+     "guid": "8071edb5d061950a714c7f3a4706fb7e",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:364",
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:399",
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:487",
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:518",
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:522",
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:528"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Vfx/impact_void.png"
+    },
+    {
+     "id": "Vfx/projectile_arcane",
+     "livePath": "Assets/_Aetherward/Resources/Art/Vfx/projectile_arcane.png",
+     "size": [
+      128,
+      128
+     ],
+     "mode": "RGBA",
+     "ppu": 230,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.557,
+      0.557
+     ],
+     "guid": "b376e67e738bf854e8b2496e585c7510",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:517",
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:701"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Vfx/projectile_arcane.png"
+    },
+    {
+     "id": "Vfx/projectile_earth",
+     "livePath": "Assets/_Aetherward/Resources/Art/Vfx/projectile_earth.png",
+     "size": [
+      128,
+      128
+     ],
+     "mode": "RGBA",
+     "ppu": 230,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.557,
+      0.557
+     ],
+     "guid": "65495e1649ec8b07208f6636e61e2d61",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:399",
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:517",
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:538",
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:701"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Vfx/projectile_earth.png"
+    },
+    {
+     "id": "Vfx/projectile_fire",
+     "livePath": "Assets/_Aetherward/Resources/Art/Vfx/projectile_fire.png",
+     "size": [
+      128,
+      128
+     ],
+     "mode": "RGBA",
+     "ppu": 230,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.557,
+      0.557
+     ],
+     "guid": "b3f12405eba018e4cf6e1a93922cb595",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:517",
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:522",
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:701"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Vfx/projectile_fire.png"
+    },
+    {
+     "id": "Vfx/projectile_ice",
+     "livePath": "Assets/_Aetherward/Resources/Art/Vfx/projectile_ice.png",
+     "size": [
+      128,
+      128
+     ],
+     "mode": "RGBA",
+     "ppu": 230,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.557,
+      0.557
+     ],
+     "guid": "d53d165cbd23e5c17aaf03625ea810aa",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:517",
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:528",
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:701"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Vfx/projectile_ice.png"
+    },
+    {
+     "id": "Vfx/projectile_light",
+     "livePath": "Assets/_Aetherward/Resources/Art/Vfx/projectile_light.png",
+     "size": [
+      128,
+      128
+     ],
+     "mode": "RGBA",
+     "ppu": 230,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.557,
+      0.557
+     ],
+     "guid": "2eb52eafaee838be256a6d792c2c2739",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:517",
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:701"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Vfx/projectile_light.png"
+    },
+    {
+     "id": "Vfx/projectile_lightning",
+     "livePath": "Assets/_Aetherward/Resources/Art/Vfx/projectile_lightning.png",
+     "size": [
+      128,
+      128
+     ],
+     "mode": "RGBA",
+     "ppu": 230,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.557,
+      0.557
+     ],
+     "guid": "227ef19af584ad24100ea04c822c74d1",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:517",
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:518",
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:701"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Vfx/projectile_lightning.png"
+    },
+    {
+     "id": "Vfx/projectile_nature",
+     "livePath": "Assets/_Aetherward/Resources/Art/Vfx/projectile_nature.png",
+     "size": [
+      128,
+      128
+     ],
+     "mode": "RGBA",
+     "ppu": 230,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.557,
+      0.557
+     ],
+     "guid": "9a98f2ee8a7d06f8ca40ded730340842",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:517",
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:701"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Vfx/projectile_nature.png"
+    },
+    {
+     "id": "Vfx/projectile_poison",
+     "livePath": "Assets/_Aetherward/Resources/Art/Vfx/projectile_poison.png",
+     "size": [
+      128,
+      128
+     ],
+     "mode": "RGBA",
+     "ppu": 230,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.557,
+      0.557
+     ],
+     "guid": "027d79abec8f91fcce9d37d1a9906e4d",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:517",
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:701"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Vfx/projectile_poison.png"
+    },
+    {
+     "id": "Vfx/projectile_shadow",
+     "livePath": "Assets/_Aetherward/Resources/Art/Vfx/projectile_shadow.png",
+     "size": [
+      128,
+      128
+     ],
+     "mode": "RGBA",
+     "ppu": 230,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.557,
+      0.557
+     ],
+     "guid": "7c95185dfa58270d6133eeaa4d287339",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:517",
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:701"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Vfx/projectile_shadow.png"
+    },
+    {
+     "id": "Vfx/projectile_void",
+     "livePath": "Assets/_Aetherward/Resources/Art/Vfx/projectile_void.png",
+     "size": [
+      128,
+      128
+     ],
+     "mode": "RGBA",
+     "ppu": 230,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.557,
+      0.557
+     ],
+     "guid": "7f39ea708ec60f9fcab9f3280fc6b5ac",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:517",
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:701"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Vfx/projectile_void.png"
+    },
+    {
+     "id": "Vfx/projectile_wind",
+     "livePath": "Assets/_Aetherward/Resources/Art/Vfx/projectile_wind.png",
+     "size": [
+      128,
+      128
+     ],
+     "mode": "RGBA",
+     "ppu": 230,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.557,
+      0.557
+     ],
+     "guid": "9aea462c2946b424f79577d800ab093f",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:517",
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:701"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Vfx/projectile_wind.png"
+    },
+    {
+     "id": "Vfx/spark",
+     "livePath": "Assets/_Aetherward/Resources/Art/Vfx/spark.png",
+     "size": [
+      48,
+      48
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      0.3,
+      0.3
+     ],
+     "guid": "847344055d65c01f56c0d19e47c81367",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:784"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Vfx/spark.png"
+    },
+    {
+     "id": "Vfx/zone_blizzard",
+     "livePath": "Assets/_Aetherward/Resources/Art/Vfx/zone_blizzard.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 128,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "6fbdc95c2f3cb2312b369cdaf568d941",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:720"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Vfx/zone_blizzard.png"
+    },
+    {
+     "id": "Vfx/zone_healing_rain",
+     "livePath": "Assets/_Aetherward/Resources/Art/Vfx/zone_healing_rain.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 128,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "4bf0317069bcef925bea5518c89eb02f",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:720"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Vfx/zone_healing_rain.png"
+    },
+    {
+     "id": "Vfx/zone_magma",
+     "livePath": "Assets/_Aetherward/Resources/Art/Vfx/zone_magma.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 128,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "00b3d9e751de58b61bf840772496b9af",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:720"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Vfx/zone_magma.png"
+    },
+    {
+     "id": "Vfx/zone_mud",
+     "livePath": "Assets/_Aetherward/Resources/Art/Vfx/zone_mud.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 128,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "85b4148ab802eb918a5c705bb9211da6",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:720"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Vfx/zone_mud.png"
+    },
+    {
+     "id": "Vfx/zone_storm_trail",
+     "livePath": "Assets/_Aetherward/Resources/Art/Vfx/zone_storm_trail.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 128,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "36bbd91f0b157cf8ecf2f9c532d84801",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:720"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Vfx/zone_storm_trail.png"
+    },
+    {
+     "id": "Vfx/zone_tempest_link",
+     "livePath": "Assets/_Aetherward/Resources/Art/Vfx/zone_tempest_link.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 128,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "db1b520b9bd470b8d788699e3292a6f2",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:720"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Vfx/zone_tempest_link.png"
+    },
+    {
+     "id": "Vfx/zone_thunderstorm",
+     "livePath": "Assets/_Aetherward/Resources/Art/Vfx/zone_thunderstorm.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 128,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "bb47d2a31ba8a44ed7cd18acc168ab52",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:720"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Vfx/zone_thunderstorm.png"
+    },
+    {
+     "id": "Vfx/zone_vortex",
+     "livePath": "Assets/_Aetherward/Resources/Art/Vfx/zone_vortex.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 128,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "cbf3fadd15d6030128ff381a0dc3ea2b",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs:720"
+     ],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Vfx/zone_vortex.png"
+    }
+   ]
+  }
+ ],
+ "assetCount": 64
+}

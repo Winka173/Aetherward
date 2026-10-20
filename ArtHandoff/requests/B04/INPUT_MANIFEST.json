@@ -1,0 +1,2014 @@
+{
+ "batch": "B04",
+ "generatedBy": "Tools/ArtPipeline/handoff.py request",
+ "camera": null,
+ "groups": [
+  {
+   "id": "heroes",
+   "title": "Heroes",
+   "priority": "P1",
+   "required": true,
+   "assets": [
+    {
+     "id": "Heroes/nyxara_idle",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/nyxara_idle.png",
+     "size": [
+      400,
+      400
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "978964df3859e70413a820f1e52ae6ab",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.Ui.cs:592",
+      "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:112",
+      "Assets/_Aetherward/Scripts/Unity/Menu/MenuController.Training.cs:39",
+      "Assets/_Aetherward/Scripts/Unity/Menu/MenuController.cs:61",
+      "Assets/_Aetherward/Scripts/Unity/UI/SharedPanels.cs:111"
+     ],
+     "footRowFromTop": 372,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/nyxara_idle.png",
+     "guide": "ArtHandoff/requests/B04/references/guides/unit__Heroes__nyxara_idle.png"
+    },
+    {
+     "id": "Heroes/nyxara_cast",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/nyxara_cast.png",
+     "size": [
+      400,
+      400
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "76961081b89188276f1032e5e4ca1ef9",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:113"
+     ],
+     "footRowFromTop": 372,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/nyxara_cast.png",
+     "guide": "ArtHandoff/requests/B04/references/guides/unit__Heroes__nyxara_cast.png"
+    },
+    {
+     "id": "Heroes/nyxara_downed",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/nyxara_downed.png",
+     "size": [
+      400,
+      400
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "3077b3fb50a5061bdf578b465df34b19",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:114"
+     ],
+     "footRowFromTop": 372,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/nyxara_downed.png",
+     "guide": "ArtHandoff/requests/B04/references/guides/unit__Heroes__nyxara_downed.png"
+    },
+    {
+     "id": "Heroes/nyxara_evoA",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/nyxara_evoA.png",
+     "size": [
+      400,
+      400
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "2ac2f96fd6accd7fc19f9dcb306c22db",
+     "codeRefs": [],
+     "footRowFromTop": 372,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/nyxara_evoA.png",
+     "guide": "ArtHandoff/requests/B04/references/guides/unit__Heroes__nyxara_evoA.png"
+    },
+    {
+     "id": "Heroes/nyxara_evoA_cast",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/nyxara_evoA_cast.png",
+     "size": [
+      400,
+      400
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "34126be721d90b83928cd90775f8d4be",
+     "codeRefs": [],
+     "footRowFromTop": 372,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/nyxara_evoA_cast.png",
+     "guide": "ArtHandoff/requests/B04/references/guides/unit__Heroes__nyxara_evoA_cast.png"
+    },
+    {
+     "id": "Heroes/nyxara_evoB",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/nyxara_evoB.png",
+     "size": [
+      400,
+      400
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "bcf68bf2f608d09a3f8f35a6dcb5edc6",
+     "codeRefs": [],
+     "footRowFromTop": 372,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/nyxara_evoB.png",
+     "guide": "ArtHandoff/requests/B04/references/guides/unit__Heroes__nyxara_evoB.png"
+    },
+    {
+     "id": "Heroes/nyxara_evoB_cast",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/nyxara_evoB_cast.png",
+     "size": [
+      400,
+      400
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "28538a31dad84d69a72a91f1e8c2c145",
+     "codeRefs": [],
+     "footRowFromTop": 372,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/nyxara_evoB_cast.png",
+     "guide": "ArtHandoff/requests/B04/references/guides/unit__Heroes__nyxara_evoB_cast.png"
+    },
+    {
+     "id": "Portraits/nyxara",
+     "livePath": "Assets/_Aetherward/Resources/Art/Portraits/nyxara.png",
+     "size": [
+      192,
+      192
+     ],
+     "mode": "RGBA",
+     "ppu": 100,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.92,
+      1.92
+     ],
+     "guid": "20ac8a34f1becb64580495faf8b935fa",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Portraits/nyxara.png"
+    },
+    {
+     "id": "Heroes/ashara_idle",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/ashara_idle.png",
+     "size": [
+      400,
+      400
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "9a4eeeb433d24a098db6be1382cafca5",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.Ui.cs:592",
+      "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:112",
+      "Assets/_Aetherward/Scripts/Unity/Menu/MenuController.Training.cs:39",
+      "Assets/_Aetherward/Scripts/Unity/Menu/MenuController.cs:61",
+      "Assets/_Aetherward/Scripts/Unity/UI/SharedPanels.cs:111"
+     ],
+     "footRowFromTop": 372,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/ashara_idle.png",
+     "guide": "ArtHandoff/requests/B04/references/guides/unit__Heroes__ashara_idle.png"
+    },
+    {
+     "id": "Heroes/ashara_cast",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/ashara_cast.png",
+     "size": [
+      400,
+      400
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "8c251807f2dff3533e55839be5012eb2",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:113"
+     ],
+     "footRowFromTop": 372,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/ashara_cast.png",
+     "guide": "ArtHandoff/requests/B04/references/guides/unit__Heroes__ashara_cast.png"
+    },
+    {
+     "id": "Heroes/ashara_downed",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/ashara_downed.png",
+     "size": [
+      400,
+      400
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "a5dd64ee1761914a7a7d9a54a64640ef",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:114"
+     ],
+     "footRowFromTop": 372,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/ashara_downed.png",
+     "guide": "ArtHandoff/requests/B04/references/guides/unit__Heroes__ashara_downed.png"
+    },
+    {
+     "id": "Heroes/ashara_evoA",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/ashara_evoA.png",
+     "size": [
+      400,
+      400
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "534b0f4c6d9843388b4b0e752dacd92f",
+     "codeRefs": [],
+     "footRowFromTop": 372,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/ashara_evoA.png",
+     "guide": "ArtHandoff/requests/B04/references/guides/unit__Heroes__ashara_evoA.png"
+    },
+    {
+     "id": "Heroes/ashara_evoA_cast",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/ashara_evoA_cast.png",
+     "size": [
+      400,
+      400
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "340bfe680f3aa72419c116eb36a85402",
+     "codeRefs": [],
+     "footRowFromTop": 372,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/ashara_evoA_cast.png",
+     "guide": "ArtHandoff/requests/B04/references/guides/unit__Heroes__ashara_evoA_cast.png"
+    },
+    {
+     "id": "Heroes/ashara_evoB",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/ashara_evoB.png",
+     "size": [
+      400,
+      400
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "bce453b4e4428de7fff80641ddf103ba",
+     "codeRefs": [],
+     "footRowFromTop": 372,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/ashara_evoB.png",
+     "guide": "ArtHandoff/requests/B04/references/guides/unit__Heroes__ashara_evoB.png"
+    },
+    {
+     "id": "Heroes/ashara_evoB_cast",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/ashara_evoB_cast.png",
+     "size": [
+      400,
+      400
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "76bb2ac5c3c1296d2d3690550f1f54f3",
+     "codeRefs": [],
+     "footRowFromTop": 372,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/ashara_evoB_cast.png",
+     "guide": "ArtHandoff/requests/B04/references/guides/unit__Heroes__ashara_evoB_cast.png"
+    },
+    {
+     "id": "Portraits/ashara",
+     "livePath": "Assets/_Aetherward/Resources/Art/Portraits/ashara.png",
+     "size": [
+      192,
+      192
+     ],
+     "mode": "RGBA",
+     "ppu": 100,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.92,
+      1.92
+     ],
+     "guid": "b18348fb3cddf6f88f37913a1587a4a8",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Portraits/ashara.png"
+    },
+    {
+     "id": "Heroes/nerissa_idle",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/nerissa_idle.png",
+     "size": [
+      400,
+      400
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "5b9c2c36edeca63570b785ba53b13825",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.Ui.cs:592",
+      "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:112",
+      "Assets/_Aetherward/Scripts/Unity/Menu/MenuController.Training.cs:39",
+      "Assets/_Aetherward/Scripts/Unity/Menu/MenuController.cs:61",
+      "Assets/_Aetherward/Scripts/Unity/UI/SharedPanels.cs:111"
+     ],
+     "footRowFromTop": 372,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/nerissa_idle.png",
+     "guide": "ArtHandoff/requests/B04/references/guides/unit__Heroes__nerissa_idle.png"
+    },
+    {
+     "id": "Heroes/nerissa_cast",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/nerissa_cast.png",
+     "size": [
+      400,
+      400
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "2a678029dfaef7ca05c95e732654e45e",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:113"
+     ],
+     "footRowFromTop": 372,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/nerissa_cast.png",
+     "guide": "ArtHandoff/requests/B04/references/guides/unit__Heroes__nerissa_cast.png"
+    },
+    {
+     "id": "Heroes/nerissa_downed",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/nerissa_downed.png",
+     "size": [
+      400,
+      400
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "d97b1f78a27c6de089c8599a2d353b22",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:114"
+     ],
+     "footRowFromTop": 372,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/nerissa_downed.png",
+     "guide": "ArtHandoff/requests/B04/references/guides/unit__Heroes__nerissa_downed.png"
+    },
+    {
+     "id": "Heroes/nerissa_evoA",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/nerissa_evoA.png",
+     "size": [
+      400,
+      400
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "eaf9398ee1d413d42eb731a7dcb3bb71",
+     "codeRefs": [],
+     "footRowFromTop": 372,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/nerissa_evoA.png",
+     "guide": "ArtHandoff/requests/B04/references/guides/unit__Heroes__nerissa_evoA.png"
+    },
+    {
+     "id": "Heroes/nerissa_evoA_cast",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/nerissa_evoA_cast.png",
+     "size": [
+      400,
+      400
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "d1abe8b241b9e1e21b9abf1adbd0abb3",
+     "codeRefs": [],
+     "footRowFromTop": 372,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/nerissa_evoA_cast.png",
+     "guide": "ArtHandoff/requests/B04/references/guides/unit__Heroes__nerissa_evoA_cast.png"
+    },
+    {
+     "id": "Heroes/nerissa_evoB",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/nerissa_evoB.png",
+     "size": [
+      400,
+      400
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "fc2f89a28f496ba9b62aefad82c8ce7b",
+     "codeRefs": [],
+     "footRowFromTop": 372,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/nerissa_evoB.png",
+     "guide": "ArtHandoff/requests/B04/references/guides/unit__Heroes__nerissa_evoB.png"
+    },
+    {
+     "id": "Heroes/nerissa_evoB_cast",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/nerissa_evoB_cast.png",
+     "size": [
+      400,
+      400
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "5248625203a404b122940482fcdb18fc",
+     "codeRefs": [],
+     "footRowFromTop": 372,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/nerissa_evoB_cast.png",
+     "guide": "ArtHandoff/requests/B04/references/guides/unit__Heroes__nerissa_evoB_cast.png"
+    },
+    {
+     "id": "Portraits/nerissa",
+     "livePath": "Assets/_Aetherward/Resources/Art/Portraits/nerissa.png",
+     "size": [
+      192,
+      192
+     ],
+     "mode": "RGBA",
+     "ppu": 100,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.92,
+      1.92
+     ],
+     "guid": "71f672af94ac3ef83543da5c068be6de",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Portraits/nerissa.png"
+    },
+    {
+     "id": "Heroes/voltrix_idle",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/voltrix_idle.png",
+     "size": [
+      400,
+      400
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "3d4a4cf0141ca70085d3c5a3d3d4a5dc",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.Ui.cs:592",
+      "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:112",
+      "Assets/_Aetherward/Scripts/Unity/Menu/MenuController.Training.cs:39",
+      "Assets/_Aetherward/Scripts/Unity/Menu/MenuController.cs:61",
+      "Assets/_Aetherward/Scripts/Unity/UI/SharedPanels.cs:111"
+     ],
+     "footRowFromTop": 372,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/voltrix_idle.png",
+     "guide": "ArtHandoff/requests/B04/references/guides/unit__Heroes__voltrix_idle.png"
+    },
+    {
+     "id": "Heroes/voltrix_cast",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/voltrix_cast.png",
+     "size": [
+      400,
+      400
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "57b3bf7aeab97da348debee214935246",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:113"
+     ],
+     "footRowFromTop": 372,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/voltrix_cast.png",
+     "guide": "ArtHandoff/requests/B04/references/guides/unit__Heroes__voltrix_cast.png"
+    },
+    {
+     "id": "Heroes/voltrix_downed",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/voltrix_downed.png",
+     "size": [
+      400,
+      400
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "c226519e589112c540a23c2d64a9f47d",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:114"
+     ],
+     "footRowFromTop": 372,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/voltrix_downed.png",
+     "guide": "ArtHandoff/requests/B04/references/guides/unit__Heroes__voltrix_downed.png"
+    },
+    {
+     "id": "Heroes/voltrix_evoA",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/voltrix_evoA.png",
+     "size": [
+      400,
+      400
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "e7ae2956f5b1e86a9c3c364fa136cefa",
+     "codeRefs": [],
+     "footRowFromTop": 372,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/voltrix_evoA.png",
+     "guide": "ArtHandoff/requests/B04/references/guides/unit__Heroes__voltrix_evoA.png"
+    },
+    {
+     "id": "Heroes/voltrix_evoA_cast",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/voltrix_evoA_cast.png",
+     "size": [
+      400,
+      400
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "578bd829f760124bf187a6792adc2a2d",
+     "codeRefs": [],
+     "footRowFromTop": 372,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/voltrix_evoA_cast.png",
+     "guide": "ArtHandoff/requests/B04/references/guides/unit__Heroes__voltrix_evoA_cast.png"
+    },
+    {
+     "id": "Heroes/voltrix_evoB",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/voltrix_evoB.png",
+     "size": [
+      400,
+      400
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "4760454c7e238f79bf4a0862c47fcf6a",
+     "codeRefs": [],
+     "footRowFromTop": 372,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/voltrix_evoB.png",
+     "guide": "ArtHandoff/requests/B04/references/guides/unit__Heroes__voltrix_evoB.png"
+    },
+    {
+     "id": "Heroes/voltrix_evoB_cast",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/voltrix_evoB_cast.png",
+     "size": [
+      400,
+      400
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "ad31b825115270d3be9d72268b4d4061",
+     "codeRefs": [],
+     "footRowFromTop": 372,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/voltrix_evoB_cast.png",
+     "guide": "ArtHandoff/requests/B04/references/guides/unit__Heroes__voltrix_evoB_cast.png"
+    },
+    {
+     "id": "Portraits/voltrix",
+     "livePath": "Assets/_Aetherward/Resources/Art/Portraits/voltrix.png",
+     "size": [
+      192,
+      192
+     ],
+     "mode": "RGBA",
+     "ppu": 100,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.92,
+      1.92
+     ],
+     "guid": "3fa1fc6af17cc5e5262015b6b2dd8f25",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Portraits/voltrix.png"
+    },
+    {
+     "id": "Heroes/eirwen_idle",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/eirwen_idle.png",
+     "size": [
+      400,
+      400
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "172622abbc9fbe02f94ddb430d7f543d",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.Ui.cs:592",
+      "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:112",
+      "Assets/_Aetherward/Scripts/Unity/Menu/MenuController.Training.cs:39",
+      "Assets/_Aetherward/Scripts/Unity/Menu/MenuController.cs:61",
+      "Assets/_Aetherward/Scripts/Unity/UI/SharedPanels.cs:111"
+     ],
+     "footRowFromTop": 372,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/eirwen_idle.png",
+     "guide": "ArtHandoff/requests/B04/references/guides/unit__Heroes__eirwen_idle.png"
+    },
+    {
+     "id": "Heroes/eirwen_cast",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/eirwen_cast.png",
+     "size": [
+      400,
+      400
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "9f27f82c062421069a622b9b169588f1",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:113"
+     ],
+     "footRowFromTop": 372,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/eirwen_cast.png",
+     "guide": "ArtHandoff/requests/B04/references/guides/unit__Heroes__eirwen_cast.png"
+    },
+    {
+     "id": "Heroes/eirwen_downed",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/eirwen_downed.png",
+     "size": [
+      400,
+      400
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "32ffb69782ccb87e4b500dc50cabbbd2",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:114"
+     ],
+     "footRowFromTop": 372,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/eirwen_downed.png",
+     "guide": "ArtHandoff/requests/B04/references/guides/unit__Heroes__eirwen_downed.png"
+    },
+    {
+     "id": "Heroes/eirwen_evoA",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/eirwen_evoA.png",
+     "size": [
+      400,
+      400
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "4aa508508a37e9304d3099844c76bc51",
+     "codeRefs": [],
+     "footRowFromTop": 372,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/eirwen_evoA.png",
+     "guide": "ArtHandoff/requests/B04/references/guides/unit__Heroes__eirwen_evoA.png"
+    },
+    {
+     "id": "Heroes/eirwen_evoA_cast",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/eirwen_evoA_cast.png",
+     "size": [
+      400,
+      400
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "1a85ff30c6201148775916def6d114cd",
+     "codeRefs": [],
+     "footRowFromTop": 372,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/eirwen_evoA_cast.png",
+     "guide": "ArtHandoff/requests/B04/references/guides/unit__Heroes__eirwen_evoA_cast.png"
+    },
+    {
+     "id": "Heroes/eirwen_evoB",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/eirwen_evoB.png",
+     "size": [
+      400,
+      400
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "89ab900231a18d091c7a25c799dd303c",
+     "codeRefs": [],
+     "footRowFromTop": 372,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/eirwen_evoB.png",
+     "guide": "ArtHandoff/requests/B04/references/guides/unit__Heroes__eirwen_evoB.png"
+    },
+    {
+     "id": "Heroes/eirwen_evoB_cast",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/eirwen_evoB_cast.png",
+     "size": [
+      400,
+      400
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "5be5ff32fe44178f3ae99d3c3bdaf51f",
+     "codeRefs": [],
+     "footRowFromTop": 372,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/eirwen_evoB_cast.png",
+     "guide": "ArtHandoff/requests/B04/references/guides/unit__Heroes__eirwen_evoB_cast.png"
+    },
+    {
+     "id": "Portraits/eirwen",
+     "livePath": "Assets/_Aetherward/Resources/Art/Portraits/eirwen.png",
+     "size": [
+      192,
+      192
+     ],
+     "mode": "RGBA",
+     "ppu": 100,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.92,
+      1.92
+     ],
+     "guid": "cdc3579e72ba07d61efb996e2d865309",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Portraits/eirwen.png"
+    },
+    {
+     "id": "Heroes/kael_idle",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/kael_idle.png",
+     "size": [
+      400,
+      400
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "a447895aa3faf535747c1715062cd01f",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.Ui.cs:592",
+      "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:112",
+      "Assets/_Aetherward/Scripts/Unity/Menu/MenuController.Training.cs:39",
+      "Assets/_Aetherward/Scripts/Unity/Menu/MenuController.cs:61",
+      "Assets/_Aetherward/Scripts/Unity/UI/SharedPanels.cs:111"
+     ],
+     "footRowFromTop": 372,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/kael_idle.png",
+     "guide": "ArtHandoff/requests/B04/references/guides/unit__Heroes__kael_idle.png"
+    },
+    {
+     "id": "Heroes/kael_cast",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/kael_cast.png",
+     "size": [
+      400,
+      400
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "d3b77488ca59ab968a81dde98fc6f5b1",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:113"
+     ],
+     "footRowFromTop": 372,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/kael_cast.png",
+     "guide": "ArtHandoff/requests/B04/references/guides/unit__Heroes__kael_cast.png"
+    },
+    {
+     "id": "Heroes/kael_downed",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/kael_downed.png",
+     "size": [
+      400,
+      400
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "48eecb4aa33660bc06212f89ec2c02cd",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:114"
+     ],
+     "footRowFromTop": 372,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/kael_downed.png",
+     "guide": "ArtHandoff/requests/B04/references/guides/unit__Heroes__kael_downed.png"
+    },
+    {
+     "id": "Heroes/kael_evoA",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/kael_evoA.png",
+     "size": [
+      400,
+      400
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "662d80110c903ffdbbb89a4398fea706",
+     "codeRefs": [],
+     "footRowFromTop": 372,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/kael_evoA.png",
+     "guide": "ArtHandoff/requests/B04/references/guides/unit__Heroes__kael_evoA.png"
+    },
+    {
+     "id": "Heroes/kael_evoA_cast",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/kael_evoA_cast.png",
+     "size": [
+      400,
+      400
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "3712bb76eb0cefdb17ecb68f3f2baf10",
+     "codeRefs": [],
+     "footRowFromTop": 372,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/kael_evoA_cast.png",
+     "guide": "ArtHandoff/requests/B04/references/guides/unit__Heroes__kael_evoA_cast.png"
+    },
+    {
+     "id": "Heroes/kael_evoB",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/kael_evoB.png",
+     "size": [
+      400,
+      400
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "af45263aab9d293ccb6bb0147a845b55",
+     "codeRefs": [],
+     "footRowFromTop": 372,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/kael_evoB.png",
+     "guide": "ArtHandoff/requests/B04/references/guides/unit__Heroes__kael_evoB.png"
+    },
+    {
+     "id": "Heroes/kael_evoB_cast",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/kael_evoB_cast.png",
+     "size": [
+      400,
+      400
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "3fa45bf47bfebd78d0ac71b57506a8ae",
+     "codeRefs": [],
+     "footRowFromTop": 372,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/kael_evoB_cast.png",
+     "guide": "ArtHandoff/requests/B04/references/guides/unit__Heroes__kael_evoB_cast.png"
+    },
+    {
+     "id": "Portraits/kael",
+     "livePath": "Assets/_Aetherward/Resources/Art/Portraits/kael.png",
+     "size": [
+      192,
+      192
+     ],
+     "mode": "RGBA",
+     "ppu": 100,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.92,
+      1.92
+     ],
+     "guid": "8d7efbd9c594c40bc3c6689f5f9b20ff",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Portraits/kael.png"
+    },
+    {
+     "id": "Heroes/nyxara_attack",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/nyxara_attack.png",
+     "size": [
+      400,
+      400
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 372,
+     "new": true,
+     "like": "Heroes/nyxara_idle",
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/nyxara_idle.png",
+     "guide": "ArtHandoff/requests/B04/references/guides/unit__Heroes__nyxara_attack.png"
+    },
+    {
+     "id": "Heroes/nyxara_evoA_attack",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/nyxara_evoA_attack.png",
+     "size": [
+      400,
+      400
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 372,
+     "new": true,
+     "like": "Heroes/nyxara_evoA",
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/nyxara_evoA.png",
+     "guide": "ArtHandoff/requests/B04/references/guides/unit__Heroes__nyxara_evoA_attack.png"
+    },
+    {
+     "id": "Heroes/nyxara_evoB_attack",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/nyxara_evoB_attack.png",
+     "size": [
+      400,
+      400
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 372,
+     "new": true,
+     "like": "Heroes/nyxara_evoB",
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/nyxara_evoB.png",
+     "guide": "ArtHandoff/requests/B04/references/guides/unit__Heroes__nyxara_evoB_attack.png"
+    },
+    {
+     "id": "Heroes/ashara_attack",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/ashara_attack.png",
+     "size": [
+      400,
+      400
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 372,
+     "new": true,
+     "like": "Heroes/ashara_idle",
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/ashara_idle.png",
+     "guide": "ArtHandoff/requests/B04/references/guides/unit__Heroes__ashara_attack.png"
+    },
+    {
+     "id": "Heroes/ashara_evoA_attack",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/ashara_evoA_attack.png",
+     "size": [
+      400,
+      400
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 372,
+     "new": true,
+     "like": "Heroes/ashara_evoA",
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/ashara_evoA.png",
+     "guide": "ArtHandoff/requests/B04/references/guides/unit__Heroes__ashara_evoA_attack.png"
+    },
+    {
+     "id": "Heroes/ashara_evoB_attack",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/ashara_evoB_attack.png",
+     "size": [
+      400,
+      400
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 372,
+     "new": true,
+     "like": "Heroes/ashara_evoB",
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/ashara_evoB.png",
+     "guide": "ArtHandoff/requests/B04/references/guides/unit__Heroes__ashara_evoB_attack.png"
+    },
+    {
+     "id": "Heroes/nerissa_attack",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/nerissa_attack.png",
+     "size": [
+      400,
+      400
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 372,
+     "new": true,
+     "like": "Heroes/nerissa_idle",
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/nerissa_idle.png",
+     "guide": "ArtHandoff/requests/B04/references/guides/unit__Heroes__nerissa_attack.png"
+    },
+    {
+     "id": "Heroes/nerissa_evoA_attack",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/nerissa_evoA_attack.png",
+     "size": [
+      400,
+      400
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 372,
+     "new": true,
+     "like": "Heroes/nerissa_evoA",
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/nerissa_evoA.png",
+     "guide": "ArtHandoff/requests/B04/references/guides/unit__Heroes__nerissa_evoA_attack.png"
+    },
+    {
+     "id": "Heroes/nerissa_evoB_attack",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/nerissa_evoB_attack.png",
+     "size": [
+      400,
+      400
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 372,
+     "new": true,
+     "like": "Heroes/nerissa_evoB",
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/nerissa_evoB.png",
+     "guide": "ArtHandoff/requests/B04/references/guides/unit__Heroes__nerissa_evoB_attack.png"
+    },
+    {
+     "id": "Heroes/voltrix_attack",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/voltrix_attack.png",
+     "size": [
+      400,
+      400
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 372,
+     "new": true,
+     "like": "Heroes/voltrix_idle",
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/voltrix_idle.png",
+     "guide": "ArtHandoff/requests/B04/references/guides/unit__Heroes__voltrix_attack.png"
+    },
+    {
+     "id": "Heroes/voltrix_evoA_attack",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/voltrix_evoA_attack.png",
+     "size": [
+      400,
+      400
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 372,
+     "new": true,
+     "like": "Heroes/voltrix_evoA",
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/voltrix_evoA.png",
+     "guide": "ArtHandoff/requests/B04/references/guides/unit__Heroes__voltrix_evoA_attack.png"
+    },
+    {
+     "id": "Heroes/voltrix_evoB_attack",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/voltrix_evoB_attack.png",
+     "size": [
+      400,
+      400
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 372,
+     "new": true,
+     "like": "Heroes/voltrix_evoB",
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/voltrix_evoB.png",
+     "guide": "ArtHandoff/requests/B04/references/guides/unit__Heroes__voltrix_evoB_attack.png"
+    },
+    {
+     "id": "Heroes/eirwen_attack",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/eirwen_attack.png",
+     "size": [
+      400,
+      400
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 372,
+     "new": true,
+     "like": "Heroes/eirwen_idle",
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/eirwen_idle.png",
+     "guide": "ArtHandoff/requests/B04/references/guides/unit__Heroes__eirwen_attack.png"
+    },
+    {
+     "id": "Heroes/eirwen_evoA_attack",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/eirwen_evoA_attack.png",
+     "size": [
+      400,
+      400
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 372,
+     "new": true,
+     "like": "Heroes/eirwen_evoA",
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/eirwen_evoA.png",
+     "guide": "ArtHandoff/requests/B04/references/guides/unit__Heroes__eirwen_evoA_attack.png"
+    },
+    {
+     "id": "Heroes/eirwen_evoB_attack",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/eirwen_evoB_attack.png",
+     "size": [
+      400,
+      400
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 372,
+     "new": true,
+     "like": "Heroes/eirwen_evoB",
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/eirwen_evoB.png",
+     "guide": "ArtHandoff/requests/B04/references/guides/unit__Heroes__eirwen_evoB_attack.png"
+    },
+    {
+     "id": "Heroes/kael_attack",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/kael_attack.png",
+     "size": [
+      400,
+      400
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 372,
+     "new": true,
+     "like": "Heroes/kael_idle",
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/kael_idle.png",
+     "guide": "ArtHandoff/requests/B04/references/guides/unit__Heroes__kael_attack.png"
+    },
+    {
+     "id": "Heroes/kael_evoA_attack",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/kael_evoA_attack.png",
+     "size": [
+      400,
+      400
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 372,
+     "new": true,
+     "like": "Heroes/kael_evoA",
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/kael_evoA.png",
+     "guide": "ArtHandoff/requests/B04/references/guides/unit__Heroes__kael_evoA_attack.png"
+    },
+    {
+     "id": "Heroes/kael_evoB_attack",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/kael_evoB_attack.png",
+     "size": [
+      400,
+      400
+     ],
+     "mode": "RGBA",
+     "ppu": 200,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 372,
+     "new": true,
+     "like": "Heroes/kael_evoB",
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/kael_evoB.png",
+     "guide": "ArtHandoff/requests/B04/references/guides/unit__Heroes__kael_evoB_attack.png"
+    }
+   ]
+  }
+ ],
+ "assetCount": 66
+}

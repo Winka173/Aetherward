@@ -1,0 +1,1176 @@
+{
+ "batch": "B10",
+ "generatedBy": "Tools/ArtPipeline/handoff.py request",
+ "camera": null,
+ "groups": [
+  {
+   "id": "factions2",
+   "title": "Frozen Covenant, Stormspire, Corrupted Wilds, Arcane Fractures",
+   "priority": "P1",
+   "required": true,
+   "assets": [
+    {
+     "id": "Enemies/frost_wraith_a",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/frost_wraith_a.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "81ff8124ba722e592d5bdcbdbd699355",
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/frost_wraith_a.png",
+     "guide": "ArtHandoff/requests/B10/references/guides/unit__Enemies__frost_wraith_a.png"
+    },
+    {
+     "id": "Enemies/frost_wraith_b",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/frost_wraith_b.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "5cd6589864d4ec92c5cfb548cef7e6bd",
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/frost_wraith_b.png",
+     "guide": "ArtHandoff/requests/B10/references/guides/unit__Enemies__frost_wraith_b.png"
+    },
+    {
+     "id": "Enemies/ice_statue_a",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/ice_statue_a.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "f406381e8f4d0247cde5f8045293eda9",
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/ice_statue_a.png",
+     "guide": "ArtHandoff/requests/B10/references/guides/unit__Enemies__ice_statue_a.png"
+    },
+    {
+     "id": "Enemies/ice_statue_b",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/ice_statue_b.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "c1f435d3322cf9efac23e47cbd12014a",
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/ice_statue_b.png",
+     "guide": "ArtHandoff/requests/B10/references/guides/unit__Enemies__ice_statue_b.png"
+    },
+    {
+     "id": "Enemies/glacier_golem_a",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/glacier_golem_a.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "e07c308834688af3cf56e9439327ba91",
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/glacier_golem_a.png",
+     "guide": "ArtHandoff/requests/B10/references/guides/unit__Enemies__glacier_golem_a.png"
+    },
+    {
+     "id": "Enemies/glacier_golem_b",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/glacier_golem_b.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "4d198f03d780fe328641c090154545d1",
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/glacier_golem_b.png",
+     "guide": "ArtHandoff/requests/B10/references/guides/unit__Enemies__glacier_golem_b.png"
+    },
+    {
+     "id": "Enemies/thunder_drummer_a",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/thunder_drummer_a.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "f4576f5deb6c1d7245cb41ce600a00a5",
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/thunder_drummer_a.png",
+     "guide": "ArtHandoff/requests/B10/references/guides/unit__Enemies__thunder_drummer_a.png"
+    },
+    {
+     "id": "Enemies/thunder_drummer_b",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/thunder_drummer_b.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "df7ede59590908919de238bac5516fdb",
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/thunder_drummer_b.png",
+     "guide": "ArtHandoff/requests/B10/references/guides/unit__Enemies__thunder_drummer_b.png"
+    },
+    {
+     "id": "Enemies/storm_wisp_a",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/storm_wisp_a.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "26060c5d50f3635e255ea5686e8b74c9",
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "flyer": true,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/storm_wisp_a.png",
+     "guide": "ArtHandoff/requests/B10/references/guides/unit__Enemies__storm_wisp_a.png"
+    },
+    {
+     "id": "Enemies/storm_wisp_b",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/storm_wisp_b.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "c848173a06952ece35aaf992466a01fb",
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "flyer": true,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/storm_wisp_b.png",
+     "guide": "ArtHandoff/requests/B10/references/guides/unit__Enemies__storm_wisp_b.png"
+    },
+    {
+     "id": "Enemies/spore_carrier_a",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/spore_carrier_a.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "e6c3b3657ebc56084c5e1fcf09941fd8",
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/spore_carrier_a.png",
+     "guide": "ArtHandoff/requests/B10/references/guides/unit__Enemies__spore_carrier_a.png"
+    },
+    {
+     "id": "Enemies/spore_carrier_b",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/spore_carrier_b.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "850da2d7e9b6acb55e7fdefd71055e02",
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/spore_carrier_b.png",
+     "guide": "ArtHandoff/requests/B10/references/guides/unit__Enemies__spore_carrier_b.png"
+    },
+    {
+     "id": "Enemies/blight_shambler_a",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/blight_shambler_a.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "9ec66f54658643eeab7e4110c79b46ad",
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/blight_shambler_a.png",
+     "guide": "ArtHandoff/requests/B10/references/guides/unit__Enemies__blight_shambler_a.png"
+    },
+    {
+     "id": "Enemies/blight_shambler_b",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/blight_shambler_b.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "eaa9493591305103476c1f3f2704ee9c",
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/blight_shambler_b.png",
+     "guide": "ArtHandoff/requests/B10/references/guides/unit__Enemies__blight_shambler_b.png"
+    },
+    {
+     "id": "Enemies/rootbound_treant_a",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/rootbound_treant_a.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "74b42712ab07ef058f98e7ebf88ba741",
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/rootbound_treant_a.png",
+     "guide": "ArtHandoff/requests/B10/references/guides/unit__Enemies__rootbound_treant_a.png"
+    },
+    {
+     "id": "Enemies/rootbound_treant_b",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/rootbound_treant_b.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "9990b4c0938cd2f1f196aee125f8b26b",
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/rootbound_treant_b.png",
+     "guide": "ArtHandoff/requests/B10/references/guides/unit__Enemies__rootbound_treant_b.png"
+    },
+    {
+     "id": "Enemies/mana_leech_a",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/mana_leech_a.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "c9b232b2e064f117835104e9b263e620",
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/mana_leech_a.png",
+     "guide": "ArtHandoff/requests/B10/references/guides/unit__Enemies__mana_leech_a.png"
+    },
+    {
+     "id": "Enemies/mana_leech_b",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/mana_leech_b.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "a72e1a88e026fa8bd4629d592b8de174",
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/mana_leech_b.png",
+     "guide": "ArtHandoff/requests/B10/references/guides/unit__Enemies__mana_leech_b.png"
+    },
+    {
+     "id": "Enemies/hex_binder_a",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/hex_binder_a.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "5ebf190ea6ea19414a287c1449c84fea",
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/hex_binder_a.png",
+     "guide": "ArtHandoff/requests/B10/references/guides/unit__Enemies__hex_binder_a.png"
+    },
+    {
+     "id": "Enemies/hex_binder_b",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/hex_binder_b.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "39bee2bb4a016c103eca71f7b525fd58",
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/hex_binder_b.png",
+     "guide": "ArtHandoff/requests/B10/references/guides/unit__Enemies__hex_binder_b.png"
+    },
+    {
+     "id": "Enemies/mirror_knight_a",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/mirror_knight_a.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "5ad0cd4412dca91a7cc0320a71ee63ab",
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/mirror_knight_a.png",
+     "guide": "ArtHandoff/requests/B10/references/guides/unit__Enemies__mirror_knight_a.png"
+    },
+    {
+     "id": "Enemies/mirror_knight_b",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/mirror_knight_b.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "0b98288539dd3c1f99fe225e1732698b",
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/mirror_knight_b.png",
+     "guide": "ArtHandoff/requests/B10/references/guides/unit__Enemies__mirror_knight_b.png"
+    },
+    {
+     "id": "Enemies/chaos_elemental_a",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/chaos_elemental_a.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "313f96c850d8a5f80aa551da4f580cf6",
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/chaos_elemental_a.png",
+     "guide": "ArtHandoff/requests/B10/references/guides/unit__Enemies__chaos_elemental_a.png"
+    },
+    {
+     "id": "Enemies/chaos_elemental_b",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/chaos_elemental_b.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "bfd9be006ad1ce0a2fc64cbf8489b08c",
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/chaos_elemental_b.png",
+     "guide": "ArtHandoff/requests/B10/references/guides/unit__Enemies__chaos_elemental_b.png"
+    },
+    {
+     "id": "Enemies/arcane_mimic_a",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/arcane_mimic_a.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "5a2a73abc5b3e4c581a3157e177e19b2",
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/arcane_mimic_a.png",
+     "guide": "ArtHandoff/requests/B10/references/guides/unit__Enemies__arcane_mimic_a.png"
+    },
+    {
+     "id": "Enemies/arcane_mimic_b",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/arcane_mimic_b.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "f417936acc3f96985916785563c9c8d6",
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/arcane_mimic_b.png",
+     "guide": "ArtHandoff/requests/B10/references/guides/unit__Enemies__arcane_mimic_b.png"
+    },
+    {
+     "id": "Enemies/frost_wraith_attack",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/frost_wraith_attack.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "new": true,
+     "like": "Enemies/frost_wraith_a",
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/frost_wraith_a.png",
+     "guide": "ArtHandoff/requests/B10/references/guides/unit__Enemies__frost_wraith_attack.png"
+    },
+    {
+     "id": "Enemies/ice_statue_attack",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/ice_statue_attack.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "new": true,
+     "like": "Enemies/ice_statue_a",
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/ice_statue_a.png",
+     "guide": "ArtHandoff/requests/B10/references/guides/unit__Enemies__ice_statue_attack.png"
+    },
+    {
+     "id": "Enemies/glacier_golem_attack",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/glacier_golem_attack.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "new": true,
+     "like": "Enemies/glacier_golem_a",
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/glacier_golem_a.png",
+     "guide": "ArtHandoff/requests/B10/references/guides/unit__Enemies__glacier_golem_attack.png"
+    },
+    {
+     "id": "Enemies/thunder_drummer_attack",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/thunder_drummer_attack.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "new": true,
+     "like": "Enemies/thunder_drummer_a",
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/thunder_drummer_a.png",
+     "guide": "ArtHandoff/requests/B10/references/guides/unit__Enemies__thunder_drummer_attack.png"
+    },
+    {
+     "id": "Enemies/storm_wisp_attack",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/storm_wisp_attack.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "flyer": true,
+     "new": true,
+     "like": "Enemies/storm_wisp_a",
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/storm_wisp_a.png",
+     "guide": "ArtHandoff/requests/B10/references/guides/unit__Enemies__storm_wisp_attack.png"
+    },
+    {
+     "id": "Enemies/spore_carrier_attack",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/spore_carrier_attack.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "new": true,
+     "like": "Enemies/spore_carrier_a",
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/spore_carrier_a.png",
+     "guide": "ArtHandoff/requests/B10/references/guides/unit__Enemies__spore_carrier_attack.png"
+    },
+    {
+     "id": "Enemies/blight_shambler_attack",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/blight_shambler_attack.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "new": true,
+     "like": "Enemies/blight_shambler_a",
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/blight_shambler_a.png",
+     "guide": "ArtHandoff/requests/B10/references/guides/unit__Enemies__blight_shambler_attack.png"
+    },
+    {
+     "id": "Enemies/rootbound_treant_attack",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/rootbound_treant_attack.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "new": true,
+     "like": "Enemies/rootbound_treant_a",
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/rootbound_treant_a.png",
+     "guide": "ArtHandoff/requests/B10/references/guides/unit__Enemies__rootbound_treant_attack.png"
+    },
+    {
+     "id": "Enemies/mana_leech_attack",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/mana_leech_attack.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "new": true,
+     "like": "Enemies/mana_leech_a",
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/mana_leech_a.png",
+     "guide": "ArtHandoff/requests/B10/references/guides/unit__Enemies__mana_leech_attack.png"
+    },
+    {
+     "id": "Enemies/hex_binder_attack",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/hex_binder_attack.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "new": true,
+     "like": "Enemies/hex_binder_a",
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/hex_binder_a.png",
+     "guide": "ArtHandoff/requests/B10/references/guides/unit__Enemies__hex_binder_attack.png"
+    },
+    {
+     "id": "Enemies/mirror_knight_attack",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/mirror_knight_attack.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "new": true,
+     "like": "Enemies/mirror_knight_a",
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/mirror_knight_a.png",
+     "guide": "ArtHandoff/requests/B10/references/guides/unit__Enemies__mirror_knight_attack.png"
+    },
+    {
+     "id": "Enemies/chaos_elemental_attack",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/chaos_elemental_attack.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "new": true,
+     "like": "Enemies/chaos_elemental_a",
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/chaos_elemental_a.png",
+     "guide": "ArtHandoff/requests/B10/references/guides/unit__Enemies__chaos_elemental_attack.png"
+    },
+    {
+     "id": "Enemies/arcane_mimic_attack",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/arcane_mimic_attack.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "new": true,
+     "like": "Enemies/arcane_mimic_a",
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/arcane_mimic_a.png",
+     "guide": "ArtHandoff/requests/B10/references/guides/unit__Enemies__arcane_mimic_attack.png"
+    }
+   ]
+  }
+ ],
+ "assetCount": 39
+}
