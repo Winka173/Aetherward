@@ -1,0 +1,13 @@
+{
+  "kind": "Unity player screenshot (real Battle scene, scripted roster and wave)",
+  "label": "B01 benchmark roster in the real Battle scene",
+  "commit": "b5c1437",
+  "unity": "6000.4.8f1",
+  "platform": "WindowsPlayer",
+  "screen": [1280, 720],
+  "artOverride": "",
+  "overridesLoaded": 0,
+  "wave": 12,
+  "phaseAtEnd": "Battle",
+  "shots": ["prep.png", "t06.png", "t10.png", "t15.png", "t22.png"]
+}

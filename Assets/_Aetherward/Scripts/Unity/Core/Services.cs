@@ -49,7 +49,8 @@ namespace Aetherward.Game
                 Debug.LogError("Aetherward content failed to load: " + e);
                 throw;
             }
-            Saves = new SaveService(new FileSaveStorage(Application.persistentDataPath));
+            // Capture runs (-awCapture) keep their own throwaway saves so they never touch the player's profile.
+            Saves = new SaveService(new FileSaveStorage(CaptureArgs.Active ? CaptureArgs.SaveRoot : Application.persistentDataPath));
             Settings = Saves.LoadSettings();
             Meta = Saves.LoadMeta(Content);
             SaveWasReset = Saves.LastError != null && Meta.TotalRuns == 0;
@@ -166,13 +167,36 @@ namespace Aetherward.Game
         private static readonly Dictionary<string, Sprite> Sprites = new Dictionary<string, Sprite>();
         private static readonly HashSet<string> Missing = new HashSet<string>();
 
+        /// <summary>
+        /// Benchmark captures only: a folder shaped like Resources/Art whose PNGs replace live sprites at runtime,
+        /// keeping the live sprite's PPU, pivot and border. Null in normal play.
+        /// </summary>
+        public static string OverrideRoot;
+        public static int OverridesLoaded { get; private set; }
+
         public static Sprite Sprite(string path)
         {
             if (Sprites.TryGetValue(path, out Sprite s)) return s;
             s = Resources.Load<Sprite>("Art/" + path);
+            if (s != null && OverrideRoot != null) s = Override(path, s) ?? s;
             if (s == null && Missing.Add(path)) Debug.LogWarning("Missing sprite Art/" + path);
             Sprites[path] = s;
             return s;
+        }
+
+        private static Sprite Override(string path, Sprite live)
+        {
+            string file = Path.Combine(OverrideRoot, path + ".png");
+            if (!File.Exists(file)) return null;
+            var tex = new Texture2D(2, 2, TextureFormat.RGBA32, false) { filterMode = FilterMode.Bilinear, wrapMode = TextureWrapMode.Clamp, name = path };
+            if (!tex.LoadImage(File.ReadAllBytes(file)) || tex.width != (int)live.rect.width || tex.height != (int)live.rect.height)
+            {
+                Debug.LogWarning("Art override rejected (unreadable or size differs from the live sprite): " + file);
+                return null;
+            }
+            Vector2 pivot = new Vector2(live.pivot.x / live.rect.width, live.pivot.y / live.rect.height);
+            OverridesLoaded++;
+            return UnityEngine.Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), pivot, live.pixelsPerUnit, 0, SpriteMeshType.FullRect, live.border);
         }
 
         public static Texture2D Tex(string path)

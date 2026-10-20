@@ -1,0 +1,29 @@
+{
+  "label": "B01 benchmark roster in the real Battle scene",
+  "commit": "b5c1437",
+  "seed": 7,
+  "biome": "",
+  "wave": 12,
+  "heroes": [
+    {"id": "ignis", "node": 0, "level": 6},
+    {"id": "sylph", "node": 1, "level": 6},
+    {"id": "marina", "node": 2, "level": 6},
+    {"id": "terra", "node": 4, "level": 6}
+  ],
+  "groups": [
+    {"enemy": "grunt", "count": 12, "lane": -1, "start": 0.0, "interval": 0.7},
+    {"enemy": "hexcaster", "count": 3, "lane": 1, "start": 1.5, "interval": 1.0},
+    {"enemy": "juggernaut", "count": 1, "lane": 2, "start": 2.0, "interval": 1.0},
+    {"enemy": "storm_harpy", "count": 3, "lane": 4, "start": 3.0, "interval": 1.2},
+    {"enemy": "rift_warden", "count": 1, "lane": 3, "start": 2.5, "interval": 1.0}
+  ],
+  "lanes": [0, 1, 2, 3, 4],
+  "shots": [
+    {"t": -1, "name": "prep"},
+    {"t": 6, "name": "t06"},
+    {"t": 10, "name": "t10"},
+    {"t": 15, "name": "t15"},
+    {"t": 22, "name": "t22"}
+  ],
+  "outDir": "OUTDIR"
+}
