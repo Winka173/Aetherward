@@ -12508,7 +12508,7 @@
    0.5,
    0.5
   ],
-  "ppu": 80,
+  "ppu": 120.0,
   "sprite": true
  },
  "Assets/_Aetherward/Resources/Art/World/bg_frostfall_bastion.png": {

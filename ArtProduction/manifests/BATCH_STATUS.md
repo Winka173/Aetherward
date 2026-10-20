@@ -5,7 +5,7 @@ APPROVED needs the owner. INTEGRATED needs an import into Assets/ with backup + 
 
 | Batch | Content | Redraw | New frames | Depends | Status |
 |---|---|---|---|---|---|
-| B01 | Benchmark + style lock | 77 | 0 | - | UNITY_VERIFIED (77/77, intake 0 blocking, validator 0 blocking; Unity captures 2560x1440/1280x720 with the Blender 2K battlefield + crystal); owner approval pending |
+| B01 | Benchmark + style lock | 77 | 0 | - | INTEGRATED 2026-10-20 (owner: integrate directly). ap.py import 77 replaced, backup ArtCache/ArtBackups/20261020T144914Z; live validator 0 blocking; EditMode 228/228; live Unity capture ArtProduction/reviews/B01/unity/live_2560x1440 |
 | B02 | Starter heroes complete (7 starters) | 36 | 21 | G1 (owner approves the B01 style) | SENT_TO_CODEX (2026-10-20 21:12, gpt-6.1-sol) |
 | B03 | Heroes: tidal, raiden, glacius, zephyr, magnus, seren | 48 | 18 | G1; B02 approved as the hero reference | BRIEF_READY |
 | B04 | Heroes: nyxara, ashara, nerissa, voltrix, eirwen, kael | 48 | 18 | G1; B02 approved as the hero reference | BRIEF_READY |

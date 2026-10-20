@@ -4,6 +4,7 @@
   request --batch B01        expand ArtHandoff/requests/B01/batch.json into INPUT_MANIFEST.json (facts read from
                              the live project: size, PPU, pivot, border, .meta GUID, code references), copy the
                              draw layout/scale guides into references/guides/ (current sprites are referenced by live path)
+  stage   --batch B01 [B02] [--extra ArtProduction/generated]   ap.py-shaped stage of accepted returns for `ap.py import`
   brief   --batch B02        write CODEX_ART_REQUEST.md from batch.json + COMMON_CONTRACT + game data + ArtProduction/designs
   intake  --batch B01        check ArtHandoff/returns/B01 against the request (manifest, files, size, alpha, foot row,
                              write scope), stage the returned exports over a copy of the live art in Temp/ArtStage-B01
@@ -401,6 +402,64 @@ def cmd_brief(a):
     return 0
 
 
+# ------------------------------------------------------------------------------------------------ stage for import
+
+def cmd_stage(a):
+    """Build an ap.py-shaped stage (Art/, import_settings.json, manifest.json) from accepted returns, so
+    `ap.py import --stage <dir>` applies it with its validation, backup, journal, atomic replace and rollback."""
+    sys.path.insert(0, os.path.join(A.ROOT, "Tools"))
+    import gen_meta  # noqa: E402  (deterministic GUIDs for new files)
+    stage = os.path.join(A.ROOT, "ArtCache", "ArtStage-import-" + "-".join(a.batch))
+    if os.path.exists(stage):
+        shutil.rmtree(stage)
+    shutil.copytree(A.ART, os.path.join(stage, "Art"))
+    settings = A.read_json(A.SETTINGS)
+    manifest = {m["path"]: m for m in A.load_json(A.MANIFEST)}
+    placed = {}
+    for b in a.batch:
+        rq = A.read_json(os.path.join(HANDOFF, "requests", b, "INPUT_MANIFEST.json"))
+        intake = A.read_json(os.path.join(A.ROOT, "ArtProduction", "reviews", b, "intake.json"))
+        ok = {r["id"] for r in intake["rows"] if r["status"] == "OK"}
+        dm = {d["id"]: d for d in A.read_json(os.path.join(HANDOFF, "returns", b, "DELIVERABLE_MANIFEST.json"))["assets"]}
+        facts = {f["id"]: f for g in rq["groups"] for f in g["assets"]}
+        for aid in sorted(ok):
+            src = os.path.join(HANDOFF, "returns", b, dm[aid]["export"])
+            placed[aid] = (src, {"generator": "Codex image_generation / Blender (batch %s)" % b,
+                                 "source": "ArtHandoff/returns/%s/DELIVERABLE_MANIFEST.json" % b,
+                                 "license": "original, produced for the project by the art specialist (batch %s)" % b}, facts[aid])
+    for extra in a.extra or []:
+        # lead-rendered outputs (Blender): <extra>/<Category>/<name>.png, optional .png.json contract
+        for pth in glob.glob(os.path.join(A.ROOT, extra, "*", "*.png")):
+            aid = os.path.relpath(pth, os.path.join(A.ROOT, extra)).replace("\\", "/")[:-4]
+            placed[aid] = (pth, {"generator": "Tools/ArtPipeline/blender (lead)", "source": extra,
+                                 "license": "original render; CC0 inputs listed in ArtProduction/REFERENCE_MANIFEST.json"}, None)
+    for aid, (src, prov, f) in sorted(placed.items()):
+        key = LIVE_REL + aid + ".png"
+        dst = os.path.join(stage, "Art", aid + ".png")
+        os.makedirs(os.path.dirname(dst), exist_ok=True)
+        shutil.copyfile(src, dst)
+        if key not in settings:              # a new frame: the contract of its live sibling
+            like = (f or {}).get("like")
+            if not like:
+                raise SystemExit("no import settings and no 'like' sibling for new asset " + aid)
+            settings[key] = dict(settings[LIVE_REL + like + ".png"])
+            live_meta = os.path.join(A.ART, like + ".png.meta")
+            text = A.read_text(live_meta)
+            A.write_text(dst + ".meta", GUID.sub("guid: " + gen_meta.guid_for(key), text, count=1))
+        if os.path.exists(src + ".json"):    # explicit new contract (e.g. the 2K battlefield, PPU 120)
+            settings[key] = dict(settings[key], **A.read_json(src + ".json"))
+            # the stage .meta (same GUID) must carry the new PPU, or the validator rightly flags the mismatch
+            meta = A.read_text(os.path.join(A.ART, aid + ".png.meta"))
+            A.write_text(dst + ".meta", re.sub(r"spritePixelsToUnits: [-0-9.e]+", "spritePixelsToUnits: %g" % settings[key]["ppu"], meta))
+        manifest[key] = dict({"path": key}, **prov)
+    A.dump_json(settings, os.path.join(stage, "import_settings.json"), indent=1, sort_keys=True)
+    A.dump_json(list(manifest.values()), os.path.join(stage, "manifest.json"), indent=1)
+    A.dump_json(sorted(placed), os.path.join(stage, ".scope.json"))
+    log("stage for %s: %d files (%d new) -> %s" % (",".join(a.batch), len(placed),
+                                                 sum(1 for aid in placed if not os.path.exists(os.path.join(A.ART, aid + ".png"))), os.path.relpath(stage, A.ROOT)))
+    return 0
+
+
 # ------------------------------------------------------------------------------------------------ preview
 
 class ArtSet:
@@ -712,6 +771,9 @@ def main():
     i.add_argument("--allow", nargs="*", help="extra working-tree paths (fnmatch) that may have changed")
     i.add_argument("--stage-dir", default=None, help="default ArtCache/ArtStage-<batch>")
     i.add_argument("--qa-dir", default=None, help="default ArtProduction/reviews/<batch>")
+    st = sub.add_parser("stage")
+    st.add_argument("--batch", nargs="+", required=True)
+    st.add_argument("--extra", nargs="*", help="lead-rendered output dirs shaped like Art/ (e.g. ArtProduction/generated)")
     br = sub.add_parser("brief")
     br.add_argument("--batch", required=True)
     v = sub.add_parser("preview")
@@ -720,7 +782,7 @@ def main():
     v.add_argument("--out", required=True)
     v.add_argument("--tag", default=None)
     a = p.parse_args()
-    return {"request": cmd_request, "brief": cmd_brief, "intake": cmd_intake, "preview": cmd_preview}[a.cmd](a)
+    return {"request": cmd_request, "stage": cmd_stage, "brief": cmd_brief, "intake": cmd_intake, "preview": cmd_preview}[a.cmd](a)
 
 
 if __name__ == "__main__":

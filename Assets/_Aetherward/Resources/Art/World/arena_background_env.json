@@ -1,0 +1,32 @@
+{
+ "shadowDirScreen": [
+  0.8197,
+  0.5729
+ ],
+ "shadowLengthPerHeight": 0.8947,
+ "braziersFlat": [
+  4.227,
+  -8.249,
+  7.045,
+  -1.97
+ ],
+ "aetherCrystalsFlat": [
+  -12.682,
+  6.116,
+  -7.045,
+  -2.498,
+  -12.682,
+  3.244,
+  -5.636,
+  9.92
+ ],
+ "edgeColor": [
+  0.1157,
+  0.1223,
+  0.1423
+ ],
+ "source": "ArtCache/Env/verdant",
+ "gamma": 1.2114,
+ "viewMeanBefore": 0.2123,
+ "viewMean": 0.16
+}

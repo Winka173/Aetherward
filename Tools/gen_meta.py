@@ -44,24 +44,27 @@ def audio_meta(g, streaming):
             "  platformSettingOverrides: {}\n  forceToMono: 0\n  normalize: 0\n  loadInBackground: 0\n  ambisonic: 0\n  3D: 0\n"
             "  userData: \n  assetBundleName: \n  assetBundleVariant: \n")
 
-def texture_meta(g, sprite, ppu, pivot, border, filter_mode, max_size):
+def texture_meta(g, sprite, ppu, pivot, border, filter_mode, max_size, mips=False):
+    # keep in step with AetherwardTexturePostprocessor (Editor): world sprites get Kaiser mips + trilinear, UI does not
+    mip_mode, mip_on, aniso = (1, 1, 2) if mips else (0, 0, 1)
+    if mips: filter_mode = 2
     """Unity 6 TextureImporter for a single sprite (or plain texture for UI 9-slices)."""
     tex_type = 8 if sprite else 0
     px, py = pivot
     bl, bb, br, bt = border
     plat = ""
-    for target in ("DefaultTexturePlatform", "Standalone", "Android", "iPhone"):
+    for target in ("DefaultTexturePlatform", "Standalone", "Android", "iOS", "WebGL"):   # Unity 6 platform names
         plat += (f"  - serializedVersion: 4\n    buildTarget: {target}\n    maxTextureSize: {max_size}\n    resizeAlgorithm: 0\n"
                  f"    textureFormat: -1\n    textureCompression: 1\n    compressionQuality: 50\n    crunchedCompression: 0\n"
                  f"    allowsAlphaSplitting: 0\n    overridden: 0\n    ignorePlatformSupport: 0\n    androidETC2FallbackOverride: 0\n"
                  f"    forceMaximumCompressionQuality_BC6H_BC7: 0\n")
     return (f"fileFormatVersion: 2\nguid: {g}\nTextureImporter:\n  internalIDToNameTable: []\n  externalObjects: {{}}\n"
-            f"  serializedVersion: 13\n  mipmaps:\n    mipMapMode: 0\n    enableMipMap: 0\n    sRGBTexture: 1\n    linearTexture: 0\n"
+            f"  serializedVersion: 13\n  mipmaps:\n    mipMapMode: {mip_mode}\n    enableMipMap: {mip_on}\n    sRGBTexture: 1\n    linearTexture: 0\n"
             f"    fadeOut: 0\n    borderMipMap: 0\n    mipMapsPreserveCoverage: 0\n    alphaTestReferenceValue: 0.5\n    mipMapFadeDistanceStart: 1\n"
             f"    mipMapFadeDistanceEnd: 3\n  bumpmap:\n    convertToNormalMap: 0\n    externalNormalMap: 0\n    heightScale: 0.25\n    normalMapFilter: 0\n"
             f"    flipGreenChannel: 0\n  isReadable: 0\n  streamingMipmaps: 0\n  streamingMipmapsPriority: 0\n  vTOnly: 0\n  ignoreMipmapLimit: 0\n"
             f"  grayScaleToAlpha: 0\n  generateCubemap: 6\n  cubemapConvolution: 0\n  seamlessCubemap: 0\n  textureFormat: 1\n  maxTextureSize: {max_size}\n"
-            f"  textureSettings:\n    serializedVersion: 2\n    filterMode: {filter_mode}\n    aniso: 1\n    mipBias: 0\n    wrapU: 1\n    wrapV: 1\n    wrapW: 1\n"
+            f"  textureSettings:\n    serializedVersion: 2\n    filterMode: {filter_mode}\n    aniso: {aniso}\n    mipBias: 0\n    wrapU: 1\n    wrapV: 1\n    wrapW: 1\n"
             f"  nPOTScale: 0\n  lightmap: 0\n  compressionQuality: 50\n  spriteMode: {1 if sprite else 0}\n  spriteExtrude: 1\n  spriteMeshType: {0 if any(border) else 1}\n"
             f"  alignment: 9\n  spritePivot: {{x: {px}, y: {py}}}\n  spritePixelsToUnits: {ppu}\n  spriteBorder: {{x: {bl}, y: {bb}, z: {br}, w: {bt}}}\n"
             f"  spriteGenerateFallbackPhysicsShape: 0\n  alphaUsage: 1\n  alphaIsTransparency: 1\n  spriteTessellationDetail: -1\n"
@@ -122,7 +125,8 @@ def main():
             elif ext == ".png":
                 s = settings.get(rel, {})
                 content = texture_meta(g, s.get("sprite", True), s.get("ppu", 100), tuple(s.get("pivot", [0.5, 0.5])),
-                                       tuple(s.get("border", [0, 0, 0, 0])), s.get("filter", 1), s.get("maxSize", 2048))
+                                       tuple(s.get("border", [0, 0, 0, 0])), s.get("filter", 1), s.get("maxSize", 2048),
+                                       mips="/Resources/Art/" in rel and "/Resources/Art/UI/" not in rel)
             else: content = default_meta(g)
             if os.path.exists(meta_path):
                 with open(meta_path) as f:
