@@ -218,6 +218,9 @@ namespace Aetherward.Game
         }
 
         /// <summary>Invisible full-rect hit area (for tapping cards, portraits, list rows).</summary>
+        /// <summary>True while the pointer (mouse or last touch) is over the rect; never consumes input.</summary>
+        public static bool Hover(float x, float y, float w, float h) => R(x, y, w, h).Contains(Event.current.mousePosition);
+
         public static bool Hit(float x, float y, float w, float h)
         {
             bool clicked = GUI.Button(R(x, y, w, h), GUIContent.none, GUIStyle.none);

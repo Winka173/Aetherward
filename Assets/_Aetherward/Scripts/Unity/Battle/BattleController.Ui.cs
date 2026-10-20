@@ -264,9 +264,10 @@ namespace Aetherward.Game
             if (b == null || _synergy == null) return;
             var pos = new Vector2[b.Heroes.Count];
             for (int i = 0; i < pos.Length; i++) pos[i] = Ui.FromScreen(_cam.WorldToScreenPoint(WorldGfx.V(b.Heroes[i].Anchor)));
+            // Hover (PC) / last touch (mobile) focuses one hero's links; no input is captured, so dragging heroes still works.
             _synergyFocus = -1;
             for (int i = 0; i < pos.Length; i++)
-                if (Ui.Hit(pos[i].x - 50, pos[i].y - 120, 100, 130)) _synergyFocus = i;
+                if (Ui.Hover(pos[i].x - 50, pos[i].y - 120, 100, 130)) _synergyFocus = i;
             int labelled = 0;
             foreach (SynergyLink l in _synergy.Links)
             {

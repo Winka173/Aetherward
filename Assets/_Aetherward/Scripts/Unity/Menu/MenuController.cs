@@ -9,7 +9,7 @@ using UnityEngine;
 namespace Aetherward.Game
 {
     /// <summary>Main menu, starting-team selection, codex, run history and settings.</summary>
-    public sealed class MenuController : MonoBehaviour
+    public sealed partial class MenuController : MonoBehaviour
     {
         private enum Page
         {
@@ -17,7 +17,8 @@ namespace Aetherward.Game
             Team,
             Codex,
             History,
-            Settings
+            Settings,
+            Training
         }
 
         private Page _page = Page.Main;
@@ -94,6 +95,7 @@ namespace Aetherward.Game
                 case Page.Team: DrawTeam(); break;
                 case Page.Codex: DrawCodex(); break;
                 case Page.History: DrawHistory(); break;
+                case Page.Training: DrawTraining(); break;
                 case Page.Settings:
                     Ui.DrawRect(0, 0, Ui.W, Ui.H, new Color(0, 0, 0, 0.45f));
                     if (SharedPanels.Settings(Ui.W / 2 - 560, 60, 1120, 960)) _page = Page.Main;
@@ -127,8 +129,10 @@ namespace Aetherward.Game
             if (Ui.Button(bx, by, bw / 2 - 9, bh, l.Get("menu.codex"), Tone.Ghost, true, 30)) _page = Page.Codex;
             if (Ui.Button(bx + bw / 2 + 9, by, bw / 2 - 9, bh, l.Get("menu.history"), Tone.Ghost, true, 30)) _page = Page.History;
             by += bh + 18;
-            if (Ui.Button(bx, by, Application.isMobilePlatform ? bw : bw / 2 - 9, bh, l.Get("menu.settings"), Tone.Ghost, true, 30)) _page = Page.Settings;
-            if (!Application.isMobilePlatform && Ui.Button(bx + bw / 2 + 9, by, bw / 2 - 9, bh, l.Get("menu.quit"), Tone.Danger, true, 30)) Application.Quit();
+            if (Ui.Button(bx, by, bw / 2 - 9, bh, l.Get("menu.training"), Tone.Ghost, true, 30)) _page = Page.Training;
+            if (Ui.Button(bx + bw / 2 + 9, by, bw / 2 - 9, bh, l.Get("menu.settings"), Tone.Ghost, true, 30)) _page = Page.Settings;
+            by += bh + 18;
+            if (!Application.isMobilePlatform && Ui.Button(bx + bw / 4, by, bw / 2, bh * 0.8f, l.Get("menu.quit"), Tone.Danger, true, 28)) Application.Quit();
             MetaProfile m = App.Meta;
             Ui.Label(0, Ui.H - 90, Ui.W, 40, l.Format("menu.stats", m.TotalRuns, m.Victories, m.BestWave), 24, Ui.Muted, TextAnchor.MiddleCenter);
             Ui.Label(0, Ui.H - 52, Ui.W - 30, 36, l.Format("menu.version", App.Version), 20, Ui.Muted, TextAnchor.MiddleRight);
