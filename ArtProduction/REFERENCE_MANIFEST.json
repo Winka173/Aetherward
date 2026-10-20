@@ -124,6 +124,232 @@
    "license": "CC0 1.0 (Poly Haven)"
   },
   {
+   "id": "cracked_red_ground",
+   "type": "texture",
+   "files": {
+    "diff": "ArtCache/polyhaven/cracked_red_ground/cracked_red_ground_diff.jpg",
+    "nor_gl": "ArtCache/polyhaven/cracked_red_ground/cracked_red_ground_nor_gl.jpg",
+    "rough": "ArtCache/polyhaven/cracked_red_ground/cracked_red_ground_rough.jpg",
+    "disp": "ArtCache/polyhaven/cracked_red_ground/cracked_red_ground_disp.jpg"
+   },
+   "url": "https://polyhaven.com/a/cracked_red_ground",
+   "authors": [
+    "Amal Kumar"
+   ],
+   "license": "CC0 1.0 (Poly Haven)"
+  },
+  {
+   "id": "dark_rock_02",
+   "type": "texture",
+   "files": {
+    "diff": "ArtCache/polyhaven/dark_rock_02/dark_rock_02_diff.jpg",
+    "nor_gl": "ArtCache/polyhaven/dark_rock_02/dark_rock_02_nor_gl.jpg",
+    "rough": "ArtCache/polyhaven/dark_rock_02/dark_rock_02_rough.jpg",
+    "disp": "ArtCache/polyhaven/dark_rock_02/dark_rock_02_disp.jpg"
+   },
+   "url": "https://polyhaven.com/a/dark_rock_02",
+   "authors": [
+    "Amal Kumar"
+   ],
+   "license": "CC0 1.0 (Poly Haven)"
+  },
+  {
+   "id": "patterned_slate_tiles",
+   "type": "texture",
+   "files": {
+    "diff": "ArtCache/polyhaven/patterned_slate_tiles/patterned_slate_tiles_diff.jpg",
+    "nor_gl": "ArtCache/polyhaven/patterned_slate_tiles/patterned_slate_tiles_nor_gl.jpg",
+    "rough": "ArtCache/polyhaven/patterned_slate_tiles/patterned_slate_tiles_rough.jpg",
+    "disp": "ArtCache/polyhaven/patterned_slate_tiles/patterned_slate_tiles_disp.jpg"
+   },
+   "url": "https://polyhaven.com/a/patterned_slate_tiles",
+   "authors": [
+    "Dimitrios Savva"
+   ],
+   "license": "CC0 1.0 (Poly Haven)"
+  },
+  {
+   "id": "rock_boulder_cracked",
+   "type": "texture",
+   "files": {
+    "diff": "ArtCache/polyhaven/rock_boulder_cracked/rock_boulder_cracked_diff.jpg",
+    "nor_gl": "ArtCache/polyhaven/rock_boulder_cracked/rock_boulder_cracked_nor_gl.jpg",
+    "rough": "ArtCache/polyhaven/rock_boulder_cracked/rock_boulder_cracked_rough.jpg",
+    "disp": "ArtCache/polyhaven/rock_boulder_cracked/rock_boulder_cracked_disp.jpg"
+   },
+   "url": "https://polyhaven.com/a/rock_boulder_cracked",
+   "authors": [
+    "Dario Barresi",
+    "Dimitrios Savva"
+   ],
+   "license": "CC0 1.0 (Poly Haven)"
+  },
+  {
+   "id": "rock_ground",
+   "type": "texture",
+   "files": {
+    "diff": "ArtCache/polyhaven/rock_ground/rock_ground_diff.jpg",
+    "nor_gl": "ArtCache/polyhaven/rock_ground/rock_ground_nor_gl.jpg",
+    "rough": "ArtCache/polyhaven/rock_ground/rock_ground_rough.jpg",
+    "disp": "ArtCache/polyhaven/rock_ground/rock_ground_disp.jpg"
+   },
+   "url": "https://polyhaven.com/a/rock_ground",
+   "authors": [
+    "Rob Tuytel"
+   ],
+   "license": "CC0 1.0 (Poly Haven)"
+  },
+  {
+   "id": "large_floor_tiles_02",
+   "type": "texture",
+   "files": {
+    "diff": "ArtCache/polyhaven/large_floor_tiles_02/large_floor_tiles_02_diff.jpg",
+    "nor_gl": "ArtCache/polyhaven/large_floor_tiles_02/large_floor_tiles_02_nor_gl.jpg",
+    "rough": "ArtCache/polyhaven/large_floor_tiles_02/large_floor_tiles_02_rough.jpg",
+    "disp": "ArtCache/polyhaven/large_floor_tiles_02/large_floor_tiles_02_disp.jpg"
+   },
+   "url": "https://polyhaven.com/a/large_floor_tiles_02",
+   "authors": [
+    "Rob Tuytel"
+   ],
+   "license": "CC0 1.0 (Poly Haven)"
+  },
+  {
+   "id": "marble_cliff_01",
+   "type": "texture",
+   "files": {
+    "diff": "ArtCache/polyhaven/marble_cliff_01/marble_cliff_01_diff.jpg",
+    "nor_gl": "ArtCache/polyhaven/marble_cliff_01/marble_cliff_01_nor_gl.jpg",
+    "rough": "ArtCache/polyhaven/marble_cliff_01/marble_cliff_01_rough.jpg",
+    "disp": "ArtCache/polyhaven/marble_cliff_01/marble_cliff_01_disp.jpg"
+   },
+   "url": "https://polyhaven.com/a/marble_cliff_01",
+   "authors": [
+    "Amal Kumar"
+   ],
+   "license": "CC0 1.0 (Poly Haven)"
+  },
+  {
+   "id": "castle_wall_varriation",
+   "type": "texture",
+   "files": {
+    "diff": "ArtCache/polyhaven/castle_wall_varriation/castle_wall_varriation_diff.jpg",
+    "nor_gl": "ArtCache/polyhaven/castle_wall_varriation/castle_wall_varriation_nor_gl.jpg",
+    "rough": "ArtCache/polyhaven/castle_wall_varriation/castle_wall_varriation_rough.jpg",
+    "disp": "ArtCache/polyhaven/castle_wall_varriation/castle_wall_varriation_disp.jpg"
+   },
+   "url": "https://polyhaven.com/a/castle_wall_varriation",
+   "authors": [
+    "Rob Tuytel"
+   ],
+   "license": "CC0 1.0 (Poly Haven)"
+  },
+  {
+   "id": "rocks_ground_02",
+   "type": "texture",
+   "files": {
+    "diff": "ArtCache/polyhaven/rocks_ground_02/rocks_ground_02_diff.jpg",
+    "nor_gl": "ArtCache/polyhaven/rocks_ground_02/rocks_ground_02_nor_gl.jpg",
+    "rough": "ArtCache/polyhaven/rocks_ground_02/rocks_ground_02_rough.jpg",
+    "disp": "ArtCache/polyhaven/rocks_ground_02/rocks_ground_02_disp.jpg"
+   },
+   "url": "https://polyhaven.com/a/rocks_ground_02",
+   "authors": [
+    "Rob Tuytel"
+   ],
+   "license": "CC0 1.0 (Poly Haven)"
+  },
+  {
+   "id": "herringbone_pavement",
+   "type": "texture",
+   "files": {
+    "diff": "ArtCache/polyhaven/herringbone_pavement/herringbone_pavement_diff.jpg",
+    "nor_gl": "ArtCache/polyhaven/herringbone_pavement/herringbone_pavement_nor_gl.jpg",
+    "rough": "ArtCache/polyhaven/herringbone_pavement/herringbone_pavement_rough.jpg",
+    "disp": "ArtCache/polyhaven/herringbone_pavement/herringbone_pavement_disp.jpg"
+   },
+   "url": "https://polyhaven.com/a/herringbone_pavement",
+   "authors": [
+    "Charlotte Baglioni"
+   ],
+   "license": "CC0 1.0 (Poly Haven)"
+  },
+  {
+   "id": "rocks_ground_05",
+   "type": "texture",
+   "files": {
+    "diff": "ArtCache/polyhaven/rocks_ground_05/rocks_ground_05_diff.jpg",
+    "nor_gl": "ArtCache/polyhaven/rocks_ground_05/rocks_ground_05_nor_gl.jpg",
+    "rough": "ArtCache/polyhaven/rocks_ground_05/rocks_ground_05_rough.jpg",
+    "disp": "ArtCache/polyhaven/rocks_ground_05/rocks_ground_05_disp.jpg"
+   },
+   "url": "https://polyhaven.com/a/rocks_ground_05",
+   "authors": [
+    "Rob Tuytel"
+   ],
+   "license": "CC0 1.0 (Poly Haven)"
+  },
+  {
+   "id": "herringbone_pavement_02",
+   "type": "texture",
+   "files": {
+    "diff": "ArtCache/polyhaven/herringbone_pavement_02/herringbone_pavement_02_diff.jpg",
+    "nor_gl": "ArtCache/polyhaven/herringbone_pavement_02/herringbone_pavement_02_nor_gl.jpg",
+    "rough": "ArtCache/polyhaven/herringbone_pavement_02/herringbone_pavement_02_rough.jpg",
+    "disp": "ArtCache/polyhaven/herringbone_pavement_02/herringbone_pavement_02_disp.jpg"
+   },
+   "url": "https://polyhaven.com/a/herringbone_pavement_02",
+   "authors": [
+    "Amal Kumar"
+   ],
+   "license": "CC0 1.0 (Poly Haven)"
+  },
+  {
+   "id": "marble_tiles",
+   "type": "texture",
+   "files": {
+    "diff": "ArtCache/polyhaven/marble_tiles/marble_tiles_diff.jpg",
+    "nor_gl": "ArtCache/polyhaven/marble_tiles/marble_tiles_nor_gl.jpg",
+    "rough": "ArtCache/polyhaven/marble_tiles/marble_tiles_rough.jpg",
+    "disp": "ArtCache/polyhaven/marble_tiles/marble_tiles_disp.jpg"
+   },
+   "url": "https://polyhaven.com/a/marble_tiles",
+   "authors": [
+    "Charlotte Baglioni"
+   ],
+   "license": "CC0 1.0 (Poly Haven)"
+  },
+  {
+   "id": "old_planks_02",
+   "type": "texture",
+   "files": {
+    "diff": "ArtCache/polyhaven/old_planks_02/old_planks_02_diff.jpg",
+    "nor_gl": "ArtCache/polyhaven/old_planks_02/old_planks_02_nor_gl.jpg",
+    "rough": "ArtCache/polyhaven/old_planks_02/old_planks_02_rough.jpg",
+    "disp": "ArtCache/polyhaven/old_planks_02/old_planks_02_disp.jpg"
+   },
+   "url": "https://polyhaven.com/a/old_planks_02",
+   "authors": [
+    "Rob Tuytel"
+   ],
+   "license": "CC0 1.0 (Poly Haven)"
+  },
+  {
+   "id": "dark_wooden_planks",
+   "type": "texture",
+   "files": {
+    "diff": "ArtCache/polyhaven/dark_wooden_planks/dark_wooden_planks_diff.jpg",
+    "nor_gl": "ArtCache/polyhaven/dark_wooden_planks/dark_wooden_planks_nor_gl.jpg",
+    "rough": "ArtCache/polyhaven/dark_wooden_planks/dark_wooden_planks_rough.jpg",
+    "disp": "ArtCache/polyhaven/dark_wooden_planks/dark_wooden_planks_disp.jpg"
+   },
+   "url": "https://polyhaven.com/a/dark_wooden_planks",
+   "authors": [
+    "Amal Kumar"
+   ],
+   "license": "CC0 1.0 (Poly Haven)"
+  },
+  {
    "id": "gothic_statue",
    "type": "model",
    "files": {

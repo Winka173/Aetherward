@@ -51,11 +51,45 @@ def jsonc(path):
 
 
 arena = jsonc(ARENA)
-if "--biome" in ARGS:    # biome arenas are inline in biomes.json
-    biomes = jsonc(os.path.join(os.path.dirname(ARENA), "biomes.json"))["biomes"]
-    b = next(b for b in biomes if b["id"] == arg("--biome"))
-    if isinstance(b.get("arena"), dict):
-        arena = b["arena"]
+BIOME_ID = arg("--biome", "verdant_sanctuary")
+BIOME = next(b for b in jsonc(os.path.join(os.path.dirname(ARENA), "biomes.json"))["biomes"] if b["id"] == BIOME_ID)
+if isinstance(BIOME.get("arena"), dict):     # biome arenas are inline in biomes.json
+    arena = BIOME["arena"]
+
+# Per-biome look. "special" is the second terrain mask channel (moss in the sanctum): how it is drawn, how deep it
+# sinks the ground, where it appears (fbm blobs, bands along some lanes, pools at the hazard points).
+THEMES = {
+    "verdant_sanctuary": dict(ground="burned_ground_01", rock="aerial_ground_rock", road="cobblestone_large_01", cliff="cliff_side",
+                              dais="castle_wall_slates", ruin="broken_wall", dark="dark_rock", special="moss", special_amount=0.85,
+                              special_depth=0.0, world=("#1a2a44", 0.35), sun=("#dfe6ff", 2.6), brazier="#62e0cf", rift="#c0304a",
+                              tint="#c9ccd6", kinds=None),
+    "molten_crater": dict(ground="cracked_red_ground", rock="dark_rock_02", road="patterned_slate_tiles", cliff="rock_boulder_cracked",
+                          dais="castle_wall_slates", ruin="rock_boulder_cracked", dark="dark_rock_02", special="lava", special_amount=1.0,
+                          special_depth=0.35, special_lanes=[0, 1], special_lo=0.7, special_hi=0.76, world=("#2a1410", 0.3),
+                          sun=("#ffd9b8", 2.0), brazier="#ff7a2a", rift="#ff5a1f", tint="#b8aca8",
+                          kinds=["obsidian"] * 6 + ["pillar"] * 3 + ["broken"] * 6 + ["boulder"] * 6 + ["deadtree"] * 3 + ["brazier"] * 2 + ["rocks"] * 8),
+    "frostfall_bastion": dict(ground="rock_ground", rock="castle_wall_varriation", road="large_floor_tiles_02", cliff="marble_cliff_01",
+                              dais="castle_wall_slates", ruin="castle_wall_varriation", dark="dark_rock", special="snow", special_amount=0.6, value=0.5,
+                              special_depth=-0.04, special_lo=0.5, special_hi=0.74, world=("#2a3a55", 0.55), sun=("#e6eeff", 2.8),
+                              brazier="#ffb35c", rift="#7fd8ff", tint="#d4d8e0",
+                              kinds=["icecrystals"] * 6 + ["pillar"] * 5 + ["statue"] * 2 + ["arch"] * 2 + ["brazier"] * 3 + ["broken"] * 5 + ["boulder"] * 4),
+    "shattered_aether": dict(ground="rocks_ground_02", rock="dark_rock_02", road="herringbone_pavement", cliff="dark_rock_02",
+                             dais="castle_wall_slates", ruin="broken_wall", dark="dark_rock_02", special="void", special_amount=1.0,
+                             special_depth=3.5, special_lo=0.55, special_hi=0.6, world=("#140c28", 0.4), sun=("#e8dcff", 2.4),
+                             brazier="#b07cff", rift="#ff5fd2", tint="#c4c0d4",
+                             kinds=["crystals"] * 8 + ["floatrock"] * 8 + ["statue"] * 2 + ["broken"] * 5 + ["pillar"] * 3 + ["brazier"] * 2),
+    "stormspire_citadel": dict(ground="rocks_ground_05", rock="castle_wall_varriation", road="herringbone_pavement_02", cliff="castle_wall_varriation",
+                               dais="castle_wall_slates", ruin="castle_wall_varriation", dark="dark_rock", special="puddle", special_amount=0.8,
+                               special_depth=0.02, special_lo=0.6, special_hi=0.68, world=("#1c2230", 0.45), sun=("#d8e4ff", 2.2),
+                               brazier="#9adcff", rift="#b06cff", tint="#c4c8d2",
+                               kinds=["battlement"] * 6 + ["pillar"] * 6 + ["statue"] * 2 + ["brazier"] * 3 + ["broken"] * 5 + ["boulder"] * 3),
+    "sunken_archive": dict(ground="marble_tiles", rock="floor_tiles_06" if False else "large_floor_tiles_02", road="old_planks_02",
+                           cliff="castle_wall_varriation", dais="marble_tiles", ruin="castle_wall_varriation", dark="dark_wooden_planks",
+                           special="water", special_amount=1.0, special_depth=0.18, special_lanes=[2, 3], special_lo=0.55, special_hi=0.62,
+                           world=("#0e2a34", 0.45), sun=("#d8f4ff", 2.2), brazier="#ffd27a", rift="#2aa6a4", tint="#c4ccd0",
+                           kinds=["shelves"] * 8 + ["pillar"] * 6 + ["statue"] * 2 + ["brazier"] * 3 + ["broken"] * 4 + ["fallen"] * 3),
+}
+THEME = THEMES[BIOME_ID]
 
 
 def G(x, y, z=0.0):
@@ -101,8 +135,8 @@ world = bpy.data.worlds.new("Night")
 sc.world = world
 world.use_nodes = True
 bg = world.node_tree.nodes["Background"]
-bg.inputs[0].default_value = lin("#1a2a44")
-bg.inputs[1].default_value = 0.35
+bg.inputs[0].default_value = lin(THEME["world"][0])
+bg.inputs[1].default_value = THEME["world"][1]
 
 cam = bpy.data.objects.new("Camera", bpy.data.cameras.new("Camera"))
 sc.collection.objects.link(cam)
@@ -131,14 +165,18 @@ def seg_dist(px, py, a, b):
 
 
 lane_d = np.full((MH, MW), 1e9)
+LANE_DS = []
 for lane in arena["lanes"]:
+    one = np.full((MH, MW), 1e9)
     pts = [(x, y / SIN) for x, y in lane["points"]] + [(0.0, 0.0)]
     # extend the spawn end beyond the screen so roads run off the image
     (x0, y0), (x1, y1) = pts[0], pts[1]
     ext = (x0 + (x0 - x1) * 0.6, y0 + (y0 - y1) * 0.6)
     pts = [ext] + pts
     for a, b in zip(pts, pts[1:]):
-        lane_d = np.minimum(lane_d, seg_dist(gx, gy, a, b))
+        one = np.minimum(one, seg_dist(gx, gy, a, b))
+    LANE_DS.append(one)
+    lane_d = np.minimum(lane_d, one)
 DAIS_R = 5.9
 dais_d = np.hypot(gx, gy + 0.887)          # centred on the Crystal (game y -0.55 -> ground -0.887)
 
@@ -171,13 +209,26 @@ wobble = (fbm(6, 3, 1) - 0.5) * 0.55
 road = 1 - smooth(0.62, 0.98, lane_d + wobble)                 # 1 on the processional roads
 road_edge = smooth(0.45, 0.8, lane_d + wobble) * (1 - smooth(0.8, 1.15, lane_d + wobble))
 dais = 1 - smooth(DAIS_R - 0.05, DAIS_R + 0.05, dais_d)
-moss = smooth(0.52, 0.72, fbm(5, 4, 2)) * (1 - road) * (1 - dais) * 0.85
+special = smooth(THEME.get("special_lo", 0.52), THEME.get("special_hi", 0.72), fbm(5, 4, 2))
+for li in THEME.get("special_lanes", []):            # bands beside chosen lanes: lava under the bridges, flooded stairs
+    if li < len(LANE_DS):
+        dd = LANE_DS[li]
+        wob = (fbm(9, 3, 11) - 0.5) * 0.8
+        special = np.maximum(special, smooth(0.8, 1.15, dd + wob) * (1 - smooth(1.9, 2.6, dd + wob)) * smooth(DAIS_R + 0.5, DAIS_R + 1.5, np.hypot(gx, gy + 0.887)))
+for hz in BIOME.get("hazards", []):                  # pools at the hazard points (vents, rifts, surges)
+    for hx, hy in hz.get("points", []):
+        r_ = hz.get("radius", 1.0)
+        special = np.maximum(special, 1 - smooth(r_ * 0.55, r_ * 0.95, np.hypot(gx - hx, gy - hy / SIN)))
+keep_clear = smooth(0.62, 1.0, lane_d) * (1 - dais)  # never on the roads or the dais
+if THEME["special"] == "void":                        # floating islands: the abyss opens away from roads and the dais
+    keep_clear = smooth(1.4, 2.4, lane_d) * (1 - smooth(DAIS_R + 0.6, DAIS_R + 0.4, np.hypot(gx, gy + 0.887)))
+moss = special * keep_clear * THEME.get("special_amount", 0.85)
 sx, sy = gx, gy * SIN                                           # screen coords
 edge = np.maximum(smooth(VIEW_W / 2 - 3.2, VIEW_W / 2 + 0.5, np.abs(sx)), smooth(VIEW_H / 2 - 2.4, VIEW_H / 2 + 0.5, sy))
 ridge = edge * smooth(0.9, 2.4, lane_d) * (0.6 + 0.8 * fbm(4, 4, 3))        # border ridges, cut open by every lane
 near_drop = smooth(VIEW_H / 2 - 2.6, VIEW_H / 2 + 0.4, -sy) * smooth(0.9, 2.2, lane_d)
 rift = (1 - smooth(0.0, 0.9, lane_d)) * smooth(VIEW_W / 2 - 7.5, VIEW_W / 2 - 1.0, np.maximum(np.abs(sx), np.abs(sy) * 1.7))
-height = ridge * 2.6 - near_drop * 1.2 + (fbm(14, 4, 4) - 0.5) * 0.12 * (1 - road) - road * 0.0
+height = ridge * 2.6 - near_drop * 1.2 + (fbm(14, 4, 4) - 0.5) * 0.12 * (1 - road) - moss * THEME.get("special_depth", 0.0)
 mask_rgb = np.stack([road, moss, rift, dais], -1)
 
 
@@ -440,15 +491,15 @@ def terrain_pbr():
         mp.inputs["Rotation"].default_value = (0, 0, rot)
         L.new(tc.outputs["Object"], mp.inputs["Vector"])
         return mp.outputs["Vector"]
-    g_col, g_r, g_n, g_h = pbr_nodes(nt, "burned_ground_01", mapped(0.22), (-1600, 200))
+    g_col, g_r, g_n, g_h = pbr_nodes(nt, THEME["ground"], mapped(0.22), (-1600, 200))
     road_lift = node(nt, "ShaderNodeHueSaturation", (-1300, -2200))
     road_lift.inputs["Value"].default_value = 1.45
     # tiled densely: at large scale the aerial scan has dark linear features that read as stripes
-    a_col, a_r, a_n, a_h = pbr_nodes(nt, "aerial_ground_rock", mapped(0.42, 0.7), (-1600, -1000))
-    r_col0, r_r, r_n, r_h = pbr_nodes(nt, "cobblestone_large_01", mapped(0.34, 0.3), (-1600, -2200))
+    a_col, a_r, a_n, a_h = pbr_nodes(nt, THEME["rock"], mapped(0.42, 0.7), (-1600, -1000))
+    r_col0, r_r, r_n, r_h = pbr_nodes(nt, THEME["road"], mapped(0.34, 0.3), (-1600, -2200))
     L.new(r_col0, road_lift.inputs["Color"])
     r_col = road_lift.outputs["Color"]
-    c_col, c_r, c_n, c_h = pbr_nodes(nt, "cliff_side", mapped(0.16), (-1600, -3400))
+    c_col, c_r, c_n, c_h = pbr_nodes(nt, THEME["cliff"], mapped(0.16), (-1600, -3400))
     # ground = ash/burned soil broken up by rocky patches (macro noise)
     mac = node(nt, "ShaderNodeTexNoise", (-1250, 900), Scale=0.12, Detail=4.0)
     L.new(tc.outputs["Object"], mac.inputs["Vector"])
@@ -491,20 +542,29 @@ def terrain_pbr():
     flat = node(nt, "ShaderNodeValue", (-700, -450))
     flat.outputs[0].default_value = 0.5
     hgt = mixf(sep.outputs["Red"], mixf(macr.outputs["Result"], g_h, a_h, (-600, -300)), flat.outputs[0], (-400, -300))
-    # moss: desaturated teal multiplied into the colour where the moss mask is
-    moss_c = node(nt, "ShaderNodeMix", (0, 750), data_type="RGBA", blend_type="MULTIPLY")
+    # the special layer (green channel): moss / snow / lava crust / void / puddles / flood water
+    kind = THEME["special"]
+    blend = {"moss": "MULTIPLY", "snow": "MIX", "lava": "MIX", "void": "MIX", "puddle": "MULTIPLY", "water": "MIX"}[kind]
+    paint = {"moss": "#6f8a7c", "snow": "#dfe6ef", "lava": "#1c0f0b", "void": "#07040f", "puddle": "#5a6470", "water": "#0d2a33"}[kind]
+    moss_c = node(nt, "ShaderNodeMix", (0, 750), data_type="RGBA", blend_type=blend)
     L.new(sep.outputs["Green"], moss_c.inputs["Factor"])
     L.new(col, sock(moss_c, "A"))
-    sock(moss_c, "B").default_value = lin("#6f8a7c")
+    sock(moss_c, "B").default_value = lin(paint)
+    if kind in ("puddle", "water", "snow"):           # wet surfaces are glossy, snow is soft
+        gloss = node(nt, "ShaderNodeMix", (0, 300), data_type="FLOAT")
+        L.new(sep.outputs["Green"], gloss.inputs["Factor"])
+        L.new(rough, sock(gloss, "A", "VALUE"))
+        sock(gloss, "B", "VALUE").default_value = 0.6 if kind == "snow" else 0.04
+        rough = sock(gloss, "Result", "VALUE", out=True)
     # palette pull toward cold basalt + a darker value (art bible: ground value 15-45 %)
     hsv = node(nt, "ShaderNodeHueSaturation", (200, 750))
     hsv.inputs["Saturation"].default_value = 0.5
-    hsv.inputs["Value"].default_value = 0.72
+    hsv.inputs["Value"].default_value = THEME.get("value", 0.72)
     L.new(sock(moss_c, "Result", out=True), hsv.inputs["Color"])
     tint = node(nt, "ShaderNodeMix", (400, 750), data_type="RGBA", blend_type="MULTIPLY")
     tint.inputs["Factor"].default_value = 1.0
     L.new(hsv.outputs["Color"], sock(tint, "A"))
-    sock(tint, "B").default_value = lin("#c9ccd6")
+    sock(tint, "B").default_value = lin(THEME["tint"])
     L.new(sock(tint, "Result", out=True), bsdf.inputs["Base Color"])
     L.new(rough, bsdf.inputs["Roughness"])
     L.new(nrm, bsdf.inputs["Normal"])
@@ -519,8 +579,38 @@ def terrain_pbr():
     rm2 = node(nt, "ShaderNodeMath", (550, -700), operation="MULTIPLY")
     L.new(rm.outputs["Value"], rm2.inputs[0])
     rm2.inputs[1].default_value = 2.5
-    bsdf.inputs["Emission Color"].default_value = lin("#c0304a")
-    L.new(rm2.outputs["Value"], bsdf.inputs["Emission Strength"])
+    bsdf.inputs["Emission Color"].default_value = lin(THEME["rift"])
+    if kind in ("lava", "void"):
+        # lava glows through an irregular crust (voronoi warped by noise); the void is dark with sparse star specks
+        warp = node(nt, "ShaderNodeTexNoise", (-300, -1200), Scale=0.6, Detail=6.0)
+        L.new(tc.outputs["Object"], warp.inputs["Vector"])
+        wv = node(nt, "ShaderNodeVectorMath", (-100, -1200), operation="MULTIPLY_ADD")
+        L.new(warp.outputs["Color"], wv.inputs[0])
+        wv.inputs[1].default_value = (1.6, 1.6, 1.6)
+        L.new(tc.outputs["Object"], wv.inputs[2])
+        if kind == "lava":
+            pv = node(nt, "ShaderNodeTexVoronoi", (0, -1000), Scale=1.1, feature="DISTANCE_TO_EDGE", Randomness=1.0)
+            L.new(wv.outputs["Vector"], pv.inputs["Vector"])
+            pr = node(nt, "ShaderNodeMapRange", (200, -1000), **{"From Min": 0.0, "From Max": 0.07, "To Min": 1.0, "To Max": 0.03})
+            L.new(pv.outputs["Distance"], pr.inputs["Value"])
+        else:
+            pv = node(nt, "ShaderNodeTexNoise", (0, -1000), Scale=60.0, Detail=1.0)
+            L.new(tc.outputs["Object"], pv.inputs["Vector"])
+            pr = node(nt, "ShaderNodeMapRange", (200, -1000), **{"From Min": 0.68, "From Max": 0.74, "To Min": 0.02, "To Max": 1.0})
+            L.new(pv.outputs["Fac"], pr.inputs["Value"])
+        pm = node(nt, "ShaderNodeMath", (400, -1000), operation="MULTIPLY")
+        L.new(pr.outputs["Result"], pm.inputs[0])
+        L.new(sep.outputs["Green"], pm.inputs[1])
+        pm2 = node(nt, "ShaderNodeMath", (550, -1000), operation="MULTIPLY")
+        L.new(pm.outputs["Value"], pm2.inputs[0])
+        pm2.inputs[1].default_value = 3.5 if kind == "lava" else 0.9
+        tot = node(nt, "ShaderNodeMath", (700, -850), operation="ADD")
+        L.new(rm2.outputs["Value"], tot.inputs[0])
+        L.new(pm2.outputs["Value"], tot.inputs[1])
+        bsdf.inputs["Emission Color"].default_value = lin("#ff5a1f" if kind == "lava" else "#9f8cff")
+        L.new(tot.outputs["Value"], bsdf.inputs["Emission Strength"])
+    else:
+        L.new(rm2.outputs["Value"], bsdf.inputs["Emission Strength"])
     disp = node(nt, "ShaderNodeDisplacement", (600, -300), Midlevel=0.5, Scale=0.09)
     L.new(hgt, disp.inputs["Height"])
     L.new(disp.outputs["Displacement"], out.inputs["Displacement"])
@@ -530,9 +620,9 @@ def terrain_pbr():
 ter.data.materials.append(terrain_pbr())
 
 # ----------------------------------------------------------------------------------------------- the sanctum dais
-MAT_DAIS = pbr_material("Dais", "castle_wall_slates", 0.35, tint="#b9b6b0", value=0.9)
-MAT_STONE = pbr_material("Ruin", "broken_wall", 0.45, tint="#c2bcb2", value=0.95)
-MAT_DARK = pbr_material("Basalt", "dark_rock", 0.6, tint="#8a8c95", value=0.7)
+MAT_DAIS = pbr_material("Dais", THEME["dais"], 0.35, tint="#b9b6b0", value=0.9)
+MAT_STONE = pbr_material("Ruin", THEME["ruin"], 0.45, tint="#c2bcb2", value=0.95)
+MAT_DARK = pbr_material("Basalt", THEME["dark"], 0.6, tint="#8a8c95", value=0.7)
 MAT_MOSSY = pbr_material("MossyRock", "mossy_rock", 0.5, tint="#a4b0a8", value=0.85)
 
 
@@ -649,13 +739,13 @@ def brazier(x, y):
     fm = bpy.data.materials.new("Fire")
     fm.use_nodes = True
     em = fm.node_tree.nodes.new("ShaderNodeEmission")
-    em.inputs["Color"].default_value = lin("#5fd7c8")
+    em.inputs["Color"].default_value = lin(THEME["brazier"])
     em.inputs["Strength"].default_value = 12.0
     fm.node_tree.links.new(em.outputs[0], fm.node_tree.nodes["Material Output"].inputs["Surface"])
     f.data.materials.append(fm)
     light = bpy.data.lights.new("BrazierLight", "POINT")
     light.energy = 140
-    light.color = lin("#62e0cf")[:3]
+    light.color = lin(THEME["brazier"])[:3]
     light.shadow_soft_size = 0.2
     lo = bpy.data.objects.new("BrazierLight", light)
     lo.location = (b.x, b.y, z + 1.5)
@@ -814,12 +904,134 @@ def model(mid, x, y, size=1.0, rot=None, axis="z"):
         c.matrix_world = place @ o.matrix_world
 
 
+def glow_material(name, base, emit, strength, transmission=0.5):
+    m = bpy.data.materials.new(name)
+    m.use_nodes = True
+    b_ = m.node_tree.nodes["Principled BSDF"]
+    b_.inputs["Base Color"].default_value = lin(base)
+    b_.inputs["Roughness"].default_value = 0.1
+    b_.inputs["Transmission Weight"].default_value = transmission
+    b_.inputs["Emission Color"].default_value = lin(emit)
+    b_.inputs["Emission Strength"].default_value = strength
+    return m
+
+
+MAT_ICE = glow_material("Ice", "#cfefff", "#9fe8ff", 0.4, 0.85)
+MAT_OBSIDIAN = glow_material("Obsidian", "#120c10", "#ff5a1f", 0.8, 0.0)
+MAT_VIOLET = glow_material("AetherViolet", "#8a6cff", "#b07cff", 2.0, 0.5)
+MAT_COPPER = pbr_material("Copper", THEME["dark"], 0.8, tint="#c07a4a", value=1.0)
+MAT_BOOKS = glow_material("Books", "#5a2a24", "#000000", 0.0, 0.0)
+MAT_WATER = glow_material("Water", "#0d2a33", "#2aa6a4", 0.05, 0.0)
+
+
+def shard_cluster(x, y, mat, lo=0.35, hi=1.1, count=(3, 6), lift=0.0):
+    z = ground_z(x, y) + lift
+    for k in range(random.randint(*count)):
+        h = random.uniform(lo, hi)
+        bpy.ops.mesh.primitive_cone_add(vertices=6, radius1=h * 0.22, radius2=0.0, depth=h,
+                                        location=G(x + random.uniform(-0.35, 0.35), y + random.uniform(-0.2, 0.2), z + h * 0.4))
+        o = bpy.context.object
+        o.rotation_euler = (random.uniform(-0.45, 0.45), random.uniform(-0.45, 0.45), random.random() * 6)
+        o.data.materials.append(mat)
+
+
+def float_rock(x, y):
+    o = rock(G(x, y, ground_z(x, y) + random.uniform(1.0, 2.2)), random.uniform(0.35, 0.7), MAT_DARK)
+    o.scale = (1.2, 1.0, 0.7)
+    shard_cluster(x, y, MAT_VIOLET, 0.2, 0.5, (1, 3), lift=0.0)
+
+
+def battlement(x, y):
+    z = ground_z(x, y)
+    b_ = G(x, y, z)
+    bpy.ops.mesh.primitive_cube_add(size=1, location=(b_.x, b_.y, z + 0.7))
+    w = bpy.context.object
+    w.scale = (2.4, 0.5, 1.4)
+    w.rotation_euler = (0, 0, random.choice([0.0, 0.5, -0.5]))
+    w.data.materials.append(MAT_STONE)
+    for k in (-0.9, -0.3, 0.3, 0.9):
+        bpy.ops.mesh.primitive_cube_add(size=1, location=(b_.x + k * math.cos(w.rotation_euler.z), b_.y + k * math.sin(w.rotation_euler.z), z + 1.6))
+        m_ = bpy.context.object
+        m_.scale = (0.35, 0.5, 0.4)
+        m_.rotation_euler = w.rotation_euler
+        m_.data.materials.append(MAT_STONE)
+
+
+def shelves(x, y):
+    z = ground_z(x, y)
+    b_ = G(x, y, z)
+    a_ = random.choice([0.0, 0.4, -0.4])
+    bpy.ops.mesh.primitive_cube_add(size=1, location=(b_.x, b_.y, z + 0.9))
+    f = bpy.context.object
+    f.scale = (1.8, 0.45, 1.8)
+    f.rotation_euler = (random.uniform(-0.15, 0.15), 0, a_)
+    f.data.materials.append(MAT_DARK)
+    for row in range(3):
+        for k in range(9):
+            bpy.ops.mesh.primitive_cube_add(size=1, location=(b_.x - 0.75 + k * 0.18, b_.y - 0.25, z + 0.35 + row * 0.55))
+            bk = bpy.context.object
+            bk.scale = (0.12, 0.3, random.uniform(0.3, 0.45))
+            bk.rotation_euler = (0, random.uniform(-0.2, 0.2), a_)
+            bk.data.materials.append(MAT_BOOKS)
+
+
+def disc(x, y, r, mat, dz=0.03):
+    z = ground_z(x, y)
+    bpy.ops.mesh.primitive_cylinder_add(vertices=48, radius=r, depth=0.04, location=(G(x, y).x, G(x, y).y, z + dz))
+    bpy.context.object.data.materials.append(mat)
+    return bpy.context.object
+
+
+def biome_features():
+    """Things the data says are there: hazard spots, special nodes, covers."""
+    traits = {t["node"]: t["trait"] for t in BIOME.get("nodeTraits", [])}
+    for i, tr in traits.items():
+        nx, ny = arena["nodes"][i]
+        bx, by = nx + 0.75, ny + 0.45       # beside the node, never on it (heroes stand on the node)
+        if tr == "heated_bridge":
+            disc(nx, ny, 0.75, MAT_OBSIDIAN, 0.02)
+        elif tr == "frozen_tile":
+            disc(nx, ny, 0.8, MAT_ICE, 0.02)
+        elif tr == "aether_node":
+            shard_cluster(bx, by, MAT_VIOLET, 0.3, 0.7, (2, 4))
+        elif tr == "lightning_rod":
+            z = ground_z(bx, by)
+            add_cyl("Rod", 0.05, 2.4, (G(bx, by).x, G(bx, by).y, z + 1.2), MAT_COPPER, verts=8)
+            bpy.ops.mesh.primitive_uv_sphere_add(radius=0.12, location=(G(bx, by).x, G(bx, by).y, z + 2.45))
+            bpy.context.object.data.materials.append(MAT_VIOLET)
+        elif tr == "archive_tome":
+            z = ground_z(bx, by)
+            add_cyl("Lectern", 0.12, 0.9, (G(bx, by).x, G(bx, by).y, z + 0.45), MAT_DARK, verts=8)
+            bpy.ops.mesh.primitive_cube_add(size=1, location=(G(bx, by).x, G(bx, by).y, z + 0.95))
+            bk = bpy.context.object
+            bk.scale = (0.45, 0.32, 0.08)
+            bk.rotation_euler = (0.4, 0, 0)
+            bk.data.materials.append(glow_material("Tome", "#3a2a5a", "#ffd27a", 2.5, 0.0))
+    for hz in BIOME.get("hazards", []):
+        for hx, hy in hz.get("points", []):
+            r_ = hz.get("radius", 1.0)
+            if hz["kind"] == "lava_vents":
+                for k in range(10):
+                    a_ = k / 10 * math.tau
+                    rock(G(hx + math.cos(a_) * r_ * 0.75, hy + math.sin(a_) * r_ * 0.75 * SIN, ground_z(hx, hy)), random.uniform(0.15, 0.3), MAT_OBSIDIAN)
+            elif hz["kind"] == "lightning_strikes":
+                disc(hx, hy, r_ * 0.55, glow_material("Scorch", "#0d0d10", "#b06cff", 0.08, 0.0), 0.012)
+    for cv in BIOME.get("covers", []):
+        shard_cluster(cv["pos"][0], cv["pos"][1], MAT_ICE, 0.6, 1.4, (5, 8))
+
+
+biome_features()
+if THEME.get("kinds"):
+    pass
+
+
 # candidate prop spots in screen space, filtered by lane / dais clearance
 spots = [(x, y) for x in np.linspace(-15.5, 15.5, 23) for y in np.linspace(-8.6, 8.6, 13)]
 random.shuffle(spots)
 placed = []
-kinds = (["statue"] * 2 + ["arch"] * 2 + ["brazier"] * 2 + ["crystals"] * 4 + ["pillar"] * 4 + ["broken"] * 6 + ["fallen"] * 3
-         + ["deadtree"] * 3 + ["roots"] * 2 + ["mossrocks"] * 6 + ["boulder"] * 4 + ["stump"] * 2)
+kinds = THEME.get("kinds") or (["statue"] * 2 + ["arch"] * 2 + ["brazier"] * 2 + ["crystals"] * 4 + ["pillar"] * 4 + ["broken"] * 6
+                               + ["fallen"] * 3 + ["deadtree"] * 3 + ["roots"] * 2 + ["mossrocks"] * 6 + ["boulder"] * 4 + ["stump"] * 2)
+kinds = list(kinds)
 for x, y in spots:
     if not kinds:
         break
@@ -836,6 +1048,16 @@ for x, y in spots:
         brazier(x, y)
     elif kind == "tree":
         dead_tree(x, y)
+    elif kind == "obsidian":
+        shard_cluster(x, y, MAT_OBSIDIAN, 0.5, 1.6, (3, 6))
+    elif kind == "icecrystals":
+        shard_cluster(x, y, MAT_ICE, 0.5, 1.5, (3, 6))
+    elif kind == "floatrock":
+        float_rock(x, y)
+    elif kind == "battlement":
+        battlement(x, y)
+    elif kind == "shelves":
+        shelves(x, y)
     elif kind == "statue":
         add_cyl("StatuePlinth", 0.6, 0.45, (G(x, y).x, G(x, y).y, ground_z(x, y) + 0.22), MAT_STONE, verts=8, bevel=0.05)
         model("gothic_statue", x, y, 2.3, rot=math.radians(180 + random.uniform(-30, 30)))
@@ -899,8 +1121,8 @@ pset.material = len(ter.data.materials)
 
 # ----------------------------------------------------------------------------------------------- lights
 sun = bpy.data.lights.new("Moon", "SUN")
-sun.energy = 2.6
-sun.color = lin("#dfe6ff")[:3]
+sun.energy = THEME["sun"][1]
+sun.color = lin(THEME["sun"][0])[:3]
 sun.angle = math.radians(4)
 so = bpy.data.objects.new("Moon", sun)
 sc.collection.objects.link(so)
@@ -972,6 +1194,7 @@ meta = {
     "braziersFlat": [round(v, 3) for p_ in BRAZIERS for v in p_],
     "aetherCrystalsFlat": [round(v, 3) for p_ in CRYSTALS for v in p_],
     "aetherCrystalsScreen": [[round(a, 3), round(b, 3)] for a, b in CRYSTALS],
+    "biome": BIOME_ID,
     "samples": SAMPLES,
 }
 json.dump(meta, open(os.path.join(OUT, "env_meta.json"), "w"), indent=1)

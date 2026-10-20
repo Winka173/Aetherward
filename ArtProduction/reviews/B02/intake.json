@@ -1,0 +1,354 @@
+{
+ "batch": "B02",
+ "delivered": 57,
+ "requested": 57,
+ "blocking": [],
+ "notes": [],
+ "rows": [
+  {
+   "id": "Heroes/terra_evoA",
+   "group": "b01_heroes_finish",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/terra_evoA_cast",
+   "group": "b01_heroes_finish",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/terra_evoB",
+   "group": "b01_heroes_finish",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/terra_evoB_cast",
+   "group": "b01_heroes_finish",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/sylph_evoA",
+   "group": "b01_heroes_finish",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/sylph_evoA_cast",
+   "group": "b01_heroes_finish",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/sylph_evoB",
+   "group": "b01_heroes_finish",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/sylph_evoB_cast",
+   "group": "b01_heroes_finish",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/marina_evoA",
+   "group": "b01_heroes_finish",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/marina_evoA_cast",
+   "group": "b01_heroes_finish",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/marina_evoB",
+   "group": "b01_heroes_finish",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/marina_evoB_cast",
+   "group": "b01_heroes_finish",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/ignis_attack",
+   "group": "b01_heroes_finish",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/ignis_evoA_attack",
+   "group": "b01_heroes_finish",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/ignis_evoB_attack",
+   "group": "b01_heroes_finish",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/terra_attack",
+   "group": "b01_heroes_finish",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/terra_evoA_attack",
+   "group": "b01_heroes_finish",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/terra_evoB_attack",
+   "group": "b01_heroes_finish",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/sylph_attack",
+   "group": "b01_heroes_finish",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/sylph_evoA_attack",
+   "group": "b01_heroes_finish",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/sylph_evoB_attack",
+   "group": "b01_heroes_finish",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/marina_attack",
+   "group": "b01_heroes_finish",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/marina_evoA_attack",
+   "group": "b01_heroes_finish",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/marina_evoB_attack",
+   "group": "b01_heroes_finish",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/cinder_idle",
+   "group": "starters",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/cinder_cast",
+   "group": "starters",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/cinder_downed",
+   "group": "starters",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/cinder_evoA",
+   "group": "starters",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/cinder_evoA_cast",
+   "group": "starters",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/cinder_evoB",
+   "group": "starters",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/cinder_evoB_cast",
+   "group": "starters",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Portraits/cinder",
+   "group": "starters",
+   "status": "OK"
+  },
+  {
+   "id": "Heroes/volt_idle",
+   "group": "starters",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/volt_cast",
+   "group": "starters",
+   "status": "OK",
+   "footRow": 372
+  },
+  {
+   "id": "Heroes/volt_downed",
+   "group": "starters",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/volt_evoA",
+   "group": "starters",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/volt_evoA_cast",
+   "group": "starters",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/volt_evoB",
+   "group": "starters",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/volt_evoB_cast",
+   "group": "starters",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Portraits/volt",
+   "group": "starters",
+   "status": "OK"
+  },
+  {
+   "id": "Heroes/freya_idle",
+   "group": "starters",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/freya_cast",
+   "group": "starters",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/freya_downed",
+   "group": "starters",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/freya_evoA",
+   "group": "starters",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/freya_evoA_cast",
+   "group": "starters",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/freya_evoB",
+   "group": "starters",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/freya_evoB_cast",
+   "group": "starters",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Portraits/freya",
+   "group": "starters",
+   "status": "OK"
+  },
+  {
+   "id": "Heroes/cinder_attack",
+   "group": "starters",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/cinder_evoA_attack",
+   "group": "starters",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/cinder_evoB_attack",
+   "group": "starters",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/volt_attack",
+   "group": "starters",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/volt_evoA_attack",
+   "group": "starters",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/volt_evoB_attack",
+   "group": "starters",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/freya_attack",
+   "group": "starters",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/freya_evoA_attack",
+   "group": "starters",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/freya_evoB_attack",
+   "group": "starters",
+   "status": "OK",
+   "footRow": 371
+  }
+ ],
+ "strayWorkingTreeChanges": [
+  "ArtProduction/REFERENCE_MANIFEST.json",
+  "Tools/ArtPipeline/blender/sanctum_env.py",
+  "Tools/ArtPipeline/fetch_polyhaven.py"
+ ],
+ "stage": "ArtCache\\ArtStage-B02"
+}

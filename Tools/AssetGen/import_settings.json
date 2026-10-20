@@ -3391,6 +3391,22 @@
   "ppu": 200,
   "sprite": true
  },
+ "Assets/_Aetherward/Resources/Art/Heroes/cinder_attack.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.07
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
  "Assets/_Aetherward/Resources/Art/Heroes/cinder_cast.png": {
   "border": [
    0,
@@ -3439,6 +3455,22 @@
   "ppu": 200,
   "sprite": true
  },
+ "Assets/_Aetherward/Resources/Art/Heroes/cinder_evoA_attack.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.07
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
  "Assets/_Aetherward/Resources/Art/Heroes/cinder_evoA_cast.png": {
   "border": [
    0,
@@ -3456,6 +3488,22 @@
   "sprite": true
  },
  "Assets/_Aetherward/Resources/Art/Heroes/cinder_evoB.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.07
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/cinder_evoB_attack.png": {
   "border": [
    0,
    0,
@@ -3839,6 +3887,22 @@
   "ppu": 200,
   "sprite": true
  },
+ "Assets/_Aetherward/Resources/Art/Heroes/freya_attack.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.07
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
  "Assets/_Aetherward/Resources/Art/Heroes/freya_cast.png": {
   "border": [
    0,
@@ -3887,6 +3951,22 @@
   "ppu": 200,
   "sprite": true
  },
+ "Assets/_Aetherward/Resources/Art/Heroes/freya_evoA_attack.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.07
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
  "Assets/_Aetherward/Resources/Art/Heroes/freya_evoA_cast.png": {
   "border": [
    0,
@@ -3904,6 +3984,22 @@
   "sprite": true
  },
  "Assets/_Aetherward/Resources/Art/Heroes/freya_evoB.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.07
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/freya_evoB_attack.png": {
   "border": [
    0,
    0,
@@ -4063,6 +4159,22 @@
   "ppu": 200,
   "sprite": true
  },
+ "Assets/_Aetherward/Resources/Art/Heroes/ignis_attack.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.07
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
  "Assets/_Aetherward/Resources/Art/Heroes/ignis_cast.png": {
   "border": [
    0,
@@ -4111,6 +4223,22 @@
   "ppu": 200,
   "sprite": true
  },
+ "Assets/_Aetherward/Resources/Art/Heroes/ignis_evoA_attack.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.07
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
  "Assets/_Aetherward/Resources/Art/Heroes/ignis_evoA_cast.png": {
   "border": [
    0,
@@ -4128,6 +4256,22 @@
   "sprite": true
  },
  "Assets/_Aetherward/Resources/Art/Heroes/ignis_evoB.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.07
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/ignis_evoB_attack.png": {
   "border": [
    0,
    0,
@@ -4735,6 +4879,22 @@
   "ppu": 200,
   "sprite": true
  },
+ "Assets/_Aetherward/Resources/Art/Heroes/marina_attack.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.07
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
  "Assets/_Aetherward/Resources/Art/Heroes/marina_cast.png": {
   "border": [
    0,
@@ -4783,6 +4943,22 @@
   "ppu": 200,
   "sprite": true
  },
+ "Assets/_Aetherward/Resources/Art/Heroes/marina_evoA_attack.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.07
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
  "Assets/_Aetherward/Resources/Art/Heroes/marina_evoA_cast.png": {
   "border": [
    0,
@@ -4800,6 +4976,22 @@
   "sprite": true
  },
  "Assets/_Aetherward/Resources/Art/Heroes/marina_evoB.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.07
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/marina_evoB_attack.png": {
   "border": [
    0,
    0,
@@ -5855,6 +6047,22 @@
   "ppu": 200,
   "sprite": true
  },
+ "Assets/_Aetherward/Resources/Art/Heroes/sylph_attack.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.07
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
  "Assets/_Aetherward/Resources/Art/Heroes/sylph_cast.png": {
   "border": [
    0,
@@ -5903,6 +6111,22 @@
   "ppu": 200,
   "sprite": true
  },
+ "Assets/_Aetherward/Resources/Art/Heroes/sylph_evoA_attack.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.07
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
  "Assets/_Aetherward/Resources/Art/Heroes/sylph_evoA_cast.png": {
   "border": [
    0,
@@ -5935,6 +6159,22 @@
   "ppu": 200,
   "sprite": true
  },
+ "Assets/_Aetherward/Resources/Art/Heroes/sylph_evoB_attack.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.07
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
  "Assets/_Aetherward/Resources/Art/Heroes/sylph_evoB_cast.png": {
   "border": [
    0,
@@ -5952,6 +6192,22 @@
   "sprite": true
  },
  "Assets/_Aetherward/Resources/Art/Heroes/sylph_idle.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.07
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/terra_attack.png": {
   "border": [
    0,
    0,
@@ -6015,6 +6271,22 @@
   "ppu": 200,
   "sprite": true
  },
+ "Assets/_Aetherward/Resources/Art/Heroes/terra_evoA_attack.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.07
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
  "Assets/_Aetherward/Resources/Art/Heroes/terra_evoA_cast.png": {
   "border": [
    0,
@@ -6032,6 +6304,22 @@
   "sprite": true
  },
  "Assets/_Aetherward/Resources/Art/Heroes/terra_evoB.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.07
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/terra_evoB_attack.png": {
   "border": [
    0,
    0,
@@ -6527,6 +6815,22 @@
   "ppu": 200,
   "sprite": true
  },
+ "Assets/_Aetherward/Resources/Art/Heroes/volt_attack.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.07
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
  "Assets/_Aetherward/Resources/Art/Heroes/volt_cast.png": {
   "border": [
    0,
@@ -6575,6 +6879,22 @@
   "ppu": 200,
   "sprite": true
  },
+ "Assets/_Aetherward/Resources/Art/Heroes/volt_evoA_attack.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.07
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
  "Assets/_Aetherward/Resources/Art/Heroes/volt_evoA_cast.png": {
   "border": [
    0,
@@ -6592,6 +6912,22 @@
   "sprite": true
  },
  "Assets/_Aetherward/Resources/Art/Heroes/volt_evoB.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.07
+  ],
+  "ppu": 200,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/volt_evoB_attack.png": {
   "border": [
    0,
    0,

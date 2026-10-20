@@ -17,7 +17,13 @@ ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 CACHE = os.path.join(ROOT, "ArtCache", "polyhaven")   # not Temp/: Unity deletes Temp/ when the Editor quits
 MANIFEST = os.path.join(ROOT, "ArtProduction", "REFERENCE_MANIFEST.json")
 TEXTURES = ["burned_ground_01", "aerial_ground_rock", "cobblestone_large_01", "castle_wall_slates", "broken_wall",
-            "mossy_rock", "cliff_side", "dark_rock"]
+            "mossy_rock", "cliff_side", "dark_rock",
+            # biome themes (sanctum_env.py THEMES)
+            "cracked_red_ground", "dark_rock_02", "patterned_slate_tiles", "rock_boulder_cracked",      # molten crater
+            "rock_ground", "large_floor_tiles_02", "marble_cliff_01", "castle_wall_varriation",       # frostfall bastion
+            "rocks_ground_02", "herringbone_pavement",                                               # shattered aether
+            "rocks_ground_05", "herringbone_pavement_02",                                            # stormspire citadel
+            "marble_tiles", "old_planks_02", "dark_wooden_planks"]                                   # sunken archive
 TEX_MAPS = {"Diffuse": "diff", "nor_gl": "nor_gl", "Rough": "rough", "Displacement": "disp"}
 MODELS = ["gothic_statue", "rock_moss_set_01", "rock_moss_set_02", "namaqualand_boulder_02", "namaqualand_boulder_05",
           "dead_tree_trunk_02", "dead_quiver_trunk", "root_cluster_01", "stone_fire_pit", "tree_stump_01"]
