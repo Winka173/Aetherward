@@ -1,0 +1,40 @@
+{
+  "_doc": "Fixed benchmark frame for B01: the same units at the same world positions are used by the offline composite (handoff.py preview) and by the Unity capture, so before/after and offline/Unity pairs compare like with like. World units, y up, camera centred at (0,0). 'flip' = faces left.",
+  "background": "World/arena_background",
+  "crystal": {"sprite": "World/crystal_intact", "x": 0.0, "y": -0.55},
+  "emptyNodes": [5, 6, 8, 9, 10],
+  "heroes": [
+    {"sprite": "Heroes/ignis_cast", "node": 0, "element": "fire"},
+    {"sprite": "Heroes/sylph_idle", "node": 1, "element": "wind", "flip": true},
+    {"sprite": "Heroes/marina_idle", "node": 2, "element": "water", "flip": true},
+    {"sprite": "Heroes/terra_idle", "node": 4, "element": "earth"},
+    {"sprite": "Heroes/ignis_evoA", "node": 7, "element": "fire", "flip": true},
+    {"sprite": "Heroes/ignis_evoB_cast", "node": 11, "element": "fire"},
+    {"sprite": "Heroes/terra_downed", "node": 3, "element": "earth"}
+  ],
+  "enemies": [
+    {"id": "grunt", "frame": "a", "x": 6.6, "y": 0.55, "flip": true},
+    {"id": "grunt", "frame": "b", "x": 7.6, "y": 1.05, "flip": true},
+    {"id": "grunt", "frame": "a", "x": 8.7, "y": 1.35, "flip": true},
+    {"id": "grunt", "frame": "b", "x": -8.2, "y": -1.2},
+    {"id": "juggernaut", "frame": "a", "x": -0.55, "y": 5.0},
+    {"id": "hexcaster", "frame": "b", "x": -6.4, "y": -0.6},
+    {"id": "storm_harpy", "frame": "a", "x": 5.6, "y": 3.9, "flip": true},
+    {"id": "storm_harpy", "frame": "b", "x": 7.4, "y": 5.0, "flip": true},
+    {"id": "rift_warden", "frame": "a", "x": 0.9, "y": -5.4, "boss": true}
+  ],
+  "fx": [
+    {"sprite": "Vfx/zone_burning_ground", "x": 7.6, "y": 1.0, "rx": 1.3, "ground": true, "alpha": 0.9},
+    {"sprite": "Vfx/telegraph", "x": 0.2, "y": -3.7, "rx": 1.5, "ground": true, "alpha": 0.8},
+    {"sprite": "Vfx/ring", "x": -6.4, "y": -0.6, "rx": 0.9, "ground": true, "alpha": 0.8},
+    {"sprite": "Vfx/fireball", "x": 4.6, "y": 1.6, "scale": 0.9, "rot": -8},
+    {"sprite": "Vfx/impact_fire", "x": 6.6, "y": 1.1, "scale": 0.9},
+    {"sprite": "Vfx/arrow", "x": -4.2, "y": 0.35, "scale": 0.9, "rot": 196},
+    {"sprite": "Vfx/impact_wind", "x": -6.3, "y": 0.0, "scale": 0.8},
+    {"sprite": "Vfx/projectile_water", "x": -2.9, "y": -0.2, "scale": 1.0, "rot": 30},
+    {"sprite": "Vfx/impact_water", "x": -8.1, "y": -0.6, "scale": 0.8},
+    {"sprite": "Vfx/slash", "x": 5.3, "y": 0.75, "scale": 0.8, "rot": 20},
+    {"sprite": "Vfx/impact_earth", "x": 5.6, "y": 0.4, "scale": 0.8},
+    {"sprite": "Vfx/glow", "x": 1.75, "y": 2.4, "scale": 0.9, "alpha": 0.8}
+  ]
+}

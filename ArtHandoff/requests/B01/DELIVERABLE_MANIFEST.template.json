@@ -1,0 +1,38 @@
+{
+  "batch": "B01",
+  "producer": "Codex (gpt-6.1-sol)",
+  "date": "YYYY-MM-DD",
+  "styleLock": {
+    "palette": ["#......"],
+    "light": "key upper-left-front #ffe9d0, rim back-right #9fe8ff, ambient #16233a",
+    "edge": "describe the edge/rim treatment used",
+    "promptTemplate": "the shared prompt prefix reused for every character"
+  },
+  "tools": [
+    {"name": "image_generation (Codex built-in)", "version": "as reported"},
+    {"name": "Blender", "version": "4.5.14 LTS", "path": "C:\\Users\\Winka\\Tools\\blender-4.5.14-windows-x64\\blender.exe"},
+    {"name": "Python", "version": "3.11", "packages": ["Pillow", "numpy", "opencv"]}
+  ],
+  "assets": [
+    {
+      "id": "Heroes/ignis_idle",
+      "status": "delivered | placeholder | blocked | skipped",
+      "export": "exports/Art/Heroes/ignis_idle.png",
+      "size": [400, 400],
+      "source": "source/sheets/ignis_base_sheet_v1.png",
+      "master": "source/masters/Heroes/ignis_idle@2x.png",
+      "generator": "image_generation | blender:source/blender/crystal.py",
+      "prompt": "full prompt text, or a reference to README section",
+      "cleanup": "source/scripts/align_units.py --id Heroes/ignis_idle",
+      "thirdPartyInputs": [],
+      "selfAssessment": "one honest sentence: what is good, what is weak",
+      "reason": "required when status is blocked/skipped/placeholder"
+    }
+  ],
+  "extras": [
+    {"path": "previews/style_frame_1080p.png", "kind": "concept (not a sprite)"},
+    {"path": "source/battlefield/layers/01_base_terrain.png", "kind": "battlefield layer"}
+  ],
+  "knownIssues": ["..."],
+  "blockers": ["..."]
+}

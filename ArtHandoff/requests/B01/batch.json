@@ -1,0 +1,22 @@
+{
+  "_doc": "Benchmark batch B01 (Dark Mythic Painterly 2.5D). Asset ids are Art-relative paths of live files; Tools/ArtPipeline/handoff.py request expands them into INPUT_MANIFEST.json. Priority: P0 = style lock (deliver first), P1 = characters/world, P2 = VFX, P3 = icons/UI.",
+  "camera": {
+    "unity": "orthographic, no tilt, orthographicSize = max(7.5, 13.2/aspect) -> 15 world units tall on 16:9 (72 px/unit at 1080p, 48 at 720p)",
+    "floorProjection": "ground ellipses are drawn with y = 0.62 * radius (telegraphs, zones, rings, shadows) -> floor plane seen at ~38 deg elevation (asin 0.62)",
+    "unitView": "billboard sprites, 3/4 front view at the same ~38 deg elevation, body turned ~25 deg toward screen-right; the game mirrors with localScale.x for left-facing",
+    "keyLight": "one key light from upper-left-front (screen top-left), warm-neutral; crystal is the brightest emissive; rim light cool cyan from behind"
+  },
+  "groups": [
+    {"id": "style_lock", "priority": "P0", "required": true, "assets": ["Heroes/ignis_idle", "Enemies/grunt_a", "World/crystal_intact"]},
+    {"id": "heroes_ignis_full", "priority": "P1", "required": true, "assets": ["Heroes/ignis_cast", "Heroes/ignis_downed", "Heroes/ignis_evoA", "Heroes/ignis_evoA_cast", "Heroes/ignis_evoB", "Heroes/ignis_evoB_cast"]},
+    {"id": "heroes_base", "priority": "P1", "required": true, "assets": ["Heroes/terra_idle", "Heroes/terra_cast", "Heroes/terra_downed", "Heroes/sylph_idle", "Heroes/sylph_cast", "Heroes/sylph_downed", "Heroes/marina_idle", "Heroes/marina_cast", "Heroes/marina_downed"]},
+    {"id": "portraits", "priority": "P1", "required": true, "assets": ["Portraits/ignis", "Portraits/terra", "Portraits/sylph", "Portraits/marina"]},
+    {"id": "enemies", "priority": "P1", "required": true, "assets": ["Enemies/grunt_b", "Enemies/juggernaut_*", "Enemies/hexcaster_*", "Enemies/storm_harpy_*"]},
+    {"id": "boss", "priority": "P1", "required": true, "assets": ["Enemies/rift_warden_*"]},
+    {"id": "crystal", "priority": "P1", "required": true, "assets": ["World/crystal_cracked", "World/crystal_critical"]},
+    {"id": "battlefield", "priority": "P1", "required": true, "assets": ["World/arena_background", "World/node_*", "World/lane_arrow", "World/shadow"]},
+    {"id": "vfx", "priority": "P2", "required": true, "assets": ["Vfx/impact_fire", "Vfx/impact_water", "Vfx/impact_wind", "Vfx/impact_earth", "Vfx/projectile_water", "Vfx/fireball", "Vfx/arrow", "Vfx/slash", "Vfx/glow", "Vfx/ring", "Vfx/telegraph", "Vfx/zone_burning_ground"]},
+    {"id": "icons", "priority": "P3", "required": true, "assets": ["Icons/element_fire", "Icons/element_water", "Icons/element_wind", "Icons/element_earth", "Icons/role_guardian", "Icons/role_mage", "Icons/role_ranger", "Icons/role_healer", "Icons/status_burn", "Icons/status_wet", "Icons/status_stun", "Icons/status_shield", "Icons/reaction_vaporize", "Icons/reaction_firestorm", "Icons/ui_crystal", "Icons/ui_gold", "Icons/ui_wave"]},
+    {"id": "hud", "priority": "P3", "required": true, "assets": ["UI/panel_dark", "UI/tooltip", "UI/bar_bg", "UI/bar_fill", "UI/button_primary_*", "UI/card_rare"]}
+  ]
+}
