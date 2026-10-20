@@ -2954,7 +2954,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -2970,7 +2970,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -2986,7 +2986,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -3002,7 +3002,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -3018,7 +3018,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -3034,7 +3034,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -3050,7 +3050,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -3066,7 +3066,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -3082,7 +3082,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -3098,7 +3098,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -3114,7 +3114,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -3130,7 +3130,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -3146,7 +3146,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -3162,7 +3162,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -3178,7 +3178,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -3194,7 +3194,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -3210,7 +3210,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -3226,7 +3226,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -3242,7 +3242,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -3258,7 +3258,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -3274,7 +3274,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -3290,7 +3290,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -3306,7 +3306,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -3322,7 +3322,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -3338,7 +3338,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -3354,7 +3354,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -3370,7 +3370,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -3386,7 +3386,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -3402,7 +3402,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -3418,7 +3418,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -3434,7 +3434,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -3450,7 +3450,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -3466,7 +3466,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -3482,7 +3482,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -3498,7 +3498,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -3514,7 +3514,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -3530,7 +3530,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -3546,7 +3546,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -3562,7 +3562,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -3578,7 +3578,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -3594,7 +3594,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -3610,7 +3610,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -3626,7 +3626,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -3642,7 +3642,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -3658,7 +3658,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -3674,7 +3674,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -3690,7 +3690,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -3706,7 +3706,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -3722,7 +3722,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -3738,7 +3738,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -3754,7 +3754,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -3770,7 +3770,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -3786,7 +3786,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -3802,7 +3802,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -3818,7 +3818,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -3834,7 +3834,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -3850,7 +3850,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -3866,7 +3866,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -3882,7 +3882,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -3898,7 +3898,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -3914,7 +3914,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -3930,7 +3930,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -3946,7 +3946,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -3962,7 +3962,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -3978,7 +3978,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -3994,7 +3994,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -4010,7 +4010,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -4026,7 +4026,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -4042,7 +4042,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -4058,7 +4058,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -4074,7 +4074,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -4090,7 +4090,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -4106,7 +4106,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -4122,7 +4122,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -4138,7 +4138,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -4154,7 +4154,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -4170,7 +4170,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -4186,7 +4186,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -4202,7 +4202,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -4218,7 +4218,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -4234,7 +4234,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -4250,7 +4250,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -4266,7 +4266,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -4282,7 +4282,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -4298,7 +4298,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -4314,7 +4314,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -4330,7 +4330,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -4346,7 +4346,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -4362,7 +4362,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -4378,7 +4378,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -4394,7 +4394,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -4410,7 +4410,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -4426,7 +4426,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -4442,7 +4442,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -4458,7 +4458,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -4474,7 +4474,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -4490,7 +4490,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -4506,7 +4506,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -4522,7 +4522,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -4538,7 +4538,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -4554,7 +4554,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -4570,7 +4570,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -4586,7 +4586,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -4602,7 +4602,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -4618,7 +4618,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -4634,7 +4634,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -4650,7 +4650,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -4666,7 +4666,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -4682,7 +4682,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -4698,7 +4698,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -4714,7 +4714,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -4730,7 +4730,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -4746,7 +4746,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -4762,7 +4762,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -4778,7 +4778,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -4794,7 +4794,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -4810,7 +4810,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -4826,7 +4826,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -4842,7 +4842,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -4858,7 +4858,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -4874,7 +4874,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -4890,7 +4890,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -4906,7 +4906,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -4922,7 +4922,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -4938,7 +4938,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -4954,7 +4954,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -4970,7 +4970,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -4986,7 +4986,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -5002,7 +5002,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -5018,7 +5018,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -5034,7 +5034,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -5050,7 +5050,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -5066,7 +5066,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -5082,7 +5082,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -5098,7 +5098,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -5114,7 +5114,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -5130,7 +5130,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -5146,7 +5146,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -5162,7 +5162,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -5178,7 +5178,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -5194,7 +5194,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -5210,7 +5210,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -5226,7 +5226,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -5242,7 +5242,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -5258,7 +5258,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -5274,7 +5274,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -5290,7 +5290,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -5306,7 +5306,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -5322,7 +5322,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -5338,7 +5338,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -5354,7 +5354,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -5370,7 +5370,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -5386,7 +5386,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -5402,7 +5402,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -5418,7 +5418,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -5434,7 +5434,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -5450,7 +5450,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -5466,7 +5466,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -5482,7 +5482,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -5498,7 +5498,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -5514,7 +5514,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -5530,7 +5530,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -5546,7 +5546,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -5562,7 +5562,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -5578,7 +5578,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -5594,7 +5594,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -5610,7 +5610,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -5626,7 +5626,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -5642,7 +5642,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -5658,7 +5658,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -5674,7 +5674,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -5690,7 +5690,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -5706,7 +5706,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -5722,7 +5722,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -5738,7 +5738,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -5754,7 +5754,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -5770,7 +5770,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -5786,7 +5786,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -5802,7 +5802,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -5818,7 +5818,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -5834,7 +5834,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -5850,7 +5850,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -5866,7 +5866,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -5882,7 +5882,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -5898,7 +5898,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -5914,7 +5914,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -5930,7 +5930,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -5946,7 +5946,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -5962,7 +5962,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -5978,7 +5978,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -5994,7 +5994,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -6010,7 +6010,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -6026,7 +6026,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -6042,7 +6042,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -6058,7 +6058,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -6074,7 +6074,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -6090,7 +6090,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -6106,7 +6106,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -6122,7 +6122,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -6138,7 +6138,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -6154,7 +6154,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -6170,7 +6170,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -6186,7 +6186,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -6202,7 +6202,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -6218,7 +6218,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -6234,7 +6234,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -6250,7 +6250,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -6266,7 +6266,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -6282,7 +6282,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -6298,7 +6298,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -6314,7 +6314,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -6330,7 +6330,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -6346,7 +6346,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -6362,7 +6362,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -6378,7 +6378,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -6394,7 +6394,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -6410,7 +6410,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -6426,7 +6426,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -6442,7 +6442,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -6458,7 +6458,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -6474,7 +6474,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -6490,7 +6490,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -6506,7 +6506,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -6522,7 +6522,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -6538,7 +6538,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -6554,7 +6554,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -6570,7 +6570,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -6586,7 +6586,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -6602,7 +6602,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -6618,7 +6618,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -6634,7 +6634,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -6650,7 +6650,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -6666,7 +6666,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -6682,7 +6682,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -6698,7 +6698,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -6714,7 +6714,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -6730,7 +6730,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -6746,7 +6746,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -6762,7 +6762,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -6778,7 +6778,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -6794,7 +6794,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -6810,7 +6810,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -6826,7 +6826,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -6842,7 +6842,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -6858,7 +6858,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -6874,7 +6874,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -6890,7 +6890,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -6906,7 +6906,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -6922,7 +6922,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -6938,7 +6938,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -6954,7 +6954,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true
@@ -6970,7 +6970,7 @@
   "maxSize": 2048,
   "pivot": [
    0.5,
-   0.0875
+   0.07
   ],
   "ppu": 200,
   "sprite": true

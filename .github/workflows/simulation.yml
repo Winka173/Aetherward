@@ -1,4 +1,4 @@
-# Headless checks on the authoritative C# simulation (no Unity Editor needed).
+# Headless checks on the authoritative C# simulation and the art pipeline (no Unity Editor needed).
 name: simulation
 on: [push, pull_request]
 jobs:
@@ -19,3 +19,21 @@ jobs:
         with:
           name: reports
           path: Reports/
+  art:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Python deps
+        run: pip install numpy pillow
+      - name: Art validator self-tests (broken fixtures must fail)
+        run: python -m unittest discover -s Tools/ArtPipeline/tests -v
+      - name: Art Quality Validator (exit 1 on blocking defects)
+        run: python Tools/ArtPipeline/validate.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: art-quality
+          path: Reports/ArtQuality/

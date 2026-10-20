@@ -103,9 +103,17 @@ def run(args):
         if not os.path.exists(meta):
             rep.add(r, "meta_missing", ERROR, "Unity .meta missing (run Tools/gen_meta.py)")
         else:
-            for line in A.read_text(meta).splitlines():
+            mtext = A.read_text(meta)
+            for line in mtext.splitlines():
                 if line.startswith("guid:"):
                     guids[line.split(":", 1)[1].strip()].append(r)
+            st = settings.get(rr)
+            mp = A.META_PIVOT.search(mtext)
+            mu = A.META_PPU.search(mtext)
+            if st and mp and (abs(float(mp.group(1)) - st["pivot"][0]) > 1e-4 or abs(float(mp.group(2)) - st["pivot"][1]) > 1e-4):
+                rep.add(r, "meta_settings_mismatch", ERROR, f".meta pivot ({mp.group(1)}, {mp.group(2)}) differs from import settings {st['pivot']} (run gen_meta --refresh-textures)")
+            if st and mu and abs(float(mu.group(1)) - st.get("ppu", 100)) > 1e-4:
+                rep.add(r, "meta_settings_mismatch", ERROR, f".meta PPU {mu.group(1)} differs from import settings {st.get('ppu')}")
     for g, rs in guids.items():
         if len(rs) > 1:
             for r in rs:
@@ -155,7 +163,11 @@ def run(args):
                 if ratio > th["haloFringeRatio"]:
                     rep.add(r, "white_halo", WARN, "bright fringe on semi-transparent edge (premultiply/bleed issue)", ratio)
             if cs["kind"] == "unit" and opaque < th["overdrawMinOpaque"]:
-                rep.add(r, "overdraw_waste", WARN, f"only {opaque:.0%} of the quad is opaque (fill-rate cost); consider tighter canvas/mesh", opaque)
+                # Unity "Tight" sprite meshes (no 9-slice border) skip most transparent pixels; FullRect pays for all.
+                sset = settings.get(root_rel(r), {})
+                tight = not any(sset.get("border", [0, 0, 0, 0]))
+                rep.add(r, "overdraw_waste", INFO if tight else WARN,
+                        f"only {opaque:.0%} of the quad is opaque" + (" (Tight mesh limits the fill cost)" if tight else " (FullRect mesh: fill-rate cost)"), opaque)
             # Lighting direction: shading rule is light from upper-left.
             if cs["kind"] == "unit" and mk.sum() > 400:
                 bb = A.bbox(mk)
@@ -244,11 +256,12 @@ def run(args):
                 v = A.iou(masks[p1], masks[p2])
                 hd1, hd2 = A.hue_histogram(imgs[p1]), A.hue_histogram(imgs[p2])
                 hue = float(0.5 * np.abs(hd1 - hd2).sum())
+                val = float(0.5 * np.abs(A.value_histogram(imgs[p1]) - A.value_histogram(imgs[p2])).sum())
                 tag = os.path.basename(p1)[len(hid) + 1:-4] + "~" + os.path.basename(p2)[len(hid) + 1:-4]
-                row[tag] = {"iou": round(v, 3), "hueDist": round(hue, 3)}
-                if v > th["weakEvolutionIoU"] and hue < th["weakEvolutionHueDist"]:
+                row[tag] = {"iou": round(v, 3), "hueDist": round(hue, 3), "valueDist": round(val, 3)}
+                if v > th["weakEvolutionIoU"] and hue < th["weakEvolutionHueDist"] and val < th["weakEvolutionValueDist"]:
                     rep.add(p2, "weak_evolution", WARN,
-                            f"{tag}: silhouette IoU {v:.2f} and colour distance {hue:.2f} — branch not visually distinct", v)
+                            f"{tag}: silhouette IoU {v:.2f}, hue distance {hue:.2f}, value distance {val:.2f} — branch not visually distinct", v)
         evo_rows.append(row)
     rep.globals["evolutionDistinctness"] = evo_rows
     for ed in enemies:
@@ -335,6 +348,10 @@ def run(args):
     for r, m in rep.assets.items():
         totals[m["category"]] += m["bytesRGBA32"]
     rep.globals["textureMB_RGBA32"] = {k: round(v / 1048576, 2) for k, v in sorted(totals.items())}
+    hero_frames_bytes = [m["bytesRGBA32"] for r, m in rep.assets.items() if m["category"] == "Heroes"]
+    if hero_frames_bytes:
+        per_hero = sum(hero_frames_bytes) / max(1, len(heroes))
+        rep.globals["heroWorkingSetMB_RGBA32"] = round(6 * per_hero / 1048576, 2)   # 6 deployed heroes, all frames
     for cat, mb in spec["budgetsMB"].items():
         if cat.startswith("_"):
             continue

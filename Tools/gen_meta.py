@@ -2,7 +2,8 @@
 """Creates missing Unity .meta files under Assets/ with deterministic GUIDs (md5 of the asset path).
 
 Deterministic GUIDs let hand-authored scenes reference scripts by GUID and keep references stable
-across machines. Existing .meta files are never modified. Textures/audio get explicit importer
+across machines. Existing .meta files are never modified, except texture metas with --refresh-textures
+(GUID kept) so pivot/PPU changes from the art pipeline reach Unity. Textures/audio get explicit importer
 settings (sprite, point/bilinear, compression) so imports are reproducible without the Editor.
 """
 import hashlib, os, sys, json
@@ -80,8 +81,22 @@ def load_sprite_settings():
             return json.load(f)
     return {}
 
+REFRESH_TEXTURES = "--refresh-textures" in sys.argv
+
+
+def existing_guid(meta_path):
+    """Keep the GUID of an existing .meta (references in scenes/prefabs must survive a refresh)."""
+    if not os.path.exists(meta_path):
+        return None
+    with open(meta_path) as f:
+        for line in f:
+            if line.startswith("guid:"):
+                return line.split(":", 1)[1].strip()
+    return None
+
+
 def main():
-    created = 0
+    created = refreshed = 0
     settings = load_sprite_settings()
     for dirpath, dirnames, filenames in os.walk(ASSETS):
         dirnames[:] = [d for d in dirnames if not d.startswith(".")]
@@ -92,9 +107,11 @@ def main():
                 continue
             rel = rel_dir + "/" + name
             meta_path = os.path.join(ROOT, rel + ".meta")
-            if os.path.exists(meta_path):
+            ext0 = os.path.splitext(name)[1].lower()
+            refresh = REFRESH_TEXTURES and not is_dir and ext0 == ".png" and rel in settings
+            if os.path.exists(meta_path) and not refresh:
                 continue
-            g = guid_for(rel)
+            g = existing_guid(meta_path) or guid_for(rel)
             ext = os.path.splitext(name)[1].lower()
             if is_dir: content = folder_meta(g)
             elif ext == ".cs": content = script_meta(g)
@@ -107,10 +124,16 @@ def main():
                 content = texture_meta(g, s.get("sprite", True), s.get("ppu", 100), tuple(s.get("pivot", [0.5, 0.5])),
                                        tuple(s.get("border", [0, 0, 0, 0])), s.get("filter", 1), s.get("maxSize", 2048))
             else: content = default_meta(g)
+            if os.path.exists(meta_path):
+                with open(meta_path) as f:
+                    if f.read() == content:
+                        continue
+                refreshed += 1
+            else:
+                created += 1
             with open(meta_path, "w", newline="\n") as f:
                 f.write(content)
-            created += 1
-    print(f"gen_meta: created {created} meta files")
+    print(f"gen_meta: created {created} meta files" + (f", refreshed {refreshed} texture metas" if REFRESH_TEXTURES else ""))
 
 if __name__ == "__main__":
     main()

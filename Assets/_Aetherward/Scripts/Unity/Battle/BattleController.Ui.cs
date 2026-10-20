@@ -493,7 +493,7 @@ namespace Aetherward.Game
             HeroDef def = App.Content.Heroes[o.Id];
             bool full = s.Heroes.Count >= App.Content.Economy.MaxHeroes;
             Ui.CardFrame(x, y, cw, ch, "rare", _focusOffer == index);
-            Ui.Icon(x + cw / 2 - 110, y + 70, 220, 220, Art.Tex("Heroes/" + def.Id + "_idle"));
+            Ui.HeroIcon(x + cw / 2 - 110, y + 70, 220, 220, Art.Tex("Heroes/" + def.Id + "_idle"));
             Ui.Label(x + 30, y + 28, cw - 60, 46, L.Get(def.NameKey), 32, Ui.White, TextAnchor.UpperCenter, true);
             Ui.Icon(x + 40, y + 292, 44, 44, Art.ElementIcon(def.Element));
             Ui.Icon(x + 90, y + 292, 44, 44, Art.Tex("Icons/role_" + def.Role.ToString().ToLowerInvariant()));
@@ -667,7 +667,7 @@ namespace Aetherward.Game
                 EvolutionDef evo = App.Content.Evolutions[def.Evolutions[i]];
                 float x = Ui.W / 2 - cw - 20 + i * (cw + 40);
                 Ui.CardFrame(x, y, cw, ch, i == 0 ? "legendary" : "epic");
-                Ui.Icon(x + 20, y + 30, 200, 240, Art.Tex("Heroes/" + def.Id + "_evo" + (i == 0 ? "A" : "B")));
+                Ui.HeroIcon(x + 20, y + 30, 200, 240, Art.Tex("Heroes/" + def.Id + "_evo" + (i == 0 ? "A" : "B")));
                 Ui.Label(x + 230, y + 34, cw - 260, 50, L.Get(evo.NameKey), 34, Ui.Gold, TextAnchor.UpperLeft, true);
                 Ui.Label(x + 230, y + 86, cw - 260, 120, "<i>" + L.Get(evo.DescKey) + "</i>", 22, Ui.White);
                 SkillDef skill = def.Skill.With(evo.Skill);

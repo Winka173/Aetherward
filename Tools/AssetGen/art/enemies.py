@@ -50,11 +50,22 @@ BIG_IDS = ("siegebreaker_golem", "rift_warden", "ignaroth", "seraphyne", "gravem
            "vaelith", "mirrath", "aetherion", "thornmother", "ironclad_warlord", "ashen_matriarch", "nyxhollow")
 
 
+# Fit fixes found by the Art Quality Validator ("cropped_silhouette"): (x shift px, uniform scale about the
+# ground point). Applied to every frame of the enemy so the a/b frames stay aligned.
+ENEMY_FIT = {"goblin_sprinter": (-6, 1.0), "stone_burrower": (-6, 1.0), "siege_colossus": (0, 0.95)}
+
+
 def enemy_sprite(eid, frame="a"):
     big = eid in BIG_IDS
     size = 512 if big else 256
     cv = Canvas(size, size)
     ctx = cv.ctx
+    dx, k = ENEMY_FIT.get(eid, (0, 1.0))
+    if dx or k != 1.0:
+        gx, gy = size / 2, size * 0.93
+        ctx.translate(gx + dx, gy)
+        ctx.scale(k, k)
+        ctx.translate(-gx, -gy)
     bob = -4 if frame == "b" else 0
     fn = DRAWERS[eid]
     fn(ctx, bob, frame)

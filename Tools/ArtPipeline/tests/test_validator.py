@@ -17,7 +17,7 @@ import artlib as A  # noqa: E402
 import validate as V  # noqa: E402
 
 
-def figure(size=320, top=40, bottom=292, left=110, right=210, colour=(200, 60, 40), ink=(28, 23, 48)):
+def figure(size=400, top=120, bottom=372, left=150, right=250, colour=(200, 60, 40), ink=(28, 23, 48)):
     """A simple unit-like figure: ink outline + flat body, light upper-left."""
     a = np.zeros((size, size, 4), np.uint8)
     a[top:bottom + 1, left:right + 1] = (*ink, 255)
@@ -42,7 +42,7 @@ class Fixture:
     def rel_root(self, rel):
         return os.path.relpath(os.path.join(self.art, rel), A.ROOT).replace("\\", "/")
 
-    def put(self, rel, arr, pivot=(0.5, 0.0875), manifest=True, meta=True, guid=None, license="original"):
+    def put(self, rel, arr, pivot=(0.5, 0.07), manifest=True, meta=True, guid=None, license="original"):
         p = os.path.join(self.art, rel)
         os.makedirs(os.path.dirname(p), exist_ok=True)
         Image.fromarray(arr, "RGBA" if arr.shape[-1] == 4 else "RGB").save(p)
@@ -58,7 +58,7 @@ class Fixture:
         for f in ("idle", "cast", "downed", "evoA", "evoA_cast", "evoB", "evoB_cast"):
             arr = base
             if f.startswith("evo") and not evo_same:
-                arr = figure(top=24, left=90, right=230, colour=(240, 200, 40) if f.startswith("evoA") else (60, 120, 230))
+                arr = figure(top=100, left=130, right=270, colour=(240, 200, 40) if f.startswith("evoA") else (60, 120, 230))
             self.put(f"Heroes/{hid}_{f}.png", arr)
 
     def run(self, waivers=None, today="2026-10-20"):
@@ -139,10 +139,10 @@ class ValidatorTests(unittest.TestCase):
 
     def test_weak_evolution_foot_slide_frame_jump_and_halo(self):
         self.f.hero_set(evo_same=True)
-        self.f.put("Heroes/testo_cast.png", figure(top=60, bottom=250, left=40, right=100))   # floats + pops
+        self.f.put("Heroes/testo_cast.png", figure(top=140, bottom=330, left=60, right=120))   # floats + pops
         halo = figure()
-        halo[34:40, 100:220] = (255, 255, 255, 90)                                            # bright translucent rim
-        halo[296:300, 100:220] = (255, 255, 255, 90)
+        halo[114:120, 140:260] = (255, 255, 255, 90)                                            # bright translucent rim
+        halo[376:380, 140:260] = (255, 255, 255, 90)
         self.f.put("Heroes/testo_evoB_cast.png", halo)
         rep, _ = self.f.run()
         self.assertIn("weak_evolution", checks(rep, "Heroes/testo_evoA.png"))
@@ -161,6 +161,14 @@ class ValidatorTests(unittest.TestCase):
         rep, blocking = self.f.run(waivers=w, today="2027-01-02")
         self.assertIn("waiver_expired", checks(rep))
         self.assertGreaterEqual(blocking, 2)
+
+    def test_meta_pivot_must_match_import_settings(self):
+        self.f.hero_set()
+        meta = os.path.join(self.f.art, "Heroes/testo_idle.png.meta")
+        A.write_text(meta, A.read_text(meta) + "  spritePixelsToUnits: 200\n  spritePivot: {x: 0.5, y: 0.0875}\n")
+        rep, blocking = self.f.run()
+        self.assertIn("meta_settings_mismatch", checks(rep, "Heroes/testo_idle.png"))
+        self.assertGreaterEqual(blocking, 1)
 
     def test_no_alpha_is_blocking_for_sprites(self):
         self.f.hero_set()

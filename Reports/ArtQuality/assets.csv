@@ -104,7 +104,7 @@ Enemies/frost_wraith_b.png,Enemies,256,256,0.1824,REFINE,PENDING,lighting_direct
 Enemies/glacier_golem_a.png,Enemies,256,256,0.5272,KEEP,PENDING,
 Enemies/glacier_golem_b.png,Enemies,256,256,0.5388,KEEP,PENDING,
 Enemies/goblin_sprinter_a.png,Enemies,256,256,0.1991,REFINE,PENDING,lighting_direction white_halo
-Enemies/goblin_sprinter_b.png,Enemies,256,256,0.1963,REMAKE,PENDING,cropped_silhouette white_halo
+Enemies/goblin_sprinter_b.png,Enemies,256,256,0.1964,REFINE,PENDING,lighting_direction white_halo
 Enemies/gravemaw_a.png,Enemies,512,512,0.5312,KEEP,PENDING,
 Enemies/gravemaw_b.png,Enemies,512,512,0.5389,KEEP,PENDING,
 Enemies/grunt_a.png,Enemies,256,256,0.3086,REFINE,PENDING,low_contrast_spells
@@ -151,8 +151,8 @@ Enemies/seraphyne_a.png,Enemies,512,512,0.3584,KEEP,PENDING,
 Enemies/seraphyne_b.png,Enemies,512,512,0.3719,KEEP,PENDING,
 Enemies/shieldbearer_a.png,Enemies,256,256,0.2838,REFINE,PENDING,low_contrast_spells
 Enemies/shieldbearer_b.png,Enemies,256,256,0.2883,REFINE,PENDING,low_contrast_spells
-Enemies/siege_colossus_a.png,Enemies,256,256,0.5187,REMAKE,PENDING,cropped_silhouette
-Enemies/siege_colossus_b.png,Enemies,256,256,0.5286,REMAKE,PENDING,cropped_silhouette
+Enemies/siege_colossus_a.png,Enemies,256,256,0.468,KEEP,PENDING,
+Enemies/siege_colossus_b.png,Enemies,256,256,0.4783,KEEP,PENDING,
 Enemies/siegebreaker_golem_a.png,Enemies,512,512,0.5167,REFINE,PENDING,low_contrast_spells
 Enemies/siegebreaker_golem_b.png,Enemies,512,512,0.5217,REFINE,PENDING,low_contrast_spells
 Enemies/soul_binder_a.png,Enemies,256,256,0.2437,REFINE,PENDING,foot_pivot_mismatch lighting_direction
@@ -163,8 +163,8 @@ Enemies/spirit_wisp_a.png,Enemies,256,256,0.1071,REFINE,PENDING,foot_pivot_misma
 Enemies/spirit_wisp_b.png,Enemies,256,256,0.108,REFINE,PENDING,foot_pivot_mismatch overdraw_waste
 Enemies/spore_carrier_a.png,Enemies,256,256,0.3574,REFINE,PENDING,low_contrast_spells white_halo
 Enemies/spore_carrier_b.png,Enemies,256,256,0.3729,REFINE,PENDING,low_contrast_spells white_halo
-Enemies/stone_burrower_a.png,Enemies,256,256,0.3318,REMAKE,PENDING,cropped_silhouette low_contrast_spells
-Enemies/stone_burrower_b.png,Enemies,256,256,0.3447,REMAKE,PENDING,cropped_silhouette low_contrast_spells
+Enemies/stone_burrower_a.png,Enemies,256,256,0.3318,REFINE,PENDING,low_contrast_spells
+Enemies/stone_burrower_b.png,Enemies,256,256,0.3447,REFINE,PENDING,low_contrast_spells
 Enemies/storm_harpy_a.png,Enemies,256,256,0.2946,REFINE,PENDING,foot_pivot_mismatch
 Enemies/storm_harpy_b.png,Enemies,256,256,0.2655,REFINE,PENDING,foot_pivot_mismatch frame_jump low_contrast_spells
 Enemies/storm_wisp_a.png,Enemies,256,256,0.1066,REFINE,PENDING,foot_pivot_mismatch overdraw_waste
@@ -183,258 +183,258 @@ Enemies/void_priest_a.png,Enemies,256,256,0.3329,KEEP,PENDING,
 Enemies/void_priest_b.png,Enemies,256,256,0.3414,KEEP,PENDING,
 Enemies/warded_a.png,Enemies,256,256,0.2614,REFINE,PENDING,low_contrast_spells
 Enemies/warded_b.png,Enemies,256,256,0.2651,REFINE,PENDING,foot_pivot_mismatch low_contrast_spells
-Heroes/aeris_cast.png,Heroes,320,320,0.4222,REFINE,PENDING,white_halo
-Heroes/aeris_downed.png,Heroes,320,320,0.2208,REFINE,PENDING,lighting_direction
-Heroes/aeris_evoA.png,Heroes,320,320,0.4504,REFINE,PENDING,lighting_direction
-Heroes/aeris_evoA_cast.png,Heroes,320,320,0.4699,REFINE,PENDING,lighting_direction white_halo
-Heroes/aeris_evoB.png,Heroes,320,320,0.44,REFINE,PENDING,white_halo
-Heroes/aeris_evoB_cast.png,Heroes,320,320,0.4277,REFINE,PENDING,white_halo
-Heroes/aeris_idle.png,Heroes,320,320,0.4266,REFINE,PENDING,white_halo
-Heroes/ashara_cast.png,Heroes,320,320,0.4063,REMAKE,PENDING,cropped_silhouette
-Heroes/ashara_downed.png,Heroes,320,320,0.23,KEEP,PENDING,
-Heroes/ashara_evoA.png,Heroes,320,320,0.4466,REFINE,PENDING,weak_evolution
-Heroes/ashara_evoA_cast.png,Heroes,320,320,0.4073,REMAKE,PENDING,cropped_silhouette
-Heroes/ashara_evoB.png,Heroes,320,320,0.5008,KEEP,PENDING,
-Heroes/ashara_evoB_cast.png,Heroes,320,320,0.4745,REMAKE,PENDING,cropped_silhouette
-Heroes/ashara_idle.png,Heroes,320,320,0.4439,KEEP,PENDING,
-Heroes/borun_cast.png,Heroes,320,320,0.4203,KEEP,PENDING,
-Heroes/borun_downed.png,Heroes,320,320,0.2117,KEEP,PENDING,
-Heroes/borun_evoA.png,Heroes,320,320,0.4166,REFINE,PENDING,weak_evolution
-Heroes/borun_evoA_cast.png,Heroes,320,320,0.4285,KEEP,PENDING,
-Heroes/borun_evoB.png,Heroes,320,320,0.4979,KEEP,PENDING,
-Heroes/borun_evoB_cast.png,Heroes,320,320,0.4695,KEEP,PENDING,
-Heroes/borun_idle.png,Heroes,320,320,0.4085,KEEP,PENDING,
-Heroes/caelis_cast.png,Heroes,320,320,0.3466,REFINE,PENDING,low_contrast_spells
-Heroes/caelis_downed.png,Heroes,320,320,0.1786,KEEP,PENDING,
-Heroes/caelis_evoA.png,Heroes,320,320,0.3626,REFINE,PENDING,low_contrast_spells
-Heroes/caelis_evoA_cast.png,Heroes,320,320,0.3743,KEEP,PENDING,
-Heroes/caelis_evoB.png,Heroes,320,320,0.3184,REFINE,PENDING,weak_evolution
-Heroes/caelis_evoB_cast.png,Heroes,320,320,0.3313,KEEP,PENDING,
-Heroes/caelis_idle.png,Heroes,320,320,0.3443,KEEP,PENDING,
-Heroes/cinder_cast.png,Heroes,320,320,0.3875,REMAKE,PENDING,cropped_silhouette
-Heroes/cinder_downed.png,Heroes,320,320,0.2062,KEEP,PENDING,
-Heroes/cinder_evoA.png,Heroes,320,320,0.3999,REMAKE,PENDING,cropped_silhouette weak_evolution
-Heroes/cinder_evoA_cast.png,Heroes,320,320,0.3911,REMAKE,PENDING,cropped_silhouette
-Heroes/cinder_evoB.png,Heroes,320,320,0.4743,REMAKE,PENDING,cropped_silhouette low_contrast_spells
-Heroes/cinder_evoB_cast.png,Heroes,320,320,0.457,REMAKE,PENDING,cropped_silhouette low_contrast_spells
-Heroes/cinder_idle.png,Heroes,320,320,0.3966,REMAKE,PENDING,cropped_silhouette
-Heroes/doran_cast.png,Heroes,320,320,0.3947,REFINE,PENDING,low_contrast_spells
-Heroes/doran_downed.png,Heroes,320,320,0.1949,KEEP,PENDING,
-Heroes/doran_evoA.png,Heroes,320,320,0.4159,REFINE,PENDING,low_contrast_spells
-Heroes/doran_evoA_cast.png,Heroes,320,320,0.4369,REFINE,PENDING,low_contrast_spells
-Heroes/doran_evoB.png,Heroes,320,320,0.361,REFINE,PENDING,low_contrast_spells
-Heroes/doran_evoB_cast.png,Heroes,320,320,0.3857,REFINE,PENDING,low_contrast_spells
-Heroes/doran_idle.png,Heroes,320,320,0.3763,REFINE,PENDING,low_contrast_spells
-Heroes/eirwen_cast.png,Heroes,320,320,0.4645,REFINE,PENDING,white_halo
-Heroes/eirwen_downed.png,Heroes,320,320,0.2428,REMAKE,PENDING,cropped_silhouette lighting_direction
-Heroes/eirwen_evoA.png,Heroes,320,320,0.4777,REFINE,PENDING,weak_evolution white_halo
-Heroes/eirwen_evoA_cast.png,Heroes,320,320,0.4711,REFINE,PENDING,white_halo
-Heroes/eirwen_evoB.png,Heroes,320,320,0.525,REFINE,PENDING,white_halo
-Heroes/eirwen_evoB_cast.png,Heroes,320,320,0.5261,REFINE,PENDING,white_halo
-Heroes/eirwen_idle.png,Heroes,320,320,0.4701,REFINE,PENDING,white_halo
-Heroes/elowen_cast.png,Heroes,320,320,0.36,REFINE,PENDING,white_halo
-Heroes/elowen_downed.png,Heroes,320,320,0.1817,REFINE,PENDING,lighting_direction
-Heroes/elowen_evoA.png,Heroes,320,320,0.4315,KEEP,PENDING,
-Heroes/elowen_evoA_cast.png,Heroes,320,320,0.4243,KEEP,PENDING,
-Heroes/elowen_evoB.png,Heroes,320,320,0.3494,REFINE,PENDING,white_halo
-Heroes/elowen_evoB_cast.png,Heroes,320,320,0.3469,REFINE,PENDING,white_halo
-Heroes/elowen_idle.png,Heroes,320,320,0.35,REFINE,PENDING,white_halo
-Heroes/freya_cast.png,Heroes,320,320,0.3892,REMAKE,PENDING,cropped_silhouette white_halo
-Heroes/freya_downed.png,Heroes,320,320,0.183,KEEP,PENDING,
-Heroes/freya_evoA.png,Heroes,320,320,0.3594,REFINE,PENDING,weak_evolution
-Heroes/freya_evoA_cast.png,Heroes,320,320,0.3957,REMAKE,PENDING,cropped_silhouette white_halo
-Heroes/freya_evoB.png,Heroes,320,320,0.4679,REFINE,PENDING,white_halo
-Heroes/freya_evoB_cast.png,Heroes,320,320,0.4871,REMAKE,PENDING,cropped_silhouette white_halo
-Heroes/freya_idle.png,Heroes,320,320,0.353,REFINE,PENDING,white_halo
-Heroes/glacius_cast.png,Heroes,320,320,0.4569,REFINE,PENDING,white_halo
-Heroes/glacius_downed.png,Heroes,320,320,0.2113,REMAKE,PENDING,cropped_silhouette
-Heroes/glacius_evoA.png,Heroes,320,320,0.4254,REFINE,PENDING,weak_evolution
-Heroes/glacius_evoA_cast.png,Heroes,320,320,0.4624,KEEP,PENDING,
-Heroes/glacius_evoB.png,Heroes,320,320,0.4791,REFINE,PENDING,white_halo
-Heroes/glacius_evoB_cast.png,Heroes,320,320,0.5254,REFINE,PENDING,white_halo
-Heroes/glacius_idle.png,Heroes,320,320,0.4199,REFINE,PENDING,white_halo
-Heroes/ignis_cast.png,Heroes,320,320,0.3534,REMAKE,PENDING,cropped_silhouette low_contrast_spells
-Heroes/ignis_downed.png,Heroes,320,320,0.1862,KEEP,PENDING,
-Heroes/ignis_evoA.png,Heroes,320,320,0.3634,REMAKE,PENDING,cropped_silhouette low_contrast_spells weak_evolution
-Heroes/ignis_evoA_cast.png,Heroes,320,320,0.358,REMAKE,PENDING,cropped_silhouette low_contrast_spells
-Heroes/ignis_evoB.png,Heroes,320,320,0.4769,REMAKE,PENDING,cropped_silhouette low_contrast_spells
-Heroes/ignis_evoB_cast.png,Heroes,320,320,0.4653,REMAKE,PENDING,cropped_silhouette low_contrast_spells
-Heroes/ignis_idle.png,Heroes,320,320,0.3585,REMAKE,PENDING,cropped_silhouette low_contrast_spells
-Heroes/isolde_cast.png,Heroes,320,320,0.3439,REFINE,PENDING,low_contrast_spells white_halo
-Heroes/isolde_downed.png,Heroes,320,320,0.1793,KEEP,PENDING,
-Heroes/isolde_evoA.png,Heroes,320,320,0.4325,REFINE,PENDING,low_contrast_spells
-Heroes/isolde_evoA_cast.png,Heroes,320,320,0.4438,REFINE,PENDING,low_contrast_spells white_halo
-Heroes/isolde_evoB.png,Heroes,320,320,0.3353,REFINE,PENDING,low_contrast_spells white_halo
-Heroes/isolde_evoB_cast.png,Heroes,320,320,0.3503,REFINE,PENDING,white_halo
-Heroes/isolde_idle.png,Heroes,320,320,0.3458,REFINE,PENDING,white_halo
-Heroes/kael_cast.png,Heroes,320,320,0.4029,REMAKE,PENDING,cropped_silhouette white_halo
-Heroes/kael_downed.png,Heroes,320,320,0.193,REMAKE,PENDING,cropped_silhouette
-Heroes/kael_evoA.png,Heroes,320,320,0.3846,REMAKE,PENDING,cropped_silhouette weak_evolution
-Heroes/kael_evoA_cast.png,Heroes,320,320,0.4077,REMAKE,PENDING,cropped_silhouette
-Heroes/kael_evoB.png,Heroes,320,320,0.4652,REMAKE,PENDING,cropped_silhouette white_halo
-Heroes/kael_evoB_cast.png,Heroes,320,320,0.5006,REMAKE,PENDING,cropped_silhouette low_contrast_spells white_halo
-Heroes/kael_idle.png,Heroes,320,320,0.3799,REMAKE,PENDING,cropped_silhouette
-Heroes/liora_cast.png,Heroes,320,320,0.3823,KEEP,PENDING,
-Heroes/liora_downed.png,Heroes,320,320,0.1876,KEEP,PENDING,
-Heroes/liora_evoA.png,Heroes,320,320,0.414,REFINE,PENDING,low_contrast_spells
-Heroes/liora_evoA_cast.png,Heroes,320,320,0.4264,REFINE,PENDING,low_contrast_spells
-Heroes/liora_evoB.png,Heroes,320,320,0.4257,REFINE,PENDING,low_contrast_spells
-Heroes/liora_evoB_cast.png,Heroes,320,320,0.445,REFINE,PENDING,low_contrast_spells
-Heroes/liora_idle.png,Heroes,320,320,0.3617,KEEP,PENDING,
-Heroes/maelis_cast.png,Heroes,320,320,0.4626,KEEP,PENDING,
-Heroes/maelis_downed.png,Heroes,320,320,0.2308,KEEP,PENDING,
-Heroes/maelis_evoA.png,Heroes,320,320,0.5151,KEEP,PENDING,
-Heroes/maelis_evoA_cast.png,Heroes,320,320,0.5107,KEEP,PENDING,
-Heroes/maelis_evoB.png,Heroes,320,320,0.4165,KEEP,PENDING,
-Heroes/maelis_evoB_cast.png,Heroes,320,320,0.4086,KEEP,PENDING,
-Heroes/maelis_idle.png,Heroes,320,320,0.4453,KEEP,PENDING,
-Heroes/magnus_cast.png,Heroes,320,320,0.3803,REMAKE,PENDING,cropped_silhouette low_contrast_spells
-Heroes/magnus_downed.png,Heroes,320,320,0.1838,REMAKE,PENDING,cropped_silhouette
-Heroes/magnus_evoA.png,Heroes,320,320,0.3643,REMAKE,PENDING,cropped_silhouette low_contrast_spells weak_evolution
-Heroes/magnus_evoA_cast.png,Heroes,320,320,0.3881,REMAKE,PENDING,cropped_silhouette low_contrast_spells
-Heroes/magnus_evoB.png,Heroes,320,320,0.4505,REMAKE,PENDING,cropped_silhouette low_contrast_spells
-Heroes/magnus_evoB_cast.png,Heroes,320,320,0.4281,REMAKE,PENDING,cropped_silhouette low_contrast_spells
-Heroes/magnus_idle.png,Heroes,320,320,0.3568,REMAKE,PENDING,cropped_silhouette low_contrast_spells
-Heroes/marina_cast.png,Heroes,320,320,0.3567,REMAKE,PENDING,cropped_silhouette lighting_direction low_contrast_spells
-Heroes/marina_downed.png,Heroes,320,320,0.1784,REFINE,PENDING,lighting_direction
-Heroes/marina_evoA.png,Heroes,320,320,0.353,REFINE,PENDING,low_contrast_spells weak_evolution
-Heroes/marina_evoA_cast.png,Heroes,320,320,0.366,REMAKE,PENDING,cropped_silhouette low_contrast_spells
-Heroes/marina_evoB.png,Heroes,320,320,0.4528,KEEP,PENDING,
-Heroes/marina_evoB_cast.png,Heroes,320,320,0.4508,REMAKE,PENDING,cropped_silhouette
-Heroes/marina_idle.png,Heroes,320,320,0.3437,REFINE,PENDING,lighting_direction low_contrast_spells
-Heroes/mirel_cast.png,Heroes,320,320,0.4555,REFINE,PENDING,low_contrast_spells
-Heroes/mirel_downed.png,Heroes,320,320,0.2304,KEEP,PENDING,
-Heroes/mirel_evoA.png,Heroes,320,320,0.5015,REFINE,PENDING,low_contrast_spells
-Heroes/mirel_evoA_cast.png,Heroes,320,320,0.5151,REFINE,PENDING,low_contrast_spells
-Heroes/mirel_evoB.png,Heroes,320,320,0.4316,REFINE,PENDING,lighting_direction low_contrast_spells
-Heroes/mirel_evoB_cast.png,Heroes,320,320,0.4598,REFINE,PENDING,lighting_direction
-Heroes/mirel_idle.png,Heroes,320,320,0.4443,REFINE,PENDING,low_contrast_spells
-Heroes/morven_cast.png,Heroes,320,320,0.4217,KEEP,PENDING,
-Heroes/morven_downed.png,Heroes,320,320,0.2216,KEEP,PENDING,
-Heroes/morven_evoA.png,Heroes,320,320,0.4559,KEEP,PENDING,
-Heroes/morven_evoA_cast.png,Heroes,320,320,0.4573,KEEP,PENDING,
-Heroes/morven_evoB.png,Heroes,320,320,0.424,KEEP,PENDING,
-Heroes/morven_evoB_cast.png,Heroes,320,320,0.4052,KEEP,PENDING,
-Heroes/morven_idle.png,Heroes,320,320,0.4275,KEEP,PENDING,
-Heroes/nerissa_cast.png,Heroes,320,320,0.3995,REMAKE,PENDING,cropped_silhouette lighting_direction
-Heroes/nerissa_downed.png,Heroes,320,320,0.1982,KEEP,PENDING,
-Heroes/nerissa_evoA.png,Heroes,320,320,0.3937,REFINE,PENDING,lighting_direction low_contrast_battlefield weak_evolution
-Heroes/nerissa_evoA_cast.png,Heroes,320,320,0.4109,REMAKE,PENDING,cropped_silhouette lighting_direction low_contrast_battlefield
-Heroes/nerissa_evoB.png,Heroes,320,320,0.4666,REFINE,PENDING,low_contrast_spells
-Heroes/nerissa_evoB_cast.png,Heroes,320,320,0.4786,REMAKE,PENDING,cropped_silhouette low_contrast_spells
-Heroes/nerissa_idle.png,Heroes,320,320,0.3826,REFINE,PENDING,lighting_direction
-Heroes/nyxara_cast.png,Heroes,320,320,0.4077,KEEP,PENDING,
-Heroes/nyxara_downed.png,Heroes,320,320,0.2044,KEEP,PENDING,
-Heroes/nyxara_evoA.png,Heroes,320,320,0.3996,REFINE,PENDING,weak_evolution
-Heroes/nyxara_evoA_cast.png,Heroes,320,320,0.4135,KEEP,PENDING,
-Heroes/nyxara_evoB.png,Heroes,320,320,0.5049,KEEP,PENDING,
-Heroes/nyxara_evoB_cast.png,Heroes,320,320,0.513,KEEP,PENDING,
-Heroes/nyxara_idle.png,Heroes,320,320,0.3939,KEEP,PENDING,
-Heroes/oriane_cast.png,Heroes,320,320,0.3848,KEEP,PENDING,
-Heroes/oriane_downed.png,Heroes,320,320,0.1887,KEEP,PENDING,
-Heroes/oriane_evoA.png,Heroes,320,320,0.3958,KEEP,PENDING,
-Heroes/oriane_evoA_cast.png,Heroes,320,320,0.41,KEEP,PENDING,
-Heroes/oriane_evoB.png,Heroes,320,320,0.3685,REFINE,PENDING,low_contrast_spells
-Heroes/oriane_evoB_cast.png,Heroes,320,320,0.3849,REFINE,PENDING,low_contrast_spells
-Heroes/oriane_idle.png,Heroes,320,320,0.3643,KEEP,PENDING,
-Heroes/raiden_cast.png,Heroes,320,320,0.3126,KEEP,PENDING,
-Heroes/raiden_downed.png,Heroes,320,320,0.1587,KEEP,PENDING,
-Heroes/raiden_evoA.png,Heroes,320,320,0.3138,REFINE,PENDING,weak_evolution
-Heroes/raiden_evoA_cast.png,Heroes,320,320,0.3204,KEEP,PENDING,
-Heroes/raiden_evoB.png,Heroes,320,320,0.4165,KEEP,PENDING,
-Heroes/raiden_evoB_cast.png,Heroes,320,320,0.4101,KEEP,PENDING,
-Heroes/raiden_idle.png,Heroes,320,320,0.3059,KEEP,PENDING,
-Heroes/sable_cast.png,Heroes,320,320,0.4284,KEEP,PENDING,
-Heroes/sable_downed.png,Heroes,320,320,0.2243,KEEP,PENDING,
-Heroes/sable_evoA.png,Heroes,320,320,0.5153,KEEP,PENDING,
-Heroes/sable_evoA_cast.png,Heroes,320,320,0.5052,KEEP,PENDING,
-Heroes/sable_evoB.png,Heroes,320,320,0.4348,KEEP,PENDING,
-Heroes/sable_evoB_cast.png,Heroes,320,320,0.4302,KEEP,PENDING,
-Heroes/sable_idle.png,Heroes,320,320,0.4328,KEEP,PENDING,
-Heroes/seren_cast.png,Heroes,320,320,0.4615,KEEP,PENDING,
-Heroes/seren_downed.png,Heroes,320,320,0.2396,KEEP,PENDING,
-Heroes/seren_evoA.png,Heroes,320,320,0.4627,REFINE,PENDING,weak_evolution
-Heroes/seren_evoA_cast.png,Heroes,320,320,0.4618,KEEP,PENDING,
-Heroes/seren_evoB.png,Heroes,320,320,0.5303,REFINE,PENDING,white_halo
-Heroes/seren_evoB_cast.png,Heroes,320,320,0.5281,REFINE,PENDING,white_halo
-Heroes/seren_idle.png,Heroes,320,320,0.4625,KEEP,PENDING,
-Heroes/solenne_cast.png,Heroes,320,320,0.3698,REFINE,PENDING,lighting_direction low_contrast_spells
-Heroes/solenne_downed.png,Heroes,320,320,0.1875,REFINE,PENDING,lighting_direction
-Heroes/solenne_evoA.png,Heroes,320,320,0.3092,KEEP,PENDING,
-Heroes/solenne_evoA_cast.png,Heroes,320,320,0.3577,KEEP,PENDING,
-Heroes/solenne_evoB.png,Heroes,320,320,0.343,REFINE,PENDING,low_contrast_spells
-Heroes/solenne_evoB_cast.png,Heroes,320,320,0.3388,KEEP,PENDING,
-Heroes/solenne_idle.png,Heroes,320,320,0.3616,REFINE,PENDING,lighting_direction low_contrast_spells
-Heroes/sylph_cast.png,Heroes,320,320,0.3575,REMAKE,PENDING,cropped_silhouette white_halo
-Heroes/sylph_downed.png,Heroes,320,320,0.179,REMAKE,PENDING,cropped_silhouette
-Heroes/sylph_evoA.png,Heroes,320,320,0.3544,REFINE,PENDING,low_contrast_spells weak_evolution
-Heroes/sylph_evoA_cast.png,Heroes,320,320,0.3667,REMAKE,PENDING,cropped_silhouette
-Heroes/sylph_evoB.png,Heroes,320,320,0.4451,REFINE,PENDING,white_halo
-Heroes/sylph_evoB_cast.png,Heroes,320,320,0.4482,REMAKE,PENDING,cropped_silhouette white_halo
-Heroes/sylph_idle.png,Heroes,320,320,0.3449,REFINE,PENDING,low_contrast_spells white_halo
-Heroes/terra_cast.png,Heroes,320,320,0.3816,REMAKE,PENDING,cropped_silhouette
-Heroes/terra_downed.png,Heroes,320,320,0.2046,KEEP,PENDING,
-Heroes/terra_evoA.png,Heroes,320,320,0.4032,REFINE,PENDING,weak_evolution
-Heroes/terra_evoA_cast.png,Heroes,320,320,0.3852,REMAKE,PENDING,cropped_silhouette
-Heroes/terra_evoB.png,Heroes,320,320,0.4714,REFINE,PENDING,low_contrast_spells
-Heroes/terra_evoB_cast.png,Heroes,320,320,0.4578,REMAKE,PENDING,cropped_silhouette low_contrast_spells
-Heroes/terra_idle.png,Heroes,320,320,0.3949,KEEP,PENDING,
-Heroes/thalen_cast.png,Heroes,320,320,0.4591,KEEP,PENDING,
-Heroes/thalen_downed.png,Heroes,320,320,0.2215,KEEP,PENDING,
-Heroes/thalen_evoA.png,Heroes,320,320,0.4868,KEEP,PENDING,
-Heroes/thalen_evoA_cast.png,Heroes,320,320,0.4887,KEEP,PENDING,
-Heroes/thalen_evoB.png,Heroes,320,320,0.4205,KEEP,PENDING,
-Heroes/thalen_evoB_cast.png,Heroes,320,320,0.4123,KEEP,PENDING,
-Heroes/thalen_idle.png,Heroes,320,320,0.4278,KEEP,PENDING,
-Heroes/tidal_cast.png,Heroes,320,320,0.355,KEEP,PENDING,
-Heroes/tidal_downed.png,Heroes,320,320,0.1822,REMAKE,PENDING,cropped_silhouette
-Heroes/tidal_evoA.png,Heroes,320,320,0.3674,REFINE,PENDING,weak_evolution
-Heroes/tidal_evoA_cast.png,Heroes,320,320,0.3629,KEEP,PENDING,
-Heroes/tidal_evoB.png,Heroes,320,320,0.4704,REFINE,PENDING,low_contrast_spells
-Heroes/tidal_evoB_cast.png,Heroes,320,320,0.4554,REFINE,PENDING,low_contrast_spells
-Heroes/tidal_idle.png,Heroes,320,320,0.3593,KEEP,PENDING,
-Heroes/vesper_cast.png,Heroes,320,320,0.3664,KEEP,PENDING,
-Heroes/vesper_downed.png,Heroes,320,320,0.1806,KEEP,PENDING,
-Heroes/vesper_evoA.png,Heroes,320,320,0.3655,KEEP,PENDING,
-Heroes/vesper_evoA_cast.png,Heroes,320,320,0.3931,KEEP,PENDING,
-Heroes/vesper_evoB.png,Heroes,320,320,0.485,REFINE,PENDING,foot_pivot_mismatch
-Heroes/vesper_evoB_cast.png,Heroes,320,320,0.5005,REFINE,PENDING,foot_pivot_mismatch
-Heroes/vesper_idle.png,Heroes,320,320,0.3484,KEEP,PENDING,
-Heroes/veyra_cast.png,Heroes,320,320,0.3537,KEEP,PENDING,
-Heroes/veyra_downed.png,Heroes,320,320,0.1808,KEEP,PENDING,
-Heroes/veyra_evoA.png,Heroes,320,320,0.3849,KEEP,PENDING,
-Heroes/veyra_evoA_cast.png,Heroes,320,320,0.3834,KEEP,PENDING,
-Heroes/veyra_evoB.png,Heroes,320,320,0.3502,KEEP,PENDING,
-Heroes/veyra_evoB_cast.png,Heroes,320,320,0.3602,KEEP,PENDING,
-Heroes/veyra_idle.png,Heroes,320,320,0.349,KEEP,PENDING,
-Heroes/volt_cast.png,Heroes,320,320,0.3508,REMAKE,PENDING,cropped_silhouette
-Heroes/volt_downed.png,Heroes,320,320,0.1812,KEEP,PENDING,
-Heroes/volt_evoA.png,Heroes,320,320,0.349,REMAKE,PENDING,cropped_silhouette weak_evolution
-Heroes/volt_evoA_cast.png,Heroes,320,320,0.3539,REMAKE,PENDING,cropped_silhouette
-Heroes/volt_evoB.png,Heroes,320,320,0.4748,REMAKE,PENDING,cropped_silhouette low_contrast_spells
-Heroes/volt_evoB_cast.png,Heroes,320,320,0.4631,REMAKE,PENDING,cropped_silhouette
-Heroes/volt_idle.png,Heroes,320,320,0.346,REMAKE,PENDING,cropped_silhouette
-Heroes/voltrix_cast.png,Heroes,320,320,0.3938,REMAKE,PENDING,cropped_silhouette
-Heroes/voltrix_downed.png,Heroes,320,320,0.2056,KEEP,PENDING,
-Heroes/voltrix_evoA.png,Heroes,320,320,0.4015,REFINE,PENDING,weak_evolution
-Heroes/voltrix_evoA_cast.png,Heroes,320,320,0.3974,REMAKE,PENDING,cropped_silhouette
-Heroes/voltrix_evoB.png,Heroes,320,320,0.4896,KEEP,PENDING,
-Heroes/voltrix_evoB_cast.png,Heroes,320,320,0.4878,REMAKE,PENDING,cropped_silhouette
-Heroes/voltrix_idle.png,Heroes,320,320,0.3964,KEEP,PENDING,
-Heroes/zephyr_cast.png,Heroes,320,320,0.3686,REFINE,PENDING,lighting_direction low_contrast_spells white_halo
-Heroes/zephyr_downed.png,Heroes,320,320,0.1672,REFINE,PENDING,lighting_direction
-Heroes/zephyr_evoA.png,Heroes,320,320,0.3286,REFINE,PENDING,lighting_direction low_contrast_spells weak_evolution
-Heroes/zephyr_evoA_cast.png,Heroes,320,320,0.3744,REFINE,PENDING,lighting_direction low_contrast_spells
-Heroes/zephyr_evoB.png,Heroes,320,320,0.4318,REFINE,PENDING,white_halo
-Heroes/zephyr_evoB_cast.png,Heroes,320,320,0.4747,REFINE,PENDING,lighting_direction white_halo
-Heroes/zephyr_idle.png,Heroes,320,320,0.3225,REFINE,PENDING,lighting_direction low_contrast_spells
-Heroes/zerith_cast.png,Heroes,320,320,0.3969,KEEP,PENDING,
-Heroes/zerith_downed.png,Heroes,320,320,0.1964,KEEP,PENDING,
-Heroes/zerith_evoA.png,Heroes,320,320,0.3715,KEEP,PENDING,
-Heroes/zerith_evoA_cast.png,Heroes,320,320,0.4025,KEEP,PENDING,
-Heroes/zerith_evoB.png,Heroes,320,320,0.3933,REFINE,PENDING,weak_evolution
-Heroes/zerith_evoB_cast.png,Heroes,320,320,0.3983,KEEP,PENDING,
-Heroes/zerith_idle.png,Heroes,320,320,0.3784,KEEP,PENDING,
+Heroes/aeris_cast.png,Heroes,400,400,0.2702,REFINE,PENDING,white_halo
+Heroes/aeris_downed.png,Heroes,400,400,0.1413,REFINE,PENDING,lighting_direction
+Heroes/aeris_evoA.png,Heroes,400,400,0.2882,REFINE,PENDING,lighting_direction
+Heroes/aeris_evoA_cast.png,Heroes,400,400,0.3007,REFINE,PENDING,lighting_direction white_halo
+Heroes/aeris_evoB.png,Heroes,400,400,0.2816,REFINE,PENDING,white_halo
+Heroes/aeris_evoB_cast.png,Heroes,400,400,0.2737,REFINE,PENDING,white_halo
+Heroes/aeris_idle.png,Heroes,400,400,0.273,REFINE,PENDING,white_halo
+Heroes/ashara_cast.png,Heroes,400,400,0.2602,KEEP,PENDING,
+Heroes/ashara_downed.png,Heroes,400,400,0.1472,KEEP,PENDING,
+Heroes/ashara_evoA.png,Heroes,400,400,0.3057,KEEP,PENDING,
+Heroes/ashara_evoA_cast.png,Heroes,400,400,0.2848,REFINE,PENDING,low_contrast_spells
+Heroes/ashara_evoB.png,Heroes,400,400,0.3205,KEEP,PENDING,
+Heroes/ashara_evoB_cast.png,Heroes,400,400,0.3038,KEEP,PENDING,
+Heroes/ashara_idle.png,Heroes,400,400,0.2841,KEEP,PENDING,
+Heroes/borun_cast.png,Heroes,400,400,0.269,KEEP,PENDING,
+Heroes/borun_downed.png,Heroes,400,400,0.1355,KEEP,PENDING,
+Heroes/borun_evoA.png,Heroes,400,400,0.3057,KEEP,PENDING,
+Heroes/borun_evoA_cast.png,Heroes,400,400,0.3187,KEEP,PENDING,
+Heroes/borun_evoB.png,Heroes,400,400,0.3187,KEEP,PENDING,
+Heroes/borun_evoB_cast.png,Heroes,400,400,0.3005,KEEP,PENDING,
+Heroes/borun_idle.png,Heroes,400,400,0.2614,KEEP,PENDING,
+Heroes/caelis_cast.png,Heroes,400,400,0.2218,REFINE,PENDING,low_contrast_spells
+Heroes/caelis_downed.png,Heroes,400,400,0.1143,KEEP,PENDING,overdraw_waste
+Heroes/caelis_evoA.png,Heroes,400,400,0.2321,REFINE,PENDING,low_contrast_spells
+Heroes/caelis_evoA_cast.png,Heroes,400,400,0.2396,KEEP,PENDING,
+Heroes/caelis_evoB.png,Heroes,400,400,0.245,KEEP,PENDING,
+Heroes/caelis_evoB_cast.png,Heroes,400,400,0.2469,KEEP,PENDING,
+Heroes/caelis_idle.png,Heroes,400,400,0.2204,KEEP,PENDING,
+Heroes/cinder_cast.png,Heroes,400,400,0.2632,KEEP,PENDING,
+Heroes/cinder_downed.png,Heroes,400,400,0.1319,KEEP,PENDING,
+Heroes/cinder_evoA.png,Heroes,400,400,0.2861,KEEP,PENDING,
+Heroes/cinder_evoA_cast.png,Heroes,400,400,0.2932,REFINE,PENDING,low_contrast_spells
+Heroes/cinder_evoB.png,Heroes,400,400,0.3046,REFINE,PENDING,low_contrast_spells
+Heroes/cinder_evoB_cast.png,Heroes,400,400,0.3102,KEEP,PENDING,
+Heroes/cinder_idle.png,Heroes,400,400,0.2549,KEEP,PENDING,
+Heroes/doran_cast.png,Heroes,400,400,0.2526,REFINE,PENDING,low_contrast_spells
+Heroes/doran_downed.png,Heroes,400,400,0.1248,KEEP,PENDING,
+Heroes/doran_evoA.png,Heroes,400,400,0.2662,REFINE,PENDING,low_contrast_spells
+Heroes/doran_evoA_cast.png,Heroes,400,400,0.2796,REFINE,PENDING,low_contrast_spells
+Heroes/doran_evoB.png,Heroes,400,400,0.2311,REFINE,PENDING,low_contrast_spells
+Heroes/doran_evoB_cast.png,Heroes,400,400,0.2468,REFINE,PENDING,low_contrast_spells
+Heroes/doran_idle.png,Heroes,400,400,0.2408,REFINE,PENDING,low_contrast_spells
+Heroes/eirwen_cast.png,Heroes,400,400,0.2973,REFINE,PENDING,white_halo
+Heroes/eirwen_downed.png,Heroes,400,400,0.1559,REFINE,PENDING,lighting_direction
+Heroes/eirwen_evoA.png,Heroes,400,400,0.332,REFINE,PENDING,white_halo
+Heroes/eirwen_evoA_cast.png,Heroes,400,400,0.3146,REFINE,PENDING,white_halo
+Heroes/eirwen_evoB.png,Heroes,400,400,0.336,REFINE,PENDING,white_halo
+Heroes/eirwen_evoB_cast.png,Heroes,400,400,0.3367,REFINE,PENDING,white_halo
+Heroes/eirwen_idle.png,Heroes,400,400,0.3009,REFINE,PENDING,white_halo
+Heroes/elowen_cast.png,Heroes,400,400,0.2304,REFINE,PENDING,white_halo
+Heroes/elowen_downed.png,Heroes,400,400,0.1163,REFINE,PENDING,lighting_direction overdraw_waste
+Heroes/elowen_evoA.png,Heroes,400,400,0.2761,KEEP,PENDING,
+Heroes/elowen_evoA_cast.png,Heroes,400,400,0.2715,KEEP,PENDING,
+Heroes/elowen_evoB.png,Heroes,400,400,0.2236,REFINE,PENDING,white_halo
+Heroes/elowen_evoB_cast.png,Heroes,400,400,0.222,REFINE,PENDING,white_halo
+Heroes/elowen_idle.png,Heroes,400,400,0.224,REFINE,PENDING,white_halo
+Heroes/freya_cast.png,Heroes,400,400,0.2494,REFINE,PENDING,white_halo
+Heroes/freya_downed.png,Heroes,400,400,0.1171,KEEP,PENDING,overdraw_waste
+Heroes/freya_evoA.png,Heroes,400,400,0.2804,REFINE,PENDING,white_halo
+Heroes/freya_evoA_cast.png,Heroes,400,400,0.2908,REFINE,PENDING,white_halo
+Heroes/freya_evoB.png,Heroes,400,400,0.2994,REFINE,PENDING,white_halo
+Heroes/freya_evoB_cast.png,Heroes,400,400,0.312,REFINE,PENDING,white_halo
+Heroes/freya_idle.png,Heroes,400,400,0.2259,REFINE,PENDING,white_halo
+Heroes/glacius_cast.png,Heroes,400,400,0.2924,REFINE,PENDING,white_halo
+Heroes/glacius_downed.png,Heroes,400,400,0.1391,KEEP,PENDING,
+Heroes/glacius_evoA.png,Heroes,400,400,0.2915,KEEP,PENDING,
+Heroes/glacius_evoA_cast.png,Heroes,400,400,0.3426,REFINE,PENDING,white_halo
+Heroes/glacius_evoB.png,Heroes,400,400,0.3066,REFINE,PENDING,white_halo
+Heroes/glacius_evoB_cast.png,Heroes,400,400,0.3362,REFINE,PENDING,white_halo
+Heroes/glacius_idle.png,Heroes,400,400,0.2687,REFINE,PENDING,white_halo
+Heroes/ignis_cast.png,Heroes,400,400,0.2365,REFINE,PENDING,low_contrast_spells
+Heroes/ignis_downed.png,Heroes,400,400,0.1192,KEEP,PENDING,overdraw_waste
+Heroes/ignis_evoA.png,Heroes,400,400,0.2697,REFINE,PENDING,low_contrast_spells
+Heroes/ignis_evoA_cast.png,Heroes,400,400,0.2687,REFINE,PENDING,low_contrast_spells
+Heroes/ignis_evoB.png,Heroes,400,400,0.3056,REFINE,PENDING,low_contrast_spells
+Heroes/ignis_evoB_cast.png,Heroes,400,400,0.3081,REFINE,PENDING,low_contrast_spells
+Heroes/ignis_idle.png,Heroes,400,400,0.2298,REFINE,PENDING,low_contrast_spells
+Heroes/isolde_cast.png,Heroes,400,400,0.2201,REFINE,PENDING,low_contrast_spells white_halo
+Heroes/isolde_downed.png,Heroes,400,400,0.1148,KEEP,PENDING,overdraw_waste
+Heroes/isolde_evoA.png,Heroes,400,400,0.2768,REFINE,PENDING,low_contrast_spells
+Heroes/isolde_evoA_cast.png,Heroes,400,400,0.284,REFINE,PENDING,low_contrast_spells white_halo
+Heroes/isolde_evoB.png,Heroes,400,400,0.2146,REFINE,PENDING,low_contrast_spells white_halo
+Heroes/isolde_evoB_cast.png,Heroes,400,400,0.2242,REFINE,PENDING,white_halo
+Heroes/isolde_idle.png,Heroes,400,400,0.2213,REFINE,PENDING,white_halo
+Heroes/kael_cast.png,Heroes,400,400,0.2579,REFINE,PENDING,white_halo
+Heroes/kael_downed.png,Heroes,400,400,0.1262,KEEP,PENDING,
+Heroes/kael_evoA.png,Heroes,400,400,0.2716,KEEP,PENDING,
+Heroes/kael_evoA_cast.png,Heroes,400,400,0.2768,REFINE,PENDING,low_contrast_spells
+Heroes/kael_evoB.png,Heroes,400,400,0.2978,REFINE,PENDING,white_halo
+Heroes/kael_evoB_cast.png,Heroes,400,400,0.3205,REFINE,PENDING,low_contrast_spells white_halo
+Heroes/kael_idle.png,Heroes,400,400,0.2432,KEEP,PENDING,
+Heroes/liora_cast.png,Heroes,400,400,0.2447,KEEP,PENDING,
+Heroes/liora_downed.png,Heroes,400,400,0.1201,KEEP,PENDING,
+Heroes/liora_evoA.png,Heroes,400,400,0.2649,REFINE,PENDING,low_contrast_spells
+Heroes/liora_evoA_cast.png,Heroes,400,400,0.2729,REFINE,PENDING,low_contrast_spells
+Heroes/liora_evoB.png,Heroes,400,400,0.2724,REFINE,PENDING,low_contrast_spells
+Heroes/liora_evoB_cast.png,Heroes,400,400,0.2848,REFINE,PENDING,low_contrast_spells
+Heroes/liora_idle.png,Heroes,400,400,0.2315,KEEP,PENDING,
+Heroes/maelis_cast.png,Heroes,400,400,0.296,KEEP,PENDING,
+Heroes/maelis_downed.png,Heroes,400,400,0.1477,KEEP,PENDING,
+Heroes/maelis_evoA.png,Heroes,400,400,0.3297,KEEP,PENDING,
+Heroes/maelis_evoA_cast.png,Heroes,400,400,0.3269,KEEP,PENDING,
+Heroes/maelis_evoB.png,Heroes,400,400,0.2665,KEEP,PENDING,
+Heroes/maelis_evoB_cast.png,Heroes,400,400,0.2615,KEEP,PENDING,
+Heroes/maelis_idle.png,Heroes,400,400,0.285,KEEP,PENDING,
+Heroes/magnus_cast.png,Heroes,400,400,0.2435,REFINE,PENDING,low_contrast_spells
+Heroes/magnus_downed.png,Heroes,400,400,0.1184,KEEP,PENDING,overdraw_waste
+Heroes/magnus_evoA.png,Heroes,400,400,0.2752,REFINE,PENDING,low_contrast_spells
+Heroes/magnus_evoA_cast.png,Heroes,400,400,0.2768,REFINE,PENDING,low_contrast_spells
+Heroes/magnus_evoB.png,Heroes,400,400,0.2884,REFINE,PENDING,low_contrast_spells
+Heroes/magnus_evoB_cast.png,Heroes,400,400,0.2741,REFINE,PENDING,low_contrast_spells
+Heroes/magnus_idle.png,Heroes,400,400,0.2284,REFINE,PENDING,low_contrast_spells
+Heroes/marina_cast.png,Heroes,400,400,0.2408,REFINE,PENDING,lighting_direction low_contrast_spells
+Heroes/marina_downed.png,Heroes,400,400,0.1142,REFINE,PENDING,lighting_direction overdraw_waste
+Heroes/marina_evoA.png,Heroes,400,400,0.2574,REFINE,PENDING,low_contrast_spells
+Heroes/marina_evoA_cast.png,Heroes,400,400,0.2761,REFINE,PENDING,low_contrast_spells
+Heroes/marina_evoB.png,Heroes,400,400,0.2898,KEEP,PENDING,
+Heroes/marina_evoB_cast.png,Heroes,400,400,0.301,REFINE,PENDING,lighting_direction
+Heroes/marina_idle.png,Heroes,400,400,0.22,REFINE,PENDING,lighting_direction low_contrast_spells
+Heroes/mirel_cast.png,Heroes,400,400,0.2915,REFINE,PENDING,low_contrast_spells
+Heroes/mirel_downed.png,Heroes,400,400,0.1476,KEEP,PENDING,
+Heroes/mirel_evoA.png,Heroes,400,400,0.3209,REFINE,PENDING,low_contrast_spells
+Heroes/mirel_evoA_cast.png,Heroes,400,400,0.3296,REFINE,PENDING,low_contrast_spells
+Heroes/mirel_evoB.png,Heroes,400,400,0.2762,REFINE,PENDING,lighting_direction low_contrast_spells
+Heroes/mirel_evoB_cast.png,Heroes,400,400,0.2943,REFINE,PENDING,lighting_direction
+Heroes/mirel_idle.png,Heroes,400,400,0.2844,REFINE,PENDING,low_contrast_spells
+Heroes/morven_cast.png,Heroes,400,400,0.2699,KEEP,PENDING,
+Heroes/morven_downed.png,Heroes,400,400,0.1418,KEEP,PENDING,
+Heroes/morven_evoA.png,Heroes,400,400,0.2918,KEEP,PENDING,
+Heroes/morven_evoA_cast.png,Heroes,400,400,0.2927,KEEP,PENDING,
+Heroes/morven_evoB.png,Heroes,400,400,0.2713,KEEP,PENDING,
+Heroes/morven_evoB_cast.png,Heroes,400,400,0.2593,KEEP,PENDING,
+Heroes/morven_idle.png,Heroes,400,400,0.2736,KEEP,PENDING,
+Heroes/nerissa_cast.png,Heroes,400,400,0.2618,REFINE,PENDING,lighting_direction
+Heroes/nerissa_downed.png,Heroes,400,400,0.1268,KEEP,PENDING,
+Heroes/nerissa_evoA.png,Heroes,400,400,0.2799,REFINE,PENDING,lighting_direction
+Heroes/nerissa_evoA_cast.png,Heroes,400,400,0.2965,KEEP,PENDING,
+Heroes/nerissa_evoB.png,Heroes,400,400,0.2986,REFINE,PENDING,low_contrast_spells
+Heroes/nerissa_evoB_cast.png,Heroes,400,400,0.3125,REFINE,PENDING,lighting_direction low_contrast_spells
+Heroes/nerissa_idle.png,Heroes,400,400,0.2448,REFINE,PENDING,lighting_direction
+Heroes/nyxara_cast.png,Heroes,400,400,0.2609,KEEP,PENDING,
+Heroes/nyxara_downed.png,Heroes,400,400,0.1308,KEEP,PENDING,
+Heroes/nyxara_evoA.png,Heroes,400,400,0.2765,KEEP,PENDING,
+Heroes/nyxara_evoA_cast.png,Heroes,400,400,0.2813,KEEP,PENDING,
+Heroes/nyxara_evoB.png,Heroes,400,400,0.3232,KEEP,PENDING,
+Heroes/nyxara_evoB_cast.png,Heroes,400,400,0.3283,KEEP,PENDING,
+Heroes/nyxara_idle.png,Heroes,400,400,0.2521,KEEP,PENDING,
+Heroes/oriane_cast.png,Heroes,400,400,0.2463,KEEP,PENDING,
+Heroes/oriane_downed.png,Heroes,400,400,0.1207,KEEP,PENDING,
+Heroes/oriane_evoA.png,Heroes,400,400,0.2533,KEEP,PENDING,
+Heroes/oriane_evoA_cast.png,Heroes,400,400,0.2624,KEEP,PENDING,
+Heroes/oriane_evoB.png,Heroes,400,400,0.2358,REFINE,PENDING,low_contrast_spells
+Heroes/oriane_evoB_cast.png,Heroes,400,400,0.2464,REFINE,PENDING,low_contrast_spells
+Heroes/oriane_idle.png,Heroes,400,400,0.2331,KEEP,PENDING,
+Heroes/raiden_cast.png,Heroes,400,400,0.2,KEEP,PENDING,
+Heroes/raiden_downed.png,Heroes,400,400,0.1016,KEEP,PENDING,overdraw_waste
+Heroes/raiden_evoA.png,Heroes,400,400,0.2265,KEEP,PENDING,
+Heroes/raiden_evoA_cast.png,Heroes,400,400,0.2258,KEEP,PENDING,
+Heroes/raiden_evoB.png,Heroes,400,400,0.2665,KEEP,PENDING,
+Heroes/raiden_evoB_cast.png,Heroes,400,400,0.2625,KEEP,PENDING,
+Heroes/raiden_idle.png,Heroes,400,400,0.1958,KEEP,PENDING,
+Heroes/sable_cast.png,Heroes,400,400,0.2742,KEEP,PENDING,
+Heroes/sable_downed.png,Heroes,400,400,0.1436,KEEP,PENDING,
+Heroes/sable_evoA.png,Heroes,400,400,0.3298,KEEP,PENDING,
+Heroes/sable_evoA_cast.png,Heroes,400,400,0.3233,KEEP,PENDING,
+Heroes/sable_evoB.png,Heroes,400,400,0.2782,KEEP,PENDING,
+Heroes/sable_evoB_cast.png,Heroes,400,400,0.2754,KEEP,PENDING,
+Heroes/sable_idle.png,Heroes,400,400,0.277,KEEP,PENDING,
+Heroes/seren_cast.png,Heroes,400,400,0.2954,KEEP,PENDING,
+Heroes/seren_downed.png,Heroes,400,400,0.1533,KEEP,PENDING,
+Heroes/seren_evoA.png,Heroes,400,400,0.3207,KEEP,PENDING,
+Heroes/seren_evoA_cast.png,Heroes,400,400,0.344,KEEP,PENDING,
+Heroes/seren_evoB.png,Heroes,400,400,0.3394,REFINE,PENDING,white_halo
+Heroes/seren_evoB_cast.png,Heroes,400,400,0.338,REFINE,PENDING,white_halo
+Heroes/seren_idle.png,Heroes,400,400,0.296,KEEP,PENDING,
+Heroes/solenne_cast.png,Heroes,400,400,0.2367,REFINE,PENDING,lighting_direction low_contrast_spells
+Heroes/solenne_downed.png,Heroes,400,400,0.12,REFINE,PENDING,lighting_direction
+Heroes/solenne_evoA.png,Heroes,400,400,0.1979,KEEP,PENDING,
+Heroes/solenne_evoA_cast.png,Heroes,400,400,0.2289,KEEP,PENDING,
+Heroes/solenne_evoB.png,Heroes,400,400,0.2195,REFINE,PENDING,low_contrast_spells
+Heroes/solenne_evoB_cast.png,Heroes,400,400,0.2168,KEEP,PENDING,
+Heroes/solenne_idle.png,Heroes,400,400,0.2314,REFINE,PENDING,lighting_direction low_contrast_spells
+Heroes/sylph_cast.png,Heroes,400,400,0.2304,REFINE,PENDING,lighting_direction white_halo
+Heroes/sylph_downed.png,Heroes,400,400,0.1146,KEEP,PENDING,overdraw_waste
+Heroes/sylph_evoA.png,Heroes,400,400,0.2455,REFINE,PENDING,low_contrast_spells
+Heroes/sylph_evoA_cast.png,Heroes,400,400,0.2544,KEEP,PENDING,
+Heroes/sylph_evoB.png,Heroes,400,400,0.2848,REFINE,PENDING,white_halo
+Heroes/sylph_evoB_cast.png,Heroes,400,400,0.2885,REFINE,PENDING,white_halo
+Heroes/sylph_idle.png,Heroes,400,400,0.2208,REFINE,PENDING,low_contrast_spells white_halo
+Heroes/terra_cast.png,Heroes,400,400,0.2452,KEEP,PENDING,
+Heroes/terra_downed.png,Heroes,400,400,0.1309,KEEP,PENDING,
+Heroes/terra_evoA.png,Heroes,400,400,0.2956,KEEP,PENDING,
+Heroes/terra_evoA_cast.png,Heroes,400,400,0.2961,REFINE,PENDING,low_contrast_spells
+Heroes/terra_evoB.png,Heroes,400,400,0.3017,REFINE,PENDING,low_contrast_spells
+Heroes/terra_evoB_cast.png,Heroes,400,400,0.294,REFINE,PENDING,low_contrast_spells
+Heroes/terra_idle.png,Heroes,400,400,0.2527,KEEP,PENDING,
+Heroes/thalen_cast.png,Heroes,400,400,0.2938,KEEP,PENDING,
+Heroes/thalen_downed.png,Heroes,400,400,0.1418,KEEP,PENDING,
+Heroes/thalen_evoA.png,Heroes,400,400,0.3116,KEEP,PENDING,
+Heroes/thalen_evoA_cast.png,Heroes,400,400,0.3128,KEEP,PENDING,
+Heroes/thalen_evoB.png,Heroes,400,400,0.2691,KEEP,PENDING,
+Heroes/thalen_evoB_cast.png,Heroes,400,400,0.2639,KEEP,PENDING,
+Heroes/thalen_idle.png,Heroes,400,400,0.2738,KEEP,PENDING,
+Heroes/tidal_cast.png,Heroes,400,400,0.2272,KEEP,PENDING,
+Heroes/tidal_downed.png,Heroes,400,400,0.1191,KEEP,PENDING,overdraw_waste
+Heroes/tidal_evoA.png,Heroes,400,400,0.2882,REFINE,PENDING,low_contrast_spells
+Heroes/tidal_evoA_cast.png,Heroes,400,400,0.2662,REFINE,PENDING,low_contrast_spells
+Heroes/tidal_evoB.png,Heroes,400,400,0.3011,REFINE,PENDING,low_contrast_spells
+Heroes/tidal_evoB_cast.png,Heroes,400,400,0.2914,REFINE,PENDING,low_contrast_spells
+Heroes/tidal_idle.png,Heroes,400,400,0.2299,KEEP,PENDING,
+Heroes/vesper_cast.png,Heroes,400,400,0.2345,KEEP,PENDING,
+Heroes/vesper_downed.png,Heroes,400,400,0.1156,KEEP,PENDING,overdraw_waste
+Heroes/vesper_evoA.png,Heroes,400,400,0.2339,KEEP,PENDING,
+Heroes/vesper_evoA_cast.png,Heroes,400,400,0.2516,KEEP,PENDING,
+Heroes/vesper_evoB.png,Heroes,400,400,0.3104,REFINE,PENDING,foot_pivot_mismatch
+Heroes/vesper_evoB_cast.png,Heroes,400,400,0.3203,REFINE,PENDING,foot_pivot_mismatch
+Heroes/vesper_idle.png,Heroes,400,400,0.223,KEEP,PENDING,
+Heroes/veyra_cast.png,Heroes,400,400,0.2263,KEEP,PENDING,
+Heroes/veyra_downed.png,Heroes,400,400,0.1157,KEEP,PENDING,overdraw_waste
+Heroes/veyra_evoA.png,Heroes,400,400,0.2463,KEEP,PENDING,
+Heroes/veyra_evoA_cast.png,Heroes,400,400,0.2454,KEEP,PENDING,
+Heroes/veyra_evoB.png,Heroes,400,400,0.2241,KEEP,PENDING,
+Heroes/veyra_evoB_cast.png,Heroes,400,400,0.2305,KEEP,PENDING,
+Heroes/veyra_idle.png,Heroes,400,400,0.2233,KEEP,PENDING,
+Heroes/volt_cast.png,Heroes,400,400,0.2277,KEEP,PENDING,
+Heroes/volt_downed.png,Heroes,400,400,0.1159,KEEP,PENDING,overdraw_waste
+Heroes/volt_evoA.png,Heroes,400,400,0.2697,KEEP,PENDING,
+Heroes/volt_evoA_cast.png,Heroes,400,400,0.257,KEEP,PENDING,
+Heroes/volt_evoB.png,Heroes,400,400,0.3062,KEEP,PENDING,
+Heroes/volt_evoB_cast.png,Heroes,400,400,0.2996,KEEP,PENDING,
+Heroes/volt_idle.png,Heroes,400,400,0.2238,KEEP,PENDING,
+Heroes/voltrix_cast.png,Heroes,400,400,0.2581,KEEP,PENDING,
+Heroes/voltrix_downed.png,Heroes,400,400,0.1316,KEEP,PENDING,
+Heroes/voltrix_evoA.png,Heroes,400,400,0.28,KEEP,PENDING,
+Heroes/voltrix_evoA_cast.png,Heroes,400,400,0.281,REFINE,PENDING,low_contrast_battlefield
+Heroes/voltrix_evoB.png,Heroes,400,400,0.3133,KEEP,PENDING,
+Heroes/voltrix_evoB_cast.png,Heroes,400,400,0.3182,KEEP,PENDING,
+Heroes/voltrix_idle.png,Heroes,400,400,0.2537,KEEP,PENDING,
+Heroes/zephyr_cast.png,Heroes,400,400,0.2359,REFINE,PENDING,lighting_direction low_contrast_spells white_halo
+Heroes/zephyr_downed.png,Heroes,400,400,0.107,REFINE,PENDING,lighting_direction overdraw_waste
+Heroes/zephyr_evoA.png,Heroes,400,400,0.2772,REFINE,PENDING,lighting_direction low_contrast_spells
+Heroes/zephyr_evoA_cast.png,Heroes,400,400,0.2716,KEEP,PENDING,
+Heroes/zephyr_evoB.png,Heroes,400,400,0.2763,REFINE,PENDING,white_halo
+Heroes/zephyr_evoB_cast.png,Heroes,400,400,0.3038,REFINE,PENDING,lighting_direction white_halo
+Heroes/zephyr_idle.png,Heroes,400,400,0.2064,REFINE,PENDING,lighting_direction low_contrast_spells
+Heroes/zerith_cast.png,Heroes,400,400,0.254,KEEP,PENDING,
+Heroes/zerith_downed.png,Heroes,400,400,0.1257,KEEP,PENDING,
+Heroes/zerith_evoA.png,Heroes,400,400,0.2378,KEEP,PENDING,
+Heroes/zerith_evoA_cast.png,Heroes,400,400,0.2576,KEEP,PENDING,
+Heroes/zerith_evoB.png,Heroes,400,400,0.2932,KEEP,PENDING,
+Heroes/zerith_evoB_cast.png,Heroes,400,400,0.285,KEEP,PENDING,
+Heroes/zerith_idle.png,Heroes,400,400,0.2422,KEEP,PENDING,
 Icons/element_arcane.png,Icons,128,128,0.7224,KEEP,PENDING,
 Icons/element_earth.png,Icons,128,128,0.7224,KEEP,PENDING,
 Icons/element_fire.png,Icons,128,128,0.7224,KEEP,PENDING,

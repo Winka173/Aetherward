@@ -225,6 +225,17 @@ namespace Aetherward.Game
             return clicked;
         }
 
+        /// <summary>
+        /// Hero frames are 400² with the figure in the 320² region at (40, 80) (headroom so props are never cropped).
+        /// Draws the texture so that the figure fills the rect exactly as the old tight 320² frames did.
+        /// </summary>
+        public static void HeroIcon(float x, float y, float w, float h, Texture tex, Color? tint = null)
+        {
+            float s = Mathf.Min(w, h) / 320f;
+            float ox = x + (w - 320f * s) / 2f, oy = y + (h - 320f * s) / 2f;
+            Icon(ox - 40f * s, oy - 80f * s, 400f * s, 400f * s, tex, tint);
+        }
+
         public static void Icon(float x, float y, float w, float h, Texture tex, Color? tint = null)
         {
             if (tex == null) return;

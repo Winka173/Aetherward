@@ -355,6 +355,8 @@ def cmd_import(a):
     for r in changed:
         os.makedirs(os.path.dirname(os.path.join(bdir, "Art", r)), exist_ok=True)
         shutil.copy2(os.path.join(A.ART, r), os.path.join(bdir, "Art", r))
+        if os.path.exists(os.path.join(A.ART, r + ".meta")):
+            shutil.copy2(os.path.join(A.ART, r + ".meta"), os.path.join(bdir, "Art", r + ".meta"))
     for e in journal["extra"]:
         os.makedirs(os.path.dirname(os.path.join(bdir, e)), exist_ok=True)
         shutil.copy2(os.path.join(A.ROOT, e), os.path.join(bdir, e))
@@ -375,7 +377,7 @@ def cmd_import(a):
         for m in A.load_json(sp["manifest"]):
             live_man[m["path"]] = m
         A.dump_json(list(live_man.values()), A.MANIFEST, indent=1)
-        r = subprocess.run([sys.executable, os.path.join(A.ROOT, "Tools", "gen_meta.py")], capture_output=True, text=True)
+        r = subprocess.run([sys.executable, os.path.join(A.ROOT, "Tools", "gen_meta.py"), "--refresh-textures"], capture_output=True, text=True)
         if r.returncode:
             raise RuntimeError("gen_meta failed: " + r.stderr[-500:])
     except Exception as e:  # noqa: BLE001
@@ -397,6 +399,8 @@ def restore(bdir):
     j = A.load_json(os.path.join(bdir, "journal.json"))
     for r in j["replaced"]:
         shutil.copy2(os.path.join(bdir, "Art", r), os.path.join(A.ART, r))
+        if os.path.exists(os.path.join(bdir, "Art", r + ".meta")):
+            shutil.copy2(os.path.join(bdir, "Art", r + ".meta"), os.path.join(A.ART, r + ".meta"))
     for r in j["added"]:
         p = os.path.join(A.ART, r)
         if os.path.exists(p):

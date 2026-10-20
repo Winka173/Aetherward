@@ -170,6 +170,8 @@ def delta_e(c1, c2):
     return float(np.linalg.norm(to_lab(c1) - to_lab(c2)))
 
 
+META_PIVOT = re.compile(r"spritePivot: \{x: ([-0-9.e]+), y: ([-0-9.e]+)\}")
+META_PPU = re.compile(r"spritePixelsToUnits: ([-0-9.e]+)")
 ART_CALL = re.compile(r'Art\.(?:Tex|Sprite)\(\s*"([^"]+)"\s*\)')
 
 
@@ -189,3 +191,12 @@ def literal_art_refs(script_dir):
 
 def sha256_text(text):
     return hashlib.sha256(text.encode("utf-8")).hexdigest()
+
+
+def value_histogram(a, bins=8):
+    """Luminance histogram of opaque pixels (normalized) — value structure, independent of hue."""
+    sel = a[..., 3] > 0.5
+    if not sel.any():
+        return np.zeros(bins)
+    hist, _ = np.histogram(luminance(a[..., :3])[sel], bins=bins, range=(0, 1))
+    return hist / hist.sum()

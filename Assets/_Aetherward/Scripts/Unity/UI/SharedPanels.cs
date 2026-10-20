@@ -91,7 +91,7 @@ namespace Aetherward.Game
             Ui.Panel(x, y, w, h);
             string sprite = "Heroes/" + def.Id + (evolutionId != null ? "_evo" + (def.Evolutions.IndexOf(evolutionId) == 0 ? "A" : "B") : "_idle");
             Ui.DrawRect(x + 30, y + 30, 260, 300, new Color(0.15f, 0.18f, 0.34f, 0.8f));
-            Ui.Icon(x + 30, y + 20, 260, 320, Art.Tex(sprite));
+            Ui.HeroIcon(x + 30, y + 20, 260, 320, Art.Tex(sprite));
             float tx = x + 320, tw = w - 350;
             Ui.Label(tx, y + 30, tw, 60, l.Get(def.NameKey), 48, Ui.White, TextAnchor.UpperLeft, true);
             Ui.Label(tx, y + 88, tw, 40, l.Get(def.TitleKey), 26, Ui.Muted);

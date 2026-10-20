@@ -65,14 +65,14 @@ def sheet(paths, cols, cell, out, bg=(0.24, 0.32, 0.38)):
 
 
 def main():
-    hero_pivot = (0.5, (320 - 292) / 320.0)
+    hero_pivot = (0.5, (heroes.FRAME - heroes.FRAME_FOOT_ROW) / float(heroes.FRAME))
     hero_paths = []
     for hid in heroes.HEROES:
         for pose in ("idle", "cast", "downed"):
-            hero_paths.append(save(heroes.hero_sprite(hid, pose), "Heroes/%s_%s" % (hid, pose), 200, hero_pivot, kind="heroes.py"))
+            hero_paths.append(save(heroes.hero_sprite(hid, pose, framed=True), "Heroes/%s_%s" % (hid, pose), 200, hero_pivot, kind="heroes.py"))
         for evo in ("A", "B"):
-            hero_paths.append(save(heroes.hero_sprite(hid, "idle", evo), "Heroes/%s_evo%s" % (hid, evo), 200, hero_pivot, kind="heroes.py"))
-            save(heroes.hero_sprite(hid, "cast", evo), "Heroes/%s_evo%s_cast" % (hid, evo), 200, hero_pivot, kind="heroes.py")
+            hero_paths.append(save(heroes.hero_sprite(hid, "idle", evo, framed=True), "Heroes/%s_evo%s" % (hid, evo), 200, hero_pivot, kind="heroes.py"))
+            save(heroes.hero_sprite(hid, "cast", evo, framed=True), "Heroes/%s_evo%s_cast" % (hid, evo), 200, hero_pivot, kind="heroes.py")
         save(heroes.portrait(hid), "Portraits/%s" % hid, 100, kind="heroes.py")
     sheet(hero_paths, 5, 200, "heroes.png")
 

@@ -476,7 +476,7 @@ def draw_prop(ctx, spec, hand, pose, element):
                   ec, lw=4, hi_size=0.8)
             sparkle(ctx, top[0] - 2, top[1] - 6, 7)
     elif kind == "flame_greatsword":
-        ang = -1.1 if pose != "cast" else -0.35
+        ang = -1.1 if pose != "cast" else -0.95   # raised (a flat cast swing ran 90px off the canvas)
         L = 150
         tip = (hx + math.cos(ang) * L, hy + math.sin(ang) * L)
         nx, ny = -math.sin(ang), math.cos(ang)
@@ -577,7 +577,19 @@ BETWEEN_ARMS_PROPS = ("tower_shield", "longbow", "sun_shield_sword", "crystal_sh
                       "dread_shield")
 
 
-def hero_sprite(hero_id, pose="idle", evo=None, size=W):
+# Downed pose: vertical placement so the lying figure rests on the ground line (row ~298) instead of
+# running off the canvas bottom. Measured with Tools/ArtPipeline (validator 'cropped_silhouette'); re-measure if a hero changes.
+DOWNED_Y = {'aeris': 235, 'ashara': 219, 'borun': 218, 'caelis': 240, 'cinder': 226, 'doran': 211, 'eirwen': 211, 'elowen': 230, 'freya': 229, 'glacius': 204, 'ignis': 240, 'isolde': 237, 'kael': 198, 'liora': 238, 'maelis': 211, 'magnus': 210, 'marina': 235, 'mirel': 196, 'morven': 225, 'nerissa': 223, 'nyxara': 237, 'oriane': 221, 'raiden': 227, 'sable': 218, 'seren': 218, 'solenne': 240, 'sylph': 214, 'terra': 226, 'thalen': 208, 'tidal': 199, 'vesper': 235, 'veyra': 230, 'volt': 239, 'voltrix': 226, 'zephyr': 240, 'zerith': 234}
+
+# Runtime frames are drawn into a larger canvas so raised staffs, bows, hair spikes and hood tips are never
+# cropped (validator check "cropped_silhouette"). The figure keeps its 320-unit geometry and PPU, so its
+# on-screen size is unchanged; only the transparent margin grows. Portraits keep the tight 320 canvas.
+FRAME = 400
+FRAME_OFFSET = (40, 80)
+FRAME_FOOT_ROW = 292 + FRAME_OFFSET[1]
+
+
+def hero_sprite(hero_id, pose="idle", evo=None, size=W, framed=False):
     spec = dict(HEROES[hero_id])
     element = spec["element"]
     ec, ec2 = ELEMENT[element]
@@ -586,25 +598,40 @@ def hero_sprite(hero_id, pose="idle", evo=None, size=W):
     elif evo == "B":
         spec["trim"] = "#%02x%02x%02x" % tuple(int(v * 255) for v in ec2)
     spec.update(spec.get("evo_spec", {}).get(evo, {}))
+    if evo_kit(hero_id, evo):
+        # Evolved outfit takes on the element colour (palette shift is half of the branch identity).
+        to_hex = lambda c: "#%02x%02x%02x" % tuple(int(max(0, min(1, v)) * 255) for v in c)  # noqa: E731
+        spec["main"] = to_hex(mix(hex2rgb(spec["main"]), shade(ec, 0.25), 0.5))
+        spec["second"] = to_hex(mix(hex2rgb(spec["second"]), ec2, 0.35))
     spec["_evo"], spec["_pose"] = evo, pose
-    cv = Canvas(size, size, size / W)
+    if framed:
+        k = size / W
+        cv = Canvas(int(FRAME * k), int(FRAME * k), 1.0)
+        cv.ctx.translate(FRAME_OFFSET[0] * k, FRAME_OFFSET[1] * k)
+        cv.ctx.scale(k, k)
+    else:
+        cv = Canvas(size, size, size / W)
     ctx = cv.ctx
+    base_matrix = ctx.get_matrix()
     m = build_metrics(spec["build"])
     skin = SKIN[spec["skin"]]
     downed = pose == "downed"
     if downed:
         # lying on the ground: rotate the figure about its centre and shrink to fit the canvas
-        ctx.translate(CX, spec.get("downed_y", 236))
+        ctx.translate(CX, DOWNED_Y.get(hero_id, spec.get("downed_y", 236)))
         ctx.rotate(-1.45)
         ctx.scale(0.72, 0.72)
         ctx.translate(-CX, -180)
     lean = 6 if pose == "cast" else spec.get("stance_lean", 0)
     fx2 = hex2rgb(spec["fx_glow"]) if spec.get("fx_glow") else ec2  # opt-in: light glow for dark secondaries
 
+    kit = evo_kit(hero_id, evo)
     if evo:
         aura = fx2 if evo == "B" else hex2rgb("#ffd35a")
         glow(ctx, CX, 180, 150, aura, 0.38)
-        if evo == "B":
+        if kit:
+            kit_back(ctx, kit, spec, m, pose, lean, ec, ec2)
+        elif evo == "B":
             for side in (-1, 1) if spec.get("evo_wings", True) else ():
                 wing = [(CX + side * 30, 176), (CX + side * 120, 112), (CX + side * 142, 150), (CX + side * 118, 176),
                         (CX + side * 132, 206), (CX + side * 92, 210), (CX + side * 56, 214)]
@@ -656,6 +683,8 @@ def hero_sprite(hero_id, pose="idle", evo=None, size=W):
         ext_shoulders(ctx, spec, m, lean)
     if spec.get("scarf"):
         draw_scarf(ctx, spec, 10 if pose == "cast" else 0)
+    if kit:
+        kit_body(ctx, kit, spec, m, pose, lean, ec, ec2)
 
     # head
     hx = CX + lean * 0.6
@@ -676,6 +705,8 @@ def hero_sprite(hero_id, pose="idle", evo=None, size=W):
               hex2rgb(spec["main"]), lw=LW - 1)
     draw_hair_front(ctx, spec, ec)
     ctx.restore()
+    if kit:
+        kit_head(ctx, kit, spec, m, pose, lean, ec, ec2)
 
     if spec["prop"] not in BETWEEN_ARMS_PROPS:
         draw_prop(ctx, spec, right_hand, pose, element)
@@ -690,7 +721,7 @@ def hero_sprite(hero_id, pose="idle", evo=None, size=W):
         paint(ctx, lambda c: star_path(c, CX + lean, 196, 13, 6, 5) if evo == "A" else poly_path(c, [(CX + lean, 182), (CX + 10 + lean, 196), (CX + lean, 210), (CX - 10 + lean, 196)]),
               emblem_col, lw=3.5, hi=False)
     if downed:
-        ctx.identity_matrix()
+        ctx.set_matrix(base_matrix)
         for i in range(3):
             a = i * 2.1 + 0.4
             sparkle(ctx, 96 + math.cos(a) * 30, 214 + math.sin(a) * 10, 9, hex2rgb("#ffe46a"))
@@ -3951,3 +3982,118 @@ def w3_prop(ctx, spec, hand, pose, element):
         _skull(ctx, sx, sy - 10, 20, BONE, eye=fx)
         for (x, y) in ((sx - 36, sy - 60), (sx + 36, sy - 60), (sx - 36, sy + 46), (sx + 36, sy + 46)):
             _el(ctx, x, y, 4, 4, trim, lw=2, hi=False, shade_amt=0)
+
+
+# ============================================================================ evolution kits (P3 visual identity)
+# The Art Quality Validator flagged 20 "A" branches as visually indistinct (silhouette IoU >= 0.97 with the base
+# form: only a halo, gold trim and a chest star). Each kit below changes the SILHOUETTE in a way that matches the
+# branch's mechanics (Docs/Enhancement/Final/ART_BIBLE.md §Evolution identity):
+#   aegis     guardians that hold the line   -> tower shield + spiked pauldrons + crystal crest
+#   archmage  big-spell casters              -> tall mantle collar + floating crystal crown + orbiting runes
+#   champion  bruisers                       -> horned helm + massive pauldrons + belt plate
+#   blade     assassins / archers            -> crossed blades on the back + long streaming scarf + headband tails
+#   saint     healers / supports             -> sunburst disk behind the head + long stole
+EVO_KITS = {
+    "A": {"borun": "aegis", "eirwen": "archmage", "glacius": "aegis", "seren": "aegis", "terra": "aegis",
+          "ignis": "archmage", "volt": "archmage", "voltrix": "archmage", "freya": "archmage", "tidal": "archmage",
+          "zephyr": "archmage", "ashara": "champion", "cinder": "champion", "magnus": "champion",
+          "kael": "blade", "nyxara": "blade", "raiden": "blade", "sylph": "blade",
+          "marina": "saint", "nerissa": "saint"},
+    "B": {"caelis": "saint", "zerith": "archmage"},
+}
+METAL = hex2rgb("#c9cfdc")
+
+
+def evo_kit(hero_id, evo):
+    return EVO_KITS.get(evo or "", {}).get(hero_id)
+
+
+def kit_back(ctx, kit, spec, m, pose, lean, ec, ec2):
+    sh = m["shoulder"]
+    if kit == "aegis":
+        side = -1
+        x0 = CX + side * (sh + 30) + lean
+        body = lambda c: rrect_path(c, x0 - 34, 168, 68, 112, 22)  # noqa: E731
+        paint(ctx, body, shade(ec, 0.15), lw=LW, hi_size=0.6)
+        paint(ctx, lambda c: rrect_path(c, x0 - 22, 182, 44, 84, 14), light(ec, 0.25), lw=3.5, hi=False)
+        paint(ctx, lambda c: poly_path(c, [(x0, 196), (x0 + 13, 222), (x0, 250), (x0 - 13, 222)]), ec2, lw=3, hi=False)
+    elif kit == "archmage":
+        dark = shade(ec, 0.45)
+        pts = [(CX - sh - 10 + lean, 200), (CX - sh - 44 + lean, 126), (CX - 92 + lean, 52), (CX - 30 + lean, 78), (CX + lean, 64),
+               (CX + 30 + lean, 78), (CX + 92 + lean, 52), (CX + sh + 44 + lean, 126), (CX + sh + 10 + lean, 200)]
+        paint(ctx, lambda c: smooth_closed(c, pts, 0.35), dark, lw=LW, hi_size=0.5)
+        for s in (-1, 1):
+            stroke(ctx, lambda c, s=s: smooth_open(c, [(CX + s * (sh + 2) + lean, 188), (CX + s * (sh + 16) + lean, 126), (CX + s * 54 + lean, 82)]), ec2, 3.5, 0.9)
+    elif kit == "blade":
+        for s in (-1, 1):
+            a = -1.05 if s < 0 else -2.09
+            bx, by = CX + lean + s * 10, 210
+            tip = (bx + math.cos(a) * 175, by + math.sin(a) * 175)
+            outlined_line(ctx, [(bx, by), tip], METAL, 12, 19, smooth=False)
+            outlined_line(ctx, [(bx + math.cos(a) * 36, by + math.sin(a) * 36), (bx + math.cos(a) * 30 + 12 * s, by + math.sin(a) * 30 + 6)], ec, 7, 13, smooth=False)
+        flutter = 12 if pose == "cast" else 0
+        scarf = [(CX - 20 + lean, 168), (CX - 70 + lean, 176 - flutter), (CX - 112 + lean, 160 - flutter), (CX - 138 + lean, 178 - flutter * 2),
+                 (CX - 116 + lean, 190 - flutter), (CX - 70 + lean, 194), (CX - 16 + lean, 186)]
+        paint(ctx, lambda c: smooth_closed(c, scarf, 0.45), ec, lw=4.5, hi_size=0.5)
+    elif kit == "saint":
+        cx, cy = CX + lean * 0.6, 104
+        ctx.save()
+        ctx.new_path()
+        star_path(ctx, cx, cy, 100, 70, 16, rot=0)
+        ctx.set_source_rgba(*light(ec2, 0.35), 0.95)
+        ctx.fill_preserve()
+        ctx.set_source_rgb(*INK)
+        ctx.set_line_width(4)
+        ctx.stroke()
+        ctx.restore()
+        paint(ctx, lambda c: ellipse_path(c, cx, cy, 72, 72), light(ec, 0.5), lw=3.5, hi=False)
+
+
+def kit_body(ctx, kit, spec, m, pose, lean, ec, ec2):
+    sh = m["shoulder"]
+    if kit in ("aegis", "champion"):
+        big = kit == "champion"
+        for side in (-1, 1):
+            x = CX + side * sh + lean
+            w = 40 if big else 32
+            pts = [(x - side * 26, 158), (x + side * w, 150 if big else 160), (x + side * (w + 12), 186), (x + side * (w - 4), 206), (x - side * 18, 198)]
+            paint(ctx, lambda c, pts=pts: smooth_closed(c, pts, 0.4), METAL if big else light(ec, 0.15), lw=LW, hi_size=0.6)
+            spike = [(x + side * (w - 6), 160), (x + side * (w + 22), 128 if big else 138), (x + side * (w + 8), 170)]
+            paint(ctx, lambda c, spike=spike: poly_path(c, spike), ec2 if big else METAL, lw=4, hi=False)
+        if big:
+            paint(ctx, lambda c: ellipse_path(c, CX + lean, 238, 22, 18), METAL, lw=4.5, hi_size=0.6)
+            paint(ctx, lambda c: ellipse_path(c, CX + lean, 238, 9, 8), ec, lw=2.5, hi=False)
+    elif kit == "saint":
+        for side in (-1, 1):
+            x = CX + side * 20 + lean
+            stole = [(x - 9, 166), (x + 9, 166), (x + 11, 272), (x, 284), (x - 11, 272)]
+            paint(ctx, lambda c, stole=stole: poly_path(c, stole), light(ec2, 0.55), lw=3.5, hi=False)
+            paint(ctx, lambda c, x=x: star_path(c, x, 250, 8, 3.5, 4, rot=0), ec, lw=2, hi=False)
+
+
+def kit_head(ctx, kit, spec, m, pose, lean, ec, ec2):
+    hx = CX + lean * 0.6
+    if kit == "aegis":
+        for dx, h in ((-22, 26), (0, 40), (22, 26)):
+            paint(ctx, lambda c, dx=dx, h=h: poly_path(c, [(hx + dx - 9, 66), (hx + dx, 66 - h), (hx + dx + 9, 66)]), light(ec2, 0.2), lw=3.5, hi=False)
+    elif kit == "archmage":
+        for i, (dx, dy, r) in enumerate(((-44, 48, 9), (-22, 30, 11), (0, 22, 14), (22, 30, 11), (44, 48, 9))):
+            glow(ctx, hx + dx, dy, r * 2.4, ec2, 0.45)
+            paint(ctx, lambda c, dx=dx, dy=dy, r=r: poly_path(c, [(hx + dx, dy - r * 1.6), (hx + dx + r, dy), (hx + dx, dy + r * 1.3), (hx + dx - r, dy)]),
+                  light(ec, 0.15) if i % 2 else ec2, lw=3, hi=False)
+        for s in (-1, 1):
+            ox, oy = hx + s * 86, 128 + (-14 if s > 0 else 8)
+            glow(ctx, ox, oy, 26, ec2, 0.55)
+            paint(ctx, lambda c, ox=ox, oy=oy: ellipse_path(c, ox, oy, 11, 11), ec, lw=3, hi=False)
+            stroke(ctx, lambda c, ox=ox, oy=oy: ellipse_path(c, ox, oy, 18, 7, 0.4), light(ec2, 0.3), 2.5, 0.9)
+    elif kit == "champion":
+        for s in (-1, 1):
+            horn = [(hx + s * 40, 92), (hx + s * 78, 60), (hx + s * 84, 22), (hx + s * 64, 50), (hx + s * 30, 76)]
+            paint(ctx, lambda c, horn=horn: smooth_closed(c, horn, 0.4), hex2rgb("#f2e6cc"), lw=4.5, hi_size=0.6)
+        paint(ctx, lambda c: smooth_closed(c, [(hx - 50, 84), (hx, 62), (hx + 50, 84), (hx + 40, 96), (hx - 40, 96)], 0.4), METAL, lw=4.5, hi_size=0.6)
+        paint(ctx, lambda c: poly_path(c, [(hx, 66), (hx + 9, 78), (hx, 90), (hx - 9, 78)]), ec, lw=2.5, hi=False)
+    elif kit == "blade":
+        stroke(ctx, lambda c: ellipse_path(c, hx, 96, 52, 10, -0.08), ec, 9)
+        for t, dy in ((0, 0), (1, 14)):
+            tail = [(hx + 46, 98), (hx + 82, 92 + dy), (hx + 112, 108 + dy), (hx + 128, 100 + dy)]
+            outlined_line(ctx, tail, ec, 7, 12)
