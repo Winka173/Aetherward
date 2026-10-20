@@ -368,7 +368,7 @@ def pbr_nodes(nt, tid, vec, loc, projection="FLAT", blend=0.0):
     return out["diff"].outputs["Color"], out["rough"].outputs["Color"], nm, out["disp"].outputs["Color"]
 
 
-def pbr_material(name, tid, scale, tint=None, value=1.0, projection="BOX", blend=0.25, normal=1.0):
+def pbr_material(name, tid, scale, tint=None, value=1.0, projection="BOX", blend=0.25, normal=1.0, snow=True):
     """Props/dais: box-projected scan texture in object space, tinted toward the art-bible palette."""
     m = bpy.data.materials.new(name)
     m.use_nodes = True
@@ -394,7 +394,7 @@ def pbr_material(name, tid, scale, tint=None, value=1.0, projection="BOX", blend
     nt.links.new(rough, bsdf.inputs["Roughness"])
     nm.inputs["Strength"].default_value = normal
     nt.links.new(nm.outputs["Normal"], bsdf.inputs["Normal"])
-    if THEME.get("snowcap"):
+    if THEME.get("snowcap") and snow:
         geo_ = node(nt, "ShaderNodeNewGeometry", (-500, -400))
         sz = node(nt, "ShaderNodeSeparateXYZ", (-300, -400))
         nt.links.new(geo_.outputs["Normal"], sz.inputs["Vector"])
@@ -711,7 +711,7 @@ def terrain_pbr():
 ter.data.materials.append(terrain_pbr())
 
 # ----------------------------------------------------------------------------------------------- the sanctum dais
-MAT_DAIS = pbr_material("Dais", THEME["dais"], 0.35, tint="#b9b6b0", value=0.9)
+MAT_DAIS = pbr_material("Dais", THEME["dais"], 0.35, tint="#b9b6b0", value=0.9, snow=False)   # the play area stays clear
 MAT_STONE = pbr_material("Ruin", THEME["ruin"], 0.45, tint="#c2bcb2", value=0.95)
 MAT_DARK = pbr_material("Basalt", THEME["dark"], 0.6, tint="#8a8c95", value=0.7)
 MAT_MOSSY = pbr_material("MossyRock", "mossy_rock", 0.5, tint="#a4b0a8", value=0.85)
@@ -1241,7 +1241,7 @@ def biome_features():
                     a_ = k / 10 * math.tau
                     rock(G(hx + math.cos(a_) * r_ * 0.75, hy + math.sin(a_) * r_ * 0.75 * SIN, ground_z(hx, hy)), random.uniform(0.15, 0.3), MAT_OBSIDIAN)
             elif hz["kind"] == "lightning_strikes":
-                disc(hx, hy, r_ * 0.55, glow_material("Scorch", "#0d0d10", "#b06cff", 0.08, 0.0), 0.012)
+                pass   # the game's telegraph marks strike spots; a painted decal read as a sticker
     for cv in BIOME.get("covers", []):
         shard_cluster(cv["pos"][0], cv["pos"][1], MAT_ICE, 0.6, 1.4, (5, 8))
 

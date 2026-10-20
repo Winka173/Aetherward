@@ -29,12 +29,12 @@
   -0.907
  ],
  "edgeColor": [
-  0.0933,
-  0.0933,
-  0.1362
+  0.0946,
+  0.0946,
+  0.1347
  ],
- "source": "ArtCache/Env/pot_shattered_aether",
- "gamma": 1.0909,
- "viewMeanBefore": 0.183,
+ "source": "ArtCache/Env/v2full_shattered_aether",
+ "gamma": 1.0675,
+ "viewMeanBefore": 0.177,
  "viewMean": 0.16
 }

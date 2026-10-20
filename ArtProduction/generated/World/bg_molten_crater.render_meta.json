@@ -22,19 +22,19 @@
  ],
  "braziersScreen": [
   [
-   -1.409,
-   4.893
-  ],
-  [
    -7.045,
    11.327
+  ],
+  [
+   8.455,
+   6.598
   ]
  ],
  "braziersFlat": [
-  -1.409,
-  4.893,
   -7.045,
-  11.327
+  11.327,
+  8.455,
+  6.598
  ],
  "aetherCrystalsFlat": [],
  "aetherCrystalsScreen": [],

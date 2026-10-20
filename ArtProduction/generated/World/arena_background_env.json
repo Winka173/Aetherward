@@ -21,12 +21,12 @@
   10.901
  ],
  "edgeColor": [
-  0.1287,
-  0.1353,
-  0.1521
+  0.1259,
+  0.1325,
+  0.1527
  ],
- "source": "ArtCache/Env/pot_verdant_sanctuary",
- "gamma": 1.2276,
- "viewMeanBefore": 0.2165,
+ "source": "ArtCache/Env/v2full_verdant_sanctuary",
+ "gamma": 1.2253,
+ "viewMeanBefore": 0.2153,
  "viewMean": 0.16
 }

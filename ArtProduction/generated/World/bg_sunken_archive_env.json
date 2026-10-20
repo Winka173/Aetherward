@@ -14,12 +14,12 @@
  ],
  "aetherCrystalsFlat": [],
  "edgeColor": [
-  0.1109,
-  0.1457,
-  0.1492
+  0.0998,
+  0.1297,
+  0.1366
  ],
- "source": "ArtCache/Env/pot_sunken_archive",
- "gamma": 1.1391,
- "viewMeanBefore": 0.1923,
+ "source": "ArtCache/Env/v2full_sunken_archive",
+ "gamma": 1.1773,
+ "viewMeanBefore": 0.1995,
  "viewMean": 0.16
 }
