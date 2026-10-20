@@ -13,7 +13,7 @@ Unity 6000.4.8f1 **không có** trong môi trường này: mọi mã Unity chỉ
 | P6 Battle Insights | DONE WITH EVIDENCE | `Run/BattleInsights.cs`, `BattleInsightsTests` (khớp log + replay), mẫu `Reports/RunBreakdown/run_1007.md` | — |
 | P7 Feel/audio polish | PARTIAL | toast nhỏ, telegraph assist, flash scale (trước đó) | Anim cast/hit/recover, SFX mới, preset cường độ: NOT STARTED (không kiểm chứng được nếu không có Unity) |
 | P8 Art pipeline + quality gate | DONE WITH EVIDENCE | `Tools/ArtPipeline/` (validate + ap.py), 8 self-test, CI job; 258 sprite tạo lại, 62 lỗi chặn → 0; rollback thử thật | 4/8 hướng: không làm (game dùng 1 hướng lật); SpriteAtlas: chỉ kế hoạch; EEVEE BLOCKED |
-| P9 Balance lab | DONE WITH EVIDENCE | `--lab` 3780 run, `Reports/Balance/lab/summary.md`; 2 sửa lỗi có A/B (`lab_ascension_ramp.md`) | A5/A10: 0% thắng với mọi bot — chưa sửa (cần quyết định thiết kế + playtest người) |
+| P9 Balance lab | DONE WITH EVIDENCE | `--lab` 3780 run, `--lab --ablation`; 3 sửa có A/B (`lab_ascension_ramp.md`, `lab_ascension_retune.md`) | A5/A10 đã chỉnh lại: A5 0% → 2,8% (bot tốt nhất 6,1%), A10 0% → 0,6% (2,8%); cần playtest người để chốt mục tiêu |
 | Build Windows/Android/iOS | BLOCKED | — | Cần Unity |
 
 ## Số liệu chính

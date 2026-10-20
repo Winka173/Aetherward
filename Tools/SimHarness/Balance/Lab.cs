@@ -18,6 +18,7 @@ namespace Aetherward.Balance
     /// relics, trap cards, thin drafts, runaway reaction chains, excessive stuns, proc explosions) plus a knob
     /// sensitivity table. Bots are not players; every number states its sample size.
     /// Usage: --lab [--seeds 30] [--lab-asc 0,5,10] [--out DIR] [--no-sensitivity]
+    ///        --lab --ablation [--seeds 20] [--lab-asc 5,10]   (difficulty.json module ablation, one knob off at a time)
     /// </summary>
     public static class Lab
     {
@@ -52,6 +53,8 @@ namespace Aetherward.Balance
             int[] ascs = Arg(args, "--lab-asc", "0,5,10").Split(',').Select(s => int.Parse(s, CultureInfo.InvariantCulture)).ToArray();
             string outDir = Arg(args, "--out", Path.Combine(root, "Reports", "Balance", "lab"));
             Directory.CreateDirectory(outDir);
+            if (Array.IndexOf(args, "--ablation") >= 0) return Ablation(contentDir, outDir, int.Parse(Arg(args, "--seeds", "20"), CultureInfo.InvariantCulture),
+                Arg(args, "--lab-asc", "5,10").Split(',').Select(x => int.Parse(x, CultureInfo.InvariantCulture)).ToArray());
             var jobs = new List<(string bot, string strat, DraftPolicy pol, string biome, int asc, ulong seed)>();
             foreach (var b in Bots)
                 foreach (BiomeDef bio in db.BiomeList)
@@ -272,6 +275,95 @@ namespace Aetherward.Balance
             var l = xs.OrderBy(x => x).ToList();
             return l.Count == 0 ? 0 : l[Math.Min(l.Count - 1, (int)Math.Floor(p * l.Count))];
         }
+
+        /// <summary>
+        /// Ascension ablation: re-runs every bot × biome at the given levels with one difficulty knob removed, so the
+        /// table shows which rule carries the difficulty. Paired seeds; each row is an independent content load.
+        /// </summary>
+        private static int Ablation(string contentDir, string outDir, int seeds, int[] ascs)
+        {
+            ContentDatabase probe = Load(contentDir);
+            var variants = new List<(string label, Action<DifficultyDef> apply)> { ("baseline (current difficulty.json)", d => { }) };
+            if (Environment.GetEnvironmentVariable("AW_ABLATION_CANDIDATES") == "1")
+            {
+                // Softened module package: halves the stat modules (speed, damage, hp, crystal) and keeps the rule modules.
+                Action<DifficultyDef> soft = d =>
+                {
+                    foreach (DifficultyModule m in d.Modules)
+                        if (m.Id == "enemy_speed" || m.Id == "enemy_damage" || m.Id == "enemy_hp" || m.Id == "crystal_max") m.Value *= 0.5f;
+                };
+                foreach (float hp in new[] { 0f, 0.01f, 0.015f, 0.02f })
+                {
+                    float h = hp;
+                    variants.Add(($"soft modules, hpPerLevel {h:0.###}", d => { soft(d); d.HpPerLevel = h; }));
+                    variants.Add(($"soft modules + no frenzy, hpPerLevel {h:0.###}", d => { soft(d); d.Modules.RemoveAll(m => m.Id == "frenzy"); d.HpPerLevel = h; }));
+                }
+                variants.Add(("all modules off, hpPerLevel kept", d => d.Modules.Clear()));
+                variants.Add(("all modules off, hpPerLevel 0", d => { d.Modules.Clear(); d.HpPerLevel = 0f; }));
+                variants.Add(("hpPerLevel 0.03", d => d.HpPerLevel = 0.03f));
+                variants.Add(("hpPerLevel 0.03, ramp to w12", d => { d.HpPerLevel = 0.03f; d.EarlyRampStart = 0.2f; d.EarlyRampFullWave = 12; }));
+                variants.Add(("hpPerLevel 0.02, ramp to w12", d => { d.HpPerLevel = 0.02f; d.EarlyRampStart = 0.2f; d.EarlyRampFullWave = 12; }));
+                variants.Add(("hpPerLevel 0.02, ramp w12, crystal_max halved", d =>
+                {
+                    d.HpPerLevel = 0.02f; d.EarlyRampStart = 0.2f; d.EarlyRampFullWave = 12;
+                    foreach (DifficultyModule m in d.Modules) if (m.Id == "crystal_max") m.Value *= 0.5f;
+                }));
+            }
+            else
+            {
+            if (Environment.GetEnvironmentVariable("AW_ABLATION_BASE") == "soft0")
+                variants.Add(("BASE soft0 (stat modules ×0.5, no frenzy, hpPerLevel 0)", Base));
+            variants.Add(("hpPerLevel 0 (no +8%/level HP & damage)", d => d.HpPerLevel = 0f));
+            variants.Add(("hpPerLevel 0.04", d => d.HpPerLevel = 0.04f));
+            variants.Add(("no early ramp", d => d.EarlyRampStart = 1f));
+            foreach (string id in probe.Difficulty.Modules.Select(m => m.Id).Distinct().OrderBy(x => x, StringComparer.Ordinal))
+            {
+                string mid = id;
+                variants.Add(($"no {mid}", d => { Base(d); d.Modules.RemoveAll(m => m.Id == mid); }));
+            }
+            }
+            var sb = new StringBuilder("# Ascension ablation (one difficulty knob removed per row)\n\n");
+            sb.AppendLine($"{Bots.Length} bots × {probe.BiomeList.Count} biomes × {seeds} paired seeds per level. Bots, not players. Win = clear wave 20.\n");
+            sb.AppendLine("| Variant | " + string.Join(" | ", ascs.Select(a => $"A{a} win | A{a} median wave")) + " |");
+            sb.AppendLine("|---|" + string.Join("|", ascs.Select(_ => "---|---")) + "|");
+            var sw = System.Diagnostics.Stopwatch.StartNew();
+            foreach (var v in variants)
+            {
+                ContentDatabase d = Load(contentDir);
+                v.apply(d.Difficulty);
+                var jobs = new List<(string bot, string strat, DraftPolicy pol, string biome, int asc, ulong seed)>();
+                foreach (var b in Bots)
+                    foreach (BiomeDef bio in d.BiomeList)
+                        foreach (int asc in ascs)
+                            for (int i = 0; i < seeds; i++)
+                                jobs.Add((b.label, b.strategy, b.policy, bio.Id, asc, (ulong)(5000 + i * 7919)));
+                var bag = new ConcurrentBag<Rec>();
+                Parallel.ForEach(jobs, new ParallelOptions { MaxDegreeOfParallelism = Environment.ProcessorCount }, j =>
+                    bag.Add(Play(d, j.bot, j.strat, j.pol, j.biome, j.asc, j.seed)));
+                var cells = ascs.Select(a =>
+                {
+                    var rs = bag.Where(r => r.Asc == a).ToList();
+                    var waves = rs.Select(r => r.Wave).OrderBy(x => x).ToList();
+                    return $"{rs.Count(r => r.Win) * 100.0 / rs.Count:F1}% | {waves[waves.Count / 2]}";
+                });
+                sb.AppendLine($"| {v.label} | {string.Join(" | ", cells)} |");
+                Console.WriteLine($"ablation: {v.label} done ({sw.Elapsed.TotalSeconds:F0}s)");
+            }
+            File.WriteAllText(Path.Combine(outDir, "ascension_ablation.md"), sb.ToString());
+            Console.WriteLine("ablation -> " + Path.Combine(outDir, "ascension_ablation.md"));
+            return 0;
+        }
+
+        private static void Base(DifficultyDef d)
+        {
+            if (Environment.GetEnvironmentVariable("AW_ABLATION_BASE") != "soft0") return;
+            foreach (DifficultyModule m in d.Modules)
+                if (m.Id == "enemy_speed" || m.Id == "enemy_damage" || m.Id == "enemy_hp" || m.Id == "crystal_max") m.Value *= 0.5f;
+            d.Modules.RemoveAll(m => m.Id == "frenzy");
+            d.HpPerLevel = 0f;
+        }
+
+        private static ContentDatabase Load(string contentDir) => ContentDatabase.Load(n => File.ReadAllText(Path.Combine(contentDir, n + ".json")));
 
         private static string Arg(string[] a, string k, string d)
         {

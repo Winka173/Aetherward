@@ -19,10 +19,10 @@ namespace Aetherward.Tests
             Assert.GreaterOrEqual(d.MaxLevel, 5);
             Assert.IsFalse(d.Has("frenzy", 0));
             Assert.IsTrue(d.Has("frenzy", 1));
-            Assert.AreEqual(0.08f, d.Value("enemy_speed", 2), 1e-4f);
-            Assert.AreEqual(1000f * 0.85f, Run(3).State.CrystalBaseMaxHp, 0.01f);
+            Assert.AreEqual(0.04f, d.Value("enemy_speed", 2), 1e-4f);    // retuned 0.08 -> 0.04 (lab_ascension_retune.md)
+            Assert.AreEqual(1000f * 0.92f, Run(3).State.CrystalBaseMaxHp, 0.01f);
             Assert.AreEqual(1000f, Run(2).State.CrystalBaseMaxHp, 0.01f);
-            Assert.AreEqual(0.1f, Run(4).BuildModifiers().EnemyDamagePct, 1e-4f);
+            Assert.AreEqual(0.05f, Run(4).BuildModifiers().EnemyDamagePct, 1e-4f);
             Assert.AreEqual(0f, Run(3).BuildModifiers().EnemyDamagePct, 1e-4f);
         }
 

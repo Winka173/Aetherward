@@ -121,7 +121,7 @@ namespace Aetherward.Tests
             Assert.Less(high.CrystalMaxHp, low.CrystalMaxHp);
             high.State.Wave = low.State.Wave = 6;
             BattleSetup hs = high.BuildBattleSetup();
-            Assert.AreEqual(8, hs.EliteEvery);
+            Assert.AreEqual(14, hs.EliteEvery);
             Assert.Greater(hs.HazardShift, 0f);
             Battle b = new Battle(hs);
             int elites = 0, total = 0;
@@ -132,7 +132,7 @@ namespace Aetherward.Tests
                 b.Journal.Clear();
             }
             foreach (EnemyUnit e in b.Enemies) if (e.Elite) elites++;
-            Assert.Greater(total, 8);
+            Assert.Greater(total, 14);
         }
 
         [Test]
