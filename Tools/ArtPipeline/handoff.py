@@ -609,7 +609,7 @@ def cmd_intake(a):
     dm = A.read_json(mpath)
     delivered = {d["id"]: d for d in dm.get("assets", [])}
     problems, notes, rows = [], [], []
-    stage = a.stage_dir or os.path.join(A.ROOT, "Temp", "ArtStage-" + a.batch)
+    stage = a.stage_dir or os.path.join(A.ROOT, "ArtCache", "ArtStage-" + a.batch)
     if os.path.exists(stage):
         shutil.rmtree(stage)
     shutil.copytree(A.ART, os.path.join(stage, "Art"))   # with .meta: the validator checks GUID/pivot/PPU against them
@@ -673,7 +673,7 @@ def cmd_intake(a):
     r = subprocess.run(["git", "status", "--porcelain", "--untracked-files=all"], cwd=A.ROOT, capture_output=True, text=True)
     stray = [ln[3:].strip('"') for ln in r.stdout.splitlines()]
     # other batches may be returning in parallel; each Codex sandbox can only write its own returns/<batch>/
-    stray = [s for s in stray if s and not s.startswith(("ArtHandoff/returns/", "Temp/"))
+    stray = [s for s in stray if s and not s.startswith(("ArtHandoff/returns/", "Temp/", "ArtCache/"))
              and not any(fnmatch.fnmatch(s, pat) for pat in (a.allow or []))]
     report = {"batch": a.batch, "delivered": len(delivered), "requested": sum(len(g["assets"]) for g in req["groups"]),
               "blocking": problems, "notes": notes, "rows": rows, "strayWorkingTreeChanges": stray, "stage": os.path.relpath(stage, A.ROOT)}
@@ -710,7 +710,7 @@ def main():
     i.add_argument("--batch", required=True)
     i.add_argument("--validate", action="store_true", help="also run validate.py on the stage")
     i.add_argument("--allow", nargs="*", help="extra working-tree paths (fnmatch) that may have changed")
-    i.add_argument("--stage-dir", default=None, help="default Temp/ArtStage-<batch>")
+    i.add_argument("--stage-dir", default=None, help="default ArtCache/ArtStage-<batch>")
     i.add_argument("--qa-dir", default=None, help="default ArtProduction/reviews/<batch>")
     br = sub.add_parser("brief")
     br.add_argument("--batch", required=True)

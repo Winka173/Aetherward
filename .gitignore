@@ -120,3 +120,6 @@ Tools/UnityRefs/
 # Python bytecode
 __pycache__/
 *.pyc
+
+# Art pipeline caches, staging and import backups (outside Temp/, which Unity deletes on quit)
+/ArtCache/

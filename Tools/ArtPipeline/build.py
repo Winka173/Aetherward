@@ -74,7 +74,7 @@ def main(argv=None):
     p.add_argument("--dry-run", action="store_true")
     p.add_argument("--import", dest="do_import", action="store_true")
     a = p.parse_args(argv)
-    stage = os.path.join(A.ROOT, "Temp", "ArtStage", a.scope)
+    stage = os.path.join(A.ROOT, "ArtCache", "ArtStage", a.scope)
     cache_file = os.path.join(stage, ".cache.json")
     ih = input_hash()
     cached = A.load_json(cache_file) if os.path.exists(cache_file) else {}

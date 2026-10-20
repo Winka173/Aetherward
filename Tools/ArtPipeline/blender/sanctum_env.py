@@ -1,7 +1,7 @@
 """Aetherward battlefield environment — Blender 4.5 headless, Cycles (OPTIX), real geometry, lights and shadows.
 
   blender -b --factory-startup --python Tools/ArtPipeline/blender/sanctum_env.py -- \
-      --arena Assets/_Aetherward/Resources/Content/arena.json --out Temp/Env/verdant [--samples 256] [--scale 1.0]
+      --arena Assets/_Aetherward/Resources/Content/arena.json --out ArtCache/Env/verdant [--samples 256] [--scale 1.0]
 
 Camera contract (matches the game, see ArtProduction/ART_BIBLE.md §3):
   orthographic, elevation 38.3 deg (sin = 0.62), 34 x 19.2 world units on screen, output 4080 x 2304 (PPU 120).
@@ -31,7 +31,7 @@ def arg(name, default=None):
 
 
 ARENA = arg("--arena")
-OUT = os.path.abspath(arg("--out", "Temp/Env/verdant"))
+OUT = os.path.abspath(arg("--out", "ArtCache/Env/verdant"))
 SAMPLES = int(arg("--samples", "256"))
 SCALE = float(arg("--scale", "1.0"))          # render-size multiplier for quick previews (0.25 = draft)
 SEED = int(arg("--seed", "7"))
@@ -174,10 +174,10 @@ dais = 1 - smooth(DAIS_R - 0.05, DAIS_R + 0.05, dais_d)
 moss = smooth(0.52, 0.72, fbm(5, 4, 2)) * (1 - road) * (1 - dais) * 0.85
 sx, sy = gx, gy * SIN                                           # screen coords
 edge = np.maximum(smooth(VIEW_W / 2 - 3.2, VIEW_W / 2 + 0.5, np.abs(sx)), smooth(VIEW_H / 2 - 2.4, VIEW_H / 2 + 0.5, sy))
-ridge = edge * (1 - smooth(0.9, 2.4, lane_d)) * (0.6 + 0.8 * fbm(4, 4, 3))
-near_drop = smooth(VIEW_H / 2 - 2.6, VIEW_H / 2 + 0.4, -sy) * (1 - smooth(0.9, 2.2, lane_d))
+ridge = edge * smooth(0.9, 2.4, lane_d) * (0.6 + 0.8 * fbm(4, 4, 3))        # border ridges, cut open by every lane
+near_drop = smooth(VIEW_H / 2 - 2.6, VIEW_H / 2 + 0.4, -sy) * smooth(0.9, 2.2, lane_d)
 rift = (1 - smooth(0.0, 0.9, lane_d)) * smooth(VIEW_W / 2 - 7.5, VIEW_W / 2 - 1.0, np.maximum(np.abs(sx), np.abs(sy) * 1.7))
-height = ridge * 2.6 - near_drop * 1.2 + (fbm(14, 4, 4) - 0.5) * 0.12 * (1 - road) - road * 0.04
+height = ridge * 2.6 - near_drop * 1.2 + (fbm(14, 4, 4) - 0.5) * 0.12 * (1 - road) - road * 0.0
 mask_rgb = np.stack([road, moss, rift, dais], -1)
 
 
@@ -231,12 +231,70 @@ def node(nt, kind, loc, **inputs):
     return n
 
 
-def sock(n, name, kind="RGBA", out=False):
+def sock(n, name, kind="RGBA", out=False):  # noqa: E302
     """Mix/MapRange nodes have one socket per data type with the same name; pick the one of `kind`."""
     for x in (n.outputs if out else n.inputs):
         if x.name == name and x.type == kind:
             return x
     raise KeyError(name)
+
+
+PH = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))), "ArtCache", "polyhaven")
+
+
+def ph_tex(tid, kind):
+    for ext in ("jpg", "png"):
+        f = os.path.join(PH, tid, "%s_%s.%s" % (tid, kind, ext))
+        if os.path.exists(f):
+            return f
+    raise FileNotFoundError("run Tools/ArtPipeline/fetch_polyhaven.py first: %s %s" % (tid, kind))
+
+
+def pbr_nodes(nt, tid, vec, loc, projection="FLAT", blend=0.0):
+    """Image nodes for a Poly Haven texture set: returns (colour socket, roughness socket, normal map node, height socket)."""
+    out = {}
+    for i, (kind, cs) in enumerate((("diff", "sRGB"), ("rough", "Non-Color"), ("nor_gl", "Non-Color"), ("disp", "Non-Color"))):
+        n = nt.nodes.new("ShaderNodeTexImage")
+        n.location = (loc[0], loc[1] - i * 280)
+        n.image = bpy.data.images.load(ph_tex(tid, kind), check_existing=True)
+        n.image.colorspace_settings.name = cs
+        n.projection = projection
+        n.projection_blend = blend
+        nt.links.new(vec, n.inputs["Vector"])
+        out[kind] = n
+    nm = nt.nodes.new("ShaderNodeNormalMap")
+    nm.location = (loc[0] + 300, loc[1] - 560)
+    nt.links.new(out["nor_gl"].outputs["Color"], nm.inputs["Color"])
+    return out["diff"].outputs["Color"], out["rough"].outputs["Color"], nm, out["disp"].outputs["Color"]
+
+
+def pbr_material(name, tid, scale, tint=None, value=1.0, projection="BOX", blend=0.25, normal=1.0):
+    """Props/dais: box-projected scan texture in object space, tinted toward the art-bible palette."""
+    m = bpy.data.materials.new(name)
+    m.use_nodes = True
+    nt = m.node_tree
+    bsdf = nt.nodes["Principled BSDF"]
+    tc = node(nt, "ShaderNodeTexCoord", (-1400, 0))
+    mp = node(nt, "ShaderNodeMapping", (-1200, 0))
+    mp.inputs["Scale"].default_value = (scale, scale, scale)
+    nt.links.new(tc.outputs["Object"], mp.inputs["Vector"])
+    col, rough, nm, _h = pbr_nodes(nt, tid, mp.outputs["Vector"], (-950, 300), projection, blend)
+    hsv = node(nt, "ShaderNodeHueSaturation", (-500, 300))
+    hsv.inputs["Saturation"].default_value = 0.55
+    hsv.inputs["Value"].default_value = value
+    nt.links.new(col, hsv.inputs["Color"])
+    if tint:
+        mix = node(nt, "ShaderNodeMix", (-250, 300), data_type="RGBA", blend_type="MULTIPLY")
+        mix.inputs["Factor"].default_value = 1.0
+        nt.links.new(hsv.outputs["Color"], sock(mix, "A"))
+        sock(mix, "B").default_value = lin(tint)
+        nt.links.new(sock(mix, "Result", out=True), bsdf.inputs["Base Color"])
+    else:
+        nt.links.new(hsv.outputs["Color"], bsdf.inputs["Base Color"])
+    nt.links.new(rough, bsdf.inputs["Roughness"])
+    nm.inputs["Strength"].default_value = normal
+    nt.links.new(nm.outputs["Normal"], bsdf.inputs["Normal"])
+    return m
 
 
 def stone_material(name, base, dark, scale, rough=0.85, bump=0.35):
@@ -359,12 +417,123 @@ def terrain_material():
     return m
 
 
-ter.data.materials.append(terrain_material())
+def terrain_pbr():
+    m = bpy.data.materials.new("GroundPBR")
+    m.use_nodes = True
+    # bump only: the scans' height maps have different mid-levels, and true displacement sank the ground below the
+    # roads (soft shadow bands along every lane). Large relief (ridges, drops) is real mesh geometry.
+    m.cycles.displacement_method = "BUMP"
+    nt = m.node_tree
+    L = nt.links
+    bsdf = nt.nodes["Principled BSDF"]
+    out = nt.nodes["Material Output"]
+    uvn = node(nt, "ShaderNodeUVMap", (-2200, 400))
+    mask = node(nt, "ShaderNodeTexImage", (-1950, 600), image=IMG_MASK, interpolation="Cubic")
+    L.new(uvn.outputs["UV"], mask.inputs["Vector"])
+    sep = node(nt, "ShaderNodeSeparateColor", (-1650, 600))
+    L.new(mask.outputs["Color"], sep.inputs["Color"])
+    tc = node(nt, "ShaderNodeTexCoord", (-2200, 0))
+
+    def mapped(scale, rot=0.0):
+        mp = node(nt, "ShaderNodeMapping", (-1950, 0))
+        mp.inputs["Scale"].default_value = (scale, scale, scale)
+        mp.inputs["Rotation"].default_value = (0, 0, rot)
+        L.new(tc.outputs["Object"], mp.inputs["Vector"])
+        return mp.outputs["Vector"]
+    g_col, g_r, g_n, g_h = pbr_nodes(nt, "burned_ground_01", mapped(0.22), (-1600, 200))
+    road_lift = node(nt, "ShaderNodeHueSaturation", (-1300, -2200))
+    road_lift.inputs["Value"].default_value = 1.45
+    # tiled densely: at large scale the aerial scan has dark linear features that read as stripes
+    a_col, a_r, a_n, a_h = pbr_nodes(nt, "aerial_ground_rock", mapped(0.42, 0.7), (-1600, -1000))
+    r_col0, r_r, r_n, r_h = pbr_nodes(nt, "cobblestone_large_01", mapped(0.34, 0.3), (-1600, -2200))
+    L.new(r_col0, road_lift.inputs["Color"])
+    r_col = road_lift.outputs["Color"]
+    c_col, c_r, c_n, c_h = pbr_nodes(nt, "cliff_side", mapped(0.16), (-1600, -3400))
+    # ground = ash/burned soil broken up by rocky patches (macro noise)
+    mac = node(nt, "ShaderNodeTexNoise", (-1250, 900), Scale=0.12, Detail=4.0)
+    L.new(tc.outputs["Object"], mac.inputs["Vector"])
+    macr = node(nt, "ShaderNodeMapRange", (-1050, 900), **{"From Min": 0.52, "From Max": 0.64, "To Max": 0.7})
+    L.new(mac.outputs["Fac"], macr.inputs["Value"])
+    # cliffs where the terrain is steep (ridges at the image border)
+    geo = node(nt, "ShaderNodeNewGeometry", (-1250, 1150))
+    sepn = node(nt, "ShaderNodeSeparateXYZ", (-1050, 1150))
+    L.new(geo.outputs["Normal"], sepn.inputs["Vector"])
+    steep = node(nt, "ShaderNodeMapRange", (-850, 1150), **{"From Min": 0.93, "From Max": 0.8})
+    L.new(sepn.outputs["Z"], steep.inputs["Value"])
+
+    def mixc(fac, a, b, loc):
+        mx = node(nt, "ShaderNodeMix", loc, data_type="RGBA")
+        L.new(fac, mx.inputs["Factor"])
+        L.new(a, sock(mx, "A"))
+        L.new(b, sock(mx, "B"))
+        return sock(mx, "Result", out=True)
+
+    def mixf(fac, a, b, loc):
+        mx = node(nt, "ShaderNodeMix", loc, data_type="FLOAT")
+        L.new(fac, mx.inputs["Factor"])
+        L.new(a, sock(mx, "A", "VALUE"))
+        L.new(b, sock(mx, "B", "VALUE"))
+        return sock(mx, "Result", "VALUE", out=True)
+
+    def mixv(fac, a, b, loc):
+        mx = node(nt, "ShaderNodeMix", loc, data_type="VECTOR")
+        L.new(fac, mx.inputs["Factor"])
+        L.new(a, sock(mx, "A", "VECTOR"))
+        L.new(b, sock(mx, "B", "VECTOR"))
+        return sock(mx, "Result", "VECTOR", out=True)
+    col = mixc(macr.outputs["Result"], g_col, a_col, (-600, 600))
+    col = mixc(sep.outputs["Red"], col, r_col, (-400, 600))
+    col = mixc(steep.outputs["Result"], col, c_col, (-200, 600))
+    rough = mixf(sep.outputs["Red"], mixf(macr.outputs["Result"], g_r, a_r, (-600, 300)), r_r, (-400, 300))
+    nrm = mixv(sep.outputs["Red"], mixv(macr.outputs["Result"], g_n.outputs["Normal"], a_n.outputs["Normal"], (-600, 0)), r_n.outputs["Normal"], (-400, 0))
+    nrm = mixv(steep.outputs["Result"], nrm, c_n.outputs["Normal"], (-200, 0))
+    # roads stay level with the ground (their scan's height map sits lower and made a shadowed trench): normals only
+    flat = node(nt, "ShaderNodeValue", (-700, -450))
+    flat.outputs[0].default_value = 0.5
+    hgt = mixf(sep.outputs["Red"], mixf(macr.outputs["Result"], g_h, a_h, (-600, -300)), flat.outputs[0], (-400, -300))
+    # moss: desaturated teal multiplied into the colour where the moss mask is
+    moss_c = node(nt, "ShaderNodeMix", (0, 750), data_type="RGBA", blend_type="MULTIPLY")
+    L.new(sep.outputs["Green"], moss_c.inputs["Factor"])
+    L.new(col, sock(moss_c, "A"))
+    sock(moss_c, "B").default_value = lin("#6f8a7c")
+    # palette pull toward cold basalt + a darker value (art bible: ground value 15-45 %)
+    hsv = node(nt, "ShaderNodeHueSaturation", (200, 750))
+    hsv.inputs["Saturation"].default_value = 0.5
+    hsv.inputs["Value"].default_value = 0.72
+    L.new(sock(moss_c, "Result", out=True), hsv.inputs["Color"])
+    tint = node(nt, "ShaderNodeMix", (400, 750), data_type="RGBA", blend_type="MULTIPLY")
+    tint.inputs["Factor"].default_value = 1.0
+    L.new(hsv.outputs["Color"], sock(tint, "A"))
+    sock(tint, "B").default_value = lin("#c9ccd6")
+    L.new(sock(tint, "Result", out=True), bsdf.inputs["Base Color"])
+    L.new(rough, bsdf.inputs["Roughness"])
+    L.new(nrm, bsdf.inputs["Normal"])
+    # rift cracks (emission) near the lane entrances, as before
+    rv = node(nt, "ShaderNodeTexVoronoi", (0, -700), Scale=5.0, feature="DISTANCE_TO_EDGE")
+    L.new(tc.outputs["Object"], rv.inputs["Vector"])
+    rl = node(nt, "ShaderNodeMapRange", (200, -700), **{"From Min": 0.0, "From Max": 0.012, "To Min": 1.0, "To Max": 0.0})
+    L.new(rv.outputs["Distance"], rl.inputs["Value"])
+    rm = node(nt, "ShaderNodeMath", (400, -700), operation="MULTIPLY")
+    L.new(rl.outputs["Result"], rm.inputs[0])
+    L.new(sep.outputs["Blue"], rm.inputs[1])
+    rm2 = node(nt, "ShaderNodeMath", (550, -700), operation="MULTIPLY")
+    L.new(rm.outputs["Value"], rm2.inputs[0])
+    rm2.inputs[1].default_value = 2.5
+    bsdf.inputs["Emission Color"].default_value = lin("#c0304a")
+    L.new(rm2.outputs["Value"], bsdf.inputs["Emission Strength"])
+    disp = node(nt, "ShaderNodeDisplacement", (600, -300), Midlevel=0.5, Scale=0.09)
+    L.new(hgt, disp.inputs["Height"])
+    L.new(disp.outputs["Displacement"], out.inputs["Displacement"])
+    return m
+
+
+ter.data.materials.append(terrain_pbr())
 
 # ----------------------------------------------------------------------------------------------- the sanctum dais
-MAT_DAIS = stone_material("Dais", "#5b5650", "#2a2826", 3.0, bump=0.25)
-MAT_STONE = stone_material("Ruin", "#68625a", "#24221f", 2.2, bump=0.5)
-MAT_DARK = stone_material("Basalt", "#3a3a3f", "#121215", 3.5, bump=0.6)
+MAT_DAIS = pbr_material("Dais", "castle_wall_slates", 0.35, tint="#b9b6b0", value=0.9)
+MAT_STONE = pbr_material("Ruin", "broken_wall", 0.45, tint="#c2bcb2", value=0.95)
+MAT_DARK = pbr_material("Basalt", "dark_rock", 0.6, tint="#8a8c95", value=0.7)
+MAT_MOSSY = pbr_material("MossyRock", "mossy_rock", 0.5, tint="#a4b0a8", value=0.85)
 
 
 def add_cyl(name, r, depth, loc, mat, verts=96, bevel=0.03):
@@ -470,9 +639,10 @@ BRAZIERS = []
 def brazier(x, y):
     z = ground_z(x, y)
     b = G(x, y, z)
-    add_cyl("BrazierStand", 0.16, 0.9, (b.x, b.y, z + 0.45), MAT_DARK, verts=8)
-    bowl = add_cyl("BrazierBowl", 0.42, 0.22, (b.x, b.y, z + 0.95), MAT_DARK, verts=16, bevel=0.06)
-    del bowl
+    add_cyl("BrazierStand", 0.2, 0.8, (b.x, b.y, z + 0.4), MAT_DARK, verts=8)
+    model("stone_fire_pit", x, y + 0.8 * COS * 0 , 0.75, rot=0.0)
+    for o in [o for o in sc.collection.objects if o.name.startswith("stone_fire_pit")][-len(MODEL_CACHE["stone_fire_pit"]):]:
+        o.location.z += 0.8
     bpy.ops.mesh.primitive_uv_sphere_add(radius=0.22, location=(b.x, b.y, z + 1.12))
     f = bpy.context.object
     f.scale = (1, 1, 1.6)
@@ -484,7 +654,7 @@ def brazier(x, y):
     fm.node_tree.links.new(em.outputs[0], fm.node_tree.nodes["Material Output"].inputs["Surface"])
     f.data.materials.append(fm)
     light = bpy.data.lights.new("BrazierLight", "POINT")
-    light.energy = 260
+    light.energy = 140
     light.color = lin("#62e0cf")[:3]
     light.shadow_soft_size = 0.2
     lo = bpy.data.objects.new("BrazierLight", light)
@@ -561,32 +731,99 @@ def arch(x, y):
     span, h = 2.2, 2.4
     for dx in (-span / 2, span / 2):
         add_cyl("ArchLeg", 0.32, h, (b.x + dx, b.y, z + h / 2), MAT_STONE, verts=8, bevel=0.04)
-    bpy.ops.mesh.primitive_torus_add(major_radius=span / 2, minor_radius=0.28, major_segments=40, minor_segments=8,
-                                     location=(b.x, b.y, z + h), rotation=(math.pi / 2, 0, 0))
+    bpy.ops.mesh.primitive_cube_add(size=1, location=(b.x, b.y, z + h + 0.22))
     t = bpy.context.object
-    bpy.ops.mesh.primitive_cube_add(size=1, location=(b.x + span * 0.35, b.y, z + h + span * 0.45))
+    t.scale = (span + 0.9, 0.55, 0.42)
+    t.rotation_euler = (0, math.radians(random.uniform(-4, 4)), 0)
+    bv = t.modifiers.new("bevel", "BEVEL")
+    bv.width = 0.05
+    bv.segments = 2
+    bpy.ops.mesh.primitive_cube_add(size=1, location=(b.x + span * 0.55, b.y, z + h + 0.3))
     cut = bpy.context.object
-    cut.scale = (1.0, 1.5, 1.2)
-    cut.rotation_euler = (0, 0.5, 0)
+    cut.scale = (0.7, 1.2, 0.9)
+    cut.rotation_euler = (0, 0.6, 0.2)
     cut.hide_render = True
     bl = t.modifiers.new("broken", "BOOLEAN")
     bl.object = cut
     bl.operation = "DIFFERENCE"
     t.data.materials.append(MAT_STONE)
-    bpy.ops.object.shade_smooth()
     for k in range(4):
         rock(G(x + span * 0.5 + random.uniform(0, 0.8), y + random.uniform(-0.4, 0.2), z), random.uniform(0.12, 0.3), MAT_STONE)
+
+
+MODEL_CACHE = {}
+MODEL_SCALE = 0.72          # Poly Haven is in metres; a hero is ~1.3 units for ~1.8 m
+
+
+GRADED = set()
+
+
+def grade_material(m, sat=0.45, value=0.8, tint="#b8bcc8"):
+    """Scan models come in warm daylight colours: desaturate, darken and cool them toward the art-bible basalt."""
+    if m is None or m.name in GRADED or not m.use_nodes:
+        return
+    GRADED.add(m.name)
+    nt = m.node_tree
+    for b in [n for n in nt.nodes if n.type == "BSDF_PRINCIPLED"]:
+        inp = b.inputs["Base Color"]
+        if not inp.is_linked:
+            continue
+        src = inp.links[0].from_socket
+        nt.links.remove(inp.links[0])
+        hsv = nt.nodes.new("ShaderNodeHueSaturation")
+        hsv.inputs["Saturation"].default_value = sat
+        hsv.inputs["Value"].default_value = value
+        nt.links.new(src, hsv.inputs["Color"])
+        mx = nt.nodes.new("ShaderNodeMix")
+        mx.data_type = "RGBA"
+        mx.blend_type = "MULTIPLY"
+        mx.inputs["Factor"].default_value = 1.0
+        nt.links.new(hsv.outputs["Color"], sock(mx, "A"))
+        sock(mx, "B").default_value = lin(tint)
+        nt.links.new(sock(mx, "Result", out=True), inp)
+
+
+def model(mid, x, y, size=1.0, rot=None, axis="z"):
+    """Append (once) and instance a Poly Haven model standing on the terrain at a game position.
+    size = target height in world units (axis 'z') or target footprint width (axis 'xy') for rock sets."""
+    if mid not in MODEL_CACHE:
+        path = os.path.join(PH, mid, "%s_2k.blend" % mid)
+        with bpy.data.libraries.load(path, link=False) as (src, dst):
+            dst.objects = [n for n in src.objects]
+        objs = [o for o in dst.objects if o is not None and o.type == "MESH"]
+        for o in objs:
+            for slot in o.material_slots:
+                grade_material(slot.material)
+        bpy.context.view_layer.update()
+        pts = [o.matrix_world @ Vector(c) for o in objs for c in o.bound_box]
+        lo = Vector((min(p.x for p in pts), min(p.y for p in pts), min(p.z for p in pts)))
+        hi = Vector((max(p.x for p in pts), max(p.y for p in pts), max(p.z for p in pts)))
+        MODEL_CACHE[mid] = (objs, lo, hi)
+    objs, lo, hi = MODEL_CACHE[mid]
+    ext = (hi.z - lo.z) if axis == "z" else max(hi.x - lo.x, hi.y - lo.y)
+    k = size / max(ext, 1e-4)
+    centre = Vector(((lo.x + hi.x) / 2, (lo.y + hi.y) / 2, lo.z))
+    z = ground_z(x, y)
+    b = G(x, y, z)
+    r = random.random() * math.tau if rot is None else rot
+    from mathutils import Matrix
+    place = Matrix.Translation((b.x, b.y, z - 0.02)) @ Matrix.Rotation(r, 4, "Z") @ Matrix.Scale(k, 4) @ Matrix.Translation(-centre)
+    for o in objs:
+        c = o.copy()
+        sc.collection.objects.link(c)
+        c.matrix_world = place @ o.matrix_world
 
 
 # candidate prop spots in screen space, filtered by lane / dais clearance
 spots = [(x, y) for x in np.linspace(-15.5, 15.5, 23) for y in np.linspace(-8.6, 8.6, 13)]
 random.shuffle(spots)
 placed = []
-kinds = ["arch"] * 2 + ["brazier"] * 2 + ["crystals"] * 4 + ["pillar"] * 5 + ["broken"] * 7 + ["fallen"] * 3 + ["tree"] * 3 + ["rocks"] * 10
+kinds = (["statue"] * 2 + ["arch"] * 2 + ["brazier"] * 2 + ["crystals"] * 4 + ["pillar"] * 4 + ["broken"] * 6 + ["fallen"] * 3
+         + ["deadtree"] * 3 + ["roots"] * 2 + ["mossrocks"] * 6 + ["boulder"] * 4 + ["stump"] * 2)
 for x, y in spots:
     if not kinds:
         break
-    need = 2.6 if kinds[0] == "arch" else 1.7
+    need = {"arch": 2.8, "deadtree": 2.6, "statue": 2.2, "mossrocks": 2.4, "roots": 2.2, "boulder": 2.0}.get(kinds[0], 1.7)
     if not lane_clear(x, y, need) or any(math.hypot(x - px, y - py) < 2.4 for px, py in placed):
         continue
     kind = kinds.pop(0)
@@ -599,6 +836,22 @@ for x, y in spots:
         brazier(x, y)
     elif kind == "tree":
         dead_tree(x, y)
+    elif kind == "statue":
+        add_cyl("StatuePlinth", 0.6, 0.45, (G(x, y).x, G(x, y).y, ground_z(x, y) + 0.22), MAT_STONE, verts=8, bevel=0.05)
+        model("gothic_statue", x, y, 2.3, rot=math.radians(180 + random.uniform(-30, 30)))
+    elif kind == "deadtree":
+        if random.random() < 0.5:
+            model("dead_quiver_trunk", x, y, random.uniform(2.6, 3.2))                  # standing
+        else:
+            model("dead_tree_trunk_02", x, y, random.uniform(1.8, 2.3), axis="xy")     # fallen log
+    elif kind == "roots":
+        model("root_cluster_01", x, y, 1.6, axis="xy")
+    elif kind == "mossrocks":
+        model(random.choice(["rock_moss_set_01", "rock_moss_set_02"]), x, y, random.uniform(1.6, 2.4), axis="xy")
+    elif kind == "boulder":
+        model(random.choice(["namaqualand_boulder_02", "namaqualand_boulder_05"]), x, y, random.uniform(0.9, 1.4))
+    elif kind == "stump":
+        model("tree_stump_01", x, y, 0.7)
     elif kind == "arch":
         arch(x, y)
     elif kind == "crystals":
@@ -607,16 +860,16 @@ for x, y in spots:
         fallen_pillar(x, y)
     else:
         for k in range(random.randint(2, 5)):
-            rock(G(x + random.uniform(-0.7, 0.7), y + random.uniform(-0.4, 0.4), ground_z(x, y)), random.uniform(0.15, 0.5), MAT_DARK)
+            rock(G(x + random.uniform(-0.7, 0.7), y + random.uniform(-0.4, 0.4), ground_z(x, y)), random.uniform(0.15, 0.5), MAT_MOSSY)
 # rubble along the road edges
-for _ in range(260):
+for _ in range(420):
     x, y = random.uniform(-16.5, 16.5), random.uniform(-9.2, 9.2)
     gy_ = y / SIN
     vi = int((gy_ - GY0) / (GY1 - GY0) * (MH - 1))
     ui = int((x - GX0) / (GX1 - GX0) * (MW - 1))
     d = lane_d[min(max(vi, 0), MH - 1), min(max(ui, 0), MW - 1)]
     if 0.85 < d < 1.25 and math.hypot(x, (y + 0.55) / SIN) > DAIS_R:
-        rock(G(x, y, ground_z(x, y)), random.uniform(0.05, 0.14), MAT_STONE)
+        rock(G(x, y, ground_z(x, y)), random.uniform(0.05, 0.16), random.choice([MAT_STONE, MAT_MOSSY, MAT_DARK]))
 
 grass_tex = bpy.data.textures.new("mossden", "IMAGE")
 grass_tex.image = to_image("mossden", np.stack([moss * (1 - road_edge)] * 3, -1))
@@ -658,6 +911,7 @@ crys = bpy.data.lights.new("CrystalLight", "POINT")
 crys.energy = 2200
 crys.color = lin("#8fe3ff")[:3]
 crys.shadow_soft_size = 0.25
+crys.use_shadow = False          # its shadows from the lane-mouth steps would darken the roads radially
 co_ = bpy.data.objects.new("CrystalLight", crys)
 co_.location = (dais_c.x, dais_c.y, z0 + 1.6)
 sc.collection.objects.link(co_)
@@ -692,6 +946,16 @@ ct.links.new(rl.outputs["Image"], kw.inputs["Image"])
 ct.links.new(rl.outputs["Image"], mixk.inputs[1])
 ct.links.new(kw.outputs["Image"], mixk.inputs[2])
 ct.links.new(mixk.outputs["Image"], comp.inputs["Image"])
+if "--nodisp" in ARGS:
+    for m in bpy.data.materials:
+        m.cycles.displacement_method = "BUMP"
+if "--nofill" in ARGS:
+    fill.energy = 0.0
+if "--clay" in ARGS:     # diagnostics: one grey material everywhere, to tell geometry/light problems from texture ones
+    clay = bpy.data.materials.new("Clay")
+    clay.use_nodes = True
+    clay.node_tree.nodes["Principled BSDF"].inputs["Base Color"].default_value = (0.35, 0.35, 0.35, 1)
+    bpy.context.view_layer.material_override = clay
 sc.render.filepath = os.path.join(OUT, "flat_raw.png")
 bpy.ops.render.render(write_still=True)
 
@@ -705,6 +969,8 @@ meta = {
     "shadowLengthPerHeight": round(shadow_len * math.hypot(gdir.normalized().x, gdir.normalized().y * SIN), 4),
     "crystalScreen": [0.0, -0.55],
     "braziersScreen": [[round(a, 3), round(b, 3)] for a, b in BRAZIERS],
+    "braziersFlat": [round(v, 3) for p_ in BRAZIERS for v in p_],
+    "aetherCrystalsFlat": [round(v, 3) for p_ in CRYSTALS for v in p_],
     "aetherCrystalsScreen": [[round(a, 3), round(b, 3)] for a, b in CRYSTALS],
     "samples": SAMPLES,
 }

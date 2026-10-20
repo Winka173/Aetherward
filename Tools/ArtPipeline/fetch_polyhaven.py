@@ -3,7 +3,7 @@
 
   python Tools/ArtPipeline/fetch_polyhaven.py [--res 2k]
 
-Files go to Temp/EnvAssets/polyhaven/<id>/ (git-ignored, re-downloadable). Every asset is recorded with its
+Files go to ArtCache/polyhaven/<id>/ (git-ignored, re-downloadable). Every asset is recorded with its
 source URL, author and licence in ArtProduction/REFERENCE_MANIFEST.json. Poly Haven publishes all assets as CC0.
 """
 import argparse
@@ -14,7 +14,7 @@ import sys
 import urllib.request
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
-CACHE = os.path.join(ROOT, "Temp", "EnvAssets", "polyhaven")
+CACHE = os.path.join(ROOT, "ArtCache", "polyhaven")   # not Temp/: Unity deletes Temp/ when the Editor quits
 MANIFEST = os.path.join(ROOT, "ArtProduction", "REFERENCE_MANIFEST.json")
 TEXTURES = ["burned_ground_01", "aerial_ground_rock", "cobblestone_large_01", "castle_wall_slates", "broken_wall",
             "mossy_rock", "cliff_side", "dark_rock"]
@@ -71,7 +71,7 @@ def main():
         print("have " + os.path.relpath(dst, ROOT), flush=True)
         records.append({"id": mid, "type": "model", "files": {"blend": os.path.relpath(dst, ROOT).replace("\\", "/")},
                         "url": "https://polyhaven.com/a/" + mid, "authors": sorted(info.get("authors", {})), "license": "CC0 1.0 (Poly Haven)"})
-    json.dump({"_doc": "Third-party inputs used by the art pipeline. Only CC0 sources; files are cached under Temp/ and re-fetched by "
+    json.dump({"_doc": "Third-party inputs used by the art pipeline. Only CC0 sources; files are cached under ArtCache/ and re-fetched by "
                        "Tools/ArtPipeline/fetch_polyhaven.py.", "assets": records}, open(MANIFEST, "w", encoding="utf-8"), indent=1)
     print("manifest -> " + os.path.relpath(MANIFEST, ROOT))
     return 0

@@ -2,51 +2,22 @@
  "batch": "B01",
  "delivered": 77,
  "requested": 77,
- "blocking": [
-  "Icons/element_fire: blocked (Pending production in priority order)",
-  "Icons/element_water: blocked (Pending production in priority order)",
-  "Icons/element_wind: blocked (Pending production in priority order)",
-  "Icons/element_earth: blocked (Pending production in priority order)",
-  "Icons/role_guardian: blocked (Pending production in priority order)",
-  "Icons/role_mage: blocked (Pending production in priority order)",
-  "Icons/role_ranger: blocked (Pending production in priority order)",
-  "Icons/role_healer: blocked (Pending production in priority order)",
-  "Icons/status_burn: blocked (Pending production in priority order)",
-  "Icons/status_wet: blocked (Pending production in priority order)",
-  "Icons/status_stun: blocked (Pending production in priority order)",
-  "Icons/status_shield: blocked (Pending production in priority order)",
-  "Icons/reaction_vaporize: blocked (Pending production in priority order)",
-  "Icons/reaction_firestorm: blocked (Pending production in priority order)",
-  "Icons/ui_crystal: blocked (Pending production in priority order)",
-  "Icons/ui_gold: blocked (Pending production in priority order)",
-  "Icons/ui_wave: blocked (Pending production in priority order)"
- ],
+ "blocking": [],
  "notes": [
-  "Heroes/ignis_idle: edge luminance 0.20 vs ground 0.23 (needs >= +0.10): add rim light / lift edge values",
-  "Enemies/grunt_a: edge luminance 0.25 vs ground 0.23 (needs >= +0.10): add rim light / lift edge values",
   "Heroes/ignis_cast: edge luminance 0.31 vs ground 0.23 (needs >= +0.10): add rim light / lift edge values",
-  "Heroes/ignis_downed: edge luminance 0.23 vs ground 0.23 (needs >= +0.10): add rim light / lift edge values",
-  "Heroes/ignis_evoA: edge luminance 0.24 vs ground 0.23 (needs >= +0.10): add rim light / lift edge values",
   "Heroes/ignis_evoA_cast: edge luminance 0.30 vs ground 0.23 (needs >= +0.10): add rim light / lift edge values",
   "Heroes/terra_idle: edge luminance 0.29 vs ground 0.23 (needs >= +0.10): add rim light / lift edge values",
   "Heroes/sylph_idle: edge luminance 0.28 vs ground 0.23 (needs >= +0.10): add rim light / lift edge values",
   "Heroes/sylph_downed: edge luminance 0.29 vs ground 0.23 (needs >= +0.10): add rim light / lift edge values",
-  "Enemies/grunt_b: edge luminance 0.25 vs ground 0.23 (needs >= +0.10): add rim light / lift edge values",
-  "Enemies/juggernaut_a: edge luminance 0.21 vs ground 0.23 (needs >= +0.10): add rim light / lift edge values",
-  "Enemies/juggernaut_b: edge luminance 0.22 vs ground 0.23 (needs >= +0.10): add rim light / lift edge values",
-  "Enemies/hexcaster_a: edge luminance 0.20 vs ground 0.23 (needs >= +0.10): add rim light / lift edge values",
-  "Enemies/hexcaster_b: edge luminance 0.19 vs ground 0.23 (needs >= +0.10): add rim light / lift edge values",
   "Enemies/storm_harpy_a: edge luminance 0.29 vs ground 0.23 (needs >= +0.10): add rim light / lift edge values",
-  "Enemies/storm_harpy_b: edge luminance 0.28 vs ground 0.23 (needs >= +0.10): add rim light / lift edge values",
-  "Enemies/rift_warden_a: edge luminance 0.24 vs ground 0.23 (needs >= +0.10): add rim light / lift edge values",
-  "Enemies/rift_warden_b: edge luminance 0.24 vs ground 0.23 (needs >= +0.10): add rim light / lift edge values"
+  "Enemies/storm_harpy_b: edge luminance 0.28 vs ground 0.23 (needs >= +0.10): add rim light / lift edge values"
  ],
  "rows": [
   {
    "id": "Heroes/ignis_idle",
    "group": "style_lock",
    "status": "OK",
-   "footRow": 372
+   "footRow": 371
   },
   {
    "id": "Enemies/grunt_a",
@@ -76,7 +47,7 @@
    "id": "Heroes/ignis_evoA",
    "group": "heroes_ignis_full",
    "status": "OK",
-   "footRow": 372
+   "footRow": 371
   },
   {
    "id": "Heroes/ignis_evoA_cast",
@@ -186,7 +157,7 @@
    "id": "Enemies/juggernaut_b",
    "group": "enemies",
    "status": "OK",
-   "footRow": 236
+   "footRow": 235
   },
   {
    "id": "Enemies/hexcaster_a",
@@ -216,13 +187,13 @@
    "id": "Enemies/rift_warden_a",
    "group": "boss",
    "status": "OK",
-   "footRow": 486
+   "footRow": 485
   },
   {
    "id": "Enemies/rift_warden_b",
    "group": "boss",
    "status": "OK",
-   "footRow": 486
+   "footRow": 485
   },
   {
    "id": "World/crystal_cracked",
@@ -329,87 +300,87 @@
   {
    "id": "Icons/element_fire",
    "group": "icons",
-   "status": "BLOCKED"
+   "status": "OK"
   },
   {
    "id": "Icons/element_water",
    "group": "icons",
-   "status": "BLOCKED"
+   "status": "OK"
   },
   {
    "id": "Icons/element_wind",
    "group": "icons",
-   "status": "BLOCKED"
+   "status": "OK"
   },
   {
    "id": "Icons/element_earth",
    "group": "icons",
-   "status": "BLOCKED"
+   "status": "OK"
   },
   {
    "id": "Icons/role_guardian",
    "group": "icons",
-   "status": "BLOCKED"
+   "status": "OK"
   },
   {
    "id": "Icons/role_mage",
    "group": "icons",
-   "status": "BLOCKED"
+   "status": "OK"
   },
   {
    "id": "Icons/role_ranger",
    "group": "icons",
-   "status": "BLOCKED"
+   "status": "OK"
   },
   {
    "id": "Icons/role_healer",
    "group": "icons",
-   "status": "BLOCKED"
+   "status": "OK"
   },
   {
    "id": "Icons/status_burn",
    "group": "icons",
-   "status": "BLOCKED"
+   "status": "OK"
   },
   {
    "id": "Icons/status_wet",
    "group": "icons",
-   "status": "BLOCKED"
+   "status": "OK"
   },
   {
    "id": "Icons/status_stun",
    "group": "icons",
-   "status": "BLOCKED"
+   "status": "OK"
   },
   {
    "id": "Icons/status_shield",
    "group": "icons",
-   "status": "BLOCKED"
+   "status": "OK"
   },
   {
    "id": "Icons/reaction_vaporize",
    "group": "icons",
-   "status": "BLOCKED"
+   "status": "OK"
   },
   {
    "id": "Icons/reaction_firestorm",
    "group": "icons",
-   "status": "BLOCKED"
+   "status": "OK"
   },
   {
    "id": "Icons/ui_crystal",
    "group": "icons",
-   "status": "BLOCKED"
+   "status": "OK"
   },
   {
    "id": "Icons/ui_gold",
    "group": "icons",
-   "status": "BLOCKED"
+   "status": "OK"
   },
   {
    "id": "Icons/ui_wave",
    "group": "icons",
-   "status": "BLOCKED"
+   "status": "OK"
   },
   {
    "id": "UI/panel_dark",
@@ -458,14 +429,18 @@
   }
  ],
  "strayWorkingTreeChanges": [
+  ".gitignore",
+  "ArtProduction/REFERENCE_MANIFEST.json",
+  "Tools/ArtPipeline/ap.py",
+  "Tools/ArtPipeline/blender/sanctum_env.py",
+  "Tools/ArtPipeline/build.py",
+  "Tools/ArtPipeline/fetch_polyhaven.py",
   "Tools/ArtPipeline/handoff.py",
-  "ArtProduction/reviews/B01/intake.json",
   "ArtProduction/reviews/B01/validator/assets.csv",
   "ArtProduction/reviews/B01/validator/issues.csv",
   "ArtProduction/reviews/B01/validator/report.json",
   "ArtProduction/reviews/B01/validator/summary.html",
-  "ArtProduction/reviews/B01/validator/summary.md",
-  "Tools/ArtPipeline/blender/sanctum_env.py"
+  "ArtProduction/reviews/B01/validator/summary.md"
  ],
- "stage": "Temp\\ArtStage-B01"
+ "stage": "ArtCache\\ArtStage-B01"
 }

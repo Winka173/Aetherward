@@ -11,8 +11,8 @@
   rollback  [--journal FILE]              restore the files replaced by the last (or given) import
   lock                                    write Tools/ArtPipeline/manifest.lock.json (hashes of live outputs)
 
-Staging defaults to Temp/ArtStage (git-ignored). Imports never touch hand-authored files: only paths listed in
-the generator manifest are written, every replaced file is backed up first (Temp/ArtBackups/<stamp>/), and the
+Staging defaults to ArtCache/ArtStage (git-ignored; never Temp/, which Unity deletes on quit). Imports never touch hand-authored files: only paths listed in
+the generator manifest are written, every replaced file is backed up first (ArtCache/ArtBackups/<stamp>/), and the
 journal makes the import reversible. Run from the repository root.
 """
 import argparse
@@ -33,8 +33,8 @@ import artlib as A  # noqa: E402
 import validate as V  # noqa: E402
 
 PIPELINE_VERSION = "1.0"
-DEFAULT_STAGE = os.path.join(A.ROOT, "Temp", "ArtStage")
-BACKUPS = os.path.join(A.ROOT, "Temp", "ArtBackups")
+DEFAULT_STAGE = os.path.join(A.ROOT, "ArtCache", "ArtStage")   # not Temp/: Unity deletes Temp/ when the Editor quits
+BACKUPS = os.path.join(A.ROOT, "ArtCache", "ArtBackups")   # rollback data must survive Unity sessions
 LOCK = os.path.join(A.HERE, "manifest.lock.json")
 LIVE_REL = "Assets/_Aetherward/Resources/Art"
 BLENDER_DIR = os.path.join(A.HERE, "blender")
@@ -281,7 +281,7 @@ def pack_group(items, page, pad):
 def cmd_pack(a):
     """Packs tight-trimmed sprites per folder into 2048² pages (Temp/ArtAtlas), checks padding/bleed, writes the plan.
     Unity SpriteAtlas assets are not generated: creating/verifying them needs the Unity Editor (BLOCKED here)."""
-    out_dir = os.path.join(A.ROOT, "Temp", "ArtAtlas")
+    out_dir = os.path.join(A.ROOT, "ArtCache", "ArtAtlas")
     shutil.rmtree(out_dir, ignore_errors=True)
     os.makedirs(out_dir, exist_ok=True)
     groups = {}

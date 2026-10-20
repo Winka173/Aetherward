@@ -1,14 +1,14 @@
 {
- "_doc": "Third-party inputs used by the art pipeline. Only CC0 sources; files are cached under Temp/ and re-fetched by Tools/ArtPipeline/fetch_polyhaven.py.",
+ "_doc": "Third-party inputs used by the art pipeline. Only CC0 sources; files are cached under ArtCache/ and re-fetched by Tools/ArtPipeline/fetch_polyhaven.py.",
  "assets": [
   {
    "id": "burned_ground_01",
    "type": "texture",
    "files": {
-    "diff": "Temp/EnvAssets/polyhaven/burned_ground_01/burned_ground_01_diff.jpg",
-    "nor_gl": "Temp/EnvAssets/polyhaven/burned_ground_01/burned_ground_01_nor_gl.jpg",
-    "rough": "Temp/EnvAssets/polyhaven/burned_ground_01/burned_ground_01_rough.jpg",
-    "disp": "Temp/EnvAssets/polyhaven/burned_ground_01/burned_ground_01_disp.jpg"
+    "diff": "ArtCache/polyhaven/burned_ground_01/burned_ground_01_diff.jpg",
+    "nor_gl": "ArtCache/polyhaven/burned_ground_01/burned_ground_01_nor_gl.jpg",
+    "rough": "ArtCache/polyhaven/burned_ground_01/burned_ground_01_rough.jpg",
+    "disp": "ArtCache/polyhaven/burned_ground_01/burned_ground_01_disp.jpg"
    },
    "url": "https://polyhaven.com/a/burned_ground_01",
    "authors": [
@@ -20,10 +20,10 @@
    "id": "aerial_ground_rock",
    "type": "texture",
    "files": {
-    "diff": "Temp/EnvAssets/polyhaven/aerial_ground_rock/aerial_ground_rock_diff.jpg",
-    "nor_gl": "Temp/EnvAssets/polyhaven/aerial_ground_rock/aerial_ground_rock_nor_gl.jpg",
-    "rough": "Temp/EnvAssets/polyhaven/aerial_ground_rock/aerial_ground_rock_rough.jpg",
-    "disp": "Temp/EnvAssets/polyhaven/aerial_ground_rock/aerial_ground_rock_disp.jpg"
+    "diff": "ArtCache/polyhaven/aerial_ground_rock/aerial_ground_rock_diff.jpg",
+    "nor_gl": "ArtCache/polyhaven/aerial_ground_rock/aerial_ground_rock_nor_gl.jpg",
+    "rough": "ArtCache/polyhaven/aerial_ground_rock/aerial_ground_rock_rough.jpg",
+    "disp": "ArtCache/polyhaven/aerial_ground_rock/aerial_ground_rock_disp.jpg"
    },
    "url": "https://polyhaven.com/a/aerial_ground_rock",
    "authors": [
@@ -35,10 +35,10 @@
    "id": "cobblestone_large_01",
    "type": "texture",
    "files": {
-    "diff": "Temp/EnvAssets/polyhaven/cobblestone_large_01/cobblestone_large_01_diff.jpg",
-    "nor_gl": "Temp/EnvAssets/polyhaven/cobblestone_large_01/cobblestone_large_01_nor_gl.jpg",
-    "rough": "Temp/EnvAssets/polyhaven/cobblestone_large_01/cobblestone_large_01_rough.jpg",
-    "disp": "Temp/EnvAssets/polyhaven/cobblestone_large_01/cobblestone_large_01_disp.jpg"
+    "diff": "ArtCache/polyhaven/cobblestone_large_01/cobblestone_large_01_diff.jpg",
+    "nor_gl": "ArtCache/polyhaven/cobblestone_large_01/cobblestone_large_01_nor_gl.jpg",
+    "rough": "ArtCache/polyhaven/cobblestone_large_01/cobblestone_large_01_rough.jpg",
+    "disp": "ArtCache/polyhaven/cobblestone_large_01/cobblestone_large_01_disp.jpg"
    },
    "url": "https://polyhaven.com/a/cobblestone_large_01",
    "authors": [
@@ -50,10 +50,10 @@
    "id": "castle_wall_slates",
    "type": "texture",
    "files": {
-    "diff": "Temp/EnvAssets/polyhaven/castle_wall_slates/castle_wall_slates_diff.jpg",
-    "nor_gl": "Temp/EnvAssets/polyhaven/castle_wall_slates/castle_wall_slates_nor_gl.jpg",
-    "rough": "Temp/EnvAssets/polyhaven/castle_wall_slates/castle_wall_slates_rough.jpg",
-    "disp": "Temp/EnvAssets/polyhaven/castle_wall_slates/castle_wall_slates_disp.jpg"
+    "diff": "ArtCache/polyhaven/castle_wall_slates/castle_wall_slates_diff.jpg",
+    "nor_gl": "ArtCache/polyhaven/castle_wall_slates/castle_wall_slates_nor_gl.jpg",
+    "rough": "ArtCache/polyhaven/castle_wall_slates/castle_wall_slates_rough.jpg",
+    "disp": "ArtCache/polyhaven/castle_wall_slates/castle_wall_slates_disp.jpg"
    },
    "url": "https://polyhaven.com/a/castle_wall_slates",
    "authors": [
@@ -65,10 +65,10 @@
    "id": "broken_wall",
    "type": "texture",
    "files": {
-    "diff": "Temp/EnvAssets/polyhaven/broken_wall/broken_wall_diff.jpg",
-    "nor_gl": "Temp/EnvAssets/polyhaven/broken_wall/broken_wall_nor_gl.jpg",
-    "rough": "Temp/EnvAssets/polyhaven/broken_wall/broken_wall_rough.jpg",
-    "disp": "Temp/EnvAssets/polyhaven/broken_wall/broken_wall_disp.jpg"
+    "diff": "ArtCache/polyhaven/broken_wall/broken_wall_diff.jpg",
+    "nor_gl": "ArtCache/polyhaven/broken_wall/broken_wall_nor_gl.jpg",
+    "rough": "ArtCache/polyhaven/broken_wall/broken_wall_rough.jpg",
+    "disp": "ArtCache/polyhaven/broken_wall/broken_wall_disp.jpg"
    },
    "url": "https://polyhaven.com/a/broken_wall",
    "authors": [
@@ -80,10 +80,10 @@
    "id": "mossy_rock",
    "type": "texture",
    "files": {
-    "diff": "Temp/EnvAssets/polyhaven/mossy_rock/mossy_rock_diff.jpg",
-    "nor_gl": "Temp/EnvAssets/polyhaven/mossy_rock/mossy_rock_nor_gl.jpg",
-    "rough": "Temp/EnvAssets/polyhaven/mossy_rock/mossy_rock_rough.jpg",
-    "disp": "Temp/EnvAssets/polyhaven/mossy_rock/mossy_rock_disp.jpg"
+    "diff": "ArtCache/polyhaven/mossy_rock/mossy_rock_diff.jpg",
+    "nor_gl": "ArtCache/polyhaven/mossy_rock/mossy_rock_nor_gl.jpg",
+    "rough": "ArtCache/polyhaven/mossy_rock/mossy_rock_rough.jpg",
+    "disp": "ArtCache/polyhaven/mossy_rock/mossy_rock_disp.jpg"
    },
    "url": "https://polyhaven.com/a/mossy_rock",
    "authors": [
@@ -95,10 +95,10 @@
    "id": "cliff_side",
    "type": "texture",
    "files": {
-    "diff": "Temp/EnvAssets/polyhaven/cliff_side/cliff_side_diff.jpg",
-    "nor_gl": "Temp/EnvAssets/polyhaven/cliff_side/cliff_side_nor_gl.jpg",
-    "rough": "Temp/EnvAssets/polyhaven/cliff_side/cliff_side_rough.jpg",
-    "disp": "Temp/EnvAssets/polyhaven/cliff_side/cliff_side_disp.jpg"
+    "diff": "ArtCache/polyhaven/cliff_side/cliff_side_diff.jpg",
+    "nor_gl": "ArtCache/polyhaven/cliff_side/cliff_side_nor_gl.jpg",
+    "rough": "ArtCache/polyhaven/cliff_side/cliff_side_rough.jpg",
+    "disp": "ArtCache/polyhaven/cliff_side/cliff_side_disp.jpg"
    },
    "url": "https://polyhaven.com/a/cliff_side",
    "authors": [
@@ -112,10 +112,10 @@
    "id": "dark_rock",
    "type": "texture",
    "files": {
-    "diff": "Temp/EnvAssets/polyhaven/dark_rock/dark_rock_diff.jpg",
-    "nor_gl": "Temp/EnvAssets/polyhaven/dark_rock/dark_rock_nor_gl.jpg",
-    "rough": "Temp/EnvAssets/polyhaven/dark_rock/dark_rock_rough.jpg",
-    "disp": "Temp/EnvAssets/polyhaven/dark_rock/dark_rock_disp.jpg"
+    "diff": "ArtCache/polyhaven/dark_rock/dark_rock_diff.jpg",
+    "nor_gl": "ArtCache/polyhaven/dark_rock/dark_rock_nor_gl.jpg",
+    "rough": "ArtCache/polyhaven/dark_rock/dark_rock_rough.jpg",
+    "disp": "ArtCache/polyhaven/dark_rock/dark_rock_disp.jpg"
    },
    "url": "https://polyhaven.com/a/dark_rock",
    "authors": [
@@ -127,7 +127,7 @@
    "id": "gothic_statue",
    "type": "model",
    "files": {
-    "blend": "Temp/EnvAssets/polyhaven/gothic_statue/gothic_statue_2k.blend"
+    "blend": "ArtCache/polyhaven/gothic_statue/gothic_statue_2k.blend"
    },
    "url": "https://polyhaven.com/a/gothic_statue",
    "authors": [
@@ -139,7 +139,7 @@
    "id": "rock_moss_set_01",
    "type": "model",
    "files": {
-    "blend": "Temp/EnvAssets/polyhaven/rock_moss_set_01/rock_moss_set_01_2k.blend"
+    "blend": "ArtCache/polyhaven/rock_moss_set_01/rock_moss_set_01_2k.blend"
    },
    "url": "https://polyhaven.com/a/rock_moss_set_01",
    "authors": [
@@ -151,7 +151,7 @@
    "id": "rock_moss_set_02",
    "type": "model",
    "files": {
-    "blend": "Temp/EnvAssets/polyhaven/rock_moss_set_02/rock_moss_set_02_2k.blend"
+    "blend": "ArtCache/polyhaven/rock_moss_set_02/rock_moss_set_02_2k.blend"
    },
    "url": "https://polyhaven.com/a/rock_moss_set_02",
    "authors": [
@@ -163,7 +163,7 @@
    "id": "namaqualand_boulder_02",
    "type": "model",
    "files": {
-    "blend": "Temp/EnvAssets/polyhaven/namaqualand_boulder_02/namaqualand_boulder_02_2k.blend"
+    "blend": "ArtCache/polyhaven/namaqualand_boulder_02/namaqualand_boulder_02_2k.blend"
    },
    "url": "https://polyhaven.com/a/namaqualand_boulder_02",
    "authors": [
@@ -176,7 +176,7 @@
    "id": "namaqualand_boulder_05",
    "type": "model",
    "files": {
-    "blend": "Temp/EnvAssets/polyhaven/namaqualand_boulder_05/namaqualand_boulder_05_2k.blend"
+    "blend": "ArtCache/polyhaven/namaqualand_boulder_05/namaqualand_boulder_05_2k.blend"
    },
    "url": "https://polyhaven.com/a/namaqualand_boulder_05",
    "authors": [
@@ -189,7 +189,7 @@
    "id": "dead_tree_trunk_02",
    "type": "model",
    "files": {
-    "blend": "Temp/EnvAssets/polyhaven/dead_tree_trunk_02/dead_tree_trunk_02_2k.blend"
+    "blend": "ArtCache/polyhaven/dead_tree_trunk_02/dead_tree_trunk_02_2k.blend"
    },
    "url": "https://polyhaven.com/a/dead_tree_trunk_02",
    "authors": [
@@ -202,7 +202,7 @@
    "id": "dead_quiver_trunk",
    "type": "model",
    "files": {
-    "blend": "Temp/EnvAssets/polyhaven/dead_quiver_trunk/dead_quiver_trunk_2k.blend"
+    "blend": "ArtCache/polyhaven/dead_quiver_trunk/dead_quiver_trunk_2k.blend"
    },
    "url": "https://polyhaven.com/a/dead_quiver_trunk",
    "authors": [
@@ -216,7 +216,7 @@
    "id": "root_cluster_01",
    "type": "model",
    "files": {
-    "blend": "Temp/EnvAssets/polyhaven/root_cluster_01/root_cluster_01_2k.blend"
+    "blend": "ArtCache/polyhaven/root_cluster_01/root_cluster_01_2k.blend"
    },
    "url": "https://polyhaven.com/a/root_cluster_01",
    "authors": [
@@ -229,7 +229,7 @@
    "id": "stone_fire_pit",
    "type": "model",
    "files": {
-    "blend": "Temp/EnvAssets/polyhaven/stone_fire_pit/stone_fire_pit_2k.blend"
+    "blend": "ArtCache/polyhaven/stone_fire_pit/stone_fire_pit_2k.blend"
    },
    "url": "https://polyhaven.com/a/stone_fire_pit",
    "authors": [
@@ -241,7 +241,7 @@
    "id": "tree_stump_01",
    "type": "model",
    "files": {
-    "blend": "Temp/EnvAssets/polyhaven/tree_stump_01/tree_stump_01_2k.blend"
+    "blend": "ArtCache/polyhaven/tree_stump_01/tree_stump_01_2k.blend"
    },
    "url": "https://polyhaven.com/a/tree_stump_01",
    "authors": [

@@ -64,13 +64,13 @@ namespace Aetherward.Game
             WorldGfx.ApplyEnvironmentLight(dir, len, meta != null ? 0.5f : 0.35f);
             if (meta != null && meta.edgeColor != null && meta.edgeColor.Length >= 3 && cam != null)
                 cam.backgroundColor = new Color(meta.edgeColor[0], meta.edgeColor[1], meta.edgeColor[2]);
-            fx.Add(new Vector3(0f, -0.35f, 0f), new Color(0.45f, 0.85f, 1f), 5.5f, 0.32f, 0.9f, 0.02f);   // crystal pool
+            fx.Add(new Vector3(0f, -0.35f, 0f), new Color(0.45f, 0.85f, 1f), 3.2f, 0.10f, 0.9f, 0.02f);   // crystal pool: the render already has the light, this only breathes
             if (meta != null)
             {
                 for (int i = 0; i + 1 < meta.braziersFlat.Length; i += 2)
-                    fx.Add(new Vector3(meta.braziersFlat[i], meta.braziersFlat[i + 1], 0), new Color(0.38f, 0.95f, 0.85f), 2.6f, 0.45f, 9f, 0.18f);
+                    fx.Add(new Vector3(meta.braziersFlat[i], meta.braziersFlat[i + 1], 0), new Color(0.38f, 0.95f, 0.85f), 1.3f, 0.28f, 9f, 0.18f);
                 for (int i = 0; i + 1 < meta.aetherCrystalsFlat.Length; i += 2)
-                    fx.Add(new Vector3(meta.aetherCrystalsFlat[i], meta.aetherCrystalsFlat[i + 1], 0), new Color(0.45f, 0.85f, 1f), 1.8f, 0.35f, 1.3f, 0.05f);
+                    fx.Add(new Vector3(meta.aetherCrystalsFlat[i], meta.aetherCrystalsFlat[i + 1], 0), new Color(0.45f, 0.85f, 1f), 1.0f, 0.22f, 1.3f, 0.05f);
             }
             return fx;
         }
