@@ -38,6 +38,7 @@ namespace Aetherward.Game
         private FxSystem _fx;
         private readonly FloatingTextSystem _text = new FloatingTextSystem();
         private readonly DamageNumberMerger _merge = new DamageNumberMerger();
+        private readonly TelegraphAssist _assist = new TelegraphAssist();
         private DebugOverlay _debug;
 
         private float _accumulator;
@@ -213,7 +214,7 @@ namespace Aetherward.Game
                 return;
             }
             if (_paused || _modalOpen) return;
-            _accumulator += dt * _speed;
+            _accumulator += dt * _assist.EffectiveSpeed(_speed, Time.unscaledTime);
             int steps = 0;
             while (_accumulator >= Battle.TickSeconds && steps < 10)
             {
@@ -257,6 +258,13 @@ namespace Aetherward.Game
         private bool _runLost;
 
         // ------------------------------------------------------------------ event -> presentation
+
+        private static bool IsBossUid(Battle b, int uid)
+        {
+            if (uid == 0) return false;
+            foreach (EnemyUnit en in b.Enemies) if (en.Uid == uid) return en.IsBoss;
+            return false;
+        }
 
         private void ProcessEvents(Battle b)
         {
@@ -348,6 +356,8 @@ namespace Aetherward.Game
                             Banner(App.Loc.Format("hud.lane_marked", App.Loc.Get(lane.NameKey)), Ui.Bad, 1.8f);
                         }
                         if (e.Id == "BossSlam" || e.Id == "Meteor" || e.Id == "lane_mark") App.Audio.Play("telegraph", 0.6f, 0f, SoundCategory.Sfx, 0.3f);
+                        _assist.Enabled = App.Settings.TelegraphAssist;
+                        _assist.OnTelegraph(IsBossUid(b, e.SourceUid), e.Value, Time.unscaledTime);
                         break;
                     case SimEventType.BossPhase:
                         OnBossPhase(e);
@@ -563,7 +573,7 @@ namespace Aetherward.Game
         private void SyncBattleViews(float dt)
         {
             Battle b = _rc.Battle;
-            float viewDt = _paused || _modalOpen ? 0f : dt * _speed;
+            float viewDt = _paused || _modalOpen ? 0f : dt * _assist.EffectiveSpeed(_speed, Time.unscaledTime);
             _seen.Clear();
             foreach (HeroUnit h in b.Heroes)
             {

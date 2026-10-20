@@ -42,6 +42,7 @@ namespace Aetherward.Sim.Meta
         public bool PauseOnFocusLoss = true;  // auto-pause a battle when the app loses focus
         public bool BatterySaver;             // caps FPS at 30 and uses reduced VFX
         public bool SynergyVision = true;     // pre-wave synergy overlay (opt-out for readability)
+        public bool TelegraphAssist;          // assistive: boss telegraphs play at 1x even when 2x is selected
     }
 
     /// <summary>
@@ -122,7 +123,7 @@ namespace Aetherward.Sim.Meta
                 .Set("sfx", s.SfxVolume).Set("ui", s.UiVolume).Set("fast", s.DefaultFastSpeed)
                 .Set("reducedVfx", s.ReducedVfx).Set("shake", s.ScreenShake).Set("numbers", s.DamageNumbers)
                 .Set("contrast", s.HighContrast).Set("fps", s.TargetFps).Set("ranges", s.ShowRanges)
-                .Set("flash", Math.Round(s.FlashIntensity, 2)).Set("focusPause", s.PauseOnFocusLoss).Set("battery", s.BatterySaver).Set("synergy", s.SynergyVision));
+                .Set("flash", Math.Round(s.FlashIntensity, 2)).Set("focusPause", s.PauseOnFocusLoss).Set("battery", s.BatterySaver).Set("synergy", s.SynergyVision).Set("telegraphAssist", s.TelegraphAssist));
         }
 
         public SettingsModel LoadSettings()
@@ -146,6 +147,7 @@ namespace Aetherward.Sim.Meta
             s.PauseOnFocusLoss = d.Bool("focusPause", true);
             s.BatterySaver = d.Bool("battery");
             s.SynergyVision = d.Bool("synergy", true);
+            s.TelegraphAssist = d.Bool("telegraphAssist");
             return s;
         }
 

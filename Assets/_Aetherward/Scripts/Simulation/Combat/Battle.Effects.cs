@@ -417,7 +417,7 @@ namespace Aetherward.Sim.Combat
 
         private void ResolveStrike(DelayedStrike s)
         {
-            Emit(SimEventType.Strike, s.Pos, s.Element, 0f, s.Source?.Uid ?? 0, 0, s.Kind.ToString(), false, s.Radius, s.Generation);
+            Emit(SimEventType.Strike, s.Pos, s.Element, 0f, s.Source?.Uid ?? s.EnemySource?.Uid ?? 0, 0, s.Kind.ToString(), false, s.Radius, s.Generation);
             if (s.Kind == StrikeKind.BossSlam || s.Kind == StrikeKind.BossLaneMark)
             {
                 for (int i = 0; i < Heroes.Count; i++)

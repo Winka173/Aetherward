@@ -16,7 +16,8 @@ namespace Aetherward.Game
             var s = App.Settings;
             Ui.Panel(x, y, w, h);
             Ui.Label(x, y + 26, w, 60, l.Get("settings.title"), 46, Ui.Gold, TextAnchor.MiddleCenter, true);
-            float row = y + 110, rh = 84, inner = x + 50, iw = w - 100;
+            // 10 rows must fit the 960-high panel (two settings per row; rh 70 leaves room for Close).
+            float row = y + 110, rh = 70, inner = x + 50, iw = w - 100;
             Ui.Label(inner, row, iw * 0.42f, rh, l.Get("settings.language"), 28, Ui.White, TextAnchor.MiddleLeft);
             float bx = inner + iw * 0.44f;
             for (int i = 0; i < Localization.Supported.Length; i++)
@@ -26,10 +27,11 @@ namespace Aetherward.Game
                     App.SetLanguage(lang);
             }
             row += rh;
-            float m = Ui.Stepper(inner, row, iw, rh, l.Get("settings.master"), s.MasterVolume); row += rh;
-            float mu = Ui.Stepper(inner, row, iw, rh, l.Get("settings.music"), s.MusicVolume); row += rh;
-            float sf = Ui.Stepper(inner, row, iw, rh, l.Get("settings.sfx"), s.SfxVolume); row += rh;
-            float ui = Ui.Stepper(inner, row, iw, rh, l.Get("settings.ui"), s.UiVolume); row += rh;
+            float hw = iw / 2 - 20;
+            float m = Ui.Stepper(inner, row, hw, rh, l.Get("settings.master"), s.MasterVolume);
+            float mu = Ui.Stepper(inner + hw + 40, row, hw, rh, l.Get("settings.music"), s.MusicVolume); row += rh;
+            float sf = Ui.Stepper(inner, row, hw, rh, l.Get("settings.sfx"), s.SfxVolume);
+            float ui = Ui.Stepper(inner + hw + 40, row, hw, rh, l.Get("settings.ui"), s.UiVolume); row += rh;
             bool changed = m != s.MasterVolume || mu != s.MusicVolume || sf != s.SfxVolume || ui != s.UiVolume;
             s.MasterVolume = m;
             s.MusicVolume = mu;
@@ -44,8 +46,10 @@ namespace Aetherward.Game
             bool ranges = Ui.Toggle(inner + half + 40, row, half, rh, l.Get("settings.ranges"), s.ShowRanges); row += rh;
             bool focusPause = Ui.Toggle(inner, row, half, rh, l.Get("settings.focus_pause"), s.PauseOnFocusLoss);
             bool battery = Ui.Toggle(inner + half + 40, row, half, rh, l.Get("settings.battery"), s.BatterySaver); row += rh;
-            bool synergy = Ui.Toggle(inner, row, half, rh, l.Get("settings.synergy"), s.SynergyVision); row += rh;
-            changed |= synergy != s.SynergyVision;
+            bool synergy = Ui.Toggle(inner, row, half, rh, l.Get("settings.synergy"), s.SynergyVision);
+            bool assist = Ui.Toggle(inner + half + 40, row, half, rh, l.Get("settings.telegraph_assist"), s.TelegraphAssist); row += rh;
+            changed |= synergy != s.SynergyVision || assist != s.TelegraphAssist;
+            s.TelegraphAssist = assist;
             s.SynergyVision = synergy;
             float flash = Ui.Stepper(inner, row, iw, rh, l.Get("settings.flash"), s.FlashIntensity); row += rh;
             changed |= focusPause != s.PauseOnFocusLoss || battery != s.BatterySaver || flash != s.FlashIntensity;

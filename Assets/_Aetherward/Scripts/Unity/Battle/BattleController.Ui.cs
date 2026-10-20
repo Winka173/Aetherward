@@ -324,6 +324,13 @@ namespace Aetherward.Game
             List<KeyValuePair<string, int>> counts = _rc.PreviewEnemies(w);
             string hint = L.Get(w.HintKey);
             if (!_rc.Biome.Default) hint = L.Get(_rc.Biome.NameKey) + " — " + NodeTraitSummary() + hint;
+            // Boss threat preview (P4): mechanics only once the boss is in the codex; first encounters get a generic,
+            // non-spoiler reading guide.
+            string bossId = _rc.BossFor(w);
+            if (bossId != null && App.Content.Enemies.TryGetValue(bossId, out EnemyDef bossDef))
+                hint += "\n" + (App.Meta.Codex.Contains("enemy:" + bossId)
+                    ? L.Format("prep.boss_known", L.Get(bossDef.NameKey), L.Get(bossDef.DescKey))
+                    : L.Get("prep.boss_first"));
             float hintH = Ui.TextHeight(hint, 22, pw - 40);
             float ph = 110 + hintH + 20 + ((counts.Count + 3) / 4) * 130;
             Ui.Panel(px, py, pw, ph);
