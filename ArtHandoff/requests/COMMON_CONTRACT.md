@@ -60,6 +60,13 @@ Repository: `C:\Users\Winka\Projects\Aetherward` (Unity 6000.4.8f1).
 - **9-slice borders:** use the `border` from INPUT_MANIFEST. Decoration stays inside the border; the centre must stretch cleanly. IMGUI uses 48 on all sides for card frames.
 - **Text:** never paint letters or numbers into an asset.
 - **Masters:** keep a 2× (or larger) master of every unit, portrait, icon, card and relic in `source/masters/`.
+- **Quality target: 2560×1440 (2K).** A hero's 400 px canvas is shown at ~192 px tall on a 1440p screen, an enemy's 256 px canvas at ~154 px, and the boss canvas at ~384 px. Paint at ≥ 2× and judge the result in the 1440p preview.
+  - Use crisp, deliberate brushwork with clear material separation: metal, cloth, skin, stone.
+  - Avoid mushy edges.
+  - Never upscale a smaller generation.
+- **Value separation (measured at intake):** the 3 px edge band of every unit frame must average ≥ 0.27 luminance. Battlefields average ~0.16.
+  - Achieve this with the shared back-right rim light (`#9fe8ff`, 2–3 px at export) and lit key planes.
+  - Do not use a black or uniform outline.
 
 ## 5. Animation frames (the lead animates them in Unity)
 The game swaps whole pose frames and adds procedural motion: bob, lunge, recoil, squash, flash and dissolve. Each frame is **one clear key pose**:

@@ -552,13 +552,13 @@ def cmd_preview(a):
     os.makedirs(a.out, exist_ok=True)
     tag = a.tag or ("overlay" if a.overlay else "live")
     note = "OFFLINE COMPOSITE (handoff.py preview, %s art) - not a Unity screenshot" % tag
-    for h in (1080, 720):
+    for h in (1440, 1080, 720):
         render_scene(art, layout, h, note).save(os.path.join(a.out, "scene_%s_%dp.png" % (tag, h)))
     ids = [f["id"] for g in req["groups"] for f in g["assets"] if os.path.exists(art.path(f["id"]))]
     chars = [i for i in ids if i.startswith(("Heroes/", "Enemies/", "World/crystal_"))]
     for mode in ("colour", "silhouette", "gray"):
         if chars:
-            rows = [sheet(art, chars[k:k + 14], h, mode) for k in range(0, len(chars), 14) for h in (1080, 720)]
+            rows = [sheet(art, chars[k:k + 14], h, mode) for k in range(0, len(chars), 14) for h in (1440, 720)]
             stack(rows).convert("RGB").save(os.path.join(a.out, "units_%s_%s.png" % (tag, mode)))
     flats = [i for i in ids if i.split("/")[0] in ("Icons", "Cards", "Relics", "UI", "Vfx", "Portraits") or
              (i.startswith("World/") and art.get(i)[0].width <= 512)]

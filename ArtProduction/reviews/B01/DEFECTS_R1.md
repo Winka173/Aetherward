@@ -1,5 +1,9 @@
 # B01 — revision round 1 (lead review of P0/P1 in a real Unity capture)
 
+> **Scope change (2026-10-20):** the lead now produces the battlefield and the Crystal itself, in Blender 4.5 with real lights and shadows at 2K resolution (`Tools/ArtPipeline/blender/sanctum_env.py`). **Codex: skip D1 and D3.**
+>
+> Do **D2**, finish the **17 pending icons**, and follow the new 2K + value rules in `ArtHandoff/requests/COMMON_CONTRACT.md` §4.
+
 **Evidence:**
 - Unity player screenshots taken with the B01 exports loaded as runtime overrides (33 sprites), same spec and timing as the baseline:
   - `ArtProduction/reviews/B01/unity/b01p1_1920x1080/{prep,t06,t10,t15,t22}.png`

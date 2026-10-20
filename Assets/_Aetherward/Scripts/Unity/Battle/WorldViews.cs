@@ -29,7 +29,33 @@ namespace Aetherward.Game
             }
         }
 
-        private static Material _unitMat;
+        private static Material _unitMat, _shadowMat;
+
+        /// <summary>Directional cast shadows of units (SpriteCastShadow); null when the shader is missing.</summary>
+        public static Material ShadowMaterial
+        {
+            get
+            {
+                if (_shadowMat == null)
+                {
+                    Shader s = Resources.Load<Shader>("Shaders/SpriteCastShadow");
+                    if (s != null) _shadowMat = new Material(s);
+                }
+                return _shadowMat;
+            }
+        }
+
+        /// <summary>
+        /// Light of the current battlefield (from its env_meta: the Blender sun the background was rendered with), so unit
+        /// shadows fall the same way as the painted props. screenLengthPerHeight is per unit of on-screen sprite height.
+        /// </summary>
+        public static void ApplyEnvironmentLight(Vector2 shadowDir, float screenLengthPerHeight, float strength)
+        {
+            Shader.SetGlobalVector("_AwShadowDir", shadowDir.sqrMagnitude > 1e-4f ? shadowDir.normalized : new Vector2(0.8f, 0.6f));
+            Shader.SetGlobalFloat("_AwShadowLength", screenLengthPerHeight);
+            Shader.SetGlobalFloat("_AwShadowStrength", strength);
+            Shader.SetGlobalFloat("_AwShadowHeight", 1.6f);
+        }
 
         /// <summary>Hero/enemy bodies: SpriteLive (flash + readability rim + dissolve). Falls back to the shared material.</summary>
         public static Material UnitMaterial
@@ -98,6 +124,7 @@ namespace Aetherward.Game
     public sealed class UnitView : MonoBehaviour
     {
         public SpriteRenderer Body;
+        private SpriteRenderer _castShadow;
         private SpriteRenderer _shadow, _hpBg, _hpFill, _status1, _status2, _ring, _shieldFx;
         private Sprite _idle, _alt, _cast, _down, _attack, _tell;
         private bool _isHero;
@@ -109,6 +136,7 @@ namespace Aetherward.Game
         /// <summary>Set each frame by the battle view while a telegraphed strike from this unit is pending (boss tell pose).</summary>
         public bool Telegraphing;
         public const float AttackHold = 0.22f, SpawnTime = 0.35f, DeathTime = 0.4f;
+        private const float ShadowBlobAlpha = 0.6f;   // contact occlusion under the feet; the cast shadow carries the light
         public bool Dying => _dieT >= 0f;
         private float _castT = -1f, _hitT = -1f;   // seconds into the cast / hit pose (UnitPose); < 0 = idle
         private bool _hitHeavy;
@@ -125,7 +153,12 @@ namespace Aetherward.Game
             go.transform.SetParent(parent, false);
             var v = go.AddComponent<UnitView>();
             v._shadow = WorldGfx.NewSprite(go.transform, "Shadow", Art.Sprite("World/shadow"), 0);
-            v._shadow.color = new Color(1, 1, 1, 0.9f);
+            v._shadow.color = new Color(1, 1, 1, ShadowBlobAlpha);
+            if (WorldGfx.ShadowMaterial != null)
+            {
+                v._castShadow = WorldGfx.NewSprite(go.transform, "CastShadow", null, 0);
+                v._castShadow.sharedMaterial = WorldGfx.ShadowMaterial;
+            }
             v._ring = WorldGfx.NewSprite(go.transform, "Ring", Art.Sprite("Vfx/ring"), 0);
             v.Body = WorldGfx.NewSprite(go.transform, "Body", null, 0);
             v.Body.sharedMaterial = WorldGfx.UnitMaterial;
@@ -198,7 +231,8 @@ namespace Aetherward.Game
         {
             Body.sprite = _idle;
             Body.color = Color.white;
-            _shadow.color = new Color(1, 1, 1, 0.9f);   // a death fade may have cleared it on a pooled view
+            _shadow.color = new Color(1, 1, 1, ShadowBlobAlpha);   // a death fade may have cleared it on a pooled view
+            if (_castShadow != null) _castShadow.color = Color.white;
             _phase = Random.value * 6f;
             _castTimer = _lungeTimer = _flash = _hpShowTimer = _attackTimer = 0f;
             _castT = _hitT = _spawnT = _dieT = -1f;
@@ -210,6 +244,16 @@ namespace Aetherward.Game
             InUse = true;
             _lastPos = transform.position;
             SetBodyProps(0f, 0f);
+        }
+
+        /// <summary>The cast shadow uses the body's current pose sprite, grounded at the feet (no bob/lunge), same facing.</summary>
+        private void SyncCastShadow(float flip)
+        {
+            if (_castShadow == null) return;
+            _castShadow.enabled = Body.sprite != null;
+            _castShadow.sprite = Body.sprite;
+            _castShadow.transform.localPosition = Vector3.zero;
+            _castShadow.transform.localScale = new Vector3(flip * _baseScale, _baseScale, 1f);
         }
 
         /// <summary>Flash and dissolve share one property block; none at all while idle so bodies keep batching.</summary>
@@ -242,7 +286,8 @@ namespace Aetherward.Game
         {
             _dieT += dt;
             float k = Mathf.Clamp01(_dieT / DeathTime);
-            _shadow.color = new Color(1, 1, 1, 0.9f * (1f - k));
+            _shadow.color = new Color(1, 1, 1, ShadowBlobAlpha * (1f - k));
+            if (_castShadow != null) _castShadow.color = new Color(1, 1, 1, 1f - k);
             Body.transform.localPosition += new Vector3(0, -dt * 0.15f, 0);
             SetBodyProps(0f, WorldGfx.Feel.AnimAmplitude > 0f ? k : 1f);
             return _dieT < DeathTime;
@@ -291,6 +336,7 @@ namespace Aetherward.Game
             transform.position = pos;
             int order = WorldGfx.OrderFor(pos.y);
             _shadow.sortingOrder = order;
+            if (_castShadow != null) _castShadow.sortingOrder = order;
             _ring.sortingOrder = order + 1;
             Body.sortingOrder = order + 2;
             _shieldFx.sortingOrder = order + 3;
@@ -304,6 +350,7 @@ namespace Aetherward.Game
                 Body.sprite = _down;
                 bt.localPosition = Vector3.zero;
                 bt.localScale = Vector3.one * _baseScale;
+                SyncCastShadow(1f);
                 Body.color = _isHero ? Color.white : new Color(1, 1, 1, 0.5f);
                 _hpBg.enabled = _hpFill.enabled = false;
                 _status1.enabled = _status2.enabled = false;
@@ -346,6 +393,7 @@ namespace Aetherward.Game
             float flip = facingX < -0.05f ? -1f : (facingX > 0.05f ? 1f : Mathf.Sign(bt.localScale.x == 0 ? 1 : bt.localScale.x));
             bt.localScale = new Vector3(flip * _baseScale * (1f - squash) * pose.ScaleX, _baseScale * (1f + squash) * pose.ScaleY, 1f);
             Body.color = stunned ? new Color(0.75f, 0.85f, 1f) : Color.white;
+            SyncCastShadow(flip);
             SetBodyProps(_flash * 0.85f, dissolve);
 
             float height = Body.sprite != null ? Body.sprite.bounds.size.y * _baseScale : 1.4f;

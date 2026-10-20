@@ -162,6 +162,12 @@ namespace Aetherward.Game
         }
     }
 
+    [Serializable]
+    public sealed class OverrideContract
+    {
+        public float ppu = 100f;
+    }
+
     /// <summary>Resources-backed sprite/texture cache. Missing art logs once and returns null.</summary>
     public static class Art
     {
@@ -226,15 +232,27 @@ namespace Aetherward.Game
         {
             string file = Path.Combine(OverrideRoot, path + ".png");
             if (!File.Exists(file)) return null;
-            var tex = new Texture2D(2, 2, TextureFormat.RGBA32, false) { filterMode = FilterMode.Bilinear, wrapMode = TextureWrapMode.Clamp, name = path };
-            if (!tex.LoadImage(File.ReadAllBytes(file)) || tex.width != (int)live.rect.width || tex.height != (int)live.rect.height)
+            var tex = new Texture2D(2, 2, TextureFormat.RGBA32, true) { filterMode = FilterMode.Trilinear, wrapMode = TextureWrapMode.Clamp, name = path, anisoLevel = 4 };
+            if (!tex.LoadImage(File.ReadAllBytes(file)))
             {
-                Debug.LogWarning("Art override rejected (unreadable or size differs from the live sprite): " + file);
+                Debug.LogWarning("Art override rejected (unreadable): " + file);
                 return null;
             }
             Vector2 pivot = new Vector2(live.pivot.x / live.rect.width, live.pivot.y / live.rect.height);
+            float ppu = live.pixelsPerUnit;
+            if (tex.width != (int)live.rect.width || tex.height != (int)live.rect.height)
+            {
+                // a new contract (e.g. a 2K-ready background) must say so in a sidecar: <name>.png.json {"ppu":120}
+                string side = file + ".json";
+                if (!File.Exists(side))
+                {
+                    Debug.LogWarning("Art override rejected (size differs from the live sprite and no .png.json contract): " + file);
+                    return null;
+                }
+                ppu = JsonUtility.FromJson<OverrideContract>(File.ReadAllText(side)).ppu;
+            }
             OverridesLoaded++;
-            return UnityEngine.Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), pivot, live.pixelsPerUnit, 0, SpriteMeshType.FullRect, live.border);
+            return UnityEngine.Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), pivot, ppu, 0, SpriteMeshType.FullRect, live.border);
         }
 
         public static Texture2D Tex(string path)

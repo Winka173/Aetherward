@@ -154,9 +154,15 @@ namespace Aetherward.EditorTools
             var importer = (TextureImporter)assetImporter;
             importer.textureType = TextureImporterType.Sprite;
             importer.spriteImportMode = SpriteImportMode.Single;
-            importer.mipmapEnabled = false;
+            // World sprites are drawn 1.5-3x smaller than authored (a 400 px hero is ~144 px at 1080p, ~192 px at 1440p):
+            // mipmaps + trilinear keep them clean instead of shimmering. 9-slice UI is drawn near native size.
+            bool ui = assetPath.StartsWith(Root + "UI/");
+            importer.mipmapEnabled = !ui;
+            importer.mipmapFilter = TextureImporterMipFilter.KaiserFilter;
+            importer.mipMapsPreserveCoverage = false;
             importer.alphaIsTransparency = true;
-            importer.filterMode = FilterMode.Bilinear;
+            importer.filterMode = ui ? FilterMode.Bilinear : FilterMode.Trilinear;
+            importer.anisoLevel = ui ? 1 : 2;
             importer.wrapMode = TextureWrapMode.Clamp;
             if (!Settings.TryGetValue(assetPath, out float[] s)) return;
             var ts = new TextureImporterSettings();
@@ -167,7 +173,7 @@ namespace Aetherward.EditorTools
             ts.spriteBorder = new Vector4(s[3], s[4], s[5], s[6]);
             ts.spriteMeshType = s[3] + s[4] + s[5] + s[6] > 0 ? SpriteMeshType.FullRect : SpriteMeshType.Tight;
             importer.SetTextureSettings(ts);
-            if (assetPath.Contains("arena_background")) importer.maxTextureSize = 4096;
+            if (assetPath.Contains("arena_background") || assetPath.Contains("/World/bg_")) importer.maxTextureSize = 4096;   // all battlefields, not only the default
         }
     }
 }
