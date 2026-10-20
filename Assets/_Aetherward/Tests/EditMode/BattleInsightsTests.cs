@@ -50,7 +50,7 @@ namespace Aetherward.Tests
             foreach (string code in r.insights)
             {
                 var (kind, args, conf) = BattleInsights.Parse(code);
-                Assert.That(conf, Is.AnyOf("high", "medium", "low"), code);
+                Assert.That(new[] { "high", "medium", "low" }, Has.Member(conf), code);
                 switch (kind)
                 {
                     case "threat":
