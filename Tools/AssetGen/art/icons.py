@@ -161,6 +161,8 @@ CARD_TYPE = {
 }
 
 CARD_ART = {
+    # distinct art for cards that fell back to their type glyph and duplicated another card (validator "duplicate_image")
+    "eclipse_theory": ("eye", hex2rgb("#c070d0")), "hallowed_ground": ("cross", hex2rgb("#ffe27a")), "night_oath": ("chain", hex2rgb("#b07aff")),
     "sharpened_focus": ("sword", None), "reinforced_plate": ("shield", None), "swift_hands": ("hourglass", None), "keen_edge": ("dagger", None),
     "arcane_attunement": ("gem", None), "crystal_lattice": ("gem", hex2rgb("#7fe8ff")), "mender_training": ("cross", None), "long_reach": ("bow", None),
     "quick_cast": ("hourglass", PURPLE), "empowered_spells": ("staff", FIRE2), "echoing_chant": ("echo", None), "lingering_elements": ("swirl", PURPLE),
@@ -180,6 +182,24 @@ def card_icon(cid, ctype, rarity, s=160):
     badge(ctx, s, bg, "circle")
     stroke(ctx, lambda c: ellipse_path(c, s / 2, s / 2, s / 2 - 14, s / 2 - 14), RARITY[rarity], 4, 0.85)
     art = CARD_ART.get(cid)
+    hero = cid.split("_")[1] if ctype == "hero_specialization" and cid.startswith("spec_") else None
+    if hero:
+        # Specialization cards used one shared star glyph (validator "duplicate_image": 32 identical cards).
+        # They now show the hero they belong to, with the card-type glyph as a corner badge.
+        import heroes  # local import: heroes.py is heavy and only needed here
+        if hero in heroes.HEROES:
+            por = heroes.portrait(hero, int(s * 0.78)).surface
+            ctx.save()
+            ctx.arc(s / 2, s / 2, s / 2 - 16, 0, 2 * math.pi)
+            ctx.clip()
+            ctx.set_source_surface(por, (s - por.get_width()) / 2, (s - por.get_height()) / 2)
+            ctx.paint()
+            ctx.restore()
+            stroke(ctx, lambda c: ellipse_path(c, s / 2, s / 2, s / 2 - 14, s / 2 - 14), RARITY[rarity], 4, 0.95)
+            badge_r = s * 0.17
+            paint(ctx, lambda c: ellipse_path(c, s - badge_r - 6, s - badge_r - 6, badge_r, badge_r), bg, lw=3.5, hi=False)
+            glyph(ctx, g0, s - badge_r - 6, s - badge_r - 6, badge_r * 1.4)
+            return cv
     if art:
         glyph(ctx, art[0], s / 2, s / 2, s * 0.58, art[1])
     else:

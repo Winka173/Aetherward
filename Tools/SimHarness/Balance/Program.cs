@@ -74,6 +74,8 @@ namespace Aetherward.Balance
             }
             if (snapWave > 0)
             {
+                Snapshot.Staged = Array.IndexOf(args, "--snapshot-staged") >= 0;
+                if (Array.IndexOf(args, "--snapshot-peak") >= 0) snapTime = -1f;
                 Snapshot.Write(db, Strategy.Find(strategyName == "all" ? "thunderstorm" : strategyName), snapWave, snapTime,
                     Path.Combine(outDir, "snapshot_w" + snapWave + ".json"));
                 return 0;

@@ -114,8 +114,8 @@ def cmd_render(a):
 
 # ---------------------------------------------------------------------------- validate
 
-def validate_dir(art, settings, manifest, out):
-    args = V.parser().parse_args(["--art", art, "--settings", settings, "--manifest", manifest, "--out", out])
+def validate_dir(art, settings, manifest, out, only=None):
+    args = V.parser().parse_args(["--art", art, "--settings", settings, "--manifest", manifest, "--out", out] + (["--only"] + only if only else []))
     rep = V.run(args)
     return rep, V.write(rep, out)
 
@@ -134,7 +134,8 @@ def cmd_validate(a):
         A.dump_json(man, sp["manifest"] + ".staged.json")
         A.dump_json(sett, sp["settings"] + ".staged.json")
         ensure_stage_metas(sp["art"])
-        rep, n = validate_dir(sp["art"], sp["settings"] + ".staged.json", sp["manifest"] + ".staged.json", os.path.join(a.stage, "report"))
+        only = A.load_json(os.path.join(a.stage, ".scope.json")) if os.path.exists(os.path.join(a.stage, ".scope.json")) else None
+        rep, n = validate_dir(sp["art"], sp["settings"] + ".staged.json", sp["manifest"] + ".staged.json", os.path.join(a.stage, "report"), only)
     log(f"validate: {len(rep.assets)} assets, {n} blocking")
     return 1 if n else 0
 
@@ -259,27 +260,62 @@ def shelf_pack(sizes, page, pad):
     return pages
 
 
+def pack_group(items, page, pad):
+    """Deterministic shelf packing of (name, image) with padding; returns [(page_img, {name: rect})]."""
+    pages, cur, rects = [], Image.new("RGBA", (page, page), (0, 0, 0, 0)), {}
+    x = y = row = 0
+    for name, im in sorted(items, key=lambda t: (-t[1].height, -t[1].width, t[0])):
+        w, h = im.width + 2 * pad, im.height + 2 * pad
+        if x + w > page:
+            x, y, row = 0, y + row, 0
+        if y + h > page:
+            pages.append((cur, rects))
+            cur, rects, x, y, row = Image.new("RGBA", (page, page), (0, 0, 0, 0)), {}, 0, 0, 0
+        cur.alpha_composite(im, (x + pad, y + pad))
+        rects[name] = (x + pad, y + pad, im.width, im.height)
+        x, row = x + w, max(row, h)
+    pages.append((cur, rects))
+    return pages
+
+
 def cmd_pack(a):
+    """Packs tight-trimmed sprites per folder into 2048² pages (Temp/ArtAtlas), checks padding/bleed, writes the plan.
+    Unity SpriteAtlas assets are not generated: creating/verifying them needs the Unity Editor (BLOCKED here)."""
+    out_dir = os.path.join(A.ROOT, "Temp", "ArtAtlas")
+    shutil.rmtree(out_dir, ignore_errors=True)
+    os.makedirs(out_dir, exist_ok=True)
     groups = {}
     for r in files_under(A.ART):
-        im = Image.open(os.path.join(A.ART, r))
-        m = A.bbox(np.asarray(im.convert("RGBA"))[..., 3] > 0)
-        tight = (m[2] - m[0] + 1, m[3] - m[1] + 1) if m else im.size
-        groups.setdefault(r.split("/")[0], []).append((im.size, tight))
-    lines = ["# Sprite atlas plan (estimate)", "",
-             "Tight-rect shelf packing, 2 px padding, 2048² pages. Unity SpriteAtlas assets are NOT generated here: "
-             "creating and verifying them needs the Unity Editor (BLOCKED in this environment).", "",
-             "| Group | Sprites | Full-rect MB (RGBA32) | Tight-rect MB | Pages @2048 | ASTC 6x6 MB (est.) |", "|---|---|---|---|---|---|"]
+        im = Image.open(os.path.join(A.ART, r)).convert("RGBA")
+        bb = im.getbbox() or (0, 0, im.width, im.height)
+        groups.setdefault(r.split("/")[0], []).append((r, im.crop(bb), im.size))
+    lines = ["# Sprite atlas plan (packed and checked here; not imported into Unity)", "",
+             "Tight-rect shelf packing, 2 px padding, 2048² pages, pages in `Temp/ArtAtlas/`. Unity SpriteAtlas assets are NOT generated: "
+             "that needs the Unity Editor (BLOCKED in this environment). The game currently loads single textures via Resources.", "",
+             "| Group | Sprites | Full-rect MB (RGBA32) | Packed pages | Packed MB (RGBA32) | ASTC 6x6 MB (est.) | Bleed issues |", "|---|---|---|---|---|---|---|"]
+    meta = {}
+    total_bleed = 0
     for g, items in sorted(groups.items()):
-        full = sum(w * h * 4 for (w, h), _ in items) / 1048576
-        tight = sum(w * h * 4 for _, (w, h) in items) / 1048576
-        pages = shelf_pack([t for _, t in items], 2048, 2)
-        astc = pages * 2048 * 2048 * (128 / 36) / 8 / 1048576
-        lines.append(f"| {g} | {len(items)} | {full:.1f} | {tight:.1f} | {pages} | {astc:.1f} |")
+        if g == "World":
+            lines.append(f"| {g} | {len(items)} | {sum(w * h * 4 for _, _, (w, h) in items) / 1048576:.1f} | — | — | — | backgrounds stay single textures |")
+            continue
+        pages = pack_group([(n, im) for n, im, _ in items], 2048, 2)
+        bleed = []
+        for i, (pg, rects) in enumerate(pages):
+            pg.save(os.path.join(out_dir, f"{g}_{i}.png"))
+            arr = np.asarray(pg, dtype=np.float64) / 255.0
+            bleed += A.atlas_bleed(arr, rects, 2)
+            meta[f"{g}_{i}"] = rects
+        total_bleed += len(bleed)
+        full = sum(w * h * 4 for _, _, (w, h) in items) / 1048576
+        packed = len(pages) * 2048 * 2048 * 4 / 1048576
+        astc = len(pages) * 2048 * 2048 * (128 / 36) / 8 / 1048576
+        lines.append(f"| {g} | {len(items)} | {full:.1f} | {len(pages)} | {packed:.1f} | {astc:.1f} | {len(bleed)} |")
+    A.dump_json(meta, os.path.join(out_dir, "atlas.json"), indent=1)
     os.makedirs(REPORTS, exist_ok=True)
     A.write_text(os.path.join(REPORTS, "atlas_plan.md"), "\n".join(lines) + "\n")
-    log("pack -> Reports/ArtQuality/atlas_plan.md")
-    return 0
+    log(f"pack: {sum(len(v) for v in meta.values())} sprites, {len(meta)} pages, bleed issues {total_bleed} -> Reports/ArtQuality/atlas_plan.md")
+    return 1 if total_bleed else 0
 
 
 # ---------------------------------------------------------------------------- diff / import / rollback

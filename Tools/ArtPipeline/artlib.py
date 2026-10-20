@@ -200,3 +200,64 @@ def value_histogram(a, bins=8):
         return np.zeros(bins)
     hist, _ = np.histogram(luminance(a[..., :3])[sel], bins=bins, range=(0, 1))
     return hist / hist.sum()
+
+
+def icon_structure(path, size=48):
+    """Z-normalised luminance of an icon at HUD size, composited on mid grey after deuteranopia simulation."""
+    with Image.open(path) as im:
+        a = np.asarray(im.convert("RGBA").resize((size, size), Image.LANCZOS), dtype=np.float64) / 255.0
+    rgb = simulate_cvd(a[..., :3], "deuteranopia")
+    comp = rgb * a[..., 3:] + 0.35 * (1 - a[..., 3:])
+    lum = luminance(comp)
+    return (lum - lum.mean()) / (lum.std() + 1e-6)
+
+
+GUID_REF = re.compile(r"guid: ([0-9a-f]{32})")
+RES_LOAD = re.compile(r'Resources\.Load<(\w+)>\(\s*"([^"]+)"\s*\)')
+RES_EXT = {"Shader": (".shader",), "Font": (".ttf", ".otf"), "TextAsset": (".json", ".txt", ".bytes", ".csv"), "Texture2D": (".png",),
+           "Sprite": (".png",), "AudioClip": (".wav", ".ogg", ".mp3"), "Material": (".mat",)}
+
+
+def broken_guid_references(unity_root):
+    """GUIDs referenced by serialized Unity files that no .meta defines (Unity built-ins 0000000000000000x... excluded)."""
+    defined, refs = set(), []
+    for dp, _, fs in os.walk(unity_root):
+        for f in fs:
+            p = os.path.join(dp, f)
+            if f.endswith(".meta"):
+                for line in read_text(p).splitlines()[:3]:
+                    if line.startswith("guid:"):
+                        defined.add(line.split(":", 1)[1].strip())
+            elif f.endswith((".unity", ".prefab", ".mat", ".asset", ".controller", ".anim", ".spriteatlas")):
+                for g in set(GUID_REF.findall(read_text(p))):
+                    refs.append((os.path.relpath(p, unity_root).replace("\\", "/"), g))
+    return [{"file": f, "guid": g} for f, g in sorted(refs) if g not in defined and not g.startswith("0000000000000000")]
+
+
+def missing_resources(script_dir, resources_dir):
+    out = []
+    for dp, _, fs in os.walk(script_dir):
+        for f in fs:
+            if not f.endswith(".cs"):
+                continue
+            p = os.path.join(dp, f)
+            for i, line in enumerate(read_text(p).splitlines(), 1):
+                for m in RES_LOAD.finditer(line):
+                    exts = RES_EXT.get(m.group(1))
+                    if exts and not any(os.path.exists(os.path.join(resources_dir, m.group(2) + e)) for e in exts):
+                        out.append((m.group(2), f"{os.path.relpath(p, ROOT)}:{i}"))
+    return out
+
+
+def atlas_bleed(page, rects, padding):
+    """Pixels from one sprite inside another sprite's padding ring (texture bleeding risk). page: RGBA float array."""
+    issues = []
+    occ = page[..., 3] > 0.02
+    for name, (x, y, w, h) in rects.items():
+        x0, y0, x1, y1 = max(0, x - padding), max(0, y - padding), min(page.shape[1], x + w + padding), min(page.shape[0], y + h + padding)
+        ring = np.zeros_like(occ)
+        ring[y0:y1, x0:x1] = True
+        ring[y:y + h, x:x + w] = False
+        if (occ & ring).any():
+            issues.append(name)
+    return issues

@@ -112,7 +112,8 @@
     "overdrawMinOpaque": 0.12,
     "cvdMinDeltaE": 12.0,
     "lightingInversion": 0.06,
-    "weakEvolutionValueDist": 0.15
+    "weakEvolutionValueDist": 0.15,
+    "iconShapeCorrelation": 0.92
   },
   "budgetsMB": {
     "_doc": "RGBA32 uncompressed upper bound per category for the whole set on disk. Runtime loads only the current roster (see globals.heroWorkingSetMB); device textures use the compressed import (textureCompression 1), whose size is not measurable here.",

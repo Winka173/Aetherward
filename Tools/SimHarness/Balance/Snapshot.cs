@@ -25,13 +25,44 @@ namespace Aetherward.Balance
                 switch (rc.State.Phase)
                 {
                     case RunPhase.Prepare: pilot.Prepare(); rc.StartWave(); break;
-                    case RunPhase.Battle: rc.Battle.RunToEnd(); rc.ResolveBattle(); break;
+                    case RunPhase.Battle:
+                        if (Staged) rc.Battle.Crystal.MaxHp = rc.Battle.Crystal.Hp = 1e9f;
+                        rc.Battle.RunToEnd();
+                        rc.ResolveBattle();
+                        break;
                     default: pilot.PlayToEnd(1); break;
                 }
             }
             pilot.Prepare();
             Battle b = rc.StartWave();
-            while (b.Time < seconds && b.Outcome == BattleOutcome.Running) { b.Tick(); b.Journal.Clear(); }
+            if (b == null) throw new System.InvalidOperationException("run ended before wave " + wave + " (use a stronger strategy or --snapshot-staged)");
+            if (Staged) b.Crystal.MaxHp = b.Crystal.Hp = 1e9f;
+            if (seconds >= 0f)
+            {
+                while (b.Time < seconds && b.Outcome == BattleOutcome.Running) { b.Tick(); b.Journal.Clear(); }
+                File.WriteAllText(path, Json(b, wave));
+                return;
+            }
+            // Peak mode (seconds < 0): keep the densest moment of the wave (enemies + 3 x telegraphed strikes + zones).
+            string best = null;
+            int bestScore = -1;
+            while (b.Outcome == BattleOutcome.Running && b.Time < 240f)
+            {
+                b.Tick();
+                b.Journal.Clear();
+                int alive = 0;
+                foreach (EnemyUnit e in b.Enemies) if (e.Alive) alive++;
+                int score = alive + 3 * b.Strikes.Count + b.Zones.Count + b.Projectiles.Count;
+                if (score > bestScore) { bestScore = score; best = Json(b, wave); }
+            }
+            File.WriteAllText(path, best);
+        }
+
+        /// <summary>Staged scene: the Crystal cannot fall, so late waves can be reached for art review (marked in the JSON).</summary>
+        public static bool Staged;
+
+        private static string Json(Battle b, int wave)
+        {
             var sb = new StringBuilder();
             sb.Append("{\"wave\":").Append(wave).Append(",\"time\":").Append(F(b.Time)).Append(",\"crystal\":").Append(F(b.Crystal.HpFraction));
             sb.Append(",\"heroes\":[");
@@ -80,8 +111,8 @@ namespace Aetherward.Balance
                 sb.Append("{\"kind\":\"").Append(s.Kind).Append("\",\"x\":").Append(F(s.Pos.X)).Append(",\"y\":").Append(F(s.Pos.Y)).Append(",\"r\":").Append(F(s.Radius)).Append('}');
             }
             sb.Append("]}");
-            File.WriteAllText(path, sb.ToString());
-            System.Console.WriteLine("snapshot -> " + path + " (enemies " + b.Enemies.Count + ")");
+            sb.Insert(sb.Length - 1, ",\"staged\":" + (Staged ? "true" : "false"));
+            return sb.ToString();
         }
     }
 }

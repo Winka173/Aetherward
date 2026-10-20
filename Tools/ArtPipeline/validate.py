@@ -12,6 +12,7 @@ Usage: python3 Tools/ArtPipeline/validate.py [--art DIR] [--settings F] [--manif
 import argparse
 import csv
 import datetime
+import hashlib
 import html
 import itertools
 import json
@@ -58,6 +59,11 @@ def waived(issue, waivers):
 
 def category_of(rel):
     return rel.split("/")[0]
+
+
+def scoped(args, rel):
+    import fnmatch
+    return not args.only or any(fnmatch.fnmatch(rel, p) for p in args.only)
 
 
 def run(args):
@@ -125,10 +131,30 @@ def run(args):
 
     # ------------------------------------------------------------------ per-image checks
     masks, imgs = {}, {}
+    hashes = {}
     for r in files:
         cat = category_of(r)
         cs = cats.get(cat, {"kind": "other", "sizes": None})
-        a, mode = A.load_rgba(os.path.join(args.art, r))
+        try:
+            a, mode = A.load_rgba(os.path.join(args.art, r))
+        except Exception as ex:  # noqa: BLE001
+            rep.add(r, "unreadable_png", ERROR, "cannot decode PNG: " + str(ex)[:120])
+            continue
+        hashes.setdefault(hashlib.sha256(np.ascontiguousarray(a).tobytes()).hexdigest(), []).append(r)
+        sset = settings.get(root_rel(r), {})
+        if sset.get("maxSize") and max(a.shape[0], a.shape[1]) > sset["maxSize"]:
+            rep.add(r, "downscaled_on_import", WARN, f"{a.shape[1]}x{a.shape[0]} exceeds import maxSize {sset['maxSize']} (Unity will downscale)")
+        # Fully transparent pixels next to opaque ones keep RGB that bilinear filtering/mipmaps blend in. Unity's
+        # "Alpha Is Transparency" dilates colour into them; without it, a dark/bright fringe appears.
+        meta_txt = A.read_text(os.path.join(args.art, r + ".meta")) if os.path.exists(os.path.join(args.art, r + ".meta")) else ""
+        if "alphaIsTransparency: 1" not in meta_txt:
+            edge0 = (a[..., 3] == 0) & (np.roll(a[..., 3], 1, 0) > 0.5)
+            if edge0.sum() > 10:
+                lum0 = A.luminance(a[..., :3])
+                nb = A.luminance(np.roll(a[..., :3], 1, 0))
+                fr = float((np.abs(lum0 - nb)[edge0] > 0.5).mean())
+                if fr > 0.2:
+                    rep.add(r, "transparent_rgb_fringe", WARN, f"{fr:.0%} of transparent edge pixels hold contrasting RGB and alphaIsTransparency is off", fr)
         h, w = a.shape[:2]
         mk = A.mask(a)
         opaque = float(mk.mean())
@@ -182,6 +208,24 @@ def run(args):
                     if diff > th["lightingInversion"]:
                         rep.add(r, "lighting_direction", WARN, "lower-right brighter than upper-left (shading rule: light from upper-left)", diff)
 
+    for hsh, rs in hashes.items():
+        if len(rs) > 1:
+            def unit(x):
+                cat, name = x.split("/", 1)
+                name = name[:-4]
+                return cat + "/" + (name.split("_")[0] if cat == "Heroes" else name.rsplit("_", 1)[0] if cat == "Enemies" else name)
+            same_unit = len({unit(x) for x in rs}) == 1
+            for r in rs[1:]:
+                rep.add(r, "identical_frames" if same_unit else "duplicate_image", WARN if same_unit else INFO,
+                        ("frame is pixel-identical to " if same_unit else "pixel-identical to ") + rs[0])
+
+    # Unity linkage: GUID references in scenes/prefabs/materials/assets must resolve; Resources.Load literals must exist.
+    for broken in A.broken_guid_references(args.unity_root):
+        rep.add(broken["file"], "broken_guid_reference", ERROR, f"references missing GUID {broken['guid']}")
+    if os.path.isdir(args.scripts):
+        for path, where in A.missing_resources(args.scripts, args.resources):
+            rep.add(path, "missing_resource", ERROR, "Resources.Load target not found: " + where)
+
     # ------------------------------------------------------------------ unit sets: frames, feet, scale, jumps, evolutions
     heroes = A.read_json(os.path.join(args.content, "heroes.json"))["heroes"] if os.path.exists(os.path.join(args.content, "heroes.json")) else []
     enemies = A.read_json(os.path.join(args.content, "enemies.json"))["enemies"] if os.path.exists(os.path.join(args.content, "enemies.json")) else []
@@ -189,22 +233,22 @@ def run(args):
     present = set(files)
     for hd in heroes:
         for f in hero_frames:
-            if f"Heroes/{hd['id']}_{f}.png" not in present:
+            if f"Heroes/{hd['id']}_{f}.png" not in present and scoped(args, f"Heroes/{hd['id']}_{f}.png"):
                 rep.add(f"Heroes/{hd['id']}_{f}.png", "missing_frame", ERROR, f"hero {hd['id']} has no '{f}' frame")
     for ed in enemies:
         for f in spec["unitSets"]["enemyFrames"]:
-            if f"Enemies/{ed['id']}_{f}.png" not in present:
+            if f"Enemies/{ed['id']}_{f}.png" not in present and scoped(args, f"Enemies/{ed['id']}_{f}.png"):
                 rep.add(f"Enemies/{ed['id']}_{f}.png", "missing_frame", ERROR, f"enemy {ed['id']} has no '{f}' frame")
     for name, key in (("relics.json", "relics"), ("cards.json", "cards")):
         p = os.path.join(args.content, name)
         if os.path.exists(p):
             folder = "Relics" if key == "relics" else "Cards"
             for d in A.read_json(p)[key]:
-                if f"{folder}/{d['id']}.png" not in present:
+                if f"{folder}/{d['id']}.png" not in present and scoped(args, f"{folder}/{d['id']}.png"):
                     rep.add(f"{folder}/{d['id']}.png", "missing_reference", ERROR, f"{key[:-1]} '{d['id']}' has no icon (loaded by id at runtime)")
     if os.path.isdir(args.scripts):
         for ref, where in sorted(A.literal_art_refs(args.scripts).items()):
-            if ref + ".png" not in present:
+            if ref + ".png" not in present and scoped(args, ref + ".png"):
                 rep.add(ref + ".png", "missing_reference", ERROR, "Unity script references a missing sprite: " + where[0])
 
     feet = {}
@@ -343,6 +387,15 @@ def run(args):
                 f"{c['pair'][0]} vs {c['pair'][1]} ΔE {c['deltaE']} under {c['vision']}" + (" (element glyph icons provide a shape cue)" if has_glyphs else ""),
                 c["deltaE"])
 
+    # Icon families must differ by SHAPE, not only hue: luminance structure after deuteranopia simulation.
+    for prefix in ("Icons/status_", "Icons/element_", "Icons/role_"):
+        fam = [r for r in files if r.startswith(prefix)]
+        lum = {r: A.icon_structure(os.path.join(args.art, r)) for r in fam}
+        for r1, r2 in itertools.combinations(fam, 2):
+            c = float((lum[r1] * lum[r2]).mean())
+            if c > th.get("iconShapeCorrelation", 0.92):
+                rep.add(r2, "icon_shape_confusable", WARN, f"looks like {os.path.basename(r1)} (structure correlation {c:.2f} under deuteranopia)", c)
+
     # ------------------------------------------------------------------ budgets
     totals = defaultdict(int)
     for r, m in rep.assets.items():
@@ -446,6 +499,9 @@ def parser():
     p.add_argument("--spec", default=A.SPEC)
     p.add_argument("--out", default=os.path.join(A.ROOT, "Reports", "ArtQuality"))
     p.add_argument("--today", default=None)
+    p.add_argument("--resources", default=os.path.dirname(A.ART), help="Unity Resources folder for Resources.Load checks (live, also when validating staging)")
+    p.add_argument("--unity-root", default=os.path.join(A.ROOT, "Assets"), help="scanned for .unity/.prefab/.mat/.asset GUID references")
+    p.add_argument("--only", nargs="*", default=None, help="fnmatch patterns (Art-relative): completeness checks only for these")
     return p
 
 

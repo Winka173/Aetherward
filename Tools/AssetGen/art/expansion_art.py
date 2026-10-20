@@ -121,13 +121,15 @@ STATUS_NEW = {
     "poisoned": ("vial", hex2rgb("#3a2a5a"), POISON, POISON2, "circle"),
     "resonant": ("rune", hex2rgb("#7a2a6a"), ARCANE, ARCANE2, "hex"),
     "unstable": ("void_ring", hex2rgb("#241c60"), hex2rgb("#8a80ff"), VOID2, "diamond"),
-    "corroded": ("crack_shield", hex2rgb("#4a5a1a"), POISON, None, "circle"),
-    "brittle": ("snowflake", hex2rgb("#3a5a7a"), ICE2, ICE, "diamond"),
+    # corroded shared armor_crack's cracked shield; sealed shared stun's star (validator "icon_shape_confusable").
+    "corroded": ("drop", hex2rgb("#4a5a1a"), POISON, None, "hex"),
+    # brittle used the frozen snowflake on the same diamond badge (validator "icon_shape_confusable"): shard + hex badge.
+    "brittle": ("shatter", hex2rgb("#3a5a7a"), ICE2, ICE, "hex"),
     "silenced": ("staff", hex2rgb("#4a2a4a"), STEEL, RED, "circle"),
     "leeched": ("battery", hex2rgb("#2a3a5a"), STEEL, ARCANE, "circle"),
     "fever": ("heart", hex2rgb("#6a3a1a"), RED, None, "circle"),
     "marked": ("flame", hex2rgb("#6a2a1a"), FIRE, FIRE2, "diamond"),
-    "sealed": ("star", hex2rgb("#2a2a5a"), LIGHT2, None, "hex"),
+    "sealed": ("chain", hex2rgb("#2a2a5a"), LIGHT2, None, "hex"),
 }
 
 

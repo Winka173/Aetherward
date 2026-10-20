@@ -14,8 +14,10 @@ import sys
 from PIL import Image, ImageDraw, ImageFont
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", ".."))
-ART = os.path.join(ROOT, "Assets", "_Aetherward", "Resources", "Art")
-SETTINGS = json.load(open(os.path.join(ROOT, "Tools", "AssetGen", "import_settings.json")))
+# AW_ART_DIR / AW_SETTINGS let the same snapshot be rendered with another art set (before/after comparisons).
+ART = os.environ.get("AW_ART_DIR") or os.path.join(ROOT, "Assets", "_Aetherward", "Resources", "Art")
+SETTINGS = json.load(open(os.environ.get("AW_SETTINGS") or os.path.join(ROOT, "Tools", "AssetGen", "import_settings.json")))
+LIVE_REL = "Assets/_Aetherward/Resources/Art/"
 W, H = 1920, 1080
 ORTHO = 7.5
 PX = H / (2 * ORTHO)
@@ -25,7 +27,7 @@ cache = {}
 def sprite(rel):
     if rel not in cache:
         path = os.path.join(ART, rel + ".png")
-        key = os.path.relpath(path, ROOT).replace("\\", "/")
+        key = LIVE_REL + rel + ".png"   # settings are keyed by the live path, whatever ART points at
         img = Image.open(path).convert("RGBA")
         s = SETTINGS.get(key, {"ppu": 100, "pivot": [0.5, 0.5]})
         cache[rel] = (img, s["ppu"], s["pivot"])
@@ -58,7 +60,7 @@ def draw(canvas, rel, x, y, scale=1.0, flip=False, alpha=1.0, rot=0.0, sx=None, 
 def main(snap_path, out_path):
     s = json.load(open(snap_path))
     canvas = Image.new("RGBA", (W, H), (40, 77, 61, 255))
-    draw(canvas, "World/arena_background", 0, 0)
+    draw(canvas, os.environ.get("AW_BACKGROUND", "World/arena_background"), 0, 0)
     arena = json.loads("\n".join(l for l in open(os.path.join(ROOT, "Assets/_Aetherward/Resources/Content/arena.json")).read().splitlines()
                                  if not l.strip().startswith("//")))
     for n in arena["nodes"]:
@@ -89,7 +91,9 @@ def main(snap_path, out_path):
             top = u["y"] + img.height / ppu * scale * 0.88 + 0.08
             for k, st in enumerate([u["s1"], u["s2"]]):
                 if st != "none":
-                    icon = {"fire": "burn", "water": "wet", "lightning": "charged", "ice": "chill", "wind": "windmark", "earth": "armor_crack"}[st]
+                    icon = {"fire": "burn", "water": "wet", "lightning": "charged", "ice": "chill", "wind": "windmark", "earth": "armor_crack"}.get(st)
+                    if icon is None or not os.path.exists(os.path.join(ART, "Icons/status_" + icon + ".png")):
+                        continue
                     draw(canvas, "Icons/status_" + icon, u["x"] + (k - 0.5) * 0.4 * (1 if u["s2"] != "none" else 0), top + 0.15)
             if u["hp"] < 0.999 or u.get("elite") or u.get("boss"):
                 cx, cy = to_px(u["x"], top)

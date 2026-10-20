@@ -169,6 +169,17 @@ def g_gem(ctx, cx, cy, s, col=PURPLE, col2=None):
     sparkle(ctx, cx - s * 0.1, cy - s * 0.2, s * 0.1)
 
 
+def g_shatter(ctx, cx, cy, s, col=PURPLE, col2=None):
+    """Brittle: an ice shard split by a crack, the two halves pushed apart (shape cue distinct from 'snowflake')."""
+    for side, dx in ((-1, -s * 0.06), (1, s * 0.06)):
+        half = [(cx + dx, cy - s * 0.44), (cx + dx + side * s * 0.34, cy - s * 0.1), (cx + dx + side * s * 0.22, cy + s * 0.4),
+                (cx + dx, cy + s * 0.4), (cx + dx + side * s * 0.08, cy + s * 0.1), (cx + dx - side * s * 0.04, cy - s * 0.12)]
+        paint(ctx, lambda c, half=half: poly_path(c, half), col if side < 0 else light(col, 0.25), lw=LW * 0.8, hi_size=0.7)
+    stroke(ctx, lambda c: (c.move_to(cx, cy - s * 0.5), c.line_to(cx + s * 0.08, cy - s * 0.18), c.line_to(cx - s * 0.06, cy + s * 0.08),
+                           c.line_to(cx + s * 0.04, cy + s * 0.46)), INK, 3.0)
+    sparkle(ctx, cx - s * 0.2, cy - s * 0.2, s * 0.09)
+
+
 def g_bell(ctx, cx, cy, s, col=GOLD, col2=None):
     paint(ctx, lambda c: smooth_closed(c, [(cx - s * 0.38, cy + s * 0.26), (cx - s * 0.28, cy - s * 0.12), (cx - s * 0.12, cy - s * 0.36),
                                              (cx + s * 0.12, cy - s * 0.36), (cx + s * 0.28, cy - s * 0.12), (cx + s * 0.38, cy + s * 0.26)], 0.4), col, lw=LW)
@@ -354,7 +365,7 @@ GLYPHS = {
     "spikes": g_spikes, "burst": g_burst, "skull": g_skull, "mirror": g_mirror, "scroll": g_scroll, "sprout": g_sprout, "gear": g_gear,
     "arrow_up": g_arrow_up, "hourglass": g_hourglass, "fist": g_fist, "cross": g_cross, "hat": g_hat, "quiver": g_quiver,
     "cannon": g_cannon, "echo": g_echo, "lens": g_lens, "target": g_target, "crack_shield": g_crack_shield, "dots": g_dots,
-    "tower": g_tower,
+    "tower": g_tower, "shatter": g_shatter,
 }
 
 

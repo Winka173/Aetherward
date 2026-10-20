@@ -70,7 +70,8 @@ class Fixture:
         A.dump_json({"waivers": waivers or []}, wp)
         out = os.path.join(self.root, "out")
         args = V.parser().parse_args(["--art", self.art, "--settings", sp, "--manifest", mp, "--content", self.content,
-                                      "--scripts", self.scripts, "--waivers", wp, "--out", out, "--today", today])
+                                      "--scripts", self.scripts, "--waivers", wp, "--out", out, "--today", today,
+                                      "--unity-root", self.root])
         rep = V.run(args)
         blocking = V.write(rep, out)
         return rep, blocking
@@ -175,6 +176,63 @@ class ValidatorTests(unittest.TestCase):
         self.f.put("Relics/opaque.png", figure(128, 10, 110, 20, 100)[..., :3].copy(), pivot=(0.5, 0.5))
         rep, _ = self.f.run()
         self.assertIn("no_alpha_channel", checks(rep, "Relics/opaque.png"))
+
+
+    def test_corrupt_png_is_blocking_not_a_crash(self):
+        self.f.hero_set()
+        self.f.put("Relics/good.png", figure(128, 10, 110, 20, 100), pivot=(0.5, 0.5))
+        A.write_text(os.path.join(self.f.art, "Relics/good.png"), "not a png")
+        rep, blocking = self.f.run()
+        self.assertIn("unreadable_png", checks(rep, "Relics/good.png"))
+        self.assertGreaterEqual(blocking, 1)
+
+    def test_identical_frames_and_duplicate_art(self):
+        self.f.hero_set()
+        self.f.put("Heroes/testo_cast.png", figure())                         # same pixels as idle
+        self.f.put("Cards/a.png", figure(160, 10, 150, 20, 140), pivot=(0.5, 0.5))
+        self.f.put("Cards/b.png", figure(160, 10, 150, 20, 140), pivot=(0.5, 0.5))
+        rep, _ = self.f.run()
+        flagged = {i["asset"] for i in rep.issues if i["check"] == "identical_frames"}
+        self.assertTrue(any(f.startswith("Heroes/testo_") for f in flagged), flagged)
+        self.assertIn("duplicate_image", checks(rep, "Cards/b.png"))
+
+    def test_broken_guid_reference_and_missing_resource(self):
+        self.f.hero_set()
+        A.write_text(os.path.join(self.f.root, "Scene.unity"), "m_Sprite: {fileID: 21300000, guid: " + "cd" * 16 + ", type: 3}\n")
+        A.write_text(os.path.join(self.f.scripts, "Y.cs"), 'var s = Resources.Load<Shader>("Shaders/Nope");\n')
+        rep, blocking = self.f.run()
+        self.assertIn("broken_guid_reference", checks(rep, "Scene.unity"))
+        self.assertIn("missing_resource", checks(rep, "Shaders/Nope"))
+        self.assertGreaterEqual(blocking, 2)
+
+    def test_atlas_bleed_detects_neighbours_inside_padding(self):
+        page = np.zeros((64, 64, 4))
+        page[2:20, 2:20, 3] = 1.0      # sprite A at (2,2,18,18)
+        page[21:40, 2:20, 3] = 1.0     # sprite B starts 1 px below A: inside A's 2 px padding
+        rects = {"A": (2, 2, 18, 18), "B": (2, 21, 18, 19)}
+        self.assertIn("A", A.atlas_bleed(page, rects, 2))
+        rects_ok = {"A": (2, 2, 18, 18), "B": (2, 24, 18, 16)}
+        page_ok = np.zeros((64, 64, 4))
+        page_ok[2:20, 2:20, 3] = 1.0
+        page_ok[24:40, 2:20, 3] = 1.0
+        self.assertEqual([], A.atlas_bleed(page_ok, rects_ok, 2))
+
+    def test_icons_must_differ_by_shape(self):
+        self.f.hero_set()
+        ic = figure(96, 10, 86, 10, 86, colour=(200, 60, 40))
+        ic2 = figure(96, 10, 86, 10, 86, colour=(60, 200, 40))        # same shape, other hue
+        self.f.put("Icons/status_one.png", ic, pivot=(0.5, 0.5))
+        self.f.put("Icons/status_two.png", ic2, pivot=(0.5, 0.5))
+        rep, _ = self.f.run()
+        self.assertIn("icon_shape_confusable", checks(rep, "Icons/status_two.png"))
+
+    def test_transparent_rgb_fringe_without_alpha_dilation(self):
+        self.f.hero_set()
+        a = figure(128, 20, 100, 20, 100, colour=(250, 250, 250), ink=(250, 250, 250))
+        a[101:110, :, :3] = 0                                            # black RGB under alpha 0 below a white sprite
+        self.f.put("Relics/fringe.png", a, pivot=(0.5, 0.5))
+        rep, _ = self.f.run()
+        self.assertIn("transparent_rgb_fringe", checks(rep, "Relics/fringe.png"), "metas without alphaIsTransparency")
 
 
 if __name__ == "__main__":
