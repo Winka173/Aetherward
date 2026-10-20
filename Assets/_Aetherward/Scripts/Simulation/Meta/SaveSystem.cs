@@ -174,6 +174,17 @@ namespace Aetherward.Sim.Meta
                     .Set("victory", f.Victory).Set("rating", f.Rating).Set("tags", tags));
             }
             d.Set("feedback", fb);
+            d.Set("milestones", StringArray(m.Milestones)).Set("bestChain", m.BestReactionsPerSecond);
+            JsonNode forms = JsonNode.NewArray();
+            foreach (FormationSnapshot f in m.WinningFormations)
+            {
+                JsonNode hs = JsonNode.NewArray(), rs = JsonNode.NewArray();
+                foreach (string h in f.Heroes) hs.Add(JsonNode.From(h));
+                foreach (string r in f.Relics) rs.Add(JsonNode.From(r));
+                forms.Add(JsonNode.NewObject().Set("seed", f.Seed).Set("mode", f.Mode).Set("asc", f.Ascension).Set("share", f.ShareCode)
+                    .Set("time", f.UnixTime.ToString(CultureInfo.InvariantCulture)).Set("heroes", hs).Set("relics", rs));
+            }
+            d.Set("formations", forms);
             JsonNode hist = JsonNode.NewArray();
             foreach (RunHistoryEntry h in m.History)
             {
@@ -202,6 +213,16 @@ namespace Aetherward.Sim.Meta
             ReadIntMap(d["heroRuns"], m.HeroRuns);
             ReadIntMap(d["heroWins"], m.HeroWins);
             ReadIntMap(d["modeRecords"], m.ModeRecords);
+            // Discovery Codex (added in save v2 data without a version bump: absent fields mean "nothing yet").
+            foreach (string ms in d.StringList("milestones")) m.Milestones.Add(ms);
+            m.BestReactionsPerSecond = d.Int("bestChain");
+            foreach (JsonNode f in d["formations"].Items)
+            {
+                var snap = new FormationSnapshot { Seed = f.Str("seed"), Mode = f.Str("mode"), Ascension = f.Int("asc"), ShareCode = f.Str("share"), UnixTime = long.TryParse(f.Str("time") ?? "0", NumberStyles.Integer, CultureInfo.InvariantCulture, out long ut) ? ut : 0 };
+                snap.Heroes.AddRange(f.StringList("heroes"));
+                snap.Relics.AddRange(f.StringList("relics"));
+                m.WinningFormations.Add(snap);
+            }
             foreach (JsonNode f in d["feedback"].Items)
             {
                 string fs = f.Str("seed");

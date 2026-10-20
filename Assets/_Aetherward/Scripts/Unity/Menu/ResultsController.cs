@@ -48,6 +48,12 @@ namespace Aetherward.Game
                 Mathf.RoundToInt(_r.MenuSeconds / 60f));
             Ui.Label(0, 210, Ui.W, 30, turning, 18, Ui.Muted, TextAnchor.UpperCenter);
             if (Ui.Button(Ui.W - 300, 140, 260, 60, l.Get("results.copy_build"), Tone.Ghost, true, 20)) GUIUtility.systemCopyBuffer = _r.ShareCode;
+            if (App.Meta.LastMilestones.Count > 0)
+            {
+                var names = new List<string>();
+                foreach (string ms in App.Meta.LastMilestones) names.Add(MilestoneName(ms));
+                Ui.Label(40, 140, 520, 80, l.Get("milestone.earned") + " " + string.Join(", ", names), 18, Ui.Gold, TextAnchor.UpperLeft, true);
+            }
 
             float colW = (Ui.W - 120) / 3f;
             DrawHeroes(40, 240, colW, 560);
@@ -197,6 +203,13 @@ namespace Aetherward.Game
         {
             App.Meta.RecordFeedback(_r.Seed, _r.WaveReached, _r.Victory, rating, tag);
             App.SaveMeta();
+        }
+
+        public static string MilestoneName(string id)
+        {
+            var l = App.Loc;
+            int c = id.IndexOf(':');
+            return c < 0 ? l.Get("milestone." + id) : l.Format("milestone." + id.Substring(0, c), id.Substring(c + 1));
         }
     }
 }

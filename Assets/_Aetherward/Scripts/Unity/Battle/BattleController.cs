@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using Aetherward.Sim.Combat;
 using Aetherward.Sim.Content;
 using Aetherward.Sim.Core;
+using Aetherward.Sim.Meta;
 using Aetherward.Sim.Presentation;
 using Aetherward.Sim.Run;
 using UnityEngine;
@@ -39,6 +40,53 @@ namespace Aetherward.Game
         private readonly FloatingTextSystem _text = new FloatingTextSystem();
         private readonly DamageNumberMerger _merge = new DamageNumberMerger();
         private readonly TelegraphAssist _assist = new TelegraphAssist();
+        private DiscoveryTracker _discovery;
+        private int _knownRelics = -1;
+        private readonly List<(string text, float t)> _toasts = new List<(string, float)>();
+
+        /// <summary>Subtle, non-pausing milestone toast (P5): top-right, small, fades; never a splash or slow-motion.</summary>
+        private void Toast(string text)
+        {
+            _toasts.Add((text, 3.5f));
+            if (_toasts.Count > 3) _toasts.RemoveAt(0);
+            App.Audio.Play("coin", 0.35f, 0f, SoundCategory.Ui);
+        }
+
+        private void UpdateDiscoveries(float dt)
+        {
+            for (int i = _toasts.Count - 1; i >= 0; i--)
+            {
+                (string text, float t) = _toasts[i];
+                if ((t -= dt) <= 0f) _toasts.RemoveAt(i);
+                else _toasts[i] = (text, t);
+            }
+            if (_discovery == null) _discovery = new DiscoveryTracker(App.Meta);
+            if (_rc.Battle != null && _discovery.OnPeakChain(_rc.Battle.Stats.PeakReactionsPerSecond) != null)
+                Toast(App.Loc.Format("milestone.best_chain", _rc.Battle.Stats.PeakReactionsPerSecond));
+            if (_knownRelics < 0) _knownRelics = _rc.State.Relics.Count;
+            for (int i = _knownRelics; i < _rc.State.Relics.Count; i++)
+            {
+                string id = _rc.State.Relics[i];
+                if (App.Content.Relics.TryGetValue(id, out RelicDef rd) && rd.Fusion && _discovery.OnFusion(id) != null)
+                    Toast(App.Loc.Format("milestone.new_fusion", App.Loc.Get(rd.NameKey)));
+            }
+            _knownRelics = _rc.State.Relics.Count;
+            foreach (HeroRunState h in _rc.State.Heroes)
+                if (!string.IsNullOrEmpty(h.EvolutionId) && _discovery.OnEvolution(h.EvolutionId) != null && App.Content.Evolutions.TryGetValue(h.EvolutionId, out EvolutionDef ev))
+                    Toast(App.Loc.Format("milestone.new_evolution", App.Loc.Get(ev.NameKey)));
+        }
+
+        private void DrawToasts()
+        {
+            for (int i = 0; i < _toasts.Count; i++)
+            {
+                (string text, float t) = _toasts[i];
+                float a = Mathf.Clamp01(t * 1.5f);
+                float y = 130 + i * 52;
+                Ui.DrawRect(Ui.W - 560, y, 540, 46, new Color(0.06f, 0.07f, 0.16f, 0.75f * a));
+                Ui.Label(Ui.W - 548, y, 520, 46, text, 20, new Color(Ui.Gold.r, Ui.Gold.g, Ui.Gold.b, a), TextAnchor.MiddleLeft, true);
+            }
+        }
         private DebugOverlay _debug;
 
         private float _accumulator;
@@ -136,6 +184,7 @@ namespace Aetherward.Game
         {
             float dt = Time.unscaledDeltaTime;
             FitCamera();
+            UpdateDiscoveries(dt);
             HandleKeys();
             RunState s = _rc.State;
             _uiBlockers.Clear();
@@ -297,6 +346,7 @@ namespace Aetherward.Game
                     }
                     case SimEventType.Reaction:
                         OnReaction(e, p, reduced);
+                        if (_discovery != null && _discovery.OnReaction(e.Id) != null) Toast(App.Loc.Format("milestone.new_reaction", App.Loc.ReactionName(e.Id)));
                         break;
                     case SimEventType.Strike:
                         OnStrike(e, p, reduced);

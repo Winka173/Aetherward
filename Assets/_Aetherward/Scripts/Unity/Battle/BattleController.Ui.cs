@@ -52,6 +52,7 @@ namespace Aetherward.Game
             _modalOpen = s.Phase == RunPhase.Reward;
             if (s.Phase == RunPhase.Reward) DrawReward();
             DrawBanner();
+            DrawToasts();
             GUI.enabled = prevEnabled && !(_showBuild || _paused || _showSettings);
             if (evolveOpen) DrawEvolveModal(_evolveHero, false);
             GUI.enabled = prevEnabled && !(_paused || _showSettings);

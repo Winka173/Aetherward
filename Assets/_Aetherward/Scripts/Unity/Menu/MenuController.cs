@@ -305,7 +305,7 @@ namespace Aetherward.Game
             MetaProfile m = App.Meta;
             Ui.DrawRect(0, 0, Ui.W, Ui.H, new Color(0.04f, 0.05f, 0.12f, 0.8f));
             Ui.Label(60, 30, 600, 70, l.Get("codex.title"), 50, Ui.Gold, TextAnchor.UpperLeft, true);
-            string[] tabs = { "codex.heroes", "codex.reactions", "codex.relics", "codex.enemies", "codex.matrix" };
+            string[] tabs = { "codex.heroes", "codex.reactions", "codex.relics", "codex.enemies", "codex.matrix", "codex.journal" };
             for (int i = 0; i < tabs.Length; i++)
                 if (Ui.Button(60 + i * 210, 110, 200, 80, l.Get(tabs[i]), _codexTab == i ? Tone.Secondary : Tone.Ghost, true, 24))
                 {
@@ -313,6 +313,12 @@ namespace Aetherward.Game
                     _codexFocus = null;
                     _codexPage = 0;
                 }
+            if (_codexTab == 5)
+            {
+                DrawJournal();
+                if (Ui.Button(60, Ui.H - 130, 240, 96, l.Get("common.back"), Tone.Ghost)) _page = Page.Main;
+                return;
+            }
             if (_codexTab == 4)
             {
                 DrawReactionMatrix();

@@ -52,6 +52,11 @@ namespace Aetherward.Sim.Meta
         public const int MaxFeedback = 50;
 
         public readonly List<RunFeedback> Feedback = new List<RunFeedback>();
+        /// <summary>Discovery Codex (P5): earned milestone ids, best reactions/second, winning formations.</summary>
+        public readonly HashSet<string> Milestones = new HashSet<string>();
+        public int BestReactionsPerSecond;
+        public readonly List<FormationSnapshot> WinningFormations = new List<FormationSnapshot>();
+        public readonly List<string> LastMilestones = new List<string>();
 
         /// <summary>Adds or updates the feedback for one run (keyed by seed); keeps the newest <see cref="MaxFeedback"/>.</summary>
         public RunFeedback RecordFeedback(string seed, int wave, bool victory, int rating, string toggleTag = null)
@@ -211,6 +216,14 @@ namespace Aetherward.Sim.Meta
                 if (rc.Content.Relics.TryGetValue(r, out RelicDef def) && def.Fusion) Codex.Add("fusion:" + r);
             }
             foreach (string e in s.SeenEnemies) if (!e.StartsWith("hero:")) Codex.Add("enemy:" + e);
+            foreach (BondDef bond in rc.ActiveBonds()) Codex.Add("bond:" + bond.Id);
+            LastMilestones.Clear();
+            LastMilestones.AddRange(Aetherward.Sim.Meta.Milestones.Evaluate(this, rc, results));
+            if (results.Victory)
+            {
+                WinningFormations.Insert(0, Aetherward.Sim.Meta.Milestones.Snapshot(rc, results, unixTime));
+                while (WinningFormations.Count > Aetherward.Sim.Meta.Milestones.MaxFormations) WinningFormations.RemoveAt(WinningFormations.Count - 1);
+            }
 
             var entry = new RunHistoryEntry
             {
