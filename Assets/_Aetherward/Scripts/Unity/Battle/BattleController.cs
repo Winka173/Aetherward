@@ -158,9 +158,11 @@ namespace Aetherward.Game
             _unitsRoot.SetParent(_world, false);
             _fxRoot = new GameObject("Fx").transform;
             _fxRoot.SetParent(_world, false);
-            Sprite bgSprite = Art.Sprite(_rc.Biome.Background) ?? Art.Sprite("World/arena_background");
-            SpriteRenderer bg = WorldGfx.NewSprite(_world, "Arena", bgSprite, -10000);
+            string bgPath = Art.Sprite(_rc.Biome.Background) != null ? _rc.Biome.Background : "World/arena_background";
+            SpriteRenderer bg = WorldGfx.NewSprite(_world, "Arena", Art.Sprite(bgPath), -10000);
             bg.transform.position = Vector3.zero;
+            EnvironmentFx.Create(_world, bgPath, _cam);
+            if (_cam.GetComponent<PostFx>() == null) _cam.gameObject.AddComponent<PostFx>();
             for (int i = 0; i < Arena.Nodes.Count; i++)
             {
                 SpriteRenderer n = WorldGfx.NewSprite(_world, "Node" + i, Art.Sprite("World/node_empty"), -9000);

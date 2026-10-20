@@ -128,6 +128,9 @@ namespace Aetherward.EditorTools
         private const string Root = "Assets/_Aetherward/Resources/Art/";
         private static Dictionary<string, float[]> _settings;
 
+        /// <summary>Bump when the rules below change: Unity reimports every texture this postprocessor touches.</summary>
+        public override uint GetVersion() => 2;   // 2: mipmaps + trilinear for world sprites, 4096 for all battlefields
+
         private static Dictionary<string, float[]> Settings
         {
             get
