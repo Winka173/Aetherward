@@ -10,7 +10,7 @@
   "ArtHandoff/returns/B01/exports/Art/Enemies/hexcaster_a.png",
   "ArtHandoff/returns/B01/exports/Art/Enemies/storm_harpy_a.png"
  ],
- "notes": "Per enemy: `_a` (walk contact, identity frame) first, then `_b` (passing) and `_attack` with `_a` attached as reference. Respect the size class heights of COMMON_CONTRACT \u00a74. Faction motifs and accents: ART_BIBLE \u00a77 'Enemies / factions / bosses'.",
+ "notes": "Per enemy: `_a` (walk contact, identity frame) first, then `_b` (passing) and `_attack` with `_a` attached as reference. Respect the size class heights of COMMON_CONTRACT \u00a74. Faction motifs and accents: ART_BIBLE \u00a77 'Enemies / factions / bosses'.\n\n**Palette rule (lead review of B08/B11):** the base of every enemy is its faction's material palette - 60-70% of the figure (iron_legion rust-orange riveted iron, voidborn violet #5146d9 + star-black, ashen_horde charcoal + ember, frozen_covenant pale cyan ice + white, corrupted_wilds sick-green bark and spores, arcane_fractures mirror-silver + magenta #ff5fd2, stormspire copper + violet #b06cff with gold sparks; rift-born launch enemies ash-grey husk + iron). Wine-red rift corruption is an ACCENT only (<= 15%). Two enemies of different factions must never read as the same colour mass.",
  "groups": [
   {
    "id": "launch",

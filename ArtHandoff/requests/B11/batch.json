@@ -8,7 +8,7 @@
   "ArtHandoff/returns/B01/exports/Art/Enemies/rift_warden_a.png",
   "ArtHandoff/returns/B01/exports/Art/Enemies/grunt_a.png"
  ],
- "notes": "Bosses are 512x512, shown x1.25 (~230-250 px tall at 1080p). Four frames each: `_a` / `_b` (heavy walk), `_tell` (anticipation pose held during the ground telegraph - weapon raised, glow building on the weapon only), `_attack` (impact). No red ground glow (the telegraph sprite owns that); keep space at the feet. Each boss must read as its faction's apex and break the human rhythm.",
+ "notes": "Bosses are 512x512, shown x1.25 (~230-250 px tall at 1080p). Four frames each: `_a` / `_b` (heavy walk), `_tell` (anticipation pose held during the ground telegraph - weapon raised, glow building on the weapon only), `_attack` (impact). No red ground glow (the telegraph sprite owns that); keep space at the feet. Each boss must read as its faction's apex and break the human rhythm. Each boss carries its faction palette (see the enemy palette rule); red/crimson only as rift accents (<= 15%).",
  "groups": [
   {
    "id": "bosses",

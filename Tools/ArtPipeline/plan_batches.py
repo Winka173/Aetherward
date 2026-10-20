@@ -39,10 +39,16 @@ HERO_NOTE = ("Per hero, generate the identity frame (`_idle`) first, then every 
              "Attack frames: pose only - **never** paint the projectile, beam or slash (VFX are separate sprites); keep the extended weapon "
              "inside the icon box (columns 40-360). Portraits: head and shoulders from the identity frame, same light, dark vignette.")
 ENEMY_NOTE = ("Per enemy: `_a` (walk contact, identity frame) first, then `_b` (passing) and `_attack` with `_a` attached as reference. "
-              "Respect the size class heights of COMMON_CONTRACT §4. Faction motifs and accents: ART_BIBLE §7 'Enemies / factions / bosses'.")
+              "Respect the size class heights of COMMON_CONTRACT §4. Faction motifs and accents: ART_BIBLE §7 'Enemies / factions / bosses'.\n\n"
+              "**Palette rule (lead review of B08/B11):** the base of every enemy is its faction's material palette - 60-70% of the figure "
+              "(iron_legion rust-orange riveted iron, voidborn violet #5146d9 + star-black, ashen_horde charcoal + ember, frozen_covenant pale "
+              "cyan ice + white, corrupted_wilds sick-green bark and spores, arcane_fractures mirror-silver + magenta #ff5fd2, stormspire copper "
+              "+ violet #b06cff with gold sparks; rift-born launch enemies ash-grey husk + iron). Wine-red rift corruption is an ACCENT only "
+              "(<= 15%). Two enemies of different factions must never read as the same colour mass.")
 BOSS_NOTE = ("Bosses are 512x512, shown x1.25 (~230-250 px tall at 1080p). Four frames each: `_a` / `_b` (heavy walk), `_tell` (anticipation "
              "pose held during the ground telegraph - weapon raised, glow building on the weapon only), `_attack` (impact). No red ground glow "
-             "(the telegraph sprite owns that); keep space at the feet. Each boss must read as its faction's apex and break the human rhythm.")
+             "(the telegraph sprite owns that); keep space at the feet. Each boss must read as its faction's apex and break the human rhythm. "
+             "Each boss carries its faction palette (see the enemy palette rule); red/crimson only as rift accents (<= 15%).")
 
 
 def hero_assets(hid, live=True, new=True):
@@ -205,7 +211,7 @@ def main():
     for b, spec in plan.items():
         for x in expand(spec, live)[0]:
             seen.setdefault(x, []).append(b)
-    missing = [x for x in live if x not in seen]
+    missing = [x for x in live if x not in seen and x not in new_seen]   # imported new frames are live now
     dupes = {x: v for x, v in seen.items() if len(v) > 1}
     expect_new = {"Heroes/%s_%s" % (h["id"], s) for h in HEROES for s, _ in HERO_NEW}
     expect_new |= {"Enemies/%s_attack" % e["id"] for e in ENEMIES}
