@@ -4,7 +4,7 @@
       --arena Assets/_Aetherward/Resources/Content/arena.json --out ArtCache/Env/verdant [--samples 256] [--scale 1.0]
 
 Camera contract (matches the game, see ArtProduction/ART_BIBLE.md §3):
-  orthographic, elevation 38.3 deg (sin = 0.62), 34 x 19.2 world units on screen, output 4080 x 2304 (PPU 120).
+  orthographic, elevation 38.3 deg (sin = 0.62), 34 x 17 world units, output 4096 x 2048 (PPU ~120.5, power of two).
   A ground point at game position (x, y) sits at Blender (x, y / 0.62, 0); height z rises on screen by z * cos(38.3).
 Lighting contract (shared with the painted units):
   key = moon/sun from the upper-left FRONT (shadows fall up-right on screen, behind units), cool rim/fill, the
@@ -38,8 +38,8 @@ SEED = int(arg("--seed", "7"))
 SIN = 0.62
 ELEV = math.asin(SIN)
 COS = math.cos(ELEV)
-VIEW_W, VIEW_H = 34.0, 19.2
-RES_X, RES_Y = 4080, 2304
+VIEW_W, VIEW_H = 34.0, 17.0      # 4096 x 2048: power-of-two so Unity can compress the sprite (NPOT sprites stay RGBA)
+RES_X, RES_Y = 4096, 2048
 random.seed(SEED)
 np.random.seed(SEED)
 os.makedirs(os.path.join(OUT, "layers"), exist_ok=True)

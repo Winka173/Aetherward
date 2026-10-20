@@ -4,7 +4,7 @@
   "Tools/ArtPipeline/blender/crystal_benchmark.py": "2fc7399c2f11399d15e701e5b97553d9f0e84471200e9665313ec54abc54b97e",
   "Tools/ArtPipeline/blender/crystal_states.py": "eacf6aa713428d826dbd7a06414d6ef36072571f2932ded410032828a40ae6b9",
   "Tools/ArtPipeline/blender/direction_benchmark.py": "63175bf39ceb486a43a226e647fd59f768d081b241bcbecc7af31db94253ba2d",
-  "Tools/ArtPipeline/blender/sanctum_env.py": "0eb4e68df78c9f5f146cda6a2d1bd64965102231297a3318b69c8a9ccc52f660",
+  "Tools/ArtPipeline/blender/sanctum_env.py": "5fd371a238fb3daa88705549de1e883c5e4d8a4831355d29589ed2e128d63e4d",
   "Tools/AssetGen/art/build_all.py": "0f483337c832f6f576d937c2f1c5d618b716d583b27190063165f39e684f7546",
   "Tools/AssetGen/art/enemies.py": "ea10280f6bfec015bb2295738718535e421957c6205d33554e8121f516da5cc2",
   "Tools/AssetGen/art/expansion_art.py": "c11dc08954d73231522d6f9542817d30b680a1eb8cb04602fb9ae883ec10b13b",
@@ -755,1095 +755,1095 @@
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/aeris_cast.png",
-   "sha256": "15979de5fa0bff0c6ac9829f26684bf77cbc9b816f248370c02adb5c1be887b7"
+   "sha256": "edcbd103f941ae5d001826d7884c85c83645079d40af0e0b17079a3222b63f82"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/aeris_downed.png",
-   "sha256": "f2e3544bc92e1ce08e1368d6c368dcca3521dc545b520e91ec3fb6cb28b3f94b"
+   "sha256": "ac9c818acd26830e043be124e64bbb15f438434adc0c2e6e47ac2d47f788025e"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/aeris_evoA.png",
-   "sha256": "4202ec7a407b9d14b94ecc574a8d25eedc5404ddb1833f66210941aaf7eff43f"
+   "sha256": "1a9e41ea27a49a6b34fb7eab6632bba62a92f572e72784eff6dee1ae6fdbf5e2"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/aeris_evoA_cast.png",
-   "sha256": "48278d8d750e686016071428f91b53063800a27f99cef3be8fdd7925f5d89664"
+   "sha256": "343e80da39ed70afb75c61d38d17863fbd17361cd831c4b8ba56c07b143d01cf"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/aeris_evoB.png",
-   "sha256": "500df6eba98ab1f41f71b74732138138c4fc84c8b384496eaff5206307c1f405"
+   "sha256": "0272782a75f1abf0d4b0ed25cd84ba2141f9b394ea5498a670e7d9406d9e951b"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/aeris_evoB_cast.png",
-   "sha256": "455c61528cb0c8180689b5291c6d5834068f9c13dbf5e9addc1cb371c05c8494"
+   "sha256": "0bf7b9e580cd9aacea65e6692f105500f3a7c1bc87d231d00cd198216980543d"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/aeris_idle.png",
-   "sha256": "3fedf46bd4c5015b9232d0130e7d404fbe8a2138da0e2042b859b1c64084ce28"
+   "sha256": "d1a400b0ced50fc898a43ffe55c1be3b8534c54480f1a506e0ded24dd80e25b5"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/ashara_cast.png",
-   "sha256": "f383d94241a8680a4955b42084262c027254301bacc49333093b5737bb81937b"
+   "sha256": "f3824a51c09b4fe05c8e85b76791200d05658db173d732317bf961407939a57c"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/ashara_downed.png",
-   "sha256": "efc315f042f1f552c3375b134ecec938c10d5192846f9c765332bc2681fa2e4f"
+   "sha256": "220c351644bf35745ba754835bb515862a0b0e4b9e3aba7284c094b5d840780b"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/ashara_evoA.png",
-   "sha256": "bdcd5c2dd4e6cace26c610286d9e20dd70a893623f72141aba8454cb8f284fe4"
+   "sha256": "cdc01fe5b06384baf9952e7acd3c89fcd5ffc9e0286e99a7157d448fca7acf80"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/ashara_evoA_cast.png",
-   "sha256": "781d4a0a95eda17736628e7f61dfbf3d3d7908e944e419594194fd6395b7ec69"
+   "sha256": "4f7244fd55a653948bc10922259dd8aeca729fac14748c79f2db1406afe67e9a"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/ashara_evoB.png",
-   "sha256": "83d067940cc3939b010c015ee9ee626abd92798a5b383104c615dbdfcf0c01ca"
+   "sha256": "440f5dd9cec81af71874645733122ecff030506d91ad7459a28abbeb9a081e3b"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/ashara_evoB_cast.png",
-   "sha256": "28f70a27cb358bd4f0ebb3b236d3fa6a29acf870589f94b0b7be50aa0e32309f"
+   "sha256": "aa4d9b44d6243026df13ac1f1b10bad861fffcdd1965e74c02f8504ff6e7d48a"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/ashara_idle.png",
-   "sha256": "8acd953683fb7e4991861a0afb405deba50a5823c5f500736549b45437b42a03"
+   "sha256": "c0f78e1a488e0398ec24e2553f272aade8bf6d8ef04eec5d7124de79e764a574"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/borun_cast.png",
-   "sha256": "153f63379c6132324f3246a5d18d460ec971f1ffaf5e7e96057cae2da7317ac7"
+   "sha256": "3bef991d5a1d3928c2c3fae5802ca16788e465c74eeb92a22f62ba20dd07378b"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/borun_downed.png",
-   "sha256": "d4a4e5b3013ec9a677fabd83a1963b77d204077330d579e7b2a2ce576d36c54a"
+   "sha256": "50a1a68ae1ef9776927e64ce14eab0c7eaf6c0449f4cfce1798167491b801046"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/borun_evoA.png",
-   "sha256": "18e7ee4b7357a6444498593a56b3c26196efd15dea686639525646c2f16655cf"
+   "sha256": "99978af40b813f3cb42816163a8336bac2fbd946b4c748db5c2dd51442a17a00"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/borun_evoA_cast.png",
-   "sha256": "fc3a699c6a0d47f08e93dd62bbd4df7236a00d4f8fb5b749e2b58c3c1eb62b48"
+   "sha256": "e8e7ae6c09186883f5bd3af221f326c5d8807b26f3e9d969a381e2b6914bcff5"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/borun_evoB.png",
-   "sha256": "cabb5aa8885f1e77db3e4ce3c0b300b958b1f923665a4c48bf8d34c9086561bb"
+   "sha256": "8ce7e3e7bf601ad523ce579039aca002e5b60596568230cc9ef592fb72d918d1"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/borun_evoB_cast.png",
-   "sha256": "51295b864b7221514569a9f0832522d3b30029cf14698856e1ef87f076b84170"
+   "sha256": "03d25ac45604971d6f95c7888c1f7206dde2977a4c1991894b03134c2e1dfa53"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/borun_idle.png",
-   "sha256": "198ab6ea025fb03eaf7a97182e46834da9d3f52b8c35dc913d506a0a7745cc32"
+   "sha256": "74d321c7a41c3c73aa48ddb7ee3c547718e982cffcb7d24b2031a01b00a96059"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/caelis_cast.png",
-   "sha256": "83260dc45347b27f45ecec0bf8ed2d603a1d65ac761050e912581abd92d6a4eb"
+   "sha256": "97c290de8bd878a684e4f27c40480a4b85d48d27dfeb9d06e94c990c5fee753e"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/caelis_downed.png",
-   "sha256": "46864d0290c492cde0d3dc3ab9a5bf1c5504ba236b395803b12aaba548e03144"
+   "sha256": "079d1d4eb939b47a1c7e0e6a0b929992ea2cd2d3a7db999de23bd51f295fe41a"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/caelis_evoA.png",
-   "sha256": "9df71b37c1ac9f5f76c06f4a9cbdb33b34953d8ed554cc8ac6610f712156a07c"
+   "sha256": "8ca8d90606b2c4d948a56c3dfe22485434b8f70af7193416424feb67fb9318ec"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/caelis_evoA_cast.png",
-   "sha256": "0236dc7173c92d8a1971708a7f6187b3f7483f7b67e54567fcd77a7151f18898"
+   "sha256": "868ee4780708cd16d8388e0f97b6a0f80791179a857f4095500ae4b6b83a419d"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/caelis_evoB.png",
-   "sha256": "97b587dc1b21f176877be35d134ddb8d577b202e7731305cdc4c9048bbbb4c2c"
+   "sha256": "ff23430bdc7288aa5894821a87fb019b7db05b7551b489226ef816878a285e65"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/caelis_evoB_cast.png",
-   "sha256": "115ee53e732420ff47efcad30160474a7c69fccd6bf59d89b9084abf04658433"
+   "sha256": "795c7a8455992d66840ad9f626cfe46139eadf4db6ae5871b2497f8aa6a7c1ea"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/caelis_idle.png",
-   "sha256": "eb9ee7df4b9cdc2f5e05c20a7223ae9d99da8897daf5a8bc1439148f384d1381"
+   "sha256": "91327f7c8e4530e5c75e11939810319858bc6184eaf121bb146f6fe8cf4a40b5"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/cinder_attack.png",
-   "sha256": "4ae759c4057c843b35f718d12a0f22aa040e371ac4d7a579d85e9ed9348b9472"
+   "sha256": "91c6dc2eb052f6c78217b0a055ce05d178f85a4638b806cdedb7607a0b22e2a3"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/cinder_cast.png",
-   "sha256": "700564dd8fbbc102886bc92d42b36d3c104f88d7f95b519b159b1e5789e22387"
+   "sha256": "3fbddd0ba889e25afb1be4044024a40ea3b6244bd53c395d8c6207b1d37f8acc"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/cinder_downed.png",
-   "sha256": "fd34f42fc3a21a14599a774eaa900bf13ab21a202cacf7286c86e4c71c9a5cf9"
+   "sha256": "fe8be51030d18d823cb9f00baeaea1cd8dd1c3744680c57e8f00cb7b4b1ea1e2"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/cinder_evoA.png",
-   "sha256": "99d835d45d8d640ea27976858d5e4ae0208d85598aa555e40cf3c023f13ca5f6"
+   "sha256": "aab36ad4145d62d3e50e3da041c68930c0090538683d002c60f019322b7c6255"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/cinder_evoA_attack.png",
-   "sha256": "3906d0d0b33bf1358ae2834ac2d5d93e0edfe8b5afc58146e5a89df49eb8cfae"
+   "sha256": "fa33eaa2f48456aa99509682665f439c73ce7d25505f944fa1505c9a7f735575"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/cinder_evoA_cast.png",
-   "sha256": "5e9f78c1879b22165ce1abf3860129b9a9d908dcfff9ef1d0228f8060a7b00bf"
+   "sha256": "acf0f8317486d48a21816e9cc2ef404fa226586f34327a21a4f024708186d992"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/cinder_evoB.png",
-   "sha256": "e6ee76d20d68b6b030a71c546381163fab8e494c8178fb355e708ce2cbce1f02"
+   "sha256": "32e54870fe71afaabe64e1b4bd06e7b079ea033082570b87c2edc991557db125"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/cinder_evoB_attack.png",
-   "sha256": "4db601b02b00e43b09beadcebd71e59486bc33c1bd99d889b592db2cb1403b25"
+   "sha256": "751304adcd8655756c2a51b8600d127e20247fcf712831b17717b89736a8689a"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/cinder_evoB_cast.png",
-   "sha256": "75dd3f31b39dde607214c64bf113ee851ded90b82e29baf2b70453a5b3e37330"
+   "sha256": "dc0095184c86a2ffbfec3a947ed9c47dc6683423c346df4c061115239e1d11fe"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/cinder_idle.png",
-   "sha256": "9b95879d9d0617765fc09ffa5c09cfb85dcc6734f8c054e7dac991e2c122b095"
+   "sha256": "f8c01ddc6aa0ab8dbf543cf5a34ad8c31da78738e75a831581259a201807bbc0"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/doran_cast.png",
-   "sha256": "514adecec9a5d01b1f59ba08988ac2d3ecb28b19e239d6002ee8fa972e7eb8cb"
+   "sha256": "fd078edfa3c339b1570741f2c95b4e04a1d465b3b96573c2a79d3dc3a7eda061"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/doran_downed.png",
-   "sha256": "1068cf7cfd1e0524c5803752110d59c3ee61c6ce44f6195b49786f311ac70ebb"
+   "sha256": "69bad9ef3d408e83fde0b3a92a98150420c983dc9ba7bd7b583c946bd59fe37b"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/doran_evoA.png",
-   "sha256": "e20c8382274bcff76f0303211e9bf3ca9d07e4bcee076fde76ce1abac95f77c0"
+   "sha256": "1d2fa5bffd75f3cc4c8333f923b783c02d6bb18395f85238b04223490d8bd114"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/doran_evoA_cast.png",
-   "sha256": "7b7391cbac70205f9b09f9dee63f4bd0face826c0b954c1eabf2cc06f01a9702"
+   "sha256": "7fbf6343e45f445009cb3ac7dff6de2f27bbe000e6199f5a45ad7e02b5f708ff"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/doran_evoB.png",
-   "sha256": "46ff2d2e536f78d529a688578087a883bb1520f7206443020b83c92b0c96651b"
+   "sha256": "26367b21462e1a99eae46bd6187a8af33da42773241d856ebfafd78da7ddb619"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/doran_evoB_cast.png",
-   "sha256": "172990588db0da98331d2bce35637a15d41142ae46f4538f6b1167b14a92ca03"
+   "sha256": "8ebf98412a8733740fd84d38261952a0e665524c8815d069110967fbf3e5204a"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/doran_idle.png",
-   "sha256": "af976ebebff01ea29aeaa438337feb7e4e9b10a5ef0ed8f0b3b14822679ee1bd"
+   "sha256": "ef372384a37eb63ac9104af70a9e3fb0fa9de283310600544f126c314adef372"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/eirwen_cast.png",
-   "sha256": "eded7fbb02c18939c12d02b21ecd57794a7770f72ea8c252e3bf145f84936170"
+   "sha256": "8ee523e7db4d4c6214144fb45db8771c4c428feb96549ec930466cd2baf348be"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/eirwen_downed.png",
-   "sha256": "45addd61c0e9c97bd1e9d136a97fd3469fb54bec72348f3c41aa2171a0153e22"
+   "sha256": "ac22d298adddb2aabe844b331474928167224110fa43ccd80a683897452b051c"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/eirwen_evoA.png",
-   "sha256": "cb8ae4deeb830e63b0cdc23e7caecedbf043e00974182e3f4b105b2bae0e2f44"
+   "sha256": "e142aee24be5124402b82fec22b5acfcad854d0c8cf4c2cd023d1781bfe11b71"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/eirwen_evoA_cast.png",
-   "sha256": "6f59f71d6e6ed743ebe4bcb61eff9d687c5fe418f9ddea9e45dd8cd65bd23077"
+   "sha256": "7edf4908863afbc3ea698b6378b9078eaa25b0bac2b8fa697eb93f3b21bcff9a"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/eirwen_evoB.png",
-   "sha256": "b75098d641756e3d85c797e1529f2db77532990ff3be2bb7e490e48f73e3873c"
+   "sha256": "d0e5aaabc2117c35b6296d6b6cd1e0addf9f923ed4ebe510f4c16a97362ed241"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/eirwen_evoB_cast.png",
-   "sha256": "d83ad0a466ce6ddd5f0188cb20e8bbe75b01e80c815acb12acf9074f733f01f2"
+   "sha256": "b4e3987c7630a1d22e1a56fbdb52660727144957af75b544a6e09d96223accab"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/eirwen_idle.png",
-   "sha256": "c08d8c31e65750f66694402e495e845f1117af1c28cfb898142441b59f00ec4c"
+   "sha256": "f8e5eeb509c4e220422adbf1c9d45f7381d6ae435581e8de930c77df9073ed73"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/elowen_cast.png",
-   "sha256": "f1aa01beefe6880282971f0eb3728823fe8b484306915a6744c258ca8f1f1785"
+   "sha256": "59f046746c16d68aef4bef16f66985289097bac285eb99f6d3f0c0064f19fd24"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/elowen_downed.png",
-   "sha256": "34b36e0453c78dee7a2fd50ff7a840f286a1a4eaabcf596218ffc5b2681d20b6"
+   "sha256": "9aefb65e11a464ce5de3ff0875f3de93d2887350b6be99d8bf3cd97850060773"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/elowen_evoA.png",
-   "sha256": "9e3cbd7cd1a9c91e060b656f669f80d4ce371ecb89c51272a03041290d457b8c"
+   "sha256": "76461269bc0a06bc13f55e4e88bec7ab161283a71653a8190747931e2b4199e8"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/elowen_evoA_cast.png",
-   "sha256": "1b1bc746da07d54a2a7f686717273962d8cdb54b3c9e66fa166649718db4f286"
+   "sha256": "c3804dda4f2b86a6a2a6e7e16fa423a6be977242255e1af74ee3b6be0c90bca3"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/elowen_evoB.png",
-   "sha256": "33291d84ddc581332b08e25756f38eee98bf5e4eae80e6ad0cc2f60c77ec6fd9"
+   "sha256": "426d59b609648f8946a7593aecf16f87cc24036fcf3af5f5ceb32f2cdd03058f"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/elowen_evoB_cast.png",
-   "sha256": "83b4d25ddf1123d752ebccc06370ec1edb3c6ceb7c65d7bac076414212e8080a"
+   "sha256": "99605f4d391084f93977c45bacb81a2a5f92e33ac10d27c49e66011467dce9d5"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/elowen_idle.png",
-   "sha256": "a387ed6e7c688660a49232a98c763decabfff58ced640dd3ffa758596237ca76"
+   "sha256": "20d78efce6f9c463bb4917a95e8a9f714ac287c8e82f62445d7f37cad0ced176"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/freya_attack.png",
-   "sha256": "7423bc3a2888bfcee0dd931cc5e589901835a4a0b2d6a86ec3fcc39232866814"
+   "sha256": "6dac9d715114167a7f0f4b474acfda1c8593e73a27cda38fd8250958fd7e1248"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/freya_cast.png",
-   "sha256": "93f9cee2de742734dc19a9bf08a9280d0191adb8b1de920796ed6cd47ca4ee7e"
+   "sha256": "a46996807f826d52eac26e21e70cd5616242bf3511ebd47b9ee260031208f28e"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/freya_downed.png",
-   "sha256": "7c75ce5570c3d1da5b351a87dd2123064749d93cc34a714b34d30ce1698d1fc0"
+   "sha256": "3444efe907350fc4c69486e5daa37118fc5faa80c977d5a86fb277975ec4d825"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/freya_evoA.png",
-   "sha256": "b75c01d71a2470972d6c798c0f12de6bafb4353b8e4f9cbbd32da0486bc1ba1c"
+   "sha256": "61e4c51ca71a3cd3cecb9ac2c5b14b9d7cc8e6734ab9ba27b6b2b08f95443e4b"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/freya_evoA_attack.png",
-   "sha256": "9db05461e3b560ee2fc55dfd7620995568526a6cf892da2705a83d84fe7b5d65"
+   "sha256": "ac1fc092946b1ad2e1b4f30bed9412f660111a37fe5508b1457fba31a77efbfb"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/freya_evoA_cast.png",
-   "sha256": "d9ccbb404944119b0dbeb7529980bc061f1edd317a6e49ffbaeffeeb3bfff7e2"
+   "sha256": "16ca7734ec4cc006cd68a7cad027f7fa136beb16c517c47879a0f7927340deeb"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/freya_evoB.png",
-   "sha256": "47b7963fb90c98f76394560ad4e53814dfa6e47eded729f9cd4aa1c8506643ac"
+   "sha256": "f41fc738b770cf11b49876fa5115b403538a6307917273b45b7d6aa703a2b934"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/freya_evoB_attack.png",
-   "sha256": "f22cef3a6f7594c63832d9b52a1d7ca5095d2d4d4b1c4c7da9866142b79131d1"
+   "sha256": "0cd6f01f87ec8a55fd9da841260038c0cb79784f0c4c275f011b85dc95a83074"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/freya_evoB_cast.png",
-   "sha256": "bd095765f5ae3cfbc2a1439002456a29979b2023f3b254f0d517b6d0ebe1e6ab"
+   "sha256": "f0090722603d8b3cf926463e773f376a7a56df252b3beb30f838691859bfd15a"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/freya_idle.png",
-   "sha256": "d63f2d001bc5d742f4b7c903bcbca935675a0ec31ba1b783db6e1a942eaeda68"
+   "sha256": "0ff33c4823169b9c686e185ffa923c71d3e7defd259b5cf9f2aa7d83defd5a72"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/glacius_cast.png",
-   "sha256": "4a446208f32a5e9d9dc3624d51ae76cf5ba146a2897cabbd7c4509744963c4fe"
+   "sha256": "3b43e68313550895a6ea356ce42924708e429b79ca56528d66f92de8a7fad09c"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/glacius_downed.png",
-   "sha256": "00154282f4f570795999530c49f96f9dfff9bdd1251003ffe070db5b34b67e63"
+   "sha256": "c9a67e67e3bde90fd792ab26c33883ec2096009ae6e74da105433dcd684a5ac6"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/glacius_evoA.png",
-   "sha256": "e69a360af4b17e18a443f94b5e520a264a1b6b5cd12cecb0528962393c67fa61"
+   "sha256": "5a0c7e10d06deef87d151445270edb4f2a352a3b47b95cb95fe558af20cfe159"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/glacius_evoA_cast.png",
-   "sha256": "00fcf28ff6ae2e281eef7d54eb318adcb620e63ccc5afe6a2169755df66e5666"
+   "sha256": "0dca415e850e53a1097bc8dd8d8a2343b246e153e1f72e8b2a3817253b1b4f08"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/glacius_evoB.png",
-   "sha256": "bed42427d78f0ec58b3a4d880acbf1ed3ec8420309ce7809021aa9a1ef5d9678"
+   "sha256": "e479bf53b8be6845fc454296a00be117452ca10221a9fd3ff8d7c8cbddb0fcac"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/glacius_evoB_cast.png",
-   "sha256": "2bbeb67e7f6b97bbc8d5f5b2e87c3e2275c818b8c03087b74be8b3bae6be749b"
+   "sha256": "093856d10f52103ca2d9d3be46298a359e5c30b211107f74c5587fd0d6d1f19f"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/glacius_idle.png",
-   "sha256": "ad9602b94ce9e7884066322dee698a0e0d9a45078f45dda0988be8ccba542b11"
+   "sha256": "c478df9885bf92afb0fe4ef0889969c9344a09a498359ace1b83908b18230b98"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/ignis_attack.png",
-   "sha256": "a31459ae1b1b7255f521e8370ae4143a1cdb9152251cdf1e5b277a4600d147bc"
+   "sha256": "62adb94e42908b8e5f81b1be2f76e1110b6cd909dc51903fcea4e31a43f436de"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/ignis_cast.png",
-   "sha256": "1e21c991ac295fc4e11dddcca3197456625b3d1b26d01e0b3c703860f9902ff3"
+   "sha256": "41d4dd062c0b533710f79f804401d5c62fd02a4e1480d894cce2f872520a8232"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/ignis_downed.png",
-   "sha256": "21d41c5b5706f6683c4c7046ba6e85f62ede79a93da3e4501d31b080052731ad"
+   "sha256": "7f92295017f7b1455d560a4bdb1a97a78e0a611b6248c3f77bf677b45b0aeab3"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/ignis_evoA.png",
-   "sha256": "55a6ffb03bba55dedd4b8f6eddcd76a02f1018bdda90e4b05cdade605f466563"
+   "sha256": "50964fd867e8286114d9fe8f68a4d59327e1869a40a13976cea472f9e6a7a4c2"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/ignis_evoA_attack.png",
-   "sha256": "fd5bac97fa5c5d90d1989d82805d206f375e801bab19be525d1ad54d41dba155"
+   "sha256": "327f417f0d4586448f003167336a5fc075b66e7a795656a1793b465c4109492b"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/ignis_evoA_cast.png",
-   "sha256": "5cb9ce3b6557dfd7325fc8335cfcadc3d169e54d36cad1a9f25206187da25db2"
+   "sha256": "466cfa8595644852da6fc52594ede475d701c6686aa794ac4eed4ab6e7762955"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/ignis_evoB.png",
-   "sha256": "f9e803fc40a604496de669448f757d1858f54085e69b278eafb28970da9f4677"
+   "sha256": "8f6deee32d960c243cce734d3c15abf02a636e235a14b493fe53196adee83117"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/ignis_evoB_attack.png",
-   "sha256": "94328601bd82932b8e0a1b4c1cdd9aa610d831f945cfeeb33b56f51b31591b2f"
+   "sha256": "4738864087a6f9da5b8f3385cc4988553eb544304df393e62ff1affdfd6b14c1"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/ignis_evoB_cast.png",
-   "sha256": "2ab3cf7ebd0be0ef289c580a2baaa81ce9e4d06745e6d6fad417818a93a7e6a0"
+   "sha256": "670980590d9616d1ef613c2e2d8f9f73afab1a7c3599cb18564116a68e728a71"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/ignis_idle.png",
-   "sha256": "1f1fa87d41dc49d498828fa7f9a1c15e50bce6f43dd11f452539bfd126e72df9"
+   "sha256": "2309dad1fb068c8db2e52223e46f3400d544cebc4309b85676b5c6085c063ca2"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/isolde_cast.png",
-   "sha256": "1cb12623c92e75a780bf554ceaf13ca61d774769952659dc7528787f8a894482"
+   "sha256": "bddfe87ede75947a02f035606a232cecf2a24110e2c75425792c70402471ce92"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/isolde_downed.png",
-   "sha256": "5cdbb504faac051de669064d2ede557d65d74e0eb664e23474602edd6922662a"
+   "sha256": "bf2bfd7fb120815b9be7372dac6fcb21d07c4de21377eeb5830fd8812bd6480f"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/isolde_evoA.png",
-   "sha256": "3926c7e0d24702b77655f80491ef6b462c62fd0c22abda1e49fe6853978c844e"
+   "sha256": "482df6a03e36b632cba55232b55b23e1babd7ed73e6d66b1485afec3733c99b1"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/isolde_evoA_cast.png",
-   "sha256": "fb0c21820ffea86cc178d981acc352cebb3e51cb5efb0cd4eb27685726d32677"
+   "sha256": "7900060f89448dded88e982379892de2e8ff36ea4f619dcd0cd77381614f7ca9"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/isolde_evoB.png",
-   "sha256": "54231fc4bd8ba417d9a5243409b04758c34cda4262ebbed12b1849d7cbf367f7"
+   "sha256": "fac40584f21d5ca946676a485d6537bbea98cffc896ed2ad3334d7dc800cbd48"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/isolde_evoB_cast.png",
-   "sha256": "572ce267f85e41cce89fc25ee90447f1cf50c8d3734cf9f632b32a06c26d0fa4"
+   "sha256": "9e9c2edc1e6b4a36a27288d612a5c881de7458f4f2d6aa3bf7b02e60d8b9d474"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/isolde_idle.png",
-   "sha256": "c37d94cfe6be5596255935df1000e5e209644f99713081f6d435313cdc91494b"
+   "sha256": "a0902b76840b0cd883f9ccbe1116b1ab7ce39f21ef92fd1efb3586e6bb5a568c"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/kael_cast.png",
-   "sha256": "08a086bb0f4bcf68cbe06a566658bd86907bbb4ed8fb0af8ff4b3b300cbf7e1b"
+   "sha256": "33a91a04361b78cac265362360f664f98fb1bb491dc9f3d38786905ad8d44f47"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/kael_downed.png",
-   "sha256": "3478a85aa1c0d41e57c949b7c6a273a9b72808506fa820f63ef96943dc2517b6"
+   "sha256": "5ddbe15c23709598b2e6fbc9e2378e948f268be7dd64ff1423b1cb80fa4f8041"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/kael_evoA.png",
-   "sha256": "47a7fb1aefbfea7416263b0a7f0af1312ba1489f31341fece5a8eba3b95bdf7e"
+   "sha256": "81efd8c65eedb3c33e4e976ba26554bc0b6f129284cc175f4a176cfae62ee40a"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/kael_evoA_cast.png",
-   "sha256": "4b4b29c3e5d9651ca9d4611187efbd9cfb21b368114b30a97c2f08606e907557"
+   "sha256": "39ad87f9552edac440c806edc2d2147ec3f0c8942fc0dbd1a1fe5c039efc6914"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/kael_evoB.png",
-   "sha256": "88bc93aea5e54fba43de7e185e66569c061a43aa50e772ef5281480fd1e73b45"
+   "sha256": "a7f1de15cc8ea517a39d83ec7aea50b799eb09968e03acbfec916ac4a9e119ac"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/kael_evoB_cast.png",
-   "sha256": "e5b5dc8c596ae094233912996495c80077d2e9455ae7976e84f48e9a8266c667"
+   "sha256": "d37495a474750cbf5325a674d6f8a0bd6ffd5a39d9c3b1f6ad4f2ccc91c341d9"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/kael_idle.png",
-   "sha256": "c635623429aade7d651204c63b7155c3e3f2345e389143951a9153ee136dadec"
+   "sha256": "46bcc8ea3242d5ddc55e241c54a95a962c68e309a44a023ff5a89ce672952d14"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/liora_cast.png",
-   "sha256": "288f7882ba4a253494b81e6ecfd4c9b377984aab245b860dd7cf1d075d692091"
+   "sha256": "f76c0199224e13689cc9817ca1fa0749eb5e89a629e5211bc0611589cb5e4e2a"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/liora_downed.png",
-   "sha256": "4a3ca4b962bef8f2fbd9c3bc27b075163e2dc12fe0243f1344ce2e6b4ae056b4"
+   "sha256": "38b3d004110010aa293af9ae3e800b05a5d78753158b1b5c00853ddcf3787648"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/liora_evoA.png",
-   "sha256": "aa10161d7d5b5c02a27ef6efab949c1d4274e2b172b0cd0da767946cf23a215f"
+   "sha256": "73bcae739775b0d27fa9920760937644e4abd3faed7fe1e826b9ab0522551f36"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/liora_evoA_cast.png",
-   "sha256": "32805a642412d9f294c0116de1ff2f5dbf29c1ceadf35ab9c2cc9e78128c3a28"
+   "sha256": "1352532f2118757d2da2849c64a1ec6df40bc3aa4cdb091a461a98d220baf71d"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/liora_evoB.png",
-   "sha256": "db93df5e7c1245ab669087e10dfcea4710433af2913d207220aed12f387e8176"
+   "sha256": "79e63fd724e1e953a7cc3d939479971c98e42983db48b1dced72285abfbbf60b"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/liora_evoB_cast.png",
-   "sha256": "765072c2495e32431e17d4af78e6f51792bbce4075c4162d9d7001218df13667"
+   "sha256": "b7f3719d5402553719cf9dada66505e148343466f59612986a7b2f2d0758c9f7"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/liora_idle.png",
-   "sha256": "c7928560683d3088347dff17f92648b5882c6ae6287785ff491476cec2069865"
+   "sha256": "e64480f897d8de10b58b87fb74fb30fbead02ed3b63b098de7ca0d3ded566cae"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/maelis_cast.png",
-   "sha256": "94e7f9954ca22f5fce269efacf18c34a4b953f517490e59534fb338d41509b61"
+   "sha256": "e8cb8afce30183a7e8b578de3d60ed9a2552b85bfb3a06236ae42346bab1785e"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/maelis_downed.png",
-   "sha256": "81816e9bdc0666250fb83b055f2e5d3db027654b7119e4acefa7c4b4d0cdcfa0"
+   "sha256": "b2260082390bb9f02544e9b47ccc648f6309e1d1ad2f6c96cc162bd078d0e2f4"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/maelis_evoA.png",
-   "sha256": "28696dd912219ffba415003ccecd12c8cb2f77bc586f3efc24a2424a427dfa3d"
+   "sha256": "e6a788e1e0a9c8abc9314b678bb30cf9f062a70f56414863703bad41024ab69d"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/maelis_evoA_cast.png",
-   "sha256": "25cc811c56ff383d7af6e80dd359f61cdd4873e01298634c2cd231b045a5fbfb"
+   "sha256": "b92a1a481dbbd1220f6fa1889810b3a0dce8c7b909f188530dde8e8147842db9"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/maelis_evoB.png",
-   "sha256": "8b10eb76b50fcd251fe157f701e88db66db267bb38c26b44a845acd47a53cba5"
+   "sha256": "0c18c5e1e5d748f2221597d47241a181ac7700496a9f8a1d76acf6fb32dfee25"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/maelis_evoB_cast.png",
-   "sha256": "a138708ca76ef42ad57675d282367c057ed1147ad1d22f102b311d66480c72c8"
+   "sha256": "2748411e1891f6ba605d9fd7bdd24618649a1a651ca829fa3956a85ee9a0b7bf"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/maelis_idle.png",
-   "sha256": "3b88fc3496578d52defc0ec3212ae0a75f1249f1dddc0a5219c1be0c87de9278"
+   "sha256": "6dc5be5f92234285c8400f4c0d46fffca64ebc89c1d58be62d9cde83611ded03"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/magnus_cast.png",
-   "sha256": "a4f2517bf4407b6c45c32da1ca1219f61d28d3b25eee3ac5322f8583ddf135c4"
+   "sha256": "033a2588280bc6f49d37862c961341df37be98e9c48dfdd60c74b3de3df52d91"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/magnus_downed.png",
-   "sha256": "d3f5212affb78308bac0cef15e307013cea17edbf04661157a2baa85ea44fec5"
+   "sha256": "c6522cc3d3a81e151c5fe46a190fb3e802a8292b1fd84e1439262357779a21a9"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/magnus_evoA.png",
-   "sha256": "f0b0383776837457b8e42787bfa829f1ad57b34c3176401b5068ba606dc8fb4b"
+   "sha256": "ce6289cf59bfc18fab35f7f24dfb5a8b41a5d9a8ab11e3f28e7bd8edf9d318a8"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/magnus_evoA_cast.png",
-   "sha256": "37b1e160aa3a9a8918391ba512342a172429c13a0c92588ac8a03c0618c28d4e"
+   "sha256": "517181c92f9f160cdd8b2873efb75851d8ff13268e45def18d99c1fec6a1584e"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/magnus_evoB.png",
-   "sha256": "5d6b2b1bc0b84c96ca2251ca90197e024f2fbeba3f663047c4ab50293d375ee5"
+   "sha256": "c0e8ebbef484a13a327848f4f3a597159019e0b79094ee9ada1dad9dc67dc1db"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/magnus_evoB_cast.png",
-   "sha256": "85dc0401ffda107aefcb22957e6af00c027edabc02275bafad22adaee32eff28"
+   "sha256": "0f4857dfc83d45bd82c2ff449719435f4b7f8900c2829c718d7f822979a027f7"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/magnus_idle.png",
-   "sha256": "30fd91f3208e0e5679645e39e5fabdc58cbe45a804cc1d02c9dfc4546e4bab65"
+   "sha256": "bad0d1410f99d958138003fb8e2e305e1d168e1eb7caf4e1c5d761a57ea4db8d"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/marina_attack.png",
-   "sha256": "e59aa2a426a294a0d6d6553a4a6731467b6a4551b3fdcf588642acdb1bb2269c"
+   "sha256": "9c589f159af306f614d7f4cd138925eafdd960048a102e24841af408b9d080ef"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/marina_cast.png",
-   "sha256": "ea30746f28b14cdfcf60d74908b7f1db2ae11845be5489d8beae19378699bef8"
+   "sha256": "1b38503f498f53a8969326d1883ff2d681f58709081c764769834790c246d3b3"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/marina_downed.png",
-   "sha256": "e59848b278df92ad39ff608c2c98966a7b9cda79d1d19a24741da59e66743934"
+   "sha256": "cb21a1ac362b733eceac2fd4cb13ea93ccc4cef9bdbcf1c06f99a40ab08846f6"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/marina_evoA.png",
-   "sha256": "38d1ace1d3004f960721583591858692a0af43957f38a56c0b5a9a39487f5b5e"
+   "sha256": "d8bbda86668a305cd24784a1c6373f446f9a44c8423d308ff039ae4c93eee694"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/marina_evoA_attack.png",
-   "sha256": "9647dbbd34766a56b23c19e07f62897db34b03c7ab24f607dad1ed896852ddea"
+   "sha256": "f1d89714c1e3e4c89acad73fdf248a897e1e91da8f6ac2c2e5076a93d259fd99"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/marina_evoA_cast.png",
-   "sha256": "5951b70f3c26adcbb75fa8c54d37a1987aa5340d460b3dc9a476449ebce645e2"
+   "sha256": "e493e1b7895d6d49606ee616c06da3e977603dd62791bce8fec8553490afaa96"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/marina_evoB.png",
-   "sha256": "c2341cdc58042c452cfd1fe6b37246f1baadf9a31c1f2002f11d477db26fd54a"
+   "sha256": "70ea29903e3035c2083c10c4270972409fdf8ae184b286ca58403d15a71b218d"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/marina_evoB_attack.png",
-   "sha256": "08d8bf4701a328b74f74ce9a80a64392822fffe2021e484f446a20777b7c0746"
+   "sha256": "1d13aa176526f175c8540cccf69c109f7c378ad4c05b5b89f25cee498768fab4"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/marina_evoB_cast.png",
-   "sha256": "fe38c447dd7ddf26529bf24518c694530bf84ce94b48886bf8fee21b25445453"
+   "sha256": "ac03b07888bc10b7f84568ca09e0343bddd634ecb76f7b90c754259a947704d5"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/marina_idle.png",
-   "sha256": "902a0d3a92a71c0b14313991b9902624007ebfbc269a8cee926b218255effe83"
+   "sha256": "b49175050bfae41112def6d0566b135ff174e28946c4062db86834a67e3bc21f"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/mirel_cast.png",
-   "sha256": "386abf2bfef6fdd2ad6ce8808a05a3ff3d0ca83d050bc07bfaa1d828f33ad22c"
+   "sha256": "0f58a99108d407ed3568722a55d0aa8a6e97ed82468218e1a02f2fe51c88c83e"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/mirel_downed.png",
-   "sha256": "86a99a03a4c3e016ed74ba91c1afa9f511db022938f199ef32d5d20d9a149b75"
+   "sha256": "eb283187fd235027fb6a363b28ce7280d10fbdb6d458107639dce8ffce1199ec"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/mirel_evoA.png",
-   "sha256": "c07dc1fcf66b09ade3794d67727d9975c70f4ac7d9c55791b6ba93d691e5c0ab"
+   "sha256": "5aa757f52bb7788decb0d7dce8b7bc1a23e7ee5aaf9aa62e39cc163205ce28ff"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/mirel_evoA_cast.png",
-   "sha256": "428e383f23abf3286676a005985e586238027132bf08678833b0e1596e010e10"
+   "sha256": "c4ee99518b257f5caa13d66876466ae6ae518e120ef0af60c6eaeda1f5244f7f"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/mirel_evoB.png",
-   "sha256": "fda7c3c7be8a2f8645997cb6c8d3d07bf086862a0ab5e52a14cca45bc4167c5b"
+   "sha256": "957f3017e79d71176f56b840c585f22a06585c835eff7514eea646578150e9cc"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/mirel_evoB_cast.png",
-   "sha256": "adf7221bed3b07b1abe4ee8a565649543c3e480fe2b8206e9cace93ebc9dd159"
+   "sha256": "f6ae0b8ce61a15dd093d9104dc509334c2513037ad4d87319f1cd59f2b51dd5d"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/mirel_idle.png",
-   "sha256": "91c537bb42ceccd8cd2b79b72c44e1676815627d6a320253fa247c8de4355211"
+   "sha256": "5154f5522fd55542e1bbc77a8cbe5b72ce277fd070701b7735487d6cc4ecd57a"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/morven_cast.png",
-   "sha256": "a498e2d3f7351f97c718ca0024203d6263a2570a62900a77df6ac19944fae43f"
+   "sha256": "4e010621e7113911dc37e20bbbee3a3ef32627bb72c9dd7df7c1ecd07caec8d0"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/morven_downed.png",
-   "sha256": "5ef7dd5e73a3048feb5457c84a4deae1130aba9b62eabac5f5e9d497748987ea"
+   "sha256": "31088deb1e947732dd1f18181321d97b4cdf7dedfe182086840847ecec29184a"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/morven_evoA.png",
-   "sha256": "e457f5c5cc5c728f3186fb82657bc901a1181e5857551c3cfeccb0a489cc54c3"
+   "sha256": "4cb41386bf54563f97b9423433ec22344cc650cf8c4de24160049c1ad22c85ae"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/morven_evoA_cast.png",
-   "sha256": "b97594b272327d90403ffae9242efa5b546003da607519a05ee13b6cb7d1ef16"
+   "sha256": "3234d7b74a5ac0ce04f8d75f66056b377d84606e6df95291f7923a8c21600b1e"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/morven_evoB.png",
-   "sha256": "29831c1b8cb095d599e253445248282ae22aa4924bbe971285247e22b9f03d3b"
+   "sha256": "86d8318dfbc2a2254197003338ab32a055c42cb5e9ae3e329c70aab75d73266c"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/morven_evoB_cast.png",
-   "sha256": "02a5981b240773169dde29cf6166ad668896bfc2b011533e4862ec2c0ec60606"
+   "sha256": "5d7df93ccfecb93c48926cdafd09989b3ce24807c52596c30e29e42798b6b839"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/morven_idle.png",
-   "sha256": "7ffacaa6f1f44e3fb24269908ebb468f819aa329fcc450fd2dd84ffe332de070"
+   "sha256": "cc18b787eefb41b6f0d1fa9933a4c69233e65668db4c9856c378ef78b84352c5"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/nerissa_cast.png",
-   "sha256": "e98786fcca8c2eb5f5356589952833938753912fe3387278da07f64b2ad2b11e"
+   "sha256": "587419fd35db5decc29b39dc238e4d1ded54bc3d5b64aea445ae25584be1d6bd"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/nerissa_downed.png",
-   "sha256": "aae6e7a590729710b42b46e11a8e80f196c6d8d1c6587592b2c64756cbb8b6c4"
+   "sha256": "e5350a727f63ffbe6eefa8d223ffc5ecd68e02e4aa827bf059a1ef79e7112e81"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/nerissa_evoA.png",
-   "sha256": "f8fc7349c02e25e4f6744fc5eac7bbd1f9ea725e36dd6d6c2ba10cd3c9ef739c"
+   "sha256": "80c3be5e358912f026b4d440d34c0ca3d8c84b93efa1f75c9de0256c8b566dc8"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/nerissa_evoA_cast.png",
-   "sha256": "1674159fc5de3a4b080e0d3d51fc7aeb58354e33b71cdd35587f6d114784c6a7"
+   "sha256": "8c2f27513e2953bff41e439242d6d40827e44446723e0674c7ea9605ff7cb743"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/nerissa_evoB.png",
-   "sha256": "79ca876ba5de7e205a6664a77492c45583e8fd6339b14e8289f137e6877791a3"
+   "sha256": "2f44c2553fb2e271a71aa8dbd5c64a9f75dcbbc618aa43b051d8ea7d6f7a534c"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/nerissa_evoB_cast.png",
-   "sha256": "095197d43963c04535744e998996b057bb107b6f5633decac78299714433e062"
+   "sha256": "838a2b7aaec6ec3e7eaaa91e16792db2bc86efd54f1548292e25619963c6b2e9"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/nerissa_idle.png",
-   "sha256": "b6f867dad8aa4723561e43c7ac227b47e347ab48286ccf77053c197d6742c5b3"
+   "sha256": "24cd7866989697a5da4f7b71d40e02b507f1b7d6943f19bce2d1ba665aa8b335"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/nyxara_cast.png",
-   "sha256": "b7f0b2135aefb4e99685c204c3e7a4bebfdc348963b49e265a36be35825de41a"
+   "sha256": "34200ec3e8aefa8b6cfe8a90bdb7eaed37adedf370acb24d79791dd37901957c"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/nyxara_downed.png",
-   "sha256": "9b83d5f9ecaac3f753ca4d1e3ec71b22d349c3f474232be856929044563c1eaf"
+   "sha256": "b9117e6b1761fd8749e9156c11b52de5dc1408fb83e689cef18074f2577c02c2"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/nyxara_evoA.png",
-   "sha256": "eccd786f440bb2cf04b05852ea9fec3e7963ad4e3a0e501a02e25c759aea5981"
+   "sha256": "5f156cfe0c73d669e6f255114924c5c394b05888fad8381147608109e5c33e4c"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/nyxara_evoA_cast.png",
-   "sha256": "41836fac57059b26db0d5007b3e5fe747836428347c2b49d15a9842d5242c094"
+   "sha256": "5d56fa3f14aa7a0d5bc8e1e1e12394c7c1ad1c80ba6512d1792467ef08060c62"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/nyxara_evoB.png",
-   "sha256": "dc37e51497201a016dccd646a5e7e308900b519d36f5687006a8e0456ac2a36c"
+   "sha256": "eb1c41adecc6f3166994c2ab07476fe6458742a9fa68f9ac92e0f2aae25fe818"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/nyxara_evoB_cast.png",
-   "sha256": "0a8659f4d241c9887e0529446948025c23d2c03ee7761c396d8e5d9173ea75df"
+   "sha256": "a5b19cfd5684a6b256015d5a0fb2c31139120401e6959c1ae5a7014a83faf808"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/nyxara_idle.png",
-   "sha256": "c9989f20f5f821ce0f62eca1d20df62a76bce5615836b466db670c94569531cb"
+   "sha256": "e446c71b92a040c4175c9441d6b1af48328e75202b10ccda96dae2ffb6c532d3"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/oriane_cast.png",
-   "sha256": "b0fe6ef19493796cbf1d0b295fa39ca4672e5f2b570a1fc4c5db023abba14e46"
+   "sha256": "f07172257f409f2ed83716dd101e159b88e39d6bffff0ea5fd625f6756554e03"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/oriane_downed.png",
-   "sha256": "a3e749304325aeaa8ae15277fd1c9180a6e6a2343bf69d237324bfec96f0a398"
+   "sha256": "e54bf0efff2206b3e9eb06864b4f3e6fef0ab035fa6d80e354413b52c7246c75"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/oriane_evoA.png",
-   "sha256": "827035be05c0be4fceca7d5d5dc255fd4a8ae7c8d313e147ead6ec2ee2d13c33"
+   "sha256": "729802b3db7de0ca1967eca5c955ce2cd21c180803a002bfc4c490d31cdaa60b"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/oriane_evoA_cast.png",
-   "sha256": "187588aaecf14cc3aba6df0736701c41a9e5f128d4a8edb39e3a7fcde2de3b33"
+   "sha256": "4ace5e2f9860d479e5e6de9a1730d34954a70f1d149491de1a24d89f99a925ce"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/oriane_evoB.png",
-   "sha256": "d84cc737b94f3fcc7bd5b7bd0524ed2b0309b6ef0bee3b553dcc207c1a8af59b"
+   "sha256": "62bbab656d76c17f768ee517a9019cde1ede40013eb7de04b695cc8f731a0cc3"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/oriane_evoB_cast.png",
-   "sha256": "2fa68cc9aadb140136f4e52a8781ab738b2b10834c9ec72237b8e4e121d03614"
+   "sha256": "c6b100f4ed5ce08e2be1e1191a5bd3977c103ba2d2c614b3adced4c78e93bfb5"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/oriane_idle.png",
-   "sha256": "0b889b9849a247c1818b927b1d88bdfbc547b00ef9286be33516121ba3146b10"
+   "sha256": "fb9cc2897c161390306f2bd6818574a80d177f1dbdc0d0509b26a11cc55e3745"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/raiden_cast.png",
-   "sha256": "b72a90fbfef8e1129619d228ccaa53b4cc2f3ebd39092f88eb06f950b779842d"
+   "sha256": "caa85859db088be56cc7e2b01c6e117e8542bce5866c0e4260fcd04d02ab04f1"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/raiden_downed.png",
-   "sha256": "e9b3d0d7b8d97194a48e75572dba14e7194d776f97c57c1a9f33e3da34ec562a"
+   "sha256": "2f23b16e47075133e8c628d1560b93c861d9cbaacca900e28b67bf458250d6fe"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/raiden_evoA.png",
-   "sha256": "76ac090894985a2978a9401a4a5d2286611c19770331b6ce9eef066287e9323f"
+   "sha256": "999f9cc04e1f88983fa54840fad03fae046949e96a9d058510b2d4ac8cab9b39"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/raiden_evoA_cast.png",
-   "sha256": "16f61d71402b4982ff56570eb6cc1ab840ae498ca445dc15902ef7bc568d3ebf"
+   "sha256": "73c635835cf9a42bd5ced85e22283e2d4fea75d1775bcadb1c548b184685f502"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/raiden_evoB.png",
-   "sha256": "7d6bd3d939171d4bc11b2d65eba60e0cd96ed4e26164f3108f6b79e9a77102fe"
+   "sha256": "1815b7302876a53e7f79705589477ac3428dc38b1ab87e69b7173fef99c2d784"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/raiden_evoB_cast.png",
-   "sha256": "ca6bdecd26bd9b5b84bc44c6e5ec67f94dc44b5c82bf81c06ab350404feff908"
+   "sha256": "79fc2d55b107caccbdf6eb9133484def5dd16d24c747d13021e60185b276fd42"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/raiden_idle.png",
-   "sha256": "48de25da5daa0cb51f7fb6f9836059bd2e99faf5e31c3124d6eb41320733af12"
+   "sha256": "68ade289808bcf4b1cee59405013586c881d73ae273580f4f7ad8ebaf2ed258f"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/sable_cast.png",
-   "sha256": "e700744151d6c3ef87d1386fbc3c54b3a5c49f0823180dd174b1f2fbf40f5398"
+   "sha256": "81b16d21212b040cfa9c2ba402aa1c777b16c9eeb4951221f83feb166fd21268"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/sable_downed.png",
-   "sha256": "ee5613f43a2067deb45edb3c032af8d7c31e229674b1489e1ab350d4285196bd"
+   "sha256": "d913a69f678a7606ad438e4bba2f0e39b62b95d67c8769380f0fcbb1f3a846ac"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/sable_evoA.png",
-   "sha256": "e3ce0c8b4d9190aa6cac97c962cf089b2f09ab9dca075468241691a52c7dfa5f"
+   "sha256": "f376bf60bbaae05fb73ef1c8b423dd62f2825ece092a3324960930b46a76183a"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/sable_evoA_cast.png",
-   "sha256": "c64e6725e6108c6fe78245bcd02560058f722999d2de1ff75a9d875bfb64018d"
+   "sha256": "6728fa5b2764cf020e7ab72905774de072904e672e3e618b6d4b4b7e385f3a7b"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/sable_evoB.png",
-   "sha256": "5bc8b6841ec88ebed1f2d585116a7282a5e0229ea6edf5add6daea47ef253380"
+   "sha256": "4c003c40fa8709dbde586495f5122a38c03a236d23c591290b06019fa594091a"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/sable_evoB_cast.png",
-   "sha256": "3004b558606ce22d49f70ac3f92e70dd9f00b0fd24a0ae2ea7ba6a16679a1e15"
+   "sha256": "096f6e19a6a8b19f40d5ec13d6fa5a4ae3754d96e1ff9490d19b81c5f27a7dd8"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/sable_idle.png",
-   "sha256": "529d1cf75691d066e1cb69a7597854172d7d332ab76766eeff4aee3201ba8a16"
+   "sha256": "f812131de54cb2e32e8fc02ee45706debf19bab9aa5420a2f37fc1e41439fbab"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/seren_cast.png",
-   "sha256": "c90a417d93a45711bf9bf219d4c508635b835540d313c55dee6e71400e75e855"
+   "sha256": "6248115c381472a652afb6a8774ca24f47844a09d7edf7ed50c1f2b0d45aa7e4"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/seren_downed.png",
-   "sha256": "523d6253996009e88d77c2b17016202698b6204db702416fd5a8dfe40949088a"
+   "sha256": "cb82759d1021e2416bb8741a2826180594234cf6df96a3ac57836d420a893456"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/seren_evoA.png",
-   "sha256": "757cb18a6ca4019173091302cdfe8445e76497e23c73d1ac995dea7bc100244b"
+   "sha256": "3411ec7e9ba5fa4a6df5420b293552e09adfe5682b3166f97777b09802ddd237"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/seren_evoA_cast.png",
-   "sha256": "2a0fe9f8daf4576818c12436f172da7ba27c05b0dc642cafc0ee4070003c3e2b"
+   "sha256": "e444b57025a995e875b3d095e7997f8913d52e6859b1c489cbdcf5f3c33f2e65"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/seren_evoB.png",
-   "sha256": "39fbf847611eb424667121776aec8195521bfae7a25ab3a79580071cbe09cfdf"
+   "sha256": "9b919c1430dd7c1862d297ef6fdd66e4bb073696c39f144ac7e5bd7907fcaa52"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/seren_evoB_cast.png",
-   "sha256": "accbed6c8ef1ea711685ca6579a64fe54b9622222f95d9e8fd42d824d44152c9"
+   "sha256": "2dbcbdc5fe1d40ac30e7712a1f69ff57deff3cda835acc9d4011af837275bb92"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/seren_idle.png",
-   "sha256": "d192241ff7872fc37284eb73a7d8210c52775f6d9ec0cc6914ea5253607dc4fa"
+   "sha256": "575a442608c8037e394895864ca26ff3be514fceb48ac036a26bcb80abe011ce"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/solenne_cast.png",
-   "sha256": "be10ce4023b0d9d3cea0b4e5bd9567d886e66b45669ea32bf7732174e64dab66"
+   "sha256": "23e51283b2b749fc3ce442a33735630da4e669094f837c247530bd233b14530a"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/solenne_downed.png",
-   "sha256": "b9e3cac287923fdf39162964ba3d290e2de0c948e44f371193043240d7493b58"
+   "sha256": "1c3be0b72309a5bff39c83b2f0acd24f97cbe46672ab230d6dba7fcfa3cd8e1f"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/solenne_evoA.png",
-   "sha256": "109892327c50d403f2775cad8757a28be5e9e626852b38561331cad081917717"
+   "sha256": "6f29447e3b58558231086d8595a590ffda4a46dc9295a705c891e91a8778934c"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/solenne_evoA_cast.png",
-   "sha256": "87df0a1f1db7440999b9594c8e53c1c282ce02da7e72470c296728409c8abc08"
+   "sha256": "980af2983cc4f0d8fa6c18826dc6cd12e0d70ae63d7d53b8cb38799305803d22"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/solenne_evoB.png",
-   "sha256": "0ce9236a35aebf53f389fa98536d7e4f6705cc23f92c12992182586166c2fa29"
+   "sha256": "316efac54cf5d2d7b2cfdbf280730741e75f17f463a536ba77391d235b87d9a9"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/solenne_evoB_cast.png",
-   "sha256": "496a34f7ea84ce5e56b2ff43100c70fdcf25bd54e97d99a62208837a837c6d8e"
+   "sha256": "c54d6a7ed4e5cac1a1c38eede50e1d79a5b179ce1d848d9ee288b799a388da88"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/solenne_idle.png",
-   "sha256": "6f7b9d7341121f5c2e8b4011a1c70e95bfe3bda57f13646f5b73e18a9112938e"
+   "sha256": "8f0138c4d0f87dc99cdcd1bf0777b545103283cfea5663019b39581e863ffe2f"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/sylph_attack.png",
-   "sha256": "8da6d0e1362b67e560cdbb17d19c8e2ba23626d17f303c75f86d2f0065da6351"
+   "sha256": "9bc77bb8d7d3b845368056e538a690f09916537d0017be70f7c35d6d150842bf"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/sylph_cast.png",
-   "sha256": "7906385f4b6192b30c723f2b30a8d7aca229e6ad8f25fa365538bd017428f2be"
+   "sha256": "135f3c71a93d265391f006a14d333c2996c818805309a52a70fcc771cffacced"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/sylph_downed.png",
-   "sha256": "d34829c76dcf97615a0d9cff42288aa4d5d097fa3f1f1ae8fc4dea7425f23786"
+   "sha256": "68cee79b45c35bbdeab580738fa55bbdf4bceafdd26e3b67eb35df435c03985f"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/sylph_evoA.png",
-   "sha256": "eb14466cc65e52af0b8cd3b96af74f3e73a69902115c6bf7176b5fdc948f559a"
+   "sha256": "43c96634363e5aeed6d41b5206937b82db35d443964aba647085ae78a2645741"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/sylph_evoA_attack.png",
-   "sha256": "8139edc3ee09dd49ffd99e08814fcbf8d01387725a78bb615e1e2c76e0ebd632"
+   "sha256": "cd069992f15d425e41340b5227963840b9d41611308fcd15a032381d73798320"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/sylph_evoA_cast.png",
-   "sha256": "013d8ecda9c5d5af6685358b4e29a05aa15496af4a6cc85df6344ceb03f65dae"
+   "sha256": "43a06fdb5c1c19b8dbb7255aca3b0699151b25e1147c0f626ad40e649cd92d0d"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/sylph_evoB.png",
-   "sha256": "3a6b2c6f1c447d38234c1c4e41a2904a59d03e323e3c87499e07906c4981d712"
+   "sha256": "7f887d43593350c7f8a853b500013d5753d6bc69d5494cd8cbe4b55b7d51210d"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/sylph_evoB_attack.png",
-   "sha256": "63b0aaf95a7dec188d7f796d6024796a6583bc0b069010c4b75f30d7f1f27e25"
+   "sha256": "c1654343748ecfa500100e11271489e6ea85e5d16c35cc1b98d7cba5818a88f7"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/sylph_evoB_cast.png",
-   "sha256": "46aa62ffcec2e137e7473ea7a52c368927a202735e4ba228c6bbe9dc53a2a2cc"
+   "sha256": "94ff78c499521d81c8d4e4e13abe053e2b5fd0f28a3fd39dea53e22472094038"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/sylph_idle.png",
-   "sha256": "7e49c3fad31805581dd057fe4ca7a3cafdd434434b9db78ba4e84da42baef434"
+   "sha256": "67009cfd89e882e5c7bc233ce22b2d3849eb2018f9d22e9fb91a2c4dfc276ca6"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/terra_attack.png",
-   "sha256": "670c9fce334d8675ab341a460a651477cc68935e437f1299db2cae0c469184ab"
+   "sha256": "9177ad2f264732faf6fa42495254f531276d25dc17533a7ecceccfd9cab40627"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/terra_cast.png",
-   "sha256": "3baf5d048816b30a9be1160a48b8e212af48bbb95abaae37b0206d5bd665f95d"
+   "sha256": "178ec57d65e739196541c1c14b763a1d9705f4c165cf1ce847bfaf98d6498e0d"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/terra_downed.png",
-   "sha256": "174fe558e1e27a9a3dd586e400dd14be75bdf961be268c71f1c0a034f405f8e6"
+   "sha256": "ed23570b340e184d9d7beaf28f295548c3b7ac625913e1146c2cc39e9d251837"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/terra_evoA.png",
-   "sha256": "cff0e63cd3764d65877cffb0339b99f298a5e090317626c1195d21b3496dfc07"
+   "sha256": "c858a09b43d2bbc5be89d7b867b0c74b437ae08a5e90d87933f51fd24a7247d4"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/terra_evoA_attack.png",
-   "sha256": "2ea15f3c40bbc7b5c0c9b632a0e4e7574e2a37cb24e78bbe5c6cb90b6d51a43d"
+   "sha256": "9dc8c2fcebbdc09f8f3a0be91698b69a01c0d45e1f9a18d15ee67e883e184d2e"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/terra_evoA_cast.png",
-   "sha256": "3b6f3e9394957529e41313a44e5d3cb8e5ae4b4bf82b4fafb501e47c621e973c"
+   "sha256": "61bb407a2e659c18d9a78fe3264fd28dc47b3725c9b7f2caf91426c753ef04b2"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/terra_evoB.png",
-   "sha256": "c4bac02119b57cd6daa74a32132c53a7c52d7a62d38c5279f2360b95a2b04639"
+   "sha256": "759acf2ccd93e3a4f866efbbfa2062df4dfd2e06fedeb93664707aef4860b62f"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/terra_evoB_attack.png",
-   "sha256": "0600567afcb6e664b2e17176f2e7b5e37101bd0b844fcb4b3049874d28456956"
+   "sha256": "f883f5d51430ae2ba8d62fc2d742271a57733a5523995dc65db999cbf629b3b8"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/terra_evoB_cast.png",
-   "sha256": "a27d75b9847e6f251c67eed6d3b8a641b380b032ac938f6957ce1ab4fa44ff49"
+   "sha256": "407db7883f11b1c6320f0b7e08d9a7fa7cbe97d426e830bb68da806121a92cb3"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/terra_idle.png",
-   "sha256": "de64b2034cfba75b5cd3dbc4213d16c6945a480b0aad39fec1585db872619b3f"
+   "sha256": "3625995cd883b6215751e7cf16ea07525f8c714fd8b4518f0e9cc0424179d841"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/thalen_cast.png",
-   "sha256": "527155428095bae273e30173b71f0f7feb49516270e80d17d4c12ff5c7944717"
+   "sha256": "af6c64a79a57f8ab20a4df54b776179f0ec815d3b5ea5239edcaa9f28357e787"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/thalen_downed.png",
-   "sha256": "112df4debbf22fded19ca429d776601faf690e27781d30794d10da032773ea9d"
+   "sha256": "4245b6f98d2b4327498f641a70533b48d83c0a185164079e65dfd7d0badaba8a"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/thalen_evoA.png",
-   "sha256": "244f75bcf2018e30957df5e7da1ba15cbeca9d3c420d8f9fd7d96e0982f42a4c"
+   "sha256": "137707b6fccb2e41798f1877df47f0a44c30d6f3557cf4703e766e0e405a1aae"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/thalen_evoA_cast.png",
-   "sha256": "e5b903bd1cedf77d810fac71864a971cde9884510b52a52fa51eca712fdd78d1"
+   "sha256": "14af62cb8d7fbeacb2568c699722d1fb6f1e4f5f2f876f64851062d26820d2e1"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/thalen_evoB.png",
-   "sha256": "daa05fd91b4a1db1cb8768c759a9e30dd5d10ee1b7be68bbca9d293ee19364f0"
+   "sha256": "b1770c55eb0e9ad2349cd153163b85179de56975c847e37571d6bf6647ac05b2"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/thalen_evoB_cast.png",
-   "sha256": "2092fb511b966ab37bd71e910ef70c47a9857762e00b4226c0b409f3a9aad2ca"
+   "sha256": "a4d06944b1a9276915852c1ac47e0502c33ac248d668fa352f575ad343837be7"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/thalen_idle.png",
-   "sha256": "6eb811d52ac278a01e1cbe60a965da066daf78df4cc7e31436d74e16fa64fdcd"
+   "sha256": "8146cb22231686e57ff6aa80f658bbed318e04f48c701c93e1b273960f74f7fe"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/tidal_cast.png",
-   "sha256": "2f82137372b278d83f86def3e912ecbde9578f8bc2a444f41c5bde2185d2d5f6"
+   "sha256": "c3ab746504635512c2fea3d244ddab96839e866036bae7895def8d7965044e14"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/tidal_downed.png",
-   "sha256": "3bfd56a573b70eed661790ed792ca1f16cd76109969e27d4dbce4af704a26e9b"
+   "sha256": "9f590c00d49f3cc5ed55e013726a698ffbe9a4b4598fae8a84cdf24bcd45af47"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/tidal_evoA.png",
-   "sha256": "832f0db68f5a3a240ee11bbcd334ff4ad6e25a0855f8f3e97c1f0afbb2e4711e"
+   "sha256": "a0d9409cd3c2607e6bff5dd3b3979899118891d6ce3ece40825c7c661fc9f0be"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/tidal_evoA_cast.png",
-   "sha256": "137dc0371a48d2438a23e7bdb7c59be81b214e2f5e95e8cbefd047230f97c8a2"
+   "sha256": "0f8555ca21ccf516108763e307f9b20be3f7c3f4dfb75e57b28851a0822788c7"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/tidal_evoB.png",
-   "sha256": "674ab7cb54e44df22148d0a69f98e9befe7bb19c94708cafaa11d4de72a3a90d"
+   "sha256": "52892dc2f273da148dd249cedc98b734eba1e68e4871fbf9ae49f59f1804dfd5"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/tidal_evoB_cast.png",
-   "sha256": "baaecc628706324671d0aa9132d6571850127a0ba061be3259177e39b3552c11"
+   "sha256": "76db2dfb96fa00a6da59f1e13341730cc5b746464077e7103bb8a966d605fb96"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/tidal_idle.png",
-   "sha256": "8103371c015fd7fc48d1621fd92836936b281ae52357553ef7dc813d018de163"
+   "sha256": "8078dc7b75e2e111992b79dab5929d364ec021de25f8a3983f882d09e23be514"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/vesper_cast.png",
-   "sha256": "7d5655bfccf5a7fb90002f9496d2fa60dc23ba72ed6a67999541fdef2287da25"
+   "sha256": "2b11c0c749b6fb65cce71521d71f0a13be158e2ccc26c473bb6f371b5f6a9624"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/vesper_downed.png",
-   "sha256": "447a32865269c81a7c77bb3d268448c9d5154dc03d37c6b458bd9d63d11dad8e"
+   "sha256": "3ffd9c67ace88d8496f97181c7bc45099fc7d0efc0b5d4ca839191e93e7a545f"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/vesper_evoA.png",
-   "sha256": "9750d742afcf55de00f9f666a2254b9332fe351e8c1149a38c476e0a8a7158cc"
+   "sha256": "cabc8991bbc622a35652cef8bb09843fa7bc1e621767701d89c48c7a978e45be"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/vesper_evoA_cast.png",
-   "sha256": "50d60b7ac44f4e544c7d56ba976b6cbc47982f74567ed82bc48181aec913ed60"
+   "sha256": "aeef536f1b47fbbc78bca8fdabbd8a8ce382249df0ab446e7fc5f566c0f99319"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/vesper_evoB.png",
-   "sha256": "4aea4267c229f64622b12cd0865db36329edd3331abe653808bf7236b53ba13e"
+   "sha256": "6db329f8f9a02ab37ae2021bbad7efaa734e95cd4bb0d2e26d15c230f0080274"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/vesper_evoB_cast.png",
-   "sha256": "b837a2bbb5cc89a3bb60d33ee7adb99a3db5892437516b9f88f250a95cd7200b"
+   "sha256": "d1fa0e88aef346e0ee8cc0d0959b8cba4b873499c82ee274190fc69aacfc0c86"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/vesper_idle.png",
-   "sha256": "3575be042362250e53c2f1899f956a515f84006208f03e57d9576997dc89eb2a"
+   "sha256": "58f3d4eec2539d826da0021999296914ce15e62e422d26d826e39dccea2fcd10"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/veyra_cast.png",
-   "sha256": "ee9e4813b7635ba8228cd60b2bb22e64d4aca9598199396c26ccc7aa6a786491"
+   "sha256": "91db2128dad401a896c5e4cd78c4eda1d24eb4016a983411b0bf4e5e1ad15b11"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/veyra_downed.png",
-   "sha256": "58f279c3dbebb2b3545478dd9701e1810f95a677d24bfbeec06aff04e84fbc26"
+   "sha256": "8195a21e5861825f62591320b79d10831c7faa71a3a85a37f0005a5ef2c9d5d7"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/veyra_evoA.png",
-   "sha256": "40a88a28f0502b5361f6cc706f6f5904dc234283558899a92e33b393139b86ea"
+   "sha256": "0d37f40d90bf0c95fb590fb81163a02b33355b2b4ce6bcc7aef995a93315183f"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/veyra_evoA_cast.png",
-   "sha256": "02ede4946523cf410d93f6e7cb6417b0daa7a82c46484cb0331f84b398249856"
+   "sha256": "70041efe032ea2a1cc7fc01701836cd571c5b9646ddb4f430460932c71897a57"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/veyra_evoB.png",
-   "sha256": "12338f237afecd44f05da91f1aa654825e72fb39d39b96cd51df020f2448df96"
+   "sha256": "9e38a3b33ef1986b30c35f90d0909759e11e1f503787a8c2a83e0ea635873416"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/veyra_evoB_cast.png",
-   "sha256": "13b94b6fcd244a533197dbe31f428879f3afaf2bace5d18659061af91a2aa2bf"
+   "sha256": "a58f843463d7c0622895c037a8013622c61bac451faaeafe5bcdc8c366e40626"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/veyra_idle.png",
-   "sha256": "2d4829d4f255f71df832e75a33436fec7a6a2c335ccdd74183a4299fbf5f3df9"
+   "sha256": "7c102a57ce6c5e35d2162dba79ea3d12bc576281c1da4f6898066698b9d9c607"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/volt_attack.png",
-   "sha256": "0b6bb7fb4857c5beef9550ad7cc795da26fa4d208bf82dd404f00d980147444a"
+   "sha256": "ef51b513785fea8ff6ad307e80a4829c1d8a652fe38d207970dc2a58ac2979c0"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/volt_cast.png",
-   "sha256": "7984e2ee6877b722ca8051f0c990bab77d528d4bce9c7c39e4bf32564aa0eb80"
+   "sha256": "0d996da7f38055ded8d649e5fe9e3c2f21e9e74cddfcedaec591d0a7e5e2af51"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/volt_downed.png",
-   "sha256": "74abb473368493b65d80fb1bb18c2c6753f79cc4c84e6b810c54b05ce95f76a7"
+   "sha256": "293e13acf68902007f3daf5eda2a804cd30596bcab49096330883b42163adec1"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/volt_evoA.png",
-   "sha256": "92d67e9016428055933e3c66a3f3a8f34b061960829429670c8c251dffb11236"
+   "sha256": "19de6cc6567383f635f75acf478023a77e76067c6af9550924c5f9538bdccd4d"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/volt_evoA_attack.png",
-   "sha256": "2d63c55e146375f1cb42e1166e99ab2936e1dced60f6bf1fb7e882a8a7c1134f"
+   "sha256": "d8448df7c670b90e3ad472c946385ed3aee1da1103324f7d82d131a0c0101786"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/volt_evoA_cast.png",
-   "sha256": "b0f4a5ed96d87bcaa5f592163a9b266b6984d1d59df288e562bd64def8e3ee6f"
+   "sha256": "c2b1ece09c46ba18299f75d28e97903d40f8312649b4565d3c9a386c454129d4"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/volt_evoB.png",
-   "sha256": "c289f2134b4208b5272225c9651e1882a4afd8462a6b72fa4863c61ec564ca9b"
+   "sha256": "45afc09667a6235fef0efd50e66c4267c08f927fa9509ed6717c20db86b51e2d"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/volt_evoB_attack.png",
-   "sha256": "5ad49570a98560b9280f030cc67d5c8aa742fb52f8083ca0fd9405967abd90d5"
+   "sha256": "ed6ba0c84203e127d94ea9d47a5fe42818329492ca571e62aa21da3fed2b4427"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/volt_evoB_cast.png",
-   "sha256": "0926af39444e80a34415e358e40e7f58ca21da480bcfa544a357473efa363384"
+   "sha256": "69482ab41ca1eeb29c2cb84cc9fb1f4dd214d4f7666a060d595b365c7daa39d0"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/volt_idle.png",
-   "sha256": "6f79787b7e33b059e667f21b5732ca4edaaa48a065990dafe2a4cea39828e4ca"
+   "sha256": "5d632cc96a0c1aac56b66f8f808e63807ed5c2f5d82f255f730ddafb7e9dd26e"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/voltrix_cast.png",
-   "sha256": "a2fe3fc01c600026edab855f0edbcc81d11d0dc68dcb5f064085f2fdc87c64f0"
+   "sha256": "a9972fbbb105269e3102ae3214b4c652693144d080b55dc1762bf8d5dd033150"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/voltrix_downed.png",
-   "sha256": "50ee9db553d5d3457835c7ef39dc4a60d1d272973d59e36fdc690b306b145add"
+   "sha256": "8552a8d1551d5ea4bb27ce0efc3e519bc15ad87b2f14782b05846c788a08cb44"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/voltrix_evoA.png",
-   "sha256": "e4bf64ccec85a33fa416bf6f07da9ead058fa8b286c2128ca56b6b906d7bf26a"
+   "sha256": "eaadf867ae140a88cf11a07511c988434746bebea9927d7e062e59b11e9dc2cf"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/voltrix_evoA_cast.png",
-   "sha256": "6689b4c8ab1f1f74964e98646b9ffba8d3e14832c59308a4867d460e0ca40152"
+   "sha256": "fd1bf6a06acc1d1ccd278bb705454ae2913051acecdac517a47fc311a2f8b612"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/voltrix_evoB.png",
-   "sha256": "1a28dc12ee02fcfa33939127d77c67d47bd8b30436e1c102ab07ef0b85b78081"
+   "sha256": "2d9786ccd41f51637ad12a83f0128f44aa4a29de76321b14591e13693294544e"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/voltrix_evoB_cast.png",
-   "sha256": "753f85b4296c1c294efa7bb107e3a06e0a1196dcb09204f3e81522ce429eca42"
+   "sha256": "2e5c33fd7605aa5dcf58c9dad8b85df5c347d75416340f1b693faa58ddb5e148"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/voltrix_idle.png",
-   "sha256": "d4ae5dfd4baa8b5122bedd5cc729f65fcdcdeb82ed213d6b2c4bfe611f3a47f3"
+   "sha256": "cda59788d07c01f46862fadf0a171445e54bc4315b441c8d79578ba3aad2055d"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/zephyr_cast.png",
-   "sha256": "c29ccec3f85834effc933fc2e1ef36da1b990235b32b31958f547ac834e98b8e"
+   "sha256": "1006456225696cf46941be4bfa6da01c0474ea6901f04228dd64437bd5013a3f"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/zephyr_downed.png",
-   "sha256": "daba8111343136af0bdb849dca885e96eb8b8070e1b6f59286c8b37f0830d38a"
+   "sha256": "c616155ff6a2488baf36bd3c34f02b5831a9763394a38c7df23409a5c37e06d9"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/zephyr_evoA.png",
-   "sha256": "fbb472e4d0d4840222c05c5558d07afc59d3998e11763061e667e2056d591375"
+   "sha256": "c67213cc7ad2d148d48db246cc7ad14a1212339f4c8d859f7f338cbf1824a46f"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/zephyr_evoA_cast.png",
-   "sha256": "a00c270a784be84a1bd0e18a5e768037f373341dd22bd0e74bf628ff07fe8334"
+   "sha256": "9dcaa5c834a2429186e54ce5bfdcec0dd44e3f61188693f87dbfc48491c7af38"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/zephyr_evoB.png",
-   "sha256": "8992383e8677714d4b7d0c44cae658e6d772c7e9e610bb94db93457a29bcf5d1"
+   "sha256": "eb7cf682a03cb5d71a93b66a924beb094c922282796434aa2bb95e2bd29facef"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/zephyr_evoB_cast.png",
-   "sha256": "b1b669f2510c2ccf8b58de76ebc8340acf36e1dcd40d678a7f7884bddef9af64"
+   "sha256": "73edfdc60382cd249c9d8d8e08f88de9ee23ed733805793b68aeb277ffa6ac5e"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/zephyr_idle.png",
-   "sha256": "62c38079e4b12018265e3b1345eba9c18bf1c23de547cd6ed464e17e0b54be1b"
+   "sha256": "409350c7ceda98e8fd8187639d89760eaedb362f031202bec607b2b01826d003"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/zerith_cast.png",
-   "sha256": "d093e883a4af651e15235aabcc7c96dea5bb846719ff14520754b8084599f6af"
+   "sha256": "ab6e259c0e2d903b8d2bc1eb982d46850e8d95b702637ec496bfd1d9197dd558"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/zerith_downed.png",
-   "sha256": "cc4fae451fb1c57e125d0dd62ad094803cab1eb4790c25a3532073ad027bad40"
+   "sha256": "a4bdc5fb131f7bc5fa7e1ada43c34e4c58ab3efa1c8e8997c3a4f0da79a1d4be"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/zerith_evoA.png",
-   "sha256": "b1c23c27c4744bec53afdee1e36805225fce835e694ddf84cc7d1c3c6b266abd"
+   "sha256": "6dfecf5294c83f7c418405c6988853045bbbc60c7de1308d6a92c6d7676ce60c"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/zerith_evoA_cast.png",
-   "sha256": "01b5c7b2a51bc5884dba6897ad876f8c261d3eba6f174beba1d9db9ceb8235aa"
+   "sha256": "43e390665b0b3b5e2b0d671dea159cf1286fa4713238ce5193e94c366f8e6803"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/zerith_evoB.png",
-   "sha256": "d2f72833270362216920ebd806b595146a8b26b60d19ef4bacd4729fa283ced5"
+   "sha256": "b41c1d7f5a046da9345f002a2c3b2e0dc61d091463d4de121ffd8d0f2969fafe"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/zerith_evoB_cast.png",
-   "sha256": "bd7956d5ec11191cf3695cf1e6455ef976286bbb6d15fd103c19b867040e840a"
+   "sha256": "c4608486dd5385136d33c11a5ca1895d90730a5093f920c7c4795d9a557ec8bc"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Heroes/zerith_idle.png",
-   "sha256": "68157b145235d6e5c12ad5f86e6c40b34901525d1a5aabda325ab859edcd6557"
+   "sha256": "fd0552f7b3bb0ca4e5e38372f31a658b430782361c8351cecf69c34dc724c293"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Icons/element_arcane.png",

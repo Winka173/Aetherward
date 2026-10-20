@@ -229,14 +229,15 @@ namespace Aetherward.Game
         }
 
         /// <summary>
-        /// Hero frames are 400² with the figure in the 320² region at (40, 80) (headroom so props are never cropped).
-        /// Draws the texture so that the figure fills the rect exactly as the old tight 320² frames did.
+        /// Hero frames keep the figure in the box at (0.1, 0.2) of the canvas, 0.8 of its size (320² at (40, 80) on the
+        /// 400 art canvas, 409.6² at (51.2, 102.4) on the 512 game canvas): headroom so props are never cropped.
+        /// Draws the texture so that the figure box fills the rect.
         /// </summary>
         public static void HeroIcon(float x, float y, float w, float h, Texture tex, Color? tint = null)
         {
-            float s = Mathf.Min(w, h) / 320f;
-            float ox = x + (w - 320f * s) / 2f, oy = y + (h - 320f * s) / 2f;
-            Icon(ox - 40f * s, oy - 80f * s, 400f * s, 400f * s, tex, tint);
+            float s = Mathf.Min(w, h) / 0.8f;   // on-screen size of the whole canvas
+            float ox = x + (w - 0.8f * s) / 2f, oy = y + (h - 0.8f * s) / 2f;
+            Icon(ox - 0.1f * s, oy - 0.2f * s, s, s, tex, tint);
         }
 
         public static void Icon(float x, float y, float w, float h, Texture tex, Color? tint = null)

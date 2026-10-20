@@ -183,7 +183,7 @@ def unit_guide(path, facts, label):
     d.line([(0, foot), (w, foot)], fill=(255, 80, 80, 255), width=2)
     d.line([(w / 2, 0), (w / 2, h)], fill=(80, 160, 255, 160), width=1)
     if facts["id"].startswith("Heroes/"):
-        d.rectangle([40, 80, 360, 399], outline=(120, 255, 160, 200), width=2)   # HeroIcon crop box (UI/Ui.cs)
+        d.rectangle([0.1 * w, 0.2 * h, 0.9 * w, h - 1], outline=(120, 255, 160, 200), width=2)   # HeroIcon crop box (UI/Ui.cs)
         # World/shadow is 1 x 0.375 units, scaled (0.95, 0.9) under heroes (WorldViews.cs)
         rx, ry = 0.95 * facts["ppu"] / 2, 0.375 * 0.9 * facts["ppu"] / 2
         d.ellipse([w / 2 - rx, foot - ry, w / 2 + rx, foot + ry], outline=(255, 200, 80, 200), width=1)
@@ -404,6 +404,31 @@ def cmd_brief(a):
 
 # ------------------------------------------------------------------------------------------------ stage for import
 
+# Unity compresses Sprite textures only at power-of-two sizes (measured: a 400 px sprite imports as RGBA32 even with
+# DXT5/BC7 forced, a 512 px one as DXT5). Game canvases for these categories are therefore power-of-two; the world
+# size is kept by the PPU (512 / 256 = the same 2 units as 400 / 200). Returns may come at the art contract size
+# (400) with 2x masters: the game canvas is resampled from the master when there is one.
+GAME_CANVAS = {"Heroes": {"size": 512, "ppu": 256}}
+
+
+def master_of(aid):
+    for m in glob.glob(os.path.join(HANDOFF, "returns", "*", "source", "masters", aid + "@2x.png")):
+        return m
+    return None
+
+
+def to_game_canvas(aid, src_path, dst_path):
+    """Write the sprite at its category's game canvas; returns the canvas rule applied (or None)."""
+    rule = GAME_CANVAS.get(aid.split("/")[0])
+    im = Image.open(src_path)
+    if rule is None or im.size == (rule["size"], rule["size"]):
+        shutil.copyfile(src_path, dst_path)
+        return rule
+    m = master_of(aid)
+    base = Image.open(m).convert("RGBA") if m else im.convert("RGBA")
+    base.resize((rule["size"], rule["size"]), Image.LANCZOS).save(dst_path)
+    return rule
+
 def cmd_stage(a):
     """Build an ap.py-shaped stage (Art/, import_settings.json, manifest.json) from accepted returns, so
     `ap.py import --stage <dir>` applies it with its validation, backup, journal, atomic replace and rollback."""
@@ -433,11 +458,17 @@ def cmd_stage(a):
             aid = os.path.relpath(pth, os.path.join(A.ROOT, extra)).replace("\\", "/")[:-4]
             placed[aid] = (pth, {"generator": "Tools/ArtPipeline/blender (lead)", "source": extra,
                                  "license": "original render; CC0 inputs listed in ArtProduction/REFERENCE_MANIFEST.json"}, None)
+    if a.canvas_migrate:   # every live sprite of a category whose game canvas changed (old art included)
+        for rule_cat in GAME_CANVAS:
+            for pth in glob.glob(os.path.join(A.ART, rule_cat, "*.png")):
+                aid = rule_cat + "/" + os.path.basename(pth)[:-4]
+                if aid not in placed and Image.open(pth).size[0] != GAME_CANVAS[rule_cat]["size"]:
+                    placed[aid] = (pth, dict(manifest.get(LIVE_REL + aid + ".png", {}), canvas="resampled to the power-of-two game canvas"), None)
     for aid, (src, prov, f) in sorted(placed.items()):
         key = LIVE_REL + aid + ".png"
         dst = os.path.join(stage, "Art", aid + ".png")
         os.makedirs(os.path.dirname(dst), exist_ok=True)
-        shutil.copyfile(src, dst)
+        rule = to_game_canvas(aid, src, dst)
         side = A.read_json(src + ".json") if os.path.exists(src + ".json") else {}
         if key not in settings:              # a new frame: the contract of its live sibling
             like = (f or {}).get("like") or side.get("like")
@@ -447,10 +478,13 @@ def cmd_stage(a):
             live_meta = os.path.join(A.ART, like + ".png.meta")
             text = A.read_text(live_meta)
             A.write_text(dst + ".meta", GUID.sub("guid: " + gen_meta.guid_for(key), text, count=1))
-        if "ppu" in side:                    # explicit new contract (e.g. the 2K battlefield, PPU 120)
+        if rule:
+            side = dict(side, ppu=rule["ppu"])
+        if "ppu" in side:                    # explicit new contract (e.g. the 2K battlefield, PPU 120; 512 heroes, PPU 256)
             settings[key] = dict(settings[key], ppu=side["ppu"])
             # the stage .meta (same GUID) must carry the new PPU, or the validator rightly flags the mismatch
-            meta = A.read_text(os.path.join(A.ART, aid + ".png.meta"))
+            live_meta = os.path.join(A.ART, aid + ".png.meta")
+            meta = A.read_text(live_meta if os.path.exists(live_meta) else dst + ".meta")
             A.write_text(dst + ".meta", re.sub(r"spritePixelsToUnits: [-0-9.e]+", "spritePixelsToUnits: %g" % settings[key]["ppu"], meta))
         manifest[key] = dict({"path": key}, **prov)
     A.dump_json(settings, os.path.join(stage, "import_settings.json"), indent=1, sort_keys=True)
@@ -775,6 +809,7 @@ def main():
     st = sub.add_parser("stage")
     st.add_argument("--batch", nargs="*", default=[])
     st.add_argument("--extra", nargs="*", help="lead-rendered output dirs shaped like Art/ (e.g. ArtProduction/generated)")
+    st.add_argument("--canvas-migrate", action="store_true", help="also move every live sprite of a GAME_CANVAS category to its new canvas")
     br = sub.add_parser("brief")
     br.add_argument("--batch", required=True)
     v = sub.add_parser("preview")

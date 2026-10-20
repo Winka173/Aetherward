@@ -35,6 +35,9 @@ Repository: `C:\Users\Winka\Projects\Aetherward` (Unity 6000.4.8f1).
 ## 4. Technical contract (enforced by `Tools/ArtPipeline/handoff.py intake`)
 - **Format:** PNG, 8-bit, sRGB, straight RGBA. Battlefield flats are RGB.
 - **Size:** use exactly the `size` given in INPUT_MANIFEST. PPU and pivot are fixed by the project.
+- **Hero canvas:** the game stores heroes at 512×512 (PPU 256), because Unity compresses sprites only at power-of-two sizes.
+  - Deliver either the 512 canvas named in INPUT_MANIFEST, or the 400 contract **plus** the 2× master (800×800, identical framing) in `source/masters/`. The lead resamples the master to 512.
+  - The geometry scales with the canvas: feet at 0.07 of the height, the icon box at (0.1, 0.2) with size 0.8, head top 0.59–0.64 of the height above the feet, props ≤ 0.725.
 - **Foot row:** for units and the Crystal, the lowest opaque row (alpha > 128) must be within **±6 px** of `footRowFromTop`. `downed` frames are allowed +12 px.
 - **Flyers** (`flyer: true`): the lowest opaque row must be at least 10% of the canvas above the foot row.
 - **Horizontal anchor:** the torso centre sits on x = width/2 in **every frame of a character**, within ±8 px. Frames must not jitter when the game swaps them.

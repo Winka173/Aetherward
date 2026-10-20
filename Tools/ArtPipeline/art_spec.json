@@ -14,12 +14,13 @@
       "kind": "unit",
       "sizes": [
         [
-          400,
-          400
+          512,
+          512
         ]
       ],
       "footRowFromPivot": true,
-      "safeMargin": 2
+      "safeMargin": 2,
+      "_doc": "Game canvas 512 (power of two so Unity compresses it), PPU 256 = 2 units; art is delivered at 400 + 2x masters and resampled by handoff.py stage."
     },
     "Enemies": {
       "kind": "unit",
