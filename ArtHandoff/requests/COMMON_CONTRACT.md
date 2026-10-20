@@ -95,6 +95,14 @@ The game swaps whole pose frames and adds procedural motion: bob, lunge, recoil,
 - Keep the face, costume, palette and prop identical.
 - If drift happens, regenerate. Never ship a frame that reads as a different character.
 
+
+**Pose and camera references:** `ArtHandoff/requests/pose_refs/<build>_<weapon>_<pose>.png`
+- What they are: clay mannequins rendered by the lead in Blender at the exact game camera, on the 2× art canvas (800²). They have correct foot placement on the pivot row and figure height inside the icon box.
+- Builds: `slim` for mage, ranger, support, healer, assassin and controller; `heavy` for guardian and bruiser.
+- Weapons: `staff`, `sword`, `hammer`, `shield`.
+- Poses: `idle`, `attack`, `cast`.
+- How to use: attach the closest one to every image generation as a pose/camera reference. Match the view, scale and ground contact; the costume and identity follow the hero design.
+
 **Evolutions** keep the identity of the hero and change at least three of:
 - the silhouette outline;
 - the costume tier;

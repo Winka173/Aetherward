@@ -60,31 +60,31 @@ if isinstance(BIOME.get("arena"), dict):     # biome arenas are inline in biomes
 # sinks the ground, where it appears (fbm blobs, bands along some lanes, pools at the hazard points).
 THEMES = {
     "verdant_sanctuary": dict(ground="burned_ground_01", rock="aerial_ground_rock", road="cobblestone_large_01", cliff="cliff_side",
-                              dais="castle_wall_slates", ruin="broken_wall", dark="dark_rock", special="moss", special_amount=0.85,
+                              dais="castle_wall_slates", ruin="broken_wall", dark="Rock064", special="moss", special_amount=0.85, special_scan="Moss002", hdri="kloppenheim_02_puresky",
                               special_depth=0.0, world=("#1a2a44", 0.35), sun=("#dfe6ff", 2.6), brazier="#62e0cf", rift="#c0304a",
                               tint="#c9ccd6", kinds=None),
     "molten_crater": dict(ground="cracked_red_ground", rock="dark_rock_02", road="patterned_slate_tiles", cliff="rock_boulder_cracked",
                           dais="castle_wall_slates", ruin="rock_boulder_cracked", dark="dark_rock_02", special="lava", special_amount=1.0,
-                          special_depth=0.35, special_lanes=[0, 1], special_lo=0.7, special_hi=0.76, special_scan="Lava004", world=("#2a1410", 0.3),
+                          special_depth=0.35, special_lanes=[0, 1], special_lo=0.7, special_hi=0.76, special_scan="Lava004", vent_scan="Lava001", hdri="dikhololo_night", world=("#2a1410", 0.3),
                           sun=("#ffd9b8", 2.0), brazier="#ff7a2a", rift="#ff5a1f", tint="#b8aca8",
-                          kinds=["obsidian"] * 6 + ["pillar"] * 3 + ["broken"] * 6 + ["boulder"] * 6 + ["deadtree"] * 3 + ["brazier"] * 2 + ["rocks"] * 8),
+                          kinds=["obsidian"] * 6 + ["pillar"] * 3 + ["broken"] * 6 + ["boulder"] * 6 + ["deadtree"] * 2 + ["tree"] * 2 + ["brazier"] * 2 + ["rocks"] * 8),
     "frostfall_bastion": dict(ground="rock_ground", rock="castle_wall_varriation", road="large_floor_tiles_02", cliff="marble_cliff_01",
-                              dais="castle_wall_slates", ruin="castle_wall_varriation", dark="dark_rock", special="snow", special_amount=0.6, value=0.5, special_scan="Snow015",
+                              dais="castle_wall_slates", ruin="castle_wall_varriation", dark="dark_rock", special="snow", special_amount=0.6, value=0.5, special_scan="Snow015", snowcap="Snow010A", frozen_scan="Ice003", hdri="kloppenheim_02_puresky",
                               special_depth=-0.04, special_lo=0.5, special_hi=0.74, world=("#2a3a55", 0.55), sun=("#e6eeff", 2.8),
                               brazier="#ffb35c", rift="#7fd8ff", tint="#d4d8e0",
-                              kinds=["icecrystals"] * 6 + ["pillar"] * 5 + ["statue"] * 2 + ["arch"] * 2 + ["brazier"] * 3 + ["broken"] * 5 + ["boulder"] * 4),
-    "shattered_aether": dict(ground="rocks_ground_02", rock="dark_rock_02", road="herringbone_pavement", cliff="dark_rock_02",
+                              kinds=["icecrystals"] * 6 + ["pillar"] * 5 + ["statue"] * 2 + ["arch"] * 2 + ["brazier"] * 3 + ["broken"] * 5 + ["boulder"] * 4 + ["tree"] * 2),
+    "shattered_aether": dict(ground="Ground068", rock="rocks_ground_02", hdri="dikhololo_night", road="herringbone_pavement", cliff="dark_rock_02",
                              dais="castle_wall_slates", ruin="broken_wall", dark="dark_rock_02", special="void", special_amount=1.0,
                              special_depth=3.5, special_lo=0.55, special_hi=0.6, world=("#140c28", 0.4), sun=("#e8dcff", 2.4),
                              brazier="#b07cff", rift="#ff5fd2", tint="#c4c0d4",
                              kinds=["crystals"] * 8 + ["floatrock"] * 8 + ["statue"] * 2 + ["broken"] * 5 + ["pillar"] * 3 + ["brazier"] * 2),
-    "stormspire_citadel": dict(ground="rocks_ground_05", rock="castle_wall_varriation", road="herringbone_pavement_02", cliff="castle_wall_varriation",
-                               dais="castle_wall_slates", ruin="castle_wall_varriation", dark="dark_rock", special="puddle", special_amount=0.8,
+    "stormspire_citadel": dict(ground="rocks_ground_05", rock="castle_wall_varriation", road="herringbone_pavement_02", cliff="Rock058",
+                               dais="PavingStones138", ruin="Bricks097", hdri="moonless_golf", dark="dark_rock", special="puddle", special_amount=0.8,
                                special_depth=0.02, special_lo=0.6, special_hi=0.68, world=("#1c2230", 0.45), sun=("#d8e4ff", 2.2),
                                brazier="#9adcff", rift="#b06cff", tint="#c4c8d2",
                                kinds=["battlement"] * 6 + ["pillar"] * 6 + ["statue"] * 2 + ["brazier"] * 3 + ["broken"] * 5 + ["boulder"] * 3),
     "sunken_archive": dict(ground="marble_tiles", rock="floor_tiles_06" if False else "large_floor_tiles_02", road="old_planks_02",
-                           cliff="castle_wall_varriation", dais="marble_tiles", ruin="castle_wall_varriation", dark="dark_wooden_planks",
+                           cliff="castle_wall_varriation", dais="Marble012", ruin="castle_wall_varriation", dark="dark_wooden_planks", hdri="moonless_golf",
                            special="water", special_amount=1.0, special_depth=0.18, special_lanes=[2, 3], special_lo=0.55, special_hi=0.62,
                            world=("#0e2a34", 0.45), sun=("#d8f4ff", 2.2), brazier="#ffd27a", rift="#2aa6a4", tint="#c4ccd0",
                            kinds=["shelves"] * 8 + ["pillar"] * 6 + ["statue"] * 2 + ["brazier"] * 3 + ["broken"] * 4 + ["fallen"] * 3),
@@ -105,6 +105,14 @@ def lin(hexstr):
 
 # ----------------------------------------------------------------------------------------------- scene
 bpy.ops.wm.read_factory_settings(use_empty=True)
+import addon_utils  # noqa: E402
+EXT = {}
+for _m in ("sapling_tree_gen", "ivygen", "cell_fracture", "archimesh", "extra_mesh_objects"):
+    try:
+        EXT[_m] = addon_utils.enable("bl_ext.blender_org." + _m, default_set=True) is not None
+    except Exception:  # noqa: BLE001  (missing extension: the builders below fall back to primitives)
+        EXT[_m] = False
+print("EXTENSIONS", EXT)
 sc = bpy.context.scene
 sc.render.engine = "CYCLES"
 prefs = bpy.context.preferences.addons["cycles"].preferences
@@ -138,7 +146,7 @@ bg = world.node_tree.nodes["Background"]
 bg.inputs[0].default_value = lin(THEME["world"][0])
 bg.inputs[1].default_value = THEME["world"][1]
 _hdr = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))),
-                    "ArtCache", "polyhaven", "kloppenheim_02_puresky", "kloppenheim_02_puresky_2k.hdr")
+                    "ArtCache", "polyhaven", THEME.get("hdri", "kloppenheim_02_puresky"), THEME.get("hdri", "kloppenheim_02_puresky") + "_2k.hdr")
 if os.path.exists(_hdr):   # soft, directional sky light instead of a flat colour; the biome colour tints it
     wnt = world.node_tree
     env = wnt.nodes.new("ShaderNodeTexEnvironment")
@@ -335,13 +343,20 @@ def ph_tex(tid, kind):
     raise FileNotFoundError("run Tools/ArtPipeline/fetch_polyhaven.py first: %s %s" % (tid, kind))
 
 
+def scan_file(tid, kind):
+    """Poly Haven (snake_case ids) or ambientCG (CamelCase ids) map of a given kind: diff / rough / nor_gl / disp."""
+    if os.path.isdir(os.path.join(ACG, tid)):
+        return acg_tex(tid, {"diff": "Color", "rough": "Roughness", "nor_gl": "NormalGL", "disp": "Displacement"}[kind])
+    return ph_tex(tid, kind)
+
+
 def pbr_nodes(nt, tid, vec, loc, projection="FLAT", blend=0.0):
-    """Image nodes for a Poly Haven texture set: returns (colour socket, roughness socket, normal map node, height socket)."""
+    """Image nodes for a scan texture set: returns (colour socket, roughness socket, normal map node, height socket)."""
     out = {}
     for i, (kind, cs) in enumerate((("diff", "sRGB"), ("rough", "Non-Color"), ("nor_gl", "Non-Color"), ("disp", "Non-Color"))):
         n = nt.nodes.new("ShaderNodeTexImage")
         n.location = (loc[0], loc[1] - i * 280)
-        n.image = bpy.data.images.load(ph_tex(tid, kind), check_existing=True)
+        n.image = bpy.data.images.load(scan_file(tid, kind), check_existing=True)
         n.image.colorspace_settings.name = cs
         n.projection = projection
         n.projection_blend = blend
@@ -379,6 +394,18 @@ def pbr_material(name, tid, scale, tint=None, value=1.0, projection="BOX", blend
     nt.links.new(rough, bsdf.inputs["Roughness"])
     nm.inputs["Strength"].default_value = normal
     nt.links.new(nm.outputs["Normal"], bsdf.inputs["Normal"])
+    if THEME.get("snowcap"):
+        geo_ = node(nt, "ShaderNodeNewGeometry", (-500, -400))
+        sz = node(nt, "ShaderNodeSeparateXYZ", (-300, -400))
+        nt.links.new(geo_.outputs["Normal"], sz.inputs["Vector"])
+        up_ = node(nt, "ShaderNodeMapRange", (-100, -400), **{"From Min": 0.55, "From Max": 0.8})
+        nt.links.new(sz.outputs["Z"], up_.inputs["Value"])
+        snow_img = acg_image(nt, THEME["snowcap"], "Color", mp.outputs["Vector"], (-300, -700))
+        sm = node(nt, "ShaderNodeMix", (100, 100), data_type="RGBA")
+        nt.links.new(up_.outputs["Result"], sm.inputs["Factor"])
+        nt.links.new(bsdf.inputs["Base Color"].links[0].from_socket, sock(sm, "A"))
+        nt.links.new(snow_img.outputs["Color"], sock(sm, "B"))
+        nt.links.new(sock(sm, "Result", out=True), bsdf.inputs["Base Color"])
     return m
 
 
@@ -817,6 +844,106 @@ def brazier(x, y):
     BRAZIERS.append((x, y + (z + 1.12) * COS))
 
 
+def sapling_tree(x, y):
+    """Dead/corrupted tree from Sapling Tree Gen (falls back to the curve tree)."""
+    if not EXT.get("sapling_tree_gen"):
+        return dead_tree(x, y)
+    z = ground_z(x, y)
+    before = set(bpy.data.objects.keys())
+    bpy.ops.curve.tree_add(do_update=True, bevel=True, levels=3, length=(1.0, 0.45, 0.55, 0.4), branches=(0, 18, 9, 6),
+                           shape="7", baseSize=0.25, ratio=0.03, scale=random.uniform(2.6, 3.4), prune=False, showLeaves=False,
+                           seed=random.randint(0, 9999), curve=(0, -20, -10, 0), curveV=(25, 40, 60, 30), downAngle=(90, 60, 45, 45),
+                           rotate=(99.5, 137.5, 137.5, 137.5), handleType="0", resU=2)
+    for nm in set(bpy.data.objects.keys()) - before:
+        o = bpy.data.objects[nm]
+        o.location = G(x, y, z)
+        if o.type == "CURVE":
+            o.data.materials.append(MAT_DARK)
+
+
+def grow_ivy(target, x, y):
+    """IvyGen creepers climbing a placed pillar or statue (verdant and archive)."""
+    if not EXT.get("ivygen") or THEME["special"] not in ("moss", "water"):
+        return
+    props = bpy.context.window_manager.ivy_gen_props
+    props.randomSeed = random.randint(0, 999)
+    props.maxIvyLength = random.uniform(1.2, 2.4)
+    props.ivySize = 0.012
+    props.growLeaves = True
+    props.ivyLeafSize = 0.03
+    bpy.context.scene.cursor.location = G(x + 0.3, y - 0.2, ground_z(x, y) + 0.05)
+    for o in bpy.context.selected_objects:
+        o.select_set(False)
+    target.select_set(True)
+    bpy.context.view_layer.objects.active = target
+    before = set(bpy.data.objects.keys())
+    try:
+        bpy.ops.curve.ivy_gen(updateIvy=True)
+    except Exception as e:  # noqa: BLE001
+        print("ivy skipped:", e)
+        return
+    for nm in set(bpy.data.objects.keys()) - before:
+        o = bpy.data.objects[nm]
+        o.data.materials.clear()
+        o.data.materials.append(MAT_IVY)
+
+
+def fractured_pillar(x, y, h):
+    """A column shattered by Cell Fracture: the stump stays, the upper cells lie toppled around it."""
+    if not EXT.get("cell_fracture"):
+        return pillar(x, y, h, broken=True)
+    z = ground_z(x, y)
+    b = G(x, y, z)
+    add_cyl("PillarBase", 0.55, 0.3, (b.x, b.y, z + 0.15), MAT_STONE, verts=8, bevel=0.05)
+    col_ = add_cyl("PillarF", 0.38, h, (b.x, b.y, z + 0.3 + h / 2), MAT_STONE, verts=20, bevel=0.02)
+    for o in bpy.context.selected_objects:
+        o.select_set(False)
+    col_.select_set(True)
+    bpy.context.view_layer.objects.active = col_
+    before = set(bpy.data.objects.keys())
+    bpy.ops.object.add_fracture_cell_objects(source={"VERT_OWN"}, source_limit=14, source_noise=0.8, recursion=0, use_smooth_faces=False,
+                                             use_sharp_edges=True, margin=0.002, use_recenter=True, use_remove_original=True, use_island_split=True,
+                                             collection_name="")
+    cut = z + 0.3 + h * random.uniform(0.35, 0.6)
+    for nm in set(bpy.data.objects.keys()) - before:
+        o = bpy.data.objects[nm]
+        if o.location.z > cut:   # this cell fell: lay it on the ground nearby
+            o.location = G(x + random.uniform(-1.3, 1.3), y + random.uniform(-0.7, 0.4), ground_z(x, y) + 0.12)
+            o.rotation_euler = (random.uniform(0, 3), random.uniform(0, 3), random.uniform(0, 6))
+
+
+def archive_shelves(x, y):
+    """Archimesh shelving filled with Archimesh books (falls back to boxes)."""
+    if not EXT.get("archimesh"):
+        return shelves(x, y)
+    z = ground_z(x, y)
+    a_ = random.choice([0.0, 0.4, -0.4])
+    before = set(bpy.data.objects.keys())
+    bpy.ops.mesh.archimesh_shelves()
+    sh_new = set(bpy.data.objects.keys()) - before
+    for nm in sh_new:
+        o = bpy.data.objects[nm]
+        if o.parent is None:
+            o.location = G(x, y, z)
+            o.rotation_euler = (random.uniform(-0.12, 0.12), 0, a_)
+            o.scale = (1.4, 1.4, 1.4)
+        if o.type == "MESH":
+            o.data.materials.clear()
+            o.data.materials.append(MAT_DARK)
+    for row in range(3):
+        before = set(bpy.data.objects.keys())
+        try:
+            bpy.ops.mesh.archimesh_books()
+        except Exception:  # noqa: BLE001
+            break
+        for nm in set(bpy.data.objects.keys()) - before:
+            o = bpy.data.objects[nm]
+            if o.parent is None:
+                o.location = G(x - 0.6, y, z + 0.28 + row * 0.55)
+                o.rotation_euler = (0, 0, a_)
+                o.scale = (1.3, 1.3, 1.3)
+
+
 def dead_tree(x, y):
     z = ground_z(x, y)
     b = G(x, y, z)
@@ -981,6 +1108,30 @@ def glow_material(name, base, emit, strength, transmission=0.5):
 
 
 MAT_ICE = glow_material("Ice", "#cfefff", "#9fe8ff", 0.4, 0.85)
+
+
+def scan_glow(name, mid, emit_strength=0.0, tint="#ffffff"):
+    """Flat scan material for decals: ambientCG colour (+ its emission map when it has one)."""
+    m = bpy.data.materials.new(name)
+    m.use_nodes = True
+    nt_ = m.node_tree
+    tc_ = nt_.nodes.new("ShaderNodeTexCoord")
+    col_ = acg_image(nt_, mid, "Color", tc_.outputs["Object"], (-400, 200))
+    b_ = nt_.nodes["Principled BSDF"]
+    nt_.links.new(col_.outputs["Color"], b_.inputs["Base Color"])
+    if emit_strength > 0:
+        em_ = acg_image(nt_, mid, "Emission", tc_.outputs["Object"], (-400, -200))
+        mx_ = node(nt_, "ShaderNodeMix", (-150, -200), data_type="RGBA", blend_type="MULTIPLY")
+        mx_.inputs["Factor"].default_value = 1.0
+        nt_.links.new(em_.outputs["Color"], sock(mx_, "A"))
+        sock(mx_, "B").default_value = lin(tint)
+        nt_.links.new(sock(mx_, "Result", out=True), b_.inputs["Emission Color"])
+        b_.inputs["Emission Strength"].default_value = emit_strength
+    return m
+
+
+MAT_FROZEN = scan_glow("Frozen", THEME["frozen_scan"]) if THEME.get("frozen_scan") else MAT_ICE
+MAT_VENT = scan_glow("Vent", THEME["vent_scan"], 2.6, "#ff6a1f") if THEME.get("vent_scan") else None
 try:
     _nt = MAT_ICE.node_tree
     _tc = _nt.nodes.new("ShaderNodeTexCoord")
@@ -993,6 +1144,7 @@ MAT_OBSIDIAN = glow_material("Obsidian", "#120c10", "#ff5a1f", 0.8, 0.0)
 MAT_VIOLET = glow_material("AetherViolet", "#8a6cff", "#b07cff", 2.0, 0.5)
 MAT_COPPER = pbr_material("Copper", THEME["dark"], 0.8, tint="#c07a4a", value=1.0)
 MAT_BOOKS = glow_material("Books", "#5a2a24", "#000000", 0.0, 0.0)
+MAT_IVY = glow_material("Ivy", "#1d3a2c", "#000000", 0.0, 0.0)
 MAT_WATER = glow_material("Water", "#0d2a33", "#2aa6a4", 0.05, 0.0)
 
 
@@ -1063,7 +1215,7 @@ def biome_features():
         if tr == "heated_bridge":
             disc(nx, ny, 0.75, MAT_OBSIDIAN, 0.02)
         elif tr == "frozen_tile":
-            disc(nx, ny, 0.8, MAT_ICE, 0.02)
+            disc(nx, ny, 0.8, MAT_FROZEN, 0.02)
         elif tr == "aether_node":
             shard_cluster(bx, by, MAT_VIOLET, 0.3, 0.7, (2, 4))
         elif tr == "lightning_rod":
@@ -1083,6 +1235,8 @@ def biome_features():
         for hx, hy in hz.get("points", []):
             r_ = hz.get("radius", 1.0)
             if hz["kind"] == "lava_vents":
+                if THEME.get("vent_scan"):
+                    disc(hx, hy, r_ * 0.5, MAT_VENT, 0.02)
                 for k in range(10):
                     a_ = k / 10 * math.tau
                     rock(G(hx + math.cos(a_) * r_ * 0.75, hy + math.sin(a_) * r_ * 0.75 * SIN, ground_z(hx, hy)), random.uniform(0.15, 0.3), MAT_OBSIDIAN)
@@ -1102,7 +1256,7 @@ spots = [(x, y) for x in np.linspace(-15.5, 15.5, 23) for y in np.linspace(-8.6,
 random.shuffle(spots)
 placed = []
 kinds = THEME.get("kinds") or (["statue"] * 2 + ["arch"] * 2 + ["brazier"] * 2 + ["crystals"] * 4 + ["pillar"] * 4 + ["broken"] * 6
-                               + ["fallen"] * 3 + ["deadtree"] * 3 + ["roots"] * 2 + ["mossrocks"] * 6 + ["boulder"] * 4 + ["stump"] * 2)
+                               + ["fallen"] * 3 + ["deadtree"] * 2 + ["tree"] * 2 + ["roots"] * 2 + ["mossrocks"] * 6 + ["boulder"] * 4 + ["stump"] * 2)
 kinds = list(kinds)
 for x, y in spots:
     if not kinds:
@@ -1114,12 +1268,14 @@ for x, y in spots:
     placed.append((x, y))
     if kind == "pillar":
         pillar(x, y, random.uniform(1.6, 2.6), broken=False)
+        if random.random() < 0.6:
+            grow_ivy(bpy.data.objects.get("Pillar") if False else [o for o in sc.objects if o.name.startswith("Pillar")][-1], x, y)
     elif kind == "broken":
-        pillar(x, y, random.uniform(0.5, 1.4), broken=True)
+        fractured_pillar(x, y, random.uniform(1.4, 2.4))
     elif kind == "brazier":
         brazier(x, y)
     elif kind == "tree":
-        dead_tree(x, y)
+        sapling_tree(x, y)
     elif kind == "obsidian":
         shard_cluster(x, y, MAT_OBSIDIAN, 0.5, 1.6, (3, 6))
     elif kind == "icecrystals":
@@ -1129,7 +1285,7 @@ for x, y in spots:
     elif kind == "battlement":
         battlement(x, y)
     elif kind == "shelves":
-        shelves(x, y)
+        archive_shelves(x, y)
     elif kind == "statue":
         add_cyl("StatuePlinth", 0.6, 0.45, (G(x, y).x, G(x, y).y, ground_z(x, y) + 0.22), MAT_STONE, verts=8, bevel=0.05)
         model("gothic_statue", x, y, 2.3, rot=math.radians(180 + random.uniform(-30, 30)))

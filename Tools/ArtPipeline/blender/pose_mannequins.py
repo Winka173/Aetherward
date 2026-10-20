@@ -132,20 +132,31 @@ POSES = {
     "idle": {"upperarm01.L": (0, 0, -28), "upperarm01.R": (0, 0, 28), "lowerarm01.L": (0, 0, -10), "lowerarm01.R": (0, 0, 10)},
     "attack": {"spine03": (0, 0, -15), "upperarm01.L": (35, 0, 55), "lowerarm01.L": (0, 0, 5), "upperarm01.R": (-20, 0, 30),
                "upperleg01.L": (-25, 0, 0), "lowerleg01.L": (15, 0, 0), "upperleg01.R": (15, 0, 0)},
-    "cast": {"upperarm01.L": (20, 0, 110), "upperarm01.R": (20, 0, -110), "lowerarm01.L": (0, 0, 20), "lowerarm01.R": (0, 0, -20),
+    "cast": {"upperarm01.L": (15, 0, 105), "upperarm01.R": (0, 0, -70), "lowerarm01.L": (0, 0, 15), "lowerarm01.R": (0, 0, -25),
              "spine03": (-8, 0, 0)},
-    "downed": {"root": (0, 0, 0), "spine03": (35, 0, 0), "spine02": (15, 0, 0), "neck01": (25, 0, 0),
-               "upperleg01.L": (-95, 0, 0), "lowerleg01.L": (110, 0, 0), "upperleg01.R": (-15, 0, 0), "lowerleg01.R": (120, 0, 0),
-               "upperarm01.L": (30, 0, -20), "upperarm01.R": (30, 0, 20)},
+    "downed": {"spine03": (25, 0, 0), "spine02": (10, 0, 0), "neck01": (20, 0, 0),
+               "upperleg01.L": (-70, 0, 0), "lowerleg01.L": (75, 0, 0), "upperleg01.R": (15, 0, 0), "lowerleg01.R": (100, 0, 0),
+               "upperarm01.L": (25, 0, -20), "upperarm01.R": (25, 0, 20)},
 }
-DOWNED_DROP = 0.42   # the kneel lowers the pelvis (fraction of the body height)
+DOWNED_DROP = 0.27   # the kneel lowers the pelvis (fraction of the body height)
 
 
 def set_build(name):
+    """Replace the human with one created from this build's macros (gender/muscle/weight/proportions/height)."""
+    global basemesh, rig, zs, HEIGHT
     from bl_ext.blender_org.mpfb.services.targetservice import TargetService
+    for o in (basemesh, rig):
+        bpy.data.objects.remove(o, do_unlink=True)
     macro = TargetService.get_default_macro_info_dict()
     macro.update(BUILDS[name])
-    TargetService.reapply_macro_details(basemesh, macro) if hasattr(TargetService, "reapply_macro_details") else None
+    basemesh = HumanService.create_human(macro_detail_dict=macro)
+    rig = HumanService.add_builtin_rig(basemesh, "default")
+    basemesh.data.materials.clear()
+    basemesh.data.materials.append(clay)
+    bpy.context.view_layer.update()
+    zs = [(basemesh.matrix_world @ v.co).z for v in basemesh.data.vertices]
+    rig.location.z -= min(zs)
+    rig.rotation_euler = (0, 0, math.radians(25))
 
 
 def make_prop(kind):
