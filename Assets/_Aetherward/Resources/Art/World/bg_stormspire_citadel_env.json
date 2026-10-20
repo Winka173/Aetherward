@@ -6,20 +6,20 @@
  "shadowLengthPerHeight": 0.8947,
  "braziersFlat": [
   -9.864,
-  0.894,
+  0.886,
   -8.455,
-  -8.217,
+  -8.624,
   -8.455,
-  5.155
+  5.196
  ],
  "aetherCrystalsFlat": [],
  "edgeColor": [
-  0.1304,
-  0.151,
-  0.1792
+  0.119,
+  0.1393,
+  0.1636
  ],
- "source": "ArtCache/Env/stormspire_citadel",
- "gamma": 1.1744,
- "viewMeanBefore": 0.2035,
+ "source": "ArtCache/Env/pot_stormspire_citadel",
+ "gamma": 1.1803,
+ "viewMeanBefore": 0.2052,
  "viewMean": 0.16
 }

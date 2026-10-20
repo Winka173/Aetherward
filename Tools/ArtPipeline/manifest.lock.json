@@ -2,7 +2,7 @@
  "pipeline": "1.0",
  "generators": {
   "Tools/ArtPipeline/blender/crystal_benchmark.py": "2fc7399c2f11399d15e701e5b97553d9f0e84471200e9665313ec54abc54b97e",
-  "Tools/ArtPipeline/blender/crystal_states.py": "eacf6aa713428d826dbd7a06414d6ef36072571f2932ded410032828a40ae6b9",
+  "Tools/ArtPipeline/blender/crystal_states.py": "7a54708b18dfe4236a4b04fe02ed6ad0a6b3fa3ee98f81b38ccf4b9bdd54bead",
   "Tools/ArtPipeline/blender/direction_benchmark.py": "63175bf39ceb486a43a226e647fd59f768d081b241bcbecc7af31db94253ba2d",
   "Tools/ArtPipeline/blender/sanctum_env.py": "5fd371a238fb3daa88705549de1e883c5e4d8a4831355d29589ed2e128d63e4d",
   "Tools/AssetGen/art/build_all.py": "0f483337c832f6f576d937c2f1c5d618b716d583b27190063165f39e684f7546",
@@ -3227,51 +3227,51 @@
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/World/arena_background.png",
-   "sha256": "088a163f49889396305d67ed99156648831ce9ce7ee5ba0805a17e0d0860bf7d"
+   "sha256": "5e27966cfad42a0e87879865f937ce940e222dcfb6425f7218268820129a41b9"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/World/bg_frostfall_bastion.png",
-   "sha256": "57b7db0c336ac80231912d76ae01e102a2160f875b655be6bab8eee3d0156405"
+   "sha256": "0a6c58151ed706045895134cf519ed2c0ad1909540baecc0f390b208c4527d74"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/World/bg_molten_crater.png",
-   "sha256": "64df122e88fdc256b8d0871437e5173b1075c36a9389e32142700bda40205aa1"
+   "sha256": "d40d7e78e46f5d5f31b244a8055deaed73e3ceba614e3f810aa4ea74e80143b1"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/World/bg_shattered_aether.png",
-   "sha256": "c0cea299466b922ecdaffd1b17d41f027899a67f2d9d93ed9d9a5e7d76b9370d"
+   "sha256": "d97acb7486121654995ef529f5e04462fe0734add652e4c9a3c02267bfc18d72"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/World/bg_stormspire_citadel.png",
-   "sha256": "e1d8fc0fbad9f791ff5dd992131987fb368608548690d48a0b58774b80cfcbcd"
+   "sha256": "de03b78b98e8a19d86cc251655aa65edf4ebe6fb73b85ca80f28a6239122ca98"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/World/bg_sunken_archive.png",
-   "sha256": "4c684d95f85b3513fa2b7fa5cd28a65fb85b8eab65b1fe8f5bfcc15603155fe3"
+   "sha256": "fe66ccb366a538af4f175b1f5f275a902da7cf5fa8c05997911f3bba565baae8"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/World/crystal_cracked.png",
-   "sha256": "42700fd6e8a44de06d00fad00d4c3a71e3c0561f06a8361db4b4d4478d924ee3"
+   "sha256": "08d7ee707dd721d55a33552741fa53f19a53c50971fe969ebb531c22db1bfeb7"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/World/crystal_critical.png",
-   "sha256": "432cf05b508de46744186985d06453ac8ce60a551ebc6de44d53cd59f0c68542"
+   "sha256": "073e8119234084367ccbfbd1685adb79df95f785f2eeaf8642d299cfd677ac7f"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/World/crystal_intact.png",
-   "sha256": "a9295b899e7df0cf4c9cf841a23f80284206ecd4db040e989589091d94f861a2"
+   "sha256": "0e89c7795a581ccaa58a9dceb3bd33870af6982f5153dcdfbd7fe63aa70cb751"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/World/crystal_path_bastion.png",
-   "sha256": "f0eb5ea62d4ba50e57f3f799748f48976e6e5a0644175749befff4b8f6a29021"
+   "sha256": "16053ee62624975c633a92c1a25ae4f8eab49c8f03b31197fcc2a55a9261cbb0"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/World/crystal_path_pulse.png",
-   "sha256": "f86ca8345d4c7e844498a237619c4c902d10435678f6b59859708f243dcf3a2d"
+   "sha256": "a24ed550c44ed745493789b8818bc30ea6239f282cf1b48472ac6b3cc56cf0df"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/World/crystal_path_thorn.png",
-   "sha256": "b566d9df3aa16f918b12b0ce8e8cfd8fcaded402fe537b303e07628046fe3ed6"
+   "sha256": "5799f18d4b5ecf8af2211ae9c590de9eb44f0766dbedc3bb2d5ca7e06d0c4d5a"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/World/lane_arrow.png",

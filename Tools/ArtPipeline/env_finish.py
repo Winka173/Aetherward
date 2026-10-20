@@ -42,15 +42,19 @@ def defringe(rgba, passes=8):
 
 
 def finish_crystal(src_dir, out_dir):
-    """crystal_states.py 2x masters (640x800) -> the 320x400 game contract (Lanczos + defringe)."""
+    """crystal_states.py 2x masters (1024x1024) -> the 512x512 game canvas at PPU 204.8 (Lanczos + defringe)."""
     os.makedirs(os.path.join(out_dir, "World"), exist_ok=True)
     for f in sorted(os.listdir(src_dir)):
         if not f.endswith("@2x.png"):
             continue
-        im = Image.open(os.path.join(src_dir, f)).convert("RGBA").resize((320, 400), Image.LANCZOS)
+        im = Image.open(os.path.join(src_dir, f)).convert("RGBA").resize((512, 512), Image.LANCZOS)
         a = defringe(np.asarray(im))
         name = f.replace("@2x", "")
         Image.fromarray(a).save(os.path.join(out_dir, "World", name))
+        side = os.path.join(out_dir, "World", name + ".json")
+        contract = json.load(open(side)) if os.path.exists(side) else {}
+        contract["ppu"] = 204.8               # 512 px = 2.5 units
+        json.dump(contract, open(side, "w"))
         rows = np.nonzero((a[..., 3] > 128).any(1))[0]
         print("%s: rows %s-%s" % (name, rows.min() if len(rows) else "-", rows.max() if len(rows) else "-"))
     return 0

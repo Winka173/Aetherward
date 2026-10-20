@@ -3,9 +3,8 @@ sanctum_env.py (orthographic, 38.3 deg elevation, moon from the upper-left front
 
   blender -b --factory-startup --python Tools/ArtPipeline/blender/crystal_states.py -- --out ArtCache/Crystal [--samples 192]
 
-Output: <out>/crystal_<state>@2x.png (640x800 RGBA, transparent) for intact / cracked / critical. The game contract is
-320x400 at PPU 160 with the feet on row 372 (pivot y 0.07): the camera is framed so the ground point under the Crystal
-lands on that row at 2x (744). Downscale with Tools/ArtPipeline/env_finish.py --crystal (Lanczos) or any Lanczos resize.
+Output: <out>/crystal_<state>@2x.png (1024x1024 RGBA, transparent) for intact / cracked / critical. The game canvas is
+512x512 at PPU 204.8 (2.5 x 2.5 units; power of two so Unity compresses it) with the feet at pivot y 0.07. Downscale with Tools/ArtPipeline/env_finish.py --crystal (Lanczos) or any Lanczos resize.
 Design (ArtProduction/ART_BIBLE.md §7): a tall faceted relic with an asymmetric crown of shards in a carved stone collar
 with glyphs, three suspended shards; fractures glow when cracked; critical = shards dimmed/fallen, red-violet core.
 """
@@ -51,7 +50,7 @@ sc.cycles.samples = SAMPLES
 sc.cycles.use_denoising = True
 sc.cycles.transmission_bounces = 12
 sc.render.film_transparent = True
-sc.render.resolution_x, sc.render.resolution_y = 640, 800
+sc.render.resolution_x, sc.render.resolution_y = 1024, 1024   # 2x master of the 512 power-of-two game canvas
 sc.view_settings.view_transform = "AgX"
 sc.view_settings.look = "AgX - Base Contrast"
 sc.render.image_settings.file_format = "PNG"
@@ -67,7 +66,7 @@ cam = bpy.data.objects.new("Camera", bpy.data.cameras.new("Camera"))
 sc.collection.objects.link(cam)
 sc.camera = cam
 cam.data.type = "ORTHO"
-cam.data.ortho_scale = 2.5            # the larger side (height 800 px = 2.5 units)
+cam.data.ortho_scale = 2.5            # 2.5 x 2.5 units (game canvas 512 px at PPU 204.8)
 d = Vector((0, math.cos(ELEV), -SIN))
 up = Vector((0, SIN, math.cos(ELEV)))
 # the front of the 0.62-radius collar projects 0.62 * sin(elev) below the ground origin: that lowest edge is the

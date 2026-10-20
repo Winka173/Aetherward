@@ -1,0 +1,13 @@
+{
+  "kind": "Unity player screenshot (real Battle scene, scripted roster and wave)",
+  "label": "B02 starters (6 heroes, evolutions) in the real Battle scene",
+  "commit": "8f49db9",
+  "unity": "6000.4.8f1",
+  "platform": "WindowsPlayer",
+  "screen": [2560, 1440],
+  "artOverride": "",
+  "overridesLoaded": 0,
+  "wave": 12,
+  "phaseAtEnd": "Battle",
+  "shots": ["prep.png", "t06.png", "t10.png", "t15.png", "t22.png"]
+}

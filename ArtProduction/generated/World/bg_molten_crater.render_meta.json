@@ -3,13 +3,13 @@
   "elevationDeg": 38.31613447366574,
   "viewUnits": [
    34.0,
-   19.2
+   17.0
   ],
   "resolution": [
-   4080,
-   2304
+   4096,
+   2048
   ],
-  "ppu": 120.0
+  "ppu": 120.47058823529412
  },
  "shadowDirScreen": [
   0.8197,
@@ -23,18 +23,18 @@
  "braziersScreen": [
   [
    -1.409,
-   5.186
+   4.893
   ],
   [
    -7.045,
-   10.472
+   11.327
   ]
  ],
  "braziersFlat": [
   -1.409,
-  5.186,
+  4.893,
   -7.045,
-  10.472
+  11.327
  ],
  "aetherCrystalsFlat": [],
  "aetherCrystalsScreen": [],

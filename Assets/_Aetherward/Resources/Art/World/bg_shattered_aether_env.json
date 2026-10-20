@@ -6,35 +6,35 @@
  "shadowLengthPerHeight": 0.8947,
  "braziersFlat": [
   -8.455,
-  -8.217,
+  -8.624,
   11.273,
-  -6.185
+  -6.157
  ],
  "aetherCrystalsFlat": [
   -5.636,
-  4.723,
+  4.696,
   9.864,
-  -1.403,
+  0.389,
   12.682,
-  -8.749,
+  -9.121,
   8.455,
-  -9.532,
+  -9.872,
   7.045,
-  -6.375,
+  -3.895,
   -8.455,
-  0.501,
+  3.247,
   12.682,
-  1.948,
+  2.406,
   -11.273,
-  1.813
+  -0.907
  ],
  "edgeColor": [
-  0.0928,
-  0.0928,
-  0.1355
+  0.0933,
+  0.0933,
+  0.1362
  ],
- "source": "ArtCache/Env/shattered_aether",
- "gamma": 1.0935,
- "viewMeanBefore": 0.1836,
+ "source": "ArtCache/Env/pot_shattered_aether",
+ "gamma": 1.0909,
+ "viewMeanBefore": 0.183,
  "viewMean": 0.16
 }

@@ -6,20 +6,20 @@
  "shadowLengthPerHeight": 0.8947,
  "braziersFlat": [
   5.636,
-  7.9,
+  8.496,
   14.091,
-  -3.397,
+  -3.512,
   -4.227,
-  3.763
+  3.756
  ],
  "aetherCrystalsFlat": [],
  "edgeColor": [
-  0.1113,
-  0.1426,
-  0.1496
+  0.1109,
+  0.1457,
+  0.1492
  ],
- "source": "ArtCache/Env/sunken_archive",
- "gamma": 1.1374,
- "viewMeanBefore": 0.1919,
+ "source": "ArtCache/Env/pot_sunken_archive",
+ "gamma": 1.1391,
+ "viewMeanBefore": 0.1923,
  "viewMean": 0.16
 }
