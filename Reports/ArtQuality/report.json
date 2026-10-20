@@ -920,15 +920,17 @@
   "Enemies/arcane_mimic_a.png": {
    "bytesRGBA32": 262144,
    "category": "Enemies",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "footOffsetPx": 4.0,
    "h": 256,
    "haloRatio": 0.0,
    "heightPx": 213,
    "humanReview": "PENDING",
-   "issues": [],
+   "issues": [
+    "low_contrast_battlefield"
+   ],
    "lightingBRminusTL": 0.0243,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.249,
    "opaque": 0.384,
    "spellContrast": 2.645,
    "w": 256
@@ -936,16 +938,18 @@
   "Enemies/arcane_mimic_b.png": {
    "bytesRGBA32": 262144,
    "category": "Enemies",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "footOffsetPx": 4.0,
    "h": 256,
    "haloRatio": 0.0,
    "heightPx": 221,
    "humanReview": "PENDING",
    "iouVs_arcane_mimic_a": 0.8076,
-   "issues": [],
+   "issues": [
+    "low_contrast_battlefield"
+   ],
    "lightingBRminusTL": 0.0373,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.249,
    "opaque": 0.413,
    "spellContrast": 2.81,
    "w": 256
@@ -953,15 +957,17 @@
   "Enemies/ash_imp_a.png": {
    "bytesRGBA32": 262144,
    "category": "Enemies",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "footOffsetPx": 4.0,
    "h": 256,
    "haloRatio": 0.0,
    "heightPx": 172,
    "humanReview": "PENDING",
-   "issues": [],
+   "issues": [
+    "low_contrast_battlefield"
+   ],
    "lightingBRminusTL": -0.1352,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.249,
    "opaque": 0.1595,
    "spellContrast": 3.542,
    "w": 256
@@ -969,16 +975,18 @@
   "Enemies/ash_imp_b.png": {
    "bytesRGBA32": 262144,
    "category": "Enemies",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "footOffsetPx": 4.0,
    "h": 256,
    "haloRatio": 0.0,
    "heightPx": 180,
    "humanReview": "PENDING",
    "iouVs_ash_imp_a": 0.8672,
-   "issues": [],
+   "issues": [
+    "low_contrast_battlefield"
+   ],
    "lightingBRminusTL": -0.1376,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.249,
    "opaque": 0.1662,
    "spellContrast": 3.542,
    "w": 256
@@ -986,15 +994,17 @@
   "Enemies/ashen_matriarch_a.png": {
    "bytesRGBA32": 1048576,
    "category": "Enemies",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "footOffsetPx": 8.0,
    "h": 512,
    "haloRatio": 0.0,
    "heightPx": 476,
    "humanReview": "PENDING",
-   "issues": [],
+   "issues": [
+    "low_contrast_battlefield"
+   ],
    "lightingBRminusTL": -0.0514,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.249,
    "opaque": 0.3732,
    "spellContrast": 2.897,
    "w": 512
@@ -1002,16 +1012,18 @@
   "Enemies/ashen_matriarch_b.png": {
    "bytesRGBA32": 1048576,
    "category": "Enemies",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "footOffsetPx": 8.0,
    "h": 512,
    "haloRatio": 0.0,
    "heightPx": 484,
    "humanReview": "PENDING",
    "iouVs_ashen_matriarch_a": 0.8504,
-   "issues": [],
+   "issues": [
+    "low_contrast_battlefield"
+   ],
    "lightingBRminusTL": -0.0276,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.249,
    "opaque": 0.3792,
    "spellContrast": 2.897,
    "w": 512
@@ -1128,15 +1140,17 @@
   "Enemies/crystal_parasite_a.png": {
    "bytesRGBA32": 262144,
    "category": "Enemies",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "footOffsetPx": 3.0,
    "h": 256,
    "haloRatio": 0.002,
    "heightPx": 129,
    "humanReview": "PENDING",
-   "issues": [],
+   "issues": [
+    "low_contrast_battlefield"
+   ],
    "lightingBRminusTL": -0.153,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.249,
    "opaque": 0.1469,
    "spellContrast": 3.231,
    "w": 256
@@ -1144,16 +1158,18 @@
   "Enemies/crystal_parasite_b.png": {
    "bytesRGBA32": 262144,
    "category": "Enemies",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "footOffsetPx": 3.0,
    "h": 256,
    "haloRatio": 0.0021,
    "heightPx": 133,
    "humanReview": "PENDING",
    "iouVs_crystal_parasite_a": 0.7119,
-   "issues": [],
+   "issues": [
+    "low_contrast_battlefield"
+   ],
    "lightingBRminusTL": -0.0997,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.249,
    "opaque": 0.1393,
    "spellContrast": 3.206,
    "w": 256
@@ -1161,15 +1177,17 @@
   "Enemies/ember_hound_a.png": {
    "bytesRGBA32": 262144,
    "category": "Enemies",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "footOffsetPx": 1.0,
    "h": 256,
    "haloRatio": 0.0,
    "heightPx": 193,
    "humanReview": "PENDING",
-   "issues": [],
+   "issues": [
+    "low_contrast_battlefield"
+   ],
    "lightingBRminusTL": -0.0093,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.249,
    "opaque": 0.2815,
    "spellContrast": 2.953,
    "w": 256
@@ -1177,16 +1195,18 @@
   "Enemies/ember_hound_b.png": {
    "bytesRGBA32": 262144,
    "category": "Enemies",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "footOffsetPx": 3.0,
    "h": 256,
    "haloRatio": 0.0,
    "heightPx": 199,
    "humanReview": "PENDING",
    "iouVs_ember_hound_a": 0.6031,
-   "issues": [],
+   "issues": [
+    "low_contrast_battlefield"
+   ],
    "lightingBRminusTL": -0.0067,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.249,
    "opaque": 0.2717,
    "spellContrast": 2.897,
    "w": 256
@@ -1194,15 +1214,17 @@
   "Enemies/flame_devourer_a.png": {
    "bytesRGBA32": 262144,
    "category": "Enemies",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "footOffsetPx": 7.0,
    "h": 256,
    "haloRatio": 0.0,
    "heightPx": 188,
    "humanReview": "PENDING",
-   "issues": [],
+   "issues": [
+    "low_contrast_battlefield"
+   ],
    "lightingBRminusTL": -0.0909,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.249,
    "opaque": 0.5198,
    "spellContrast": 2.897,
    "w": 256
@@ -1210,16 +1232,18 @@
   "Enemies/flame_devourer_b.png": {
    "bytesRGBA32": 262144,
    "category": "Enemies",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "footOffsetPx": 7.0,
    "h": 256,
    "haloRatio": 0.0,
    "heightPx": 192,
    "humanReview": "PENDING",
    "iouVs_flame_devourer_a": 0.9144,
-   "issues": [],
+   "issues": [
+    "low_contrast_battlefield"
+   ],
    "lightingBRminusTL": -0.096,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.249,
    "opaque": 0.5356,
    "spellContrast": 2.897,
    "w": 256
@@ -1305,10 +1329,11 @@
    "humanReview": "PENDING",
    "issues": [
     "lighting_direction",
+    "low_contrast_battlefield",
     "white_halo"
    ],
    "lightingBRminusTL": 0.0685,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.552,
    "opaque": 0.1991,
    "spellContrast": 2.074,
    "w": 256
@@ -1325,10 +1350,11 @@
    "iouVs_goblin_sprinter_a": 0.6435,
    "issues": [
     "lighting_direction",
+    "low_contrast_battlefield",
     "white_halo"
    ],
    "lightingBRminusTL": 0.062,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.553,
    "opaque": 0.1964,
    "spellContrast": 2.072,
    "w": 256
@@ -1370,51 +1396,53 @@
    "bytesRGBA32": 262144,
    "category": "Enemies",
    "decision": "REFINE",
-   "footOffsetPx": 4.0,
+   "footOffsetPx": 0.0,
    "h": 256,
-   "haloRatio": 0.0,
-   "heightPx": 185,
+   "haloRatio": 0.0163,
+   "heightPx": 154,
    "humanReview": "PENDING",
    "issues": [
-    "low_contrast_spells"
+    "low_contrast_battlefield"
    ],
-   "lightingBRminusTL": -0.1007,
-   "minBattlefieldContrast": 1.81,
-   "opaque": 0.3086,
-   "spellContrast": 1.262,
+   "lightingBRminusTL": 0.0094,
+   "minBattlefieldContrast": 1.125,
+   "opaque": 0.1554,
+   "spellContrast": 2.075,
    "w": 256
   },
   "Enemies/grunt_b.png": {
    "bytesRGBA32": 262144,
    "category": "Enemies",
    "decision": "REFINE",
-   "footOffsetPx": 4.0,
+   "footOffsetPx": 0.0,
    "h": 256,
-   "haloRatio": 0.0,
-   "heightPx": 189,
+   "haloRatio": 0.0029,
+   "heightPx": 154,
    "humanReview": "PENDING",
-   "iouVs_grunt_a": 0.9199,
+   "iouVs_grunt_a": 0.6882,
    "issues": [
-    "low_contrast_spells"
+    "low_contrast_battlefield"
    ],
-   "lightingBRminusTL": -0.0984,
-   "minBattlefieldContrast": 1.81,
-   "opaque": 0.3136,
-   "spellContrast": 1.262,
+   "lightingBRminusTL": 0.0195,
+   "minBattlefieldContrast": 1.157,
+   "opaque": 0.1455,
+   "spellContrast": 2.153,
    "w": 256
   },
   "Enemies/hex_binder_a.png": {
    "bytesRGBA32": 262144,
    "category": "Enemies",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "footOffsetPx": 1.0,
    "h": 256,
    "haloRatio": 0.0,
    "heightPx": 190,
    "humanReview": "PENDING",
-   "issues": [],
+   "issues": [
+    "low_contrast_battlefield"
+   ],
    "lightingBRminusTL": -0.0688,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.249,
    "opaque": 0.2254,
    "spellContrast": 2.866,
    "w": 256
@@ -1422,16 +1450,18 @@
   "Enemies/hex_binder_b.png": {
    "bytesRGBA32": 262144,
    "category": "Enemies",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "footOffsetPx": 1.0,
    "h": 256,
    "haloRatio": 0.0,
    "heightPx": 194,
    "humanReview": "PENDING",
    "iouVs_hex_binder_a": 0.8181,
-   "issues": [],
+   "issues": [
+    "low_contrast_battlefield"
+   ],
    "lightingBRminusTL": -0.0721,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.249,
    "opaque": 0.2298,
    "spellContrast": 2.866,
    "w": 256
@@ -1439,34 +1469,38 @@
   "Enemies/hexcaster_a.png": {
    "bytesRGBA32": 262144,
    "category": "Enemies",
-   "decision": "KEEP",
-   "footOffsetPx": 1.0,
+   "decision": "REFINE",
+   "footOffsetPx": 0.0,
    "h": 256,
-   "haloRatio": 0.0,
-   "heightPx": 196,
+   "haloRatio": 0.0054,
+   "heightPx": 181,
    "humanReview": "PENDING",
-   "issues": [],
-   "lightingBRminusTL": -0.1121,
-   "minBattlefieldContrast": 1.81,
-   "opaque": 0.1811,
-   "spellContrast": 2.922,
+   "issues": [
+    "low_contrast_battlefield"
+   ],
+   "lightingBRminusTL": -0.0435,
+   "minBattlefieldContrast": 1.266,
+   "opaque": 0.2545,
+   "spellContrast": 1.642,
    "w": 256
   },
   "Enemies/hexcaster_b.png": {
    "bytesRGBA32": 262144,
    "category": "Enemies",
-   "decision": "KEEP",
-   "footOffsetPx": 1.0,
+   "decision": "REFINE",
+   "footOffsetPx": 0.0,
    "h": 256,
-   "haloRatio": 0.0,
-   "heightPx": 206,
+   "haloRatio": 0.0542,
+   "heightPx": 179,
    "humanReview": "PENDING",
-   "iouVs_hexcaster_a": 0.9005,
-   "issues": [],
-   "lightingBRminusTL": -0.1151,
-   "minBattlefieldContrast": 1.81,
-   "opaque": 0.1863,
-   "spellContrast": 2.898,
+   "iouVs_hexcaster_a": 0.7238,
+   "issues": [
+    "low_contrast_battlefield"
+   ],
+   "lightingBRminusTL": -0.0481,
+   "minBattlefieldContrast": 1.214,
+   "opaque": 0.2657,
+   "spellContrast": 1.51,
    "w": 256
   },
   "Enemies/ice_statue_a.png": {
@@ -1505,15 +1539,17 @@
   "Enemies/ignaroth_a.png": {
    "bytesRGBA32": 1048576,
    "category": "Enemies",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "footOffsetPx": 10.0,
    "h": 512,
    "haloRatio": 0.0,
    "heightPx": 476,
    "humanReview": "PENDING",
-   "issues": [],
+   "issues": [
+    "low_contrast_battlefield"
+   ],
    "lightingBRminusTL": 0.0086,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.249,
    "opaque": 0.4243,
    "spellContrast": 3.055,
    "w": 512
@@ -1521,16 +1557,18 @@
   "Enemies/ignaroth_b.png": {
    "bytesRGBA32": 1048576,
    "category": "Enemies",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "footOffsetPx": 10.0,
    "h": 512,
    "haloRatio": 0.0,
    "heightPx": 484,
    "humanReview": "PENDING",
    "iouVs_ignaroth_a": 0.8864,
-   "issues": [],
+   "issues": [
+    "low_contrast_battlefield"
+   ],
    "lightingBRminusTL": 0.0054,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.249,
    "opaque": 0.4256,
    "spellContrast": 3.055,
    "w": 512
@@ -1571,15 +1609,17 @@
   "Enemies/ironclad_warlord_a.png": {
    "bytesRGBA32": 1048576,
    "category": "Enemies",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "footOffsetPx": 2.0,
    "h": 512,
    "haloRatio": 0.0,
    "heightPx": 451,
    "humanReview": "PENDING",
-   "issues": [],
+   "issues": [
+    "low_contrast_battlefield"
+   ],
    "lightingBRminusTL": -0.0263,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.541,
    "opaque": 0.4105,
    "spellContrast": 2.089,
    "w": 512
@@ -1587,7 +1627,7 @@
   "Enemies/ironclad_warlord_b.png": {
    "bytesRGBA32": 1048576,
    "category": "Enemies",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "footOffsetPx": 2.0,
    "h": 512,
    "haloRatio": 0.0,
@@ -1595,10 +1635,11 @@
    "humanReview": "PENDING",
    "iouVs_ironclad_warlord_a": 0.8501,
    "issues": [
+    "low_contrast_battlefield",
     "outside_safe_bounds"
    ],
    "lightingBRminusTL": -0.0836,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.578,
    "opaque": 0.4352,
    "spellContrast": 2.039,
    "w": 512
@@ -1606,34 +1647,38 @@
   "Enemies/juggernaut_a.png": {
    "bytesRGBA32": 262144,
    "category": "Enemies",
-   "decision": "KEEP",
-   "footOffsetPx": 7.0,
+   "decision": "REFINE",
+   "footOffsetPx": 0.0,
    "h": 256,
    "haloRatio": 0.0,
-   "heightPx": 191,
+   "heightPx": 205,
    "humanReview": "PENDING",
-   "issues": [],
-   "lightingBRminusTL": -0.0944,
-   "minBattlefieldContrast": 1.81,
-   "opaque": 0.4493,
-   "spellContrast": 2.454,
+   "issues": [
+    "low_contrast_battlefield"
+   ],
+   "lightingBRminusTL": -0.0624,
+   "minBattlefieldContrast": 1.205,
+   "opaque": 0.3898,
+   "spellContrast": 2.07,
    "w": 256
   },
   "Enemies/juggernaut_b.png": {
    "bytesRGBA32": 262144,
    "category": "Enemies",
-   "decision": "KEEP",
-   "footOffsetPx": 7.0,
+   "decision": "REFINE",
+   "footOffsetPx": 0.0,
    "h": 256,
-   "haloRatio": 0.0,
-   "heightPx": 195,
+   "haloRatio": 0.0279,
+   "heightPx": 202,
    "humanReview": "PENDING",
-   "iouVs_juggernaut_a": 0.938,
-   "issues": [],
-   "lightingBRminusTL": -0.0932,
-   "minBattlefieldContrast": 1.81,
-   "opaque": 0.4553,
-   "spellContrast": 2.454,
+   "iouVs_juggernaut_a": 0.776,
+   "issues": [
+    "low_contrast_battlefield"
+   ],
+   "lightingBRminusTL": -0.0549,
+   "minBattlefieldContrast": 1.184,
+   "opaque": 0.3597,
+   "spellContrast": 2.103,
    "w": 256
   },
   "Enemies/mana_leech_a.png": {
@@ -1646,10 +1691,11 @@
    "heightPx": 151,
    "humanReview": "PENDING",
    "issues": [
-    "foot_pivot_mismatch"
+    "foot_pivot_mismatch",
+    "low_contrast_battlefield"
    ],
    "lightingBRminusTL": -0.0407,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.492,
    "opaque": 0.2882,
    "spellContrast": 2.158,
    "w": 256
@@ -1665,10 +1711,11 @@
    "humanReview": "PENDING",
    "iouVs_mana_leech_a": 0.7927,
    "issues": [
-    "foot_pivot_mismatch"
+    "foot_pivot_mismatch",
+    "low_contrast_battlefield"
    ],
    "lightingBRminusTL": -0.0371,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.492,
    "opaque": 0.2886,
    "spellContrast": 2.158,
    "w": 256
@@ -1783,17 +1830,18 @@
   "Enemies/nyxhollow_a.png": {
    "bytesRGBA32": 1048576,
    "category": "Enemies",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "footOffsetPx": 15.0,
    "h": 512,
    "haloRatio": 0.0,
    "heightPx": 436,
    "humanReview": "PENDING",
    "issues": [
+    "low_contrast_battlefield",
     "outside_safe_bounds"
    ],
    "lightingBRminusTL": -0.033,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.249,
    "opaque": 0.4524,
    "spellContrast": 3.647,
    "w": 512
@@ -1801,7 +1849,7 @@
   "Enemies/nyxhollow_b.png": {
    "bytesRGBA32": 1048576,
    "category": "Enemies",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "footOffsetPx": 15.0,
    "h": 512,
    "haloRatio": 0.0,
@@ -1809,10 +1857,11 @@
    "humanReview": "PENDING",
    "iouVs_nyxhollow_a": 0.8646,
    "issues": [
+    "low_contrast_battlefield",
     "outside_safe_bounds"
    ],
    "lightingBRminusTL": -0.0307,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.249,
    "opaque": 0.455,
    "spellContrast": 3.645,
    "w": 512
@@ -1857,15 +1906,17 @@
   "Enemies/rift_summoner_a.png": {
    "bytesRGBA32": 262144,
    "category": "Enemies",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "footOffsetPx": 5.0,
    "h": 256,
    "haloRatio": 0.0,
    "heightPx": 183,
    "humanReview": "PENDING",
-   "issues": [],
+   "issues": [
+    "low_contrast_battlefield"
+   ],
    "lightingBRminusTL": -0.0744,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.249,
    "opaque": 0.3495,
    "spellContrast": 3.54,
    "w": 256
@@ -1873,16 +1924,18 @@
   "Enemies/rift_summoner_b.png": {
    "bytesRGBA32": 262144,
    "category": "Enemies",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "footOffsetPx": 5.0,
    "h": 256,
    "haloRatio": 0.0,
    "heightPx": 187,
    "humanReview": "PENDING",
    "iouVs_rift_summoner_a": 0.9551,
-   "issues": [],
+   "issues": [
+    "low_contrast_battlefield"
+   ],
    "lightingBRminusTL": -0.0711,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.249,
    "opaque": 0.3562,
    "spellContrast": 3.54,
    "w": 256
@@ -1891,37 +1944,37 @@
    "bytesRGBA32": 1048576,
    "category": "Enemies",
    "decision": "REFINE",
-   "footOffsetPx": -20.0,
+   "footOffsetPx": 0.0,
    "h": 512,
-   "haloRatio": 0.0,
-   "heightPx": 446,
+   "haloRatio": 0.0056,
+   "heightPx": 434,
    "humanReview": "PENDING",
    "issues": [
-    "foot_pivot_mismatch"
+    "low_contrast_battlefield"
    ],
-   "lightingBRminusTL": -0.0464,
-   "minBattlefieldContrast": 1.81,
-   "opaque": 0.3009,
-   "spellContrast": 2.557,
+   "lightingBRminusTL": -0.0633,
+   "minBattlefieldContrast": 1.223,
+   "opaque": 0.3755,
+   "spellContrast": 2.244,
    "w": 512
   },
   "Enemies/rift_warden_b.png": {
    "bytesRGBA32": 1048576,
    "category": "Enemies",
    "decision": "REFINE",
-   "footOffsetPx": -30.0,
+   "footOffsetPx": 0.0,
    "h": 512,
-   "haloRatio": 0.0,
-   "heightPx": 446,
+   "haloRatio": 0.0107,
+   "heightPx": 433,
    "humanReview": "PENDING",
-   "iouVs_rift_warden_a": 0.8753,
+   "iouVs_rift_warden_a": 0.6869,
    "issues": [
-    "foot_pivot_mismatch"
+    "low_contrast_battlefield"
    ],
-   "lightingBRminusTL": -0.0464,
-   "minBattlefieldContrast": 1.81,
-   "opaque": 0.3008,
-   "spellContrast": 2.557,
+   "lightingBRminusTL": 0.0259,
+   "minBattlefieldContrast": 1.367,
+   "opaque": 0.3852,
+   "spellContrast": 1.773,
    "w": 512
   },
   "Enemies/riftling_a.png": {
@@ -1975,10 +2028,11 @@
    "heightPx": 238,
    "humanReview": "PENDING",
    "issues": [
-    "foot_pivot_mismatch"
+    "foot_pivot_mismatch",
+    "low_contrast_battlefield"
    ],
    "lightingBRminusTL": -0.1488,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.425,
    "opaque": 0.4197,
    "spellContrast": 2.258,
    "w": 256
@@ -1994,10 +2048,11 @@
    "humanReview": "PENDING",
    "iouVs_rootbound_treant_a": 0.8593,
    "issues": [
-    "foot_pivot_mismatch"
+    "foot_pivot_mismatch",
+    "low_contrast_battlefield"
    ],
    "lightingBRminusTL": -0.1483,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.425,
    "opaque": 0.4259,
    "spellContrast": 2.258,
    "w": 256
@@ -2050,7 +2105,7 @@
    "humanReview": "PENDING",
    "issues": [],
    "lightingBRminusTL": -0.0501,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.692,
    "opaque": 0.2467,
    "spellContrast": 1.903,
    "w": 256
@@ -2067,7 +2122,7 @@
    "iouVs_sapper_a": 0.9053,
    "issues": [],
    "lightingBRminusTL": -0.0563,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.692,
    "opaque": 0.2504,
    "spellContrast": 1.903,
    "w": 256
@@ -2403,39 +2458,39 @@
    "bytesRGBA32": 262144,
    "category": "Enemies",
    "decision": "REFINE",
-   "footOffsetPx": -56.0,
+   "footOffsetPx": -34.0,
    "h": 256,
    "haloRatio": 0.0,
-   "heightPx": 165,
+   "heightPx": 182,
    "humanReview": "PENDING",
    "issues": [
-    "foot_pivot_mismatch"
+    "foot_pivot_mismatch",
+    "low_contrast_battlefield"
    ],
-   "lightingBRminusTL": -0.0464,
-   "minBattlefieldContrast": 1.81,
-   "opaque": 0.2946,
-   "spellContrast": 1.403,
+   "lightingBRminusTL": -0.0259,
+   "minBattlefieldContrast": 1.172,
+   "opaque": 0.2334,
+   "spellContrast": 2.603,
    "w": 256
   },
   "Enemies/storm_harpy_b.png": {
    "bytesRGBA32": 262144,
    "category": "Enemies",
    "decision": "REFINE",
-   "footOffsetPx": -24.0,
+   "footOffsetPx": -34.0,
    "h": 256,
    "haloRatio": 0.0,
-   "heightPx": 192,
+   "heightPx": 166,
    "humanReview": "PENDING",
-   "iouVs_storm_harpy_a": 0.4465,
+   "iouVs_storm_harpy_a": 0.6693,
    "issues": [
     "foot_pivot_mismatch",
-    "frame_jump",
-    "low_contrast_spells"
+    "low_contrast_battlefield"
    ],
-   "lightingBRminusTL": -0.0842,
-   "minBattlefieldContrast": 1.849,
-   "opaque": 0.2655,
-   "spellContrast": 1.201,
+   "lightingBRminusTL": -0.0169,
+   "minBattlefieldContrast": 1.168,
+   "opaque": 0.2216,
+   "spellContrast": 2.595,
    "w": 256
   },
   "Enemies/storm_wisp_a.png": {
@@ -2565,10 +2620,11 @@
    "heightPx": 447,
    "humanReview": "PENDING",
    "issues": [
+    "low_contrast_battlefield",
     "white_halo"
    ],
    "lightingBRminusTL": -0.0225,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.488,
    "opaque": 0.3448,
    "spellContrast": 2.163,
    "w": 512
@@ -2584,10 +2640,11 @@
    "humanReview": "PENDING",
    "iouVs_thornmother_a": 0.851,
    "issues": [
+    "low_contrast_battlefield",
     "white_halo"
    ],
    "lightingBRminusTL": -0.0348,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.496,
    "opaque": 0.3524,
    "spellContrast": 2.151,
    "w": 512
@@ -2670,15 +2727,17 @@
   "Enemies/void_priest_a.png": {
    "bytesRGBA32": 262144,
    "category": "Enemies",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "footOffsetPx": 5.0,
    "h": 256,
    "haloRatio": 0.0,
    "heightPx": 221,
    "humanReview": "PENDING",
-   "issues": [],
+   "issues": [
+    "low_contrast_battlefield"
+   ],
    "lightingBRminusTL": -0.0559,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.249,
    "opaque": 0.3329,
    "spellContrast": 3.225,
    "w": 256
@@ -2686,16 +2745,18 @@
   "Enemies/void_priest_b.png": {
    "bytesRGBA32": 262144,
    "category": "Enemies",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "footOffsetPx": 5.0,
    "h": 256,
    "haloRatio": 0.0,
    "heightPx": 225,
    "humanReview": "PENDING",
    "iouVs_void_priest_a": 0.9172,
-   "issues": [],
+   "issues": [
+    "low_contrast_battlefield"
+   ],
    "lightingBRminusTL": -0.0561,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.249,
    "opaque": 0.3414,
    "spellContrast": 3.218,
    "w": 256
@@ -2713,7 +2774,7 @@
     "low_contrast_spells"
    ],
    "lightingBRminusTL": -0.1306,
-   "minBattlefieldContrast": 2.174,
+   "minBattlefieldContrast": 2.488,
    "opaque": 0.2614,
    "spellContrast": 1.104,
    "w": 256
@@ -2733,7 +2794,7 @@
     "low_contrast_spells"
    ],
    "lightingBRminusTL": -0.1258,
-   "minBattlefieldContrast": 1.74,
+   "minBattlefieldContrast": 2.488,
    "opaque": 0.2651,
    "spellContrast": 1.104,
    "w": 256
@@ -2819,10 +2880,11 @@
    "heightPx": 278,
    "humanReview": "PENDING",
    "issues": [
+    "low_contrast_battlefield",
     "white_halo"
    ],
    "lightingBRminusTL": -0.0009,
-   "minBattlefieldContrast": 1.726,
+   "minBattlefieldContrast": 1.356,
    "opaque": 0.2816,
    "spellContrast": 2.374,
    "w": 400
@@ -2838,10 +2900,11 @@
    "humanReview": "PENDING",
    "iouVs_aeris_evoB": 0.8927,
    "issues": [
+    "low_contrast_battlefield",
     "white_halo"
    ],
    "lightingBRminusTL": -0.0496,
-   "minBattlefieldContrast": 1.726,
+   "minBattlefieldContrast": 1.429,
    "opaque": 0.2737,
    "spellContrast": 2.252,
    "w": 400
@@ -2877,7 +2940,7 @@
    "iouVs_ashara_idle": 0.8298,
    "issues": [],
    "lightingBRminusTL": -0.0705,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.663,
    "opaque": 0.2602,
    "spellContrast": 1.936,
    "w": 400
@@ -2940,7 +3003,7 @@
    "humanReview": "PENDING",
    "issues": [],
    "lightingBRminusTL": -0.058,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.67,
    "opaque": 0.3205,
    "spellContrast": 1.927,
    "w": 400
@@ -2965,16 +3028,18 @@
   "Heroes/ashara_idle.png": {
    "bytesRGBA32": 640000,
    "category": "Heroes",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "elementHueShare": 0.7288,
    "footOffsetPx": 6.0,
    "h": 400,
    "haloRatio": 0.0,
    "heightPx": 295,
    "humanReview": "PENDING",
-   "issues": [],
+   "issues": [
+    "low_contrast_battlefield"
+   ],
    "lightingBRminusTL": -0.0384,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.542,
    "opaque": 0.2841,
    "spellContrast": 2.087,
    "w": 400
@@ -3221,7 +3286,7 @@
    "iouVs_cinder_idle": 0.6273,
    "issues": [],
    "lightingBRminusTL": -0.086,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.7,
    "opaque": 0.2632,
    "spellContrast": 1.893,
    "w": 400
@@ -3320,7 +3385,7 @@
    "humanReview": "PENDING",
    "issues": [],
    "lightingBRminusTL": -0.0467,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.604,
    "opaque": 0.2549,
    "spellContrast": 2.006,
    "w": 400
@@ -3950,19 +4015,20 @@
    "bytesRGBA32": 640000,
    "category": "Heroes",
    "decision": "REFINE",
-   "footOffsetPx": 6.0,
+   "footOffsetPx": 0.0,
    "h": 400,
-   "haloRatio": 0.0,
-   "heightPx": 365,
+   "haloRatio": 0.0003,
+   "heightPx": 284,
    "humanReview": "PENDING",
-   "iouVs_ignis_idle": 0.7898,
+   "iouVs_ignis_idle": 0.544,
    "issues": [
-    "low_contrast_spells"
+    "frame_jump",
+    "low_contrast_battlefield"
    ],
-   "lightingBRminusTL": -0.0588,
-   "minBattlefieldContrast": 2.005,
-   "opaque": 0.2365,
-   "spellContrast": 1.108,
+   "lightingBRminusTL": -0.0555,
+   "minBattlefieldContrast": 1.343,
+   "opaque": 0.2756,
+   "spellContrast": 2.982,
    "w": 400
   },
   "Heroes/ignis_downed.png": {
@@ -3970,106 +4036,108 @@
    "category": "Heroes",
    "decision": "KEEP",
    "h": 400,
-   "haloRatio": 0.0,
+   "haloRatio": 0.0095,
    "humanReview": "PENDING",
    "issues": [
     "overdraw_waste"
    ],
-   "lightingBRminusTL": -0.0476,
-   "opaque": 0.1192,
+   "lightingBRminusTL": -0.1255,
+   "opaque": 0.1031,
    "w": 400
   },
   "Heroes/ignis_evoA.png": {
    "bytesRGBA32": 640000,
    "category": "Heroes",
    "decision": "REFINE",
-   "footOffsetPx": 6.0,
+   "footOffsetPx": 0.0,
    "h": 400,
-   "haloRatio": 0.0,
-   "heightPx": 302,
+   "haloRatio": 0.0055,
+   "heightPx": 261,
    "humanReview": "PENDING",
    "issues": [
-    "low_contrast_spells"
+    "low_contrast_battlefield"
    ],
-   "lightingBRminusTL": -0.1095,
-   "minBattlefieldContrast": 2.031,
-   "opaque": 0.2697,
-   "spellContrast": 1.094,
+   "lightingBRminusTL": -0.0662,
+   "minBattlefieldContrast": 1.337,
+   "opaque": 0.1734,
+   "spellContrast": 2.191,
    "w": 400
   },
   "Heroes/ignis_evoA_cast.png": {
    "bytesRGBA32": 640000,
    "category": "Heroes",
    "decision": "REFINE",
-   "footOffsetPx": 6.0,
+   "footOffsetPx": 1.0,
    "h": 400,
    "haloRatio": 0.0,
-   "heightPx": 365,
+   "heightPx": 287,
    "humanReview": "PENDING",
-   "iouVs_ignis_evoA": 0.8298,
+   "iouVs_ignis_evoA": 0.5768,
    "issues": [
-    "low_contrast_spells"
+    "low_contrast_battlefield"
    ],
-   "lightingBRminusTL": -0.065,
-   "minBattlefieldContrast": 2.031,
-   "opaque": 0.2687,
-   "spellContrast": 1.094,
+   "lightingBRminusTL": -0.0377,
+   "minBattlefieldContrast": 1.142,
+   "opaque": 0.2212,
+   "spellContrast": 2.537,
    "w": 400
   },
   "Heroes/ignis_evoB.png": {
    "bytesRGBA32": 640000,
    "category": "Heroes",
    "decision": "REFINE",
-   "footOffsetPx": 6.0,
+   "footOffsetPx": 1.0,
    "h": 400,
-   "haloRatio": 0.0,
-   "heightPx": 302,
+   "haloRatio": 0.0013,
+   "heightPx": 279,
    "humanReview": "PENDING",
    "issues": [
+    "low_contrast_battlefield",
     "low_contrast_spells"
    ],
-   "lightingBRminusTL": -0.0774,
-   "minBattlefieldContrast": 2.005,
-   "opaque": 0.3056,
-   "spellContrast": 1.108,
+   "lightingBRminusTL": 0.0536,
+   "minBattlefieldContrast": 1.265,
+   "opaque": 0.252,
+   "spellContrast": 1.082,
    "w": 400
   },
   "Heroes/ignis_evoB_cast.png": {
    "bytesRGBA32": 640000,
    "category": "Heroes",
    "decision": "REFINE",
-   "footOffsetPx": 6.0,
+   "footOffsetPx": 0.0,
    "h": 400,
-   "haloRatio": 0.0,
-   "heightPx": 365,
+   "haloRatio": 0.0002,
+   "heightPx": 279,
    "humanReview": "PENDING",
-   "iouVs_ignis_evoB": 0.8939,
+   "iouVs_ignis_evoB": 0.6663,
    "issues": [
+    "low_contrast_battlefield",
     "low_contrast_spells"
    ],
-   "lightingBRminusTL": 0.0413,
-   "minBattlefieldContrast": 2.005,
-   "opaque": 0.3081,
-   "spellContrast": 1.108,
+   "lightingBRminusTL": -0.0,
+   "minBattlefieldContrast": 1.195,
+   "opaque": 0.2843,
+   "spellContrast": 1.193,
    "w": 400
   },
   "Heroes/ignis_idle.png": {
    "bytesRGBA32": 640000,
    "category": "Heroes",
    "decision": "REFINE",
-   "elementHueShare": 0.7799,
-   "footOffsetPx": 6.0,
+   "elementHueShare": 0.9091,
+   "footOffsetPx": 0.0,
    "h": 400,
-   "haloRatio": 0.0,
-   "heightPx": 302,
+   "haloRatio": 0.0009,
+   "heightPx": 274,
    "humanReview": "PENDING",
    "issues": [
-    "low_contrast_spells"
+    "low_contrast_battlefield"
    ],
-   "lightingBRminusTL": -0.1345,
-   "minBattlefieldContrast": 2.005,
-   "opaque": 0.2298,
-   "spellContrast": 1.108,
+   "lightingBRminusTL": -0.1002,
+   "minBattlefieldContrast": 1.42,
+   "opaque": 0.2017,
+   "spellContrast": 2.054,
    "w": 400
   },
   "Heroes/isolde_cast.png": {
@@ -4212,10 +4280,11 @@
    "humanReview": "PENDING",
    "iouVs_kael_idle": 0.6894,
    "issues": [
+    "low_contrast_battlefield",
     "white_halo"
    ],
    "lightingBRminusTL": -0.1198,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.46,
    "opaque": 0.2579,
    "spellContrast": 2.204,
    "w": 400
@@ -4277,10 +4346,11 @@
    "heightPx": 299,
    "humanReview": "PENDING",
    "issues": [
+    "low_contrast_battlefield",
     "white_halo"
    ],
    "lightingBRminusTL": 0.0041,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.435,
    "opaque": 0.2978,
    "spellContrast": 2.242,
    "w": 400
@@ -4308,16 +4378,18 @@
   "Heroes/kael_idle.png": {
    "bytesRGBA32": 640000,
    "category": "Heroes",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "elementHueShare": 0.5975,
    "footOffsetPx": 6.0,
    "h": 400,
    "haloRatio": 0.0,
    "heightPx": 299,
    "humanReview": "PENDING",
-   "issues": [],
+   "issues": [
+    "low_contrast_battlefield"
+   ],
    "lightingBRminusTL": -0.1036,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.249,
    "opaque": 0.2432,
    "spellContrast": 2.629,
    "w": 400
@@ -4445,16 +4517,18 @@
   "Heroes/maelis_cast.png": {
    "bytesRGBA32": 640000,
    "category": "Heroes",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "footOffsetPx": 6.0,
    "h": 400,
    "haloRatio": 0.0,
    "heightPx": 286,
    "humanReview": "PENDING",
    "iouVs_maelis_idle": 0.7225,
-   "issues": [],
+   "issues": [
+    "low_contrast_battlefield"
+   ],
    "lightingBRminusTL": -0.1203,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.349,
    "opaque": 0.296,
    "spellContrast": 2.386,
    "w": 400
@@ -4474,15 +4548,17 @@
   "Heroes/maelis_evoA.png": {
    "bytesRGBA32": 640000,
    "category": "Heroes",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "footOffsetPx": 6.0,
    "h": 400,
    "haloRatio": 0.0,
    "heightPx": 294,
    "humanReview": "PENDING",
-   "issues": [],
+   "issues": [
+    "low_contrast_battlefield"
+   ],
    "lightingBRminusTL": -0.0815,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.381,
    "opaque": 0.3297,
    "spellContrast": 2.331,
    "w": 400
@@ -4490,16 +4566,18 @@
   "Heroes/maelis_evoA_cast.png": {
    "bytesRGBA32": 640000,
    "category": "Heroes",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "footOffsetPx": 6.0,
    "h": 400,
    "haloRatio": 0.0,
    "heightPx": 294,
    "humanReview": "PENDING",
    "iouVs_maelis_evoA": 0.8247,
-   "issues": [],
+   "issues": [
+    "low_contrast_battlefield"
+   ],
    "lightingBRminusTL": -0.1325,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.342,
    "opaque": 0.3269,
    "spellContrast": 2.399,
    "w": 400
@@ -4507,15 +4585,17 @@
   "Heroes/maelis_evoB.png": {
    "bytesRGBA32": 640000,
    "category": "Heroes",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "footOffsetPx": 6.0,
    "h": 400,
    "haloRatio": 0.0,
    "heightPx": 280,
    "humanReview": "PENDING",
-   "issues": [],
+   "issues": [
+    "low_contrast_battlefield"
+   ],
    "lightingBRminusTL": -0.1727,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.594,
    "opaque": 0.2665,
    "spellContrast": 2.019,
    "w": 400
@@ -4532,7 +4612,7 @@
    "iouVs_maelis_evoB": 0.7609,
    "issues": [],
    "lightingBRminusTL": -0.153,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.632,
    "opaque": 0.2615,
    "spellContrast": 1.973,
    "w": 400
@@ -4540,16 +4620,18 @@
   "Heroes/maelis_idle.png": {
    "bytesRGBA32": 640000,
    "category": "Heroes",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "elementHueShare": 0.8872,
    "footOffsetPx": 6.0,
    "h": 400,
    "haloRatio": 0.0,
    "heightPx": 286,
    "humanReview": "PENDING",
-   "issues": [],
+   "issues": [
+    "low_contrast_battlefield"
+   ],
    "lightingBRminusTL": -0.1049,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.349,
    "opaque": 0.285,
    "spellContrast": 2.386,
    "w": 400
@@ -4684,35 +4766,34 @@
    "bytesRGBA32": 640000,
    "category": "Heroes",
    "decision": "REFINE",
-   "footOffsetPx": 6.0,
+   "footOffsetPx": 1.0,
    "h": 400,
-   "haloRatio": 0.0004,
-   "heightPx": 362,
+   "haloRatio": 0.0005,
+   "heightPx": 285,
    "humanReview": "PENDING",
-   "iouVs_marina_idle": 0.8404,
+   "iouVs_marina_idle": 0.6216,
    "issues": [
-    "lighting_direction",
+    "low_contrast_battlefield",
     "low_contrast_spells"
    ],
-   "lightingBRminusTL": 0.0868,
-   "minBattlefieldContrast": 2.363,
-   "opaque": 0.2408,
-   "spellContrast": 1.064,
+   "lightingBRminusTL": -0.0169,
+   "minBattlefieldContrast": 1.211,
+   "opaque": 0.2275,
+   "spellContrast": 1.212,
    "w": 400
   },
   "Heroes/marina_downed.png": {
    "bytesRGBA32": 640000,
    "category": "Heroes",
-   "decision": "REFINE",
+   "decision": "KEEP",
    "h": 400,
    "haloRatio": 0.0,
    "humanReview": "PENDING",
    "issues": [
-    "lighting_direction",
     "overdraw_waste"
    ],
-   "lightingBRminusTL": 0.1575,
-   "opaque": 0.1142,
+   "lightingBRminusTL": -0.0612,
+   "opaque": 0.0763,
    "w": 400
   },
   "Heroes/marina_evoA.png": {
@@ -4791,20 +4872,20 @@
    "bytesRGBA32": 640000,
    "category": "Heroes",
    "decision": "REFINE",
-   "elementHueShare": 0.796,
-   "footOffsetPx": 6.0,
+   "elementHueShare": 0.8904,
+   "footOffsetPx": 0.0,
    "h": 400,
    "haloRatio": 0.0,
-   "heightPx": 256,
+   "heightPx": 279,
    "humanReview": "PENDING",
    "issues": [
-    "lighting_direction",
+    "low_contrast_battlefield",
     "low_contrast_spells"
    ],
-   "lightingBRminusTL": 0.0669,
-   "minBattlefieldContrast": 2.583,
-   "opaque": 0.22,
-   "spellContrast": 1.163,
+   "lightingBRminusTL": 0.0246,
+   "minBattlefieldContrast": 1.131,
+   "opaque": 0.1975,
+   "spellContrast": 1.278,
    "w": 400
   },
   "Heroes/mirel_cast.png": {
@@ -4935,16 +5016,18 @@
   "Heroes/morven_cast.png": {
    "bytesRGBA32": 640000,
    "category": "Heroes",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "footOffsetPx": 6.0,
    "h": 400,
    "haloRatio": 0.0,
    "heightPx": 270,
    "humanReview": "PENDING",
    "iouVs_morven_idle": 0.804,
-   "issues": [],
+   "issues": [
+    "low_contrast_battlefield"
+   ],
    "lightingBRminusTL": -0.0265,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.249,
    "opaque": 0.2699,
    "spellContrast": 3.176,
    "w": 400
@@ -4964,15 +5047,17 @@
   "Heroes/morven_evoA.png": {
    "bytesRGBA32": 640000,
    "category": "Heroes",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "footOffsetPx": 6.0,
    "h": 400,
    "haloRatio": 0.0,
    "heightPx": 274,
    "humanReview": "PENDING",
-   "issues": [],
+   "issues": [
+    "low_contrast_battlefield"
+   ],
    "lightingBRminusTL": 0.0258,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.249,
    "opaque": 0.2918,
    "spellContrast": 3.04,
    "w": 400
@@ -4980,16 +5065,18 @@
   "Heroes/morven_evoA_cast.png": {
    "bytesRGBA32": 640000,
    "category": "Heroes",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "footOffsetPx": 6.0,
    "h": 400,
    "haloRatio": 0.0,
    "heightPx": 274,
    "humanReview": "PENDING",
    "iouVs_morven_evoA": 0.7844,
-   "issues": [],
+   "issues": [
+    "low_contrast_battlefield"
+   ],
    "lightingBRminusTL": -0.0478,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.249,
    "opaque": 0.2927,
    "spellContrast": 3.076,
    "w": 400
@@ -4997,15 +5084,17 @@
   "Heroes/morven_evoB.png": {
    "bytesRGBA32": 640000,
    "category": "Heroes",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "footOffsetPx": 6.0,
    "h": 400,
    "haloRatio": 0.0,
    "heightPx": 281,
    "humanReview": "PENDING",
-   "issues": [],
+   "issues": [
+    "low_contrast_battlefield"
+   ],
    "lightingBRminusTL": -0.0166,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.249,
    "opaque": 0.2713,
    "spellContrast": 3.176,
    "w": 400
@@ -5013,16 +5102,18 @@
   "Heroes/morven_evoB_cast.png": {
    "bytesRGBA32": 640000,
    "category": "Heroes",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "footOffsetPx": 6.0,
    "h": 400,
    "haloRatio": 0.0,
    "heightPx": 278,
    "humanReview": "PENDING",
    "iouVs_morven_evoB": 0.803,
-   "issues": [],
+   "issues": [
+    "low_contrast_battlefield"
+   ],
    "lightingBRminusTL": -0.0271,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.249,
    "opaque": 0.2593,
    "spellContrast": 2.91,
    "w": 400
@@ -5030,16 +5121,18 @@
   "Heroes/morven_idle.png": {
    "bytesRGBA32": 640000,
    "category": "Heroes",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "elementHueShare": 0.5517,
    "footOffsetPx": 6.0,
    "h": 400,
    "haloRatio": 0.0,
    "heightPx": 269,
    "humanReview": "PENDING",
-   "issues": [],
+   "issues": [
+    "low_contrast_battlefield"
+   ],
    "lightingBRminusTL": 0.0007,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.249,
    "opaque": 0.2736,
    "spellContrast": 3.218,
    "w": 400
@@ -5170,16 +5263,18 @@
   "Heroes/nyxara_cast.png": {
    "bytesRGBA32": 640000,
    "category": "Heroes",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "footOffsetPx": 6.0,
    "h": 400,
    "haloRatio": 0.0,
    "heightPx": 296,
    "humanReview": "PENDING",
    "iouVs_nyxara_idle": 0.8818,
-   "issues": [],
+   "issues": [
+    "low_contrast_battlefield"
+   ],
    "lightingBRminusTL": -0.1816,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.249,
    "opaque": 0.2609,
    "spellContrast": 3.455,
    "w": 400
@@ -5199,15 +5294,17 @@
   "Heroes/nyxara_evoA.png": {
    "bytesRGBA32": 640000,
    "category": "Heroes",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "footOffsetPx": 6.0,
    "h": 400,
    "haloRatio": 0.0,
    "heightPx": 293,
    "humanReview": "PENDING",
-   "issues": [],
+   "issues": [
+    "low_contrast_battlefield"
+   ],
    "lightingBRminusTL": -0.1304,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.249,
    "opaque": 0.2765,
    "spellContrast": 2.71,
    "w": 400
@@ -5215,16 +5312,18 @@
   "Heroes/nyxara_evoA_cast.png": {
    "bytesRGBA32": 640000,
    "category": "Heroes",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "footOffsetPx": 6.0,
    "h": 400,
    "haloRatio": 0.0,
    "heightPx": 296,
    "humanReview": "PENDING",
    "iouVs_nyxara_evoA": 0.8698,
-   "issues": [],
+   "issues": [
+    "low_contrast_battlefield"
+   ],
    "lightingBRminusTL": -0.1278,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.249,
    "opaque": 0.2813,
    "spellContrast": 2.71,
    "w": 400
@@ -5232,15 +5331,17 @@
   "Heroes/nyxara_evoB.png": {
    "bytesRGBA32": 640000,
    "category": "Heroes",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "footOffsetPx": 6.0,
    "h": 400,
    "haloRatio": 0.0,
    "heightPx": 293,
    "humanReview": "PENDING",
-   "issues": [],
+   "issues": [
+    "low_contrast_battlefield"
+   ],
    "lightingBRminusTL": -0.1398,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.249,
    "opaque": 0.3232,
    "spellContrast": 3.393,
    "w": 400
@@ -5248,16 +5349,18 @@
   "Heroes/nyxara_evoB_cast.png": {
    "bytesRGBA32": 640000,
    "category": "Heroes",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "footOffsetPx": 6.0,
    "h": 400,
    "haloRatio": 0.0,
    "heightPx": 296,
    "humanReview": "PENDING",
    "iouVs_nyxara_evoB": 0.9382,
-   "issues": [],
+   "issues": [
+    "low_contrast_battlefield"
+   ],
    "lightingBRminusTL": -0.136,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.249,
    "opaque": 0.3283,
    "spellContrast": 3.208,
    "w": 400
@@ -5265,16 +5368,18 @@
   "Heroes/nyxara_idle.png": {
    "bytesRGBA32": 640000,
    "category": "Heroes",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "elementHueShare": 0.2947,
    "footOffsetPx": 6.0,
    "h": 400,
    "haloRatio": 0.0,
    "heightPx": 293,
    "humanReview": "PENDING",
-   "issues": [],
+   "issues": [
+    "low_contrast_battlefield"
+   ],
    "lightingBRminusTL": -0.186,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.249,
    "opaque": 0.2521,
    "spellContrast": 3.474,
    "w": 400
@@ -5282,16 +5387,18 @@
   "Heroes/oriane_cast.png": {
    "bytesRGBA32": 640000,
    "category": "Heroes",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "footOffsetPx": 6.0,
    "h": 400,
    "haloRatio": 0.0051,
    "heightPx": 287,
    "humanReview": "PENDING",
    "iouVs_oriane_idle": 0.796,
-   "issues": [],
+   "issues": [
+    "low_contrast_battlefield"
+   ],
    "lightingBRminusTL": -0.2659,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.249,
    "opaque": 0.2463,
    "spellContrast": 3.267,
    "w": 400
@@ -5311,15 +5418,17 @@
   "Heroes/oriane_evoA.png": {
    "bytesRGBA32": 640000,
    "category": "Heroes",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "footOffsetPx": 6.0,
    "h": 400,
    "haloRatio": 0.0,
    "heightPx": 294,
    "humanReview": "PENDING",
-   "issues": [],
+   "issues": [
+    "low_contrast_battlefield"
+   ],
    "lightingBRminusTL": -0.1251,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.249,
    "opaque": 0.2533,
    "spellContrast": 2.841,
    "w": 400
@@ -5327,16 +5436,18 @@
   "Heroes/oriane_evoA_cast.png": {
    "bytesRGBA32": 640000,
    "category": "Heroes",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "footOffsetPx": 6.0,
    "h": 400,
    "haloRatio": 0.0001,
    "heightPx": 294,
    "humanReview": "PENDING",
    "iouVs_oriane_evoA": 0.7722,
-   "issues": [],
+   "issues": [
+    "low_contrast_battlefield"
+   ],
    "lightingBRminusTL": -0.1848,
-   "minBattlefieldContrast": 1.798,
+   "minBattlefieldContrast": 1.241,
    "opaque": 0.2624,
    "spellContrast": 2.801,
    "w": 400
@@ -5381,16 +5492,18 @@
   "Heroes/oriane_idle.png": {
    "bytesRGBA32": 640000,
    "category": "Heroes",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "elementHueShare": 0.3036,
    "footOffsetPx": 6.0,
    "h": 400,
    "haloRatio": 0.0,
    "heightPx": 287,
    "humanReview": "PENDING",
-   "issues": [],
+   "issues": [
+    "low_contrast_battlefield"
+   ],
    "lightingBRminusTL": -0.1913,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.249,
    "opaque": 0.2331,
    "spellContrast": 3.29,
    "w": 400
@@ -5398,16 +5511,18 @@
   "Heroes/raiden_cast.png": {
    "bytesRGBA32": 640000,
    "category": "Heroes",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "footOffsetPx": 6.0,
    "h": 400,
    "haloRatio": 0.003,
    "heightPx": 257,
    "humanReview": "PENDING",
    "iouVs_raiden_idle": 0.7131,
-   "issues": [],
+   "issues": [
+    "low_contrast_battlefield"
+   ],
    "lightingBRminusTL": -0.0628,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.249,
    "opaque": 0.2,
    "spellContrast": 3.16,
    "w": 400
@@ -5429,15 +5544,17 @@
   "Heroes/raiden_evoA.png": {
    "bytesRGBA32": 640000,
    "category": "Heroes",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "footOffsetPx": 6.0,
    "h": 400,
    "haloRatio": 0.0,
    "heightPx": 257,
    "humanReview": "PENDING",
-   "issues": [],
+   "issues": [
+    "low_contrast_battlefield"
+   ],
    "lightingBRminusTL": -0.0397,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.486,
    "opaque": 0.2265,
    "spellContrast": 2.166,
    "w": 400
@@ -5445,16 +5562,18 @@
   "Heroes/raiden_evoA_cast.png": {
    "bytesRGBA32": 640000,
    "category": "Heroes",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "footOffsetPx": 6.0,
    "h": 400,
    "haloRatio": 0.0001,
    "heightPx": 257,
    "humanReview": "PENDING",
    "iouVs_raiden_evoA": 0.7241,
-   "issues": [],
+   "issues": [
+    "low_contrast_battlefield"
+   ],
    "lightingBRminusTL": -0.044,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.486,
    "opaque": 0.2258,
    "spellContrast": 2.166,
    "w": 400
@@ -5462,15 +5581,17 @@
   "Heroes/raiden_evoB.png": {
    "bytesRGBA32": 640000,
    "category": "Heroes",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "footOffsetPx": 6.0,
    "h": 400,
    "haloRatio": 0.0,
    "heightPx": 257,
    "humanReview": "PENDING",
-   "issues": [],
+   "issues": [
+    "low_contrast_battlefield"
+   ],
    "lightingBRminusTL": -0.1685,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.253,
    "opaque": 0.2665,
    "spellContrast": 2.569,
    "w": 400
@@ -5478,16 +5599,18 @@
   "Heroes/raiden_evoB_cast.png": {
    "bytesRGBA32": 640000,
    "category": "Heroes",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "footOffsetPx": 6.0,
    "h": 400,
    "haloRatio": 0.0,
    "heightPx": 257,
    "humanReview": "PENDING",
    "iouVs_raiden_evoB": 0.8816,
-   "issues": [],
+   "issues": [
+    "low_contrast_battlefield"
+   ],
    "lightingBRminusTL": -0.0704,
-   "minBattlefieldContrast": 1.808,
+   "minBattlefieldContrast": 1.466,
    "opaque": 0.2625,
    "spellContrast": 2.195,
    "w": 400
@@ -5495,16 +5618,18 @@
   "Heroes/raiden_idle.png": {
    "bytesRGBA32": 640000,
    "category": "Heroes",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "elementHueShare": 0.2962,
    "footOffsetPx": 6.0,
    "h": 400,
    "haloRatio": 0.0,
    "heightPx": 257,
    "humanReview": "PENDING",
-   "issues": [],
+   "issues": [
+    "low_contrast_battlefield"
+   ],
    "lightingBRminusTL": -0.054,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.249,
    "opaque": 0.1958,
    "spellContrast": 3.204,
    "w": 400
@@ -5512,16 +5637,18 @@
   "Heroes/sable_cast.png": {
    "bytesRGBA32": 640000,
    "category": "Heroes",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "footOffsetPx": 6.0,
    "h": 400,
    "haloRatio": 0.0,
    "heightPx": 284,
    "humanReview": "PENDING",
    "iouVs_sable_idle": 0.7899,
-   "issues": [],
+   "issues": [
+    "low_contrast_battlefield"
+   ],
    "lightingBRminusTL": -0.042,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.249,
    "opaque": 0.2742,
    "spellContrast": 3.224,
    "w": 400
@@ -5541,15 +5668,17 @@
   "Heroes/sable_evoA.png": {
    "bytesRGBA32": 640000,
    "category": "Heroes",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "footOffsetPx": 7.0,
    "h": 400,
    "haloRatio": 0.0,
    "heightPx": 285,
    "humanReview": "PENDING",
-   "issues": [],
+   "issues": [
+    "low_contrast_battlefield"
+   ],
    "lightingBRminusTL": -0.092,
-   "minBattlefieldContrast": 1.756,
+   "minBattlefieldContrast": 1.212,
    "opaque": 0.3298,
    "spellContrast": 3.117,
    "w": 400
@@ -5557,16 +5686,18 @@
   "Heroes/sable_evoA_cast.png": {
    "bytesRGBA32": 640000,
    "category": "Heroes",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "footOffsetPx": 6.0,
    "h": 400,
    "haloRatio": 0.0,
    "heightPx": 284,
    "humanReview": "PENDING",
    "iouVs_sable_evoA": 0.8311,
-   "issues": [],
+   "issues": [
+    "low_contrast_battlefield"
+   ],
    "lightingBRminusTL": -0.102,
-   "minBattlefieldContrast": 1.797,
+   "minBattlefieldContrast": 1.24,
    "opaque": 0.3233,
    "spellContrast": 3.16,
    "w": 400
@@ -5607,16 +5738,18 @@
   "Heroes/sable_idle.png": {
    "bytesRGBA32": 640000,
    "category": "Heroes",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "elementHueShare": 0.4925,
    "footOffsetPx": 6.0,
    "h": 400,
    "haloRatio": 0.0,
    "heightPx": 284,
    "humanReview": "PENDING",
-   "issues": [],
+   "issues": [
+    "low_contrast_battlefield"
+   ],
    "lightingBRminusTL": -0.0594,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.249,
    "opaque": 0.277,
    "spellContrast": 3.224,
    "w": 400
@@ -5782,7 +5915,7 @@
    "humanReview": "PENDING",
    "issues": [],
    "lightingBRminusTL": -0.0601,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.715,
    "opaque": 0.1979,
    "spellContrast": 1.876,
    "w": 400
@@ -5790,16 +5923,18 @@
   "Heroes/solenne_evoA_cast.png": {
    "bytesRGBA32": 640000,
    "category": "Heroes",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "footOffsetPx": 6.0,
    "h": 400,
    "haloRatio": 0.0,
    "heightPx": 280,
    "humanReview": "PENDING",
    "iouVs_solenne_evoA": 0.7141,
-   "issues": [],
+   "issues": [
+    "low_contrast_battlefield"
+   ],
    "lightingBRminusTL": -0.2313,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.249,
    "opaque": 0.2289,
    "spellContrast": 2.703,
    "w": 400
@@ -5863,20 +5998,19 @@
    "bytesRGBA32": 640000,
    "category": "Heroes",
    "decision": "REFINE",
-   "footOffsetPx": 6.0,
+   "footOffsetPx": 0.0,
    "h": 400,
-   "haloRatio": 0.8329,
-   "heightPx": 307,
+   "haloRatio": 0.0056,
+   "heightPx": 284,
    "humanReview": "PENDING",
-   "iouVs_sylph_idle": 0.7396,
+   "iouVs_sylph_idle": 0.5547,
    "issues": [
-    "lighting_direction",
-    "white_halo"
+    "low_contrast_battlefield"
    ],
-   "lightingBRminusTL": 0.0604,
-   "minBattlefieldContrast": 3.1,
-   "opaque": 0.2304,
-   "spellContrast": 1.4,
+   "lightingBRminusTL": 0.0309,
+   "minBattlefieldContrast": 1.165,
+   "opaque": 0.1884,
+   "spellContrast": 2.587,
    "w": 400
   },
   "Heroes/sylph_downed.png": {
@@ -5884,13 +6018,13 @@
    "category": "Heroes",
    "decision": "KEEP",
    "h": 400,
-   "haloRatio": 0.0,
+   "haloRatio": 0.0026,
    "humanReview": "PENDING",
    "issues": [
     "overdraw_waste"
    ],
-   "lightingBRminusTL": -0.0538,
-   "opaque": 0.1146,
+   "lightingBRminusTL": -0.0483,
+   "opaque": 0.1116,
    "w": 400
   },
   "Heroes/sylph_evoA.png": {
@@ -5969,37 +6103,38 @@
    "bytesRGBA32": 640000,
    "category": "Heroes",
    "decision": "REFINE",
-   "elementHueShare": 0.7053,
-   "footOffsetPx": 6.0,
+   "elementHueShare": 0.3893,
+   "footOffsetPx": 1.0,
    "h": 400,
-   "haloRatio": 0.1774,
-   "heightPx": 250,
+   "haloRatio": 0.0127,
+   "heightPx": 280,
    "humanReview": "PENDING",
    "issues": [
-    "low_contrast_spells",
-    "white_halo"
+    "low_contrast_battlefield"
    ],
-   "lightingBRminusTL": 0.0304,
-   "minBattlefieldContrast": 2.562,
-   "opaque": 0.2208,
-   "spellContrast": 1.153,
+   "lightingBRminusTL": -0.0052,
+   "minBattlefieldContrast": 1.208,
+   "opaque": 0.1507,
+   "spellContrast": 2.825,
    "w": 400
   },
   "Heroes/terra_cast.png": {
    "bytesRGBA32": 640000,
    "category": "Heroes",
-   "decision": "KEEP",
-   "footOffsetPx": 6.0,
+   "decision": "REFINE",
+   "footOffsetPx": 1.0,
    "h": 400,
-   "haloRatio": 0.0,
-   "heightPx": 307,
+   "haloRatio": 0.0016,
+   "heightPx": 284,
    "humanReview": "PENDING",
-   "iouVs_terra_idle": 0.6798,
-   "issues": [],
-   "lightingBRminusTL": -0.0605,
-   "minBattlefieldContrast": 1.81,
-   "opaque": 0.2452,
-   "spellContrast": 1.357,
+   "iouVs_terra_idle": 0.6291,
+   "issues": [
+    "low_contrast_battlefield"
+   ],
+   "lightingBRminusTL": 0.0197,
+   "minBattlefieldContrast": 1.228,
+   "opaque": 0.2721,
+   "spellContrast": 2.142,
    "w": 400
   },
   "Heroes/terra_downed.png": {
@@ -6010,8 +6145,8 @@
    "haloRatio": 0.0,
    "humanReview": "PENDING",
    "issues": [],
-   "lightingBRminusTL": -0.0292,
-   "opaque": 0.1309,
+   "lightingBRminusTL": -0.0285,
+   "opaque": 0.2159,
    "w": 400
   },
   "Heroes/terra_evoA.png": {
@@ -6089,18 +6224,20 @@
   "Heroes/terra_idle.png": {
    "bytesRGBA32": 640000,
    "category": "Heroes",
-   "decision": "KEEP",
-   "elementHueShare": 0.7096,
-   "footOffsetPx": 6.0,
+   "decision": "REFINE",
+   "elementHueShare": 0.9878,
+   "footOffsetPx": 0.0,
    "h": 400,
    "haloRatio": 0.0,
-   "heightPx": 276,
+   "heightPx": 268,
    "humanReview": "PENDING",
-   "issues": [],
-   "lightingBRminusTL": -0.0599,
-   "minBattlefieldContrast": 1.81,
-   "opaque": 0.2527,
-   "spellContrast": 1.357,
+   "issues": [
+    "low_contrast_battlefield"
+   ],
+   "lightingBRminusTL": -0.0271,
+   "minBattlefieldContrast": 1.044,
+   "opaque": 0.3694,
+   "spellContrast": 2.128,
    "w": 400
   },
   "Heroes/thalen_cast.png": {
@@ -6143,7 +6280,7 @@
    "humanReview": "PENDING",
    "issues": [],
    "lightingBRminusTL": -0.0743,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.796,
    "opaque": 0.3116,
    "spellContrast": 1.792,
    "w": 400
@@ -6160,7 +6297,7 @@
    "iouVs_thalen_evoA": 0.7799,
    "issues": [],
    "lightingBRminusTL": -0.1243,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.753,
    "opaque": 0.3128,
    "spellContrast": 1.836,
    "w": 400
@@ -6340,16 +6477,18 @@
   "Heroes/vesper_cast.png": {
    "bytesRGBA32": 640000,
    "category": "Heroes",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "footOffsetPx": 6.0,
    "h": 400,
    "haloRatio": 0.0,
    "heightPx": 288,
    "humanReview": "PENDING",
    "iouVs_vesper_idle": 0.7702,
-   "issues": [],
+   "issues": [
+    "low_contrast_battlefield"
+   ],
    "lightingBRminusTL": -0.2304,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.534,
    "opaque": 0.2345,
    "spellContrast": 2.098,
    "w": 400
@@ -6371,15 +6510,17 @@
   "Heroes/vesper_evoA.png": {
    "bytesRGBA32": 640000,
    "category": "Heroes",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "footOffsetPx": 6.0,
    "h": 400,
    "haloRatio": 0.0,
    "heightPx": 271,
    "humanReview": "PENDING",
-   "issues": [],
+   "issues": [
+    "low_contrast_battlefield"
+   ],
    "lightingBRminusTL": -0.154,
-   "minBattlefieldContrast": 1.794,
+   "minBattlefieldContrast": 1.238,
    "opaque": 0.2339,
    "spellContrast": 2.604,
    "w": 400
@@ -6387,16 +6528,18 @@
   "Heroes/vesper_evoA_cast.png": {
    "bytesRGBA32": 640000,
    "category": "Heroes",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "footOffsetPx": 6.0,
    "h": 400,
    "haloRatio": 0.0,
    "heightPx": 288,
    "humanReview": "PENDING",
    "iouVs_vesper_evoA": 0.7605,
-   "issues": [],
+   "issues": [
+    "low_contrast_battlefield"
+   ],
    "lightingBRminusTL": -0.2424,
-   "minBattlefieldContrast": 1.778,
+   "minBattlefieldContrast": 1.236,
    "opaque": 0.2516,
    "spellContrast": 2.604,
    "w": 400
@@ -6414,7 +6557,7 @@
     "foot_pivot_mismatch"
    ],
    "lightingBRminusTL": -0.1263,
-   "minBattlefieldContrast": 1.732,
+   "minBattlefieldContrast": 1.693,
    "opaque": 0.3104,
    "spellContrast": 1.901,
    "w": 400
@@ -6433,7 +6576,7 @@
     "foot_pivot_mismatch"
    ],
    "lightingBRminusTL": -0.1647,
-   "minBattlefieldContrast": 1.741,
+   "minBattlefieldContrast": 1.65,
    "opaque": 0.3203,
    "spellContrast": 1.951,
    "w": 400
@@ -6441,16 +6584,18 @@
   "Heroes/vesper_idle.png": {
    "bytesRGBA32": 640000,
    "category": "Heroes",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "elementHueShare": 0.4997,
    "footOffsetPx": 6.0,
    "h": 400,
    "haloRatio": 0.0,
    "heightPx": 255,
    "humanReview": "PENDING",
-   "issues": [],
+   "issues": [
+    "low_contrast_battlefield"
+   ],
    "lightingBRminusTL": -0.1444,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.503,
    "opaque": 0.223,
    "spellContrast": 2.141,
    "w": 400
@@ -6458,16 +6603,18 @@
   "Heroes/veyra_cast.png": {
    "bytesRGBA32": 640000,
    "category": "Heroes",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "footOffsetPx": 6.0,
    "h": 400,
    "haloRatio": 0.002,
    "heightPx": 257,
    "humanReview": "PENDING",
    "iouVs_veyra_idle": 0.7569,
-   "issues": [],
+   "issues": [
+    "low_contrast_battlefield"
+   ],
    "lightingBRminusTL": -0.2298,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.577,
    "opaque": 0.2263,
    "spellContrast": 2.041,
    "w": 400
@@ -6489,15 +6636,17 @@
   "Heroes/veyra_evoA.png": {
    "bytesRGBA32": 640000,
    "category": "Heroes",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "footOffsetPx": 6.0,
    "h": 400,
    "haloRatio": 0.0,
    "heightPx": 265,
    "humanReview": "PENDING",
-   "issues": [],
+   "issues": [
+    "low_contrast_battlefield"
+   ],
    "lightingBRminusTL": -0.0515,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.249,
    "opaque": 0.2463,
    "spellContrast": 2.677,
    "w": 400
@@ -6505,16 +6654,18 @@
   "Heroes/veyra_evoA_cast.png": {
    "bytesRGBA32": 640000,
    "category": "Heroes",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "footOffsetPx": 6.0,
    "h": 400,
    "haloRatio": 0.0002,
    "heightPx": 265,
    "humanReview": "PENDING",
    "iouVs_veyra_evoA": 0.7726,
-   "issues": [],
+   "issues": [
+    "low_contrast_battlefield"
+   ],
    "lightingBRminusTL": -0.0623,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.284,
    "opaque": 0.2454,
    "spellContrast": 2.506,
    "w": 400
@@ -6522,15 +6673,17 @@
   "Heroes/veyra_evoB.png": {
    "bytesRGBA32": 640000,
    "category": "Heroes",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "footOffsetPx": 6.0,
    "h": 400,
    "haloRatio": 0.0,
    "heightPx": 257,
    "humanReview": "PENDING",
-   "issues": [],
+   "issues": [
+    "low_contrast_battlefield"
+   ],
    "lightingBRminusTL": -0.2361,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.249,
    "opaque": 0.2241,
    "spellContrast": 2.864,
    "w": 400
@@ -6538,16 +6691,18 @@
   "Heroes/veyra_evoB_cast.png": {
    "bytesRGBA32": 640000,
    "category": "Heroes",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "footOffsetPx": 6.0,
    "h": 400,
    "haloRatio": 0.0003,
    "heightPx": 257,
    "humanReview": "PENDING",
    "iouVs_veyra_evoB": 0.7539,
-   "issues": [],
+   "issues": [
+    "low_contrast_battlefield"
+   ],
    "lightingBRminusTL": -0.2045,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.339,
    "opaque": 0.2305,
    "spellContrast": 2.403,
    "w": 400
@@ -6555,16 +6710,18 @@
   "Heroes/veyra_idle.png": {
    "bytesRGBA32": 640000,
    "category": "Heroes",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "elementHueShare": 0.243,
    "footOffsetPx": 6.0,
    "h": 400,
    "haloRatio": 0.0,
    "heightPx": 257,
    "humanReview": "PENDING",
-   "issues": [],
+   "issues": [
+    "low_contrast_battlefield"
+   ],
    "lightingBRminusTL": -0.2729,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.368,
    "opaque": 0.2233,
    "spellContrast": 2.353,
    "w": 400
@@ -6581,7 +6738,7 @@
    "iouVs_volt_idle": 0.7165,
    "issues": [],
    "lightingBRminusTL": -0.3039,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.633,
    "opaque": 0.2277,
    "spellContrast": 1.971,
    "w": 400
@@ -6678,7 +6835,7 @@
    "humanReview": "PENDING",
    "issues": [],
    "lightingBRminusTL": -0.2867,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.633,
    "opaque": 0.2238,
    "spellContrast": 1.971,
    "w": 400
@@ -6686,16 +6843,18 @@
   "Heroes/voltrix_cast.png": {
    "bytesRGBA32": 640000,
    "category": "Heroes",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "footOffsetPx": 6.0,
    "h": 400,
    "haloRatio": 0.0004,
    "heightPx": 355,
    "humanReview": "PENDING",
    "iouVs_voltrix_idle": 0.7805,
-   "issues": [],
+   "issues": [
+    "low_contrast_battlefield"
+   ],
    "lightingBRminusTL": -0.157,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.574,
    "opaque": 0.2581,
    "spellContrast": 2.045,
    "w": 400
@@ -6758,7 +6917,7 @@
    "humanReview": "PENDING",
    "issues": [],
    "lightingBRminusTL": -0.1382,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.66,
    "opaque": 0.3133,
    "spellContrast": 1.938,
    "w": 400
@@ -6783,16 +6942,18 @@
   "Heroes/voltrix_idle.png": {
    "bytesRGBA32": 640000,
    "category": "Heroes",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "elementHueShare": 0.1729,
    "footOffsetPx": 6.0,
    "h": 400,
    "haloRatio": 0.001,
    "heightPx": 275,
    "humanReview": "PENDING",
-   "issues": [],
+   "issues": [
+    "low_contrast_battlefield"
+   ],
    "lightingBRminusTL": -0.1851,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.574,
    "opaque": 0.2537,
    "spellContrast": 2.045,
    "w": 400
@@ -6930,16 +7091,18 @@
   "Heroes/zerith_cast.png": {
    "bytesRGBA32": 640000,
    "category": "Heroes",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "footOffsetPx": 6.0,
    "h": 400,
    "haloRatio": 0.0,
    "heightPx": 286,
    "humanReview": "PENDING",
    "iouVs_zerith_idle": 0.8585,
-   "issues": [],
+   "issues": [
+    "low_contrast_battlefield"
+   ],
    "lightingBRminusTL": -0.1589,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.249,
    "opaque": 0.254,
    "spellContrast": 3.529,
    "w": 400
@@ -6959,15 +7122,17 @@
   "Heroes/zerith_evoA.png": {
    "bytesRGBA32": 640000,
    "category": "Heroes",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "footOffsetPx": 6.0,
    "h": 400,
    "haloRatio": 0.0,
    "heightPx": 288,
    "humanReview": "PENDING",
-   "issues": [],
+   "issues": [
+    "low_contrast_battlefield"
+   ],
    "lightingBRminusTL": -0.1597,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.249,
    "opaque": 0.2378,
    "spellContrast": 2.889,
    "w": 400
@@ -6975,16 +7140,18 @@
   "Heroes/zerith_evoA_cast.png": {
    "bytesRGBA32": 640000,
    "category": "Heroes",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "footOffsetPx": 6.0,
    "h": 400,
    "haloRatio": 0.0,
    "heightPx": 291,
    "humanReview": "PENDING",
    "iouVs_zerith_evoA": 0.8404,
-   "issues": [],
+   "issues": [
+    "low_contrast_battlefield"
+   ],
    "lightingBRminusTL": -0.1611,
-   "minBattlefieldContrast": 1.77,
+   "minBattlefieldContrast": 1.259,
    "opaque": 0.2576,
    "spellContrast": 2.556,
    "w": 400
@@ -6992,15 +7159,17 @@
   "Heroes/zerith_evoB.png": {
    "bytesRGBA32": 640000,
    "category": "Heroes",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "footOffsetPx": 6.0,
    "h": 400,
    "haloRatio": 0.0,
    "heightPx": 300,
    "humanReview": "PENDING",
-   "issues": [],
+   "issues": [
+    "low_contrast_battlefield"
+   ],
    "lightingBRminusTL": -0.0751,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.249,
    "opaque": 0.2932,
    "spellContrast": 2.717,
    "w": 400
@@ -7008,16 +7177,18 @@
   "Heroes/zerith_evoB_cast.png": {
    "bytesRGBA32": 640000,
    "category": "Heroes",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "footOffsetPx": 6.0,
    "h": 400,
    "haloRatio": 0.0,
    "heightPx": 300,
    "humanReview": "PENDING",
    "iouVs_zerith_evoB": 0.9048,
-   "issues": [],
+   "issues": [
+    "low_contrast_battlefield"
+   ],
    "lightingBRminusTL": -0.0973,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.249,
    "opaque": 0.285,
    "spellContrast": 2.716,
    "w": 400
@@ -7025,16 +7196,18 @@
   "Heroes/zerith_idle.png": {
    "bytesRGBA32": 640000,
    "category": "Heroes",
-   "decision": "KEEP",
+   "decision": "REFINE",
    "elementHueShare": 0.8734,
    "footOffsetPx": 6.0,
    "h": 400,
    "haloRatio": 0.0,
    "heightPx": 286,
    "humanReview": "PENDING",
-   "issues": [],
+   "issues": [
+    "low_contrast_battlefield"
+   ],
    "lightingBRminusTL": -0.1324,
-   "minBattlefieldContrast": 1.81,
+   "minBattlefieldContrast": 1.249,
    "opaque": 0.2422,
    "spellContrast": 3.69,
    "w": 400
@@ -7058,7 +7231,7 @@
    "haloRatio": 0.0,
    "humanReview": "PENDING",
    "issues": [],
-   "opaque": 0.7224,
+   "opaque": 0.4971,
    "w": 128
   },
   "Icons/element_fire.png": {
@@ -7069,7 +7242,7 @@
    "haloRatio": 0.0,
    "humanReview": "PENDING",
    "issues": [],
-   "opaque": 0.7224,
+   "opaque": 0.503,
    "w": 128
   },
   "Icons/element_ice.png": {
@@ -7157,7 +7330,7 @@
    "haloRatio": 0.0,
    "humanReview": "PENDING",
    "issues": [],
-   "opaque": 0.7224,
+   "opaque": 0.5035,
    "w": 128
   },
   "Icons/element_wind.png": {
@@ -7168,7 +7341,7 @@
    "haloRatio": 0.0,
    "humanReview": "PENDING",
    "issues": [],
-   "opaque": 0.7224,
+   "opaque": 0.499,
    "w": 128
   },
   "Icons/reaction_abyss_mark.png": {
@@ -7256,7 +7429,7 @@
    "haloRatio": 0.0,
    "humanReview": "PENDING",
    "issues": [],
-   "opaque": 0.6121,
+   "opaque": 0.4998,
    "w": 128
   },
   "Icons/reaction_freeze.png": {
@@ -7586,7 +7759,7 @@
    "haloRatio": 0.0,
    "humanReview": "PENDING",
    "issues": [],
-   "opaque": 0.6121,
+   "opaque": 0.5049,
    "w": 128
   },
   "Icons/reaction_venom_flow.png": {
@@ -7663,7 +7836,7 @@
    "haloRatio": 0.0,
    "humanReview": "PENDING",
    "issues": [],
-   "opaque": 0.5988,
+   "opaque": 0.5015,
    "w": 96
   },
   "Icons/role_healer.png": {
@@ -7674,7 +7847,7 @@
    "haloRatio": 0.0,
    "humanReview": "PENDING",
    "issues": [],
-   "opaque": 0.5988,
+   "opaque": 0.5043,
    "w": 96
   },
   "Icons/role_mage.png": {
@@ -7685,7 +7858,7 @@
    "haloRatio": 0.0,
    "humanReview": "PENDING",
    "issues": [],
-   "opaque": 0.5988,
+   "opaque": 0.5005,
    "w": 96
   },
   "Icons/role_ranger.png": {
@@ -7696,7 +7869,7 @@
    "haloRatio": 0.0,
    "humanReview": "PENDING",
    "issues": [],
-   "opaque": 0.5988,
+   "opaque": 0.4932,
    "w": 96
   },
   "Icons/role_support.png": {
@@ -7751,7 +7924,7 @@
    "haloRatio": 0.0,
    "humanReview": "PENDING",
    "issues": [],
-   "opaque": 0.7039,
+   "opaque": 0.4966,
    "w": 96
   },
   "Icons/status_charged.png": {
@@ -7916,7 +8089,7 @@
    "haloRatio": 0.0,
    "humanReview": "PENDING",
    "issues": [],
-   "opaque": 0.7039,
+   "opaque": 0.5042,
    "w": 96
   },
   "Icons/status_silenced.png": {
@@ -7949,7 +8122,7 @@
    "haloRatio": 0.0,
    "humanReview": "PENDING",
    "issues": [],
-   "opaque": 0.4683,
+   "opaque": 0.5033,
    "w": 96
   },
   "Icons/status_taunt.png": {
@@ -7982,7 +8155,7 @@
    "haloRatio": 0.0,
    "humanReview": "PENDING",
    "issues": [],
-   "opaque": 0.7039,
+   "opaque": 0.4983,
    "w": 96
   },
   "Icons/status_windmark.png": {
@@ -8180,7 +8353,7 @@
    "haloRatio": 0.0,
    "humanReview": "PENDING",
    "issues": [],
-   "opaque": 0.3207,
+   "opaque": 0.5025,
    "w": 96
   },
   "Icons/ui_essence.png": {
@@ -8213,7 +8386,7 @@
    "haloRatio": 0.0,
    "humanReview": "PENDING",
    "issues": [],
-   "opaque": 0.4714,
+   "opaque": 0.4979,
    "w": 96
   },
   "Icons/ui_heart.png": {
@@ -8367,7 +8540,7 @@
    "haloRatio": 0.0,
    "humanReview": "PENDING",
    "issues": [],
-   "opaque": 0.3702,
+   "opaque": 0.5013,
    "w": 96
   },
   "Icons/ui_xp.png": {
@@ -8496,10 +8669,9 @@
    "category": "Portraits",
    "decision": "KEEP",
    "h": 192,
-   "haloRatio": 0.0,
    "humanReview": "PENDING",
    "issues": [],
-   "opaque": 0.7532,
+   "opaque": 1.0,
    "w": 192
   },
   "Portraits/isolde.png": {
@@ -8562,10 +8734,9 @@
    "category": "Portraits",
    "decision": "KEEP",
    "h": 192,
-   "haloRatio": 0.0,
    "humanReview": "PENDING",
    "issues": [],
-   "opaque": 0.7532,
+   "opaque": 1.0,
    "w": 192
   },
   "Portraits/mirel.png": {
@@ -8672,10 +8843,9 @@
    "category": "Portraits",
    "decision": "KEEP",
    "h": 192,
-   "haloRatio": 0.0,
    "humanReview": "PENDING",
    "issues": [],
-   "opaque": 0.7532,
+   "opaque": 1.0,
    "w": 192
   },
   "Portraits/terra.png": {
@@ -8683,10 +8853,9 @@
    "category": "Portraits",
    "decision": "KEEP",
    "h": 192,
-   "haloRatio": 0.0,
    "humanReview": "PENDING",
    "issues": [],
-   "opaque": 0.7532,
+   "opaque": 1.0,
    "w": 192
   },
   "Portraits/thalen.png": {
@@ -9675,7 +9844,7 @@
    "h": 40,
    "humanReview": "PENDING",
    "issues": [],
-   "opaque": 0.9016,
+   "opaque": 0.5266,
    "w": 128
   },
   "UI/bar_fill.png": {
@@ -9685,7 +9854,7 @@
    "h": 40,
    "humanReview": "PENDING",
    "issues": [],
-   "opaque": 0.6012,
+   "opaque": 0.634,
    "w": 128
   },
   "UI/button_danger_disabled.png": {
@@ -9775,7 +9944,7 @@
    "h": 96,
    "humanReview": "PENDING",
    "issues": [],
-   "opaque": 0.8837,
+   "opaque": 0.5768,
    "w": 192
   },
   "UI/button_primary_hover.png": {
@@ -9785,7 +9954,7 @@
    "h": 96,
    "humanReview": "PENDING",
    "issues": [],
-   "opaque": 0.8837,
+   "opaque": 0.5818,
    "w": 192
   },
   "UI/button_primary_normal.png": {
@@ -9795,7 +9964,7 @@
    "h": 96,
    "humanReview": "PENDING",
    "issues": [],
-   "opaque": 0.8837,
+   "opaque": 0.5639,
    "w": 192
   },
   "UI/button_primary_pressed.png": {
@@ -9805,7 +9974,7 @@
    "h": 96,
    "humanReview": "PENDING",
    "issues": [],
-   "opaque": 0.8479,
+   "opaque": 0.5838,
    "w": 192
   },
   "UI/button_secondary_disabled.png": {
@@ -9895,7 +10064,7 @@
    "h": 360,
    "humanReview": "PENDING",
    "issues": [],
-   "opaque": 0.9421,
+   "opaque": 0.3647,
    "w": 256
   },
   "UI/panel_danger.png": {
@@ -9915,7 +10084,7 @@
    "h": 128,
    "humanReview": "PENDING",
    "issues": [],
-   "opaque": 0.9053,
+   "opaque": 0.7593,
    "w": 128
   },
   "UI/panel_glass.png": {
@@ -9955,7 +10124,7 @@
    "h": 96,
    "humanReview": "PENDING",
    "issues": [],
-   "opaque": 0.8607,
+   "opaque": 0.7971,
    "w": 96
   },
   "UI/vignette.png": {
@@ -9975,7 +10144,7 @@
    "h": 96,
    "humanReview": "PENDING",
    "issues": [],
-   "opaque": 0.1293,
+   "opaque": 0.1283,
    "w": 192
   },
   "Vfx/coin.png": {
@@ -10345,7 +10514,7 @@
    "h": 192,
    "humanReview": "PENDING",
    "issues": [],
-   "opaque": 0.2051,
+   "opaque": 0.1464,
    "w": 192
   },
   "Vfx/glow.png": {
@@ -10355,7 +10524,7 @@
    "h": 128,
    "humanReview": "PENDING",
    "issues": [],
-   "opaque": 0.1311,
+   "opaque": 0.1861,
    "w": 128
   },
   "Vfx/impact_arcane.png": {
@@ -10375,7 +10544,7 @@
    "h": 192,
    "humanReview": "PENDING",
    "issues": [],
-   "opaque": 0.1988,
+   "opaque": 0.325,
    "w": 192
   },
   "Vfx/impact_fire.png": {
@@ -10385,7 +10554,7 @@
    "h": 192,
    "humanReview": "PENDING",
    "issues": [],
-   "opaque": 0.2807,
+   "opaque": 0.2237,
    "w": 192
   },
   "Vfx/impact_ice.png": {
@@ -10465,7 +10634,7 @@
    "h": 192,
    "humanReview": "PENDING",
    "issues": [],
-   "opaque": 0.2251,
+   "opaque": 0.2823,
    "w": 192
   },
   "Vfx/impact_wind.png": {
@@ -10475,7 +10644,7 @@
    "h": 192,
    "humanReview": "PENDING",
    "issues": [],
-   "opaque": 0.1795,
+   "opaque": 0.2117,
    "w": 192
   },
   "Vfx/projectile_arcane.png": {
@@ -10585,7 +10754,7 @@
    "h": 128,
    "humanReview": "PENDING",
    "issues": [],
-   "opaque": 0.1376,
+   "opaque": 0.1011,
    "w": 128
   },
   "Vfx/projectile_wind.png": {
@@ -10605,7 +10774,7 @@
    "h": 256,
    "humanReview": "PENDING",
    "issues": [],
-   "opaque": 0.1128,
+   "opaque": 0.1788,
    "w": 256
   },
   "Vfx/slash.png": {
@@ -10615,7 +10784,7 @@
    "h": 256,
    "humanReview": "PENDING",
    "issues": [],
-   "opaque": 0.0579,
+   "opaque": 0.2103,
    "w": 256
   },
   "Vfx/spark.png": {
@@ -10635,7 +10804,7 @@
    "h": 256,
    "humanReview": "PENDING",
    "issues": [],
-   "opaque": 0.0896,
+   "opaque": 0.1595,
    "w": 256
   },
   "Vfx/zone_blizzard.png": {
@@ -10655,7 +10824,7 @@
    "h": 256,
    "humanReview": "PENDING",
    "issues": [],
-   "opaque": 0.1695,
+   "opaque": 0.5728,
    "w": 256
   },
   "Vfx/zone_healing_rain.png": {
@@ -10729,14 +10898,14 @@
    "w": 256
   },
   "World/arena_background.png": {
-   "bytesRGBA32": 13056000,
+   "bytesRGBA32": 37601280,
    "category": "World",
    "decision": "KEEP",
-   "h": 1360,
+   "h": 2304,
    "humanReview": "PENDING",
    "issues": [],
    "opaque": 1.0,
-   "w": 2400
+   "w": 4080
   },
   "World/bg_frostfall_bastion.png": {
    "bytesRGBA32": 13056000,
@@ -10795,7 +10964,7 @@
    "h": 400,
    "humanReview": "PENDING",
    "issues": [],
-   "opaque": 0.3912,
+   "opaque": 0.2893,
    "w": 320
   },
   "World/crystal_critical.png": {
@@ -10805,7 +10974,7 @@
    "h": 400,
    "humanReview": "PENDING",
    "issues": [],
-   "opaque": 0.3912,
+   "opaque": 0.2775,
    "w": 320
   },
   "World/crystal_intact.png": {
@@ -10815,7 +10984,7 @@
    "h": 400,
    "humanReview": "PENDING",
    "issues": [],
-   "opaque": 0.3915,
+   "opaque": 0.2893,
    "w": 320
   },
   "World/lane_arrow.png": {
@@ -10825,7 +10994,7 @@
    "h": 128,
    "humanReview": "PENDING",
    "issues": [],
-   "opaque": 0.1483,
+   "opaque": 0.1515,
    "w": 128
   },
   "World/node_empty.png": {
@@ -10835,7 +11004,7 @@
    "h": 128,
    "humanReview": "PENDING",
    "issues": [],
-   "opaque": 0.4947,
+   "opaque": 0.4435,
    "w": 192
   },
   "World/node_highlight.png": {
@@ -10845,7 +11014,7 @@
    "h": 128,
    "humanReview": "PENDING",
    "issues": [],
-   "opaque": 0.495,
+   "opaque": 0.478,
    "w": 192
   },
   "World/node_occupied.png": {
@@ -10855,7 +11024,7 @@
    "h": 128,
    "humanReview": "PENDING",
    "issues": [],
-   "opaque": 0.495,
+   "opaque": 0.6111,
    "w": 192
   },
   "World/shadow.png": {
@@ -10865,7 +11034,7 @@
    "h": 48,
    "humanReview": "PENDING",
    "issues": [],
-   "opaque": 0.0221,
+   "opaque": 0.0267,
    "w": 128
   }
  },
@@ -10873,7 +11042,7 @@
   "battlefieldLuminance": [
    [
     "arena_background.png",
-    0.33415402037384456
+    0.025871505414514242
    ],
    [
     "bg_frostfall_bastion.png",
@@ -10966,20 +11135,20 @@
   "evolutionDistinctness": [
    {
     "evoA~evoB": {
-     "hueDist": 0.188,
-     "iou": 0.729,
-     "valueDist": 0.155
+     "hueDist": 0.597,
+     "iou": 0.56,
+     "valueDist": 0.411
     },
     "hero": "ignis",
     "idle~evoA": {
-     "hueDist": 0.084,
-     "iou": 0.852,
-     "valueDist": 0.044
+     "hueDist": 0.124,
+     "iou": 0.684,
+     "valueDist": 0.059
     },
     "idle~evoB": {
-     "hueDist": 0.229,
-     "iou": 0.752,
-     "valueDist": 0.132
+     "hueDist": 0.489,
+     "iou": 0.587,
+     "valueDist": 0.356
     }
    },
    {
@@ -11008,14 +11177,14 @@
     },
     "hero": "marina",
     "idle~evoA": {
-     "hueDist": 0.156,
-     "iou": 0.855,
-     "valueDist": 0.192
+     "hueDist": 0.239,
+     "iou": 0.671,
+     "valueDist": 0.261
     },
     "idle~evoB": {
-     "hueDist": 0.247,
-     "iou": 0.759,
-     "valueDist": 0.133
+     "hueDist": 0.34,
+     "iou": 0.568,
+     "valueDist": 0.389
     }
    },
    {
@@ -11134,14 +11303,14 @@
     },
     "hero": "sylph",
     "idle~evoA": {
-     "hueDist": 0.573,
-     "iou": 0.899,
-     "valueDist": 0.154
+     "hueDist": 0.718,
+     "iou": 0.508,
+     "valueDist": 0.492
     },
     "idle~evoB": {
-     "hueDist": 0.049,
-     "iou": 0.775,
-     "valueDist": 0.16
+     "hueDist": 0.696,
+     "iou": 0.465,
+     "valueDist": 0.499
     }
    },
    {
@@ -11152,14 +11321,14 @@
     },
     "hero": "terra",
     "idle~evoA": {
-     "hueDist": 0.085,
-     "iou": 0.855,
-     "valueDist": 0.092
+     "hueDist": 0.311,
+     "iou": 0.676,
+     "valueDist": 0.224
     },
     "idle~evoB": {
-     "hueDist": 0.252,
-     "iou": 0.838,
-     "valueDist": 0.105
+     "hueDist": 0.532,
+     "iou": 0.675,
+     "valueDist": 0.257
     }
    },
    {
@@ -11623,7 +11792,7 @@
    "Relics": 5.06,
    "UI": 5.02,
    "Vfx": 14.48,
-   "World": 76.54
+   "World": 99.95
   }
  },
  "issues": [
@@ -12102,9 +12271,9 @@
   {
    "asset": "Heroes/ignis_downed.png",
    "check": "overdraw_waste",
-   "message": "only 12% of the quad is opaque (Tight mesh limits the fill cost)",
+   "message": "only 10% of the quad is opaque (Tight mesh limits the fill cost)",
    "severity": "info",
-   "value": 0.1192,
+   "value": 0.1031,
    "waived": false
   },
   {
@@ -12188,27 +12357,11 @@
    "waived": false
   },
   {
-   "asset": "Heroes/marina_cast.png",
-   "check": "lighting_direction",
-   "message": "lower-right brighter than upper-left (shading rule: light from upper-left)",
-   "severity": "warning",
-   "value": 0.0868,
-   "waived": false
-  },
-  {
    "asset": "Heroes/marina_downed.png",
    "check": "overdraw_waste",
-   "message": "only 11% of the quad is opaque (Tight mesh limits the fill cost)",
+   "message": "only 8% of the quad is opaque (Tight mesh limits the fill cost)",
    "severity": "info",
-   "value": 0.1142,
-   "waived": false
-  },
-  {
-   "asset": "Heroes/marina_downed.png",
-   "check": "lighting_direction",
-   "message": "lower-right brighter than upper-left (shading rule: light from upper-left)",
-   "severity": "warning",
-   "value": 0.1575,
+   "value": 0.0763,
    "waived": false
   },
   {
@@ -12217,14 +12370,6 @@
    "message": "lower-right brighter than upper-left (shading rule: light from upper-left)",
    "severity": "warning",
    "value": 0.1316,
-   "waived": false
-  },
-  {
-   "asset": "Heroes/marina_idle.png",
-   "check": "lighting_direction",
-   "message": "lower-right brighter than upper-left (shading rule: light from upper-left)",
-   "severity": "warning",
-   "value": 0.0669,
    "waived": false
   },
   {
@@ -12324,27 +12469,11 @@
    "waived": false
   },
   {
-   "asset": "Heroes/sylph_cast.png",
-   "check": "white_halo",
-   "message": "bright fringe on semi-transparent edge (premultiply/bleed issue)",
-   "severity": "warning",
-   "value": 0.8329,
-   "waived": false
-  },
-  {
-   "asset": "Heroes/sylph_cast.png",
-   "check": "lighting_direction",
-   "message": "lower-right brighter than upper-left (shading rule: light from upper-left)",
-   "severity": "warning",
-   "value": 0.0604,
-   "waived": false
-  },
-  {
    "asset": "Heroes/sylph_downed.png",
    "check": "overdraw_waste",
    "message": "only 11% of the quad is opaque (Tight mesh limits the fill cost)",
    "severity": "info",
-   "value": 0.1146,
+   "value": 0.1116,
    "waived": false
   },
   {
@@ -12361,14 +12490,6 @@
    "message": "bright fringe on semi-transparent edge (premultiply/bleed issue)",
    "severity": "warning",
    "value": 0.9478,
-   "waived": false
-  },
-  {
-   "asset": "Heroes/sylph_idle.png",
-   "check": "white_halo",
-   "message": "bright fringe on semi-transparent edge (premultiply/bleed issue)",
-   "severity": "warning",
-   "value": 0.1774,
    "waived": false
   },
   {
@@ -12508,22 +12629,6 @@
    "waived": false
   },
   {
-   "asset": "Enemies/rift_warden_a.png",
-   "check": "foot_pivot_mismatch",
-   "message": "lowest opaque row is -20px from the pivot (units float or sink)",
-   "severity": "warning",
-   "value": -20.0,
-   "waived": false
-  },
-  {
-   "asset": "Enemies/rift_warden_b.png",
-   "check": "foot_pivot_mismatch",
-   "message": "lowest opaque row is -30px from the pivot (units float or sink)",
-   "severity": "warning",
-   "value": -30.0,
-   "waived": false
-  },
-  {
    "asset": "Enemies/riftling_a.png",
    "check": "foot_pivot_mismatch",
    "message": "lowest opaque row is -11px from the pivot (units float or sink)",
@@ -12590,17 +12695,17 @@
   {
    "asset": "Enemies/storm_harpy_a.png",
    "check": "foot_pivot_mismatch",
-   "message": "lowest opaque row is -56px from the pivot (units float or sink)",
+   "message": "lowest opaque row is -34px from the pivot (units float or sink)",
    "severity": "warning",
-   "value": -56.0,
+   "value": -34.0,
    "waived": false
   },
   {
    "asset": "Enemies/storm_harpy_b.png",
    "check": "foot_pivot_mismatch",
-   "message": "lowest opaque row is -24px from the pivot (units float or sink)",
+   "message": "lowest opaque row is -34px from the pivot (units float or sink)",
    "severity": "warning",
-   "value": -24.0,
+   "value": -34.0,
    "waived": false
   },
   {
@@ -12646,33 +12751,33 @@
   {
    "asset": "Enemies/storm_wisp_b.png",
    "check": "scale_outlier",
-   "message": "silhouette height 119px vs category median 192px",
+   "message": "silhouette height 119px vs category median 189px",
    "severity": "warning",
-   "value": 0.6214,
+   "value": 0.6296,
    "waived": false
   },
   {
    "asset": "Enemies/swarmling_a.png",
    "check": "scale_outlier",
-   "message": "silhouette height 113px vs category median 192px",
+   "message": "silhouette height 113px vs category median 189px",
    "severity": "warning",
-   "value": 0.5901,
+   "value": 0.5979,
    "waived": false
   },
   {
    "asset": "Enemies/swarmling_b.png",
    "check": "scale_outlier",
-   "message": "silhouette height 117px vs category median 192px",
+   "message": "silhouette height 117px vs category median 189px",
    "severity": "warning",
-   "value": 0.611,
+   "value": 0.619,
    "waived": false
   },
   {
-   "asset": "Enemies/storm_harpy_b.png",
+   "asset": "Heroes/ignis_cast.png",
    "check": "frame_jump",
-   "message": "silhouette IoU 0.45 vs storm_harpy_a.png (identity drift / pop)",
+   "message": "silhouette IoU 0.54 vs ignis_idle.png (identity drift / pop)",
    "severity": "warning",
-   "value": 0.4465,
+   "value": 0.544,
    "waived": false
   },
   {
@@ -12708,6 +12813,54 @@
    "waived": false
   },
   {
+   "asset": "Enemies/arcane_mimic_a.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.25:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.2493,
+   "waived": false
+  },
+  {
+   "asset": "Enemies/arcane_mimic_b.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.25:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.2493,
+   "waived": false
+  },
+  {
+   "asset": "Enemies/ash_imp_a.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.25:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.2493,
+   "waived": false
+  },
+  {
+   "asset": "Enemies/ash_imp_b.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.25:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.2493,
+   "waived": false
+  },
+  {
+   "asset": "Enemies/ashen_matriarch_a.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.25:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.2493,
+   "waived": false
+  },
+  {
+   "asset": "Enemies/ashen_matriarch_b.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.25:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.2493,
+   "waived": false
+  },
+  {
    "asset": "Enemies/blight_shambler_a.png",
    "check": "low_contrast_spells",
    "message": "body contrast 1.12:1 against dense spell fields",
@@ -12740,19 +12893,179 @@
    "waived": false
   },
   {
-   "asset": "Enemies/grunt_a.png",
-   "check": "low_contrast_spells",
-   "message": "body contrast 1.26:1 against dense spell fields",
+   "asset": "Enemies/crystal_parasite_a.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.25:1 on the least favourable battlefield",
    "severity": "warning",
-   "value": 1.2616,
+   "value": 1.2493,
+   "waived": false
+  },
+  {
+   "asset": "Enemies/crystal_parasite_b.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.25:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.2493,
+   "waived": false
+  },
+  {
+   "asset": "Enemies/ember_hound_a.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.25:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.2493,
+   "waived": false
+  },
+  {
+   "asset": "Enemies/ember_hound_b.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.25:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.2493,
+   "waived": false
+  },
+  {
+   "asset": "Enemies/flame_devourer_a.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.25:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.2493,
+   "waived": false
+  },
+  {
+   "asset": "Enemies/flame_devourer_b.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.25:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.2493,
+   "waived": false
+  },
+  {
+   "asset": "Enemies/goblin_sprinter_a.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.55:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.5521,
+   "waived": false
+  },
+  {
+   "asset": "Enemies/goblin_sprinter_b.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.55:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.5532,
+   "waived": false
+  },
+  {
+   "asset": "Enemies/grunt_a.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.12:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.1249,
    "waived": false
   },
   {
    "asset": "Enemies/grunt_b.png",
-   "check": "low_contrast_spells",
-   "message": "body contrast 1.26:1 against dense spell fields",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.16:1 on the least favourable battlefield",
    "severity": "warning",
-   "value": 1.2616,
+   "value": 1.1568,
+   "waived": false
+  },
+  {
+   "asset": "Enemies/hex_binder_a.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.25:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.2493,
+   "waived": false
+  },
+  {
+   "asset": "Enemies/hex_binder_b.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.25:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.2493,
+   "waived": false
+  },
+  {
+   "asset": "Enemies/hexcaster_a.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.27:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.2663,
+   "waived": false
+  },
+  {
+   "asset": "Enemies/hexcaster_b.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.21:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.214,
+   "waived": false
+  },
+  {
+   "asset": "Enemies/ignaroth_a.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.25:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.2493,
+   "waived": false
+  },
+  {
+   "asset": "Enemies/ignaroth_b.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.25:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.2493,
+   "waived": false
+  },
+  {
+   "asset": "Enemies/ironclad_warlord_a.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.54:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.541,
+   "waived": false
+  },
+  {
+   "asset": "Enemies/ironclad_warlord_b.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.58:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.5783,
+   "waived": false
+  },
+  {
+   "asset": "Enemies/juggernaut_a.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.21:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.2052,
+   "waived": false
+  },
+  {
+   "asset": "Enemies/juggernaut_b.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.18:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.184,
+   "waived": false
+  },
+  {
+   "asset": "Enemies/mana_leech_a.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.49:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.4916,
+   "waived": false
+  },
+  {
+   "asset": "Enemies/mana_leech_b.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.49:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.4916,
    "waived": false
   },
   {
@@ -12772,6 +13085,22 @@
    "waived": false
   },
   {
+   "asset": "Enemies/nyxhollow_a.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.25:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.2493,
+   "waived": false
+  },
+  {
+   "asset": "Enemies/nyxhollow_b.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.25:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.2493,
+   "waived": false
+  },
+  {
    "asset": "Enemies/ravager_a.png",
    "check": "low_contrast_spells",
    "message": "body contrast 1.22:1 against dense spell fields",
@@ -12788,6 +13117,38 @@
    "waived": false
   },
   {
+   "asset": "Enemies/rift_summoner_a.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.25:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.2493,
+   "waived": false
+  },
+  {
+   "asset": "Enemies/rift_summoner_b.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.25:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.2493,
+   "waived": false
+  },
+  {
+   "asset": "Enemies/rift_warden_a.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.22:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.2232,
+   "waived": false
+  },
+  {
+   "asset": "Enemies/rift_warden_b.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.37:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.3673,
+   "waived": false
+  },
+  {
    "asset": "Enemies/riftling_a.png",
    "check": "low_contrast_spells",
    "message": "body contrast 1.02:1 against dense spell fields",
@@ -12801,6 +13162,22 @@
    "message": "body contrast 1.02:1 against dense spell fields",
    "severity": "warning",
    "value": 1.0211,
+   "waived": false
+  },
+  {
+   "asset": "Enemies/rootbound_treant_a.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.43:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.4255,
+   "waived": false
+  },
+  {
+   "asset": "Enemies/rootbound_treant_b.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.43:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.4255,
    "waived": false
   },
   {
@@ -12884,11 +13261,19 @@
    "waived": false
   },
   {
-   "asset": "Enemies/storm_harpy_b.png",
-   "check": "low_contrast_spells",
-   "message": "body contrast 1.20:1 against dense spell fields",
+   "asset": "Enemies/storm_harpy_a.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.17:1 on the least favourable battlefield",
    "severity": "warning",
-   "value": 1.2012,
+   "value": 1.1717,
+   "waived": false
+  },
+  {
+   "asset": "Enemies/storm_harpy_b.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.17:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.1683,
    "waived": false
   },
   {
@@ -12905,6 +13290,22 @@
    "message": "body contrast 1.29:1 against dense spell fields",
    "severity": "warning",
    "value": 1.2932,
+   "waived": false
+  },
+  {
+   "asset": "Enemies/thornmother_a.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.49:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.488,
+   "waived": false
+  },
+  {
+   "asset": "Enemies/thornmother_b.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.50:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.4961,
    "waived": false
   },
   {
@@ -12940,6 +13341,22 @@
    "waived": false
   },
   {
+   "asset": "Enemies/void_priest_a.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.25:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.2493,
+   "waived": false
+  },
+  {
+   "asset": "Enemies/void_priest_b.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.25:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.2493,
+   "waived": false
+  },
+  {
    "asset": "Enemies/warded_a.png",
    "check": "low_contrast_spells",
    "message": "body contrast 1.10:1 against dense spell fields",
@@ -12956,11 +13373,35 @@
    "waived": false
   },
   {
+   "asset": "Heroes/aeris_evoB.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.36:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.356,
+   "waived": false
+  },
+  {
+   "asset": "Heroes/aeris_evoB_cast.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.43:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.4293,
+   "waived": false
+  },
+  {
    "asset": "Heroes/ashara_evoA_cast.png",
    "check": "low_contrast_spells",
    "message": "body contrast 1.23:1 against dense spell fields",
    "severity": "warning",
    "value": 1.2284,
+   "waived": false
+  },
+  {
+   "asset": "Heroes/ashara_idle.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.54:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.5422,
    "waived": false
   },
   {
@@ -13045,50 +13486,66 @@
   },
   {
    "asset": "Heroes/ignis_cast.png",
-   "check": "low_contrast_spells",
-   "message": "body contrast 1.11:1 against dense spell fields",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.34:1 on the least favourable battlefield",
    "severity": "warning",
-   "value": 1.1076,
+   "value": 1.3427,
    "waived": false
   },
   {
    "asset": "Heroes/ignis_evoA.png",
-   "check": "low_contrast_spells",
-   "message": "body contrast 1.09:1 against dense spell fields",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.34:1 on the least favourable battlefield",
    "severity": "warning",
-   "value": 1.0939,
+   "value": 1.3365,
    "waived": false
   },
   {
    "asset": "Heroes/ignis_evoA_cast.png",
-   "check": "low_contrast_spells",
-   "message": "body contrast 1.09:1 against dense spell fields",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.14:1 on the least favourable battlefield",
    "severity": "warning",
-   "value": 1.0939,
+   "value": 1.142,
+   "waived": false
+  },
+  {
+   "asset": "Heroes/ignis_evoB.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.27:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.2654,
    "waived": false
   },
   {
    "asset": "Heroes/ignis_evoB.png",
    "check": "low_contrast_spells",
-   "message": "body contrast 1.11:1 against dense spell fields",
+   "message": "body contrast 1.08:1 against dense spell fields",
    "severity": "warning",
-   "value": 1.1076,
+   "value": 1.0824,
+   "waived": false
+  },
+  {
+   "asset": "Heroes/ignis_evoB_cast.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.19:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.1946,
    "waived": false
   },
   {
    "asset": "Heroes/ignis_evoB_cast.png",
    "check": "low_contrast_spells",
-   "message": "body contrast 1.11:1 against dense spell fields",
+   "message": "body contrast 1.19:1 against dense spell fields",
    "severity": "warning",
-   "value": 1.1076,
+   "value": 1.1934,
    "waived": false
   },
   {
    "asset": "Heroes/ignis_idle.png",
-   "check": "low_contrast_spells",
-   "message": "body contrast 1.11:1 against dense spell fields",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.42:1 on the least favourable battlefield",
    "severity": "warning",
-   "value": 1.1076,
+   "value": 1.4195,
    "waived": false
   },
   {
@@ -13124,6 +13581,14 @@
    "waived": false
   },
   {
+   "asset": "Heroes/kael_cast.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.46:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.4604,
+   "waived": false
+  },
+  {
    "asset": "Heroes/kael_evoA_cast.png",
    "check": "low_contrast_spells",
    "message": "body contrast 1.33:1 against dense spell fields",
@@ -13132,11 +13597,27 @@
    "waived": false
   },
   {
+   "asset": "Heroes/kael_evoB.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.44:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.4355,
+   "waived": false
+  },
+  {
    "asset": "Heroes/kael_evoB_cast.png",
    "check": "low_contrast_spells",
    "message": "body contrast 1.25:1 against dense spell fields",
    "severity": "warning",
    "value": 1.2461,
+   "waived": false
+  },
+  {
+   "asset": "Heroes/kael_idle.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.25:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.2493,
    "waived": false
   },
   {
@@ -13169,6 +13650,46 @@
    "message": "body contrast 1.11:1 against dense spell fields",
    "severity": "warning",
    "value": 1.1094,
+   "waived": false
+  },
+  {
+   "asset": "Heroes/maelis_cast.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.35:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.349,
+   "waived": false
+  },
+  {
+   "asset": "Heroes/maelis_evoA.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.38:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.3808,
+   "waived": false
+  },
+  {
+   "asset": "Heroes/maelis_evoA_cast.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.34:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.3416,
+   "waived": false
+  },
+  {
+   "asset": "Heroes/maelis_evoB.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.59:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.5944,
+   "waived": false
+  },
+  {
+   "asset": "Heroes/maelis_idle.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.35:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.349,
    "waived": false
   },
   {
@@ -13221,10 +13742,18 @@
   },
   {
    "asset": "Heroes/marina_cast.png",
-   "check": "low_contrast_spells",
-   "message": "body contrast 1.06:1 against dense spell fields",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.21:1 on the least favourable battlefield",
    "severity": "warning",
-   "value": 1.0638,
+   "value": 1.2109,
+   "waived": false
+  },
+  {
+   "asset": "Heroes/marina_cast.png",
+   "check": "low_contrast_spells",
+   "message": "body contrast 1.21:1 against dense spell fields",
+   "severity": "warning",
+   "value": 1.212,
    "waived": false
   },
   {
@@ -13245,10 +13774,18 @@
   },
   {
    "asset": "Heroes/marina_idle.png",
-   "check": "low_contrast_spells",
-   "message": "body contrast 1.16:1 against dense spell fields",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.13:1 on the least favourable battlefield",
    "severity": "warning",
-   "value": 1.163,
+   "value": 1.1313,
+   "waived": false
+  },
+  {
+   "asset": "Heroes/marina_idle.png",
+   "check": "low_contrast_spells",
+   "message": "body contrast 1.28:1 against dense spell fields",
+   "severity": "warning",
+   "value": 1.2785,
    "waived": false
   },
   {
@@ -13292,6 +13829,54 @@
    "waived": false
   },
   {
+   "asset": "Heroes/morven_cast.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.25:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.2493,
+   "waived": false
+  },
+  {
+   "asset": "Heroes/morven_evoA.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.25:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.2493,
+   "waived": false
+  },
+  {
+   "asset": "Heroes/morven_evoA_cast.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.25:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.2493,
+   "waived": false
+  },
+  {
+   "asset": "Heroes/morven_evoB.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.25:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.2493,
+   "waived": false
+  },
+  {
+   "asset": "Heroes/morven_evoB_cast.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.25:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.2493,
+   "waived": false
+  },
+  {
+   "asset": "Heroes/morven_idle.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.25:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.2493,
+   "waived": false
+  },
+  {
    "asset": "Heroes/nerissa_evoB.png",
    "check": "low_contrast_spells",
    "message": "body contrast 1.25:1 against dense spell fields",
@@ -13305,6 +13890,78 @@
    "message": "body contrast 1.16:1 against dense spell fields",
    "severity": "warning",
    "value": 1.1571,
+   "waived": false
+  },
+  {
+   "asset": "Heroes/nyxara_cast.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.25:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.2493,
+   "waived": false
+  },
+  {
+   "asset": "Heroes/nyxara_evoA.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.25:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.2493,
+   "waived": false
+  },
+  {
+   "asset": "Heroes/nyxara_evoA_cast.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.25:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.2493,
+   "waived": false
+  },
+  {
+   "asset": "Heroes/nyxara_evoB.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.25:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.2493,
+   "waived": false
+  },
+  {
+   "asset": "Heroes/nyxara_evoB_cast.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.25:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.2493,
+   "waived": false
+  },
+  {
+   "asset": "Heroes/nyxara_idle.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.25:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.2493,
+   "waived": false
+  },
+  {
+   "asset": "Heroes/oriane_cast.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.25:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.2493,
+   "waived": false
+  },
+  {
+   "asset": "Heroes/oriane_evoA.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.25:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.2493,
+   "waived": false
+  },
+  {
+   "asset": "Heroes/oriane_evoA_cast.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.24:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.241,
    "waived": false
   },
   {
@@ -13324,11 +13981,107 @@
    "waived": false
   },
   {
+   "asset": "Heroes/oriane_idle.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.25:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.2493,
+   "waived": false
+  },
+  {
+   "asset": "Heroes/raiden_cast.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.25:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.2493,
+   "waived": false
+  },
+  {
+   "asset": "Heroes/raiden_evoA.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.49:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.4857,
+   "waived": false
+  },
+  {
+   "asset": "Heroes/raiden_evoA_cast.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.49:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.4857,
+   "waived": false
+  },
+  {
+   "asset": "Heroes/raiden_evoB.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.25:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.2528,
+   "waived": false
+  },
+  {
+   "asset": "Heroes/raiden_evoB_cast.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.47:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.4664,
+   "waived": false
+  },
+  {
+   "asset": "Heroes/raiden_idle.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.25:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.2493,
+   "waived": false
+  },
+  {
+   "asset": "Heroes/sable_cast.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.25:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.2493,
+   "waived": false
+  },
+  {
+   "asset": "Heroes/sable_evoA.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.21:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.2121,
+   "waived": false
+  },
+  {
+   "asset": "Heroes/sable_evoA_cast.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.24:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.2398,
+   "waived": false
+  },
+  {
+   "asset": "Heroes/sable_idle.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.25:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.2493,
+   "waived": false
+  },
+  {
    "asset": "Heroes/solenne_cast.png",
    "check": "low_contrast_spells",
    "message": "body contrast 1.03:1 against dense spell fields",
    "severity": "warning",
    "value": 1.0319,
+   "waived": false
+  },
+  {
+   "asset": "Heroes/solenne_evoA_cast.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.25:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.2493,
    "waived": false
   },
   {
@@ -13348,6 +14101,14 @@
    "waived": false
   },
   {
+   "asset": "Heroes/sylph_cast.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.16:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.1647,
+   "waived": false
+  },
+  {
    "asset": "Heroes/sylph_evoA.png",
    "check": "low_contrast_spells",
    "message": "body contrast 1.27:1 against dense spell fields",
@@ -13357,10 +14118,18 @@
   },
   {
    "asset": "Heroes/sylph_idle.png",
-   "check": "low_contrast_spells",
-   "message": "body contrast 1.15:1 against dense spell fields",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.21:1 on the least favourable battlefield",
    "severity": "warning",
-   "value": 1.1534,
+   "value": 1.2077,
+   "waived": false
+  },
+  {
+   "asset": "Heroes/terra_cast.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.23:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.2275,
    "waived": false
   },
   {
@@ -13385,6 +14154,14 @@
    "message": "body contrast 1.28:1 against dense spell fields",
    "severity": "warning",
    "value": 1.2777,
+   "waived": false
+  },
+  {
+   "asset": "Heroes/terra_idle.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.04:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.0438,
    "waived": false
   },
   {
@@ -13420,11 +14197,107 @@
    "waived": false
   },
   {
+   "asset": "Heroes/vesper_cast.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.53:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.5338,
+   "waived": false
+  },
+  {
+   "asset": "Heroes/vesper_evoA.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.24:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.2381,
+   "waived": false
+  },
+  {
+   "asset": "Heroes/vesper_evoA_cast.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.24:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.2363,
+   "waived": false
+  },
+  {
+   "asset": "Heroes/vesper_idle.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.50:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.5031,
+   "waived": false
+  },
+  {
+   "asset": "Heroes/veyra_cast.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.58:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.5769,
+   "waived": false
+  },
+  {
+   "asset": "Heroes/veyra_evoA.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.25:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.2493,
+   "waived": false
+  },
+  {
+   "asset": "Heroes/veyra_evoA_cast.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.28:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.2844,
+   "waived": false
+  },
+  {
+   "asset": "Heroes/veyra_evoB.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.25:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.2493,
+   "waived": false
+  },
+  {
+   "asset": "Heroes/veyra_evoB_cast.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.34:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.3392,
+   "waived": false
+  },
+  {
+   "asset": "Heroes/veyra_idle.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.37:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.3681,
+   "waived": false
+  },
+  {
+   "asset": "Heroes/voltrix_cast.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.57:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.5738,
+   "waived": false
+  },
+  {
    "asset": "Heroes/voltrix_evoA_cast.png",
    "check": "low_contrast_battlefield",
    "message": "body/outline contrast 1.42:1 on the least favourable battlefield",
    "severity": "warning",
    "value": 1.4213,
+   "waived": false
+  },
+  {
+   "asset": "Heroes/voltrix_idle.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.57:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.5738,
    "waived": false
   },
   {
@@ -13449,6 +14322,54 @@
    "message": "body contrast 1.31:1 against dense spell fields",
    "severity": "warning",
    "value": 1.3054,
+   "waived": false
+  },
+  {
+   "asset": "Heroes/zerith_cast.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.25:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.2493,
+   "waived": false
+  },
+  {
+   "asset": "Heroes/zerith_evoA.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.25:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.2493,
+   "waived": false
+  },
+  {
+   "asset": "Heroes/zerith_evoA_cast.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.26:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.2592,
+   "waived": false
+  },
+  {
+   "asset": "Heroes/zerith_evoB.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.25:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.2493,
+   "waived": false
+  },
+  {
+   "asset": "Heroes/zerith_evoB_cast.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.25:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.2493,
+   "waived": false
+  },
+  {
+   "asset": "Heroes/zerith_idle.png",
+   "check": "low_contrast_battlefield",
+   "message": "body/outline contrast 1.25:1 on the least favourable battlefield",
+   "severity": "warning",
+   "value": 1.2493,
    "waived": false
   },
   {
@@ -13514,17 +14435,25 @@
    "severity": "info",
    "value": 11.6,
    "waived": false
+  },
+  {
+   "asset": "World/*",
+   "check": "texture_budget",
+   "message": "99.9 MB RGBA32 exceeds the 90 MB budget",
+   "severity": "warning",
+   "value": 99.9473,
+   "waived": false
   }
  ],
  "summary": {
   "assets": 795,
   "blocking": 0,
   "decisions": {
-   "KEEP": 626,
-   "REFINE": 169,
+   "KEEP": 545,
+   "REFINE": 250,
    "REMAKE": 0
   },
   "waived": 0,
-  "warnings": 206
+  "warnings": 301
  }
 }

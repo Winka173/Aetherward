@@ -81,68 +81,68 @@ Cards/void_covenant.png,Cards,160,160,0.7355,KEEP,PENDING,
 Cards/wild_growth.png,Cards,160,160,0.7355,KEEP,PENDING,
 Enemies/aetherion_a.png,Enemies,512,512,0.4804,REFINE,PENDING,low_contrast_spells
 Enemies/aetherion_b.png,Enemies,512,512,0.4851,REFINE,PENDING,low_contrast_spells
-Enemies/arcane_mimic_a.png,Enemies,256,256,0.384,KEEP,PENDING,
-Enemies/arcane_mimic_b.png,Enemies,256,256,0.413,KEEP,PENDING,
-Enemies/ash_imp_a.png,Enemies,256,256,0.1595,KEEP,PENDING,
-Enemies/ash_imp_b.png,Enemies,256,256,0.1662,KEEP,PENDING,
-Enemies/ashen_matriarch_a.png,Enemies,512,512,0.3732,KEEP,PENDING,
-Enemies/ashen_matriarch_b.png,Enemies,512,512,0.3792,KEEP,PENDING,
+Enemies/arcane_mimic_a.png,Enemies,256,256,0.384,REFINE,PENDING,low_contrast_battlefield
+Enemies/arcane_mimic_b.png,Enemies,256,256,0.413,REFINE,PENDING,low_contrast_battlefield
+Enemies/ash_imp_a.png,Enemies,256,256,0.1595,REFINE,PENDING,low_contrast_battlefield
+Enemies/ash_imp_b.png,Enemies,256,256,0.1662,REFINE,PENDING,low_contrast_battlefield
+Enemies/ashen_matriarch_a.png,Enemies,512,512,0.3732,REFINE,PENDING,low_contrast_battlefield
+Enemies/ashen_matriarch_b.png,Enemies,512,512,0.3792,REFINE,PENDING,low_contrast_battlefield
 Enemies/banner_a.png,Enemies,256,256,0.3085,KEEP,PENDING,
 Enemies/banner_b.png,Enemies,256,256,0.3053,KEEP,PENDING,
 Enemies/blight_shambler_a.png,Enemies,256,256,0.4354,REFINE,PENDING,low_contrast_spells
 Enemies/blight_shambler_b.png,Enemies,256,256,0.4465,REFINE,PENDING,low_contrast_spells
 Enemies/chaos_elemental_a.png,Enemies,256,256,0.26,REFINE,PENDING,foot_pivot_mismatch low_contrast_spells
 Enemies/chaos_elemental_b.png,Enemies,256,256,0.2673,REFINE,PENDING,foot_pivot_mismatch low_contrast_spells
-Enemies/crystal_parasite_a.png,Enemies,256,256,0.1469,KEEP,PENDING,
-Enemies/crystal_parasite_b.png,Enemies,256,256,0.1393,KEEP,PENDING,
-Enemies/ember_hound_a.png,Enemies,256,256,0.2815,KEEP,PENDING,
-Enemies/ember_hound_b.png,Enemies,256,256,0.2717,KEEP,PENDING,
-Enemies/flame_devourer_a.png,Enemies,256,256,0.5198,KEEP,PENDING,
-Enemies/flame_devourer_b.png,Enemies,256,256,0.5356,KEEP,PENDING,
+Enemies/crystal_parasite_a.png,Enemies,256,256,0.1469,REFINE,PENDING,low_contrast_battlefield
+Enemies/crystal_parasite_b.png,Enemies,256,256,0.1393,REFINE,PENDING,low_contrast_battlefield
+Enemies/ember_hound_a.png,Enemies,256,256,0.2815,REFINE,PENDING,low_contrast_battlefield
+Enemies/ember_hound_b.png,Enemies,256,256,0.2717,REFINE,PENDING,low_contrast_battlefield
+Enemies/flame_devourer_a.png,Enemies,256,256,0.5198,REFINE,PENDING,low_contrast_battlefield
+Enemies/flame_devourer_b.png,Enemies,256,256,0.5356,REFINE,PENDING,low_contrast_battlefield
 Enemies/frost_wraith_a.png,Enemies,256,256,0.1778,REFINE,PENDING,lighting_direction
 Enemies/frost_wraith_b.png,Enemies,256,256,0.1824,REFINE,PENDING,lighting_direction
 Enemies/glacier_golem_a.png,Enemies,256,256,0.5272,KEEP,PENDING,
 Enemies/glacier_golem_b.png,Enemies,256,256,0.5388,KEEP,PENDING,
-Enemies/goblin_sprinter_a.png,Enemies,256,256,0.1991,REFINE,PENDING,lighting_direction white_halo
-Enemies/goblin_sprinter_b.png,Enemies,256,256,0.1964,REFINE,PENDING,lighting_direction white_halo
+Enemies/goblin_sprinter_a.png,Enemies,256,256,0.1991,REFINE,PENDING,lighting_direction low_contrast_battlefield white_halo
+Enemies/goblin_sprinter_b.png,Enemies,256,256,0.1964,REFINE,PENDING,lighting_direction low_contrast_battlefield white_halo
 Enemies/gravemaw_a.png,Enemies,512,512,0.5312,KEEP,PENDING,
 Enemies/gravemaw_b.png,Enemies,512,512,0.5389,KEEP,PENDING,
-Enemies/grunt_a.png,Enemies,256,256,0.3086,REFINE,PENDING,low_contrast_spells
-Enemies/grunt_b.png,Enemies,256,256,0.3136,REFINE,PENDING,low_contrast_spells
-Enemies/hex_binder_a.png,Enemies,256,256,0.2254,KEEP,PENDING,
-Enemies/hex_binder_b.png,Enemies,256,256,0.2298,KEEP,PENDING,
-Enemies/hexcaster_a.png,Enemies,256,256,0.1811,KEEP,PENDING,
-Enemies/hexcaster_b.png,Enemies,256,256,0.1863,KEEP,PENDING,
+Enemies/grunt_a.png,Enemies,256,256,0.1554,REFINE,PENDING,low_contrast_battlefield
+Enemies/grunt_b.png,Enemies,256,256,0.1455,REFINE,PENDING,low_contrast_battlefield
+Enemies/hex_binder_a.png,Enemies,256,256,0.2254,REFINE,PENDING,low_contrast_battlefield
+Enemies/hex_binder_b.png,Enemies,256,256,0.2298,REFINE,PENDING,low_contrast_battlefield
+Enemies/hexcaster_a.png,Enemies,256,256,0.2545,REFINE,PENDING,low_contrast_battlefield
+Enemies/hexcaster_b.png,Enemies,256,256,0.2657,REFINE,PENDING,low_contrast_battlefield
 Enemies/ice_statue_a.png,Enemies,256,256,0.3611,KEEP,PENDING,
 Enemies/ice_statue_b.png,Enemies,256,256,0.3613,KEEP,PENDING,
-Enemies/ignaroth_a.png,Enemies,512,512,0.4243,KEEP,PENDING,
-Enemies/ignaroth_b.png,Enemies,512,512,0.4256,KEEP,PENDING,
+Enemies/ignaroth_a.png,Enemies,512,512,0.4243,REFINE,PENDING,low_contrast_battlefield
+Enemies/ignaroth_b.png,Enemies,512,512,0.4256,REFINE,PENDING,low_contrast_battlefield
 Enemies/ironback_golem_a.png,Enemies,256,256,0.4034,KEEP,PENDING,
 Enemies/ironback_golem_b.png,Enemies,256,256,0.4102,KEEP,PENDING,
-Enemies/ironclad_warlord_a.png,Enemies,512,512,0.4105,KEEP,PENDING,
-Enemies/ironclad_warlord_b.png,Enemies,512,512,0.4352,KEEP,PENDING,outside_safe_bounds
-Enemies/juggernaut_a.png,Enemies,256,256,0.4493,KEEP,PENDING,
-Enemies/juggernaut_b.png,Enemies,256,256,0.4553,KEEP,PENDING,
-Enemies/mana_leech_a.png,Enemies,256,256,0.2882,REFINE,PENDING,foot_pivot_mismatch
-Enemies/mana_leech_b.png,Enemies,256,256,0.2886,REFINE,PENDING,foot_pivot_mismatch
+Enemies/ironclad_warlord_a.png,Enemies,512,512,0.4105,REFINE,PENDING,low_contrast_battlefield
+Enemies/ironclad_warlord_b.png,Enemies,512,512,0.4352,REFINE,PENDING,low_contrast_battlefield outside_safe_bounds
+Enemies/juggernaut_a.png,Enemies,256,256,0.3898,REFINE,PENDING,low_contrast_battlefield
+Enemies/juggernaut_b.png,Enemies,256,256,0.3597,REFINE,PENDING,low_contrast_battlefield
+Enemies/mana_leech_a.png,Enemies,256,256,0.2882,REFINE,PENDING,foot_pivot_mismatch low_contrast_battlefield
+Enemies/mana_leech_b.png,Enemies,256,256,0.2886,REFINE,PENDING,foot_pivot_mismatch low_contrast_battlefield
 Enemies/mimic_a.png,Enemies,256,256,0.2105,KEEP,PENDING,
 Enemies/mimic_b.png,Enemies,256,256,0.215,KEEP,PENDING,
 Enemies/mirrath_a.png,Enemies,512,512,0.3435,REFINE,PENDING,lighting_direction
 Enemies/mirrath_b.png,Enemies,512,512,0.3487,REFINE,PENDING,lighting_direction
 Enemies/mirror_knight_a.png,Enemies,256,256,0.407,REFINE,PENDING,low_contrast_spells
 Enemies/mirror_knight_b.png,Enemies,256,256,0.4136,REFINE,PENDING,low_contrast_spells
-Enemies/nyxhollow_a.png,Enemies,512,512,0.4524,KEEP,PENDING,outside_safe_bounds
-Enemies/nyxhollow_b.png,Enemies,512,512,0.455,KEEP,PENDING,outside_safe_bounds
+Enemies/nyxhollow_a.png,Enemies,512,512,0.4524,REFINE,PENDING,low_contrast_battlefield outside_safe_bounds
+Enemies/nyxhollow_b.png,Enemies,512,512,0.455,REFINE,PENDING,low_contrast_battlefield outside_safe_bounds
 Enemies/ravager_a.png,Enemies,256,256,0.5004,REFINE,PENDING,low_contrast_spells
 Enemies/ravager_b.png,Enemies,256,256,0.5054,REFINE,PENDING,low_contrast_spells
-Enemies/rift_summoner_a.png,Enemies,256,256,0.3495,KEEP,PENDING,
-Enemies/rift_summoner_b.png,Enemies,256,256,0.3562,KEEP,PENDING,
-Enemies/rift_warden_a.png,Enemies,512,512,0.3009,REFINE,PENDING,foot_pivot_mismatch
-Enemies/rift_warden_b.png,Enemies,512,512,0.3008,REFINE,PENDING,foot_pivot_mismatch
+Enemies/rift_summoner_a.png,Enemies,256,256,0.3495,REFINE,PENDING,low_contrast_battlefield
+Enemies/rift_summoner_b.png,Enemies,256,256,0.3562,REFINE,PENDING,low_contrast_battlefield
+Enemies/rift_warden_a.png,Enemies,512,512,0.3755,REFINE,PENDING,low_contrast_battlefield
+Enemies/rift_warden_b.png,Enemies,512,512,0.3852,REFINE,PENDING,low_contrast_battlefield
 Enemies/riftling_a.png,Enemies,256,256,0.0974,REFINE,PENDING,foot_pivot_mismatch low_contrast_spells overdraw_waste
 Enemies/riftling_b.png,Enemies,256,256,0.0974,REFINE,PENDING,foot_pivot_mismatch low_contrast_spells overdraw_waste
-Enemies/rootbound_treant_a.png,Enemies,256,256,0.4197,REFINE,PENDING,foot_pivot_mismatch
-Enemies/rootbound_treant_b.png,Enemies,256,256,0.4259,REFINE,PENDING,foot_pivot_mismatch
+Enemies/rootbound_treant_a.png,Enemies,256,256,0.4197,REFINE,PENDING,foot_pivot_mismatch low_contrast_battlefield
+Enemies/rootbound_treant_b.png,Enemies,256,256,0.4259,REFINE,PENDING,foot_pivot_mismatch low_contrast_battlefield
 Enemies/runner_a.png,Enemies,256,256,0.2592,REFINE,PENDING,low_contrast_spells
 Enemies/runner_b.png,Enemies,256,256,0.2631,REFINE,PENDING,low_contrast_spells
 Enemies/sapper_a.png,Enemies,256,256,0.2467,KEEP,PENDING,
@@ -165,30 +165,30 @@ Enemies/spore_carrier_a.png,Enemies,256,256,0.3574,REFINE,PENDING,low_contrast_s
 Enemies/spore_carrier_b.png,Enemies,256,256,0.3729,REFINE,PENDING,low_contrast_spells white_halo
 Enemies/stone_burrower_a.png,Enemies,256,256,0.3318,REFINE,PENDING,low_contrast_spells
 Enemies/stone_burrower_b.png,Enemies,256,256,0.3447,REFINE,PENDING,low_contrast_spells
-Enemies/storm_harpy_a.png,Enemies,256,256,0.2946,REFINE,PENDING,foot_pivot_mismatch
-Enemies/storm_harpy_b.png,Enemies,256,256,0.2655,REFINE,PENDING,foot_pivot_mismatch frame_jump low_contrast_spells
+Enemies/storm_harpy_a.png,Enemies,256,256,0.2334,REFINE,PENDING,foot_pivot_mismatch low_contrast_battlefield
+Enemies/storm_harpy_b.png,Enemies,256,256,0.2216,REFINE,PENDING,foot_pivot_mismatch low_contrast_battlefield
 Enemies/storm_wisp_a.png,Enemies,256,256,0.1066,REFINE,PENDING,foot_pivot_mismatch overdraw_waste
 Enemies/storm_wisp_b.png,Enemies,256,256,0.1051,REFINE,PENDING,foot_pivot_mismatch frame_jump overdraw_waste scale_outlier
 Enemies/summoner_a.png,Enemies,256,256,0.2361,REFINE,PENDING,low_contrast_spells
 Enemies/summoner_b.png,Enemies,256,256,0.2434,REFINE,PENDING,low_contrast_spells
 Enemies/swarmling_a.png,Enemies,256,256,0.0968,REFINE,PENDING,overdraw_waste scale_outlier
 Enemies/swarmling_b.png,Enemies,256,256,0.0998,REFINE,PENDING,overdraw_waste scale_outlier
-Enemies/thornmother_a.png,Enemies,512,512,0.3448,REFINE,PENDING,white_halo
-Enemies/thornmother_b.png,Enemies,512,512,0.3524,REFINE,PENDING,white_halo
+Enemies/thornmother_a.png,Enemies,512,512,0.3448,REFINE,PENDING,low_contrast_battlefield white_halo
+Enemies/thornmother_b.png,Enemies,512,512,0.3524,REFINE,PENDING,low_contrast_battlefield white_halo
 Enemies/thunder_drummer_a.png,Enemies,256,256,0.4303,REFINE,PENDING,low_contrast_spells
 Enemies/thunder_drummer_b.png,Enemies,256,256,0.4583,REFINE,PENDING,low_contrast_spells
 Enemies/vaelith_a.png,Enemies,512,512,0.4606,REFINE,PENDING,low_contrast_spells
 Enemies/vaelith_b.png,Enemies,512,512,0.4169,REFINE,PENDING,frame_jump low_contrast_spells
-Enemies/void_priest_a.png,Enemies,256,256,0.3329,KEEP,PENDING,
-Enemies/void_priest_b.png,Enemies,256,256,0.3414,KEEP,PENDING,
+Enemies/void_priest_a.png,Enemies,256,256,0.3329,REFINE,PENDING,low_contrast_battlefield
+Enemies/void_priest_b.png,Enemies,256,256,0.3414,REFINE,PENDING,low_contrast_battlefield
 Enemies/warded_a.png,Enemies,256,256,0.2614,REFINE,PENDING,low_contrast_spells
 Enemies/warded_b.png,Enemies,256,256,0.2651,REFINE,PENDING,foot_pivot_mismatch low_contrast_spells
 Heroes/aeris_cast.png,Heroes,400,400,0.2702,REFINE,PENDING,white_halo
 Heroes/aeris_downed.png,Heroes,400,400,0.1413,REFINE,PENDING,lighting_direction
 Heroes/aeris_evoA.png,Heroes,400,400,0.2882,REFINE,PENDING,lighting_direction
 Heroes/aeris_evoA_cast.png,Heroes,400,400,0.3007,REFINE,PENDING,lighting_direction white_halo
-Heroes/aeris_evoB.png,Heroes,400,400,0.2816,REFINE,PENDING,white_halo
-Heroes/aeris_evoB_cast.png,Heroes,400,400,0.2737,REFINE,PENDING,white_halo
+Heroes/aeris_evoB.png,Heroes,400,400,0.2816,REFINE,PENDING,low_contrast_battlefield white_halo
+Heroes/aeris_evoB_cast.png,Heroes,400,400,0.2737,REFINE,PENDING,low_contrast_battlefield white_halo
 Heroes/aeris_idle.png,Heroes,400,400,0.273,REFINE,PENDING,white_halo
 Heroes/ashara_cast.png,Heroes,400,400,0.2602,KEEP,PENDING,
 Heroes/ashara_downed.png,Heroes,400,400,0.1472,KEEP,PENDING,
@@ -196,7 +196,7 @@ Heroes/ashara_evoA.png,Heroes,400,400,0.3057,KEEP,PENDING,
 Heroes/ashara_evoA_cast.png,Heroes,400,400,0.2848,REFINE,PENDING,low_contrast_spells
 Heroes/ashara_evoB.png,Heroes,400,400,0.3205,KEEP,PENDING,
 Heroes/ashara_evoB_cast.png,Heroes,400,400,0.3038,KEEP,PENDING,
-Heroes/ashara_idle.png,Heroes,400,400,0.2841,KEEP,PENDING,
+Heroes/ashara_idle.png,Heroes,400,400,0.2841,REFINE,PENDING,low_contrast_battlefield
 Heroes/borun_cast.png,Heroes,400,400,0.269,KEEP,PENDING,
 Heroes/borun_downed.png,Heroes,400,400,0.1355,KEEP,PENDING,
 Heroes/borun_evoA.png,Heroes,400,400,0.3057,KEEP,PENDING,
@@ -253,13 +253,13 @@ Heroes/glacius_evoA_cast.png,Heroes,400,400,0.3426,REFINE,PENDING,white_halo
 Heroes/glacius_evoB.png,Heroes,400,400,0.3066,REFINE,PENDING,white_halo
 Heroes/glacius_evoB_cast.png,Heroes,400,400,0.3362,REFINE,PENDING,white_halo
 Heroes/glacius_idle.png,Heroes,400,400,0.2687,REFINE,PENDING,white_halo
-Heroes/ignis_cast.png,Heroes,400,400,0.2365,REFINE,PENDING,low_contrast_spells
-Heroes/ignis_downed.png,Heroes,400,400,0.1192,KEEP,PENDING,overdraw_waste
-Heroes/ignis_evoA.png,Heroes,400,400,0.2697,REFINE,PENDING,low_contrast_spells
-Heroes/ignis_evoA_cast.png,Heroes,400,400,0.2687,REFINE,PENDING,low_contrast_spells
-Heroes/ignis_evoB.png,Heroes,400,400,0.3056,REFINE,PENDING,low_contrast_spells
-Heroes/ignis_evoB_cast.png,Heroes,400,400,0.3081,REFINE,PENDING,low_contrast_spells
-Heroes/ignis_idle.png,Heroes,400,400,0.2298,REFINE,PENDING,low_contrast_spells
+Heroes/ignis_cast.png,Heroes,400,400,0.2756,REFINE,PENDING,frame_jump low_contrast_battlefield
+Heroes/ignis_downed.png,Heroes,400,400,0.1031,KEEP,PENDING,overdraw_waste
+Heroes/ignis_evoA.png,Heroes,400,400,0.1734,REFINE,PENDING,low_contrast_battlefield
+Heroes/ignis_evoA_cast.png,Heroes,400,400,0.2212,REFINE,PENDING,low_contrast_battlefield
+Heroes/ignis_evoB.png,Heroes,400,400,0.252,REFINE,PENDING,low_contrast_battlefield low_contrast_spells
+Heroes/ignis_evoB_cast.png,Heroes,400,400,0.2843,REFINE,PENDING,low_contrast_battlefield low_contrast_spells
+Heroes/ignis_idle.png,Heroes,400,400,0.2017,REFINE,PENDING,low_contrast_battlefield
 Heroes/isolde_cast.png,Heroes,400,400,0.2201,REFINE,PENDING,low_contrast_spells white_halo
 Heroes/isolde_downed.png,Heroes,400,400,0.1148,KEEP,PENDING,overdraw_waste
 Heroes/isolde_evoA.png,Heroes,400,400,0.2768,REFINE,PENDING,low_contrast_spells
@@ -267,13 +267,13 @@ Heroes/isolde_evoA_cast.png,Heroes,400,400,0.284,REFINE,PENDING,low_contrast_spe
 Heroes/isolde_evoB.png,Heroes,400,400,0.2146,REFINE,PENDING,low_contrast_spells white_halo
 Heroes/isolde_evoB_cast.png,Heroes,400,400,0.2242,REFINE,PENDING,white_halo
 Heroes/isolde_idle.png,Heroes,400,400,0.2213,REFINE,PENDING,white_halo
-Heroes/kael_cast.png,Heroes,400,400,0.2579,REFINE,PENDING,white_halo
+Heroes/kael_cast.png,Heroes,400,400,0.2579,REFINE,PENDING,low_contrast_battlefield white_halo
 Heroes/kael_downed.png,Heroes,400,400,0.1262,KEEP,PENDING,
 Heroes/kael_evoA.png,Heroes,400,400,0.2716,KEEP,PENDING,
 Heroes/kael_evoA_cast.png,Heroes,400,400,0.2768,REFINE,PENDING,low_contrast_spells
-Heroes/kael_evoB.png,Heroes,400,400,0.2978,REFINE,PENDING,white_halo
+Heroes/kael_evoB.png,Heroes,400,400,0.2978,REFINE,PENDING,low_contrast_battlefield white_halo
 Heroes/kael_evoB_cast.png,Heroes,400,400,0.3205,REFINE,PENDING,low_contrast_spells white_halo
-Heroes/kael_idle.png,Heroes,400,400,0.2432,KEEP,PENDING,
+Heroes/kael_idle.png,Heroes,400,400,0.2432,REFINE,PENDING,low_contrast_battlefield
 Heroes/liora_cast.png,Heroes,400,400,0.2447,KEEP,PENDING,
 Heroes/liora_downed.png,Heroes,400,400,0.1201,KEEP,PENDING,
 Heroes/liora_evoA.png,Heroes,400,400,0.2649,REFINE,PENDING,low_contrast_spells
@@ -281,13 +281,13 @@ Heroes/liora_evoA_cast.png,Heroes,400,400,0.2729,REFINE,PENDING,low_contrast_spe
 Heroes/liora_evoB.png,Heroes,400,400,0.2724,REFINE,PENDING,low_contrast_spells
 Heroes/liora_evoB_cast.png,Heroes,400,400,0.2848,REFINE,PENDING,low_contrast_spells
 Heroes/liora_idle.png,Heroes,400,400,0.2315,KEEP,PENDING,
-Heroes/maelis_cast.png,Heroes,400,400,0.296,KEEP,PENDING,
+Heroes/maelis_cast.png,Heroes,400,400,0.296,REFINE,PENDING,low_contrast_battlefield
 Heroes/maelis_downed.png,Heroes,400,400,0.1477,KEEP,PENDING,
-Heroes/maelis_evoA.png,Heroes,400,400,0.3297,KEEP,PENDING,
-Heroes/maelis_evoA_cast.png,Heroes,400,400,0.3269,KEEP,PENDING,
-Heroes/maelis_evoB.png,Heroes,400,400,0.2665,KEEP,PENDING,
+Heroes/maelis_evoA.png,Heroes,400,400,0.3297,REFINE,PENDING,low_contrast_battlefield
+Heroes/maelis_evoA_cast.png,Heroes,400,400,0.3269,REFINE,PENDING,low_contrast_battlefield
+Heroes/maelis_evoB.png,Heroes,400,400,0.2665,REFINE,PENDING,low_contrast_battlefield
 Heroes/maelis_evoB_cast.png,Heroes,400,400,0.2615,KEEP,PENDING,
-Heroes/maelis_idle.png,Heroes,400,400,0.285,KEEP,PENDING,
+Heroes/maelis_idle.png,Heroes,400,400,0.285,REFINE,PENDING,low_contrast_battlefield
 Heroes/magnus_cast.png,Heroes,400,400,0.2435,REFINE,PENDING,low_contrast_spells
 Heroes/magnus_downed.png,Heroes,400,400,0.1184,KEEP,PENDING,overdraw_waste
 Heroes/magnus_evoA.png,Heroes,400,400,0.2752,REFINE,PENDING,low_contrast_spells
@@ -295,13 +295,13 @@ Heroes/magnus_evoA_cast.png,Heroes,400,400,0.2768,REFINE,PENDING,low_contrast_sp
 Heroes/magnus_evoB.png,Heroes,400,400,0.2884,REFINE,PENDING,low_contrast_spells
 Heroes/magnus_evoB_cast.png,Heroes,400,400,0.2741,REFINE,PENDING,low_contrast_spells
 Heroes/magnus_idle.png,Heroes,400,400,0.2284,REFINE,PENDING,low_contrast_spells
-Heroes/marina_cast.png,Heroes,400,400,0.2408,REFINE,PENDING,lighting_direction low_contrast_spells
-Heroes/marina_downed.png,Heroes,400,400,0.1142,REFINE,PENDING,lighting_direction overdraw_waste
+Heroes/marina_cast.png,Heroes,400,400,0.2275,REFINE,PENDING,low_contrast_battlefield low_contrast_spells
+Heroes/marina_downed.png,Heroes,400,400,0.0763,KEEP,PENDING,overdraw_waste
 Heroes/marina_evoA.png,Heroes,400,400,0.2574,REFINE,PENDING,low_contrast_spells
 Heroes/marina_evoA_cast.png,Heroes,400,400,0.2761,REFINE,PENDING,low_contrast_spells
 Heroes/marina_evoB.png,Heroes,400,400,0.2898,KEEP,PENDING,
 Heroes/marina_evoB_cast.png,Heroes,400,400,0.301,REFINE,PENDING,lighting_direction
-Heroes/marina_idle.png,Heroes,400,400,0.22,REFINE,PENDING,lighting_direction low_contrast_spells
+Heroes/marina_idle.png,Heroes,400,400,0.1975,REFINE,PENDING,low_contrast_battlefield low_contrast_spells
 Heroes/mirel_cast.png,Heroes,400,400,0.2915,REFINE,PENDING,low_contrast_spells
 Heroes/mirel_downed.png,Heroes,400,400,0.1476,KEEP,PENDING,
 Heroes/mirel_evoA.png,Heroes,400,400,0.3209,REFINE,PENDING,low_contrast_spells
@@ -309,13 +309,13 @@ Heroes/mirel_evoA_cast.png,Heroes,400,400,0.3296,REFINE,PENDING,low_contrast_spe
 Heroes/mirel_evoB.png,Heroes,400,400,0.2762,REFINE,PENDING,lighting_direction low_contrast_spells
 Heroes/mirel_evoB_cast.png,Heroes,400,400,0.2943,REFINE,PENDING,lighting_direction
 Heroes/mirel_idle.png,Heroes,400,400,0.2844,REFINE,PENDING,low_contrast_spells
-Heroes/morven_cast.png,Heroes,400,400,0.2699,KEEP,PENDING,
+Heroes/morven_cast.png,Heroes,400,400,0.2699,REFINE,PENDING,low_contrast_battlefield
 Heroes/morven_downed.png,Heroes,400,400,0.1418,KEEP,PENDING,
-Heroes/morven_evoA.png,Heroes,400,400,0.2918,KEEP,PENDING,
-Heroes/morven_evoA_cast.png,Heroes,400,400,0.2927,KEEP,PENDING,
-Heroes/morven_evoB.png,Heroes,400,400,0.2713,KEEP,PENDING,
-Heroes/morven_evoB_cast.png,Heroes,400,400,0.2593,KEEP,PENDING,
-Heroes/morven_idle.png,Heroes,400,400,0.2736,KEEP,PENDING,
+Heroes/morven_evoA.png,Heroes,400,400,0.2918,REFINE,PENDING,low_contrast_battlefield
+Heroes/morven_evoA_cast.png,Heroes,400,400,0.2927,REFINE,PENDING,low_contrast_battlefield
+Heroes/morven_evoB.png,Heroes,400,400,0.2713,REFINE,PENDING,low_contrast_battlefield
+Heroes/morven_evoB_cast.png,Heroes,400,400,0.2593,REFINE,PENDING,low_contrast_battlefield
+Heroes/morven_idle.png,Heroes,400,400,0.2736,REFINE,PENDING,low_contrast_battlefield
 Heroes/nerissa_cast.png,Heroes,400,400,0.2618,REFINE,PENDING,lighting_direction
 Heroes/nerissa_downed.png,Heroes,400,400,0.1268,KEEP,PENDING,
 Heroes/nerissa_evoA.png,Heroes,400,400,0.2799,REFINE,PENDING,lighting_direction
@@ -323,34 +323,34 @@ Heroes/nerissa_evoA_cast.png,Heroes,400,400,0.2965,KEEP,PENDING,
 Heroes/nerissa_evoB.png,Heroes,400,400,0.2986,REFINE,PENDING,low_contrast_spells
 Heroes/nerissa_evoB_cast.png,Heroes,400,400,0.3125,REFINE,PENDING,lighting_direction low_contrast_spells
 Heroes/nerissa_idle.png,Heroes,400,400,0.2448,REFINE,PENDING,lighting_direction
-Heroes/nyxara_cast.png,Heroes,400,400,0.2609,KEEP,PENDING,
+Heroes/nyxara_cast.png,Heroes,400,400,0.2609,REFINE,PENDING,low_contrast_battlefield
 Heroes/nyxara_downed.png,Heroes,400,400,0.1308,KEEP,PENDING,
-Heroes/nyxara_evoA.png,Heroes,400,400,0.2765,KEEP,PENDING,
-Heroes/nyxara_evoA_cast.png,Heroes,400,400,0.2813,KEEP,PENDING,
-Heroes/nyxara_evoB.png,Heroes,400,400,0.3232,KEEP,PENDING,
-Heroes/nyxara_evoB_cast.png,Heroes,400,400,0.3283,KEEP,PENDING,
-Heroes/nyxara_idle.png,Heroes,400,400,0.2521,KEEP,PENDING,
-Heroes/oriane_cast.png,Heroes,400,400,0.2463,KEEP,PENDING,
+Heroes/nyxara_evoA.png,Heroes,400,400,0.2765,REFINE,PENDING,low_contrast_battlefield
+Heroes/nyxara_evoA_cast.png,Heroes,400,400,0.2813,REFINE,PENDING,low_contrast_battlefield
+Heroes/nyxara_evoB.png,Heroes,400,400,0.3232,REFINE,PENDING,low_contrast_battlefield
+Heroes/nyxara_evoB_cast.png,Heroes,400,400,0.3283,REFINE,PENDING,low_contrast_battlefield
+Heroes/nyxara_idle.png,Heroes,400,400,0.2521,REFINE,PENDING,low_contrast_battlefield
+Heroes/oriane_cast.png,Heroes,400,400,0.2463,REFINE,PENDING,low_contrast_battlefield
 Heroes/oriane_downed.png,Heroes,400,400,0.1207,KEEP,PENDING,
-Heroes/oriane_evoA.png,Heroes,400,400,0.2533,KEEP,PENDING,
-Heroes/oriane_evoA_cast.png,Heroes,400,400,0.2624,KEEP,PENDING,
+Heroes/oriane_evoA.png,Heroes,400,400,0.2533,REFINE,PENDING,low_contrast_battlefield
+Heroes/oriane_evoA_cast.png,Heroes,400,400,0.2624,REFINE,PENDING,low_contrast_battlefield
 Heroes/oriane_evoB.png,Heroes,400,400,0.2358,REFINE,PENDING,low_contrast_spells
 Heroes/oriane_evoB_cast.png,Heroes,400,400,0.2464,REFINE,PENDING,low_contrast_spells
-Heroes/oriane_idle.png,Heroes,400,400,0.2331,KEEP,PENDING,
-Heroes/raiden_cast.png,Heroes,400,400,0.2,KEEP,PENDING,
+Heroes/oriane_idle.png,Heroes,400,400,0.2331,REFINE,PENDING,low_contrast_battlefield
+Heroes/raiden_cast.png,Heroes,400,400,0.2,REFINE,PENDING,low_contrast_battlefield
 Heroes/raiden_downed.png,Heroes,400,400,0.1016,KEEP,PENDING,overdraw_waste
-Heroes/raiden_evoA.png,Heroes,400,400,0.2265,KEEP,PENDING,
-Heroes/raiden_evoA_cast.png,Heroes,400,400,0.2258,KEEP,PENDING,
-Heroes/raiden_evoB.png,Heroes,400,400,0.2665,KEEP,PENDING,
-Heroes/raiden_evoB_cast.png,Heroes,400,400,0.2625,KEEP,PENDING,
-Heroes/raiden_idle.png,Heroes,400,400,0.1958,KEEP,PENDING,
-Heroes/sable_cast.png,Heroes,400,400,0.2742,KEEP,PENDING,
+Heroes/raiden_evoA.png,Heroes,400,400,0.2265,REFINE,PENDING,low_contrast_battlefield
+Heroes/raiden_evoA_cast.png,Heroes,400,400,0.2258,REFINE,PENDING,low_contrast_battlefield
+Heroes/raiden_evoB.png,Heroes,400,400,0.2665,REFINE,PENDING,low_contrast_battlefield
+Heroes/raiden_evoB_cast.png,Heroes,400,400,0.2625,REFINE,PENDING,low_contrast_battlefield
+Heroes/raiden_idle.png,Heroes,400,400,0.1958,REFINE,PENDING,low_contrast_battlefield
+Heroes/sable_cast.png,Heroes,400,400,0.2742,REFINE,PENDING,low_contrast_battlefield
 Heroes/sable_downed.png,Heroes,400,400,0.1436,KEEP,PENDING,
-Heroes/sable_evoA.png,Heroes,400,400,0.3298,KEEP,PENDING,
-Heroes/sable_evoA_cast.png,Heroes,400,400,0.3233,KEEP,PENDING,
+Heroes/sable_evoA.png,Heroes,400,400,0.3298,REFINE,PENDING,low_contrast_battlefield
+Heroes/sable_evoA_cast.png,Heroes,400,400,0.3233,REFINE,PENDING,low_contrast_battlefield
 Heroes/sable_evoB.png,Heroes,400,400,0.2782,KEEP,PENDING,
 Heroes/sable_evoB_cast.png,Heroes,400,400,0.2754,KEEP,PENDING,
-Heroes/sable_idle.png,Heroes,400,400,0.277,KEEP,PENDING,
+Heroes/sable_idle.png,Heroes,400,400,0.277,REFINE,PENDING,low_contrast_battlefield
 Heroes/seren_cast.png,Heroes,400,400,0.2954,KEEP,PENDING,
 Heroes/seren_downed.png,Heroes,400,400,0.1533,KEEP,PENDING,
 Heroes/seren_evoA.png,Heroes,400,400,0.3207,KEEP,PENDING,
@@ -361,24 +361,24 @@ Heroes/seren_idle.png,Heroes,400,400,0.296,KEEP,PENDING,
 Heroes/solenne_cast.png,Heroes,400,400,0.2367,REFINE,PENDING,lighting_direction low_contrast_spells
 Heroes/solenne_downed.png,Heroes,400,400,0.12,REFINE,PENDING,lighting_direction
 Heroes/solenne_evoA.png,Heroes,400,400,0.1979,KEEP,PENDING,
-Heroes/solenne_evoA_cast.png,Heroes,400,400,0.2289,KEEP,PENDING,
+Heroes/solenne_evoA_cast.png,Heroes,400,400,0.2289,REFINE,PENDING,low_contrast_battlefield
 Heroes/solenne_evoB.png,Heroes,400,400,0.2195,REFINE,PENDING,low_contrast_spells
 Heroes/solenne_evoB_cast.png,Heroes,400,400,0.2168,KEEP,PENDING,
 Heroes/solenne_idle.png,Heroes,400,400,0.2314,REFINE,PENDING,lighting_direction low_contrast_spells
-Heroes/sylph_cast.png,Heroes,400,400,0.2304,REFINE,PENDING,lighting_direction white_halo
-Heroes/sylph_downed.png,Heroes,400,400,0.1146,KEEP,PENDING,overdraw_waste
+Heroes/sylph_cast.png,Heroes,400,400,0.1884,REFINE,PENDING,low_contrast_battlefield
+Heroes/sylph_downed.png,Heroes,400,400,0.1116,KEEP,PENDING,overdraw_waste
 Heroes/sylph_evoA.png,Heroes,400,400,0.2455,REFINE,PENDING,low_contrast_spells
 Heroes/sylph_evoA_cast.png,Heroes,400,400,0.2544,KEEP,PENDING,
 Heroes/sylph_evoB.png,Heroes,400,400,0.2848,REFINE,PENDING,white_halo
 Heroes/sylph_evoB_cast.png,Heroes,400,400,0.2885,REFINE,PENDING,white_halo
-Heroes/sylph_idle.png,Heroes,400,400,0.2208,REFINE,PENDING,low_contrast_spells white_halo
-Heroes/terra_cast.png,Heroes,400,400,0.2452,KEEP,PENDING,
-Heroes/terra_downed.png,Heroes,400,400,0.1309,KEEP,PENDING,
+Heroes/sylph_idle.png,Heroes,400,400,0.1507,REFINE,PENDING,low_contrast_battlefield
+Heroes/terra_cast.png,Heroes,400,400,0.2721,REFINE,PENDING,low_contrast_battlefield
+Heroes/terra_downed.png,Heroes,400,400,0.2159,KEEP,PENDING,
 Heroes/terra_evoA.png,Heroes,400,400,0.2956,KEEP,PENDING,
 Heroes/terra_evoA_cast.png,Heroes,400,400,0.2961,REFINE,PENDING,low_contrast_spells
 Heroes/terra_evoB.png,Heroes,400,400,0.3017,REFINE,PENDING,low_contrast_spells
 Heroes/terra_evoB_cast.png,Heroes,400,400,0.294,REFINE,PENDING,low_contrast_spells
-Heroes/terra_idle.png,Heroes,400,400,0.2527,KEEP,PENDING,
+Heroes/terra_idle.png,Heroes,400,400,0.3694,REFINE,PENDING,low_contrast_battlefield
 Heroes/thalen_cast.png,Heroes,400,400,0.2938,KEEP,PENDING,
 Heroes/thalen_downed.png,Heroes,400,400,0.1418,KEEP,PENDING,
 Heroes/thalen_evoA.png,Heroes,400,400,0.3116,KEEP,PENDING,
@@ -393,20 +393,20 @@ Heroes/tidal_evoA_cast.png,Heroes,400,400,0.2662,REFINE,PENDING,low_contrast_spe
 Heroes/tidal_evoB.png,Heroes,400,400,0.3011,REFINE,PENDING,low_contrast_spells
 Heroes/tidal_evoB_cast.png,Heroes,400,400,0.2914,REFINE,PENDING,low_contrast_spells
 Heroes/tidal_idle.png,Heroes,400,400,0.2299,KEEP,PENDING,
-Heroes/vesper_cast.png,Heroes,400,400,0.2345,KEEP,PENDING,
+Heroes/vesper_cast.png,Heroes,400,400,0.2345,REFINE,PENDING,low_contrast_battlefield
 Heroes/vesper_downed.png,Heroes,400,400,0.1156,KEEP,PENDING,overdraw_waste
-Heroes/vesper_evoA.png,Heroes,400,400,0.2339,KEEP,PENDING,
-Heroes/vesper_evoA_cast.png,Heroes,400,400,0.2516,KEEP,PENDING,
+Heroes/vesper_evoA.png,Heroes,400,400,0.2339,REFINE,PENDING,low_contrast_battlefield
+Heroes/vesper_evoA_cast.png,Heroes,400,400,0.2516,REFINE,PENDING,low_contrast_battlefield
 Heroes/vesper_evoB.png,Heroes,400,400,0.3104,REFINE,PENDING,foot_pivot_mismatch
 Heroes/vesper_evoB_cast.png,Heroes,400,400,0.3203,REFINE,PENDING,foot_pivot_mismatch
-Heroes/vesper_idle.png,Heroes,400,400,0.223,KEEP,PENDING,
-Heroes/veyra_cast.png,Heroes,400,400,0.2263,KEEP,PENDING,
+Heroes/vesper_idle.png,Heroes,400,400,0.223,REFINE,PENDING,low_contrast_battlefield
+Heroes/veyra_cast.png,Heroes,400,400,0.2263,REFINE,PENDING,low_contrast_battlefield
 Heroes/veyra_downed.png,Heroes,400,400,0.1157,KEEP,PENDING,overdraw_waste
-Heroes/veyra_evoA.png,Heroes,400,400,0.2463,KEEP,PENDING,
-Heroes/veyra_evoA_cast.png,Heroes,400,400,0.2454,KEEP,PENDING,
-Heroes/veyra_evoB.png,Heroes,400,400,0.2241,KEEP,PENDING,
-Heroes/veyra_evoB_cast.png,Heroes,400,400,0.2305,KEEP,PENDING,
-Heroes/veyra_idle.png,Heroes,400,400,0.2233,KEEP,PENDING,
+Heroes/veyra_evoA.png,Heroes,400,400,0.2463,REFINE,PENDING,low_contrast_battlefield
+Heroes/veyra_evoA_cast.png,Heroes,400,400,0.2454,REFINE,PENDING,low_contrast_battlefield
+Heroes/veyra_evoB.png,Heroes,400,400,0.2241,REFINE,PENDING,low_contrast_battlefield
+Heroes/veyra_evoB_cast.png,Heroes,400,400,0.2305,REFINE,PENDING,low_contrast_battlefield
+Heroes/veyra_idle.png,Heroes,400,400,0.2233,REFINE,PENDING,low_contrast_battlefield
 Heroes/volt_cast.png,Heroes,400,400,0.2277,KEEP,PENDING,
 Heroes/volt_downed.png,Heroes,400,400,0.1159,KEEP,PENDING,overdraw_waste
 Heroes/volt_evoA.png,Heroes,400,400,0.2697,KEEP,PENDING,
@@ -414,13 +414,13 @@ Heroes/volt_evoA_cast.png,Heroes,400,400,0.257,KEEP,PENDING,
 Heroes/volt_evoB.png,Heroes,400,400,0.3062,KEEP,PENDING,
 Heroes/volt_evoB_cast.png,Heroes,400,400,0.2996,KEEP,PENDING,
 Heroes/volt_idle.png,Heroes,400,400,0.2238,KEEP,PENDING,
-Heroes/voltrix_cast.png,Heroes,400,400,0.2581,KEEP,PENDING,
+Heroes/voltrix_cast.png,Heroes,400,400,0.2581,REFINE,PENDING,low_contrast_battlefield
 Heroes/voltrix_downed.png,Heroes,400,400,0.1316,KEEP,PENDING,
 Heroes/voltrix_evoA.png,Heroes,400,400,0.28,KEEP,PENDING,
 Heroes/voltrix_evoA_cast.png,Heroes,400,400,0.281,REFINE,PENDING,low_contrast_battlefield
 Heroes/voltrix_evoB.png,Heroes,400,400,0.3133,KEEP,PENDING,
 Heroes/voltrix_evoB_cast.png,Heroes,400,400,0.3182,KEEP,PENDING,
-Heroes/voltrix_idle.png,Heroes,400,400,0.2537,KEEP,PENDING,
+Heroes/voltrix_idle.png,Heroes,400,400,0.2537,REFINE,PENDING,low_contrast_battlefield
 Heroes/zephyr_cast.png,Heroes,400,400,0.2359,REFINE,PENDING,lighting_direction low_contrast_spells white_halo
 Heroes/zephyr_downed.png,Heroes,400,400,0.107,REFINE,PENDING,lighting_direction overdraw_waste
 Heroes/zephyr_evoA.png,Heroes,400,400,0.2772,REFINE,PENDING,lighting_direction low_contrast_spells
@@ -428,16 +428,16 @@ Heroes/zephyr_evoA_cast.png,Heroes,400,400,0.2716,KEEP,PENDING,
 Heroes/zephyr_evoB.png,Heroes,400,400,0.2763,REFINE,PENDING,white_halo
 Heroes/zephyr_evoB_cast.png,Heroes,400,400,0.3038,REFINE,PENDING,lighting_direction white_halo
 Heroes/zephyr_idle.png,Heroes,400,400,0.2064,REFINE,PENDING,lighting_direction low_contrast_spells
-Heroes/zerith_cast.png,Heroes,400,400,0.254,KEEP,PENDING,
+Heroes/zerith_cast.png,Heroes,400,400,0.254,REFINE,PENDING,low_contrast_battlefield
 Heroes/zerith_downed.png,Heroes,400,400,0.1257,KEEP,PENDING,
-Heroes/zerith_evoA.png,Heroes,400,400,0.2378,KEEP,PENDING,
-Heroes/zerith_evoA_cast.png,Heroes,400,400,0.2576,KEEP,PENDING,
-Heroes/zerith_evoB.png,Heroes,400,400,0.2932,KEEP,PENDING,
-Heroes/zerith_evoB_cast.png,Heroes,400,400,0.285,KEEP,PENDING,
-Heroes/zerith_idle.png,Heroes,400,400,0.2422,KEEP,PENDING,
+Heroes/zerith_evoA.png,Heroes,400,400,0.2378,REFINE,PENDING,low_contrast_battlefield
+Heroes/zerith_evoA_cast.png,Heroes,400,400,0.2576,REFINE,PENDING,low_contrast_battlefield
+Heroes/zerith_evoB.png,Heroes,400,400,0.2932,REFINE,PENDING,low_contrast_battlefield
+Heroes/zerith_evoB_cast.png,Heroes,400,400,0.285,REFINE,PENDING,low_contrast_battlefield
+Heroes/zerith_idle.png,Heroes,400,400,0.2422,REFINE,PENDING,low_contrast_battlefield
 Icons/element_arcane.png,Icons,128,128,0.7224,KEEP,PENDING,
-Icons/element_earth.png,Icons,128,128,0.7224,KEEP,PENDING,
-Icons/element_fire.png,Icons,128,128,0.7224,KEEP,PENDING,
+Icons/element_earth.png,Icons,128,128,0.4971,KEEP,PENDING,
+Icons/element_fire.png,Icons,128,128,0.503,KEEP,PENDING,
 Icons/element_ice.png,Icons,128,128,0.7224,KEEP,PENDING,
 Icons/element_light.png,Icons,128,128,0.7224,KEEP,PENDING,
 Icons/element_lightning.png,Icons,128,128,0.7224,KEEP,PENDING,
@@ -445,8 +445,8 @@ Icons/element_nature.png,Icons,128,128,0.7224,KEEP,PENDING,
 Icons/element_poison.png,Icons,128,128,0.7224,KEEP,PENDING,
 Icons/element_shadow.png,Icons,128,128,0.7224,KEEP,PENDING,
 Icons/element_void.png,Icons,128,128,0.7224,KEEP,PENDING,
-Icons/element_water.png,Icons,128,128,0.7224,KEEP,PENDING,
-Icons/element_wind.png,Icons,128,128,0.7224,KEEP,PENDING,
+Icons/element_water.png,Icons,128,128,0.5035,KEEP,PENDING,
+Icons/element_wind.png,Icons,128,128,0.499,KEEP,PENDING,
 Icons/reaction_abyss_mark.png,Icons,128,128,0.6121,KEEP,PENDING,
 Icons/reaction_astral_seal.png,Icons,128,128,0.6121,KEEP,PENDING,
 Icons/reaction_black_tide.png,Icons,128,128,0.6121,KEEP,PENDING,
@@ -454,7 +454,7 @@ Icons/reaction_blight_garden.png,Icons,128,128,0.6121,KEEP,PENDING,
 Icons/reaction_blizzard.png,Icons,128,128,0.6121,KEEP,PENDING,
 Icons/reaction_eclipse.png,Icons,128,128,0.6121,KEEP,PENDING,
 Icons/reaction_electrocharge.png,Icons,128,128,0.6121,KEEP,PENDING,
-Icons/reaction_firestorm.png,Icons,128,128,0.6121,KEEP,PENDING,
+Icons/reaction_firestorm.png,Icons,128,128,0.4998,KEEP,PENDING,
 Icons/reaction_freeze.png,Icons,128,128,0.6121,KEEP,PENDING,
 Icons/reaction_frost_roots.png,Icons,128,128,0.6122,KEEP,PENDING,
 Icons/reaction_generic.png,Icons,128,128,0.6121,KEEP,PENDING,
@@ -484,22 +484,22 @@ Icons/reaction_superconduct.png,Icons,128,128,0.6121,KEEP,PENDING,
 Icons/reaction_thunderstorm.png,Icons,128,128,0.6121,KEEP,PENDING,
 Icons/reaction_toxic_combustion.png,Icons,128,128,0.6121,KEEP,PENDING,
 Icons/reaction_toxic_shock.png,Icons,128,128,0.6121,KEEP,PENDING,
-Icons/reaction_vaporize.png,Icons,128,128,0.6121,KEEP,PENDING,
+Icons/reaction_vaporize.png,Icons,128,128,0.5049,KEEP,PENDING,
 Icons/reaction_venom_flow.png,Icons,128,128,0.6121,KEEP,PENDING,
 Icons/reaction_venom_shards.png,Icons,128,128,0.6121,KEEP,PENDING,
 Icons/reaction_wildfire.png,Icons,128,128,0.6121,KEEP,PENDING,
 Icons/role_assassin.png,Icons,96,96,0.5988,KEEP,PENDING,
 Icons/role_bruiser.png,Icons,96,96,0.5988,KEEP,PENDING,
 Icons/role_controller.png,Icons,96,96,0.5988,KEEP,PENDING,
-Icons/role_guardian.png,Icons,96,96,0.5988,KEEP,PENDING,
-Icons/role_healer.png,Icons,96,96,0.5988,KEEP,PENDING,
-Icons/role_mage.png,Icons,96,96,0.5988,KEEP,PENDING,
-Icons/role_ranger.png,Icons,96,96,0.5988,KEEP,PENDING,
+Icons/role_guardian.png,Icons,96,96,0.5015,KEEP,PENDING,
+Icons/role_healer.png,Icons,96,96,0.5043,KEEP,PENDING,
+Icons/role_mage.png,Icons,96,96,0.5005,KEEP,PENDING,
+Icons/role_ranger.png,Icons,96,96,0.4932,KEEP,PENDING,
 Icons/role_support.png,Icons,96,96,0.5988,KEEP,PENDING,
 Icons/status_adapt.png,Icons,96,96,0.7039,KEEP,PENDING,
 Icons/status_armor_crack.png,Icons,96,96,0.7039,KEEP,PENDING,
 Icons/status_brittle.png,Icons,96,96,0.5988,KEEP,PENDING,
-Icons/status_burn.png,Icons,96,96,0.7039,KEEP,PENDING,
+Icons/status_burn.png,Icons,96,96,0.4966,KEEP,PENDING,
 Icons/status_charged.png,Icons,96,96,0.7039,KEEP,PENDING,
 Icons/status_chill.png,Icons,96,96,0.7039,KEEP,PENDING,
 Icons/status_corroded.png,Icons,96,96,0.5988,KEEP,PENDING,
@@ -514,13 +514,13 @@ Icons/status_poisoned.png,Icons,96,96,0.7039,KEEP,PENDING,
 Icons/status_resonant.png,Icons,96,96,0.5988,KEEP,PENDING,
 Icons/status_rooted.png,Icons,96,96,0.7039,KEEP,PENDING,
 Icons/status_sealed.png,Icons,96,96,0.5988,KEEP,PENDING,
-Icons/status_shield.png,Icons,96,96,0.7039,KEEP,PENDING,
+Icons/status_shield.png,Icons,96,96,0.5042,KEEP,PENDING,
 Icons/status_silenced.png,Icons,96,96,0.7039,KEEP,PENDING,
 Icons/status_slow.png,Icons,96,96,0.7039,KEEP,PENDING,
-Icons/status_stun.png,Icons,96,96,0.4683,KEEP,PENDING,
+Icons/status_stun.png,Icons,96,96,0.5033,KEEP,PENDING,
 Icons/status_taunt.png,Icons,96,96,0.7039,KEEP,PENDING,
 Icons/status_unstable.png,Icons,96,96,0.4683,KEEP,PENDING,
-Icons/status_wet.png,Icons,96,96,0.7039,KEEP,PENDING,
+Icons/status_wet.png,Icons,96,96,0.4983,KEEP,PENDING,
 Icons/status_windmark.png,Icons,96,96,0.7039,KEEP,PENDING,
 Icons/trait_arcane_reservoir.png,Icons,96,96,0.5988,KEEP,PENDING,
 Icons/trait_efficient_ward.png,Icons,96,96,0.5988,KEEP,PENDING,
@@ -538,10 +538,10 @@ Icons/ui_auto.png,Icons,96,96,0.4054,KEEP,PENDING,
 Icons/ui_check.png,Icons,96,96,0.2196,KEEP,PENDING,
 Icons/ui_close.png,Icons,96,96,0.2708,KEEP,PENDING,
 Icons/ui_codex.png,Icons,96,96,0.4484,KEEP,PENDING,
-Icons/ui_crystal.png,Icons,96,96,0.3207,KEEP,PENDING,
+Icons/ui_crystal.png,Icons,96,96,0.5025,KEEP,PENDING,
 Icons/ui_essence.png,Icons,96,96,0.3207,KEEP,PENDING,
 Icons/ui_evolve.png,Icons,96,96,0.3587,KEEP,PENDING,
-Icons/ui_gold.png,Icons,96,96,0.4714,KEEP,PENDING,
+Icons/ui_gold.png,Icons,96,96,0.4979,KEEP,PENDING,
 Icons/ui_heart.png,Icons,96,96,0.2918,KEEP,PENDING,
 Icons/ui_history.png,Icons,96,96,0.3925,KEEP,PENDING,
 Icons/ui_leak.png,Icons,96,96,0.4577,KEEP,PENDING,
@@ -555,7 +555,7 @@ Icons/ui_speed.png,Icons,96,96,0.2576,KEEP,PENDING,
 Icons/ui_star.png,Icons,96,96,0.2735,KEEP,PENDING,
 Icons/ui_sword.png,Icons,96,96,0.1675,KEEP,PENDING,
 Icons/ui_trophy.png,Icons,96,96,0.3409,KEEP,PENDING,
-Icons/ui_wave.png,Icons,96,96,0.3702,KEEP,PENDING,
+Icons/ui_wave.png,Icons,96,96,0.5013,KEEP,PENDING,
 Icons/ui_xp.png,Icons,96,96,0.2735,KEEP,PENDING,
 Portraits/aeris.png,Portraits,192,192,0.7532,KEEP,PENDING,
 Portraits/ashara.png,Portraits,192,192,0.7532,KEEP,PENDING,
@@ -567,13 +567,13 @@ Portraits/eirwen.png,Portraits,192,192,0.7532,KEEP,PENDING,
 Portraits/elowen.png,Portraits,192,192,0.7532,KEEP,PENDING,
 Portraits/freya.png,Portraits,192,192,0.7532,KEEP,PENDING,
 Portraits/glacius.png,Portraits,192,192,0.7532,KEEP,PENDING,
-Portraits/ignis.png,Portraits,192,192,0.7532,KEEP,PENDING,
+Portraits/ignis.png,Portraits,192,192,1.0,KEEP,PENDING,
 Portraits/isolde.png,Portraits,192,192,0.7532,KEEP,PENDING,
 Portraits/kael.png,Portraits,192,192,0.7532,KEEP,PENDING,
 Portraits/liora.png,Portraits,192,192,0.7532,KEEP,PENDING,
 Portraits/maelis.png,Portraits,192,192,0.7532,KEEP,PENDING,
 Portraits/magnus.png,Portraits,192,192,0.7532,KEEP,PENDING,
-Portraits/marina.png,Portraits,192,192,0.7532,KEEP,PENDING,
+Portraits/marina.png,Portraits,192,192,1.0,KEEP,PENDING,
 Portraits/mirel.png,Portraits,192,192,0.7532,KEEP,PENDING,
 Portraits/morven.png,Portraits,192,192,0.7532,KEEP,PENDING,
 Portraits/nerissa.png,Portraits,192,192,0.7532,KEEP,PENDING,
@@ -583,8 +583,8 @@ Portraits/raiden.png,Portraits,192,192,0.7532,KEEP,PENDING,
 Portraits/sable.png,Portraits,192,192,0.7532,KEEP,PENDING,
 Portraits/seren.png,Portraits,192,192,0.7532,KEEP,PENDING,
 Portraits/solenne.png,Portraits,192,192,0.7532,KEEP,PENDING,
-Portraits/sylph.png,Portraits,192,192,0.7532,KEEP,PENDING,
-Portraits/terra.png,Portraits,192,192,0.7532,KEEP,PENDING,
+Portraits/sylph.png,Portraits,192,192,1.0,KEEP,PENDING,
+Portraits/terra.png,Portraits,192,192,1.0,KEEP,PENDING,
 Portraits/thalen.png,Portraits,192,192,0.7532,KEEP,PENDING,
 Portraits/tidal.png,Portraits,192,192,0.7532,KEEP,PENDING,
 Portraits/vesper.png,Portraits,192,192,0.7532,KEEP,PENDING,
@@ -674,8 +674,8 @@ Relics/war_drum.png,Relics,128,128,0.8898,KEEP,PENDING,
 Relics/warding_bell.png,Relics,128,128,0.8898,KEEP,PENDING,
 Relics/worldroot_heart.png,Relics,128,128,0.8898,KEEP,PENDING,
 Relics/zephyr_sash.png,Relics,128,128,0.8898,KEEP,PENDING,
-UI/bar_bg.png,UI,128,40,0.9016,KEEP,PENDING,
-UI/bar_fill.png,UI,128,40,0.6012,KEEP,PENDING,
+UI/bar_bg.png,UI,128,40,0.5266,KEEP,PENDING,
+UI/bar_fill.png,UI,128,40,0.634,KEEP,PENDING,
 UI/button_danger_disabled.png,UI,192,96,0.8837,KEEP,PENDING,
 UI/button_danger_hover.png,UI,192,96,0.8837,KEEP,PENDING,
 UI/button_danger_normal.png,UI,192,96,0.8837,KEEP,PENDING,
@@ -684,10 +684,10 @@ UI/button_ghost_disabled.png,UI,192,96,0.8837,KEEP,PENDING,
 UI/button_ghost_hover.png,UI,192,96,0.8837,KEEP,PENDING,
 UI/button_ghost_normal.png,UI,192,96,0.8837,KEEP,PENDING,
 UI/button_ghost_pressed.png,UI,192,96,0.8479,KEEP,PENDING,
-UI/button_primary_disabled.png,UI,192,96,0.8837,KEEP,PENDING,
-UI/button_primary_hover.png,UI,192,96,0.8837,KEEP,PENDING,
-UI/button_primary_normal.png,UI,192,96,0.8837,KEEP,PENDING,
-UI/button_primary_pressed.png,UI,192,96,0.8479,KEEP,PENDING,
+UI/button_primary_disabled.png,UI,192,96,0.5768,KEEP,PENDING,
+UI/button_primary_hover.png,UI,192,96,0.5818,KEEP,PENDING,
+UI/button_primary_normal.png,UI,192,96,0.5639,KEEP,PENDING,
+UI/button_primary_pressed.png,UI,192,96,0.5838,KEEP,PENDING,
 UI/button_secondary_disabled.png,UI,192,96,0.8837,KEEP,PENDING,
 UI/button_secondary_hover.png,UI,192,96,0.8837,KEEP,PENDING,
 UI/button_secondary_normal.png,UI,192,96,0.8837,KEEP,PENDING,
@@ -696,15 +696,15 @@ UI/card_common.png,UI,256,360,0.9421,KEEP,PENDING,
 UI/card_cursed.png,UI,256,360,0.9421,KEEP,PENDING,
 UI/card_epic.png,UI,256,360,0.9421,KEEP,PENDING,
 UI/card_legendary.png,UI,256,360,0.9421,KEEP,PENDING,
-UI/card_rare.png,UI,256,360,0.9421,KEEP,PENDING,
+UI/card_rare.png,UI,256,360,0.3647,KEEP,PENDING,
 UI/panel_danger.png,UI,128,128,0.9053,KEEP,PENDING,
-UI/panel_dark.png,UI,128,128,0.9053,KEEP,PENDING,
+UI/panel_dark.png,UI,128,128,0.7593,KEEP,PENDING,
 UI/panel_glass.png,UI,128,128,0.9048,KEEP,PENDING,
 UI/panel_light.png,UI,128,128,0.9053,KEEP,PENDING,
 UI/title_emblem.png,UI,1024,320,0.3617,KEEP,PENDING,
-UI/tooltip.png,UI,96,96,0.8607,KEEP,PENDING,
+UI/tooltip.png,UI,96,96,0.7971,KEEP,PENDING,
 UI/vignette.png,UI,512,288,0.0315,KEEP,PENDING,
-Vfx/arrow.png,Vfx,192,96,0.1293,KEEP,PENDING,
+Vfx/arrow.png,Vfx,192,96,0.1283,KEEP,PENDING,
 Vfx/coin.png,Vfx,48,48,0.5816,KEEP,PENDING,
 Vfx/field_blight_garden.png,Vfx,256,256,0.1885,KEEP,PENDING,
 Vfx/field_deep_rift.png,Vfx,256,256,0.2083,KEEP,PENDING,
@@ -741,11 +741,11 @@ Vfx/field_stone_wall.png,Vfx,256,256,0.1376,KEEP,PENDING,
 Vfx/field_toxic_patch.png,Vfx,256,256,0.1938,KEEP,PENDING,
 Vfx/field_void_ward.png,Vfx,256,256,0.2014,KEEP,PENDING,
 Vfx/field_wildfire.png,Vfx,256,256,0.1812,KEEP,PENDING,
-Vfx/fireball.png,Vfx,192,192,0.2051,KEEP,PENDING,
-Vfx/glow.png,Vfx,128,128,0.1311,KEEP,PENDING,
+Vfx/fireball.png,Vfx,192,192,0.1464,KEEP,PENDING,
+Vfx/glow.png,Vfx,128,128,0.1861,KEEP,PENDING,
 Vfx/impact_arcane.png,Vfx,192,192,0.2301,KEEP,PENDING,
-Vfx/impact_earth.png,Vfx,192,192,0.1988,KEEP,PENDING,
-Vfx/impact_fire.png,Vfx,192,192,0.2807,KEEP,PENDING,
+Vfx/impact_earth.png,Vfx,192,192,0.325,KEEP,PENDING,
+Vfx/impact_fire.png,Vfx,192,192,0.2237,KEEP,PENDING,
 Vfx/impact_ice.png,Vfx,192,192,0.1887,KEEP,PENDING,
 Vfx/impact_light.png,Vfx,192,192,0.1304,KEEP,PENDING,
 Vfx/impact_lightning.png,Vfx,192,192,0.1643,KEEP,PENDING,
@@ -753,8 +753,8 @@ Vfx/impact_nature.png,Vfx,192,192,0.2186,KEEP,PENDING,
 Vfx/impact_poison.png,Vfx,192,192,0.1965,KEEP,PENDING,
 Vfx/impact_shadow.png,Vfx,192,192,0.2019,KEEP,PENDING,
 Vfx/impact_void.png,Vfx,192,192,0.3811,KEEP,PENDING,
-Vfx/impact_water.png,Vfx,192,192,0.2251,KEEP,PENDING,
-Vfx/impact_wind.png,Vfx,192,192,0.1795,KEEP,PENDING,
+Vfx/impact_water.png,Vfx,192,192,0.2823,KEEP,PENDING,
+Vfx/impact_wind.png,Vfx,192,192,0.2117,KEEP,PENDING,
 Vfx/projectile_arcane.png,Vfx,128,128,0.1183,KEEP,PENDING,
 Vfx/projectile_earth.png,Vfx,128,128,0.1257,KEEP,PENDING,
 Vfx/projectile_fire.png,Vfx,128,128,0.1637,KEEP,PENDING,
@@ -765,14 +765,14 @@ Vfx/projectile_nature.png,Vfx,128,128,0.1243,KEEP,PENDING,
 Vfx/projectile_poison.png,Vfx,128,128,0.141,KEEP,PENDING,
 Vfx/projectile_shadow.png,Vfx,128,128,0.1122,KEEP,PENDING,
 Vfx/projectile_void.png,Vfx,128,128,0.1458,KEEP,PENDING,
-Vfx/projectile_water.png,Vfx,128,128,0.1376,KEEP,PENDING,
+Vfx/projectile_water.png,Vfx,128,128,0.1011,KEEP,PENDING,
 Vfx/projectile_wind.png,Vfx,128,128,0.0975,KEEP,PENDING,
-Vfx/ring.png,Vfx,256,256,0.1128,KEEP,PENDING,
-Vfx/slash.png,Vfx,256,256,0.0579,KEEP,PENDING,
+Vfx/ring.png,Vfx,256,256,0.1788,KEEP,PENDING,
+Vfx/slash.png,Vfx,256,256,0.2103,KEEP,PENDING,
 Vfx/spark.png,Vfx,48,48,0.1068,KEEP,PENDING,
-Vfx/telegraph.png,Vfx,256,256,0.0896,KEEP,PENDING,
+Vfx/telegraph.png,Vfx,256,256,0.1595,KEEP,PENDING,
 Vfx/zone_blizzard.png,Vfx,256,256,0.1066,KEEP,PENDING,
-Vfx/zone_burning_ground.png,Vfx,256,256,0.1695,KEEP,PENDING,
+Vfx/zone_burning_ground.png,Vfx,256,256,0.5728,KEEP,PENDING,
 Vfx/zone_healing_rain.png,Vfx,256,256,0.1261,KEEP,PENDING,
 Vfx/zone_magma.png,Vfx,256,256,0.198,KEEP,PENDING,
 Vfx/zone_mud.png,Vfx,256,256,0.4666,KEEP,PENDING,
@@ -780,17 +780,17 @@ Vfx/zone_storm_trail.png,Vfx,256,256,0.1114,KEEP,PENDING,
 Vfx/zone_tempest_link.png,Vfx,256,256,0.1071,KEEP,PENDING,
 Vfx/zone_thunderstorm.png,Vfx,256,256,0.1071,KEEP,PENDING,
 Vfx/zone_vortex.png,Vfx,256,256,0.1786,KEEP,PENDING,
-World/arena_background.png,World,2400,1360,1.0,KEEP,PENDING,
+World/arena_background.png,World,4080,2304,1.0,KEEP,PENDING,
 World/bg_frostfall_bastion.png,World,2400,1360,1.0,KEEP,PENDING,
 World/bg_molten_crater.png,World,2400,1360,1.0,KEEP,PENDING,
 World/bg_shattered_aether.png,World,2400,1360,1.0,KEEP,PENDING,
 World/bg_stormspire_citadel.png,World,2400,1360,1.0,KEEP,PENDING,
 World/bg_sunken_archive.png,World,2400,1360,1.0,KEEP,PENDING,
-World/crystal_cracked.png,World,320,400,0.3912,KEEP,PENDING,
-World/crystal_critical.png,World,320,400,0.3912,KEEP,PENDING,
-World/crystal_intact.png,World,320,400,0.3915,KEEP,PENDING,
-World/lane_arrow.png,World,128,128,0.1483,KEEP,PENDING,
-World/node_empty.png,World,192,128,0.4947,KEEP,PENDING,
-World/node_highlight.png,World,192,128,0.495,KEEP,PENDING,
-World/node_occupied.png,World,192,128,0.495,KEEP,PENDING,
-World/shadow.png,World,128,48,0.0221,KEEP,PENDING,
+World/crystal_cracked.png,World,320,400,0.2893,KEEP,PENDING,
+World/crystal_critical.png,World,320,400,0.2775,KEEP,PENDING,
+World/crystal_intact.png,World,320,400,0.2893,KEEP,PENDING,
+World/lane_arrow.png,World,128,128,0.1515,KEEP,PENDING,
+World/node_empty.png,World,192,128,0.4435,KEEP,PENDING,
+World/node_highlight.png,World,192,128,0.478,KEEP,PENDING,
+World/node_occupied.png,World,192,128,0.6111,KEEP,PENDING,
+World/shadow.png,World,128,48,0.0267,KEEP,PENDING,

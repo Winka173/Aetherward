@@ -1,21 +1,22 @@
 # Art quality report
 
-- Assets: **795** · blocking: **0** · warnings: **206** · waived: 0
-- Decisions (automated): KEEP 626 · REFINE 169 · REMAKE 0 · human review: PENDING for all (aesthetics are not scored numerically)
+- Assets: **795** · blocking: **0** · warnings: **301** · waived: 0
+- Decisions (automated): KEEP 545 · REFINE 250 · REMAKE 0 · human review: PENDING for all (aesthetics are not scored numerically)
 
 ## Issues by check
 | Check | Severity | Count | Waived |
 |---|---|---|---|
 | cvd_confusable | info | 8 | 0 |
-| foot_pivot_mismatch | warning | 21 | 0 |
+| foot_pivot_mismatch | warning | 19 | 0 |
 | frame_jump | warning | 3 | 0 |
-| lighting_direction | warning | 32 | 0 |
-| low_contrast_battlefield | warning | 1 | 0 |
-| low_contrast_spells | warning | 94 | 0 |
+| lighting_direction | warning | 28 | 0 |
+| low_contrast_battlefield | warning | 111 | 0 |
+| low_contrast_spells | warning | 86 | 0 |
 | outside_safe_bounds | warning | 3 | 0 |
 | overdraw_waste | info | 22 | 0 |
 | scale_outlier | warning | 3 | 0 |
-| white_halo | warning | 49 | 0 |
+| texture_budget | warning | 1 | 0 |
+| white_halo | warning | 47 | 0 |
 
 ## Texture memory (RGBA32 upper bound, MB)
 | Category | MB |
@@ -28,10 +29,10 @@
 | Relics | 5.06 |
 | UI | 5.02 |
 | Vfx | 14.48 |
-| World | 76.54 |
+| World | 99.95 |
 
 ## Battlefield luminance (centre median)
-arena_background.png 0.334, bg_frostfall_bastion.png 0.621, bg_molten_crater.png 0.060, bg_shattered_aether.png 0.194, bg_stormspire_citadel.png 0.138, bg_sunken_archive.png 0.152
+arena_background.png 0.026, bg_frostfall_bastion.png 0.621, bg_molten_crater.png 0.060, bg_shattered_aether.png 0.194, bg_stormspire_citadel.png 0.138, bg_sunken_archive.png 0.152
 
 ## Blocking issues (first 60)
 - none
@@ -93,10 +94,7 @@ arena_background.png 0.334, bg_frostfall_bastion.png 0.621, bg_molten_crater.png
 - `Heroes/kael_cast.png` white_halo: bright fringe on semi-transparent edge (premultiply/bleed issue)
 - `Heroes/kael_evoB.png` white_halo: bright fringe on semi-transparent edge (premultiply/bleed issue)
 - `Heroes/kael_evoB_cast.png` white_halo: bright fringe on semi-transparent edge (premultiply/bleed issue)
-- `Heroes/marina_cast.png` lighting_direction: lower-right brighter than upper-left (shading rule: light from upper-left)
-- `Heroes/marina_downed.png` lighting_direction: lower-right brighter than upper-left (shading rule: light from upper-left)
 - `Heroes/marina_evoB_cast.png` lighting_direction: lower-right brighter than upper-left (shading rule: light from upper-left)
-- `Heroes/marina_idle.png` lighting_direction: lower-right brighter than upper-left (shading rule: light from upper-left)
 - `Heroes/mirel_evoB.png` lighting_direction: lower-right brighter than upper-left (shading rule: light from upper-left)
 - `Heroes/mirel_evoB_cast.png` lighting_direction: lower-right brighter than upper-left (shading rule: light from upper-left)
 - `Heroes/nerissa_cast.png` lighting_direction: lower-right brighter than upper-left (shading rule: light from upper-left)
@@ -108,12 +106,15 @@ arena_background.png 0.334, bg_frostfall_bastion.png 0.621, bg_molten_crater.png
 - `Heroes/solenne_cast.png` lighting_direction: lower-right brighter than upper-left (shading rule: light from upper-left)
 - `Heroes/solenne_downed.png` lighting_direction: lower-right brighter than upper-left (shading rule: light from upper-left)
 - `Heroes/solenne_idle.png` lighting_direction: lower-right brighter than upper-left (shading rule: light from upper-left)
-- `Heroes/sylph_cast.png` white_halo: bright fringe on semi-transparent edge (premultiply/bleed issue)
-- `Heroes/sylph_cast.png` lighting_direction: lower-right brighter than upper-left (shading rule: light from upper-left)
 - `Heroes/sylph_evoB.png` white_halo: bright fringe on semi-transparent edge (premultiply/bleed issue)
 - `Heroes/sylph_evoB_cast.png` white_halo: bright fringe on semi-transparent edge (premultiply/bleed issue)
-- `Heroes/sylph_idle.png` white_halo: bright fringe on semi-transparent edge (premultiply/bleed issue)
 - `Heroes/zephyr_cast.png` white_halo: bright fringe on semi-transparent edge (premultiply/bleed issue)
 - `Heroes/zephyr_cast.png` lighting_direction: lower-right brighter than upper-left (shading rule: light from upper-left)
 - `Heroes/zephyr_downed.png` lighting_direction: lower-right brighter than upper-left (shading rule: light from upper-left)
 - `Heroes/zephyr_evoA.png` lighting_direction: lower-right brighter than upper-left (shading rule: light from upper-left)
+- `Heroes/zephyr_evoB.png` white_halo: bright fringe on semi-transparent edge (premultiply/bleed issue)
+- `Heroes/zephyr_evoB_cast.png` white_halo: bright fringe on semi-transparent edge (premultiply/bleed issue)
+- `Heroes/zephyr_evoB_cast.png` lighting_direction: lower-right brighter than upper-left (shading rule: light from upper-left)
+- `Heroes/zephyr_idle.png` lighting_direction: lower-right brighter than upper-left (shading rule: light from upper-left)
+- `Enemies/chaos_elemental_a.png` foot_pivot_mismatch: lowest opaque row is -10px from the pivot (units float or sink)
+- `Enemies/chaos_elemental_b.png` foot_pivot_mismatch: lowest opaque row is -10px from the pivot (units float or sink)

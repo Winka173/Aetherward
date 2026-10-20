@@ -11,8 +11,6 @@ Enemies/chaos_elemental_a.png,foot_pivot_mismatch,warning,False,-10.0,lowest opa
 Enemies/chaos_elemental_b.png,foot_pivot_mismatch,warning,False,-10.0,lowest opaque row is -10px from the pivot (units float or sink)
 Enemies/mana_leech_a.png,foot_pivot_mismatch,warning,False,-13.0,lowest opaque row is -13px from the pivot (units float or sink)
 Enemies/mana_leech_b.png,foot_pivot_mismatch,warning,False,-21.0,lowest opaque row is -21px from the pivot (units float or sink)
-Enemies/rift_warden_a.png,foot_pivot_mismatch,warning,False,-20.0,lowest opaque row is -20px from the pivot (units float or sink)
-Enemies/rift_warden_b.png,foot_pivot_mismatch,warning,False,-30.0,lowest opaque row is -30px from the pivot (units float or sink)
 Enemies/riftling_a.png,foot_pivot_mismatch,warning,False,-11.0,lowest opaque row is -11px from the pivot (units float or sink)
 Enemies/riftling_b.png,foot_pivot_mismatch,warning,False,-17.0,lowest opaque row is -17px from the pivot (units float or sink)
 Enemies/rootbound_treant_a.png,foot_pivot_mismatch,warning,False,9.0,lowest opaque row is +9px from the pivot (units float or sink)
@@ -21,16 +19,16 @@ Enemies/soul_binder_a.png,foot_pivot_mismatch,warning,False,-11.0,lowest opaque 
 Enemies/soul_binder_b.png,foot_pivot_mismatch,warning,False,-17.0,lowest opaque row is -17px from the pivot (units float or sink)
 Enemies/spirit_wisp_a.png,foot_pivot_mismatch,warning,False,-16.0,lowest opaque row is -16px from the pivot (units float or sink)
 Enemies/spirit_wisp_b.png,foot_pivot_mismatch,warning,False,-22.0,lowest opaque row is -22px from the pivot (units float or sink)
-Enemies/storm_harpy_a.png,foot_pivot_mismatch,warning,False,-56.0,lowest opaque row is -56px from the pivot (units float or sink)
-Enemies/storm_harpy_b.png,foot_pivot_mismatch,warning,False,-24.0,lowest opaque row is -24px from the pivot (units float or sink)
+Enemies/storm_harpy_a.png,foot_pivot_mismatch,warning,False,-34.0,lowest opaque row is -34px from the pivot (units float or sink)
+Enemies/storm_harpy_b.png,foot_pivot_mismatch,warning,False,-34.0,lowest opaque row is -34px from the pivot (units float or sink)
 Enemies/storm_wisp_a.png,foot_pivot_mismatch,warning,False,-60.0,lowest opaque row is -60px from the pivot (units float or sink)
 Enemies/storm_wisp_b.png,foot_pivot_mismatch,warning,False,-80.0,lowest opaque row is -80px from the pivot (units float or sink)
 Enemies/warded_b.png,foot_pivot_mismatch,warning,False,10.0,lowest opaque row is +10px from the pivot (units float or sink)
 Heroes/vesper_evoB.png,foot_pivot_mismatch,warning,False,16.0,lowest opaque row is +16px from the pivot (units float or sink)
 Heroes/vesper_evoB_cast.png,foot_pivot_mismatch,warning,False,16.0,lowest opaque row is +16px from the pivot (units float or sink)
-Enemies/storm_harpy_b.png,frame_jump,warning,False,0.4465,silhouette IoU 0.45 vs storm_harpy_a.png (identity drift / pop)
 Enemies/storm_wisp_b.png,frame_jump,warning,False,0.5625,silhouette IoU 0.56 vs storm_wisp_a.png (identity drift / pop)
 Enemies/vaelith_b.png,frame_jump,warning,False,0.5804,silhouette IoU 0.58 vs vaelith_a.png (identity drift / pop)
+Heroes/ignis_cast.png,frame_jump,warning,False,0.544,silhouette IoU 0.54 vs ignis_idle.png (identity drift / pop)
 Enemies/frost_wraith_a.png,lighting_direction,warning,False,0.257,lower-right brighter than upper-left (shading rule: light from upper-left)
 Enemies/frost_wraith_b.png,lighting_direction,warning,False,0.2493,lower-right brighter than upper-left (shading rule: light from upper-left)
 Enemies/goblin_sprinter_a.png,lighting_direction,warning,False,0.0685,lower-right brighter than upper-left (shading rule: light from upper-left)
@@ -44,10 +42,7 @@ Heroes/aeris_evoA.png,lighting_direction,warning,False,0.061,lower-right brighte
 Heroes/aeris_evoA_cast.png,lighting_direction,warning,False,0.0735,lower-right brighter than upper-left (shading rule: light from upper-left)
 Heroes/eirwen_downed.png,lighting_direction,warning,False,0.0722,lower-right brighter than upper-left (shading rule: light from upper-left)
 Heroes/elowen_downed.png,lighting_direction,warning,False,0.1168,lower-right brighter than upper-left (shading rule: light from upper-left)
-Heroes/marina_cast.png,lighting_direction,warning,False,0.0868,lower-right brighter than upper-left (shading rule: light from upper-left)
-Heroes/marina_downed.png,lighting_direction,warning,False,0.1575,lower-right brighter than upper-left (shading rule: light from upper-left)
 Heroes/marina_evoB_cast.png,lighting_direction,warning,False,0.1316,lower-right brighter than upper-left (shading rule: light from upper-left)
-Heroes/marina_idle.png,lighting_direction,warning,False,0.0669,lower-right brighter than upper-left (shading rule: light from upper-left)
 Heroes/mirel_evoB.png,lighting_direction,warning,False,0.1418,lower-right brighter than upper-left (shading rule: light from upper-left)
 Heroes/mirel_evoB_cast.png,lighting_direction,warning,False,0.171,lower-right brighter than upper-left (shading rule: light from upper-left)
 Heroes/nerissa_cast.png,lighting_direction,warning,False,0.0768,lower-right brighter than upper-left (shading rule: light from upper-left)
@@ -57,21 +52,128 @@ Heroes/nerissa_idle.png,lighting_direction,warning,False,0.1158,lower-right brig
 Heroes/solenne_cast.png,lighting_direction,warning,False,0.065,lower-right brighter than upper-left (shading rule: light from upper-left)
 Heroes/solenne_downed.png,lighting_direction,warning,False,0.1907,lower-right brighter than upper-left (shading rule: light from upper-left)
 Heroes/solenne_idle.png,lighting_direction,warning,False,0.1133,lower-right brighter than upper-left (shading rule: light from upper-left)
-Heroes/sylph_cast.png,lighting_direction,warning,False,0.0604,lower-right brighter than upper-left (shading rule: light from upper-left)
 Heroes/zephyr_cast.png,lighting_direction,warning,False,0.2757,lower-right brighter than upper-left (shading rule: light from upper-left)
 Heroes/zephyr_downed.png,lighting_direction,warning,False,0.2058,lower-right brighter than upper-left (shading rule: light from upper-left)
 Heroes/zephyr_evoA.png,lighting_direction,warning,False,0.0765,lower-right brighter than upper-left (shading rule: light from upper-left)
 Heroes/zephyr_evoB_cast.png,lighting_direction,warning,False,0.2055,lower-right brighter than upper-left (shading rule: light from upper-left)
 Heroes/zephyr_idle.png,lighting_direction,warning,False,0.128,lower-right brighter than upper-left (shading rule: light from upper-left)
+Enemies/arcane_mimic_a.png,low_contrast_battlefield,warning,False,1.2493,body/outline contrast 1.25:1 on the least favourable battlefield
+Enemies/arcane_mimic_b.png,low_contrast_battlefield,warning,False,1.2493,body/outline contrast 1.25:1 on the least favourable battlefield
+Enemies/ash_imp_a.png,low_contrast_battlefield,warning,False,1.2493,body/outline contrast 1.25:1 on the least favourable battlefield
+Enemies/ash_imp_b.png,low_contrast_battlefield,warning,False,1.2493,body/outline contrast 1.25:1 on the least favourable battlefield
+Enemies/ashen_matriarch_a.png,low_contrast_battlefield,warning,False,1.2493,body/outline contrast 1.25:1 on the least favourable battlefield
+Enemies/ashen_matriarch_b.png,low_contrast_battlefield,warning,False,1.2493,body/outline contrast 1.25:1 on the least favourable battlefield
+Enemies/crystal_parasite_a.png,low_contrast_battlefield,warning,False,1.2493,body/outline contrast 1.25:1 on the least favourable battlefield
+Enemies/crystal_parasite_b.png,low_contrast_battlefield,warning,False,1.2493,body/outline contrast 1.25:1 on the least favourable battlefield
+Enemies/ember_hound_a.png,low_contrast_battlefield,warning,False,1.2493,body/outline contrast 1.25:1 on the least favourable battlefield
+Enemies/ember_hound_b.png,low_contrast_battlefield,warning,False,1.2493,body/outline contrast 1.25:1 on the least favourable battlefield
+Enemies/flame_devourer_a.png,low_contrast_battlefield,warning,False,1.2493,body/outline contrast 1.25:1 on the least favourable battlefield
+Enemies/flame_devourer_b.png,low_contrast_battlefield,warning,False,1.2493,body/outline contrast 1.25:1 on the least favourable battlefield
+Enemies/goblin_sprinter_a.png,low_contrast_battlefield,warning,False,1.5521,body/outline contrast 1.55:1 on the least favourable battlefield
+Enemies/goblin_sprinter_b.png,low_contrast_battlefield,warning,False,1.5532,body/outline contrast 1.55:1 on the least favourable battlefield
+Enemies/grunt_a.png,low_contrast_battlefield,warning,False,1.1249,body/outline contrast 1.12:1 on the least favourable battlefield
+Enemies/grunt_b.png,low_contrast_battlefield,warning,False,1.1568,body/outline contrast 1.16:1 on the least favourable battlefield
+Enemies/hex_binder_a.png,low_contrast_battlefield,warning,False,1.2493,body/outline contrast 1.25:1 on the least favourable battlefield
+Enemies/hex_binder_b.png,low_contrast_battlefield,warning,False,1.2493,body/outline contrast 1.25:1 on the least favourable battlefield
+Enemies/hexcaster_a.png,low_contrast_battlefield,warning,False,1.2663,body/outline contrast 1.27:1 on the least favourable battlefield
+Enemies/hexcaster_b.png,low_contrast_battlefield,warning,False,1.214,body/outline contrast 1.21:1 on the least favourable battlefield
+Enemies/ignaroth_a.png,low_contrast_battlefield,warning,False,1.2493,body/outline contrast 1.25:1 on the least favourable battlefield
+Enemies/ignaroth_b.png,low_contrast_battlefield,warning,False,1.2493,body/outline contrast 1.25:1 on the least favourable battlefield
+Enemies/ironclad_warlord_a.png,low_contrast_battlefield,warning,False,1.541,body/outline contrast 1.54:1 on the least favourable battlefield
+Enemies/ironclad_warlord_b.png,low_contrast_battlefield,warning,False,1.5783,body/outline contrast 1.58:1 on the least favourable battlefield
+Enemies/juggernaut_a.png,low_contrast_battlefield,warning,False,1.2052,body/outline contrast 1.21:1 on the least favourable battlefield
+Enemies/juggernaut_b.png,low_contrast_battlefield,warning,False,1.184,body/outline contrast 1.18:1 on the least favourable battlefield
+Enemies/mana_leech_a.png,low_contrast_battlefield,warning,False,1.4916,body/outline contrast 1.49:1 on the least favourable battlefield
+Enemies/mana_leech_b.png,low_contrast_battlefield,warning,False,1.4916,body/outline contrast 1.49:1 on the least favourable battlefield
+Enemies/nyxhollow_a.png,low_contrast_battlefield,warning,False,1.2493,body/outline contrast 1.25:1 on the least favourable battlefield
+Enemies/nyxhollow_b.png,low_contrast_battlefield,warning,False,1.2493,body/outline contrast 1.25:1 on the least favourable battlefield
+Enemies/rift_summoner_a.png,low_contrast_battlefield,warning,False,1.2493,body/outline contrast 1.25:1 on the least favourable battlefield
+Enemies/rift_summoner_b.png,low_contrast_battlefield,warning,False,1.2493,body/outline contrast 1.25:1 on the least favourable battlefield
+Enemies/rift_warden_a.png,low_contrast_battlefield,warning,False,1.2232,body/outline contrast 1.22:1 on the least favourable battlefield
+Enemies/rift_warden_b.png,low_contrast_battlefield,warning,False,1.3673,body/outline contrast 1.37:1 on the least favourable battlefield
+Enemies/rootbound_treant_a.png,low_contrast_battlefield,warning,False,1.4255,body/outline contrast 1.43:1 on the least favourable battlefield
+Enemies/rootbound_treant_b.png,low_contrast_battlefield,warning,False,1.4255,body/outline contrast 1.43:1 on the least favourable battlefield
+Enemies/storm_harpy_a.png,low_contrast_battlefield,warning,False,1.1717,body/outline contrast 1.17:1 on the least favourable battlefield
+Enemies/storm_harpy_b.png,low_contrast_battlefield,warning,False,1.1683,body/outline contrast 1.17:1 on the least favourable battlefield
+Enemies/thornmother_a.png,low_contrast_battlefield,warning,False,1.488,body/outline contrast 1.49:1 on the least favourable battlefield
+Enemies/thornmother_b.png,low_contrast_battlefield,warning,False,1.4961,body/outline contrast 1.50:1 on the least favourable battlefield
+Enemies/void_priest_a.png,low_contrast_battlefield,warning,False,1.2493,body/outline contrast 1.25:1 on the least favourable battlefield
+Enemies/void_priest_b.png,low_contrast_battlefield,warning,False,1.2493,body/outline contrast 1.25:1 on the least favourable battlefield
+Heroes/aeris_evoB.png,low_contrast_battlefield,warning,False,1.356,body/outline contrast 1.36:1 on the least favourable battlefield
+Heroes/aeris_evoB_cast.png,low_contrast_battlefield,warning,False,1.4293,body/outline contrast 1.43:1 on the least favourable battlefield
+Heroes/ashara_idle.png,low_contrast_battlefield,warning,False,1.5422,body/outline contrast 1.54:1 on the least favourable battlefield
+Heroes/ignis_cast.png,low_contrast_battlefield,warning,False,1.3427,body/outline contrast 1.34:1 on the least favourable battlefield
+Heroes/ignis_evoA.png,low_contrast_battlefield,warning,False,1.3365,body/outline contrast 1.34:1 on the least favourable battlefield
+Heroes/ignis_evoA_cast.png,low_contrast_battlefield,warning,False,1.142,body/outline contrast 1.14:1 on the least favourable battlefield
+Heroes/ignis_evoB.png,low_contrast_battlefield,warning,False,1.2654,body/outline contrast 1.27:1 on the least favourable battlefield
+Heroes/ignis_evoB_cast.png,low_contrast_battlefield,warning,False,1.1946,body/outline contrast 1.19:1 on the least favourable battlefield
+Heroes/ignis_idle.png,low_contrast_battlefield,warning,False,1.4195,body/outline contrast 1.42:1 on the least favourable battlefield
+Heroes/kael_cast.png,low_contrast_battlefield,warning,False,1.4604,body/outline contrast 1.46:1 on the least favourable battlefield
+Heroes/kael_evoB.png,low_contrast_battlefield,warning,False,1.4355,body/outline contrast 1.44:1 on the least favourable battlefield
+Heroes/kael_idle.png,low_contrast_battlefield,warning,False,1.2493,body/outline contrast 1.25:1 on the least favourable battlefield
+Heroes/maelis_cast.png,low_contrast_battlefield,warning,False,1.349,body/outline contrast 1.35:1 on the least favourable battlefield
+Heroes/maelis_evoA.png,low_contrast_battlefield,warning,False,1.3808,body/outline contrast 1.38:1 on the least favourable battlefield
+Heroes/maelis_evoA_cast.png,low_contrast_battlefield,warning,False,1.3416,body/outline contrast 1.34:1 on the least favourable battlefield
+Heroes/maelis_evoB.png,low_contrast_battlefield,warning,False,1.5944,body/outline contrast 1.59:1 on the least favourable battlefield
+Heroes/maelis_idle.png,low_contrast_battlefield,warning,False,1.349,body/outline contrast 1.35:1 on the least favourable battlefield
+Heroes/marina_cast.png,low_contrast_battlefield,warning,False,1.2109,body/outline contrast 1.21:1 on the least favourable battlefield
+Heroes/marina_idle.png,low_contrast_battlefield,warning,False,1.1313,body/outline contrast 1.13:1 on the least favourable battlefield
+Heroes/morven_cast.png,low_contrast_battlefield,warning,False,1.2493,body/outline contrast 1.25:1 on the least favourable battlefield
+Heroes/morven_evoA.png,low_contrast_battlefield,warning,False,1.2493,body/outline contrast 1.25:1 on the least favourable battlefield
+Heroes/morven_evoA_cast.png,low_contrast_battlefield,warning,False,1.2493,body/outline contrast 1.25:1 on the least favourable battlefield
+Heroes/morven_evoB.png,low_contrast_battlefield,warning,False,1.2493,body/outline contrast 1.25:1 on the least favourable battlefield
+Heroes/morven_evoB_cast.png,low_contrast_battlefield,warning,False,1.2493,body/outline contrast 1.25:1 on the least favourable battlefield
+Heroes/morven_idle.png,low_contrast_battlefield,warning,False,1.2493,body/outline contrast 1.25:1 on the least favourable battlefield
+Heroes/nyxara_cast.png,low_contrast_battlefield,warning,False,1.2493,body/outline contrast 1.25:1 on the least favourable battlefield
+Heroes/nyxara_evoA.png,low_contrast_battlefield,warning,False,1.2493,body/outline contrast 1.25:1 on the least favourable battlefield
+Heroes/nyxara_evoA_cast.png,low_contrast_battlefield,warning,False,1.2493,body/outline contrast 1.25:1 on the least favourable battlefield
+Heroes/nyxara_evoB.png,low_contrast_battlefield,warning,False,1.2493,body/outline contrast 1.25:1 on the least favourable battlefield
+Heroes/nyxara_evoB_cast.png,low_contrast_battlefield,warning,False,1.2493,body/outline contrast 1.25:1 on the least favourable battlefield
+Heroes/nyxara_idle.png,low_contrast_battlefield,warning,False,1.2493,body/outline contrast 1.25:1 on the least favourable battlefield
+Heroes/oriane_cast.png,low_contrast_battlefield,warning,False,1.2493,body/outline contrast 1.25:1 on the least favourable battlefield
+Heroes/oriane_evoA.png,low_contrast_battlefield,warning,False,1.2493,body/outline contrast 1.25:1 on the least favourable battlefield
+Heroes/oriane_evoA_cast.png,low_contrast_battlefield,warning,False,1.241,body/outline contrast 1.24:1 on the least favourable battlefield
+Heroes/oriane_idle.png,low_contrast_battlefield,warning,False,1.2493,body/outline contrast 1.25:1 on the least favourable battlefield
+Heroes/raiden_cast.png,low_contrast_battlefield,warning,False,1.2493,body/outline contrast 1.25:1 on the least favourable battlefield
+Heroes/raiden_evoA.png,low_contrast_battlefield,warning,False,1.4857,body/outline contrast 1.49:1 on the least favourable battlefield
+Heroes/raiden_evoA_cast.png,low_contrast_battlefield,warning,False,1.4857,body/outline contrast 1.49:1 on the least favourable battlefield
+Heroes/raiden_evoB.png,low_contrast_battlefield,warning,False,1.2528,body/outline contrast 1.25:1 on the least favourable battlefield
+Heroes/raiden_evoB_cast.png,low_contrast_battlefield,warning,False,1.4664,body/outline contrast 1.47:1 on the least favourable battlefield
+Heroes/raiden_idle.png,low_contrast_battlefield,warning,False,1.2493,body/outline contrast 1.25:1 on the least favourable battlefield
+Heroes/sable_cast.png,low_contrast_battlefield,warning,False,1.2493,body/outline contrast 1.25:1 on the least favourable battlefield
+Heroes/sable_evoA.png,low_contrast_battlefield,warning,False,1.2121,body/outline contrast 1.21:1 on the least favourable battlefield
+Heroes/sable_evoA_cast.png,low_contrast_battlefield,warning,False,1.2398,body/outline contrast 1.24:1 on the least favourable battlefield
+Heroes/sable_idle.png,low_contrast_battlefield,warning,False,1.2493,body/outline contrast 1.25:1 on the least favourable battlefield
+Heroes/solenne_evoA_cast.png,low_contrast_battlefield,warning,False,1.2493,body/outline contrast 1.25:1 on the least favourable battlefield
+Heroes/sylph_cast.png,low_contrast_battlefield,warning,False,1.1647,body/outline contrast 1.16:1 on the least favourable battlefield
+Heroes/sylph_idle.png,low_contrast_battlefield,warning,False,1.2077,body/outline contrast 1.21:1 on the least favourable battlefield
+Heroes/terra_cast.png,low_contrast_battlefield,warning,False,1.2275,body/outline contrast 1.23:1 on the least favourable battlefield
+Heroes/terra_idle.png,low_contrast_battlefield,warning,False,1.0438,body/outline contrast 1.04:1 on the least favourable battlefield
+Heroes/vesper_cast.png,low_contrast_battlefield,warning,False,1.5338,body/outline contrast 1.53:1 on the least favourable battlefield
+Heroes/vesper_evoA.png,low_contrast_battlefield,warning,False,1.2381,body/outline contrast 1.24:1 on the least favourable battlefield
+Heroes/vesper_evoA_cast.png,low_contrast_battlefield,warning,False,1.2363,body/outline contrast 1.24:1 on the least favourable battlefield
+Heroes/vesper_idle.png,low_contrast_battlefield,warning,False,1.5031,body/outline contrast 1.50:1 on the least favourable battlefield
+Heroes/veyra_cast.png,low_contrast_battlefield,warning,False,1.5769,body/outline contrast 1.58:1 on the least favourable battlefield
+Heroes/veyra_evoA.png,low_contrast_battlefield,warning,False,1.2493,body/outline contrast 1.25:1 on the least favourable battlefield
+Heroes/veyra_evoA_cast.png,low_contrast_battlefield,warning,False,1.2844,body/outline contrast 1.28:1 on the least favourable battlefield
+Heroes/veyra_evoB.png,low_contrast_battlefield,warning,False,1.2493,body/outline contrast 1.25:1 on the least favourable battlefield
+Heroes/veyra_evoB_cast.png,low_contrast_battlefield,warning,False,1.3392,body/outline contrast 1.34:1 on the least favourable battlefield
+Heroes/veyra_idle.png,low_contrast_battlefield,warning,False,1.3681,body/outline contrast 1.37:1 on the least favourable battlefield
+Heroes/voltrix_cast.png,low_contrast_battlefield,warning,False,1.5738,body/outline contrast 1.57:1 on the least favourable battlefield
 Heroes/voltrix_evoA_cast.png,low_contrast_battlefield,warning,False,1.4213,body/outline contrast 1.42:1 on the least favourable battlefield
+Heroes/voltrix_idle.png,low_contrast_battlefield,warning,False,1.5738,body/outline contrast 1.57:1 on the least favourable battlefield
+Heroes/zerith_cast.png,low_contrast_battlefield,warning,False,1.2493,body/outline contrast 1.25:1 on the least favourable battlefield
+Heroes/zerith_evoA.png,low_contrast_battlefield,warning,False,1.2493,body/outline contrast 1.25:1 on the least favourable battlefield
+Heroes/zerith_evoA_cast.png,low_contrast_battlefield,warning,False,1.2592,body/outline contrast 1.26:1 on the least favourable battlefield
+Heroes/zerith_evoB.png,low_contrast_battlefield,warning,False,1.2493,body/outline contrast 1.25:1 on the least favourable battlefield
+Heroes/zerith_evoB_cast.png,low_contrast_battlefield,warning,False,1.2493,body/outline contrast 1.25:1 on the least favourable battlefield
+Heroes/zerith_idle.png,low_contrast_battlefield,warning,False,1.2493,body/outline contrast 1.25:1 on the least favourable battlefield
 Enemies/aetherion_a.png,low_contrast_spells,warning,False,1.0145,body contrast 1.01:1 against dense spell fields
 Enemies/aetherion_b.png,low_contrast_spells,warning,False,1.0372,body contrast 1.04:1 against dense spell fields
 Enemies/blight_shambler_a.png,low_contrast_spells,warning,False,1.1164,body contrast 1.12:1 against dense spell fields
 Enemies/blight_shambler_b.png,low_contrast_spells,warning,False,1.0889,body contrast 1.09:1 against dense spell fields
 Enemies/chaos_elemental_a.png,low_contrast_spells,warning,False,1.121,body contrast 1.12:1 against dense spell fields
 Enemies/chaos_elemental_b.png,low_contrast_spells,warning,False,1.132,body contrast 1.13:1 against dense spell fields
-Enemies/grunt_a.png,low_contrast_spells,warning,False,1.2616,body contrast 1.26:1 against dense spell fields
-Enemies/grunt_b.png,low_contrast_spells,warning,False,1.2616,body contrast 1.26:1 against dense spell fields
 Enemies/mirror_knight_a.png,low_contrast_spells,warning,False,1.0309,body contrast 1.03:1 against dense spell fields
 Enemies/mirror_knight_b.png,low_contrast_spells,warning,False,1.0309,body contrast 1.03:1 against dense spell fields
 Enemies/ravager_a.png,low_contrast_spells,warning,False,1.2228,body contrast 1.22:1 against dense spell fields
@@ -88,7 +190,6 @@ Enemies/spore_carrier_a.png,low_contrast_spells,warning,False,1.3481,body contra
 Enemies/spore_carrier_b.png,low_contrast_spells,warning,False,1.3027,body contrast 1.30:1 against dense spell fields
 Enemies/stone_burrower_a.png,low_contrast_spells,warning,False,1.1782,body contrast 1.18:1 against dense spell fields
 Enemies/stone_burrower_b.png,low_contrast_spells,warning,False,1.336,body contrast 1.34:1 against dense spell fields
-Enemies/storm_harpy_b.png,low_contrast_spells,warning,False,1.2012,body contrast 1.20:1 against dense spell fields
 Enemies/summoner_a.png,low_contrast_spells,warning,False,1.2932,body contrast 1.29:1 against dense spell fields
 Enemies/summoner_b.png,low_contrast_spells,warning,False,1.2932,body contrast 1.29:1 against dense spell fields
 Enemies/thunder_drummer_a.png,low_contrast_spells,warning,False,1.2858,body contrast 1.29:1 against dense spell fields
@@ -108,12 +209,8 @@ Heroes/doran_evoA_cast.png,low_contrast_spells,warning,False,1.1959,body contras
 Heroes/doran_evoB.png,low_contrast_spells,warning,False,1.0212,body contrast 1.02:1 against dense spell fields
 Heroes/doran_evoB_cast.png,low_contrast_spells,warning,False,1.2329,body contrast 1.23:1 against dense spell fields
 Heroes/doran_idle.png,low_contrast_spells,warning,False,1.1566,body contrast 1.16:1 against dense spell fields
-Heroes/ignis_cast.png,low_contrast_spells,warning,False,1.1076,body contrast 1.11:1 against dense spell fields
-Heroes/ignis_evoA.png,low_contrast_spells,warning,False,1.0939,body contrast 1.09:1 against dense spell fields
-Heroes/ignis_evoA_cast.png,low_contrast_spells,warning,False,1.0939,body contrast 1.09:1 against dense spell fields
-Heroes/ignis_evoB.png,low_contrast_spells,warning,False,1.1076,body contrast 1.11:1 against dense spell fields
-Heroes/ignis_evoB_cast.png,low_contrast_spells,warning,False,1.1076,body contrast 1.11:1 against dense spell fields
-Heroes/ignis_idle.png,low_contrast_spells,warning,False,1.1076,body contrast 1.11:1 against dense spell fields
+Heroes/ignis_evoB.png,low_contrast_spells,warning,False,1.0824,body contrast 1.08:1 against dense spell fields
+Heroes/ignis_evoB_cast.png,low_contrast_spells,warning,False,1.1934,body contrast 1.19:1 against dense spell fields
 Heroes/isolde_cast.png,low_contrast_spells,warning,False,1.344,body contrast 1.34:1 against dense spell fields
 Heroes/isolde_evoA.png,low_contrast_spells,warning,False,1.0507,body contrast 1.05:1 against dense spell fields
 Heroes/isolde_evoA_cast.png,low_contrast_spells,warning,False,1.0126,body contrast 1.01:1 against dense spell fields
@@ -130,10 +227,10 @@ Heroes/magnus_evoA_cast.png,low_contrast_spells,warning,False,1.0247,body contra
 Heroes/magnus_evoB.png,low_contrast_spells,warning,False,1.2536,body contrast 1.25:1 against dense spell fields
 Heroes/magnus_evoB_cast.png,low_contrast_spells,warning,False,1.0342,body contrast 1.03:1 against dense spell fields
 Heroes/magnus_idle.png,low_contrast_spells,warning,False,1.1902,body contrast 1.19:1 against dense spell fields
-Heroes/marina_cast.png,low_contrast_spells,warning,False,1.0638,body contrast 1.06:1 against dense spell fields
+Heroes/marina_cast.png,low_contrast_spells,warning,False,1.212,body contrast 1.21:1 against dense spell fields
 Heroes/marina_evoA.png,low_contrast_spells,warning,False,1.0664,body contrast 1.07:1 against dense spell fields
 Heroes/marina_evoA_cast.png,low_contrast_spells,warning,False,1.0764,body contrast 1.08:1 against dense spell fields
-Heroes/marina_idle.png,low_contrast_spells,warning,False,1.163,body contrast 1.16:1 against dense spell fields
+Heroes/marina_idle.png,low_contrast_spells,warning,False,1.2785,body contrast 1.28:1 against dense spell fields
 Heroes/mirel_cast.png,low_contrast_spells,warning,False,1.1807,body contrast 1.18:1 against dense spell fields
 Heroes/mirel_evoA.png,low_contrast_spells,warning,False,1.0166,body contrast 1.02:1 against dense spell fields
 Heroes/mirel_evoA_cast.png,low_contrast_spells,warning,False,1.0166,body contrast 1.02:1 against dense spell fields
@@ -147,7 +244,6 @@ Heroes/solenne_cast.png,low_contrast_spells,warning,False,1.0319,body contrast 1
 Heroes/solenne_evoB.png,low_contrast_spells,warning,False,1.3327,body contrast 1.33:1 against dense spell fields
 Heroes/solenne_idle.png,low_contrast_spells,warning,False,1.0954,body contrast 1.10:1 against dense spell fields
 Heroes/sylph_evoA.png,low_contrast_spells,warning,False,1.2661,body contrast 1.27:1 against dense spell fields
-Heroes/sylph_idle.png,low_contrast_spells,warning,False,1.1534,body contrast 1.15:1 against dense spell fields
 Heroes/terra_evoA_cast.png,low_contrast_spells,warning,False,1.2527,body contrast 1.25:1 against dense spell fields
 Heroes/terra_evoB.png,low_contrast_spells,warning,False,1.2777,body contrast 1.28:1 against dense spell fields
 Heroes/terra_evoB_cast.png,low_contrast_spells,warning,False,1.2777,body contrast 1.28:1 against dense spell fields
@@ -172,20 +268,21 @@ Enemies/swarmling_b.png,overdraw_waste,info,False,0.0998,only 10% of the quad is
 Heroes/caelis_downed.png,overdraw_waste,info,False,0.1143,only 11% of the quad is opaque (Tight mesh limits the fill cost)
 Heroes/elowen_downed.png,overdraw_waste,info,False,0.1163,only 12% of the quad is opaque (Tight mesh limits the fill cost)
 Heroes/freya_downed.png,overdraw_waste,info,False,0.1171,only 12% of the quad is opaque (Tight mesh limits the fill cost)
-Heroes/ignis_downed.png,overdraw_waste,info,False,0.1192,only 12% of the quad is opaque (Tight mesh limits the fill cost)
+Heroes/ignis_downed.png,overdraw_waste,info,False,0.1031,only 10% of the quad is opaque (Tight mesh limits the fill cost)
 Heroes/isolde_downed.png,overdraw_waste,info,False,0.1148,only 11% of the quad is opaque (Tight mesh limits the fill cost)
 Heroes/magnus_downed.png,overdraw_waste,info,False,0.1184,only 12% of the quad is opaque (Tight mesh limits the fill cost)
-Heroes/marina_downed.png,overdraw_waste,info,False,0.1142,only 11% of the quad is opaque (Tight mesh limits the fill cost)
+Heroes/marina_downed.png,overdraw_waste,info,False,0.0763,only 8% of the quad is opaque (Tight mesh limits the fill cost)
 Heroes/raiden_downed.png,overdraw_waste,info,False,0.1016,only 10% of the quad is opaque (Tight mesh limits the fill cost)
-Heroes/sylph_downed.png,overdraw_waste,info,False,0.1146,only 11% of the quad is opaque (Tight mesh limits the fill cost)
+Heroes/sylph_downed.png,overdraw_waste,info,False,0.1116,only 11% of the quad is opaque (Tight mesh limits the fill cost)
 Heroes/tidal_downed.png,overdraw_waste,info,False,0.1191,only 12% of the quad is opaque (Tight mesh limits the fill cost)
 Heroes/vesper_downed.png,overdraw_waste,info,False,0.1156,only 12% of the quad is opaque (Tight mesh limits the fill cost)
 Heroes/veyra_downed.png,overdraw_waste,info,False,0.1157,only 12% of the quad is opaque (Tight mesh limits the fill cost)
 Heroes/volt_downed.png,overdraw_waste,info,False,0.1159,only 12% of the quad is opaque (Tight mesh limits the fill cost)
 Heroes/zephyr_downed.png,overdraw_waste,info,False,0.107,only 11% of the quad is opaque (Tight mesh limits the fill cost)
-Enemies/storm_wisp_b.png,scale_outlier,warning,False,0.6214,silhouette height 119px vs category median 192px
-Enemies/swarmling_a.png,scale_outlier,warning,False,0.5901,silhouette height 113px vs category median 192px
-Enemies/swarmling_b.png,scale_outlier,warning,False,0.611,silhouette height 117px vs category median 192px
+Enemies/storm_wisp_b.png,scale_outlier,warning,False,0.6296,silhouette height 119px vs category median 189px
+Enemies/swarmling_a.png,scale_outlier,warning,False,0.5979,silhouette height 113px vs category median 189px
+Enemies/swarmling_b.png,scale_outlier,warning,False,0.619,silhouette height 117px vs category median 189px
+World/*,texture_budget,warning,False,99.9473,99.9 MB RGBA32 exceeds the 90 MB budget
 Enemies/goblin_sprinter_a.png,white_halo,warning,False,0.2145,bright fringe on semi-transparent edge (premultiply/bleed issue)
 Enemies/goblin_sprinter_b.png,white_halo,warning,False,0.2065,bright fringe on semi-transparent edge (premultiply/bleed issue)
 Enemies/spore_carrier_a.png,white_halo,warning,False,0.3743,bright fringe on semi-transparent edge (premultiply/bleed issue)
@@ -228,10 +325,8 @@ Heroes/kael_evoB.png,white_halo,warning,False,0.9318,bright fringe on semi-trans
 Heroes/kael_evoB_cast.png,white_halo,warning,False,0.9367,bright fringe on semi-transparent edge (premultiply/bleed issue)
 Heroes/seren_evoB.png,white_halo,warning,False,0.3977,bright fringe on semi-transparent edge (premultiply/bleed issue)
 Heroes/seren_evoB_cast.png,white_halo,warning,False,0.4808,bright fringe on semi-transparent edge (premultiply/bleed issue)
-Heroes/sylph_cast.png,white_halo,warning,False,0.8329,bright fringe on semi-transparent edge (premultiply/bleed issue)
 Heroes/sylph_evoB.png,white_halo,warning,False,0.9227,bright fringe on semi-transparent edge (premultiply/bleed issue)
 Heroes/sylph_evoB_cast.png,white_halo,warning,False,0.9478,bright fringe on semi-transparent edge (premultiply/bleed issue)
-Heroes/sylph_idle.png,white_halo,warning,False,0.1774,bright fringe on semi-transparent edge (premultiply/bleed issue)
 Heroes/zephyr_cast.png,white_halo,warning,False,0.8198,bright fringe on semi-transparent edge (premultiply/bleed issue)
 Heroes/zephyr_evoB.png,white_halo,warning,False,0.9483,bright fringe on semi-transparent edge (premultiply/bleed issue)
 Heroes/zephyr_evoB_cast.png,white_halo,warning,False,0.9506,bright fringe on semi-transparent edge (premultiply/bleed issue)
