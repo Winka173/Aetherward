@@ -680,6 +680,11 @@ namespace Aetherward.Sim.Combat
             h.State = HeroState.Downed;
             h.Target = null;
             Stats.HeroDowns++;
+            if (h.Role == HeroRole.Guardian && Stats.FirstGuardianDownTime < 0f)
+            {
+                Stats.FirstGuardianDown = h.Def.Id;
+                Stats.FirstGuardianDownTime = Time;
+            }
             Emit(SimEventType.HeroDowned, h.Pos, Element.None, 0f, 0, h.Uid, h.Def.Id);
             foreach (EnemyUnit e in Enemies)
             {
@@ -756,7 +761,10 @@ namespace Aetherward.Sim.Combat
                 Stats.CrystalDamageByEnemy.TryGetValue(attacker.Def.Id, out float d);
                 Stats.CrystalDamageByEnemy[attacker.Def.Id] = d + amount;
                 if (!attacker.Leaked) { attacker.Leaked = true; Stats.Leaks++; }
+                Stats.CrystalDamageByLane.TryGetValue(attacker.Lane, out float ld);
+                Stats.CrystalDamageByLane[attacker.Lane] = ld + amount;
             }
+            if (Stats.FirstGuardianDownTime >= 0f) Stats.CrystalDamageAfterGuardianDown += amount;
             Emit(SimEventType.CrystalHit, Crystal.Pos, Element.None, amount, attacker?.Uid ?? 0, -1, attacker?.Def.Id);
             FireTrigger("crystal_hit", null, attacker, Crystal.Pos, null);
             if (Crystal.Hp <= 0f)

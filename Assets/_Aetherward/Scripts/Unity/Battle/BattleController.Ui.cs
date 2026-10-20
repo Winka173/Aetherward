@@ -419,6 +419,13 @@ namespace Aetherward.Game
             Block(0, 0, Ui.W, Ui.H);
             string titleKey = "reward." + s.CurrentReward.ToString().ToLowerInvariant();
             Ui.Label(0, 150, Ui.W, 80, L.Get(titleKey), 56, Ui.Gold, TextAnchor.UpperCenter, true);
+            // After-wave Battle Insights (P6): only when the wave actually hurt the Crystal.
+            if (s.WaveLog.Count > 0)
+            {
+                WaveRecord last = s.WaveLog[s.WaveLog.Count - 1];
+                for (int i = 0; i < last.Insights.Count && i < 2; i++)
+                    Ui.Label(0, 214 + i * 24, Ui.W, 24, InsightText.Describe(L, App.Content, last.Insights[i]), 17, Ui.Muted, TextAnchor.UpperCenter);
+            }
             switch (s.CurrentReward)
             {
                 case RewardKind.Draft: DrawCardChoice(false); break;

@@ -95,6 +95,11 @@ namespace Aetherward.Sim.Combat
         /// <summary>Effective damage by kind (Basic/Skill/Reaction/Dot/Trigger/Enemy) — each hit counted once.</summary>
         public readonly float[] DamageByKind = new float[6];
         public float HeroShieldAbsorbed;
+        /// <summary>Battle Insights evidence (P6): Crystal damage per lane, guardian collapse timing.</summary>
+        public readonly Dictionary<int, float> CrystalDamageByLane = new Dictionary<int, float>();
+        public string FirstGuardianDown;
+        public float FirstGuardianDownTime = -1f;
+        public float CrystalDamageAfterGuardianDown;
         public int MaxProcDepth;
         public int Kills;
         public int Leaks;

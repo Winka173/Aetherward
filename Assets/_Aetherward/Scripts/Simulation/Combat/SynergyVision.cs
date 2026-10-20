@@ -41,7 +41,7 @@ namespace Aetherward.Sim.Combat
             "tailwind", "bulwark", "radiant_guard", "plague_doctor", "backline_ward", "tempest_oracle", "radiant_hymn", "gloom_guard"
         };
 
-        public static SynergyReport Analyze(Battle b, IList<BondDef> activeBonds = null)
+        public static SynergyReport Analyze(Battle b, IList<BondDef> activeBonds = null, bool includeDowned = false)
         {
             var r = new SynergyReport();
             List<HeroUnit> hs = b.Heroes;
@@ -99,7 +99,7 @@ namespace Aetherward.Sim.Combat
                 if (lane < 0 || lane >= b.Arena.Lanes.Count) continue;
                 List<Vec2> pts = Sample(b.Arena.Lanes[lane].Points, 0.5f, 10f);
                 int hit = 0;
-                foreach (Vec2 p in pts) if (Covers(hs, p)) hit++;
+                foreach (Vec2 p in pts) if (Covers(hs, p, includeDowned)) hit++;
                 float cov = pts.Count > 0 ? (float)hit / pts.Count : 0f;
                 r.LaneCoverage[lane] = cov;
                 if (cov < 0.35f) r.Missing.Add("lane_uncovered:" + lane);
@@ -108,7 +108,7 @@ namespace Aetherward.Sim.Combat
             for (int k = 0; k < 36; k++)
             {
                 double a = k * 2.0 * System.Math.PI / 36.0;   // analysis only (never feeds the simulation)
-                if (Covers(hs, b.Crystal.Pos + new Vec2((float)System.Math.Cos(a), (float)System.Math.Sin(a)) * 3f)) ring++;
+                if (Covers(hs, b.Crystal.Pos + new Vec2((float)System.Math.Cos(a), (float)System.Math.Sin(a)) * 3f, includeDowned)) ring++;
             }
             r.CrystalCoverage = ring / 36f;
             return r;
@@ -122,9 +122,9 @@ namespace Aetherward.Sim.Combat
             if (h.SecondaryElement != Element.None && h.SecondaryElement != h.Def.Element) yield return h.SecondaryElement;
         }
 
-        private static bool Covers(List<HeroUnit> hs, Vec2 p)
+        private static bool Covers(List<HeroUnit> hs, Vec2 p, bool includeDowned)
         {
-            foreach (HeroUnit h in hs) if (!h.Downed && Vec2.Distance(h.Anchor, p) <= Reach(h)) return true;
+            foreach (HeroUnit h in hs) if ((includeDowned || !h.Downed) && Vec2.Distance(h.Anchor, p) <= Reach(h)) return true;
             return false;
         }
 

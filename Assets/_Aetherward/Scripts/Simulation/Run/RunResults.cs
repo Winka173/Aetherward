@@ -55,6 +55,7 @@ namespace Aetherward.Sim.Run
         public int ClosestSaveWave;
         public float ClosestSaveHpFraction = 1f;
         public string DecisiveUpgrade;
+        public readonly List<string> FinalInsights = new List<string>();   // Battle Insights of the last wave played
         public string ShareCode;
         public float MenuSeconds;
         public float DecisiveUpgradeDamage;
@@ -122,6 +123,7 @@ namespace Aetherward.Sim.Run
             foreach (var kv in s.SourceDamage)
                 if (kv.Value > r.DecisiveUpgradeDamage) { r.DecisiveUpgradeDamage = kv.Value; r.DecisiveUpgrade = kv.Key; }
             r.ShareCode = rc.ShareCode();
+            if (s.WaveLog.Count > 0) r.FinalInsights.AddRange(s.WaveLog[s.WaveLog.Count - 1].Insights);
             r.MenuSeconds = s.MenuSeconds;
             r.Relics.AddRange(s.Relics);
             r.Cards.AddRange(s.CardOrder);

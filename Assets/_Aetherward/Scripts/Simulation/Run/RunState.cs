@@ -77,6 +77,8 @@ namespace Aetherward.Sim.Run
         public int PeakEnemies;
         public int PeakReactionsPerSecond;
         public bool Cleared;
+        /// <summary>Battle Insights codes (P6), e.g. "threat|sapper|62|high"; localized by the view.</summary>
+        public readonly List<string> Insights = new List<string>();
     }
 
     /// <summary>

@@ -73,6 +73,10 @@ namespace Aetherward.Balance
             md.AppendLine("|---|---|---|---|---|---|");
             foreach (WaveRecord w in r.Waves) md.AppendLine($"| {w.Wave} | {w.Duration:F0} | {w.CrystalDamage:F0} | {w.CrystalHpAfter:F0} | {w.Kills} | {w.Leaks} |");
             md.AppendLine();
+            md.AppendLine("## Battle Insights (logged causes, per wave that hurt the Crystal)");
+            foreach (WaveRecord w in s.WaveLog)
+                foreach (string code in w.Insights) md.AppendLine($"- wave {w.Wave}: `{code}` — {InsightText.Describe(new Localization(db, "en"), db, code)}");
+            md.AppendLine();
             md.AppendLine("## Shareable build");
             md.AppendLine("```");
             md.AppendLine(rc.ShareCode());

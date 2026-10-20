@@ -48,6 +48,9 @@ namespace Aetherward.Game
                 Mathf.RoundToInt(_r.MenuSeconds / 60f));
             Ui.Label(0, 210, Ui.W, 30, turning, 18, Ui.Muted, TextAnchor.UpperCenter);
             if (Ui.Button(Ui.W - 300, 140, 260, 60, l.Get("results.copy_build"), Tone.Ghost, true, 20)) GUIUtility.systemCopyBuffer = _r.ShareCode;
+            // Battle Insights (P6): the final wave's logged causes, phrased by confidence.
+            for (int i = 0; i < _r.FinalInsights.Count && i < 3; i++)
+                Ui.Label(Ui.W / 2 - 600, 244 + i * 26, 1200, 26, "• " + InsightText.Describe(l, App.Content, _r.FinalInsights[i]), 18, Ui.White, TextAnchor.UpperCenter);
             if (App.Meta.LastMilestones.Count > 0)
             {
                 var names = new List<string>();

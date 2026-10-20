@@ -283,7 +283,7 @@ namespace Aetherward.Sim.Meta
                 waves.Add(JsonNode.NewObject().Set("wave", w.Wave).Set("dur", w.Duration).Set("cdmg", w.CrystalDamage)
                     .Set("chp", w.CrystalHpAfter).Set("kills", w.Kills).Set("leaks", w.Leaks).Set("reactions", w.Reactions)
                     .Set("downs", w.HeroDowns).Set("gold", w.GoldEarned).Set("peak", w.PeakEnemies).Set("pps", w.PeakReactionsPerSecond)
-                    .Set("cleared", w.Cleared));
+                    .Set("cleared", w.Cleared).Set("insights", StringArrayOrdered(w.Insights)));
             }
             JsonNode pending = JsonNode.NewArray();
             foreach (RewardKind r in s.PendingRewards) pending.Add(JsonNode.From(r.ToString()));
@@ -398,6 +398,7 @@ namespace Aetherward.Sim.Meta
                         Kills = w.Int("kills"), Leaks = w.Int("leaks"), Reactions = w.Int("reactions"), HeroDowns = w.Int("downs"),
                         GoldEarned = w.Int("gold"), PeakEnemies = w.Int("peak"), PeakReactionsPerSecond = w.Int("pps"), Cleared = w.Bool("cleared")
                     });
+                    s.WaveLog[s.WaveLog.Count - 1].Insights.AddRange(w.StringList("insights"));
                 }
                 ReadIntMap(d["reactionCounts"], s.ReactionCounts);
                 ReadFloatMap(d["reactionDamage"], s.ReactionDamage);
@@ -443,6 +444,13 @@ namespace Aetherward.Sim.Meta
         }
 
         // ------------------------------------------------------------------ helpers
+
+        private static JsonNode StringArrayOrdered(IEnumerable<string> items)
+        {
+            JsonNode a = JsonNode.NewArray();
+            foreach (string s in items) a.Add(JsonNode.From(s));
+            return a;
+        }
 
         private static JsonNode StringArray(IEnumerable<string> items)
         {

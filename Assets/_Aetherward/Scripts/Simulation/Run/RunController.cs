@@ -604,6 +604,7 @@ namespace Aetherward.Sim.Run
                 PeakReactionsPerSecond = b.Stats.PeakReactionsPerSecond,
                 Cleared = b.Outcome == BattleOutcome.Cleared
             };
+            record.Insights.AddRange(BattleInsights.ForWave(b));
             State.CrystalHp = Math.Max(0f, b.Crystal.Hp);
 
             if (b.Outcome == BattleOutcome.CrystalDestroyed)
