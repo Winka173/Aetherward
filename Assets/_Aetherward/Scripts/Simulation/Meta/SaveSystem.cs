@@ -41,6 +41,7 @@ namespace Aetherward.Sim.Meta
         public float FlashIntensity = 1f;     // 0..1 multiplier on hit/crystal flashes (photosensitivity)
         public bool PauseOnFocusLoss = true;  // auto-pause a battle when the app loses focus
         public bool BatterySaver;             // caps FPS at 30 and uses reduced VFX
+        public bool SynergyVision = true;     // pre-wave synergy overlay (opt-out for readability)
     }
 
     /// <summary>
@@ -121,7 +122,7 @@ namespace Aetherward.Sim.Meta
                 .Set("sfx", s.SfxVolume).Set("ui", s.UiVolume).Set("fast", s.DefaultFastSpeed)
                 .Set("reducedVfx", s.ReducedVfx).Set("shake", s.ScreenShake).Set("numbers", s.DamageNumbers)
                 .Set("contrast", s.HighContrast).Set("fps", s.TargetFps).Set("ranges", s.ShowRanges)
-                .Set("flash", Math.Round(s.FlashIntensity, 2)).Set("focusPause", s.PauseOnFocusLoss).Set("battery", s.BatterySaver));
+                .Set("flash", Math.Round(s.FlashIntensity, 2)).Set("focusPause", s.PauseOnFocusLoss).Set("battery", s.BatterySaver).Set("synergy", s.SynergyVision));
         }
 
         public SettingsModel LoadSettings()
@@ -144,6 +145,7 @@ namespace Aetherward.Sim.Meta
             s.FlashIntensity = Math.Max(0f, Math.Min(1f, d.Float("flash", 1f)));
             s.PauseOnFocusLoss = d.Bool("focusPause", true);
             s.BatterySaver = d.Bool("battery");
+            s.SynergyVision = d.Bool("synergy", true);
             return s;
         }
 

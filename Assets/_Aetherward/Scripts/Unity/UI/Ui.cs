@@ -245,6 +245,25 @@ namespace Aetherward.Game
             GUI.color = prev;
         }
 
+        /// <summary>Straight line in virtual coordinates (rotated white quad); dashed when <paramref name="dash"/> &gt; 0.</summary>
+        public static void Line(float x1, float y1, float x2, float y2, float width, Color c, float dash = 0f)
+        {
+            Rect a = R(x1, y1, 0, 0), b = R(x2, y2, 0, 0);
+            Vector2 p1 = a.position, p2 = b.position;
+            float len = (p2 - p1).magnitude;
+            if (len < 1f) return;
+            float wpx = Mathf.Max(1f, R(0, 0, width, width).width);
+            float dpx = dash > 0f ? Mathf.Max(2f, R(0, 0, dash, dash).width) : len;
+            Matrix4x4 m = GUI.matrix;
+            Color prev = GUI.color;
+            GUI.color = c;
+            GUIUtility.RotateAroundPivot(Mathf.Atan2(p2.y - p1.y, p2.x - p1.x) * Mathf.Rad2Deg, p1);
+            for (float t = 0f; t < len; t += dpx * 2f)
+                GUI.DrawTexture(new Rect(p1.x + t, p1.y - wpx / 2f, Mathf.Min(dpx, len - t), wpx), Texture2D.whiteTexture);
+            GUI.matrix = m;
+            GUI.color = prev;
+        }
+
         public static void DrawRect(float x, float y, float w, float h, Color c)
         {
             Color prev = GUI.color;

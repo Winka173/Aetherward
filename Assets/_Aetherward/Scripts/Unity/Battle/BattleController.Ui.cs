@@ -233,10 +233,90 @@ namespace Aetherward.Game
             Block(x, y, values.Length * 150, 90);
         }
 
+        // ------------------------------------------------------------------ synergy vision (P1)
+
+        private SynergyReport _synergy;
+        private Battle _synergyBattle;
+        private string _synergyKey;
+        private int _synergyFocus = -1;
+
+        private string FormationKey()
+        {
+            var sb = new System.Text.StringBuilder();
+            foreach (HeroRunState h in _rc.State.Heroes) sb.Append(h.DefId).Append(':').Append(h.Node).Append(':').Append(h.EvolutionId).Append(':').Append(h.Level).Append(':').Append(h.Downed).Append(';');
+            return sb.Append(_rc.State.Wave).ToString();
+        }
+
+        /// <summary>
+        /// Pre-wave overlay: lines between heroes for reaction rules (element colour), support auras (green), bonds (gold)
+        /// and conflicts (red). Dashed = conditional, with the reason. Explains, never recommends a formation.
+        /// </summary>
+        private void DrawSynergyVision()
+        {
+            string key = FormationKey();
+            if (key != _synergyKey)
+            {
+                _synergyKey = key;
+                _synergyBattle = new Battle(_rc.BuildBattleSetup());
+                _synergy = SynergyReport.Analyze(_synergyBattle, _rc.ActiveBonds());
+            }
+            Battle b = _synergyBattle;
+            if (b == null || _synergy == null) return;
+            var pos = new Vector2[b.Heroes.Count];
+            for (int i = 0; i < pos.Length; i++) pos[i] = Ui.FromScreen(_cam.WorldToScreenPoint(WorldGfx.V(b.Heroes[i].Anchor)));
+            _synergyFocus = -1;
+            for (int i = 0; i < pos.Length; i++)
+                if (Ui.Hit(pos[i].x - 50, pos[i].y - 120, 100, 130)) _synergyFocus = i;
+            int labelled = 0;
+            foreach (SynergyLink l in _synergy.Links)
+            {
+                if (_synergyFocus >= 0 && l.A != _synergyFocus && l.B != _synergyFocus) continue;
+                Color c = l.Kind == SynergyKind.Reaction ? Color.Lerp(Ui.ElementColor(b.Heroes[l.A].Def.Element), Ui.ElementColor(b.Heroes[l.B].Def.Element), 0.5f)
+                        : l.Kind == SynergyKind.Buff ? new Color(0.45f, 0.95f, 0.55f) : l.Kind == SynergyKind.Bond ? Ui.Gold : Ui.Bad;
+                c.a = l.Active ? 0.85f : 0.45f;
+                float off = l.Kind == SynergyKind.Reaction ? 0f : l.Kind == SynergyKind.Buff ? 6f : l.Kind == SynergyKind.Bond ? -6f : 10f;
+                Vector2 a = pos[l.A] + new Vector2(0, off - 40), z = pos[l.B] + new Vector2(0, off - 40);
+                Ui.Line(a.x, a.y, z.x, z.y, l.Active ? 5f : 3f, c, l.Active ? 0f : 10f);
+                if (_synergyFocus >= 0 || labelled < 8)
+                {
+                    labelled++;
+                    Vector2 mid = (a + z) / 2f + new Vector2(0, off * 3f);
+                    string id = l.RuleId.Substring(l.RuleId.IndexOf(':') + 1);
+                    string name = l.Kind == SynergyKind.Reaction ? L.ReactionName(id) : L.Get("synergy." + l.Kind.ToString().ToLowerInvariant()) + " · " + id;
+                    if (!l.Active || l.Condition != null) name += " — " + L.Get("synergy.cond." + l.Condition);
+                    Ui.Label(mid.x - 160, mid.y - 14, 320, 28, name, 16, c, TextAnchor.MiddleCenter, true, true, true);
+                }
+            }
+            // Coverage & missing pieces panel (bottom-left, above the tactic picker).
+            float px = 16, py = Ui.H - 420, pw = 520;
+            var lines = new List<string> { L.Format("synergy.crystal", Mathf.RoundToInt(_synergy.CrystalCoverage * 100f)) };
+            foreach (var kv in _synergy.LaneCoverage)
+                lines.Add(L.Format("synergy.lane", L.Get(Arena.Lanes[kv.Key].NameKey), Mathf.RoundToInt(kv.Value * 100f)));
+            foreach (string m in _synergy.Missing)
+            {
+                int c = m.IndexOf(':');
+                string arg = m.Substring(c + 1);
+                if (m.StartsWith("isolated_element")) arg = L.Get("element." + arg);
+                else if (m.StartsWith("lane_uncovered") && int.TryParse(arg, out int li) && li < Arena.Lanes.Count) arg = L.Get(Arena.Lanes[li].NameKey);
+                lines.Add("• " + L.Format("synergy.missing." + m.Substring(0, c), arg));
+            }
+            float ph = 50 + lines.Count * 26;
+            Ui.Panel(px, py - ph, pw, ph);
+            Block(px, py - ph, pw, ph);
+            Ui.Label(px + 16, py - ph + 10, pw - 32, 30, L.Get("synergy.title"), 20, Ui.Gold, TextAnchor.UpperLeft, true);
+            for (int i = 0; i < lines.Count; i++) Ui.Label(px + 16, py - ph + 40 + i * 26, pw - 32, 26, lines[i], 17, Ui.White);
+        }
+
         private void DrawPrepare()
         {
             RunState s = _rc.State;
             DrawTacticPicker(Ui.W / 2 - 370, Ui.H - 260);
+            if (Ui.Button(Ui.W / 2 + 400, Ui.H - 228, 190, 56, L.Get("synergy.toggle"), App.Settings.SynergyVision ? Tone.Secondary : Tone.Ghost, true, 16))
+            {
+                App.Settings.SynergyVision = !App.Settings.SynergyVision;
+                App.SaveSettings();
+            }
+            if (App.Settings.SynergyVision) DrawSynergyVision();
             WaveDef w = _rc.CurrentWave;
             // incoming panel (left)
             float px = 16, py = 156, pw = 560;

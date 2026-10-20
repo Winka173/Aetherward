@@ -44,6 +44,9 @@ namespace Aetherward.Game
             bool ranges = Ui.Toggle(inner + half + 40, row, half, rh, l.Get("settings.ranges"), s.ShowRanges); row += rh;
             bool focusPause = Ui.Toggle(inner, row, half, rh, l.Get("settings.focus_pause"), s.PauseOnFocusLoss);
             bool battery = Ui.Toggle(inner + half + 40, row, half, rh, l.Get("settings.battery"), s.BatterySaver); row += rh;
+            bool synergy = Ui.Toggle(inner, row, half, rh, l.Get("settings.synergy"), s.SynergyVision); row += rh;
+            changed |= synergy != s.SynergyVision;
+            s.SynergyVision = synergy;
             float flash = Ui.Stepper(inner, row, iw, rh, l.Get("settings.flash"), s.FlashIntensity); row += rh;
             changed |= focusPause != s.PauseOnFocusLoss || battery != s.BatterySaver || flash != s.FlashIntensity;
             bool reapply = battery != s.BatterySaver || flash != s.FlashIntensity;
