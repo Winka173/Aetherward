@@ -191,6 +191,54 @@ namespace Aetherward.Game
             return s;
         }
 
+        [Serializable]
+        private sealed class FlipbookMeta
+        {
+            public int cols = 4, rows = 4, frames = 16;
+            public float fps = 20f, ppu = 140f;
+            public float[] pivot = { 0.5f, 0.2f };
+            public string blend = "alpha";
+        }
+
+        public sealed class FlipbookData
+        {
+            public Sprite[] Frames;
+            public float Fps;
+            public bool Additive;
+        }
+
+        private static readonly Dictionary<string, FlipbookData> Flipbooks = new Dictionary<string, FlipbookData>();
+
+        /// <summary>
+        /// A Blender-rendered flipbook: Vfx/fb_&lt;name&gt; (a 4x4 sheet, one sprite) + Vfx/fb_&lt;name&gt;_meta.json, sliced into
+        /// frame sprites once and cached. Null when the sheet is not in the build.
+        /// </summary>
+        public static FlipbookData Flipbook(string name)
+        {
+            if (Flipbooks.TryGetValue(name, out FlipbookData fb)) return fb;
+            Sprite sheet = Optional("Vfx/fb_" + name);
+            TextAsset metaText = Resources.Load<TextAsset>("Art/Vfx/fb_" + name + "_meta");
+            if (sheet == null || metaText == null)
+            {
+                Flipbooks[name] = null;
+                return null;
+            }
+            var meta = JsonUtility.FromJson<FlipbookMeta>(metaText.text);
+            Texture2D tex = sheet.texture;
+            Rect r = sheet.textureRect;
+            float cw = r.width / meta.cols, ch = r.height / meta.rows;
+            var frames = new Sprite[meta.frames];
+            for (int i = 0; i < meta.frames; i++)
+            {
+                int cx = i % meta.cols, cy = meta.rows - 1 - i / meta.cols;   // frame 0 is the top-left cell
+                frames[i] = UnityEngine.Sprite.Create(tex, new Rect(r.x + cx * cw, r.y + cy * ch, cw, ch), new Vector2(meta.pivot[0], meta.pivot[1]),
+                    meta.ppu, 0, SpriteMeshType.FullRect);
+            }
+            fb = new FlipbookData { Frames = frames, Fps = meta.fps, Additive = meta.blend == "additive" };
+            Flipbooks[name] = fb;
+            return fb;
+        }
+
         /// <summary>Optional frames (attack/tell poses arrive batch by batch): null without a warning when absent.</summary>
         public static Sprite Optional(string path)
         {

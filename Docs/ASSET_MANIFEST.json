@@ -3,43 +3,50 @@
   "path": "Assets/_Aetherward/Resources/Art/Heroes/ignis_idle.png",
   "generator": "Codex image_generation / Blender (batch B01)",
   "source": "ArtHandoff/returns/B01/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B01)"
+  "license": "original, produced for the project by the art specialist (batch B01)",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/ignis_cast.png",
   "generator": "Codex image_generation / Blender (batch B01)",
   "source": "ArtHandoff/returns/B01/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B01)"
+  "license": "original, produced for the project by the art specialist (batch B01)",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/ignis_downed.png",
   "generator": "Codex image_generation / Blender (batch B01)",
   "source": "ArtHandoff/returns/B01/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B01)"
+  "license": "original, produced for the project by the art specialist (batch B01)",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/ignis_evoA.png",
   "generator": "Codex image_generation / Blender (batch B01)",
   "source": "ArtHandoff/returns/B01/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B01)"
+  "license": "original, produced for the project by the art specialist (batch B01)",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/ignis_evoA_cast.png",
   "generator": "Codex image_generation / Blender (batch B01)",
   "source": "ArtHandoff/returns/B01/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B01)"
+  "license": "original, produced for the project by the art specialist (batch B01)",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/ignis_evoB.png",
   "generator": "Codex image_generation / Blender (batch B01)",
   "source": "ArtHandoff/returns/B01/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B01)"
+  "license": "original, produced for the project by the art specialist (batch B01)",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/ignis_evoB_cast.png",
   "generator": "Codex image_generation / Blender (batch B01)",
   "source": "ArtHandoff/returns/B01/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B01)"
+  "license": "original, produced for the project by the art specialist (batch B01)",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Portraits/ignis.png",
@@ -51,43 +58,50 @@
   "path": "Assets/_Aetherward/Resources/Art/Heroes/cinder_idle.png",
   "generator": "Codex image_generation / Blender (batch B02)",
   "source": "ArtHandoff/returns/B02/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B02)"
+  "license": "original, produced for the project by the art specialist (batch B02)",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/cinder_cast.png",
   "generator": "Codex image_generation / Blender (batch B02)",
   "source": "ArtHandoff/returns/B02/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B02)"
+  "license": "original, produced for the project by the art specialist (batch B02)",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/cinder_downed.png",
   "generator": "Codex image_generation / Blender (batch B02)",
   "source": "ArtHandoff/returns/B02/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B02)"
+  "license": "original, produced for the project by the art specialist (batch B02)",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/cinder_evoA.png",
   "generator": "Codex image_generation / Blender (batch B02)",
   "source": "ArtHandoff/returns/B02/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B02)"
+  "license": "original, produced for the project by the art specialist (batch B02)",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/cinder_evoA_cast.png",
   "generator": "Codex image_generation / Blender (batch B02)",
   "source": "ArtHandoff/returns/B02/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B02)"
+  "license": "original, produced for the project by the art specialist (batch B02)",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/cinder_evoB.png",
   "generator": "Codex image_generation / Blender (batch B02)",
   "source": "ArtHandoff/returns/B02/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B02)"
+  "license": "original, produced for the project by the art specialist (batch B02)",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/cinder_evoB_cast.png",
   "generator": "Codex image_generation / Blender (batch B02)",
   "source": "ArtHandoff/returns/B02/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B02)"
+  "license": "original, produced for the project by the art specialist (batch B02)",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Portraits/cinder.png",
@@ -99,43 +113,50 @@
   "path": "Assets/_Aetherward/Resources/Art/Heroes/marina_idle.png",
   "generator": "Codex image_generation / Blender (batch B01)",
   "source": "ArtHandoff/returns/B01/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B01)"
+  "license": "original, produced for the project by the art specialist (batch B01)",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/marina_cast.png",
   "generator": "Codex image_generation / Blender (batch B01)",
   "source": "ArtHandoff/returns/B01/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B01)"
+  "license": "original, produced for the project by the art specialist (batch B01)",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/marina_downed.png",
   "generator": "Codex image_generation / Blender (batch B01)",
   "source": "ArtHandoff/returns/B01/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B01)"
+  "license": "original, produced for the project by the art specialist (batch B01)",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/marina_evoA.png",
   "generator": "Codex image_generation / Blender (batch B02)",
   "source": "ArtHandoff/returns/B02/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B02)"
+  "license": "original, produced for the project by the art specialist (batch B02)",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/marina_evoA_cast.png",
   "generator": "Codex image_generation / Blender (batch B02)",
   "source": "ArtHandoff/returns/B02/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B02)"
+  "license": "original, produced for the project by the art specialist (batch B02)",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/marina_evoB.png",
   "generator": "Codex image_generation / Blender (batch B02)",
   "source": "ArtHandoff/returns/B02/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B02)"
+  "license": "original, produced for the project by the art specialist (batch B02)",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/marina_evoB_cast.png",
   "generator": "Codex image_generation / Blender (batch B02)",
   "source": "ArtHandoff/returns/B02/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B02)"
+  "license": "original, produced for the project by the art specialist (batch B02)",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Portraits/marina.png",
@@ -145,85 +166,100 @@
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/tidal_idle.png",
-  "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch B03)",
+  "source": "ArtHandoff/returns/B03/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B03)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/tidal_cast.png",
-  "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch B03)",
+  "source": "ArtHandoff/returns/B03/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B03)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/tidal_downed.png",
-  "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch B03)",
+  "source": "ArtHandoff/returns/B03/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B03)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/tidal_evoA.png",
-  "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch B03)",
+  "source": "ArtHandoff/returns/B03/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B03)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/tidal_evoA_cast.png",
-  "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch B03)",
+  "source": "ArtHandoff/returns/B03/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B03)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/tidal_evoB.png",
-  "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch B03)",
+  "source": "ArtHandoff/returns/B03/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B03)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/tidal_evoB_cast.png",
-  "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch B03)",
+  "source": "ArtHandoff/returns/B03/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B03)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Portraits/tidal.png",
-  "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch B03)",
+  "source": "ArtHandoff/returns/B03/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B03)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/volt_idle.png",
   "generator": "Codex image_generation / Blender (batch B02)",
   "source": "ArtHandoff/returns/B02/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B02)"
+  "license": "original, produced for the project by the art specialist (batch B02)",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/volt_cast.png",
   "generator": "Codex image_generation / Blender (batch B02)",
   "source": "ArtHandoff/returns/B02/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B02)"
+  "license": "original, produced for the project by the art specialist (batch B02)",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/volt_downed.png",
   "generator": "Codex image_generation / Blender (batch B02)",
   "source": "ArtHandoff/returns/B02/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B02)"
+  "license": "original, produced for the project by the art specialist (batch B02)",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/volt_evoA.png",
   "generator": "Codex image_generation / Blender (batch B02)",
   "source": "ArtHandoff/returns/B02/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B02)"
+  "license": "original, produced for the project by the art specialist (batch B02)",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/volt_evoA_cast.png",
   "generator": "Codex image_generation / Blender (batch B02)",
   "source": "ArtHandoff/returns/B02/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B02)"
+  "license": "original, produced for the project by the art specialist (batch B02)",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/volt_evoB.png",
   "generator": "Codex image_generation / Blender (batch B02)",
   "source": "ArtHandoff/returns/B02/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B02)"
+  "license": "original, produced for the project by the art specialist (batch B02)",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/volt_evoB_cast.png",
   "generator": "Codex image_generation / Blender (batch B02)",
   "source": "ArtHandoff/returns/B02/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B02)"
+  "license": "original, produced for the project by the art specialist (batch B02)",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Portraits/volt.png",
@@ -233,85 +269,100 @@
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/raiden_idle.png",
-  "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch B03)",
+  "source": "ArtHandoff/returns/B03/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B03)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/raiden_cast.png",
-  "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch B03)",
+  "source": "ArtHandoff/returns/B03/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B03)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/raiden_downed.png",
-  "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch B03)",
+  "source": "ArtHandoff/returns/B03/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B03)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/raiden_evoA.png",
-  "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch B03)",
+  "source": "ArtHandoff/returns/B03/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B03)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/raiden_evoA_cast.png",
-  "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch B03)",
+  "source": "ArtHandoff/returns/B03/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B03)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/raiden_evoB.png",
-  "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch B03)",
+  "source": "ArtHandoff/returns/B03/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B03)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/raiden_evoB_cast.png",
-  "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch B03)",
+  "source": "ArtHandoff/returns/B03/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B03)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Portraits/raiden.png",
-  "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch B03)",
+  "source": "ArtHandoff/returns/B03/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B03)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/freya_idle.png",
   "generator": "Codex image_generation / Blender (batch B02)",
   "source": "ArtHandoff/returns/B02/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B02)"
+  "license": "original, produced for the project by the art specialist (batch B02)",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/freya_cast.png",
   "generator": "Codex image_generation / Blender (batch B02)",
   "source": "ArtHandoff/returns/B02/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B02)"
+  "license": "original, produced for the project by the art specialist (batch B02)",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/freya_downed.png",
   "generator": "Codex image_generation / Blender (batch B02)",
   "source": "ArtHandoff/returns/B02/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B02)"
+  "license": "original, produced for the project by the art specialist (batch B02)",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/freya_evoA.png",
   "generator": "Codex image_generation / Blender (batch B02)",
   "source": "ArtHandoff/returns/B02/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B02)"
+  "license": "original, produced for the project by the art specialist (batch B02)",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/freya_evoA_cast.png",
   "generator": "Codex image_generation / Blender (batch B02)",
   "source": "ArtHandoff/returns/B02/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B02)"
+  "license": "original, produced for the project by the art specialist (batch B02)",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/freya_evoB.png",
   "generator": "Codex image_generation / Blender (batch B02)",
   "source": "ArtHandoff/returns/B02/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B02)"
+  "license": "original, produced for the project by the art specialist (batch B02)",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/freya_evoB_cast.png",
   "generator": "Codex image_generation / Blender (batch B02)",
   "source": "ArtHandoff/returns/B02/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B02)"
+  "license": "original, produced for the project by the art specialist (batch B02)",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Portraits/freya.png",
@@ -321,125 +372,148 @@
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/glacius_idle.png",
-  "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch B03)",
+  "source": "ArtHandoff/returns/B03/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B03)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/glacius_cast.png",
-  "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch B03)",
+  "source": "ArtHandoff/returns/B03/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B03)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/glacius_downed.png",
-  "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch B03)",
+  "source": "ArtHandoff/returns/B03/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B03)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/glacius_evoA.png",
-  "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch B03)",
+  "source": "ArtHandoff/returns/B03/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B03)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/glacius_evoA_cast.png",
-  "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch B03)",
+  "source": "ArtHandoff/returns/B03/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B03)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/glacius_evoB.png",
-  "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch B03)",
+  "source": "ArtHandoff/returns/B03/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B03)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/glacius_evoB_cast.png",
-  "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch B03)",
+  "source": "ArtHandoff/returns/B03/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B03)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Portraits/glacius.png",
-  "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch B03)",
+  "source": "ArtHandoff/returns/B03/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B03)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/zephyr_idle.png",
-  "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch B03)",
+  "source": "ArtHandoff/returns/B03/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B03)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/zephyr_cast.png",
-  "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch B03)",
+  "source": "ArtHandoff/returns/B03/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B03)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/zephyr_downed.png",
-  "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch B03)",
+  "source": "ArtHandoff/returns/B03/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B03)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/zephyr_evoA.png",
-  "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch B03)",
+  "source": "ArtHandoff/returns/B03/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B03)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/zephyr_evoA_cast.png",
-  "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch B03)",
+  "source": "ArtHandoff/returns/B03/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B03)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/zephyr_evoB.png",
-  "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch B03)",
+  "source": "ArtHandoff/returns/B03/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B03)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/zephyr_evoB_cast.png",
-  "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch B03)",
+  "source": "ArtHandoff/returns/B03/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B03)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Portraits/zephyr.png",
-  "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch B03)",
+  "source": "ArtHandoff/returns/B03/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B03)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/sylph_idle.png",
   "generator": "Codex image_generation / Blender (batch B01)",
   "source": "ArtHandoff/returns/B01/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B01)"
+  "license": "original, produced for the project by the art specialist (batch B01)",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/sylph_cast.png",
   "generator": "Codex image_generation / Blender (batch B01)",
   "source": "ArtHandoff/returns/B01/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B01)"
+  "license": "original, produced for the project by the art specialist (batch B01)",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/sylph_downed.png",
   "generator": "Codex image_generation / Blender (batch B01)",
   "source": "ArtHandoff/returns/B01/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B01)"
+  "license": "original, produced for the project by the art specialist (batch B01)",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/sylph_evoA.png",
   "generator": "Codex image_generation / Blender (batch B02)",
   "source": "ArtHandoff/returns/B02/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B02)"
+  "license": "original, produced for the project by the art specialist (batch B02)",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/sylph_evoA_cast.png",
   "generator": "Codex image_generation / Blender (batch B02)",
   "source": "ArtHandoff/returns/B02/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B02)"
+  "license": "original, produced for the project by the art specialist (batch B02)",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/sylph_evoB.png",
   "generator": "Codex image_generation / Blender (batch B02)",
   "source": "ArtHandoff/returns/B02/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B02)"
+  "license": "original, produced for the project by the art specialist (batch B02)",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/sylph_evoB_cast.png",
   "generator": "Codex image_generation / Blender (batch B02)",
   "source": "ArtHandoff/returns/B02/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B02)"
+  "license": "original, produced for the project by the art specialist (batch B02)",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Portraits/sylph.png",
@@ -451,43 +525,50 @@
   "path": "Assets/_Aetherward/Resources/Art/Heroes/terra_idle.png",
   "generator": "Codex image_generation / Blender (batch B01)",
   "source": "ArtHandoff/returns/B01/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B01)"
+  "license": "original, produced for the project by the art specialist (batch B01)",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/terra_cast.png",
   "generator": "Codex image_generation / Blender (batch B01)",
   "source": "ArtHandoff/returns/B01/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B01)"
+  "license": "original, produced for the project by the art specialist (batch B01)",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/terra_downed.png",
   "generator": "Codex image_generation / Blender (batch B01)",
   "source": "ArtHandoff/returns/B01/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B01)"
+  "license": "original, produced for the project by the art specialist (batch B01)",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/terra_evoA.png",
   "generator": "Codex image_generation / Blender (batch B02)",
   "source": "ArtHandoff/returns/B02/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B02)"
+  "license": "original, produced for the project by the art specialist (batch B02)",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/terra_evoA_cast.png",
   "generator": "Codex image_generation / Blender (batch B02)",
   "source": "ArtHandoff/returns/B02/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B02)"
+  "license": "original, produced for the project by the art specialist (batch B02)",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/terra_evoB.png",
   "generator": "Codex image_generation / Blender (batch B02)",
   "source": "ArtHandoff/returns/B02/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B02)"
+  "license": "original, produced for the project by the art specialist (batch B02)",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/terra_evoB_cast.png",
   "generator": "Codex image_generation / Blender (batch B02)",
   "source": "ArtHandoff/returns/B02/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B02)"
+  "license": "original, produced for the project by the art specialist (batch B02)",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Portraits/terra.png",
@@ -497,118 +578,141 @@
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/magnus_idle.png",
-  "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch B03)",
+  "source": "ArtHandoff/returns/B03/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B03)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/magnus_cast.png",
-  "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch B03)",
+  "source": "ArtHandoff/returns/B03/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B03)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/magnus_downed.png",
-  "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch B03)",
+  "source": "ArtHandoff/returns/B03/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B03)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/magnus_evoA.png",
-  "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch B03)",
+  "source": "ArtHandoff/returns/B03/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B03)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/magnus_evoA_cast.png",
-  "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch B03)",
+  "source": "ArtHandoff/returns/B03/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B03)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/magnus_evoB.png",
-  "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch B03)",
+  "source": "ArtHandoff/returns/B03/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B03)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/magnus_evoB_cast.png",
-  "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch B03)",
+  "source": "ArtHandoff/returns/B03/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B03)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Portraits/magnus.png",
-  "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch B03)",
+  "source": "ArtHandoff/returns/B03/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B03)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/seren_idle.png",
-  "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch B03)",
+  "source": "ArtHandoff/returns/B03/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B03)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/seren_cast.png",
-  "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch B03)",
+  "source": "ArtHandoff/returns/B03/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B03)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/seren_downed.png",
-  "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch B03)",
+  "source": "ArtHandoff/returns/B03/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B03)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/seren_evoA.png",
-  "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch B03)",
+  "source": "ArtHandoff/returns/B03/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B03)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/seren_evoA_cast.png",
-  "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch B03)",
+  "source": "ArtHandoff/returns/B03/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B03)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/seren_evoB.png",
-  "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch B03)",
+  "source": "ArtHandoff/returns/B03/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B03)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/seren_evoB_cast.png",
-  "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch B03)",
+  "source": "ArtHandoff/returns/B03/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B03)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Portraits/seren.png",
-  "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch B03)",
+  "source": "ArtHandoff/returns/B03/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B03)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/nyxara_idle.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/nyxara_cast.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/nyxara_downed.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/nyxara_evoA.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/nyxara_evoA_cast.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/nyxara_evoB.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/nyxara_evoB_cast.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Portraits/nyxara.png",
@@ -618,37 +722,44 @@
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/ashara_idle.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/ashara_cast.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/ashara_downed.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/ashara_evoA.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/ashara_evoA_cast.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/ashara_evoB.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/ashara_evoB_cast.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Portraits/ashara.png",
@@ -658,37 +769,44 @@
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/nerissa_idle.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/nerissa_cast.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/nerissa_downed.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/nerissa_evoA.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/nerissa_evoA_cast.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/nerissa_evoB.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/nerissa_evoB_cast.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Portraits/nerissa.png",
@@ -698,37 +816,44 @@
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/voltrix_idle.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/voltrix_cast.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/voltrix_downed.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/voltrix_evoA.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/voltrix_evoA_cast.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/voltrix_evoB.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/voltrix_evoB_cast.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Portraits/voltrix.png",
@@ -738,37 +863,44 @@
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/eirwen_idle.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/eirwen_cast.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/eirwen_downed.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/eirwen_evoA.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/eirwen_evoA_cast.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/eirwen_evoB.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/eirwen_evoB_cast.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Portraits/eirwen.png",
@@ -778,37 +910,44 @@
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/kael_idle.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/kael_cast.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/kael_downed.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/kael_evoA.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/kael_evoA_cast.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/kael_evoB.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/kael_evoB_cast.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Portraits/kael.png",
@@ -818,37 +957,44 @@
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/borun_idle.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/borun_cast.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/borun_downed.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/borun_evoA.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/borun_evoA_cast.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/borun_evoB.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/borun_evoB_cast.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Portraits/borun.png",
@@ -858,37 +1004,44 @@
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/liora_idle.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/liora_cast.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/liora_downed.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/liora_evoA.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/liora_evoA_cast.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/liora_evoB.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/liora_evoB_cast.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Portraits/liora.png",
@@ -898,37 +1051,44 @@
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/thalen_idle.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/thalen_cast.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/thalen_downed.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/thalen_evoA.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/thalen_evoA_cast.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/thalen_evoB.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/thalen_evoB_cast.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Portraits/thalen.png",
@@ -938,37 +1098,44 @@
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/vesper_idle.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/vesper_cast.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/vesper_downed.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/vesper_evoA.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/vesper_evoA_cast.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/vesper_evoB.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/vesper_evoB_cast.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Portraits/vesper.png",
@@ -978,37 +1145,44 @@
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/sable_idle.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/sable_cast.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/sable_downed.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/sable_evoA.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/sable_evoA_cast.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/sable_evoB.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/sable_evoB_cast.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Portraits/sable.png",
@@ -1018,37 +1192,44 @@
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/caelis_idle.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/caelis_cast.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/caelis_downed.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/caelis_evoA.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/caelis_evoA_cast.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/caelis_evoB.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/caelis_evoB_cast.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Portraits/caelis.png",
@@ -1058,37 +1239,44 @@
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/oriane_idle.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/oriane_cast.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/oriane_downed.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/oriane_evoA.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/oriane_evoA_cast.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/oriane_evoB.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/oriane_evoB_cast.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Portraits/oriane.png",
@@ -1098,37 +1286,44 @@
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/zerith_idle.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/zerith_cast.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/zerith_downed.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/zerith_evoA.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/zerith_evoA_cast.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/zerith_evoB.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/zerith_evoB_cast.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Portraits/zerith.png",
@@ -1138,37 +1333,44 @@
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/maelis_idle.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/maelis_cast.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/maelis_downed.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/maelis_evoA.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/maelis_evoA_cast.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/maelis_evoB.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/maelis_evoB_cast.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Portraits/maelis.png",
@@ -1178,37 +1380,44 @@
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/solenne_idle.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/solenne_cast.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/solenne_downed.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/solenne_evoA.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/solenne_evoA_cast.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/solenne_evoB.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/solenne_evoB_cast.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Portraits/solenne.png",
@@ -1218,37 +1427,44 @@
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/mirel_idle.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/mirel_cast.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/mirel_downed.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/mirel_evoA.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/mirel_evoA_cast.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/mirel_evoB.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/mirel_evoB_cast.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Portraits/mirel.png",
@@ -1258,37 +1474,44 @@
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/veyra_idle.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/veyra_cast.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/veyra_downed.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/veyra_evoA.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/veyra_evoA_cast.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/veyra_evoB.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/veyra_evoB_cast.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Portraits/veyra.png",
@@ -1298,37 +1521,44 @@
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/isolde_idle.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/isolde_cast.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/isolde_downed.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/isolde_evoA.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/isolde_evoA_cast.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/isolde_evoB.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/isolde_evoB_cast.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Portraits/isolde.png",
@@ -1338,37 +1568,44 @@
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/aeris_idle.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/aeris_cast.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/aeris_downed.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/aeris_evoA.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/aeris_evoA_cast.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/aeris_evoB.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/aeris_evoB_cast.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Portraits/aeris.png",
@@ -1378,37 +1615,44 @@
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/doran_idle.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/doran_cast.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/doran_downed.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/doran_evoA.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/doran_evoA_cast.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/doran_evoB.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/doran_evoB_cast.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Portraits/doran.png",
@@ -1418,37 +1662,44 @@
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/elowen_idle.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/elowen_cast.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/elowen_downed.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/elowen_evoA.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/elowen_evoA_cast.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/elowen_evoB.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/elowen_evoB_cast.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Portraits/elowen.png",
@@ -1458,37 +1709,44 @@
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/morven_idle.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/morven_cast.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/morven_downed.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/morven_evoA.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/morven_evoA_cast.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/morven_evoB.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/morven_evoB_cast.png",
   "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "license": "original, generated by project scripts",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Portraits/morven.png",
@@ -1633,13 +1891,15 @@
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Enemies/siegebreaker_golem_a.png",
-  "generator": "Tools/AssetGen/art/enemies.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch B11)",
+  "source": "ArtHandoff/returns/B11/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B11)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Enemies/siegebreaker_golem_b.png",
-  "generator": "Tools/AssetGen/art/enemies.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch B11)",
+  "source": "ArtHandoff/returns/B11/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B11)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Enemies/rift_warden_a.png",
@@ -1685,13 +1945,15 @@
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Enemies/ignaroth_a.png",
-  "generator": "Tools/AssetGen/art/enemies.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch B11)",
+  "source": "ArtHandoff/returns/B11/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B11)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Enemies/ignaroth_b.png",
-  "generator": "Tools/AssetGen/art/enemies.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch B11)",
+  "source": "ArtHandoff/returns/B11/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B11)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Enemies/goblin_sprinter_a.png",
@@ -1837,23 +2099,27 @@
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Enemies/seraphyne_a.png",
-  "generator": "Tools/AssetGen/art/enemies.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch B11)",
+  "source": "ArtHandoff/returns/B11/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B11)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Enemies/seraphyne_b.png",
-  "generator": "Tools/AssetGen/art/enemies.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch B11)",
+  "source": "ArtHandoff/returns/B11/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B11)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Enemies/gravemaw_a.png",
-  "generator": "Tools/AssetGen/art/enemies.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch B11)",
+  "source": "ArtHandoff/returns/B11/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B11)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Enemies/gravemaw_b.png",
-  "generator": "Tools/AssetGen/art/enemies.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch B11)",
+  "source": "ArtHandoff/returns/B11/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B11)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Enemies/mirror_knight_a.png",
@@ -1957,73 +2223,87 @@
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Enemies/vaelith_a.png",
-  "generator": "Tools/AssetGen/art/enemies.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch B11)",
+  "source": "ArtHandoff/returns/B11/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B11)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Enemies/vaelith_b.png",
-  "generator": "Tools/AssetGen/art/enemies.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch B11)",
+  "source": "ArtHandoff/returns/B11/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B11)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Enemies/mirrath_a.png",
-  "generator": "Tools/AssetGen/art/enemies.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch B11)",
+  "source": "ArtHandoff/returns/B11/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B11)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Enemies/mirrath_b.png",
-  "generator": "Tools/AssetGen/art/enemies.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch B11)",
+  "source": "ArtHandoff/returns/B11/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B11)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Enemies/aetherion_a.png",
-  "generator": "Tools/AssetGen/art/enemies.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch B11)",
+  "source": "ArtHandoff/returns/B11/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B11)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Enemies/aetherion_b.png",
-  "generator": "Tools/AssetGen/art/enemies.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch B11)",
+  "source": "ArtHandoff/returns/B11/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B11)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Enemies/thornmother_a.png",
-  "generator": "Tools/AssetGen/art/enemies.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch B11)",
+  "source": "ArtHandoff/returns/B11/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B11)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Enemies/thornmother_b.png",
-  "generator": "Tools/AssetGen/art/enemies.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch B11)",
+  "source": "ArtHandoff/returns/B11/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B11)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Enemies/ironclad_warlord_a.png",
-  "generator": "Tools/AssetGen/art/enemies.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch B11)",
+  "source": "ArtHandoff/returns/B11/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B11)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Enemies/ironclad_warlord_b.png",
-  "generator": "Tools/AssetGen/art/enemies.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch B11)",
+  "source": "ArtHandoff/returns/B11/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B11)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Enemies/ashen_matriarch_a.png",
-  "generator": "Tools/AssetGen/art/enemies.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch B11)",
+  "source": "ArtHandoff/returns/B11/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B11)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Enemies/ashen_matriarch_b.png",
-  "generator": "Tools/AssetGen/art/enemies.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch B11)",
+  "source": "ArtHandoff/returns/B11/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B11)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Enemies/nyxhollow_a.png",
-  "generator": "Tools/AssetGen/art/enemies.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch B11)",
+  "source": "ArtHandoff/returns/B11/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B11)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Enemies/nyxhollow_b.png",
-  "generator": "Tools/AssetGen/art/enemies.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch B11)",
+  "source": "ArtHandoff/returns/B11/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B11)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/World/arena_background.png",
@@ -2033,28 +2313,33 @@
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/World/bg_molten_crater.png",
-  "generator": "Tools/AssetGen/art/world.py",
-  "license": "original, generated by project scripts"
+  "generator": "Tools/ArtPipeline/blender (lead)",
+  "source": "ArtProduction/generated",
+  "license": "original render; CC0 inputs listed in ArtProduction/REFERENCE_MANIFEST.json"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/World/bg_frostfall_bastion.png",
-  "generator": "Tools/AssetGen/art/world.py",
-  "license": "original, generated by project scripts"
+  "generator": "Tools/ArtPipeline/blender (lead)",
+  "source": "ArtProduction/generated",
+  "license": "original render; CC0 inputs listed in ArtProduction/REFERENCE_MANIFEST.json"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/World/bg_shattered_aether.png",
-  "generator": "Tools/AssetGen/art/world.py",
-  "license": "original, generated by project scripts"
+  "generator": "Tools/ArtPipeline/blender (lead)",
+  "source": "ArtProduction/generated",
+  "license": "original render; CC0 inputs listed in ArtProduction/REFERENCE_MANIFEST.json"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/World/bg_stormspire_citadel.png",
-  "generator": "Tools/AssetGen/art/world.py",
-  "license": "original, generated by project scripts"
+  "generator": "Tools/ArtPipeline/blender (lead)",
+  "source": "ArtProduction/generated",
+  "license": "original render; CC0 inputs listed in ArtProduction/REFERENCE_MANIFEST.json"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/World/bg_sunken_archive.png",
-  "generator": "Tools/AssetGen/art/world.py",
-  "license": "original, generated by project scripts"
+  "generator": "Tools/ArtPipeline/blender (lead)",
+  "source": "ArtProduction/generated",
+  "license": "original render; CC0 inputs listed in ArtProduction/REFERENCE_MANIFEST.json"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/World/crystal_intact.png",
@@ -4091,126 +4376,417 @@
   "path": "Assets/_Aetherward/Resources/Art/Heroes/cinder_attack.png",
   "generator": "Codex image_generation / Blender (batch B02)",
   "source": "ArtHandoff/returns/B02/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B02)"
+  "license": "original, produced for the project by the art specialist (batch B02)",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/cinder_evoA_attack.png",
   "generator": "Codex image_generation / Blender (batch B02)",
   "source": "ArtHandoff/returns/B02/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B02)"
+  "license": "original, produced for the project by the art specialist (batch B02)",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/cinder_evoB_attack.png",
   "generator": "Codex image_generation / Blender (batch B02)",
   "source": "ArtHandoff/returns/B02/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B02)"
+  "license": "original, produced for the project by the art specialist (batch B02)",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/freya_attack.png",
   "generator": "Codex image_generation / Blender (batch B02)",
   "source": "ArtHandoff/returns/B02/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B02)"
+  "license": "original, produced for the project by the art specialist (batch B02)",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/freya_evoA_attack.png",
   "generator": "Codex image_generation / Blender (batch B02)",
   "source": "ArtHandoff/returns/B02/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B02)"
+  "license": "original, produced for the project by the art specialist (batch B02)",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/freya_evoB_attack.png",
   "generator": "Codex image_generation / Blender (batch B02)",
   "source": "ArtHandoff/returns/B02/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B02)"
+  "license": "original, produced for the project by the art specialist (batch B02)",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/ignis_attack.png",
   "generator": "Codex image_generation / Blender (batch B02)",
   "source": "ArtHandoff/returns/B02/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B02)"
+  "license": "original, produced for the project by the art specialist (batch B02)",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/ignis_evoA_attack.png",
   "generator": "Codex image_generation / Blender (batch B02)",
   "source": "ArtHandoff/returns/B02/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B02)"
+  "license": "original, produced for the project by the art specialist (batch B02)",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/ignis_evoB_attack.png",
   "generator": "Codex image_generation / Blender (batch B02)",
   "source": "ArtHandoff/returns/B02/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B02)"
+  "license": "original, produced for the project by the art specialist (batch B02)",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/marina_attack.png",
   "generator": "Codex image_generation / Blender (batch B02)",
   "source": "ArtHandoff/returns/B02/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B02)"
+  "license": "original, produced for the project by the art specialist (batch B02)",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/marina_evoA_attack.png",
   "generator": "Codex image_generation / Blender (batch B02)",
   "source": "ArtHandoff/returns/B02/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B02)"
+  "license": "original, produced for the project by the art specialist (batch B02)",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/marina_evoB_attack.png",
   "generator": "Codex image_generation / Blender (batch B02)",
   "source": "ArtHandoff/returns/B02/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B02)"
+  "license": "original, produced for the project by the art specialist (batch B02)",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/sylph_attack.png",
   "generator": "Codex image_generation / Blender (batch B02)",
   "source": "ArtHandoff/returns/B02/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B02)"
+  "license": "original, produced for the project by the art specialist (batch B02)",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/sylph_evoA_attack.png",
   "generator": "Codex image_generation / Blender (batch B02)",
   "source": "ArtHandoff/returns/B02/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B02)"
+  "license": "original, produced for the project by the art specialist (batch B02)",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/sylph_evoB_attack.png",
   "generator": "Codex image_generation / Blender (batch B02)",
   "source": "ArtHandoff/returns/B02/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B02)"
+  "license": "original, produced for the project by the art specialist (batch B02)",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/terra_attack.png",
   "generator": "Codex image_generation / Blender (batch B02)",
   "source": "ArtHandoff/returns/B02/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B02)"
+  "license": "original, produced for the project by the art specialist (batch B02)",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/terra_evoA_attack.png",
   "generator": "Codex image_generation / Blender (batch B02)",
   "source": "ArtHandoff/returns/B02/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B02)"
+  "license": "original, produced for the project by the art specialist (batch B02)",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/terra_evoB_attack.png",
   "generator": "Codex image_generation / Blender (batch B02)",
   "source": "ArtHandoff/returns/B02/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B02)"
+  "license": "original, produced for the project by the art specialist (batch B02)",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/volt_attack.png",
   "generator": "Codex image_generation / Blender (batch B02)",
   "source": "ArtHandoff/returns/B02/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B02)"
+  "license": "original, produced for the project by the art specialist (batch B02)",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/volt_evoA_attack.png",
   "generator": "Codex image_generation / Blender (batch B02)",
   "source": "ArtHandoff/returns/B02/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B02)"
+  "license": "original, produced for the project by the art specialist (batch B02)",
+  "canvas": "resampled to the power-of-two game canvas"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/volt_evoB_attack.png",
   "generator": "Codex image_generation / Blender (batch B02)",
   "source": "ArtHandoff/returns/B02/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B02)"
+  "license": "original, produced for the project by the art specialist (batch B02)",
+  "canvas": "resampled to the power-of-two game canvas"
+ },
+ {
+  "path": "Assets/_Aetherward/Resources/Art/World/crystal_path_bastion.png",
+  "generator": "Tools/ArtPipeline/blender (lead)",
+  "source": "ArtProduction/generated",
+  "license": "original render; CC0 inputs listed in ArtProduction/REFERENCE_MANIFEST.json"
+ },
+ {
+  "path": "Assets/_Aetherward/Resources/Art/World/crystal_path_pulse.png",
+  "generator": "Tools/ArtPipeline/blender (lead)",
+  "source": "ArtProduction/generated",
+  "license": "original render; CC0 inputs listed in ArtProduction/REFERENCE_MANIFEST.json"
+ },
+ {
+  "path": "Assets/_Aetherward/Resources/Art/World/crystal_path_thorn.png",
+  "generator": "Tools/ArtPipeline/blender (lead)",
+  "source": "ArtProduction/generated",
+  "license": "original render; CC0 inputs listed in ArtProduction/REFERENCE_MANIFEST.json"
+ },
+ {
+  "path": "Assets/_Aetherward/Resources/Art/Heroes/glacius_attack.png",
+  "generator": "Codex image_generation / Blender (batch B03)",
+  "source": "ArtHandoff/returns/B03/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B03)"
+ },
+ {
+  "path": "Assets/_Aetherward/Resources/Art/Heroes/glacius_evoA_attack.png",
+  "generator": "Codex image_generation / Blender (batch B03)",
+  "source": "ArtHandoff/returns/B03/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B03)"
+ },
+ {
+  "path": "Assets/_Aetherward/Resources/Art/Heroes/glacius_evoB_attack.png",
+  "generator": "Codex image_generation / Blender (batch B03)",
+  "source": "ArtHandoff/returns/B03/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B03)"
+ },
+ {
+  "path": "Assets/_Aetherward/Resources/Art/Heroes/magnus_attack.png",
+  "generator": "Codex image_generation / Blender (batch B03)",
+  "source": "ArtHandoff/returns/B03/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B03)"
+ },
+ {
+  "path": "Assets/_Aetherward/Resources/Art/Heroes/magnus_evoA_attack.png",
+  "generator": "Codex image_generation / Blender (batch B03)",
+  "source": "ArtHandoff/returns/B03/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B03)"
+ },
+ {
+  "path": "Assets/_Aetherward/Resources/Art/Heroes/magnus_evoB_attack.png",
+  "generator": "Codex image_generation / Blender (batch B03)",
+  "source": "ArtHandoff/returns/B03/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B03)"
+ },
+ {
+  "path": "Assets/_Aetherward/Resources/Art/Heroes/raiden_attack.png",
+  "generator": "Codex image_generation / Blender (batch B03)",
+  "source": "ArtHandoff/returns/B03/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B03)"
+ },
+ {
+  "path": "Assets/_Aetherward/Resources/Art/Heroes/raiden_evoA_attack.png",
+  "generator": "Codex image_generation / Blender (batch B03)",
+  "source": "ArtHandoff/returns/B03/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B03)"
+ },
+ {
+  "path": "Assets/_Aetherward/Resources/Art/Heroes/raiden_evoB_attack.png",
+  "generator": "Codex image_generation / Blender (batch B03)",
+  "source": "ArtHandoff/returns/B03/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B03)"
+ },
+ {
+  "path": "Assets/_Aetherward/Resources/Art/Heroes/seren_attack.png",
+  "generator": "Codex image_generation / Blender (batch B03)",
+  "source": "ArtHandoff/returns/B03/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B03)"
+ },
+ {
+  "path": "Assets/_Aetherward/Resources/Art/Heroes/seren_evoA_attack.png",
+  "generator": "Codex image_generation / Blender (batch B03)",
+  "source": "ArtHandoff/returns/B03/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B03)"
+ },
+ {
+  "path": "Assets/_Aetherward/Resources/Art/Heroes/seren_evoB_attack.png",
+  "generator": "Codex image_generation / Blender (batch B03)",
+  "source": "ArtHandoff/returns/B03/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B03)"
+ },
+ {
+  "path": "Assets/_Aetherward/Resources/Art/Heroes/tidal_attack.png",
+  "generator": "Codex image_generation / Blender (batch B03)",
+  "source": "ArtHandoff/returns/B03/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B03)"
+ },
+ {
+  "path": "Assets/_Aetherward/Resources/Art/Heroes/tidal_evoA_attack.png",
+  "generator": "Codex image_generation / Blender (batch B03)",
+  "source": "ArtHandoff/returns/B03/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B03)"
+ },
+ {
+  "path": "Assets/_Aetherward/Resources/Art/Heroes/tidal_evoB_attack.png",
+  "generator": "Codex image_generation / Blender (batch B03)",
+  "source": "ArtHandoff/returns/B03/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B03)"
+ },
+ {
+  "path": "Assets/_Aetherward/Resources/Art/Heroes/zephyr_attack.png",
+  "generator": "Codex image_generation / Blender (batch B03)",
+  "source": "ArtHandoff/returns/B03/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B03)"
+ },
+ {
+  "path": "Assets/_Aetherward/Resources/Art/Heroes/zephyr_evoA_attack.png",
+  "generator": "Codex image_generation / Blender (batch B03)",
+  "source": "ArtHandoff/returns/B03/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B03)"
+ },
+ {
+  "path": "Assets/_Aetherward/Resources/Art/Heroes/zephyr_evoB_attack.png",
+  "generator": "Codex image_generation / Blender (batch B03)",
+  "source": "ArtHandoff/returns/B03/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B03)"
+ },
+ {
+  "path": "Assets/_Aetherward/Resources/Art/Enemies/aetherion_attack.png",
+  "generator": "Codex image_generation / Blender (batch B11)",
+  "source": "ArtHandoff/returns/B11/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B11)"
+ },
+ {
+  "path": "Assets/_Aetherward/Resources/Art/Enemies/aetherion_tell.png",
+  "generator": "Codex image_generation / Blender (batch B11)",
+  "source": "ArtHandoff/returns/B11/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B11)"
+ },
+ {
+  "path": "Assets/_Aetherward/Resources/Art/Enemies/ashen_matriarch_attack.png",
+  "generator": "Codex image_generation / Blender (batch B11)",
+  "source": "ArtHandoff/returns/B11/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B11)"
+ },
+ {
+  "path": "Assets/_Aetherward/Resources/Art/Enemies/ashen_matriarch_tell.png",
+  "generator": "Codex image_generation / Blender (batch B11)",
+  "source": "ArtHandoff/returns/B11/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B11)"
+ },
+ {
+  "path": "Assets/_Aetherward/Resources/Art/Enemies/gravemaw_attack.png",
+  "generator": "Codex image_generation / Blender (batch B11)",
+  "source": "ArtHandoff/returns/B11/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B11)"
+ },
+ {
+  "path": "Assets/_Aetherward/Resources/Art/Enemies/gravemaw_tell.png",
+  "generator": "Codex image_generation / Blender (batch B11)",
+  "source": "ArtHandoff/returns/B11/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B11)"
+ },
+ {
+  "path": "Assets/_Aetherward/Resources/Art/Enemies/ignaroth_attack.png",
+  "generator": "Codex image_generation / Blender (batch B11)",
+  "source": "ArtHandoff/returns/B11/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B11)"
+ },
+ {
+  "path": "Assets/_Aetherward/Resources/Art/Enemies/ignaroth_tell.png",
+  "generator": "Codex image_generation / Blender (batch B11)",
+  "source": "ArtHandoff/returns/B11/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B11)"
+ },
+ {
+  "path": "Assets/_Aetherward/Resources/Art/Enemies/ironclad_warlord_attack.png",
+  "generator": "Codex image_generation / Blender (batch B11)",
+  "source": "ArtHandoff/returns/B11/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B11)"
+ },
+ {
+  "path": "Assets/_Aetherward/Resources/Art/Enemies/ironclad_warlord_tell.png",
+  "generator": "Codex image_generation / Blender (batch B11)",
+  "source": "ArtHandoff/returns/B11/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B11)"
+ },
+ {
+  "path": "Assets/_Aetherward/Resources/Art/Enemies/mirrath_attack.png",
+  "generator": "Codex image_generation / Blender (batch B11)",
+  "source": "ArtHandoff/returns/B11/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B11)"
+ },
+ {
+  "path": "Assets/_Aetherward/Resources/Art/Enemies/mirrath_tell.png",
+  "generator": "Codex image_generation / Blender (batch B11)",
+  "source": "ArtHandoff/returns/B11/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B11)"
+ },
+ {
+  "path": "Assets/_Aetherward/Resources/Art/Enemies/nyxhollow_attack.png",
+  "generator": "Codex image_generation / Blender (batch B11)",
+  "source": "ArtHandoff/returns/B11/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B11)"
+ },
+ {
+  "path": "Assets/_Aetherward/Resources/Art/Enemies/nyxhollow_tell.png",
+  "generator": "Codex image_generation / Blender (batch B11)",
+  "source": "ArtHandoff/returns/B11/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B11)"
+ },
+ {
+  "path": "Assets/_Aetherward/Resources/Art/Enemies/rift_warden_attack.png",
+  "generator": "Codex image_generation / Blender (batch B11)",
+  "source": "ArtHandoff/returns/B11/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B11)"
+ },
+ {
+  "path": "Assets/_Aetherward/Resources/Art/Enemies/rift_warden_tell.png",
+  "generator": "Codex image_generation / Blender (batch B11)",
+  "source": "ArtHandoff/returns/B11/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B11)"
+ },
+ {
+  "path": "Assets/_Aetherward/Resources/Art/Enemies/seraphyne_attack.png",
+  "generator": "Codex image_generation / Blender (batch B11)",
+  "source": "ArtHandoff/returns/B11/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B11)"
+ },
+ {
+  "path": "Assets/_Aetherward/Resources/Art/Enemies/seraphyne_tell.png",
+  "generator": "Codex image_generation / Blender (batch B11)",
+  "source": "ArtHandoff/returns/B11/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B11)"
+ },
+ {
+  "path": "Assets/_Aetherward/Resources/Art/Enemies/siegebreaker_golem_attack.png",
+  "generator": "Codex image_generation / Blender (batch B11)",
+  "source": "ArtHandoff/returns/B11/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B11)"
+ },
+ {
+  "path": "Assets/_Aetherward/Resources/Art/Enemies/siegebreaker_golem_tell.png",
+  "generator": "Codex image_generation / Blender (batch B11)",
+  "source": "ArtHandoff/returns/B11/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B11)"
+ },
+ {
+  "path": "Assets/_Aetherward/Resources/Art/Enemies/thornmother_attack.png",
+  "generator": "Codex image_generation / Blender (batch B11)",
+  "source": "ArtHandoff/returns/B11/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B11)"
+ },
+ {
+  "path": "Assets/_Aetherward/Resources/Art/Enemies/thornmother_tell.png",
+  "generator": "Codex image_generation / Blender (batch B11)",
+  "source": "ArtHandoff/returns/B11/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B11)"
+ },
+ {
+  "path": "Assets/_Aetherward/Resources/Art/Enemies/vaelith_attack.png",
+  "generator": "Codex image_generation / Blender (batch B11)",
+  "source": "ArtHandoff/returns/B11/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B11)"
+ },
+ {
+  "path": "Assets/_Aetherward/Resources/Art/Enemies/vaelith_tell.png",
+  "generator": "Codex image_generation / Blender (batch B11)",
+  "source": "ArtHandoff/returns/B11/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch B11)"
  }
 ]

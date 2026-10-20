@@ -123,3 +123,4 @@ __pycache__/
 
 # Art pipeline caches, staging and import backups (outside Temp/, which Unity deletes on quit)
 /ArtCache/
+waveletNoiseTile.bin

@@ -1,0 +1,430 @@
+{
+ "batch": "B03",
+ "delivered": 66,
+ "requested": 66,
+ "blocking": [],
+ "notes": [],
+ "rows": [
+  {
+   "id": "Heroes/tidal_idle",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/tidal_cast",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/tidal_downed",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/tidal_evoA",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/tidal_evoA_cast",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/tidal_evoB",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/tidal_evoB_cast",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Portraits/tidal",
+   "group": "heroes",
+   "status": "OK"
+  },
+  {
+   "id": "Heroes/raiden_idle",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/raiden_cast",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/raiden_downed",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/raiden_evoA",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/raiden_evoA_cast",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/raiden_evoB",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/raiden_evoB_cast",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Portraits/raiden",
+   "group": "heroes",
+   "status": "OK"
+  },
+  {
+   "id": "Heroes/glacius_idle",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/glacius_cast",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/glacius_downed",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/glacius_evoA",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/glacius_evoA_cast",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/glacius_evoB",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/glacius_evoB_cast",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Portraits/glacius",
+   "group": "heroes",
+   "status": "OK"
+  },
+  {
+   "id": "Heroes/zephyr_idle",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/zephyr_cast",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/zephyr_downed",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/zephyr_evoA",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/zephyr_evoA_cast",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/zephyr_evoB",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/zephyr_evoB_cast",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Portraits/zephyr",
+   "group": "heroes",
+   "status": "OK"
+  },
+  {
+   "id": "Heroes/magnus_idle",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/magnus_cast",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/magnus_downed",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/magnus_evoA",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/magnus_evoA_cast",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/magnus_evoB",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/magnus_evoB_cast",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Portraits/magnus",
+   "group": "heroes",
+   "status": "OK"
+  },
+  {
+   "id": "Heroes/seren_idle",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/seren_cast",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/seren_downed",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/seren_evoA",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/seren_evoA_cast",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/seren_evoB",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/seren_evoB_cast",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Portraits/seren",
+   "group": "heroes",
+   "status": "OK"
+  },
+  {
+   "id": "Heroes/tidal_attack",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/tidal_evoA_attack",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/tidal_evoB_attack",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/raiden_attack",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/raiden_evoA_attack",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/raiden_evoB_attack",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/glacius_attack",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/glacius_evoA_attack",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/glacius_evoB_attack",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/zephyr_attack",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/zephyr_evoA_attack",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/zephyr_evoB_attack",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/magnus_attack",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/magnus_evoA_attack",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/magnus_evoB_attack",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/seren_attack",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/seren_evoA_attack",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/seren_evoB_attack",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 371
+  }
+ ],
+ "strayWorkingTreeChanges": [
+  "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs",
+  "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs",
+  "Assets/_Aetherward/Scripts/Unity/Core/Services.cs",
+  "Docs/ASSET_MANIFEST.json",
+  "Tools/ArtPipeline/blender/vfx_flipbooks.py",
+  "ArtProduction/generated/Vfx/fb_fire_burst.png",
+  "ArtProduction/generated/Vfx/fb_fire_burst.png.json",
+  "ArtProduction/generated/Vfx/fb_fire_burst_meta.json",
+  "ArtProduction/generated/Vfx/fb_lightning_arc.png",
+  "ArtProduction/generated/Vfx/fb_lightning_arc.png.json",
+  "ArtProduction/generated/Vfx/fb_lightning_arc_meta.json",
+  "ArtProduction/generated/Vfx/fb_rift_mist.png",
+  "ArtProduction/generated/Vfx/fb_rift_mist.png.json",
+  "ArtProduction/generated/Vfx/fb_rift_mist_meta.json",
+  "ArtProduction/generated/Vfx/fb_smoke_puff.png",
+  "ArtProduction/generated/Vfx/fb_smoke_puff.png.json",
+  "ArtProduction/generated/Vfx/fb_smoke_puff_meta.json",
+  "ArtProduction/generated/Vfx/fb_steam_burst.png",
+  "ArtProduction/generated/Vfx/fb_steam_burst.png.json",
+  "ArtProduction/generated/Vfx/fb_steam_burst_meta.json",
+  "ArtProduction/generated/Vfx/fb_water_splash.png",
+  "ArtProduction/generated/Vfx/fb_water_splash.png.json",
+  "ArtProduction/generated/Vfx/fb_water_splash_meta.json",
+  "ArtProduction/reviews/B08/intake.json",
+  "ArtProduction/reviews/B08_DEFECTS_R1.md",
+  "ArtProduction/reviews/B08_a_frames.png",
+  "Tools/ArtPipeline/vfx_sheets.py",
+  "waveletNoiseTile.bin"
+ ],
+ "stage": "ArtCache\\ArtStage-B03"
+}

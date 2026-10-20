@@ -29,7 +29,21 @@ namespace Aetherward.Game
             }
         }
 
-        private static Material _unitMat, _shadowMat;
+        private static Material _unitMat, _shadowMat, _additiveMat;
+
+        /// <summary>Additive glow/flame material (SpriteAdditive); falls back to the shared sprite material.</summary>
+        public static Material AdditiveMaterial
+        {
+            get
+            {
+                if (_additiveMat == null)
+                {
+                    Shader s = Resources.Load<Shader>("Shaders/SpriteAdditive");
+                    _additiveMat = s != null ? new Material(s) : SpriteMaterial;
+                }
+                return _additiveMat;
+            }
+        }
 
         /// <summary>Directional cast shadows of units (SpriteCastShadow); null when the shader is missing.</summary>
         public static Material ShadowMaterial
@@ -145,6 +159,7 @@ namespace Aetherward.Game
         private Vector3 _lastPos;
         private Element _s1 = Element.None, _s2 = Element.None;
         public int Uid;
+        public bool IsHero => _isHero;
         public bool InUse;
 
         public static UnitView Create(Transform parent)
@@ -452,12 +467,14 @@ namespace Aetherward.Game
             public Color Color;
             public Vector3 Velocity;
             public bool Fade = true;
+            public Sprite[] Frames;      // flipbook frames (null for single-sprite fx)
+            public float Fps;
         }
 
         private readonly Transform _root;
         private readonly List<Fx> _active = new List<Fx>();
         private readonly Stack<Fx> _pool = new Stack<Fx>();
-        public int MaxActive = 220;
+        public int MaxActive = 320;
 
         public FxSystem(Transform root)
         {
@@ -465,11 +482,12 @@ namespace Aetherward.Game
         }
 
         public void Spawn(string sprite, Vector3 pos, float startScale, float endScale, float duration, Color color, float rotation = 0f,
-            float spin = 0f, Vector3 velocity = default, int orderBoost = 30, bool fade = true, float yMul = 1f)
+            float spin = 0f, Vector3 velocity = default, int orderBoost = 30, bool fade = true, float yMul = 1f, bool additive = false)
         {
             if (_active.Count >= MaxActive) return;
             Fx f = _pool.Count > 0 ? _pool.Pop() : new Fx { R = WorldGfx.NewSprite(_root, "Fx", null, 0) };
             f.R.gameObject.SetActive(true);
+            f.R.sharedMaterial = additive ? WorldGfx.AdditiveMaterial : WorldGfx.SpriteMaterial;
             f.R.sprite = Art.Sprite(sprite);
             f.R.transform.position = pos;
             f.R.transform.rotation = Quaternion.Euler(0, 0, rotation);
@@ -488,12 +506,61 @@ namespace Aetherward.Game
             _active.Add(f);
         }
 
+        /// <summary>
+        /// Plays a Blender-rendered flipbook (Art.Flipbook: Vfx/fb_&lt;name&gt; sheet + meta) at a world position.
+        /// Missing sheets are ignored, so callers can keep their sprite fallback.
+        /// </summary>
+        public bool SpawnFlipbook(string name, Vector3 pos, float scale, Color color, float speed = 1f, int orderBoost = 30, bool flip = false)
+        {
+            if (_active.Count >= MaxActive) return false;
+            Art.FlipbookData fb = Art.Flipbook(name);
+            if (fb == null) return false;
+            Fx f = _pool.Count > 0 ? _pool.Pop() : new Fx { R = WorldGfx.NewSprite(_root, "Fx", null, 0) };
+            f.R.gameObject.SetActive(true);
+            f.R.sharedMaterial = fb.Additive ? WorldGfx.AdditiveMaterial : WorldGfx.SpriteMaterial;
+            f.Frames = fb.Frames;
+            f.Fps = fb.Fps * speed;
+            f.R.sprite = fb.Frames[0];
+            f.R.flipX = flip;
+            f.R.transform.position = pos;
+            f.R.transform.rotation = Quaternion.identity;
+            f.YMul = 1f;
+            f.R.transform.localScale = Vector3.one * scale;
+            f.R.color = color;
+            f.R.sortingOrder = WorldGfx.OrderFor(pos.y) + orderBoost;
+            f.T = 0f;
+            f.Duration = fb.Frames.Length / Mathf.Max(1f, f.Fps);
+            f.StartScale = f.EndScale = scale;
+            f.Spin = 0f;
+            f.Color = color;
+            f.Velocity = Vector3.zero;
+            f.Fade = false;
+            _active.Add(f);
+            return true;
+        }
+
         public void Update(float dt)
         {
             for (int i = _active.Count - 1; i >= 0; i--)
             {
                 Fx f = _active[i];
                 f.T += dt;
+                if (f.Frames != null)
+                {
+                    int fi = Mathf.Min(f.Frames.Length - 1, (int)(f.T * f.Fps));
+                    if (f.T >= f.Duration)
+                    {
+                        f.Frames = null;
+                        f.R.sharedMaterial = WorldGfx.SpriteMaterial;
+                        f.R.flipX = false;
+                        f.R.gameObject.SetActive(false);
+                        _pool.Push(f);
+                        _active.RemoveAt(i);
+                        continue;
+                    }
+                    f.R.sprite = f.Frames[fi];
+                    continue;
+                }
                 float k = f.T / f.Duration;
                 if (k >= 1f)
                 {
@@ -517,6 +584,9 @@ namespace Aetherward.Game
         {
             foreach (Fx f in _active)
             {
+                f.Frames = null;
+                f.R.sharedMaterial = WorldGfx.SpriteMaterial;
+                f.R.flipX = false;
                 f.R.gameObject.SetActive(false);
                 _pool.Push(f);
             }

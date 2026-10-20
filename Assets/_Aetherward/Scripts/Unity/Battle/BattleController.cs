@@ -365,8 +365,13 @@ namespace Aetherward.Game
                             DamageNumberMerger.Result m = _merge.Add(e.TargetUid, e.Value, e.Crit, Time.unscaledTime);
                             _text.Upsert(m.Slot, p + new Vector3(Random.Range(-0.25f, 0.25f), 0.9f, 0), Mathf.RoundToInt(m.Total) + (e.Crit ? "!" : ""), c, e.Crit ? 34 : 24, 0.75f);
                         }
-                        if (Optional(reduced) && e.Generation == 0 && Random.value < 0.6f)
-                            _fx.Spawn("Vfx/impact_" + (e.Element == Element.None ? "earth" : ElementUtil.Key(e.Element)), p + new Vector3(0, 0.45f, 0), 0.25f, 0.55f, 0.22f, Color.white, Random.Range(0, 360));
+                        if (Optional(reduced) && e.Generation == 0 && (e.Crit || Random.value < 0.75f))
+                        {
+                            float s = e.Crit ? 1.35f : 0.85f;
+                            _fx.Spawn("Vfx/impact_" + (e.Element == Element.None ? "earth" : ElementUtil.Key(e.Element)), p + new Vector3(0, 0.45f, 0), 0.35f * s, s, 0.24f, Color.white, Random.Range(0, 360));
+                            if (e.Crit)
+                                _fx.Spawn("Vfx/glow", p + new Vector3(0, 0.45f, 0), 0.4f, 1.8f, 0.18f, Color.Lerp(Ui.ElementColor(e.Element), Ui.Gold, 0.5f), 0, 0, default, 35, true, 1f, true);
+                        }
                         App.Audio.Play("hit_" + (e.Element == Element.None ? "physical" : ElementUtil.Key(e.Element)), 0.35f, 0.08f, SoundCategory.Sfx, 0.06f, AudioMix.Low);
                         break;
                     }
@@ -490,7 +495,9 @@ namespace Aetherward.Game
             if (!reduced || e.Generation <= 1)
                 _fx.Spawn(ReactionIcon(e.Id), p + new Vector3(0, 0.9f, 0), 0.25f, 0.45f, 0.5f, new Color(1, 1, 1, 0.95f));
             if (Optional(reduced)) _fx.Spawn("Vfx/ring", p + new Vector3(0, 0.1f, 0), 0.3f, rad, 0.35f, c * new Color(1, 1, 1, 0.8f), 0, 0, default, -20);
-            if (e.Id == "overload" || e.Id == "vaporize" || e.Id == "melt")
+            string fb = ReactionFlipbook(e.Id);
+            bool played = fb != null && (!reduced || e.Generation <= 1) && Burst(fb, p, Mathf.Clamp(rad * 1.1f, 1.2f, 2.6f), c, e.Generation == 0, reduced);
+            if (!played && (e.Id == "overload" || e.Id == "vaporize" || e.Id == "melt"))
                 _fx.Spawn("Vfx/impact_" + (e.Id == "vaporize" ? "water" : "fire"), p + new Vector3(0, 0.4f, 0), 0.4f, rad * 0.9f, 0.3f, Color.white, Random.Range(0, 360));
             // Callout text only for significant events, throttled per reaction type.
             _calloutCooldown.TryGetValue(e.Id, out float until);
@@ -499,6 +506,47 @@ namespace Aetherward.Game
                 _calloutCooldown[e.Id] = Time.unscaledTime + 0.6f;
                 _text.Add(p + new Vector3(0, 1.4f, 0), App.Loc.ReactionName(e.Id), Color.Lerp(c, Color.white, 0.35f), 26, 0.9f,
                     Art.Tex(ReactionIcon(e.Id)));
+            }
+        }
+
+        /// <summary>
+        /// The signature hit: a Blender flipbook, an additive flash, a ground shockwave and (for primary events) a kick of
+        /// screen shake. Exaggerated on purpose: effects are the game's showcase. False when the flipbook is not in the build.
+        /// </summary>
+        private bool Burst(string flipbook, Vector3 p, float size, Color tint, bool primary, bool reduced)
+        {
+            if (!_fx.SpawnFlipbook(flipbook, p, size, Color.white, 1f, 30, Random.value < 0.5f)) return false;
+            Color flash = Color.Lerp(tint, Color.white, 0.35f);
+            _fx.Spawn("Vfx/glow", p + new Vector3(0, 0.45f * size, 0), 0.6f * size, 2.4f * size, 0.22f, flash * new Color(1, 1, 1, 0.9f), 0, 0, default, 32, true, 1f, true);
+            if (reduced) return true;
+            _fx.Spawn("Vfx/ring", p + new Vector3(0, 0.05f, 0), 0.3f * size, 1.9f * size, 0.42f, tint * new Color(1, 1, 1, 0.85f), 0, 0, default, -20, true, 1f, true);
+            for (int i = 0; i < 6; i++)
+            {
+                float a = Random.Range(0f, Mathf.PI * 2f);
+                var v = new Vector3(Mathf.Cos(a), Mathf.Sin(a) * 0.62f + 0.9f, 0) * Random.Range(1.6f, 3.2f) * size * 0.5f;
+                _fx.Spawn("Vfx/glow", p + new Vector3(0, 0.3f * size, 0), 0.22f, 0.05f, Random.Range(0.35f, 0.55f), flash, 0, 0, v, 34, true, 1f, true);
+            }
+            if (primary) Shake(0.12f + 0.05f * size);
+            return true;
+        }
+
+        /// <summary>Blender-rendered flipbook played under a reaction (null: the ring/icon is enough).</summary>
+        public static string ReactionFlipbook(string id)
+        {
+            switch (id)
+            {
+                case "overload": case "melt": case "firestorm": case "magma": case "hellfire": case "wildfire": case "solar_flare": case "toxic_combustion":
+                    return "fire_burst";
+                case "vaporize": case "mudfield":
+                    return "steam_burst";
+                case "electrocharge": case "superconduct": case "thunderstorm": case "magnetize":
+                    return "lightning_arc";
+                case "rainstorm": case "glimmer_tide": case "black_tide": case "venom_flow":
+                    return "water_splash";
+                case "eclipse": case "plague":
+                    return "smoke_puff";
+                default:
+                    return null;
             }
         }
 
@@ -522,10 +570,12 @@ namespace Aetherward.Game
                     // projectile_lightning is 0.556 units long at PPU 230: scale it to span the arc
                     float len = Mathf.Max(0.3f, d.magnitude / 0.556f);
                     _fx.Spawn("Vfx/projectile_lightning", (from + to) / 2, len, len, 0.16f, Color.white, ang, 0, default, 40, true, 1.2f / len);
-                    _fx.Spawn("Vfx/impact_lightning", to, 0.3f, 0.5f, 0.2f, Color.white);
+                    if (e.Id != "storm_bolt" || !Burst("lightning_arc", p, 1.8f, Ui.ElementColor(Element.Lightning), true, reduced))
+                        _fx.Spawn("Vfx/impact_lightning", to, 0.3f, 0.5f, 0.2f, Color.white);
                     break;
                 }
                 case "Meteor":
+                    Burst("fire_burst", p, Mathf.Clamp(e.Radius * 1.4f, 1.6f, 3.2f), new Color(1f, 0.55f, 0.2f), true, reduced);
                     _fx.Spawn("Vfx/impact_fire", p + new Vector3(0, 0.3f, 0), e.Radius * 0.4f, e.Radius * 1.1f, 0.45f, Color.white, Random.Range(0, 360));
                     _fx.Spawn("Vfx/ring", p, 0.2f, e.Radius, 0.4f, new Color(1f, 0.6f, 0.2f, 0.8f), 0, 0, default, -20);
                     Shake(0.3f);
@@ -683,6 +733,8 @@ namespace Aetherward.Game
                     v = RentUnit();
                     v.SetupEnemy(e.Def, e.Elite, e.Affix);
                     v.Uid = e.Uid;
+                    if (!App.Settings.ReducedVfx && !App.Settings.BatterySaver)
+                        _fx.SpawnFlipbook("rift_mist", WorldGfx.V(e.Pos), e.IsBoss ? 3f : 1.5f, new Color(1, 1, 1, 0.9f), 1f, 20);
                     _units[e.Uid] = v;
                 }
                 _seen.Add(e.Uid);
@@ -694,6 +746,12 @@ namespace Aetherward.Game
             foreach (int id in _remove)
             {
                 _units[id].BeginDeath();
+                if (!App.Settings.ReducedVfx && !App.Settings.BatterySaver && !_units[id].IsHero)
+                {
+                    Vector3 dp = _units[id].transform.position;
+                    _fx.SpawnFlipbook("smoke_puff", dp, 1.4f, new Color(1, 1, 1, 0.85f), 1.2f, 25);
+                    _fx.Spawn("Vfx/glow", dp + new Vector3(0, 0.5f, 0), 0.5f, 2f, 0.25f, new Color(0.85f, 0.35f, 0.5f, 0.8f), 0, 0, default, 26, true, 1f, true);
+                }
                 _dying.Add(_units[id]);
                 _units.Remove(id);
             }

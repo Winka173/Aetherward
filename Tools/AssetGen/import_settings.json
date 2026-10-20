@@ -1295,7 +1295,39 @@
   "ppu": 160,
   "sprite": true
  },
+ "Assets/_Aetherward/Resources/Art/Enemies/aetherion_attack.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.05078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
  "Assets/_Aetherward/Resources/Art/Enemies/aetherion_b.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.05078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Enemies/aetherion_tell.png": {
   "border": [
    0,
    0,
@@ -1391,7 +1423,39 @@
   "ppu": 160,
   "sprite": true
  },
+ "Assets/_Aetherward/Resources/Art/Enemies/ashen_matriarch_attack.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.05078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
  "Assets/_Aetherward/Resources/Art/Enemies/ashen_matriarch_b.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.05078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Enemies/ashen_matriarch_tell.png": {
   "border": [
    0,
    0,
@@ -1711,7 +1775,39 @@
   "ppu": 160,
   "sprite": true
  },
+ "Assets/_Aetherward/Resources/Art/Enemies/gravemaw_attack.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.05078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
  "Assets/_Aetherward/Resources/Art/Enemies/gravemaw_b.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.05078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Enemies/gravemaw_tell.png": {
   "border": [
    0,
    0,
@@ -1871,7 +1967,39 @@
   "ppu": 160,
   "sprite": true
  },
+ "Assets/_Aetherward/Resources/Art/Enemies/ignaroth_attack.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.05078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
  "Assets/_Aetherward/Resources/Art/Enemies/ignaroth_b.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.05078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Enemies/ignaroth_tell.png": {
   "border": [
    0,
    0,
@@ -1935,7 +2063,39 @@
   "ppu": 160,
   "sprite": true
  },
+ "Assets/_Aetherward/Resources/Art/Enemies/ironclad_warlord_attack.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.05078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
  "Assets/_Aetherward/Resources/Art/Enemies/ironclad_warlord_b.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.05078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Enemies/ironclad_warlord_tell.png": {
   "border": [
    0,
    0,
@@ -2063,7 +2223,39 @@
   "ppu": 160,
   "sprite": true
  },
+ "Assets/_Aetherward/Resources/Art/Enemies/mirrath_attack.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.05078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
  "Assets/_Aetherward/Resources/Art/Enemies/mirrath_b.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.05078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Enemies/mirrath_tell.png": {
   "border": [
    0,
    0,
@@ -2127,7 +2319,39 @@
   "ppu": 160,
   "sprite": true
  },
+ "Assets/_Aetherward/Resources/Art/Enemies/nyxhollow_attack.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.05078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
  "Assets/_Aetherward/Resources/Art/Enemies/nyxhollow_b.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.05078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Enemies/nyxhollow_tell.png": {
   "border": [
    0,
    0,
@@ -2223,7 +2447,39 @@
   "ppu": 160,
   "sprite": true
  },
+ "Assets/_Aetherward/Resources/Art/Enemies/rift_warden_attack.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.05078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
  "Assets/_Aetherward/Resources/Art/Enemies/rift_warden_b.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.05078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Enemies/rift_warden_tell.png": {
   "border": [
    0,
    0,
@@ -2383,7 +2639,39 @@
   "ppu": 160,
   "sprite": true
  },
+ "Assets/_Aetherward/Resources/Art/Enemies/seraphyne_attack.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.05078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
  "Assets/_Aetherward/Resources/Art/Enemies/seraphyne_b.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.05078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Enemies/seraphyne_tell.png": {
   "border": [
    0,
    0,
@@ -2479,7 +2767,39 @@
   "ppu": 160,
   "sprite": true
  },
+ "Assets/_Aetherward/Resources/Art/Enemies/siegebreaker_golem_attack.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.05078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
  "Assets/_Aetherward/Resources/Art/Enemies/siegebreaker_golem_b.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.05078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Enemies/siegebreaker_golem_tell.png": {
   "border": [
    0,
    0,
@@ -2799,7 +3119,39 @@
   "ppu": 160,
   "sprite": true
  },
+ "Assets/_Aetherward/Resources/Art/Enemies/thornmother_attack.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.05078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
  "Assets/_Aetherward/Resources/Art/Enemies/thornmother_b.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.05078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Enemies/thornmother_tell.png": {
   "border": [
    0,
    0,
@@ -2863,7 +3215,39 @@
   "ppu": 160,
   "sprite": true
  },
+ "Assets/_Aetherward/Resources/Art/Enemies/vaelith_attack.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.05078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
  "Assets/_Aetherward/Resources/Art/Enemies/vaelith_b.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.05078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Enemies/vaelith_tell.png": {
   "border": [
    0,
    0,
@@ -4047,6 +4431,22 @@
   "ppu": 256,
   "sprite": true
  },
+ "Assets/_Aetherward/Resources/Art/Heroes/glacius_attack.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.07
+  ],
+  "ppu": 256,
+  "sprite": true
+ },
  "Assets/_Aetherward/Resources/Art/Heroes/glacius_cast.png": {
   "border": [
    0,
@@ -4095,6 +4495,22 @@
   "ppu": 256,
   "sprite": true
  },
+ "Assets/_Aetherward/Resources/Art/Heroes/glacius_evoA_attack.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.07
+  ],
+  "ppu": 256,
+  "sprite": true
+ },
  "Assets/_Aetherward/Resources/Art/Heroes/glacius_evoA_cast.png": {
   "border": [
    0,
@@ -4112,6 +4528,22 @@
   "sprite": true
  },
  "Assets/_Aetherward/Resources/Art/Heroes/glacius_evoB.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.07
+  ],
+  "ppu": 256,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/glacius_evoB_attack.png": {
   "border": [
    0,
    0,
@@ -4767,6 +5199,22 @@
   "ppu": 256,
   "sprite": true
  },
+ "Assets/_Aetherward/Resources/Art/Heroes/magnus_attack.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.07
+  ],
+  "ppu": 256,
+  "sprite": true
+ },
  "Assets/_Aetherward/Resources/Art/Heroes/magnus_cast.png": {
   "border": [
    0,
@@ -4815,6 +5263,22 @@
   "ppu": 256,
   "sprite": true
  },
+ "Assets/_Aetherward/Resources/Art/Heroes/magnus_evoA_attack.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.07
+  ],
+  "ppu": 256,
+  "sprite": true
+ },
  "Assets/_Aetherward/Resources/Art/Heroes/magnus_evoA_cast.png": {
   "border": [
    0,
@@ -4832,6 +5296,22 @@
   "sprite": true
  },
  "Assets/_Aetherward/Resources/Art/Heroes/magnus_evoB.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.07
+  ],
+  "ppu": 256,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/magnus_evoB_attack.png": {
   "border": [
    0,
    0,
@@ -5599,6 +6079,22 @@
   "ppu": 256,
   "sprite": true
  },
+ "Assets/_Aetherward/Resources/Art/Heroes/raiden_attack.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.07
+  ],
+  "ppu": 256,
+  "sprite": true
+ },
  "Assets/_Aetherward/Resources/Art/Heroes/raiden_cast.png": {
   "border": [
    0,
@@ -5647,6 +6143,22 @@
   "ppu": 256,
   "sprite": true
  },
+ "Assets/_Aetherward/Resources/Art/Heroes/raiden_evoA_attack.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.07
+  ],
+  "ppu": 256,
+  "sprite": true
+ },
  "Assets/_Aetherward/Resources/Art/Heroes/raiden_evoA_cast.png": {
   "border": [
    0,
@@ -5664,6 +6176,22 @@
   "sprite": true
  },
  "Assets/_Aetherward/Resources/Art/Heroes/raiden_evoB.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.07
+  ],
+  "ppu": 256,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/raiden_evoB_attack.png": {
   "border": [
    0,
    0,
@@ -5823,6 +6351,22 @@
   "ppu": 256,
   "sprite": true
  },
+ "Assets/_Aetherward/Resources/Art/Heroes/seren_attack.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.07
+  ],
+  "ppu": 256,
+  "sprite": true
+ },
  "Assets/_Aetherward/Resources/Art/Heroes/seren_cast.png": {
   "border": [
    0,
@@ -5871,6 +6415,22 @@
   "ppu": 256,
   "sprite": true
  },
+ "Assets/_Aetherward/Resources/Art/Heroes/seren_evoA_attack.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.07
+  ],
+  "ppu": 256,
+  "sprite": true
+ },
  "Assets/_Aetherward/Resources/Art/Heroes/seren_evoA_cast.png": {
   "border": [
    0,
@@ -5888,6 +6448,22 @@
   "sprite": true
  },
  "Assets/_Aetherward/Resources/Art/Heroes/seren_evoB.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.07
+  ],
+  "ppu": 256,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/seren_evoB_attack.png": {
   "border": [
    0,
    0,
@@ -6479,6 +7055,22 @@
   "ppu": 256,
   "sprite": true
  },
+ "Assets/_Aetherward/Resources/Art/Heroes/tidal_attack.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.07
+  ],
+  "ppu": 256,
+  "sprite": true
+ },
  "Assets/_Aetherward/Resources/Art/Heroes/tidal_cast.png": {
   "border": [
    0,
@@ -6527,6 +7119,22 @@
   "ppu": 256,
   "sprite": true
  },
+ "Assets/_Aetherward/Resources/Art/Heroes/tidal_evoA_attack.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.07
+  ],
+  "ppu": 256,
+  "sprite": true
+ },
  "Assets/_Aetherward/Resources/Art/Heroes/tidal_evoA_cast.png": {
   "border": [
    0,
@@ -6544,6 +7152,22 @@
   "sprite": true
  },
  "Assets/_Aetherward/Resources/Art/Heroes/tidal_evoB.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.07
+  ],
+  "ppu": 256,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/tidal_evoB_attack.png": {
   "border": [
    0,
    0,
@@ -7087,6 +7711,22 @@
   "ppu": 256,
   "sprite": true
  },
+ "Assets/_Aetherward/Resources/Art/Heroes/zephyr_attack.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.07
+  ],
+  "ppu": 256,
+  "sprite": true
+ },
  "Assets/_Aetherward/Resources/Art/Heroes/zephyr_cast.png": {
   "border": [
    0,
@@ -7135,6 +7775,22 @@
   "ppu": 256,
   "sprite": true
  },
+ "Assets/_Aetherward/Resources/Art/Heroes/zephyr_evoA_attack.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.07
+  ],
+  "ppu": 256,
+  "sprite": true
+ },
  "Assets/_Aetherward/Resources/Art/Heroes/zephyr_evoA_cast.png": {
   "border": [
    0,
@@ -7152,6 +7808,22 @@
   "sprite": true
  },
  "Assets/_Aetherward/Resources/Art/Heroes/zephyr_evoB.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.07
+  ],
+  "ppu": 256,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/zephyr_evoB_attack.png": {
   "border": [
    0,
    0,

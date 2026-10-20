@@ -1,0 +1,12 @@
+{
+ "cols": 4,
+ "rows": 4,
+ "frames": 16,
+ "fps": 20,
+ "ppu": 316.049,
+ "pivot": [
+  0.5,
+  0.18
+ ],
+ "blend": "alpha"
+}

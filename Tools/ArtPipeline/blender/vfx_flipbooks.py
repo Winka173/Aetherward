@@ -17,7 +17,7 @@ from mathutils import Vector
 ARGS = sys.argv[sys.argv.index("--") + 1:] if "--" in sys.argv else []
 OUT = os.path.abspath(ARGS[ARGS.index("--out") + 1] if "--out" in ARGS else "ArtCache/Vfx")
 ONLY = ARGS[ARGS.index("--only") + 1] if "--only" in ARGS else None
-FRAMES, CELL = 16, 256
+FRAMES, CELL = 16, 512
 SIN = 0.62
 ELEV = math.asin(SIN)
 
@@ -81,7 +81,7 @@ def render_frames(sc, name, start, step):
 
 
 def mantaflow(name, kind, color_fire="#ff6a1f", smoke_color="#3a3634", flame_rate=1.0, smoke_density=1.0, size=2.0,
-              burst=6, res=96, start=4, step=2, temp=1.0, vorticity=0.25, fuel=1.0, blackbody=1.0, smoke_emit=0.0):
+              burst=6, res=128, start=4, step=2, temp=1.0, vorticity=0.45, fuel=1.0, blackbody=1.0, smoke_emit=0.0):
     """A short burst from a sphere emitter inside a gas domain; the emitter switches off after `burst` frames."""
     sc = fresh_scene(size * 0.9)
     bpy.ops.mesh.primitive_cube_add(size=size, location=(0, 0, size * 0.42))
@@ -104,7 +104,7 @@ def mantaflow(name, kind, color_fire="#ff6a1f", smoke_color="#3a3634", flame_rat
     ds.flame_smoke = smoke_density
     ds.flame_vorticity = 0.9
     ds.use_noise = True                 # wavelet upres: small-scale flame and smoke detail
-    ds.noise_scale = 2
+    ds.noise_scale = 3
     ds.noise_strength = 1.2
     bpy.ops.mesh.primitive_ico_sphere_add(radius=size * 0.12, location=(0, 0, size * 0.12))
     em = bpy.context.object
@@ -241,12 +241,12 @@ def splash(name="water_splash", color="#2f8cff"):
     drop.data.materials.append(water)
     bpy.ops.mesh.primitive_circle_add(radius=0.18, fill_type="NGON", location=(0, 0, 0.05))
     emit = bpy.context.object
-    emit.hide_render = True
     ps = emit.modifiers.new("ps", "PARTICLE_SYSTEM").particle_system.settings
-    ps.count = 260
+    emit.show_instancer_for_render = False  # hide_render on the emitter would hide its particles too
+    ps.count = 700
     ps.frame_start, ps.frame_end = 1, 5
     ps.lifetime = 40
-    ps.normal_factor = 3.2
+    ps.normal_factor = 4.0
     ps.factor_random = 1.6
     ps.render_type = "OBJECT"
     ps.instance_object = drop
@@ -258,9 +258,9 @@ def splash(name="water_splash", color="#2f8cff"):
 
 
 EFFECTS = {
-    "fire_burst": lambda: mantaflow("fire_burst", "fire", burst=9, temp=1.6, smoke_density=0.7, smoke_color="#2a2220", start=3, step=1,
+    "fire_burst": lambda: mantaflow("fire_burst", "fire", size=2.9, burst=9, temp=2.2, smoke_density=0.7, smoke_color="#2a2220", start=3, step=1,
                                     color_fire="#ff4a12"),
-    "smoke_puff": lambda: mantaflow("smoke_puff", "smoke", burst=4, temp=0.6, smoke_density=0.8, smoke_color="#7a7470", size=1.8, start=2, step=2),
+    "smoke_puff": lambda: mantaflow("smoke_puff", "smoke", burst=4, temp=0.6, smoke_density=0.8, smoke_color="#b0a8a0", smoke_emit=0.35, color_fire="#9a928c", size=1.8, start=2, step=2),
     "steam_burst": lambda: mantaflow("steam_burst", "steam", burst=5, temp=1.2, smoke_density=0.5, smoke_color="#dfe8f0", smoke_emit=0.25,
                                      color_fire="#bfe8ff", size=2.0),
     "rift_mist": lambda: mantaflow("rift_mist", "smoke", burst=8, temp=0.5, smoke_density=0.5, smoke_color="#3a1428", smoke_emit=0.8,

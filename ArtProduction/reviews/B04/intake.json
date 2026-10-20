@@ -1,0 +1,439 @@
+{
+ "batch": "B04",
+ "delivered": 66,
+ "requested": 66,
+ "blocking": [
+  "Heroes/ashara_evoB: blocked (Production pending; no generated export yet.)",
+  "Heroes/ashara_evoB_cast: blocked (Production pending; no generated export yet.)",
+  "Portraits/ashara: blocked (Production pending; no generated export yet.)",
+  "Heroes/nerissa_idle: blocked (Production pending; no generated export yet.)",
+  "Heroes/nerissa_cast: blocked (Production pending; no generated export yet.)",
+  "Heroes/nerissa_downed: blocked (Production pending; no generated export yet.)",
+  "Heroes/nerissa_evoA: blocked (Production pending; no generated export yet.)",
+  "Heroes/nerissa_evoA_cast: blocked (Production pending; no generated export yet.)",
+  "Heroes/nerissa_evoB: blocked (Production pending; no generated export yet.)",
+  "Heroes/nerissa_evoB_cast: blocked (Production pending; no generated export yet.)",
+  "Portraits/nerissa: blocked (Production pending; no generated export yet.)",
+  "Heroes/voltrix_idle: blocked (Production pending; no generated export yet.)",
+  "Heroes/voltrix_cast: blocked (Production pending; no generated export yet.)",
+  "Heroes/voltrix_downed: blocked (Production pending; no generated export yet.)",
+  "Heroes/voltrix_evoA: blocked (Production pending; no generated export yet.)",
+  "Heroes/voltrix_evoA_cast: blocked (Production pending; no generated export yet.)",
+  "Heroes/voltrix_evoB: blocked (Production pending; no generated export yet.)",
+  "Heroes/voltrix_evoB_cast: blocked (Production pending; no generated export yet.)",
+  "Portraits/voltrix: blocked (Production pending; no generated export yet.)",
+  "Heroes/eirwen_idle: blocked (Production pending; no generated export yet.)",
+  "Heroes/eirwen_cast: blocked (Production pending; no generated export yet.)",
+  "Heroes/eirwen_downed: blocked (Production pending; no generated export yet.)",
+  "Heroes/eirwen_evoA: blocked (Production pending; no generated export yet.)",
+  "Heroes/eirwen_evoA_cast: blocked (Production pending; no generated export yet.)",
+  "Heroes/eirwen_evoB: blocked (Production pending; no generated export yet.)",
+  "Heroes/eirwen_evoB_cast: blocked (Production pending; no generated export yet.)",
+  "Portraits/eirwen: blocked (Production pending; no generated export yet.)",
+  "Heroes/kael_idle: blocked (Production pending; no generated export yet.)",
+  "Heroes/kael_cast: blocked (Production pending; no generated export yet.)",
+  "Heroes/kael_downed: blocked (Production pending; no generated export yet.)",
+  "Heroes/kael_evoA: blocked (Production pending; no generated export yet.)",
+  "Heroes/kael_evoA_cast: blocked (Production pending; no generated export yet.)",
+  "Heroes/kael_evoB: blocked (Production pending; no generated export yet.)",
+  "Heroes/kael_evoB_cast: blocked (Production pending; no generated export yet.)",
+  "Portraits/kael: blocked (Production pending; no generated export yet.)",
+  "Heroes/ashara_attack: blocked (Production pending; no generated export yet.)",
+  "Heroes/ashara_evoA_attack: blocked (Production pending; no generated export yet.)",
+  "Heroes/ashara_evoB_attack: blocked (Production pending; no generated export yet.)",
+  "Heroes/nerissa_attack: blocked (Production pending; no generated export yet.)",
+  "Heroes/nerissa_evoA_attack: blocked (Production pending; no generated export yet.)",
+  "Heroes/nerissa_evoB_attack: blocked (Production pending; no generated export yet.)",
+  "Heroes/voltrix_attack: blocked (Production pending; no generated export yet.)",
+  "Heroes/voltrix_evoA_attack: blocked (Production pending; no generated export yet.)",
+  "Heroes/voltrix_evoB_attack: blocked (Production pending; no generated export yet.)",
+  "Heroes/eirwen_attack: blocked (Production pending; no generated export yet.)",
+  "Heroes/eirwen_evoA_attack: blocked (Production pending; no generated export yet.)",
+  "Heroes/eirwen_evoB_attack: blocked (Production pending; no generated export yet.)",
+  "Heroes/kael_attack: blocked (Production pending; no generated export yet.)",
+  "Heroes/kael_evoA_attack: blocked (Production pending; no generated export yet.)",
+  "Heroes/kael_evoB_attack: blocked (Production pending; no generated export yet.)"
+ ],
+ "notes": [],
+ "rows": [
+  {
+   "id": "Heroes/nyxara_idle",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/nyxara_cast",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/nyxara_downed",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/nyxara_evoA",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/nyxara_evoA_cast",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/nyxara_evoB",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/nyxara_evoB_cast",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Portraits/nyxara",
+   "group": "heroes",
+   "status": "OK"
+  },
+  {
+   "id": "Heroes/ashara_idle",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/ashara_cast",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/ashara_downed",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/ashara_evoA",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/ashara_evoA_cast",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/ashara_evoB",
+   "group": "heroes",
+   "status": "BLOCKED"
+  },
+  {
+   "id": "Heroes/ashara_evoB_cast",
+   "group": "heroes",
+   "status": "BLOCKED"
+  },
+  {
+   "id": "Portraits/ashara",
+   "group": "heroes",
+   "status": "BLOCKED"
+  },
+  {
+   "id": "Heroes/nerissa_idle",
+   "group": "heroes",
+   "status": "BLOCKED"
+  },
+  {
+   "id": "Heroes/nerissa_cast",
+   "group": "heroes",
+   "status": "BLOCKED"
+  },
+  {
+   "id": "Heroes/nerissa_downed",
+   "group": "heroes",
+   "status": "BLOCKED"
+  },
+  {
+   "id": "Heroes/nerissa_evoA",
+   "group": "heroes",
+   "status": "BLOCKED"
+  },
+  {
+   "id": "Heroes/nerissa_evoA_cast",
+   "group": "heroes",
+   "status": "BLOCKED"
+  },
+  {
+   "id": "Heroes/nerissa_evoB",
+   "group": "heroes",
+   "status": "BLOCKED"
+  },
+  {
+   "id": "Heroes/nerissa_evoB_cast",
+   "group": "heroes",
+   "status": "BLOCKED"
+  },
+  {
+   "id": "Portraits/nerissa",
+   "group": "heroes",
+   "status": "BLOCKED"
+  },
+  {
+   "id": "Heroes/voltrix_idle",
+   "group": "heroes",
+   "status": "BLOCKED"
+  },
+  {
+   "id": "Heroes/voltrix_cast",
+   "group": "heroes",
+   "status": "BLOCKED"
+  },
+  {
+   "id": "Heroes/voltrix_downed",
+   "group": "heroes",
+   "status": "BLOCKED"
+  },
+  {
+   "id": "Heroes/voltrix_evoA",
+   "group": "heroes",
+   "status": "BLOCKED"
+  },
+  {
+   "id": "Heroes/voltrix_evoA_cast",
+   "group": "heroes",
+   "status": "BLOCKED"
+  },
+  {
+   "id": "Heroes/voltrix_evoB",
+   "group": "heroes",
+   "status": "BLOCKED"
+  },
+  {
+   "id": "Heroes/voltrix_evoB_cast",
+   "group": "heroes",
+   "status": "BLOCKED"
+  },
+  {
+   "id": "Portraits/voltrix",
+   "group": "heroes",
+   "status": "BLOCKED"
+  },
+  {
+   "id": "Heroes/eirwen_idle",
+   "group": "heroes",
+   "status": "BLOCKED"
+  },
+  {
+   "id": "Heroes/eirwen_cast",
+   "group": "heroes",
+   "status": "BLOCKED"
+  },
+  {
+   "id": "Heroes/eirwen_downed",
+   "group": "heroes",
+   "status": "BLOCKED"
+  },
+  {
+   "id": "Heroes/eirwen_evoA",
+   "group": "heroes",
+   "status": "BLOCKED"
+  },
+  {
+   "id": "Heroes/eirwen_evoA_cast",
+   "group": "heroes",
+   "status": "BLOCKED"
+  },
+  {
+   "id": "Heroes/eirwen_evoB",
+   "group": "heroes",
+   "status": "BLOCKED"
+  },
+  {
+   "id": "Heroes/eirwen_evoB_cast",
+   "group": "heroes",
+   "status": "BLOCKED"
+  },
+  {
+   "id": "Portraits/eirwen",
+   "group": "heroes",
+   "status": "BLOCKED"
+  },
+  {
+   "id": "Heroes/kael_idle",
+   "group": "heroes",
+   "status": "BLOCKED"
+  },
+  {
+   "id": "Heroes/kael_cast",
+   "group": "heroes",
+   "status": "BLOCKED"
+  },
+  {
+   "id": "Heroes/kael_downed",
+   "group": "heroes",
+   "status": "BLOCKED"
+  },
+  {
+   "id": "Heroes/kael_evoA",
+   "group": "heroes",
+   "status": "BLOCKED"
+  },
+  {
+   "id": "Heroes/kael_evoA_cast",
+   "group": "heroes",
+   "status": "BLOCKED"
+  },
+  {
+   "id": "Heroes/kael_evoB",
+   "group": "heroes",
+   "status": "BLOCKED"
+  },
+  {
+   "id": "Heroes/kael_evoB_cast",
+   "group": "heroes",
+   "status": "BLOCKED"
+  },
+  {
+   "id": "Portraits/kael",
+   "group": "heroes",
+   "status": "BLOCKED"
+  },
+  {
+   "id": "Heroes/nyxara_attack",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 372
+  },
+  {
+   "id": "Heroes/nyxara_evoA_attack",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/nyxara_evoB_attack",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 371
+  },
+  {
+   "id": "Heroes/ashara_attack",
+   "group": "heroes",
+   "status": "BLOCKED"
+  },
+  {
+   "id": "Heroes/ashara_evoA_attack",
+   "group": "heroes",
+   "status": "BLOCKED"
+  },
+  {
+   "id": "Heroes/ashara_evoB_attack",
+   "group": "heroes",
+   "status": "BLOCKED"
+  },
+  {
+   "id": "Heroes/nerissa_attack",
+   "group": "heroes",
+   "status": "BLOCKED"
+  },
+  {
+   "id": "Heroes/nerissa_evoA_attack",
+   "group": "heroes",
+   "status": "BLOCKED"
+  },
+  {
+   "id": "Heroes/nerissa_evoB_attack",
+   "group": "heroes",
+   "status": "BLOCKED"
+  },
+  {
+   "id": "Heroes/voltrix_attack",
+   "group": "heroes",
+   "status": "BLOCKED"
+  },
+  {
+   "id": "Heroes/voltrix_evoA_attack",
+   "group": "heroes",
+   "status": "BLOCKED"
+  },
+  {
+   "id": "Heroes/voltrix_evoB_attack",
+   "group": "heroes",
+   "status": "BLOCKED"
+  },
+  {
+   "id": "Heroes/eirwen_attack",
+   "group": "heroes",
+   "status": "BLOCKED"
+  },
+  {
+   "id": "Heroes/eirwen_evoA_attack",
+   "group": "heroes",
+   "status": "BLOCKED"
+  },
+  {
+   "id": "Heroes/eirwen_evoB_attack",
+   "group": "heroes",
+   "status": "BLOCKED"
+  },
+  {
+   "id": "Heroes/kael_attack",
+   "group": "heroes",
+   "status": "BLOCKED"
+  },
+  {
+   "id": "Heroes/kael_evoA_attack",
+   "group": "heroes",
+   "status": "BLOCKED"
+  },
+  {
+   "id": "Heroes/kael_evoB_attack",
+   "group": "heroes",
+   "status": "BLOCKED"
+  }
+ ],
+ "strayWorkingTreeChanges": [
+  "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs",
+  "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs",
+  "Assets/_Aetherward/Scripts/Unity/Core/Services.cs",
+  "Docs/ASSET_MANIFEST.json",
+  "Tools/ArtPipeline/blender/vfx_flipbooks.py",
+  "ArtProduction/generated/Vfx/fb_fire_burst.png",
+  "ArtProduction/generated/Vfx/fb_fire_burst.png.json",
+  "ArtProduction/generated/Vfx/fb_fire_burst_meta.json",
+  "ArtProduction/generated/Vfx/fb_lightning_arc.png",
+  "ArtProduction/generated/Vfx/fb_lightning_arc.png.json",
+  "ArtProduction/generated/Vfx/fb_lightning_arc_meta.json",
+  "ArtProduction/generated/Vfx/fb_rift_mist.png",
+  "ArtProduction/generated/Vfx/fb_rift_mist.png.json",
+  "ArtProduction/generated/Vfx/fb_rift_mist_meta.json",
+  "ArtProduction/generated/Vfx/fb_smoke_puff.png",
+  "ArtProduction/generated/Vfx/fb_smoke_puff.png.json",
+  "ArtProduction/generated/Vfx/fb_smoke_puff_meta.json",
+  "ArtProduction/generated/Vfx/fb_steam_burst.png",
+  "ArtProduction/generated/Vfx/fb_steam_burst.png.json",
+  "ArtProduction/generated/Vfx/fb_steam_burst_meta.json",
+  "ArtProduction/generated/Vfx/fb_water_splash.png",
+  "ArtProduction/generated/Vfx/fb_water_splash.png.json",
+  "ArtProduction/generated/Vfx/fb_water_splash_meta.json",
+  "ArtProduction/reviews/B03/intake.json",
+  "ArtProduction/reviews/B04/intake.json",
+  "ArtProduction/reviews/B08/intake.json",
+  "ArtProduction/reviews/B08_DEFECTS_R1.md",
+  "ArtProduction/reviews/B08_a_frames.png",
+  "ArtProduction/reviews/B11/intake.json",
+  "Tools/ArtPipeline/vfx_sheets.py",
+  "waveletNoiseTile.bin"
+ ],
+ "stage": "ArtCache\\ArtStage-B04"
+}

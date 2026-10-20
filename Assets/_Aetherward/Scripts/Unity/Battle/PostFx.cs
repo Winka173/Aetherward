@@ -20,7 +20,7 @@ namespace Aetherward.Game
         private readonly RenderTexture[] _chain = new RenderTexture[Levels];
         private Material _mat;
 
-        public float Threshold = 0.85f, Knee = 0.3f, BloomIntensity = 0.4f, Saturation = 1.06f, Vignette = 0.32f;
+        public float Threshold = 0.72f, Knee = 0.35f, BloomIntensity = 0.65f, Saturation = 1.06f, Vignette = 0.32f;
         public Color Lift = new Color(0.012f, 0.016f, 0.03f), Gamma = new Color(1f, 1f, 1.02f), Gain = new Color(1.04f, 1.02f, 1f);
 
         private bool Active => App.Settings != null && !App.Settings.BatterySaver && App.Settings.EffectsPreset != (int)EffectsPreset.Minimal;
