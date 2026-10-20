@@ -3987,7 +3987,7 @@ def w3_prop(ctx, spec, hand, pose, element):
 # ============================================================================ evolution kits (P3 visual identity)
 # The Art Quality Validator flagged 20 "A" branches as visually indistinct (silhouette IoU >= 0.97 with the base
 # form: only a halo, gold trim and a chest star). Each kit below changes the SILHOUETTE in a way that matches the
-# branch's mechanics (Docs/Enhancement/Final/ART_BIBLE.md §Evolution identity):
+# branch's mechanics (Docs/Enhancement/ART_BIBLE.md §Evolution identity):
 #   aegis     guardians that hold the line   -> tower shield + spiked pauldrons + crystal crest
 #   archmage  big-spell casters              -> tall mantle collar + floating crystal crown + orbiting runes
 #   champion  bruisers                       -> horned helm + massive pauldrons + belt plate

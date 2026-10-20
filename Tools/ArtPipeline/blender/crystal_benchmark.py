@@ -6,7 +6,7 @@ or directly:
     blender --background --factory-startup --python Tools/ArtPipeline/blender/crystal_benchmark.py -- <stage Art dir>
 
 Deterministic: fixed geometry, fixed sample count and seed, Standard view transform, no denoiser.
-Style match with the 2D set (Docs/Enhancement/Final/ART_BIBLE.md): flat cel bands via an emission colour ramp
+Style match with the 2D set (Docs/Enhancement/ART_BIBLE.md): flat cel bands via an emission colour ramp
 driven by a fixed light direction (no physically based shading), ink outline via Freestyle, soft ground
 shadow via a shadow catcher. Engine: Cycles CPU (EEVEE needs libEGL, unavailable in this container).
 Each output prints one "AW_OUTPUT {json}" line consumed by ap.py.

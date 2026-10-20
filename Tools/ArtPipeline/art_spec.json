@@ -1,5 +1,5 @@
 {
-  "_doc": "Art quality gates (Docs/Enhancement/Final/ART_BIBLE.md). Sizes are facts from the current pipeline; thresholds are PROPOSALS tuned on the current set and recorded in TEST_REPORT.md.",
+  "_doc": "Art quality gates (Docs/Enhancement/ART_BIBLE.md). Sizes are facts from the current pipeline; thresholds are PROPOSALS tuned on the current set and recorded in TEST_REPORT.md.",
   "screen": {
     "_doc": "Battle camera: orthographicSize = max(7.5, 13.2/aspect) -> 15 world units tall on 16:9. Pixels per world unit at reference heights.",
     "worldUnitsTall": 15.0,
