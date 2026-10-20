@@ -11,7 +11,7 @@ Unity 6000.4.8f1 **không có** trong môi trường này: mọi mã Unity chỉ
 | P4 Boss readability | DONE WITH EVIDENCE (sim) | `BossTelegraphTests`: 12/12 boss, lead tối thiểu 1,17 s; assist 1× khi 2×; preview không spoil | Độ tương phản telegraph trên màn hình chưa kiểm |
 | P5 Discovery Codex | DONE WITH EVIDENCE | `Meta/Discovery.cs`, `DiscoveryCodexTests` (3; fixture MVP + id lạ được giữ) | UI journal/toast chưa chạy thật |
 | P6 Battle Insights | DONE WITH EVIDENCE | `Run/BattleInsights.cs`, `BattleInsightsTests` (khớp log + replay), mẫu `Reports/RunBreakdown/run_1007.md` | — |
-| P7 Feel/audio polish | PARTIAL | toast nhỏ, telegraph assist, flash scale (trước đó) | Anim cast/hit/recover, SFX mới, preset cường độ: NOT STARTED (không kiểm chứng được nếu không có Unity) |
+| P7 Feel/audio polish | DONE WITH EVIDENCE (logic) / PARTIAL (chưa xem trên màn hình) | `Presentation/FeelProfile.cs` (4 preset: Tối thiểu/Giảm/Chuẩn/Điện ảnh, các tuỳ chọn trợ năng là giới hạn cứng), `UnitPose.cs` (cast: chuẩn bị → tung chiêu → hồi; hit: giật lùi khỏi kẻ tấn công, đòn nặng mạnh hơn), `Hitstop` (dừng ngắn 40–60 ms, có cooldown, giảm nửa ở 2x), `AudioMix.cs` (cấp giọng theo ưu tiên, tiếng boss/telegraph không bị tiếng đánh cướp, ducking); 4 SFX mới (hit_crit, hero_hurt, shield_up, boss_hit); hàng Settings mới; `FeelTests` (7) | Cảm giác thật (độ mạnh, thời gian, âm lượng) chỉ đánh giá được khi chạy Unity |
 | P8 Art pipeline + quality gate | DONE WITH EVIDENCE | `Tools/ArtPipeline/` (validate + ap.py), 8 self-test, CI job; 258 sprite tạo lại, 62 lỗi chặn → 0; rollback thử thật | 4/8 hướng: không làm (game dùng 1 hướng lật); SpriteAtlas: chỉ kế hoạch; EEVEE BLOCKED |
 | P9 Balance lab | DONE WITH EVIDENCE | `--lab` 3780 run, `--lab --ablation`; 3 sửa có A/B (`lab_ascension_ramp.md`, `lab_ascension_retune.md`) | A5/A10 đã chỉnh lại: A5 0% → 2,8% (bot tốt nhất 6,1%), A10 0% → 0,6% (2,8%); cần playtest người để chốt mục tiêu |
 | Build Windows/Android/iOS | BLOCKED | — | Cần Unity |
@@ -21,7 +21,7 @@ Unity 6000.4.8f1 **không có** trong môi trường này: mọi mã Unity chỉ
 - Blender: benchmark Pha lê render được (Cycles CPU) nhưng **REWORK — không dùng** vì kém dễ đọc hơn bản 2D.
 - Bot A0 (30 seed × 6 biome): 0,6% (boss_burst) … 24,4% (random). Auto Arrange sửa đường bỏ trống: stall 6,1% → 22,8%.
 - Ascension ramp: A10 chết ở đợt ≤2 từ 843 → 336/1260; A0 không đổi.
-- Test: C# 221/221, Python 8/8, UnityCheck 0 lỗi.
+- Test: C# 228/228, Python 8/8, UnityCheck 0 lỗi.
 
 ## Lệnh tái lập
 ```

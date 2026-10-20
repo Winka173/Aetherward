@@ -72,7 +72,9 @@ namespace Aetherward.Game
         {
             QualitySettings.vSyncCount = 0;
             Application.targetFrameRate = Settings.BatterySaver ? Mathf.Min(30, Settings.TargetFps) : Settings.TargetFps;
-            WorldGfx.FlashScale = Mathf.Clamp01(Settings.FlashIntensity);
+            WorldGfx.Feel = Sim.Presentation.FeelProfile.For(Sim.Presentation.FeelProfile.Clamp(Settings.EffectsPreset), Settings.ScreenShake,
+                Settings.FlashIntensity, Settings.ReducedVfx, Settings.BatterySaver);
+            WorldGfx.FlashScale = WorldGfx.Feel.FlashScale;
             if (Audio != null) Audio.ApplyVolumes();
         }
 

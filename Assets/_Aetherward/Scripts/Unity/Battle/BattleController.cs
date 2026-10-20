@@ -40,6 +40,7 @@ namespace Aetherward.Game
         private readonly FloatingTextSystem _text = new FloatingTextSystem();
         private readonly DamageNumberMerger _merge = new DamageNumberMerger();
         private readonly TelegraphAssist _assist = new TelegraphAssist();
+        private readonly Hitstop _hitstop = new Hitstop();
         private DiscoveryTracker _discovery;
         private int _knownRelics = -1;
         private readonly List<(string text, float t)> _toasts = new List<(string, float)>();
@@ -245,7 +246,7 @@ namespace Aetherward.Game
                         App.Saves.Delete("run");
                     }
                     Banner(cleared ? App.Loc.Get("hud.wave_clear") : App.Loc.Get("results.defeat"), cleared ? Ui.Good : Ui.Bad, 1.6f);
-                    App.Audio.Play(cleared ? (_rc.TotalWaves > 0 && b.Wave.Number >= _rc.TotalWaves ? "victory" : "wave_clear") : "defeat", 1f, 0f);
+                    App.Audio.Play(cleared ? (_rc.TotalWaves > 0 && b.Wave.Number >= _rc.TotalWaves ? "victory" : "wave_clear") : "defeat", 1f, 0f, SoundCategory.Sfx, 0.05f, AudioMix.Critical);
                 }
                 _resolveDelay -= dt;
                 if (_resolveDelay <= 0f)
@@ -263,6 +264,7 @@ namespace Aetherward.Game
                 return;
             }
             if (_paused || _modalOpen) return;
+            if (_hitstop.Active(Time.unscaledTime)) return;
             _accumulator += dt * _assist.EffectiveSpeed(_speed, Time.unscaledTime);
             int steps = 0;
             while (_accumulator >= Battle.TickSeconds && steps < 10)
@@ -282,11 +284,12 @@ namespace Aetherward.Game
             if (_rc.StartWave() == null) return;
             ClearPrepViews();
             _accumulator = 0f;
+            _hitstop.Reset();
             WaveDef w = _rc.Battle.Wave;
             Banner(App.Loc.Format("hud.wave_start", w.Number, App.Loc.Get(w.NameKey)), Ui.Gold, 2.2f);
             App.Audio.Play("wave_start", 0.9f, 0f);
             App.Audio.PlayMusic(w.Boss ? "boss_loop" : "battle_loop");
-            if (w.Boss) App.Audio.Play("boss_roar", 1f, 0f);
+            if (w.Boss) App.Audio.Play("boss_roar", 1f, 0f, SoundCategory.Sfx, 0.05f, AudioMix.Critical);
         }
 
         private void FinishRun()
@@ -327,21 +330,39 @@ namespace Aetherward.Game
                 {
                     case SimEventType.Hit:
                     {
+                        bool heavy = e.Crit || e.Value >= 60f;
+                        Vector3 from = _units.TryGetValue(e.SourceUid, out UnitView src) ? src.transform.position : WorldGfx.V(e.From);
                         if (e.Id == "hero")
                         {
-                            if (_units.TryGetValue(e.TargetUid, out UnitView hv)) hv.Flash(0.8f);
+                            if (_units.TryGetValue(e.TargetUid, out UnitView hv))
+                            {
+                                hv.Flash(0.8f);
+                                hv.Hit(from, heavy);
+                            }
+                            App.Audio.Play("hero_hurt", 0.45f, 0.08f, SoundCategory.Sfx, 0.15f);
                             break;
                         }
-                        if (_units.TryGetValue(e.TargetUid, out UnitView v)) v.Flash(1f);
+                        if (_units.TryGetValue(e.TargetUid, out UnitView v))
+                        {
+                            v.Flash(1f);
+                            if (e.Generation == 0) v.Hit(from, heavy);
+                        }
+                        bool onBoss = IsBossUid(b, e.TargetUid);
+                        if (e.Crit && e.Generation == 0)
+                        {
+                            App.Audio.Play("hit_crit", 0.55f, 0.05f, SoundCategory.Sfx, 0.1f, AudioMix.High);
+                            if (e.Value >= 40f || onBoss) _hitstop.Trigger(WorldGfx.Feel.HitstopSeconds, _speed, Time.unscaledTime);
+                        }
+                        if (onBoss && e.Generation == 0) App.Audio.Play("boss_hit", 0.5f, 0.06f, SoundCategory.Sfx, 0.12f);
                         if (numbers && (e.Crit || e.Value >= 8f) && e.Generation <= 1)
                         {
                             Color c = e.Crit ? Ui.Gold : (e.Id != null ? Ui.ElementColor(e.Element) : Color.white);
                             DamageNumberMerger.Result m = _merge.Add(e.TargetUid, e.Value, e.Crit, Time.unscaledTime);
                             _text.Upsert(m.Slot, p + new Vector3(Random.Range(-0.25f, 0.25f), 0.9f, 0), Mathf.RoundToInt(m.Total) + (e.Crit ? "!" : ""), c, e.Crit ? 34 : 24, 0.75f);
                         }
-                        if (!reduced && e.Generation == 0 && Random.value < 0.6f)
+                        if (Optional(reduced) && e.Generation == 0 && Random.value < 0.6f)
                             _fx.Spawn("Vfx/impact_" + (e.Element == Element.None ? "earth" : ElementUtil.Key(e.Element)), p + new Vector3(0, 0.45f, 0), 0.25f, 0.55f, 0.22f, Color.white, Random.Range(0, 360));
-                        App.Audio.Play("hit_" + (e.Element == Element.None ? "physical" : ElementUtil.Key(e.Element)), 0.35f, 0.08f, SoundCategory.Sfx, 0.06f);
+                        App.Audio.Play("hit_" + (e.Element == Element.None ? "physical" : ElementUtil.Key(e.Element)), 0.35f, 0.08f, SoundCategory.Sfx, 0.06f, AudioMix.Low);
                         break;
                     }
                     case SimEventType.Reaction:
@@ -355,7 +376,7 @@ namespace Aetherward.Game
                     {
                         if (_units.TryGetValue(e.SourceUid, out UnitView v)) v.Cast();
                         if (e.Element != Element.None) App.Audio.Play("cast_" + ElementUtil.Key(e.Element), 0.55f, 0.04f, SoundCategory.Sfx, 0.08f);
-                        if (!reduced) _fx.Spawn("Vfx/glow", p + new Vector3(0, 0.4f, 0), 0.5f, 2.2f, 0.4f, Ui.ElementColor(e.Element) * new Color(1, 1, 1, 0.55f));
+                        if (Optional(reduced)) _fx.Spawn("Vfx/glow", p + new Vector3(0, 0.4f, 0), 0.5f, 2.2f, 0.4f, Ui.ElementColor(e.Element) * new Color(1, 1, 1, 0.55f));
                         break;
                     }
                     case SimEventType.BasicAttack:
@@ -363,7 +384,7 @@ namespace Aetherward.Game
                         if (e.Id == "melee" && _units.TryGetValue(e.SourceUid, out UnitView v) && _units.TryGetValue(e.TargetUid, out UnitView t))
                         {
                             v.Lunge(t.transform.position);
-                            if (!reduced)
+                            if (Optional(reduced))
                             {
                                 Vector3 d = (t.transform.position - v.transform.position);
                                 float ang = Mathf.Atan2(d.y, d.x) * Mathf.Rad2Deg;
@@ -374,7 +395,7 @@ namespace Aetherward.Game
                         break;
                     }
                     case SimEventType.EnemyDeath:
-                        App.Audio.Play("enemy_death", 0.45f, 0.1f, SoundCategory.Sfx, 0.05f);
+                        App.Audio.Play("enemy_death", 0.45f, 0.1f, SoundCategory.Sfx, 0.05f, AudioMix.Low);
                         _fx.Spawn("Vfx/impact_earth", p + new Vector3(0, 0.3f, 0), 0.3f, 0.9f, 0.3f, new Color(0.8f, 0.6f, 1f, 0.9f), Random.Range(0, 360));
                         if (e.Value >= 1f)
                         {
@@ -383,16 +404,20 @@ namespace Aetherward.Game
                         }
                         break;
                     case SimEventType.HeroDowned:
-                        App.Audio.Play("hero_down", 0.9f, 0f);
+                        App.Audio.Play("hero_down", 0.9f, 0f, SoundCategory.Sfx, 0.05f, AudioMix.High);
                         _text.Add(p + new Vector3(0, 1.4f, 0), App.Loc.Get("hud.downed"), Ui.Bad, 32, 1.2f);
                         break;
                     case SimEventType.HeroRevived:
                         App.Audio.Play("hero_revive", 0.9f, 0f);
                         _fx.Spawn("Vfx/glow", p + new Vector3(0, 0.6f, 0), 0.5f, 3f, 0.7f, new Color(1f, 0.9f, 0.5f, 0.8f));
                         break;
+                    case SimEventType.ShieldGain:
+                        if (e.Value >= 20f) App.Audio.Play("shield_up", 0.4f, 0.04f, SoundCategory.Sfx, 0.25f);
+                        break;
                     case SimEventType.CrystalHit:
                         _crystalWobble = 0.25f;
                         Shake(e.Value > 60f ? 0.35f : 0.12f);
+                        if (e.Value > 60f) _hitstop.Trigger(WorldGfx.Feel.HitstopSeconds, _speed, Time.unscaledTime);
                         App.Audio.Play("crystal_hit", 0.6f, 0.05f, SoundCategory.Sfx, 0.12f);
                         if (numbers) _text.Add(new Vector3(Random.Range(-0.4f, 0.4f), 2.2f, 0), "-" + Mathf.RoundToInt(e.Value), Ui.Bad, 30, 0.9f);
                         break;
@@ -405,7 +430,7 @@ namespace Aetherward.Game
                             LaneDef lane = Arena.Lanes[Mathf.Clamp(e.TargetUid, 0, Arena.Lanes.Count - 1)];
                             Banner(App.Loc.Format("hud.lane_marked", App.Loc.Get(lane.NameKey)), Ui.Bad, 1.8f);
                         }
-                        if (e.Id == "BossSlam" || e.Id == "Meteor" || e.Id == "lane_mark") App.Audio.Play("telegraph", 0.6f, 0f, SoundCategory.Sfx, 0.3f);
+                        if (e.Id == "BossSlam" || e.Id == "Meteor" || e.Id == "lane_mark") App.Audio.Play("telegraph", 0.6f, 0f, SoundCategory.Sfx, 0.3f, AudioMix.Critical);
                         _assist.Enabled = App.Settings.TelegraphAssist;
                         _assist.OnTelegraph(IsBossUid(b, e.SourceUid), e.Value, Time.unscaledTime);
                         break;
@@ -413,14 +438,14 @@ namespace Aetherward.Game
                         OnBossPhase(e);
                         break;
                     case SimEventType.EnemySpawn:
-                        if (!reduced && Random.value < 0.35f) _fx.Spawn("Vfx/glow", p + new Vector3(0, 0.4f, 0), 0.6f, 1.6f, 0.35f, new Color(0.7f, 0.5f, 1f, 0.6f));
+                        if (Optional(reduced) && Random.value < 0.35f) _fx.Spawn("Vfx/glow", p + new Vector3(0, 0.4f, 0), 0.6f, 1.6f, 0.35f, new Color(0.7f, 0.5f, 1f, 0.6f));
                         break;
                     case SimEventType.RelicProc:
-                        if (!reduced && e.Id != null && App.Content.Relics.ContainsKey(e.Id) && Random.value < 0.5f)
+                        if (Optional(reduced) && e.Id != null && App.Content.Relics.ContainsKey(e.Id) && Random.value < 0.5f)
                             _fx.Spawn("Relics/" + e.Id, p + new Vector3(0, 1.2f, 0), 0.25f, 0.3f, 0.7f, new Color(1, 1, 1, 0.9f), 0, 0, new Vector3(0, 0.8f, 0));
                         break;
                     case SimEventType.Taunt:
-                        if (!reduced) _fx.Spawn("Vfx/ring", p + new Vector3(0, 0.1f, 0), 0.3f, e.Radius, 0.5f, new Color(1f, 0.5f, 0.3f, 0.7f), 0, 0, default, -20);
+                        if (Optional(reduced)) _fx.Spawn("Vfx/ring", p + new Vector3(0, 0.1f, 0), 0.3f, e.Radius, 0.5f, new Color(1f, 0.5f, 0.3f, 0.7f), 0, 0, default, -20);
                         break;
                     case SimEventType.Miss:
                         if (numbers) _text.Add(p + new Vector3(0, 1f, 0), e.Id == "immune" ? "✦" : "miss", Ui.Muted, 20, 0.6f);
@@ -428,6 +453,9 @@ namespace Aetherward.Game
                 }
             }
         }
+
+        /// <summary>Optional sprite effects: off with Reduced VFX, thinned by the effects preset (Minimal = none).</summary>
+        private static bool Optional(bool reduced) => !reduced && (WorldGfx.Feel.FxDensity >= 1f || Random.value < WorldGfx.Feel.FxDensity);
 
         private static string ReactionSound(string id)
         {
@@ -454,7 +482,7 @@ namespace Aetherward.Game
             Color c = Ui.ElementColor(e.Element);
             if (!reduced || e.Generation <= 1)
                 _fx.Spawn(ReactionIcon(e.Id), p + new Vector3(0, 0.9f, 0), 0.25f, 0.45f, 0.5f, new Color(1, 1, 1, 0.95f));
-            if (!reduced) _fx.Spawn("Vfx/ring", p + new Vector3(0, 0.1f, 0), 0.3f, rad, 0.35f, c * new Color(1, 1, 1, 0.8f), 0, 0, default, -20);
+            if (Optional(reduced)) _fx.Spawn("Vfx/ring", p + new Vector3(0, 0.1f, 0), 0.3f, rad, 0.35f, c * new Color(1, 1, 1, 0.8f), 0, 0, default, -20);
             if (e.Id == "overload" || e.Id == "vaporize" || e.Id == "melt")
                 _fx.Spawn("Vfx/impact_" + (e.Id == "vaporize" ? "water" : "fire"), p + new Vector3(0, 0.4f, 0), 0.4f, rad * 0.9f, 0.3f, Color.white, Random.Range(0, 360));
             // Callout text only for significant events, throttled per reaction type.
@@ -509,6 +537,7 @@ namespace Aetherward.Game
                 case "BossLaneMark":
                     _fx.Spawn("Vfx/impact_earth", p + new Vector3(0, 0.3f, 0), e.Radius * 0.5f, e.Radius * 1.3f, 0.4f, new Color(1f, 0.6f, 0.8f), Random.Range(0, 360));
                     Shake(0.4f);
+                    _hitstop.Trigger(WorldGfx.Feel.HitstopSeconds * 1.5f, _speed, Time.unscaledTime);
                     App.Audio.Play("react_rumble", 0.9f);
                     break;
                 case "relic_burst":
@@ -537,7 +566,7 @@ namespace Aetherward.Game
                     if (e.Id != null && e.Id.StartsWith("warden_phase_"))
                     {
                         Banner(l.Format("hud.boss_phase", e.Id.Substring("warden_phase_".Length)), Ui.Bad, 2f);
-                        App.Audio.Play("boss_roar", 1f, 0f);
+                        App.Audio.Play("boss_roar", 1f, 0f, SoundCategory.Sfx, 0.05f, AudioMix.Critical);
                         Shake(0.5f);
                     }
                     else if (e.Id != null && l.Has("hud." + e.Id))
@@ -547,7 +576,7 @@ namespace Aetherward.Game
                         Banner(l.Get("hud." + e.Id), window ? Ui.Good : Ui.Bad, 2f);
                         if (!window)
                         {
-                            App.Audio.Play("boss_roar", 1f, 0f);
+                            App.Audio.Play("boss_roar", 1f, 0f, SoundCategory.Sfx, 0.05f, AudioMix.Critical);
                             Shake(0.45f);
                         }
                     }
@@ -578,8 +607,9 @@ namespace Aetherward.Game
 
         private void Shake(float amount)
         {
-            if (!App.Settings.ScreenShake) return;
-            _shake = Mathf.Min(0.6f, Mathf.Max(_shake, amount * (Application.isMobilePlatform ? 0.5f : 1f)));
+            float k = WorldGfx.Feel.ShakeScale;   // 0 when Screen shake is off or the preset is Minimal
+            if (k <= 0f) return;
+            _shake = Mathf.Min(0.6f, Mathf.Max(_shake, amount * k * (Application.isMobilePlatform ? 0.5f : 1f)));
         }
 
         private void UpdateShake(float dt)

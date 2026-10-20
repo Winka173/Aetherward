@@ -46,7 +46,8 @@ namespace Aetherward.Sim.Content
 
         public static IEnumerable<string> RequiredAudio(ContentDatabase db)
         {
-            foreach (string clip in new[] { "Music/menu_loop", "Music/battle_loop", "Music/boss_loop", "Sfx/ui_click", "Sfx/wave_start", "Sfx/react_generic" })
+            foreach (string clip in new[] { "Music/menu_loop", "Music/battle_loop", "Music/boss_loop", "Sfx/ui_click", "Sfx/wave_start", "Sfx/react_generic",
+                         "Sfx/hit_crit", "Sfx/hero_hurt", "Sfx/shield_up", "Sfx/boss_hit" })
                 yield return clip;
             foreach (Element el in ElementUtil.All)
             {

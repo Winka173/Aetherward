@@ -14,4 +14,4 @@ Scope revisions (recorded, not silent):
 - 4/8-direction sprite sheets: not produced — the game uses one mirrored facing (see ART_BIBLE §7).
 - URP 2D lights / Shader Graph: not enabled — built-in renderer project, no editor to verify cost.
 - Unity SpriteAtlas assets: planned only (`Reports/ArtQuality/atlas_plan.md`); creating them needs the editor.
-- P7 (feel/audio polish): limited to non-pausing milestone toasts + telegraph assist; new animation/SFX work NOT STARTED (cannot be reviewed without running Unity).
+- P7 (feel/audio polish): milestone toasts + telegraph assist; effects-intensity preset, phased cast/hit poses, hitstop, priority voice allocation + ducking, 4 new SFX (logic unit tested; on-screen feel needs a Unity review).

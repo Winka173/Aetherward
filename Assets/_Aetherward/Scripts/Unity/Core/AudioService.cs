@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Aetherward.Sim.Presentation;
 using UnityEngine;
 
 namespace Aetherward.Game
@@ -12,18 +13,23 @@ namespace Aetherward.Game
     /// <summary>
     /// Pooled one-shot SFX with per-sound rate limiting (no stacking 40 hit sounds in one frame) and
     /// a crossfading music player. Volumes come from the category sliders in Settings.
+    /// Voices are allocated by priority (AudioMix): hit spam can never steal the voice of a boss roar or a telegraph
+    /// warning, and a Critical cue ducks other SFX briefly so it is heard over the mix.
     /// </summary>
     public sealed class AudioService : MonoBehaviour
     {
         private const int Voices = 20;
         private readonly List<AudioSource> _voices = new List<AudioSource>();
+        private readonly bool[] _playing = new bool[Voices];
+        private readonly int[] _priority = new int[Voices];
+        private readonly float[] _startedAt = new float[Voices];
+        private float _duckUntil = float.MinValue;
         private readonly Dictionary<string, AudioClip> _clips = new Dictionary<string, AudioClip>();
         private readonly Dictionary<string, float> _lastPlayed = new Dictionary<string, float>();
         private AudioSource _musicA, _musicB;
         private bool _aActive = true;
         private string _currentMusic;
         private float _fade = 1f;
-        private int _next;
 
         public static AudioService Create(Transform parent)
         {
@@ -60,7 +66,8 @@ namespace Aetherward.Game
             return s.MasterVolume * (cat == SoundCategory.Ui ? s.UiVolume : s.SfxVolume);
         }
 
-        public void Play(string name, float volume = 1f, float pitchVariance = 0.06f, SoundCategory cat = SoundCategory.Sfx, float minInterval = 0.05f)
+        public void Play(string name, float volume = 1f, float pitchVariance = 0.06f, SoundCategory cat = SoundCategory.Sfx, float minInterval = 0.05f,
+                         int priority = AudioMix.Normal)
         {
             if (App.Settings == null) return;
             float now = Time.unscaledTime;
@@ -68,15 +75,20 @@ namespace Aetherward.Game
             _lastPlayed[name] = now;
             AudioClip clip = Clip("Sfx/" + name);
             if (clip == null) return;
-            AudioSource src = _voices[_next];
-            _next = (_next + 1) % _voices.Count;
+            for (int i = 0; i < _voices.Count; i++) _playing[i] = _voices[i].isPlaying;
+            int v = AudioMix.PickVoice(_playing, _priority, _startedAt, priority);
+            if (v < 0) return;   // every voice is busy with something more important
+            AudioSource src = _voices[v];
+            _priority[v] = priority;
+            _startedAt[v] = now;
+            if (priority >= AudioMix.Critical) _duckUntil = now + 0.6f;
             src.pitch = 1f + Random.Range(-pitchVariance, pitchVariance);
-            src.volume = Mathf.Clamp01(volume * CategoryVolume(cat));
+            src.volume = Mathf.Clamp01(volume * CategoryVolume(cat) * (cat == SoundCategory.Ui ? 1f : AudioMix.DuckGain(priority, now, _duckUntil)));
             src.clip = clip;
             src.Play();
         }
 
-        public void Ui(string name) => Play(name, 0.8f, 0.02f, SoundCategory.Ui, 0.03f);
+        public void Ui(string name) => Play(name, 0.8f, 0.02f, SoundCategory.Ui, 0.03f, AudioMix.High);
 
         public void PlayMusic(string name)
         {

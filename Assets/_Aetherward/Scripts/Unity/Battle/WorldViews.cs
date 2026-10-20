@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Aetherward.Sim.Combat;
 using Aetherward.Sim.Content;
+using Aetherward.Sim.Presentation;
 using UnityEngine;
 
 namespace Aetherward.Game
@@ -41,8 +42,11 @@ namespace Aetherward.Game
         /// <summary>Lower on screen = drawn in front. Each unit reserves 10 sorting slots.</summary>
         public static int OrderFor(float y) => 5000 - Mathf.RoundToInt(y * 100f) * 10;
 
-        /// <summary>Accessibility: global multiplier on sprite flashes (Settings.FlashIntensity).</summary>
+        /// <summary>Accessibility: global multiplier on sprite flashes (Settings.FlashIntensity × effects preset).</summary>
         public static float FlashScale = 1f;
+
+        /// <summary>Effects preset in force (Settings → Effects intensity, capped by the accessibility toggles).</summary>
+        public static FeelProfile Feel = FeelProfile.For(EffectsPreset.Standard, true, 1f, false, false);
 
         public static void SetFlash(SpriteRenderer r, float amount, Color color)
         {
@@ -74,7 +78,9 @@ namespace Aetherward.Game
         private float _baseScale = 1f;
         private float _phase;
         private float _castTimer, _lungeTimer, _flash, _hpShowTimer;
-        private Vector3 _lungeDir;
+        private float _castT = -1f, _hitT = -1f;   // seconds into the cast / hit pose (UnitPose); < 0 = idle
+        private bool _hitHeavy;
+        private Vector3 _lungeDir, _hitDir;
         private float _walk;
         private Vector3 _lastPos;
         private Element _s1 = Element.None, _s2 = Element.None;
@@ -156,6 +162,7 @@ namespace Aetherward.Game
             Body.color = Color.white;
             _phase = Random.value * 6f;
             _castTimer = _lungeTimer = _flash = _hpShowTimer = 0f;
+            _castT = _hitT = -1f;
             _s1 = _s2 = Element.None;
             _status1.enabled = _status2.enabled = false;
             _shieldFx.enabled = false;
@@ -171,9 +178,21 @@ namespace Aetherward.Game
             gameObject.SetActive(false);
         }
 
-        public void Cast(float duration = 0.45f)
+        public void Cast(float duration = UnitPose.CastDuration)
         {
             _castTimer = duration;
+            _castT = 0f;
+        }
+
+        /// <summary>Recoil away from <paramref name="from"/> (attacker or impact centre); heavy = crit or big hit.</summary>
+        public void Hit(Vector3 from, bool heavy)
+        {
+            if (_hitT >= 0f && !heavy) return;   // a light hit never restarts a recoil already playing
+            Vector3 d = transform.position - from;
+            d.z = 0f;
+            _hitDir = d.sqrMagnitude > 1e-4f ? d.normalized : Vector3.right;
+            _hitT = 0f;
+            _hitHeavy = heavy;
         }
 
         public void Lunge(Vector3 toward)
@@ -220,6 +239,8 @@ namespace Aetherward.Game
             _phase += dt * (speed > 0.2f ? 9f : 2.6f);
             _castTimer -= dt;
             _lungeTimer -= dt;
+            if (_castT >= 0f && (_castT += dt) >= UnitPose.CastDuration) _castT = -1f;
+            if (_hitT >= 0f && (_hitT += dt) >= (_hitHeavy ? UnitPose.HeavyHitDuration : UnitPose.HitDuration)) { _hitT = -1f; _hitHeavy = false; }
             if (_flash > 0f) _flash = Mathf.Max(0f, _flash - dt * 6f);
             _hpShowTimer -= dt;
 
@@ -233,10 +254,11 @@ namespace Aetherward.Game
             float bob = speed > 0.2f ? Mathf.Abs(Mathf.Sin(_phase)) * 0.08f : Mathf.Abs(Mathf.Sin(_phase)) * 0.035f;
             float squash = speed > 0.2f ? Mathf.Sin(_phase * 2f) * 0.04f : Mathf.Sin(_phase * 2f) * 0.02f;
             Vector3 lunge = _lungeTimer > 0f ? _lungeDir * Mathf.Sin(_lungeTimer / 0.18f * Mathf.PI) * 0.22f : Vector3.zero;
-            if (_castTimer > 0f) squash += Mathf.Sin(_castTimer / 0.45f * Mathf.PI) * 0.06f;
-            bt.localPosition = new Vector3(lunge.x, bob + lunge.y * 0.5f, 0);
+            float amp = WorldGfx.Feel.AnimAmplitude;
+            BodyPose pose = UnitPose.Cast(_castT, amp).Combine(UnitPose.Hit(_hitT, _hitDir.x, _hitDir.y, _hitHeavy, amp));
+            bt.localPosition = new Vector3(lunge.x + pose.X, bob + lunge.y * 0.5f + pose.Y, 0);
             float flip = facingX < -0.05f ? -1f : (facingX > 0.05f ? 1f : Mathf.Sign(bt.localScale.x == 0 ? 1 : bt.localScale.x));
-            bt.localScale = new Vector3(flip * _baseScale * (1f - squash), _baseScale * (1f + squash), 1f);
+            bt.localScale = new Vector3(flip * _baseScale * (1f - squash) * pose.ScaleX, _baseScale * (1f + squash) * pose.ScaleY, 1f);
             Body.color = stunned ? new Color(0.75f, 0.85f, 1f) : Color.white;
             WorldGfx.SetFlash(Body, _flash * 0.85f, Color.white);
 

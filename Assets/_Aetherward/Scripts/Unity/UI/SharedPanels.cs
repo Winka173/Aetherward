@@ -16,7 +16,7 @@ namespace Aetherward.Game
             var s = App.Settings;
             Ui.Panel(x, y, w, h);
             Ui.Label(x, y + 26, w, 60, l.Get("settings.title"), 46, Ui.Gold, TextAnchor.MiddleCenter, true);
-            // 10 rows must fit the 960-high panel (two settings per row; rh 70 leaves room for Close).
+            // 11 rows must fit the 960-high panel (two settings per row; rh 70 leaves room for Close).
             float row = y + 110, rh = 70, inner = x + 50, iw = w - 100;
             Ui.Label(inner, row, iw * 0.42f, rh, l.Get("settings.language"), 28, Ui.White, TextAnchor.MiddleLeft);
             float bx = inner + iw * 0.44f;
@@ -53,11 +53,10 @@ namespace Aetherward.Game
             s.SynergyVision = synergy;
             float flash = Ui.Stepper(inner, row, iw, rh, l.Get("settings.flash"), s.FlashIntensity); row += rh;
             changed |= focusPause != s.PauseOnFocusLoss || battery != s.BatterySaver || flash != s.FlashIntensity;
-            bool reapply = battery != s.BatterySaver || flash != s.FlashIntensity;
+            bool reapply = battery != s.BatterySaver || flash != s.FlashIntensity || shake != s.ScreenShake || vfx != s.ReducedVfx;
             s.PauseOnFocusLoss = focusPause;
             s.BatterySaver = battery;
             s.FlashIntensity = Mathf.Clamp01(flash);
-            if (reapply) App.ApplySettings();
             changed |= fast != s.DefaultFastSpeed || vfx != s.ReducedVfx || shake != s.ScreenShake || numbers != s.DamageNumbers ||
                        contrast != s.HighContrast || ranges != s.ShowRanges;
             s.DefaultFastSpeed = fast;
@@ -66,6 +65,19 @@ namespace Aetherward.Game
             s.DamageNumbers = numbers;
             s.HighContrast = contrast;
             s.ShowRanges = ranges;
+            if (reapply) App.ApplySettings();
+            // Effects intensity preset (P7); Screen shake / Flash / Reduced VFX above stay hard caps on it.
+            Ui.Label(inner, row, iw * 0.42f, rh, l.Get("settings.fx_preset"), 28, Ui.White, TextAnchor.MiddleLeft);
+            for (int i = 0; i < 4; i++)
+            {
+                if (Ui.Button(bx + i * 140, row + 6, 132, 72, l.Get("settings.fx_preset." + i), s.EffectsPreset == i ? Tone.Secondary : Tone.Ghost, true, 22))
+                {
+                    s.EffectsPreset = i;
+                    App.ApplySettings();
+                    changed = true;
+                }
+            }
+            row += rh;
             Ui.Label(inner, row, iw * 0.42f, rh, l.Get("settings.fps"), 28, Ui.White, TextAnchor.MiddleLeft);
             for (int i = 0; i < FpsOptions.Length; i++)
             {

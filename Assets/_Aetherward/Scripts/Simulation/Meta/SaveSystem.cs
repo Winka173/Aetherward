@@ -43,6 +43,7 @@ namespace Aetherward.Sim.Meta
         public bool BatterySaver;             // caps FPS at 30 and uses reduced VFX
         public bool SynergyVision = true;     // pre-wave synergy overlay (opt-out for readability)
         public bool TelegraphAssist;          // assistive: boss telegraphs play at 1x even when 2x is selected
+        public int EffectsPreset = 2;         // Presentation.EffectsPreset: 0 minimal, 1 reduced, 2 standard, 3 cinematic
     }
 
     /// <summary>
@@ -123,7 +124,7 @@ namespace Aetherward.Sim.Meta
                 .Set("sfx", s.SfxVolume).Set("ui", s.UiVolume).Set("fast", s.DefaultFastSpeed)
                 .Set("reducedVfx", s.ReducedVfx).Set("shake", s.ScreenShake).Set("numbers", s.DamageNumbers)
                 .Set("contrast", s.HighContrast).Set("fps", s.TargetFps).Set("ranges", s.ShowRanges)
-                .Set("flash", Math.Round(s.FlashIntensity, 2)).Set("focusPause", s.PauseOnFocusLoss).Set("battery", s.BatterySaver).Set("synergy", s.SynergyVision).Set("telegraphAssist", s.TelegraphAssist));
+                .Set("flash", Math.Round(s.FlashIntensity, 2)).Set("focusPause", s.PauseOnFocusLoss).Set("battery", s.BatterySaver).Set("synergy", s.SynergyVision).Set("telegraphAssist", s.TelegraphAssist).Set("fxPreset", s.EffectsPreset));
         }
 
         public SettingsModel LoadSettings()
@@ -148,6 +149,7 @@ namespace Aetherward.Sim.Meta
             s.BatterySaver = d.Bool("battery");
             s.SynergyVision = d.Bool("synergy", true);
             s.TelegraphAssist = d.Bool("telegraphAssist");
+            s.EffectsPreset = (int)Presentation.FeelProfile.Clamp(d.Int("fxPreset", 2));
             return s;
         }
 

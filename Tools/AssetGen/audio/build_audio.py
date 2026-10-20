@@ -312,6 +312,28 @@ def sfx_game():
     write("Sfx/defeat", dfeat, 0.65, True, 0.45)
 
 
+def sfx_feel():
+    """P7 feedback sounds. Own RNG so adding them does not change any earlier sound."""
+    r = np.random.default_rng(20261020)
+    nz = lambda n: r.uniform(-1, 1, n)
+    t = t_of(0.18)
+    n = len(t)
+    # crit: bright transient + short metallic ring, clearly sharper than the per-element hits
+    write("Sfx/hit_crit", highpass(nz(n), 3000) * exp_env(n, 0.015) + sum(sine(f, t) for f in (1760, 2637)) * exp_env(n, 0.05) * 0.35, 0.7)
+    t = t_of(0.22)
+    n = len(t)
+    # hero hurt: dull body thump with a falling grunt-like tone (no voice samples)
+    write("Sfx/hero_hurt", lowpass(nz(n), 900) * exp_env(n, 0.04) + tri(np.linspace(260, 150, n), t) * exp_env(n, 0.07) * 0.5, 0.55)
+    t = t_of(0.4)
+    n = len(t)
+    # shield up: rising glassy shimmer
+    write("Sfx/shield_up", sum(sine(f * np.linspace(1, 1.5, n), t) * (0.6 ** i) for i, f in enumerate((660, 990, 1320))) * env(n, 0.03, 0.3, 0, 0.07) * 0.5, 0.5, True, 0.25)
+    t = t_of(0.3)
+    n = len(t)
+    # boss hit: heavy low thud so damage on a boss feels weightier than on trash
+    write("Sfx/boss_hit", sine(np.linspace(110, 55, n), t) * exp_env(n, 0.09) + lowpass(nz(n), 600) * exp_env(n, 0.03) * 0.6, 0.7)
+
+
 # ============================================================================ music
 
 NOTE = {n: i for i, n in enumerate(["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"])}
@@ -445,5 +467,6 @@ if __name__ == "__main__":
         sfx_reactions()
         sfx_expansion()
         sfx_game()
+        sfx_feel()
         music()
     print("wrote %d audio files" % len(written))
