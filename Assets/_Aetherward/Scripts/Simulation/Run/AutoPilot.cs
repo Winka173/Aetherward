@@ -28,6 +28,8 @@ namespace Aetherward.Sim.Run
         /// <summary>Draft policy (Phase 10 simulator): Scripted follows the priority lists; Random picks any
         /// affordable offer; Synergy ignores priorities and scores synergy/roles; Greedy takes the rarest.</summary>
         public DraftPolicy Policy = DraftPolicy.Scripted;
+        /// <summary>Fixed team tactic for this bot (null = keep the run's tactic / AutoPilot.UseTactics heuristic).</summary>
+        public Combat.TeamTactic? Tactic;
 
         /// <summary>A copy of this strategy with another draft policy (starters kept).</summary>
         public Strategy WithPolicy(DraftPolicy p)
@@ -156,8 +158,57 @@ namespace Aetherward.Sim.Run
             }
         };
 
+        /// <summary>
+        /// Balance-lab playstyles (P9) named after the design brief; bots, not players. Mapping of the brief:
+        /// mono-element = mono_fire, reaction chain = thunderstorm, tank+healer stall = stall, boss-burst = boss_burst,
+        /// summon/proc-heavy = summon_proc, area-control = frozen_fortress, naive random = balanced + Random policy.
+        /// </summary>
+        public static readonly Strategy[] LabArchetypes =
+        {
+            new Strategy
+            {
+                Name = "mono_fire",
+                Starters = new[] { "ignis", "cinder" },
+                RecruitPriority = new[] { "ashara", "solenne" },
+                RelicPriority = new[] { "eternal_ember", "pyre_heart", "war_drum", "spark_of_genesis" },
+                CardPriority = new[] { "pyre_covenant", "spec_ignis_pyroclasm", "spec_cinder_wildfire", "spec_ashara_ember_heart" },
+                EvolutionPriority = new[] { "ignis_ember_weaver", "cinder_inferno_duelist", "ashara_vengeance_flames", "solenne_inferno_script" }
+            },
+            new Strategy
+            {
+                Name = "stall",
+                Starters = new[] { "terra", "marina" },
+                RecruitPriority = new[] { "eirwen", "nerissa", "seren", "borun", "elowen", "glacius" },
+                RelicPriority = new[] { "iron_bulwark", "stoneheart", "crystal_growth", "warding_bell", "sunforged_aegis" },
+                CardPriority = new[] { "reinforced_plate", "bedrock_oath", "spec_terra_sanctum", "dawn_vigil", "glacial_vow" },
+                EvolutionPriority = new[] { "terra_living_fortress", "marina_tide_saint", "nerissa_pure_healer", "eirwen_ice_bulwark", "seren_aegis_of_dawn" },
+                RepairBelow = 0.7f,
+                Tactic = Combat.TeamTactic.ProtectCrystal
+            },
+            new Strategy
+            {
+                Name = "boss_burst",
+                Starters = new[] { "veyra", "raiden" },
+                RecruitPriority = new[] { "volt", "sylph", "ignis", "nyxara", "marina", "terra" },
+                RelicPriority = new[] { "executioners_lens", "war_drum", "glass_cannon", "verdict_scale" },
+                CardPriority = new[] { "keen_edge", "sharpened_focus", "spec_raiden_afterimage", "spec_nyxara_dread" },
+                EvolutionPriority = new[] { "veyra_boss_hunter", "raiden_static_executioner", "nyxara_final_verdict", "volt_tempest_lord" },
+                Tactic = Combat.TeamTactic.FocusBoss
+            },
+            new Strategy
+            {
+                Name = "summon_proc",
+                Starters = new[] { "voltrix", "caelis" },
+                RecruitPriority = new[] { "oriane", "borun", "aeris", "isolde", "marina", "terra" },
+                RelicPriority = new[] { "echo_prism", "overclock_coil", "thunder_relay", "chain_conductor", "rune_inkwell" },
+                CardPriority = new[] { "spec_voltrix_capacitor", "spec_caelis_resonant_echo", "arcane_accord", "static_field" },
+                EvolutionPriority = new[] { "voltrix_electric_network", "caelis_mirror_savant", "oriane_grand_conductor", "borun_spike_mason" }
+            }
+        };
+
         public static Strategy Find(string name)
         {
+            foreach (Strategy l in LabArchetypes) if (l.Name == name) return l;
             foreach (Strategy s in Archetypes) if (s.Name == name) return s;
             return null;
         }
@@ -235,7 +286,8 @@ namespace Aetherward.Sim.Run
             RunState s = _rc.State;
             foreach (HeroRunState h in s.Heroes)
                 if (h.Downed && s.Gold >= _rc.ReviveCost) _rc.Revive(h.Uid);
-            if (UseTactics) s.Tactic = TacticFor(_rc.WaveAt(s.Wave));
+            if (_strategy.Tactic.HasValue) s.Tactic = _strategy.Tactic.Value;
+            else if (UseTactics) s.Tactic = TacticFor(_rc.WaveAt(s.Wave));
             if (s.CrystalHp < _rc.CrystalMaxHp * _strategy.RepairBelow)
                 for (int i = 0; i < 3 && s.CrystalHp < _rc.CrystalMaxHp * _strategy.RepairBelow; i++)
                     if (!_rc.RepairCrystal()) break;
@@ -457,6 +509,70 @@ namespace Aetherward.Sim.Run
             }
             foreach (HeroRunState h in melee) h.Node = PickNode(arena, lanes, taken, true, rc.Content.Heroes[h.DefId].Role == HeroRole.Guardian);
             foreach (HeroRunState h in ranged) h.Node = PickNode(arena, lanes, taken, false, false);
+            CoverEmptyLanes(rc, lanes, taken, ranged.Count > 0 ? ranged : melee);
+        }
+
+        /// <summary>
+        /// Minimal fix-up found by the balance lab (wave-2 West breaches): if a lane carrying >= 25% of the wave has
+        /// nobody in reach, move the longest-reach hero there. Concentration elsewhere is kept, because spreading
+        /// every hero evenly measurably lowered clear rates (Reports/Balance/lab_* A/B).
+        /// </summary>
+        private static void CoverEmptyLanes(RunController rc, List<int> lanes, HashSet<int> taken, List<HeroRunState> movable)
+        {
+            if (lanes.Count < 2 || movable.Count == 0 || rc.State.Heroes.Count < 2) return;
+            WaveDef wave = rc.CurrentWave;
+            Dictionary<int, float> weight = LaneWeights(wave, lanes, rc.Biome);
+            float total = 0f;
+            foreach (float v in weight.Values) total += v;
+            var moved = new HashSet<string>();
+            for (int pass = 0; pass < lanes.Count; pass++)
+            {
+                var battle = new Battle(rc.BuildBattleSetup());
+                SynergyReport cov = SynergyReport.Analyze(battle);
+                int gap = -1;
+                float gapWeight = 0f;
+                foreach (int l in lanes)
+                    if (cov.LaneCoverage.TryGetValue(l, out float c) && c < 0.2f && weight[l] / total >= 0.25f && weight[l] > gapWeight) { gap = l; gapWeight = weight[l]; }
+                if (gap < 0) return;
+                HeroRunState pick = null;
+                float bestReach = -1f;
+                foreach (HeroUnit u in battle.Heroes)
+                {
+                    HeroRunState h = movable.Find(x => x.DefId == u.Def.Id);
+                    if (h == null || moved.Contains(h.DefId)) continue;
+                    float r = SynergyReport.Reach(u);
+                    if (r > bestReach) { bestReach = r; pick = h; }
+                }
+                if (pick == null) return;
+                taken.Remove(pick.Node);
+                pick.Node = PickNode(rc.Arena, new List<int> { gap }, taken, false, false);
+                moved.Add(pick.DefId);
+            }
+        }
+
+        /// <summary>Enemies per lane for the wave (rotating groups split evenly over the wave's lanes).</summary>
+        public static Dictionary<int, float> LaneWeights(WaveDef wave, List<int> lanes, BiomeDef biome)
+        {
+            var w = new Dictionary<int, float>();
+            foreach (int l in lanes) w[l] = 0f;
+            foreach (SpawnGroup g in wave.Groups)
+            {
+                if (g.Lane >= 0)
+                {
+                    int m = biome != null ? biome.MapLane(g.Lane, wave.Number) : g.Lane;
+                    if (w.ContainsKey(m)) w[m] += g.Count;
+                }
+                else if (wave.Lanes.Count > 0)
+                {
+                    foreach (int l0 in wave.Lanes)
+                    {
+                        int m = biome != null ? biome.MapLane(l0, wave.Number) : l0;
+                        if (w.ContainsKey(m)) w[m] += (float)g.Count / wave.Lanes.Count;
+                    }
+                }
+            }
+            foreach (int l in lanes) if (w[l] <= 0f) w[l] = 0.5f;   // biome extra lanes still deserve a look
+            return w;
         }
 
         private static int PickNode(ArenaDef arena, List<int> lanes, HashSet<int> taken, bool melee, bool guardian)

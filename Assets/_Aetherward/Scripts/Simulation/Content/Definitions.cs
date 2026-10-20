@@ -458,6 +458,20 @@ namespace Aetherward.Sim.Content
     {
         public float HpPerLevel = 0.08f;
         public int MaxLevel;
+        /// <summary>
+        /// Early-wave ramp for the per-level HP/damage bonus (balance lab: A6+ runs died at wave 2 with two level-1
+        /// heroes and no economy yet). Share of the bonus at wave 1 = EarlyRampStart, linear to 100% at EarlyRampFullWave.
+        /// 1.0 = no ramp (legacy behaviour).
+        /// </summary>
+        public float EarlyRampStart = 1f;
+        public int EarlyRampFullWave = 1;
+
+        public float LevelBonusShare(int waveLevel)
+        {
+            if (EarlyRampStart >= 1f || waveLevel >= EarlyRampFullWave) return 1f;
+            float t = (waveLevel - 1) / (float)System.Math.Max(1, EarlyRampFullWave - 1);
+            return EarlyRampStart + (1f - EarlyRampStart) * System.Math.Max(0f, t);
+        }
         public readonly List<DifficultyModule> Modules = new List<DifficultyModule>();
 
         /// <summary>Summed value of a module across all levels up to <paramref name="ascension"/> (0 if absent).</summary>

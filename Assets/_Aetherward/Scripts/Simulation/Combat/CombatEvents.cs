@@ -100,6 +100,8 @@ namespace Aetherward.Sim.Combat
         public string FirstGuardianDown;
         public float FirstGuardianDownTime = -1f;
         public float CrystalDamageAfterGuardianDown;
+        public float EnemyAliveSeconds;
+        public float EnemyHardCcSeconds;
         public int MaxProcDepth;
         public int Kills;
         public int Leaks;

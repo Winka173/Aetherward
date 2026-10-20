@@ -127,7 +127,7 @@ namespace Aetherward.Sim.Combat
 
             EconomyDef eco = Content.Economy;
             int w = Wave.EffectiveLevel - 1;
-            float asc = 1f + Content.Difficulty.HpPerLevel * setup.Ascension;
+            float asc = 1f + Content.Difficulty.HpPerLevel * setup.Ascension * Content.Difficulty.LevelBonusShare(Wave.EffectiveLevel);
             _enemyHpScale = (1f + eco.EnemyHpGrowth * w + eco.EnemyHpGrowthQuad * w * w) * asc * (1f + Mods.EnemyHpPct) * (1f + Wave.ScalePct);
             _enemyDamageScale = (1f + eco.EnemyDamageGrowth * w) * asc * (1f + Mods.EnemyDamagePct) * (1f + Wave.ScalePct * 0.5f);
             WaveLevelScale = 1f + eco.ReactionLevelGrowth * w;

@@ -4,6 +4,10 @@
   // Module ids: frenzy | enemy_speed | enemy_damage | enemy_hp | crystal_max | shop_prices | blocked_node | elite_affix | boss_enrage
   //             | reroll_cost | double_elite (every Nth spawn elite) | rarity_shift | hazard_shift
   "hpPerLevel": 0.08,
+  // Early ramp (balance lab, Reports/Balance/lab_ascension_ramp.md): the per-level bonus starts at 35% on wave 1
+  // and reaches 100% at wave 7, so high Ascension no longer ends runs at wave 2 before any build exists.
+  "earlyRampStart": 0.35,
+  "earlyRampFullWave": 7,
   "levels": [
     { "level": 1, "modules": [ { "id": "frenzy" } ] },
     { "level": 2, "modules": [ { "id": "enemy_speed", "value": 0.08 }, { "id": "shop_prices", "value": 0.15 } ] },

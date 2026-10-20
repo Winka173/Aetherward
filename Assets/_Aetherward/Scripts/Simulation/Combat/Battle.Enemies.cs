@@ -10,6 +10,12 @@ namespace Aetherward.Sim.Combat
 
         private void UpdateEnemy(EnemyUnit e, float dt)
         {
+            if (e.Alive)
+            {
+                // Balance-lab evidence: crowd-control uptime (excessive stun detector).
+                Stats.EnemyAliveSeconds += dt;
+                if (e.StunTimer > 0f || e.Frozen || e.RootTimer > 0f) Stats.EnemyHardCcSeconds += dt;
+            }
             if (!e.Alive) return;
             UpdateEnemyStatuses(e, dt);
             if (!e.Alive) return;

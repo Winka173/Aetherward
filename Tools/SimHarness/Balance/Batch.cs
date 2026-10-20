@@ -184,14 +184,14 @@ namespace Aetherward.Balance
             if (wn >= 30 && ww == 0) flags.Add($"never viable ({kind}): {id} — 0 wins in {wn} runs");
         }
 
-        private static string ContentHash(string dir)
+        internal static string ContentHash(string dir)
         {
             var sb = new StringBuilder();
             foreach (string f in Directory.GetFiles(dir, "*.json").OrderBy(f => f, StringComparer.Ordinal)) sb.Append(File.ReadAllText(f));
             return Pcg32.Hash64(sb.ToString()).ToString("x16");
         }
 
-        private static string CpuName()
+        internal static string CpuName()
         {
             try
             {

@@ -808,7 +808,7 @@ namespace Aetherward.Sim.Content
 
         private void LoadDifficulty(JsonNode n)
         {
-            var d = new DifficultyDef { HpPerLevel = n.Float("hpPerLevel", 0.08f) };
+            var d = new DifficultyDef { HpPerLevel = n.Float("hpPerLevel", 0.08f), EarlyRampStart = n.Float("earlyRampStart", 1f), EarlyRampFullWave = n.Int("earlyRampFullWave", 1) };
             foreach (JsonNode l in n["levels"].Items)
             {
                 int level = l.Int("level");
