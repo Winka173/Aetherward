@@ -612,7 +612,7 @@ def cmd_intake(a):
     stage = a.stage_dir or os.path.join(A.ROOT, "Temp", "ArtStage-" + a.batch)
     if os.path.exists(stage):
         shutil.rmtree(stage)
-    shutil.copytree(A.ART, os.path.join(stage, "Art"), ignore=shutil.ignore_patterns("*.meta"))
+    shutil.copytree(A.ART, os.path.join(stage, "Art"))   # with .meta: the validator checks GUID/pivot/PPU against them
     for g in req["groups"]:
         for f in g["assets"]:
             d = delivered.get(f["id"])
@@ -686,7 +686,16 @@ def cmd_intake(a):
         log("  BLOCK " + p)
     if a.validate:
         ok_ids = [r_["id"] for r_ in rows if r_["status"] == "OK"]
+        # settings/manifest are keyed by live paths: rewrite them to the stage root, as ap.py validate does
+        live_root, stage_rel = LIVE_REL.rstrip("/"), os.path.relpath(os.path.join(stage, "Art"), A.ROOT).replace("\\", "/")
+        man = A.load_json(A.MANIFEST)
+        for m in man:
+            m["path"] = m["path"].replace(live_root, stage_rel, 1)
+        sett = {k.replace(live_root, stage_rel, 1): val for k, val in A.read_json(A.SETTINGS).items()}
+        A.dump_json(man, os.path.join(stage, "manifest.staged.json"))
+        A.dump_json(sett, os.path.join(stage, "settings.staged.json"))
         v = subprocess.run([sys.executable, os.path.join(A.HERE, "validate.py"), "--art", os.path.join(stage, "Art"),
+                            "--settings", os.path.join(stage, "settings.staged.json"), "--manifest", os.path.join(stage, "manifest.staged.json"),
                             "--out", os.path.join(qa, "validator"), "--only"] + ok_ids, cwd=A.ROOT)
         log("validator exit %d -> %s" % (v.returncode, os.path.join(qa, "validator")))
     return 1 if problems else 0
