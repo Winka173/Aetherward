@@ -178,8 +178,8 @@ def crystal_mesh(name, radius, height, tip, sides=6, jitter=0.12, seed=0):
     return o
 
 
-M_GLASS, B_GLASS = mat_glass("Crystal", "#a9e6ff", "#6fd2ff", 1.1)
-M_CORE, B_CORE = mat_glass("Core", "#ffffff", "#e9fbff", 6.0)
+M_GLASS, B_GLASS = mat_glass("Crystal", "#a9e6ff", "#6fd2ff", 0.7)
+M_CORE, B_CORE = mat_glass("Core", "#ffffff", "#d6f6ff", 3.0)
 M_SHARD, B_SHARD = mat_glass("Shard", "#bfefff", "#8fe3ff", 3.0)
 M_COLLAR, B_COLLAR = mat_scan("Collar", "castle_wall_slates", 2.2, tint="#c4c2be", value=0.85)
 M_TOOTH, B_TOOTH = mat_scan("Tooth", "dark_rock", 3.0, tint="#a6a9b4", value=0.8)
@@ -201,7 +201,7 @@ FRACT.inputs[1].default_value = 0.0
 nt.links.new(mr.outputs["Result"], FRACT.inputs[0])
 emit_mix = nt.nodes.new("ShaderNodeMath")
 emit_mix.operation = "ADD"
-emit_mix.inputs[1].default_value = 1.1
+emit_mix.inputs[1].default_value = 0.7
 nt.links.new(FRACT.outputs["Value"], emit_mix.inputs[0])
 nt.links.new(emit_mix.outputs["Value"], B_GLASS.inputs["Emission Strength"])
 
@@ -281,9 +281,9 @@ io.location = (0, 0, 0.75)
 sc.collection.objects.link(io)
 
 STATES = {
-    "intact": dict(fract=0.0, core="#e9fbff", core_s=6.0, glyph=6.0, shard_s=3.0, fallen=[], drop=[], inner="#8fe3ff"),
-    "cracked": dict(fract=10.0, core="#e9fbff", core_s=5.0, glyph=4.0, shard_s=2.5, fallen=[], drop=[1], inner="#8fe3ff"),
-    "critical": dict(fract=16.0, core="#ff4a7a", core_s=5.0, glyph=0.6, shard_s=0.4, fallen=[0], drop=[1, 2], inner="#ff6a90"),
+    "intact": dict(fract=0.0, core="#d6f6ff", core_s=3.0, glyph=6.0, shard_s=3.0, fallen=[], drop=[], inner="#8fe3ff"),
+    "cracked": dict(fract=10.0, core="#d6f6ff", core_s=2.6, glyph=4.0, shard_s=2.5, fallen=[], drop=[1], inner="#8fe3ff"),
+    "critical": dict(fract=16.0, core="#ff4a7a", core_s=2.6, glyph=0.6, shard_s=0.4, fallen=[0], drop=[1, 2], inner="#ff6a90"),
 }
 base_loc = {s_.name: s_.location.copy() for s_ in SHARDS}
 for state, st in STATES.items():
@@ -302,4 +302,122 @@ for state, st in STATES.items():
     sc.render.filepath = os.path.join(OUT, "crystal_%s@2x.png" % state)
     bpy.ops.render.render(write_still=True)
     print("CRYSTAL", state)
+# ------------------------------------------------------------------ Crystal Evolution overlays (drawn over any state)
+if "--paths" in ARGS:
+    base_objs = [o for o in sc.objects if o.type == "MESH"]
+    for o in base_objs:
+        o.is_holdout = True            # hides overlay parts behind the crystal/collar; the overlay PNG is the addition only
+    for i, s_ in enumerate(SHARDS):
+        s_.location = base_loc[s_.name].copy()
+    for c in CROWN:
+        c.hide_render = False
+    M_GOLD = bpy.data.materials.new("Gold")
+    M_GOLD.use_nodes = True
+    gb = M_GOLD.node_tree.nodes["Principled BSDF"]
+    gb.inputs["Base Color"].default_value = lin("#a8843a")
+    gb.inputs["Metallic"].default_value = 1.0
+    gb.inputs["Roughness"].default_value = 0.35
+    # shield shell: emission only at grazing angles (fresnel), fully transparent where it faces the camera
+    M_SHELL = bpy.data.materials.new("Shell")
+    M_SHELL.use_nodes = True
+    st = M_SHELL.node_tree
+    for n_ in list(st.nodes):
+        if n_.type != "OUTPUT_MATERIAL":
+            st.nodes.remove(n_)
+    lw = st.nodes.new("ShaderNodeLayerWeight")
+    lw.inputs["Blend"].default_value = 0.2
+    pw = st.nodes.new("ShaderNodeMath")
+    pw.operation = "POWER"
+    pw.inputs[1].default_value = 3.0
+    st.links.new(lw.outputs["Facing"], pw.inputs[0])
+    em = st.nodes.new("ShaderNodeEmission")
+    em.inputs["Color"].default_value = lin("#8fe3ff")
+    em.inputs["Strength"].default_value = 2.2
+    tr = st.nodes.new("ShaderNodeBsdfTransparent")
+    mx = st.nodes.new("ShaderNodeMixShader")
+    st.links.new(pw.outputs["Value"], mx.inputs["Fac"])
+    st.links.new(tr.outputs["BSDF"], mx.inputs[1])
+    st.links.new(em.outputs["Emission"], mx.inputs[2])
+    st.links.new(mx.outputs["Shader"], st.nodes["Material Output"].inputs["Surface"])
+    M_RUNE, B_RUNE = mat_glass("Rune", "#ffd6f6", "#ff5fd2", 4.0)
+    M_THORN, B_THORN = mat_scan("Thorn", "dark_rock", 3.0, tint="#a08a6a", value=0.75)
+
+    def group(build):
+        objs = build()
+        sc.render.filepath = os.path.join(OUT, "crystal_path_%s@2x.png" % build.__name__[6:])
+        bpy.ops.render.render(write_still=True)
+        for o in objs:
+            bpy.data.objects.remove(o, do_unlink=True)
+        print("PATH", build.__name__[6:])
+
+    def build_bastion():
+        out = []
+        bpy.ops.mesh.primitive_cylinder_add(vertices=12, radius=0.8, depth=0.2, location=(0, 0, 0.1))
+        ring = bpy.context.object
+        ring.modifiers.new("solid", "SOLIDIFY").thickness = -0.12
+        ring.data.materials.append(M_TOOTH)
+        out.append(ring)
+        bpy.ops.mesh.primitive_torus_add(major_radius=0.8, minor_radius=0.025, location=(0, 0, 0.22))
+        bpy.context.object.data.materials.append(M_GOLD)
+        out.append(bpy.context.object)
+        for k in range(4):
+            a = k / 4 * math.tau + 0.4
+            bpy.ops.mesh.primitive_cube_add(size=1, location=(math.cos(a) * 0.82, math.sin(a) * 0.82, 0.35))
+            b_ = bpy.context.object
+            b_.scale = (0.18, 0.26, 0.7)
+            b_.rotation_euler = (0, 0, a)
+            b_.data.materials.append(M_TOOTH)
+            out.append(b_)
+            bpy.ops.mesh.primitive_cube_add(size=1, location=(math.cos(a) * 0.82, math.sin(a) * 0.82, 0.73))
+            cap = bpy.context.object
+            cap.scale = (0.2, 0.28, 0.04)
+            cap.rotation_euler = (0, 0, a)
+            cap.data.materials.append(M_GOLD)
+            out.append(cap)
+        bpy.ops.mesh.primitive_uv_sphere_add(segments=64, ring_count=32, radius=0.95, location=(0, 0, 0.22))
+        dome = bpy.context.object
+        bm_ = bmesh.new()
+        bm_.from_mesh(dome.data)
+        bmesh.ops.delete(bm_, geom=[v for v in bm_.verts if v.co.z < -0.01], context="VERTS")   # upper hemisphere only
+        bm_.to_mesh(dome.data)
+        bm_.free()
+        dome.scale = (1, 1, 1.2)
+        bpy.ops.object.shade_smooth()
+        dome.data.materials.append(M_SHELL)
+        out.append(dome)
+        return out
+
+    def build_pulse():
+        out = []
+        for k in range(12):
+            a = k / 12 * math.tau
+            bpy.ops.mesh.primitive_cube_add(size=1, location=(math.cos(a) * 0.72, math.sin(a) * 0.72, 1.05 + 0.06 * math.sin(a * 3)))
+            r_ = bpy.context.object
+            r_.scale = (0.03, 0.13, 0.18)
+            r_.rotation_euler = (0, 0, a)
+            r_.data.materials.append(M_RUNE)
+            out.append(r_)
+        for rad, z, th in ((0.72, 1.05, 0.012), (0.88, 1.05, 0.008)):
+            bpy.ops.mesh.primitive_torus_add(major_radius=rad, minor_radius=th, major_segments=96, location=(0, 0, z))
+            bpy.context.object.data.materials.append(M_RUNE)
+            out.append(bpy.context.object)
+        return out
+
+    def build_thorn():
+        out = []
+        rnd = random.Random(5)
+        for k in range(14):
+            a = k / 14 * math.tau + rnd.uniform(-0.15, 0.15)
+            h = rnd.uniform(0.35, 0.75)
+            bpy.ops.mesh.primitive_cone_add(vertices=7, radius1=0.07, radius2=0.0, depth=h,
+                                            location=(math.cos(a) * 0.68, math.sin(a) * 0.68, 0.2 + h * 0.35))
+            t_ = bpy.context.object
+            tilt = rnd.uniform(0.35, 0.7)
+            t_.rotation_euler = (-math.sin(a) * tilt, math.cos(a) * tilt, a)
+            t_.data.materials.append(M_THORN)
+            out.append(t_)
+        return out
+
+    for b_ in (build_bastion, build_pulse, build_thorn):
+        group(b_)
 print("CRYSTAL DONE", OUT)

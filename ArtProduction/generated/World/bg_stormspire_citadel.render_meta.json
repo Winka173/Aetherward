@@ -1,0 +1,49 @@
+{
+ "camera": {
+  "elevationDeg": 38.31613447366574,
+  "viewUnits": [
+   34.0,
+   19.2
+  ],
+  "resolution": [
+   4080,
+   2304
+  ],
+  "ppu": 120.0
+ },
+ "shadowDirScreen": [
+  0.8197,
+  0.5729
+ ],
+ "shadowLengthPerHeight": 0.8947,
+ "crystalScreen": [
+  0.0,
+  -0.55
+ ],
+ "braziersScreen": [
+  [
+   -9.864,
+   0.894
+  ],
+  [
+   -8.455,
+   -8.217
+  ],
+  [
+   -8.455,
+   5.155
+  ]
+ ],
+ "braziersFlat": [
+  -9.864,
+  0.894,
+  -8.455,
+  -8.217,
+  -8.455,
+  5.155
+ ],
+ "aetherCrystalsFlat": [],
+ "aetherCrystalsScreen": [],
+ "biome": "stormspire_citadel",
+ "samples": 256
+}

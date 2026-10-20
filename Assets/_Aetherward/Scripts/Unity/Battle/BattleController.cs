@@ -19,7 +19,7 @@ namespace Aetherward.Game
         private RunController _rc;
         private Camera _cam;
         private Transform _world, _unitsRoot, _fxRoot;
-        private SpriteRenderer _crystal, _crystalShield;
+        private SpriteRenderer _crystal, _crystalShield, _crystalPath;   // _crystalPath: Crystal Evolution overlay (bastion/pulse/thorn)
         private readonly List<SpriteRenderer> _nodes = new List<SpriteRenderer>();
         private readonly List<SpriteRenderer> _laneArrows = new List<SpriteRenderer>();
         private readonly Dictionary<int, UnitView> _units = new Dictionary<int, UnitView>();
@@ -171,6 +171,7 @@ namespace Aetherward.Game
             }
             _crystal = WorldGfx.NewSprite(_world, "Crystal", Art.Sprite("World/crystal_intact"), WorldGfx.OrderFor(-0.6f));
             _crystal.transform.position = new Vector3(0, -0.55f, 0);
+            _crystalPath = WorldGfx.NewSprite(_world, "CrystalPath", null, WorldGfx.OrderFor(-0.6f) + 1);
             _crystalShield = WorldGfx.NewSprite(_world, "CrystalShield", Art.Sprite("Vfx/ring"), WorldGfx.OrderFor(-0.6f) + 5);
             _crystalShield.transform.position = new Vector3(0, 0.4f, 0);
             _crystalShield.transform.localScale = Vector3.one * 1.3f;
@@ -980,6 +981,9 @@ namespace Aetherward.Game
             float hover = Mathf.Sin(Time.time * 1.6f) * 0.04f;
             _crystal.transform.position = new Vector3(Mathf.Sin(_crystalWobble * 60f) * _crystalWobble * 0.3f, -0.55f + hover, 0);
             WorldGfx.SetFlash(_crystal, _crystalWobble > 0f ? _crystalWobble * 2.5f : 0f, new Color(1f, 0.6f, 0.6f));
+            string path = _rc.State.CrystalPath;
+            _crystalPath.sprite = path != null ? Art.Optional("World/crystal_path_" + path) : null;
+            _crystalPath.transform.position = _crystal.transform.position;
             bool shield = _rc.Battle != null && _rc.State.Phase == RunPhase.Battle && _rc.Battle.Crystal.Shield > 1f;
             _crystalShield.enabled = shield;
             if (shield)

@@ -12860,7 +12860,7 @@
    0.5,
    0.5
   ],
-  "ppu": 80,
+  "ppu": 120.0,
   "sprite": true
  },
  "Assets/_Aetherward/Resources/Art/World/bg_molten_crater.png": {
@@ -12876,7 +12876,7 @@
    0.5,
    0.5
   ],
-  "ppu": 80,
+  "ppu": 120.0,
   "sprite": true
  },
  "Assets/_Aetherward/Resources/Art/World/bg_shattered_aether.png": {
@@ -12892,7 +12892,7 @@
    0.5,
    0.5
   ],
-  "ppu": 80,
+  "ppu": 120.0,
   "sprite": true
  },
  "Assets/_Aetherward/Resources/Art/World/bg_stormspire_citadel.png": {
@@ -12908,7 +12908,7 @@
    0.5,
    0.5
   ],
-  "ppu": 80,
+  "ppu": 120.0,
   "sprite": true
  },
  "Assets/_Aetherward/Resources/Art/World/bg_sunken_archive.png": {
@@ -12924,7 +12924,7 @@
    0.5,
    0.5
   ],
-  "ppu": 80,
+  "ppu": 120.0,
   "sprite": true
  },
  "Assets/_Aetherward/Resources/Art/World/crystal_cracked.png": {
@@ -12960,6 +12960,54 @@
   "sprite": true
  },
  "Assets/_Aetherward/Resources/Art/World/crystal_intact.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.07
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/World/crystal_path_bastion.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.07
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/World/crystal_path_pulse.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.07
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/World/crystal_path_thorn.png": {
   "border": [
    0,
    0,

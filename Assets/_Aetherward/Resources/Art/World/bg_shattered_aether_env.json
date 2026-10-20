@@ -1,0 +1,40 @@
+{
+ "shadowDirScreen": [
+  0.8197,
+  0.5729
+ ],
+ "shadowLengthPerHeight": 0.8947,
+ "braziersFlat": [
+  -8.455,
+  -8.217,
+  11.273,
+  -6.185
+ ],
+ "aetherCrystalsFlat": [
+  -5.636,
+  4.723,
+  9.864,
+  -1.403,
+  12.682,
+  -8.749,
+  8.455,
+  -9.532,
+  7.045,
+  -6.375,
+  -8.455,
+  0.501,
+  12.682,
+  1.948,
+  -11.273,
+  1.813
+ ],
+ "edgeColor": [
+  0.0928,
+  0.0928,
+  0.1355
+ ],
+ "source": "ArtCache/Env/shattered_aether",
+ "gamma": 1.0935,
+ "viewMeanBefore": 0.1836,
+ "viewMean": 0.16
+}

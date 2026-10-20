@@ -1,0 +1,49 @@
+{
+ "camera": {
+  "elevationDeg": 38.31613447366574,
+  "viewUnits": [
+   34.0,
+   19.2
+  ],
+  "resolution": [
+   4080,
+   2304
+  ],
+  "ppu": 120.0
+ },
+ "shadowDirScreen": [
+  0.8197,
+  0.5729
+ ],
+ "shadowLengthPerHeight": 0.8947,
+ "crystalScreen": [
+  0.0,
+  -0.55
+ ],
+ "braziersScreen": [
+  [
+   5.636,
+   7.9
+  ],
+  [
+   14.091,
+   -3.397
+  ],
+  [
+   -4.227,
+   3.763
+  ]
+ ],
+ "braziersFlat": [
+  5.636,
+  7.9,
+  14.091,
+  -3.397,
+  -4.227,
+  3.763
+ ],
+ "aetherCrystalsFlat": [],
+ "aetherCrystalsScreen": [],
+ "biome": "sunken_archive",
+ "samples": 256
+}

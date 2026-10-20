@@ -1,0 +1,43 @@
+{
+ "camera": {
+  "elevationDeg": 38.31613447366574,
+  "viewUnits": [
+   34.0,
+   19.2
+  ],
+  "resolution": [
+   4080,
+   2304
+  ],
+  "ppu": 120.0
+ },
+ "shadowDirScreen": [
+  0.8197,
+  0.5729
+ ],
+ "shadowLengthPerHeight": 0.8947,
+ "crystalScreen": [
+  0.0,
+  -0.55
+ ],
+ "braziersScreen": [
+  [
+   -1.409,
+   5.186
+  ],
+  [
+   -7.045,
+   10.472
+  ]
+ ],
+ "braziersFlat": [
+  -1.409,
+  5.186,
+  -7.045,
+  10.472
+ ],
+ "aetherCrystalsFlat": [],
+ "aetherCrystalsScreen": [],
+ "biome": "molten_crater",
+ "samples": 256
+}

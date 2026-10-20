@@ -16,7 +16,7 @@ APPROVED needs the owner. INTEGRATED needs an import into Assets/ with backup + 
 | B09 | Faction enemies I: Iron Legion, Ashen Horde, Voidborn | 26 | 13 | G1; B08 approved | BRIEF_READY |
 | B10 | Faction enemies II: Frozen Covenant, Stormspire, Corrupted Wilds, Arcane Fractures | 26 | 13 | G1; B08 approved | BRIEF_READY |
 | B11 | Bosses | 22 | 24 | G1 | SENT_TO_CODEX (2026-10-20 22:0x, gpt-6.1-sol, new Codex account) |
-| B12 | Biomes + Crystal Evolution overlays | 5 | 3 | G1 | MOVED TO LEAD: biomes rendered in Blender (sanctum_env.py --biome); overlays still for Codex |
+| B12 | Biomes + Crystal Evolution overlays | 5 | 3 | - | INTEGRATED 2026-10-20 by the lead (Blender): 5 battlefields 4080x2304 @ PPU 120 + env light data, crystal states re-rendered, 3 path overlays wired in BattleController; backup ArtCache/ArtBackups/20261020T151621Z; Unity captures ArtProduction/reviews/biomes |
 | B13 | VFX | 64 | 0 | G1 | BRIEF_READY |
 | B14 | Icons | 105 | 0 | G1 | BRIEF_READY |
 | B15 | Cards | 80 | 0 | B14 approved | BRIEF_READY |

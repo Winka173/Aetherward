@@ -22,13 +22,50 @@ def lum(a):
     return 0.2126 * a[..., 0] + 0.7152 * a[..., 1] + 0.0722 * a[..., 2]
 
 
+def defringe(rgba, passes=8):
+    """Transparent pixels take the mean colour of their opaque neighbours, so filtering never pulls in black halos."""
+    rgb = rgba[..., :3].astype(np.float64)
+    solid = rgba[..., 3] >= 32
+    keep = solid.copy()
+    for _ in range(passes):
+        acc = np.zeros_like(rgb)
+        cnt = np.zeros(solid.shape)
+        for dy, dx in ((1, 0), (-1, 0), (0, 1), (0, -1)):
+            acc += np.roll(rgb * solid[..., None], (dy, dx), (0, 1))
+            cnt += np.roll(solid, (dy, dx), (0, 1))
+        grow = (~solid) & (cnt > 0)
+        rgb[grow] = acc[grow] / cnt[grow][:, None]
+        solid = solid | grow
+    out = rgba.copy()
+    out[..., :3] = np.where(keep[..., None], rgba[..., :3], rgb.astype(np.uint8))
+    return out
+
+
+def finish_crystal(src_dir, out_dir):
+    """crystal_states.py 2x masters (640x800) -> the 320x400 game contract (Lanczos + defringe)."""
+    os.makedirs(os.path.join(out_dir, "World"), exist_ok=True)
+    for f in sorted(os.listdir(src_dir)):
+        if not f.endswith("@2x.png"):
+            continue
+        im = Image.open(os.path.join(src_dir, f)).convert("RGBA").resize((320, 400), Image.LANCZOS)
+        a = defringe(np.asarray(im))
+        name = f.replace("@2x", "")
+        Image.fromarray(a).save(os.path.join(out_dir, "World", name))
+        rows = np.nonzero((a[..., 3] > 128).any(1))[0]
+        print("%s: rows %s-%s" % (name, rows.min() if len(rows) else "-", rows.max() if len(rows) else "-"))
+    return 0
+
+
 def main():
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    p.add_argument("--render", required=True)
+    p.add_argument("--crystal", default=None, help="instead: finish crystal_states.py masters from this folder into --out")
+    p.add_argument("--render", default=None)
     p.add_argument("--asset", default="World/arena_background")
     p.add_argument("--out", required=True)
     p.add_argument("--target-mean", type=float, default=0.16)
     a = p.parse_args()
+    if a.crystal:
+        return finish_crystal(a.crystal, a.out)
     meta = json.load(open(os.path.join(a.render, "env_meta.json")))
     img = np.asarray(Image.open(os.path.join(a.render, "flat_raw.png"))).astype(np.float64)
     img /= 65535.0 if img.max() > 255 else 255.0

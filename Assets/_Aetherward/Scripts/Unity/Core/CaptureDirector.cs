@@ -69,6 +69,7 @@ namespace Aetherward.Game
         public ulong seed = 1;
         public string biome;
         public int wave = 10;
+        public string crystalPath;   // optional Crystal Evolution path (bastion / pulse / thorn)
         public Hero[] heroes;
         public Group[] groups;
         public int[] lanes;
@@ -119,6 +120,7 @@ namespace Aetherward.Game
                 if (!string.IsNullOrEmpty(spec.heroes[i].evolution)) h.EvolutionId = spec.heroes[i].evolution;
             }
             rc.State.BlockedNode = -1;
+            if (!string.IsNullOrEmpty(spec.crystalPath)) rc.State.CrystalPath = spec.crystalPath;
             rc.State.Wave = spec.wave;
             InstallWave(spec);
             App.ClearRun();

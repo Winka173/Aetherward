@@ -409,7 +409,7 @@ def cmd_stage(a):
     `ap.py import --stage <dir>` applies it with its validation, backup, journal, atomic replace and rollback."""
     sys.path.insert(0, os.path.join(A.ROOT, "Tools"))
     import gen_meta  # noqa: E402  (deterministic GUIDs for new files)
-    stage = os.path.join(A.ROOT, "ArtCache", "ArtStage-import-" + "-".join(a.batch))
+    stage = os.path.join(A.ROOT, "ArtCache", "ArtStage-import-" + ("-".join(a.batch) or "lead"))
     if os.path.exists(stage):
         shutil.rmtree(stage)
     shutil.copytree(A.ART, os.path.join(stage, "Art"))
@@ -438,16 +438,17 @@ def cmd_stage(a):
         dst = os.path.join(stage, "Art", aid + ".png")
         os.makedirs(os.path.dirname(dst), exist_ok=True)
         shutil.copyfile(src, dst)
+        side = A.read_json(src + ".json") if os.path.exists(src + ".json") else {}
         if key not in settings:              # a new frame: the contract of its live sibling
-            like = (f or {}).get("like")
+            like = (f or {}).get("like") or side.get("like")
             if not like:
                 raise SystemExit("no import settings and no 'like' sibling for new asset " + aid)
             settings[key] = dict(settings[LIVE_REL + like + ".png"])
             live_meta = os.path.join(A.ART, like + ".png.meta")
             text = A.read_text(live_meta)
             A.write_text(dst + ".meta", GUID.sub("guid: " + gen_meta.guid_for(key), text, count=1))
-        if os.path.exists(src + ".json"):    # explicit new contract (e.g. the 2K battlefield, PPU 120)
-            settings[key] = dict(settings[key], **A.read_json(src + ".json"))
+        if "ppu" in side:                    # explicit new contract (e.g. the 2K battlefield, PPU 120)
+            settings[key] = dict(settings[key], ppu=side["ppu"])
             # the stage .meta (same GUID) must carry the new PPU, or the validator rightly flags the mismatch
             meta = A.read_text(os.path.join(A.ART, aid + ".png.meta"))
             A.write_text(dst + ".meta", re.sub(r"spritePixelsToUnits: [-0-9.e]+", "spritePixelsToUnits: %g" % settings[key]["ppu"], meta))
@@ -772,7 +773,7 @@ def main():
     i.add_argument("--stage-dir", default=None, help="default ArtCache/ArtStage-<batch>")
     i.add_argument("--qa-dir", default=None, help="default ArtProduction/reviews/<batch>")
     st = sub.add_parser("stage")
-    st.add_argument("--batch", nargs="+", required=True)
+    st.add_argument("--batch", nargs="*", default=[])
     st.add_argument("--extra", nargs="*", help="lead-rendered output dirs shaped like Art/ (e.g. ArtProduction/generated)")
     br = sub.add_parser("brief")
     br.add_argument("--batch", required=True)

@@ -1,0 +1,49 @@
+{
+ "camera": {
+  "elevationDeg": 38.31613447366574,
+  "viewUnits": [
+   34.0,
+   19.2
+  ],
+  "resolution": [
+   4080,
+   2304
+  ],
+  "ppu": 120.0
+ },
+ "shadowDirScreen": [
+  0.8197,
+  0.5729
+ ],
+ "shadowLengthPerHeight": 0.8947,
+ "crystalScreen": [
+  0.0,
+  -0.55
+ ],
+ "braziersScreen": [
+  [
+   -12.682,
+   -0.55
+  ],
+  [
+   11.273,
+   10.18
+  ],
+  [
+   7.045,
+   -8.254
+  ]
+ ],
+ "braziersFlat": [
+  -12.682,
+  -0.55,
+  11.273,
+  10.18,
+  7.045,
+  -8.254
+ ],
+ "aetherCrystalsFlat": [],
+ "aetherCrystalsScreen": [],
+ "biome": "frostfall_bastion",
+ "samples": 256
+}
