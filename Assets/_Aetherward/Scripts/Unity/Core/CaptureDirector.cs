@@ -151,7 +151,9 @@ namespace Aetherward.Game
             while (next < shots.Count)
             {
                 if (rc.State.Phase != RunPhase.Battle) { Debug.LogWarning("capture: wave ended before shot " + shots[next].name); break; }
-                if (Time.time - t0 >= shots[next].t) yield return Shoot(spec, shots[next++]);
+                // shot times are simulation seconds (deterministic per seed), so a shot lands on the exact sim event
+                float simT = rc.Battle != null ? rc.Battle.Time : Time.time - t0;
+                if (simT >= shots[next].t) yield return Shoot(spec, shots[next++]);
                 else yield return null;
             }
             WriteInfo(spec, rc);

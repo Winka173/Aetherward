@@ -497,7 +497,8 @@ namespace Aetherward.Game
                 _fx.Spawn(ReactionIcon(e.Id), p + new Vector3(0, 0.9f, 0), 0.25f, 0.45f, 0.5f, new Color(1, 1, 1, 0.95f));
             if (Optional(reduced)) _fx.Spawn("Vfx/ring", p + new Vector3(0, 0.1f, 0), 0.3f, rad, 0.35f, c * new Color(1, 1, 1, 0.8f), 0, 0, default, -20);
             string fb = ReactionFlipbook(e.Id);
-            bool played = fb != null && (!reduced || e.Generation <= 1) && Burst(fb, p, Mathf.Clamp(rad * 1.1f, 1.2f, 2.6f), c, e.Generation == 0, reduced);
+            Element paint = e.Id == "freeze" || e.Id == "blizzard" || e.Id == "ice_spikes" ? Element.Ice : e.Element;
+            bool played = (!reduced || e.Generation <= 1) && Burst(fb, paint, p, Mathf.Clamp(rad * 1.4f, 1.5f, 2.8f), c, e.Generation == 0, reduced);
             if (!played && (e.Id == "overload" || e.Id == "vaporize" || e.Id == "melt"))
                 _fx.Spawn("Vfx/impact_" + (e.Id == "vaporize" ? "water" : "fire"), p + new Vector3(0, 0.4f, 0), 0.4f, rad * 0.9f, 0.3f, Color.white, Random.Range(0, 360));
             // Callout text only for significant events, throttled per reaction type.
@@ -514,15 +515,30 @@ namespace Aetherward.Game
         /// The signature hit: a Blender flipbook, an additive flash, a ground shockwave and (for primary events) a kick of
         /// screen shake. Exaggerated on purpose: effects are the game's showcase. False when the flipbook is not in the build.
         /// </summary>
-        private bool Burst(string flipbook, Vector3 p, float size, Color tint, bool primary, bool reduced)
+        private bool Burst(string flipbook, Element element, Vector3 p, float size, Color tint, bool primary, bool reduced)
         {
+            // the painted comic shape for the element (R02: burst_fire / ice / lightning / water) pops over the flipbook
+            element = PaintedElement(flipbook, element);
+            Sprite painted = element == Element.None ? null : Art.Optional("Vfx/burst_" + ElementUtil.Key(element));
+            if (CaptureArgs.Active && _rc.Battle != null) Debug.Log("[burst] t=" + _rc.Battle.Time.ToString("0.00") + " " + flipbook + " " + element + " size=" + size.ToString("0.0"));
+            if (flipbook == null && painted == null) return false;
             // readability guard (art bible v3 section 6): opaque clouds stay smaller and slightly see-through so the
             // units inside them still read; additive fire/lightning can go big
             bool cloud = flipbook == "steam_burst" || flipbook == "smoke_puff" || flipbook == "rift_mist" || flipbook == "water_splash";
+            float S = Mathf.Clamp(size * 1.25f, 1.3f, 2.8f);   // painted shape scale (from the full size)
             if (cloud) size = Mathf.Min(size, 2f);
-            if (!_fx.SpawnFlipbook(flipbook, p, size, cloud ? new Color(1, 1, 1, 0.8f) : Color.white, 1f, 30, Random.value < 0.5f)) return false;
+            if (flipbook == "fire_burst") size = Mathf.Min(size, 1.6f);   // the opaque flame column is ~3 units per scale step
+            bool fb = flipbook != null && _fx.SpawnFlipbook(flipbook, p, size, cloud ? new Color(1, 1, 1, 0.8f) : Color.white, 1f, 30, Random.value < 0.5f);
+            if (!fb && painted == null) return false;
+            if (painted != null)
+            {
+                // the star of the effect: 256 px at PPU 128 = 2 units, so S 1.3-2.8 draws it 2.6-5.6 units across;
+                // it pops in at 60 % and overshoots slightly, spins a little, holds, then fades (FxSystem ease-out)
+                _fx.Spawn("Vfx/burst_" + ElementUtil.Key(element), p + new Vector3(0, 0.32f * S, 0), 0.6f * S, 1.05f * S, 0.75f, Color.white,
+                    Random.Range(-12f, 12f), Random.Range(-20f, 20f), default, 31);
+            }
             Color flash = Color.Lerp(tint, Color.white, 0.35f);
-            _fx.Spawn("Vfx/glow", p + new Vector3(0, 0.45f * size, 0), 0.6f * size, 2.2f * size, 0.2f, flash * new Color(1, 1, 1, 0.55f), 0, 0, default, 32, true, 1f, true);
+            _fx.Spawn("Vfx/glow", p + new Vector3(0, 0.45f * size, 0), 0.6f * size, 2.2f * size, 0.18f, flash * new Color(1, 1, 1, painted != null ? 0.3f : 0.55f), 0, 0, default, 32, true, 1f, true);
             if (reduced) return true;
             _fx.Spawn("Vfx/ring", p + new Vector3(0, 0.05f, 0), 0.3f * size, 1.9f * size, 0.42f, tint * new Color(1, 1, 1, 0.85f), 0, 0, default, -20, true, 1f, true);
             for (int i = 0; i < 6; i++)
@@ -533,6 +549,21 @@ namespace Aetherward.Game
             }
             if (primary) Shake(0.12f + 0.05f * size);
             return true;
+        }
+
+        /// <summary>The painted burst follows the effect's theme (Electrocharge reads as lightning even when water hit last).</summary>
+        private static Element PaintedElement(string flipbook, Element hit)
+        {
+            switch (flipbook)
+            {
+                case "fire_burst": return Element.Fire;
+                case "lightning_arc": return Element.Lightning;
+                case "steam_burst":
+                case "water_splash": return Element.Water;
+                case "smoke_puff":
+                case "rift_mist": return Element.None;
+                default: return hit;
+            }
         }
 
         /// <summary>Blender-rendered flipbook played under a reaction (null: the ring/icon is enough).</summary>
@@ -575,18 +606,19 @@ namespace Aetherward.Game
                     // projectile_lightning is 0.556 units long at PPU 230: scale it to span the arc
                     float len = Mathf.Max(0.3f, d.magnitude / 0.556f);
                     _fx.Spawn("Vfx/projectile_lightning", (from + to) / 2, len, len, 0.16f, Color.white, ang, 0, default, 40, true, 1.2f / len);
-                    if (e.Id != "storm_bolt" || !Burst("lightning_arc", p, 1.8f, Ui.ElementColor(Element.Lightning), true, reduced))
+                    if (e.Id != "storm_bolt" || !Burst("lightning_arc", Element.Lightning, p, 1.8f, Ui.ElementColor(Element.Lightning), true, reduced))
                         _fx.Spawn("Vfx/impact_lightning", to, 0.3f, 0.5f, 0.2f, Color.white);
                     break;
                 }
                 case "Meteor":
-                    Burst("fire_burst", p, Mathf.Clamp(e.Radius * 1.4f, 1.6f, 3.2f), new Color(1f, 0.55f, 0.2f), true, reduced);
+                    Burst("fire_burst", Element.Fire, p, Mathf.Clamp(e.Radius * 1.4f, 1.6f, 3.2f), new Color(1f, 0.55f, 0.2f), true, reduced);
                     _fx.Spawn("Vfx/impact_fire", p + new Vector3(0, 0.3f, 0), e.Radius * 0.4f, e.Radius * 1.1f, 0.45f, Color.white, Random.Range(0, 360));
                     _fx.Spawn("Vfx/ring", p, 0.2f, e.Radius, 0.4f, new Color(1f, 0.6f, 0.2f, 0.8f), 0, 0, default, -20);
                     Shake(0.3f);
                     App.Audio.Play("react_explosion", 0.9f, 0.05f);
                     break;
                 case "IceSpike":
+                    Burst(null, Element.Ice, p, Mathf.Clamp(e.Radius * 1.3f, 1.2f, 2.4f), Ui.ElementColor(Element.Ice), false, reduced);
                     _fx.Spawn("Vfx/impact_ice", p + new Vector3(0, 0.3f, 0), 0.3f, e.Radius * 1.2f, 0.3f, Color.white, Random.Range(0, 360));
                     break;
                 case "Aftershock":

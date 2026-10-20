@@ -487,6 +487,7 @@ namespace Aetherward.Game
         private readonly List<Fx> _active = new List<Fx>();
         private readonly Stack<Fx> _pool = new Stack<Fx>();
         public int MaxActive = 320;
+        public int ActiveCount => _active.Count;
 
         public FxSystem(Transform root)
         {

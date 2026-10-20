@@ -12527,6 +12527,70 @@
   "ppu": 220,
   "sprite": true
  },
+ "Assets/_Aetherward/Resources/Art/Vfx/burst_fire.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 128,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Vfx/burst_ice.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 128,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Vfx/burst_lightning.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 128,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Vfx/burst_water.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 128,
+  "sprite": true
+ },
  "Assets/_Aetherward/Resources/Art/Vfx/coin.png": {
   "border": [
    0,

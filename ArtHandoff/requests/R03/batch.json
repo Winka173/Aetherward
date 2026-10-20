@@ -1,0 +1,96 @@
+{
+ "_doc": "R03 = v3 HUD/UI benchmark (lead-written 2026-10-21).",
+ "title": "R03 UI: panels, bars, buttons, cards, tooltip, emblem, UI icons + stance icons",
+ "goal": "The in-game HUD in the R01 hud_concept style.",
+ "priority": "P0",
+ "depends": "R01 style",
+ "styleRefs": [
+  "ArtHandoff/returns/R01/concepts/hud_concept_LOW_RES_DRAFT.png"
+ ],
+ "notes": "See CODEX_ART_REQUEST.md.",
+ "groups": [
+  {
+   "id": "ui",
+   "title": "UI frames",
+   "priority": "P0",
+   "required": true,
+   "assets": [
+    "UI/bar_bg",
+    "UI/bar_fill",
+    "UI/button_danger_disabled",
+    "UI/button_danger_hover",
+    "UI/button_danger_normal",
+    "UI/button_danger_pressed",
+    "UI/button_ghost_disabled",
+    "UI/button_ghost_hover",
+    "UI/button_ghost_normal",
+    "UI/button_ghost_pressed",
+    "UI/button_primary_disabled",
+    "UI/button_primary_hover",
+    "UI/button_primary_normal",
+    "UI/button_primary_pressed",
+    "UI/button_secondary_disabled",
+    "UI/button_secondary_hover",
+    "UI/button_secondary_normal",
+    "UI/button_secondary_pressed",
+    "UI/card_common",
+    "UI/card_cursed",
+    "UI/card_epic",
+    "UI/card_legendary",
+    "UI/card_rare",
+    "UI/panel_danger",
+    "UI/panel_dark",
+    "UI/panel_glass",
+    "UI/panel_light",
+    "UI/title_emblem",
+    "UI/tooltip",
+    "UI/vignette"
+   ]
+  },
+  {
+   "id": "icons",
+   "title": "UI icons",
+   "priority": "P0",
+   "required": true,
+   "assets": [
+    "Icons/ui_auto",
+    "Icons/ui_check",
+    "Icons/ui_close",
+    "Icons/ui_codex",
+    "Icons/ui_crystal",
+    "Icons/ui_essence",
+    "Icons/ui_evolve",
+    "Icons/ui_gold",
+    "Icons/ui_heart",
+    "Icons/ui_history",
+    "Icons/ui_leak",
+    "Icons/ui_lock",
+    "Icons/ui_pause",
+    "Icons/ui_play",
+    "Icons/ui_reroll",
+    "Icons/ui_settings",
+    "Icons/ui_shield",
+    "Icons/ui_speed",
+    "Icons/ui_star",
+    "Icons/ui_sword",
+    "Icons/ui_trophy",
+    "Icons/ui_wave",
+    "Icons/ui_xp"
+   ],
+   "new": [
+    {
+     "id": "Icons/ui_stance_defensive",
+     "like": "Icons/ui_shield"
+    },
+    {
+     "id": "Icons/ui_stance_balanced",
+     "like": "Icons/ui_shield"
+    },
+    {
+     "id": "Icons/ui_stance_aggressive",
+     "like": "Icons/ui_shield"
+    }
+   ]
+  }
+ ]
+}

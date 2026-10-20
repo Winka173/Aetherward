@@ -3153,12 +3153,28 @@
    "sha256": "b8c880120676793f9fd2923748540a3dd72dfa27dcfa7b26ae224536fd72bbaa"
   },
   {
+   "path": "Assets/_Aetherward/Resources/Art/Vfx/burst_fire.png",
+   "sha256": "d427fcf9e2e7f049d1a28864f365833756c49d2bb85aed5f8e189a737978595d"
+  },
+  {
+   "path": "Assets/_Aetherward/Resources/Art/Vfx/burst_ice.png",
+   "sha256": "b7abbe534a0fc97441e5946a444f42666c3026ba0402aa3aa7e58952dcee03fc"
+  },
+  {
+   "path": "Assets/_Aetherward/Resources/Art/Vfx/burst_lightning.png",
+   "sha256": "16f3f97ba3a61d753d36691cb4e858237ba82acde5e16950407430cef7783909"
+  },
+  {
+   "path": "Assets/_Aetherward/Resources/Art/Vfx/burst_water.png",
+   "sha256": "d1dcaf703e681413d3859beab2ffee0f10a36728adf3ad62794c903e11bb2201"
+  },
+  {
    "path": "Assets/_Aetherward/Resources/Art/Vfx/coin.png",
    "sha256": "8faa6d30f6900d45c363fd9b882552c454ed0128c86af99f043df0d47f6ab5fd"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Vfx/fb_fire_burst.png",
-   "sha256": "71393959d2cc0bc453bcc216c989def585617c4c187addec9e76826b42f10859"
+   "sha256": "baebe777ebd1e2385f5cd08021bc237a909cdedeab601818f20dc0cc800054f6"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Vfx/fb_lightning_arc.png",
@@ -3234,7 +3250,7 @@
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Vfx/field_ice_cover.png",
-   "sha256": "b48088dc5c0ef63ca92d7d3c6a1a46ec512604185475523f9c6db67d289c3e17"
+   "sha256": "b931c05f4f214119d3af4c6156c7b9a1b0b838e1ee788522a8fb52b3c99c4cc4"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Vfx/field_lingering_miasma.png",
@@ -3322,7 +3338,7 @@
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Vfx/fireball.png",
-   "sha256": "94aa1d31dbbbcbbee122945ed289ecf503122987a1f7c0b20dce54754a409caf"
+   "sha256": "1a61fb68ccd85f9a8e93a5b5d4054a81a0d872cc14091380a00db2af1828c02d"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Vfx/glow.png",
@@ -3338,11 +3354,11 @@
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Vfx/impact_fire.png",
-   "sha256": "53cc28609b46144ec18187d20df3d6823ae5431eabe08cb812d6baafad70576a"
+   "sha256": "3038be54b2df6b5338e0dd925e1101ce50004cd8773017a86f6c4168c7aab42b"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Vfx/impact_ice.png",
-   "sha256": "baf30d80166cce2f90ab0b53af4142725236d747af81a68608681a4e7ad1e679"
+   "sha256": "62eb882b22af9226330774540b262854c61c38a20b40c689ec7f94cab3a374d2"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Vfx/impact_light.png",
@@ -3350,7 +3366,7 @@
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Vfx/impact_lightning.png",
-   "sha256": "4b755127472329ae0745d8a48540136b0ccb0ce9fa1bf93f33346b9d9fe6854f"
+   "sha256": "fc34df5e9c23f0824cd71b1ca38d85b57685c47d47d29ead0cdaafc3c22633cd"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Vfx/impact_nature.png",
@@ -3370,7 +3386,7 @@
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Vfx/impact_water.png",
-   "sha256": "b59d52ba66d927aaec49446a54126ce0dc356cb590534f50ec33e0385d2aa317"
+   "sha256": "f04a2e0e361387feedb713c01a069dd0bd4da8d8e756ff1ad0cf7011e7356319"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Vfx/impact_wind.png",
@@ -3386,11 +3402,11 @@
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Vfx/projectile_fire.png",
-   "sha256": "b1a844a3de42254e3dc95838a0cb3d1ee674142e918ef74c678fa319cd8cb5ee"
+   "sha256": "ca5623786a1fe0db68c7342c793dbb7e4738e74153cac3b208f9e49317bf80a6"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Vfx/projectile_ice.png",
-   "sha256": "30c7a970307aca4ae87a7ec3ffb47b54692668bd447c5730c8a7625c50865b95"
+   "sha256": "c43d47c8b39ab53986f8f5eb0663ecf6ff0138b8e7181d97f8965ddf42424e5c"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Vfx/projectile_light.png",
@@ -3398,7 +3414,7 @@
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Vfx/projectile_lightning.png",
-   "sha256": "1b4d1d43abd6c82d979b8e9badb4e9811ba8467c2b84b347138ff31a89b0cf04"
+   "sha256": "1fb2a58ca984e312c705b7ebfad5585f7cdb756a282a3083508348becd1f6290"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Vfx/projectile_nature.png",
@@ -3418,7 +3434,7 @@
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Vfx/projectile_water.png",
-   "sha256": "e9bd0145571c35b0ca0ff4f3b929c9e58bcbe5a7345b7d4b0ca8c9ae9da15945"
+   "sha256": "569515213b05d2da0608ba101336b05d0eaf7563f909e076b0914933d5723014"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Vfx/projectile_wind.png",
@@ -3426,19 +3442,19 @@
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Vfx/ring.png",
-   "sha256": "07b9aee89ef3cb920aecc99c51eab310cabf4c2a8872669aa99d9ba86c50d502"
+   "sha256": "c2d1ba57cba4154c18619c3b6f1540cb5b1df3a83939bdf4f61e23e1c9fd0965"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Vfx/slash.png",
-   "sha256": "ca5de27dc3723d7692f3bdb5f8fb797a5d4f8627a944140b09cc6c6eb3536466"
+   "sha256": "8bf61e4335b30148434f4c582ef94c8cfba9588e8d2c89b4a636de6cb71f845b"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Vfx/spark.png",
-   "sha256": "47fbb6ee701789e099ce875c4e9ced42d485f3db8b436861b7435eb510261751"
+   "sha256": "8973040cbb6e4827974673a339654685109382e4875a267d8f8625af3da4a594"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Vfx/telegraph.png",
-   "sha256": "6612f2ef4f7c18836c1fe65f1b19478aa810001d3c26eece5e4c2eff01b60318"
+   "sha256": "1365d66b8581f4f0e27185477915534b96aaf7771f9e56435123b16beb21e19b"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Vfx/zone_blizzard.png",
@@ -3446,11 +3462,11 @@
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Vfx/zone_burning_ground.png",
-   "sha256": "7c9fded6bfd24c782e50b028a873c3fe967639e4a4ed13b6b379369a8c88d665"
+   "sha256": "2c406c3b6c3e29bf3dbd5be1b1d809beb3aaa330c842f46be0265a1c405c2f6c"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Vfx/zone_healing_rain.png",
-   "sha256": "be6c499ac5c495df3ae5d4808b5810ff9912718f84fbba76c1ac68961a86d381"
+   "sha256": "1e2a64d8087c4a2775f059c9280a3bce23389351d1eab84f408d05d94a9ea141"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Vfx/zone_magma.png",
@@ -3470,7 +3486,7 @@
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Vfx/zone_thunderstorm.png",
-   "sha256": "d53494c3f0e742b469998e285ba2d4c571f8853ca8cd60b299bba642ce27d959"
+   "sha256": "4fd09f72e47a1f254729cc4bc8148e5ed40f32157766837aa92ed73c830422b4"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Vfx/zone_vortex.png",
