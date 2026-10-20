@@ -754,7 +754,7 @@ namespace Aetherward.Sim.Content
                         Kind = h.Str("kind"), Interval = h.Float("interval", 9f), Delay = h.Float("delay", 1.5f), Radius = h.Float("radius", 1.3f),
                         Count = h.Int("count", 2), HeroDamagePct = h.Float("heroDamagePct", 0.12f), Power = h.Float("power", 40f), FromWave = h.Int("fromWave", 1)
                     };
-                    foreach (JsonNode p in h["points"].Items) hz.Points.Add(new Vec2(p[0].AsFloat(), p[1].AsFloat()));
+                    foreach (JsonNode p in h["points"].Items) hz.Points.Add(W(p));
                     b.Hazards.Add(hz);
                 }
                 foreach (JsonNode t in n["nodeTraits"].Items)
@@ -764,7 +764,7 @@ namespace Aetherward.Sim.Content
                     b.NodeTraitOps[node] = ParseEffects(t["effects"]);
                 }
                 foreach (JsonNode c in n["covers"].Items)
-                    b.Covers.Add(new CoverDef { Pos = new Vec2(c["pos"][0].AsFloat(), c["pos"][1].AsFloat()), Radius = c.Float("radius", 1f), Hits = c.Int("hits", 8), Field = c.Str("field", "ice_cover") });
+                    b.Covers.Add(new CoverDef { Pos = W(c["pos"]), Radius = c.Float("radius", 1f), Hits = c.Int("hits", 8), Field = c.Str("field", "ice_cover") });
                 foreach (JsonNode r in n["laneSchedule"].Items)
                     b.LaneRemaps.Add(new LaneRemap { Lane = r.Int("lane"), Until = r.Int("opensAt"), Use = r.Int("useBefore") });
                 foreach (JsonNode g in n["extra"].Items)
@@ -781,20 +781,28 @@ namespace Aetherward.Sim.Content
             if (DefaultBiome == null) throw new FormatException("biomes.json needs one default biome");
         }
 
+        /// <summary>
+        /// Dynamic-party battlefield scale: every arena distance (bounds, lanes, spawns, start nodes, hazards, covers)
+        /// is multiplied by this, the Crystal is not. 1 = the old cramped sanctum.
+        /// </summary>
+        public static float WorldScale = 1.3f;
+
+        private static Vec2 W(JsonNode p) => new Vec2(p[0].AsFloat() * WorldScale, p[1].AsFloat() * WorldScale);
+
         private static ArenaDef ParseArena(JsonNode n)
         {
             var a = new ArenaDef
             {
                 Id = n.Str("id", "arcane_sanctuary"),
-                HalfWidth = n.Float("halfWidth", 12f),
-                HalfHeight = n.Float("halfHeight", 7f),
+                HalfWidth = n.Float("halfWidth", 12f) * WorldScale,
+                HalfHeight = n.Float("halfHeight", 7f) * WorldScale,
                 CrystalRadius = n.Float("crystalRadius", 0.85f)
             };
-            foreach (JsonNode p in n["nodes"].Items) a.Nodes.Add(new Vec2(p[0].AsFloat(), p[1].AsFloat()));
+            foreach (JsonNode p in n["nodes"].Items) a.Nodes.Add(W(p));
             foreach (JsonNode l in n["lanes"].Items)
             {
                 var lane = new LaneDef { Id = l.Str("id"), NameKey = "lane." + l.Str("id") };
-                foreach (JsonNode p in l["points"].Items) lane.Points.Add(new Vec2(p[0].AsFloat(), p[1].AsFloat()));
+                foreach (JsonNode p in l["points"].Items) lane.Points.Add(W(p));
                 a.Lanes.Add(lane);
             }
             return a;

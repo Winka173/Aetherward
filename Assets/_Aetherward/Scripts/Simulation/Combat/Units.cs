@@ -45,6 +45,9 @@ namespace Aetherward.Sim.Combat
         public int RosterIndex;
         public int NodeIndex;
         public Vec2 Anchor;
+        /// <summary>Dynamic party: where the planner wants this hero (the Anchor eases toward it).</summary>
+        public Vec2 Post;
+        public int PostLane = -1;
         public int Level = 1;
         public string EvolutionId;
         public SkillDef Skill;

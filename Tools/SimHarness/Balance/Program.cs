@@ -43,6 +43,7 @@ namespace Aetherward.Balance
             // Feature flags (A/B): --no-crystal-evo disables Crystal Evolution, --legacy-targeting the utility AI.
             if (Array.IndexOf(args, "--no-crystal-evo") >= 0) Aetherward.Sim.Run.FeatureFlags.CrystalEvolution = false;
             if (Array.IndexOf(args, "--legacy-targeting") >= 0) Aetherward.Sim.Run.FeatureFlags.UtilityTargeting = false;
+            if (Array.IndexOf(args, "--legacy-party") >= 0) Aetherward.Sim.Run.FeatureFlags.DynamicParty = false;
             int fcp = Array.IndexOf(args, "--crystal-path");
             if (fcp >= 0) Aetherward.Sim.Run.AutoPilot.ForceCrystalPath = args[fcp + 1];
             if (Array.IndexOf(args, "--bot-tactics") >= 0) Aetherward.Sim.Run.AutoPilot.UseTactics = true;
@@ -92,11 +93,14 @@ namespace Aetherward.Balance
                 double waveSum = 0, secSum = 0, reactSum = 0, msSum = 0;
                 int peakEnemies = 0, peakRps = 0;
                 var deathWaves = new Dictionary<int, int>();
+                double travelSum = 0, crystalSum = 0, leakSum = 0, downSum = 0;
                 for (int r = 0; r < runs; r++)
                 {
                     ulong seed = 1000UL + (ulong)r * 7919UL;
                     var sw = Stopwatch.StartNew();
                     RunController rc = RunController.NewModeRun(db, mode, seed, st.Starters, ascension, Unlocks(db, args), biome, "20261019");
+                    int fst = Array.IndexOf(args, "--stance");
+                    if (fst >= 0) rc.State.Stance = (Aetherward.Sim.Combat.PartyStance)Enum.Parse(typeof(Aetherward.Sim.Combat.PartyStance), args[fst + 1], true);
                     var pilot = new AutoPilot(rc, st);
                     bool ok = pilot.PlayToEnd();
                     sw.Stop();
@@ -107,6 +111,10 @@ namespace Aetherward.Balance
                     if (res.Victory) wins++;
                     else { deathWaves.TryGetValue(wave, out int c); deathWaves[wave] = c + 1; }
                     waveSum += wave;
+                    travelSum += s.WaveLog.Sum(w => w.HeroTravel) / Math.Max(1f, s.WaveLog.Sum(w => w.Duration));
+                    crystalSum += s.WaveLog.Sum(w => w.CrystalDamage) / Math.Max(1, s.WaveLog.Count);
+                    leakSum += s.WaveLog.Sum(w => w.Leaks) / (double)Math.Max(1, s.WaveLog.Count);
+                    downSum += s.WaveLog.Sum(w => w.HeroDowns) / (double)Math.Max(1, s.WaveLog.Count);
                     secSum += s.ActiveSeconds;
                     reactSum += res.TotalReactions;
                     msSum += sw.Elapsed.TotalMilliseconds;
@@ -124,6 +132,7 @@ namespace Aetherward.Balance
                 }
                 summary.Add((st.Name, wins, runs, waveSum / runs, secSum / runs / 60.0, reactSum / runs, peakEnemies, peakRps, msSum / runs, deathWaves));
                 Console.WriteLine($"{st.Name,-16} wins {wins}/{runs}  avgWave {waveSum / runs:0.0}  active {secSum / runs / 60.0:0.0} min  reactions {reactSum / runs:0}  peakEnemies {peakEnemies}  sim {msSum / runs:0} ms/run");
+                Console.WriteLine($"{"",-16} party: heroTravel {travelSum / runs:0.00} u/s  crystalDmg/wave {crystalSum / runs:0}  leaks/wave {leakSum / runs:0.00}  heroDowns/wave {downSum / runs:0.00}");
             }
 
             File.WriteAllText(Path.Combine(outDir, "runs.csv"), runCsv.ToString());

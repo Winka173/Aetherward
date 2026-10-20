@@ -1,0 +1,468 @@
+{
+ "batch": "R01",
+ "delivered": 47,
+ "requested": 47,
+ "blocking": [],
+ "notes": [],
+ "rows": [
+  {
+   "id": "Heroes/glacius_idle",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 475
+  },
+  {
+   "id": "Heroes/glacius_attack",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 475
+  },
+  {
+   "id": "Heroes/glacius_cast",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 475
+  },
+  {
+   "id": "Heroes/glacius_downed",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 475
+  },
+  {
+   "id": "Portraits/glacius",
+   "group": "heroes",
+   "status": "OK"
+  },
+  {
+   "id": "Heroes/ignis_idle",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 475
+  },
+  {
+   "id": "Heroes/ignis_attack",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 475
+  },
+  {
+   "id": "Heroes/ignis_cast",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 475
+  },
+  {
+   "id": "Heroes/ignis_downed",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 475
+  },
+  {
+   "id": "Portraits/ignis",
+   "group": "heroes",
+   "status": "OK"
+  },
+  {
+   "id": "Heroes/veyra_idle",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 475
+  },
+  {
+   "id": "Heroes/veyra_cast",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 475
+  },
+  {
+   "id": "Heroes/veyra_downed",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 475
+  },
+  {
+   "id": "Portraits/veyra",
+   "group": "heroes",
+   "status": "OK"
+  },
+  {
+   "id": "Heroes/marina_idle",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 475
+  },
+  {
+   "id": "Heroes/marina_attack",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 475
+  },
+  {
+   "id": "Heroes/marina_cast",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 475
+  },
+  {
+   "id": "Heroes/marina_downed",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 475
+  },
+  {
+   "id": "Portraits/marina",
+   "group": "heroes",
+   "status": "OK"
+  },
+  {
+   "id": "Heroes/glacius_walk_a",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 475
+  },
+  {
+   "id": "Heroes/glacius_walk_b",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 475
+  },
+  {
+   "id": "Heroes/ignis_walk_a",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 475
+  },
+  {
+   "id": "Heroes/ignis_walk_b",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 475
+  },
+  {
+   "id": "Heroes/veyra_walk_a",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 475
+  },
+  {
+   "id": "Heroes/veyra_walk_b",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 475
+  },
+  {
+   "id": "Heroes/veyra_attack",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 475
+  },
+  {
+   "id": "Heroes/marina_walk_a",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 475
+  },
+  {
+   "id": "Heroes/marina_walk_b",
+   "group": "heroes",
+   "status": "OK",
+   "footRow": 475
+  },
+  {
+   "id": "Enemies/grunt_a",
+   "group": "enemies",
+   "status": "OK",
+   "footRow": 235
+  },
+  {
+   "id": "Enemies/grunt_b",
+   "group": "enemies",
+   "status": "OK",
+   "footRow": 235
+  },
+  {
+   "id": "Enemies/runner_a",
+   "group": "enemies",
+   "status": "OK",
+   "footRow": 235
+  },
+  {
+   "id": "Enemies/runner_b",
+   "group": "enemies",
+   "status": "OK",
+   "footRow": 235
+  },
+  {
+   "id": "Enemies/hexcaster_a",
+   "group": "enemies",
+   "status": "OK",
+   "footRow": 235
+  },
+  {
+   "id": "Enemies/hexcaster_b",
+   "group": "enemies",
+   "status": "OK",
+   "footRow": 235
+  },
+  {
+   "id": "Enemies/juggernaut_a",
+   "group": "enemies",
+   "status": "OK",
+   "footRow": 235
+  },
+  {
+   "id": "Enemies/juggernaut_b",
+   "group": "enemies",
+   "status": "OK",
+   "footRow": 235
+  },
+  {
+   "id": "Enemies/ravager_a",
+   "group": "enemies",
+   "status": "OK",
+   "footRow": 235
+  },
+  {
+   "id": "Enemies/ravager_b",
+   "group": "enemies",
+   "status": "OK",
+   "footRow": 235
+  },
+  {
+   "id": "Enemies/rift_warden_a",
+   "group": "enemies",
+   "status": "OK",
+   "footRow": 485
+  },
+  {
+   "id": "Enemies/rift_warden_b",
+   "group": "enemies",
+   "status": "OK",
+   "footRow": 485
+  },
+  {
+   "id": "Enemies/rift_warden_tell",
+   "group": "enemies",
+   "status": "OK",
+   "footRow": 485
+  },
+  {
+   "id": "Enemies/rift_warden_attack",
+   "group": "enemies",
+   "status": "OK",
+   "footRow": 485
+  },
+  {
+   "id": "Enemies/grunt_attack",
+   "group": "enemies",
+   "status": "OK",
+   "footRow": 235
+  },
+  {
+   "id": "Enemies/runner_attack",
+   "group": "enemies",
+   "status": "OK",
+   "footRow": 235
+  },
+  {
+   "id": "Enemies/hexcaster_attack",
+   "group": "enemies",
+   "status": "OK",
+   "footRow": 235
+  },
+  {
+   "id": "Enemies/juggernaut_attack",
+   "group": "enemies",
+   "status": "OK",
+   "footRow": 235
+  },
+  {
+   "id": "Enemies/ravager_attack",
+   "group": "enemies",
+   "status": "OK",
+   "footRow": 235
+  }
+ ],
+ "strayWorkingTreeChanges": [
+  "ArtProduction/ART_BIBLE.md",
+  "ArtProduction/generated/Vfx/fb_fire_burst.png",
+  "ArtProduction/generated/Vfx/fb_fire_burst.png.json",
+  "ArtProduction/generated/Vfx/fb_fire_burst_meta.json",
+  "ArtProduction/generated/Vfx/fb_rift_mist.png",
+  "ArtProduction/generated/Vfx/fb_smoke_puff.png",
+  "ArtProduction/generated/Vfx/fb_steam_burst.png",
+  "ArtProduction/generated/Vfx/fb_water_splash.png",
+  "ArtProduction/generated/World/arena_background.png",
+  "ArtProduction/generated/World/arena_background.png.json",
+  "ArtProduction/generated/World/arena_background_env.json",
+  "ArtProduction/generated/World/bg_frostfall_bastion.png",
+  "ArtProduction/generated/World/bg_frostfall_bastion.png.json",
+  "ArtProduction/generated/World/bg_frostfall_bastion_env.json",
+  "ArtProduction/generated/World/bg_molten_crater.png",
+  "ArtProduction/generated/World/bg_molten_crater.png.json",
+  "ArtProduction/generated/World/bg_molten_crater_env.json",
+  "ArtProduction/generated/World/bg_shattered_aether.png",
+  "ArtProduction/generated/World/bg_shattered_aether.png.json",
+  "ArtProduction/generated/World/bg_shattered_aether_env.json",
+  "ArtProduction/generated/World/bg_stormspire_citadel.png",
+  "ArtProduction/generated/World/bg_stormspire_citadel.png.json",
+  "ArtProduction/generated/World/bg_stormspire_citadel_env.json",
+  "ArtProduction/generated/World/bg_sunken_archive.png",
+  "ArtProduction/generated/World/bg_sunken_archive.png.json",
+  "ArtProduction/generated/World/bg_sunken_archive_env.json",
+  "ArtProduction/generated/World/crystal_cracked.png",
+  "ArtProduction/generated/World/crystal_critical.png",
+  "ArtProduction/generated/World/crystal_intact.png",
+  "ArtProduction/manifests/BATCH_STATUS.md",
+  "Assets/_Aetherward/Resources/Art/World/arena_background.png",
+  "Assets/_Aetherward/Resources/Art/World/arena_background.png.meta",
+  "Assets/_Aetherward/Resources/Art/World/arena_background_env.json",
+  "Assets/_Aetherward/Resources/Art/World/bg_frostfall_bastion.png",
+  "Assets/_Aetherward/Resources/Art/World/bg_frostfall_bastion.png.meta",
+  "Assets/_Aetherward/Resources/Art/World/bg_frostfall_bastion_env.json",
+  "Assets/_Aetherward/Resources/Art/World/bg_molten_crater.png",
+  "Assets/_Aetherward/Resources/Art/World/bg_molten_crater.png.meta",
+  "Assets/_Aetherward/Resources/Art/World/bg_molten_crater_env.json",
+  "Assets/_Aetherward/Resources/Art/World/bg_shattered_aether.png",
+  "Assets/_Aetherward/Resources/Art/World/bg_shattered_aether.png.meta",
+  "Assets/_Aetherward/Resources/Art/World/bg_shattered_aether_env.json",
+  "Assets/_Aetherward/Resources/Art/World/bg_stormspire_citadel.png",
+  "Assets/_Aetherward/Resources/Art/World/bg_stormspire_citadel.png.meta",
+  "Assets/_Aetherward/Resources/Art/World/bg_stormspire_citadel_env.json",
+  "Assets/_Aetherward/Resources/Art/World/bg_sunken_archive.png",
+  "Assets/_Aetherward/Resources/Art/World/bg_sunken_archive.png.meta",
+  "Assets/_Aetherward/Resources/Art/World/bg_sunken_archive_env.json",
+  "Assets/_Aetherward/Resources/Art/World/crystal_cracked.png",
+  "Assets/_Aetherward/Resources/Art/World/crystal_critical.png",
+  "Assets/_Aetherward/Resources/Art/World/crystal_intact.png",
+  "Assets/_Aetherward/Resources/Content/loc_en.json",
+  "Assets/_Aetherward/Resources/Content/loc_vi.json",
+  "Assets/_Aetherward/Scripts/Simulation/Combat/Battle.Damage.cs",
+  "Assets/_Aetherward/Scripts/Simulation/Combat/Battle.Heroes.cs",
+  "Assets/_Aetherward/Scripts/Simulation/Combat/Battle.TargetAI.cs",
+  "Assets/_Aetherward/Scripts/Simulation/Combat/Battle.Traits.cs",
+  "Assets/_Aetherward/Scripts/Simulation/Combat/Battle.cs",
+  "Assets/_Aetherward/Scripts/Simulation/Combat/CombatEvents.cs",
+  "Assets/_Aetherward/Scripts/Simulation/Combat/HeroFactory.cs",
+  "Assets/_Aetherward/Scripts/Simulation/Combat/SynergyVision.cs",
+  "Assets/_Aetherward/Scripts/Simulation/Combat/Units.cs",
+  "Assets/_Aetherward/Scripts/Simulation/Content/ContentDatabase.cs",
+  "Assets/_Aetherward/Scripts/Simulation/Meta/SaveSystem.cs",
+  "Assets/_Aetherward/Scripts/Simulation/Run/FeatureFlags.cs",
+  "Assets/_Aetherward/Scripts/Simulation/Run/RunController.cs",
+  "Assets/_Aetherward/Scripts/Simulation/Run/RunState.cs",
+  "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.Ui.cs",
+  "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs",
+  "Assets/_Aetherward/Scripts/Unity/Battle/PostFx.cs",
+  "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs",
+  "Assets/_Aetherward/Scripts/Unity/Core/CaptureDirector.cs",
+  "Assets/_Aetherward/Scripts/Unity/Core/Services.cs",
+  "Assets/_Aetherward/Tests/EditMode/EnemyPhase2Tests.cs",
+  "Assets/_Aetherward/Tests/EditMode/Phase3HeroTests.cs",
+  "Docs/ASSET_MANIFEST.json",
+  "Tools/ArtPipeline/blender/crystal_states.py",
+  "Tools/ArtPipeline/blender/sanctum_env.py",
+  "Tools/ArtPipeline/blender/vfx_flipbooks.py",
+  "Tools/ArtPipeline/env_finish.py",
+  "Tools/ArtPipeline/handoff.py",
+  "Tools/ArtPipeline/manifest.lock.json",
+  "Tools/ArtPipeline/vfx_sheets.py",
+  "Tools/AssetGen/import_settings.json",
+  "Tools/SimHarness/Balance/Program.cs",
+  "ArtHandoff/requests/R01/CODEX_ART_REQUEST.md",
+  "ArtHandoff/requests/R01/INPUT_MANIFEST.json",
+  "ArtHandoff/requests/R01/batch.json",
+  "ArtHandoff/requests/R01/references/battlefield_toon_crop_1to1.png",
+  "ArtHandoff/requests/R01/references/battlefield_toon_verdant.png",
+  "ArtHandoff/requests/R01/references/guides/unit__Enemies__grunt_a.png",
+  "ArtHandoff/requests/R01/references/guides/unit__Enemies__grunt_attack.png",
+  "ArtHandoff/requests/R01/references/guides/unit__Enemies__grunt_b.png",
+  "ArtHandoff/requests/R01/references/guides/unit__Enemies__hexcaster_a.png",
+  "ArtHandoff/requests/R01/references/guides/unit__Enemies__hexcaster_attack.png",
+  "ArtHandoff/requests/R01/references/guides/unit__Enemies__hexcaster_b.png",
+  "ArtHandoff/requests/R01/references/guides/unit__Enemies__juggernaut_a.png",
+  "ArtHandoff/requests/R01/references/guides/unit__Enemies__juggernaut_attack.png",
+  "ArtHandoff/requests/R01/references/guides/unit__Enemies__juggernaut_b.png",
+  "ArtHandoff/requests/R01/references/guides/unit__Enemies__ravager_a.png",
+  "ArtHandoff/requests/R01/references/guides/unit__Enemies__ravager_attack.png",
+  "ArtHandoff/requests/R01/references/guides/unit__Enemies__ravager_b.png",
+  "ArtHandoff/requests/R01/references/guides/unit__Enemies__rift_warden_a.png",
+  "ArtHandoff/requests/R01/references/guides/unit__Enemies__rift_warden_attack.png",
+  "ArtHandoff/requests/R01/references/guides/unit__Enemies__rift_warden_b.png",
+  "ArtHandoff/requests/R01/references/guides/unit__Enemies__rift_warden_tell.png",
+  "ArtHandoff/requests/R01/references/guides/unit__Enemies__runner_a.png",
+  "ArtHandoff/requests/R01/references/guides/unit__Enemies__runner_attack.png",
+  "ArtHandoff/requests/R01/references/guides/unit__Enemies__runner_b.png",
+  "ArtHandoff/requests/R01/references/guides/unit__Heroes__glacius_attack.png",
+  "ArtHandoff/requests/R01/references/guides/unit__Heroes__glacius_cast.png",
+  "ArtHandoff/requests/R01/references/guides/unit__Heroes__glacius_downed.png",
+  "ArtHandoff/requests/R01/references/guides/unit__Heroes__glacius_idle.png",
+  "ArtHandoff/requests/R01/references/guides/unit__Heroes__glacius_walk_a.png",
+  "ArtHandoff/requests/R01/references/guides/unit__Heroes__glacius_walk_b.png",
+  "ArtHandoff/requests/R01/references/guides/unit__Heroes__ignis_attack.png",
+  "ArtHandoff/requests/R01/references/guides/unit__Heroes__ignis_cast.png",
+  "ArtHandoff/requests/R01/references/guides/unit__Heroes__ignis_downed.png",
+  "ArtHandoff/requests/R01/references/guides/unit__Heroes__ignis_idle.png",
+  "ArtHandoff/requests/R01/references/guides/unit__Heroes__ignis_walk_a.png",
+  "ArtHandoff/requests/R01/references/guides/unit__Heroes__ignis_walk_b.png",
+  "ArtHandoff/requests/R01/references/guides/unit__Heroes__marina_attack.png",
+  "ArtHandoff/requests/R01/references/guides/unit__Heroes__marina_cast.png",
+  "ArtHandoff/requests/R01/references/guides/unit__Heroes__marina_downed.png",
+  "ArtHandoff/requests/R01/references/guides/unit__Heroes__marina_idle.png",
+  "ArtHandoff/requests/R01/references/guides/unit__Heroes__marina_walk_a.png",
+  "ArtHandoff/requests/R01/references/guides/unit__Heroes__marina_walk_b.png",
+  "ArtHandoff/requests/R01/references/guides/unit__Heroes__veyra_attack.png",
+  "ArtHandoff/requests/R01/references/guides/unit__Heroes__veyra_cast.png",
+  "ArtHandoff/requests/R01/references/guides/unit__Heroes__veyra_downed.png",
+  "ArtHandoff/requests/R01/references/guides/unit__Heroes__veyra_idle.png",
+  "ArtHandoff/requests/R01/references/guides/unit__Heroes__veyra_walk_a.png",
+  "ArtHandoff/requests/R01/references/guides/unit__Heroes__veyra_walk_b.png",
+  "ArtProduction/manifests/capture_r01_aggressive.json",
+  "ArtProduction/manifests/capture_r01_defensive.json",
+  "ArtProduction/manifests/capture_r01_gameplay.json",
+  "Assets/_Aetherward/Resources/Art/Vfx/fb_fire_burst.png",
+  "Assets/_Aetherward/Resources/Art/Vfx/fb_fire_burst.png.meta",
+  "Assets/_Aetherward/Resources/Art/Vfx/fb_fire_burst_meta.json",
+  "Assets/_Aetherward/Resources/Art/Vfx/fb_fire_burst_meta.json.meta",
+  "Assets/_Aetherward/Resources/Art/Vfx/fb_lightning_arc.png",
+  "Assets/_Aetherward/Resources/Art/Vfx/fb_lightning_arc.png.meta",
+  "Assets/_Aetherward/Resources/Art/Vfx/fb_lightning_arc_meta.json",
+  "Assets/_Aetherward/Resources/Art/Vfx/fb_lightning_arc_meta.json.meta",
+  "Assets/_Aetherward/Resources/Art/Vfx/fb_rift_mist.png",
+  "Assets/_Aetherward/Resources/Art/Vfx/fb_rift_mist.png.meta",
+  "Assets/_Aetherward/Resources/Art/Vfx/fb_rift_mist_meta.json",
+  "Assets/_Aetherward/Resources/Art/Vfx/fb_rift_mist_meta.json.meta",
+  "Assets/_Aetherward/Resources/Art/Vfx/fb_smoke_puff.png",
+  "Assets/_Aetherward/Resources/Art/Vfx/fb_smoke_puff.png.meta",
+  "Assets/_Aetherward/Resources/Art/Vfx/fb_smoke_puff_meta.json",
+  "Assets/_Aetherward/Resources/Art/Vfx/fb_smoke_puff_meta.json.meta",
+  "Assets/_Aetherward/Resources/Art/Vfx/fb_steam_burst.png",
+  "Assets/_Aetherward/Resources/Art/Vfx/fb_steam_burst.png.meta",
+  "Assets/_Aetherward/Resources/Art/Vfx/fb_steam_burst_meta.json",
+  "Assets/_Aetherward/Resources/Art/Vfx/fb_steam_burst_meta.json.meta",
+  "Assets/_Aetherward/Resources/Art/Vfx/fb_water_splash.png",
+  "Assets/_Aetherward/Resources/Art/Vfx/fb_water_splash.png.meta",
+  "Assets/_Aetherward/Resources/Art/Vfx/fb_water_splash_meta.json",
+  "Assets/_Aetherward/Resources/Art/Vfx/fb_water_splash_meta.json.meta",
+  "Assets/_Aetherward/Scripts/Simulation/Combat/Battle.Party.cs",
+  "Assets/_Aetherward/Scripts/Simulation/Combat/Battle.Party.cs.meta",
+  "Assets/_Aetherward/Tests/EditMode/DynamicPartyTests.cs",
+  "Assets/_Aetherward/Tests/EditMode/DynamicPartyTests.cs.meta",
+  "Reports/ArtQuality/R01_aggressive/capture_info.json",
+  "Reports/ArtQuality/R01_aggressive/t08.png",
+  "Reports/ArtQuality/R01_aggressive/t14.png",
+  "Reports/ArtQuality/R01_defensive/capture_info.json",
+  "Reports/ArtQuality/R01_defensive/t08.png",
+  "Reports/ArtQuality/R01_defensive/t14.png",
+  "Reports/ArtQuality/R01_gameplay/capture_info.json",
+  "Reports/ArtQuality/R01_gameplay/prep.png",
+  "Reports/ArtQuality/R01_gameplay/t04.png",
+  "Reports/ArtQuality/R01_gameplay/t08.png",
+  "Reports/ArtQuality/R01_gameplay/t12.png",
+  "Reports/ArtQuality/R01_gameplay/t17.png",
+  "Reports/ArtQuality/R01_gameplay/t23.png",
+  "Tools/ArtPipeline/blender/toon_pass.py"
+ ],
+ "stage": "ArtCache\\ArtStage-R01"
+}

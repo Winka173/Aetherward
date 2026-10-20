@@ -1,0 +1,103 @@
+{
+ "label": "R01 gameplay benchmark: dynamic party (6 roles) on the wide toon sanctum (Defensive)",
+ "commit": "8f49db9",
+ "seed": 21,
+ "biome": "verdant_sanctuary",
+ "wave": 12,
+ "heroes": [
+  {
+   "id": "glacius",
+   "node": 0,
+   "level": 8
+  },
+  {
+   "id": "cinder",
+   "node": 1,
+   "level": 8
+  },
+  {
+   "id": "ignis",
+   "node": 4,
+   "level": 8
+  },
+  {
+   "id": "veyra",
+   "node": 5,
+   "level": 8
+  },
+  {
+   "id": "raiden",
+   "node": 6,
+   "level": 8
+  },
+  {
+   "id": "marina",
+   "node": 2,
+   "level": 8
+  }
+ ],
+ "groups": [
+  {
+   "enemy": "grunt",
+   "count": 14,
+   "lane": -1,
+   "start": 0.0,
+   "interval": 0.6
+  },
+  {
+   "enemy": "runner",
+   "count": 6,
+   "lane": 4,
+   "start": 1.0,
+   "interval": 0.8
+  },
+  {
+   "enemy": "hexcaster",
+   "count": 4,
+   "lane": 1,
+   "start": 1.5,
+   "interval": 1.2
+  },
+  {
+   "enemy": "juggernaut",
+   "count": 2,
+   "lane": 2,
+   "start": 2.5,
+   "interval": 2.0
+  },
+  {
+   "enemy": "ravager",
+   "count": 1,
+   "lane": 3,
+   "start": 3.0,
+   "interval": 1.0
+  },
+  {
+   "enemy": "rift_warden",
+   "count": 1,
+   "lane": 0,
+   "start": 5.0,
+   "interval": 1.0
+  }
+ ],
+ "lanes": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5
+ ],
+ "shots": [
+  {
+   "t": 8,
+   "name": "t08"
+  },
+  {
+   "t": 14,
+   "name": "t14"
+  }
+ ],
+ "outDir": "OUTDIR",
+ "stance": "Defensive"
+}

@@ -1,0 +1,13 @@
+{
+  "kind": "Unity player screenshot (real Battle scene, scripted roster and wave)",
+  "label": "R01 gameplay benchmark: dynamic party (6 roles) on the wide toon sanctum (Aggressive)",
+  "commit": "8f49db9",
+  "unity": "6000.4.8f1",
+  "platform": "WindowsPlayer",
+  "screen": [2560, 1440],
+  "artOverride": "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/R01/exports/Art",
+  "overridesLoaded": 47,
+  "wave": 12,
+  "phaseAtEnd": "Battle",
+  "shots": ["t08.png", "t14.png"]
+}

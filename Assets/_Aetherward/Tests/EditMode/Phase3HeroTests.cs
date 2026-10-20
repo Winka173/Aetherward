@@ -207,6 +207,7 @@ namespace Aetherward.Tests
             Battle b = Make(null, ("morven", 0), ("sylph", 3));
             HeroUnit m = b.Heroes[0], ally = b.Heroes[1];
             b.Tick();
+            ally.Pos = m.Pos + new Vec2(1.2f, 0f);   // the guard works on live distance: keep the ally beside Morven
             ally.Hp = ally.MaxHp * 0.3f;
             float mHp = m.Hp, aHp = ally.Hp;
             b.DamageHero(ally, 40f, null);

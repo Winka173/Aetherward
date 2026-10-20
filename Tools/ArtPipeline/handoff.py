@@ -673,6 +673,9 @@ def lowest_opaque_row(im):
 SEPARATION_MIN = 0.10
 
 
+INK_EDGE_MAX = 0.22
+
+
 def value_separation(stage, ids):
     """Mean luminance of each unit's 3 px edge band vs the mean of the staged default battlefield."""
     import numpy as np
@@ -760,8 +763,12 @@ def cmd_intake(a):
                 im.save(dst)
     # value separation (review warning): a unit's 3 px edge band must read lighter than the battlefield it stands on
     sep = value_separation(stage, [r_["id"] for r_ in rows if r_["status"] == "OK" and r_["id"].startswith(("Heroes/", "Enemies/"))])
+    ink_rule = a.batch.startswith("R")   # Ravenswatch direction (art bible v3): units separate by a dark ink contour
     for uid, (edge_l, ground_l) in sep.items():
-        if edge_l < ground_l + SEPARATION_MIN:
+        if ink_rule:
+            if edge_l > INK_EDGE_MAX:
+                notes.append("%s: edge luminance %.2f: no dark ink contour (needs <= %.2f in the 3 px edge band)" % (uid, edge_l, INK_EDGE_MAX))
+        elif edge_l < ground_l + SEPARATION_MIN:
             notes.append("%s: edge luminance %.2f vs ground %.2f (needs >= +%.2f): add rim light / lift edge values" % (uid, edge_l, ground_l, SEPARATION_MIN))
     # write scope: nothing outside ArtHandoff/returns/<batch> may change
     r = subprocess.run(["git", "status", "--porcelain", "--untracked-files=all"], cwd=A.ROOT, capture_output=True, text=True)

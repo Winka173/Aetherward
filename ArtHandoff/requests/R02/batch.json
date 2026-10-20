@@ -1,0 +1,56 @@
+{
+ "_doc": "R02 = v3 elemental VFX sample (lead-written 2026-10-21).",
+ "title": "R02 VFX sample: fire / ice / lightning / water + shared",
+ "goal": "Comic-ink VFX shapes as big and loud as the R01 combat concept, readable over units.",
+ "priority": "P0",
+ "depends": "R01 style",
+ "styleRefs": [
+  "ArtHandoff/returns/R01/concepts/combat_scene_concept_LOW_RES_DRAFT.png"
+ ],
+ "notes": "See CODEX_ART_REQUEST.md.",
+ "groups": [
+  {
+   "id": "vfx",
+   "title": "VFX",
+   "priority": "P0",
+   "required": true,
+   "assets": [
+    "Vfx/impact_fire",
+    "Vfx/impact_ice",
+    "Vfx/impact_lightning",
+    "Vfx/impact_water",
+    "Vfx/projectile_fire",
+    "Vfx/projectile_ice",
+    "Vfx/projectile_lightning",
+    "Vfx/projectile_water",
+    "Vfx/fireball",
+    "Vfx/slash",
+    "Vfx/ring",
+    "Vfx/spark",
+    "Vfx/telegraph",
+    "Vfx/zone_burning_ground",
+    "Vfx/zone_thunderstorm",
+    "Vfx/zone_healing_rain",
+    "Vfx/field_ice_cover"
+   ],
+   "new": [
+    {
+     "id": "Vfx/burst_fire",
+     "like": "Vfx/ring"
+    },
+    {
+     "id": "Vfx/burst_ice",
+     "like": "Vfx/ring"
+    },
+    {
+     "id": "Vfx/burst_lightning",
+     "like": "Vfx/ring"
+    },
+    {
+     "id": "Vfx/burst_water",
+     "like": "Vfx/ring"
+    }
+   ]
+  }
+ ]
+}

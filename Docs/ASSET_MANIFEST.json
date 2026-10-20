@@ -1,24 +1,21 @@
 [
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/ignis_idle.png",
-  "generator": "Codex image_generation / Blender (batch B01)",
-  "source": "ArtHandoff/returns/B01/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B01)",
-  "canvas": "resampled to the power-of-two game canvas"
+  "generator": "Codex image_generation / Blender (batch R01)",
+  "source": "ArtHandoff/returns/R01/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch R01)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/ignis_cast.png",
-  "generator": "Codex image_generation / Blender (batch B01)",
-  "source": "ArtHandoff/returns/B01/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B01)",
-  "canvas": "resampled to the power-of-two game canvas"
+  "generator": "Codex image_generation / Blender (batch R01)",
+  "source": "ArtHandoff/returns/R01/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch R01)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/ignis_downed.png",
-  "generator": "Codex image_generation / Blender (batch B01)",
-  "source": "ArtHandoff/returns/B01/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B01)",
-  "canvas": "resampled to the power-of-two game canvas"
+  "generator": "Codex image_generation / Blender (batch R01)",
+  "source": "ArtHandoff/returns/R01/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch R01)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/ignis_evoA.png",
@@ -50,9 +47,9 @@
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Portraits/ignis.png",
-  "generator": "Codex image_generation / Blender (batch B01)",
-  "source": "ArtHandoff/returns/B01/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B01)"
+  "generator": "Codex image_generation / Blender (batch R01)",
+  "source": "ArtHandoff/returns/R01/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch R01)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/cinder_idle.png",
@@ -111,24 +108,21 @@
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/marina_idle.png",
-  "generator": "Codex image_generation / Blender (batch B01)",
-  "source": "ArtHandoff/returns/B01/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B01)",
-  "canvas": "resampled to the power-of-two game canvas"
+  "generator": "Codex image_generation / Blender (batch R01)",
+  "source": "ArtHandoff/returns/R01/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch R01)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/marina_cast.png",
-  "generator": "Codex image_generation / Blender (batch B01)",
-  "source": "ArtHandoff/returns/B01/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B01)",
-  "canvas": "resampled to the power-of-two game canvas"
+  "generator": "Codex image_generation / Blender (batch R01)",
+  "source": "ArtHandoff/returns/R01/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch R01)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/marina_downed.png",
-  "generator": "Codex image_generation / Blender (batch B01)",
-  "source": "ArtHandoff/returns/B01/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B01)",
-  "canvas": "resampled to the power-of-two game canvas"
+  "generator": "Codex image_generation / Blender (batch R01)",
+  "source": "ArtHandoff/returns/R01/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch R01)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/marina_evoA.png",
@@ -160,9 +154,9 @@
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Portraits/marina.png",
-  "generator": "Codex image_generation / Blender (batch B01)",
-  "source": "ArtHandoff/returns/B01/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B01)"
+  "generator": "Codex image_generation / Blender (batch R01)",
+  "source": "ArtHandoff/returns/R01/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch R01)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/tidal_idle.png",
@@ -372,21 +366,21 @@
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/glacius_idle.png",
-  "generator": "Codex image_generation / Blender (batch B03)",
-  "source": "ArtHandoff/returns/B03/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B03)"
+  "generator": "Codex image_generation / Blender (batch R01)",
+  "source": "ArtHandoff/returns/R01/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch R01)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/glacius_cast.png",
-  "generator": "Codex image_generation / Blender (batch B03)",
-  "source": "ArtHandoff/returns/B03/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B03)"
+  "generator": "Codex image_generation / Blender (batch R01)",
+  "source": "ArtHandoff/returns/R01/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch R01)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/glacius_downed.png",
-  "generator": "Codex image_generation / Blender (batch B03)",
-  "source": "ArtHandoff/returns/B03/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B03)"
+  "generator": "Codex image_generation / Blender (batch R01)",
+  "source": "ArtHandoff/returns/R01/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch R01)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/glacius_evoA.png",
@@ -414,9 +408,9 @@
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Portraits/glacius.png",
-  "generator": "Codex image_generation / Blender (batch B03)",
-  "source": "ArtHandoff/returns/B03/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B03)"
+  "generator": "Codex image_generation / Blender (batch R01)",
+  "source": "ArtHandoff/returns/R01/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch R01)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/zephyr_idle.png",
@@ -1473,21 +1467,21 @@
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/veyra_idle.png",
-  "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts",
-  "canvas": "resampled to the power-of-two game canvas"
+  "generator": "Codex image_generation / Blender (batch R01)",
+  "source": "ArtHandoff/returns/R01/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch R01)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/veyra_cast.png",
-  "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts",
-  "canvas": "resampled to the power-of-two game canvas"
+  "generator": "Codex image_generation / Blender (batch R01)",
+  "source": "ArtHandoff/returns/R01/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch R01)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/veyra_downed.png",
-  "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts",
-  "canvas": "resampled to the power-of-two game canvas"
+  "generator": "Codex image_generation / Blender (batch R01)",
+  "source": "ArtHandoff/returns/R01/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch R01)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/veyra_evoA.png",
@@ -1515,8 +1509,9 @@
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Portraits/veyra.png",
-  "generator": "Tools/AssetGen/art/heroes.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch R01)",
+  "source": "ArtHandoff/returns/R01/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch R01)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/isolde_idle.png",
@@ -1755,25 +1750,27 @@
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Enemies/grunt_a.png",
-  "generator": "Codex image_generation / Blender (batch B01)",
-  "source": "ArtHandoff/returns/B01/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B01)"
+  "generator": "Codex image_generation / Blender (batch R01)",
+  "source": "ArtHandoff/returns/R01/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch R01)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Enemies/grunt_b.png",
-  "generator": "Codex image_generation / Blender (batch B01)",
-  "source": "ArtHandoff/returns/B01/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B01)"
+  "generator": "Codex image_generation / Blender (batch R01)",
+  "source": "ArtHandoff/returns/R01/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch R01)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Enemies/runner_a.png",
-  "generator": "Tools/AssetGen/art/enemies.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch R01)",
+  "source": "ArtHandoff/returns/R01/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch R01)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Enemies/runner_b.png",
-  "generator": "Tools/AssetGen/art/enemies.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch R01)",
+  "source": "ArtHandoff/returns/R01/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch R01)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Enemies/swarmling_a.png",
@@ -1797,15 +1794,15 @@
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Enemies/hexcaster_a.png",
-  "generator": "Codex image_generation / Blender (batch B01)",
-  "source": "ArtHandoff/returns/B01/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B01)"
+  "generator": "Codex image_generation / Blender (batch R01)",
+  "source": "ArtHandoff/returns/R01/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch R01)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Enemies/hexcaster_b.png",
-  "generator": "Codex image_generation / Blender (batch B01)",
-  "source": "ArtHandoff/returns/B01/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B01)"
+  "generator": "Codex image_generation / Blender (batch R01)",
+  "source": "ArtHandoff/returns/R01/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch R01)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Enemies/sapper_a.png",
@@ -1829,15 +1826,15 @@
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Enemies/juggernaut_a.png",
-  "generator": "Codex image_generation / Blender (batch B01)",
-  "source": "ArtHandoff/returns/B01/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B01)"
+  "generator": "Codex image_generation / Blender (batch R01)",
+  "source": "ArtHandoff/returns/R01/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch R01)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Enemies/juggernaut_b.png",
-  "generator": "Codex image_generation / Blender (batch B01)",
-  "source": "ArtHandoff/returns/B01/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B01)"
+  "generator": "Codex image_generation / Blender (batch R01)",
+  "source": "ArtHandoff/returns/R01/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch R01)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Enemies/summoner_a.png",
@@ -1871,13 +1868,15 @@
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Enemies/ravager_a.png",
-  "generator": "Tools/AssetGen/art/enemies.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch R01)",
+  "source": "ArtHandoff/returns/R01/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch R01)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Enemies/ravager_b.png",
-  "generator": "Tools/AssetGen/art/enemies.py",
-  "license": "original, generated by project scripts"
+  "generator": "Codex image_generation / Blender (batch R01)",
+  "source": "ArtHandoff/returns/R01/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch R01)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Enemies/riftling_a.png",
@@ -1903,15 +1902,15 @@
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Enemies/rift_warden_a.png",
-  "generator": "Codex image_generation / Blender (batch B01)",
-  "source": "ArtHandoff/returns/B01/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B01)"
+  "generator": "Codex image_generation / Blender (batch R01)",
+  "source": "ArtHandoff/returns/R01/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch R01)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Enemies/rift_warden_b.png",
-  "generator": "Codex image_generation / Blender (batch B01)",
-  "source": "ArtHandoff/returns/B01/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B01)"
+  "generator": "Codex image_generation / Blender (batch R01)",
+  "source": "ArtHandoff/returns/R01/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch R01)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Enemies/mana_leech_a.png",
@@ -4416,10 +4415,9 @@
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/ignis_attack.png",
-  "generator": "Codex image_generation / Blender (batch B02)",
-  "source": "ArtHandoff/returns/B02/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B02)",
-  "canvas": "resampled to the power-of-two game canvas"
+  "generator": "Codex image_generation / Blender (batch R01)",
+  "source": "ArtHandoff/returns/R01/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch R01)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/ignis_evoA_attack.png",
@@ -4437,10 +4435,9 @@
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/marina_attack.png",
-  "generator": "Codex image_generation / Blender (batch B02)",
-  "source": "ArtHandoff/returns/B02/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B02)",
-  "canvas": "resampled to the power-of-two game canvas"
+  "generator": "Codex image_generation / Blender (batch R01)",
+  "source": "ArtHandoff/returns/R01/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch R01)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/marina_evoA_attack.png",
@@ -4539,9 +4536,9 @@
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/glacius_attack.png",
-  "generator": "Codex image_generation / Blender (batch B03)",
-  "source": "ArtHandoff/returns/B03/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B03)"
+  "generator": "Codex image_generation / Blender (batch R01)",
+  "source": "ArtHandoff/returns/R01/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch R01)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Heroes/glacius_evoA_attack.png",
@@ -4731,15 +4728,15 @@
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Enemies/rift_warden_attack.png",
-  "generator": "Codex image_generation / Blender (batch B11)",
-  "source": "ArtHandoff/returns/B11/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B11)"
+  "generator": "Codex image_generation / Blender (batch R01)",
+  "source": "ArtHandoff/returns/R01/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch R01)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Enemies/rift_warden_tell.png",
-  "generator": "Codex image_generation / Blender (batch B11)",
-  "source": "ArtHandoff/returns/B11/DELIVERABLE_MANIFEST.json",
-  "license": "original, produced for the project by the art specialist (batch B11)"
+  "generator": "Codex image_generation / Blender (batch R01)",
+  "source": "ArtHandoff/returns/R01/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch R01)"
  },
  {
   "path": "Assets/_Aetherward/Resources/Art/Enemies/seraphyne_attack.png",
@@ -4788,5 +4785,125 @@
   "generator": "Codex image_generation / Blender (batch B11)",
   "source": "ArtHandoff/returns/B11/DELIVERABLE_MANIFEST.json",
   "license": "original, produced for the project by the art specialist (batch B11)"
+ },
+ {
+  "path": "Assets/_Aetherward/Resources/Art/Vfx/fb_fire_burst.png",
+  "generator": "Tools/ArtPipeline/blender (lead)",
+  "source": "ArtProduction/generated",
+  "license": "original render; CC0 inputs listed in ArtProduction/REFERENCE_MANIFEST.json"
+ },
+ {
+  "path": "Assets/_Aetherward/Resources/Art/Vfx/fb_lightning_arc.png",
+  "generator": "Tools/ArtPipeline/blender (lead)",
+  "source": "ArtProduction/generated",
+  "license": "original render; CC0 inputs listed in ArtProduction/REFERENCE_MANIFEST.json"
+ },
+ {
+  "path": "Assets/_Aetherward/Resources/Art/Vfx/fb_rift_mist.png",
+  "generator": "Tools/ArtPipeline/blender (lead)",
+  "source": "ArtProduction/generated",
+  "license": "original render; CC0 inputs listed in ArtProduction/REFERENCE_MANIFEST.json"
+ },
+ {
+  "path": "Assets/_Aetherward/Resources/Art/Vfx/fb_smoke_puff.png",
+  "generator": "Tools/ArtPipeline/blender (lead)",
+  "source": "ArtProduction/generated",
+  "license": "original render; CC0 inputs listed in ArtProduction/REFERENCE_MANIFEST.json"
+ },
+ {
+  "path": "Assets/_Aetherward/Resources/Art/Vfx/fb_steam_burst.png",
+  "generator": "Tools/ArtPipeline/blender (lead)",
+  "source": "ArtProduction/generated",
+  "license": "original render; CC0 inputs listed in ArtProduction/REFERENCE_MANIFEST.json"
+ },
+ {
+  "path": "Assets/_Aetherward/Resources/Art/Vfx/fb_water_splash.png",
+  "generator": "Tools/ArtPipeline/blender (lead)",
+  "source": "ArtProduction/generated",
+  "license": "original render; CC0 inputs listed in ArtProduction/REFERENCE_MANIFEST.json"
+ },
+ {
+  "path": "Assets/_Aetherward/Resources/Art/Enemies/grunt_attack.png",
+  "generator": "Codex image_generation / Blender (batch R01)",
+  "source": "ArtHandoff/returns/R01/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch R01)"
+ },
+ {
+  "path": "Assets/_Aetherward/Resources/Art/Enemies/hexcaster_attack.png",
+  "generator": "Codex image_generation / Blender (batch R01)",
+  "source": "ArtHandoff/returns/R01/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch R01)"
+ },
+ {
+  "path": "Assets/_Aetherward/Resources/Art/Enemies/juggernaut_attack.png",
+  "generator": "Codex image_generation / Blender (batch R01)",
+  "source": "ArtHandoff/returns/R01/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch R01)"
+ },
+ {
+  "path": "Assets/_Aetherward/Resources/Art/Enemies/ravager_attack.png",
+  "generator": "Codex image_generation / Blender (batch R01)",
+  "source": "ArtHandoff/returns/R01/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch R01)"
+ },
+ {
+  "path": "Assets/_Aetherward/Resources/Art/Enemies/runner_attack.png",
+  "generator": "Codex image_generation / Blender (batch R01)",
+  "source": "ArtHandoff/returns/R01/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch R01)"
+ },
+ {
+  "path": "Assets/_Aetherward/Resources/Art/Heroes/glacius_walk_a.png",
+  "generator": "Codex image_generation / Blender (batch R01)",
+  "source": "ArtHandoff/returns/R01/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch R01)"
+ },
+ {
+  "path": "Assets/_Aetherward/Resources/Art/Heroes/glacius_walk_b.png",
+  "generator": "Codex image_generation / Blender (batch R01)",
+  "source": "ArtHandoff/returns/R01/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch R01)"
+ },
+ {
+  "path": "Assets/_Aetherward/Resources/Art/Heroes/ignis_walk_a.png",
+  "generator": "Codex image_generation / Blender (batch R01)",
+  "source": "ArtHandoff/returns/R01/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch R01)"
+ },
+ {
+  "path": "Assets/_Aetherward/Resources/Art/Heroes/ignis_walk_b.png",
+  "generator": "Codex image_generation / Blender (batch R01)",
+  "source": "ArtHandoff/returns/R01/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch R01)"
+ },
+ {
+  "path": "Assets/_Aetherward/Resources/Art/Heroes/marina_walk_a.png",
+  "generator": "Codex image_generation / Blender (batch R01)",
+  "source": "ArtHandoff/returns/R01/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch R01)"
+ },
+ {
+  "path": "Assets/_Aetherward/Resources/Art/Heroes/marina_walk_b.png",
+  "generator": "Codex image_generation / Blender (batch R01)",
+  "source": "ArtHandoff/returns/R01/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch R01)"
+ },
+ {
+  "path": "Assets/_Aetherward/Resources/Art/Heroes/veyra_attack.png",
+  "generator": "Codex image_generation / Blender (batch R01)",
+  "source": "ArtHandoff/returns/R01/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch R01)"
+ },
+ {
+  "path": "Assets/_Aetherward/Resources/Art/Heroes/veyra_walk_a.png",
+  "generator": "Codex image_generation / Blender (batch R01)",
+  "source": "ArtHandoff/returns/R01/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch R01)"
+ },
+ {
+  "path": "Assets/_Aetherward/Resources/Art/Heroes/veyra_walk_b.png",
+  "generator": "Codex image_generation / Blender (batch R01)",
+  "source": "ArtHandoff/returns/R01/DELIVERABLE_MANIFEST.json",
+  "license": "original, produced for the project by the art specialist (batch R01)"
  }
 ]

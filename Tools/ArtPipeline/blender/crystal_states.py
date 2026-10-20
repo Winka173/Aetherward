@@ -285,6 +285,12 @@ STATES = {
     "critical": dict(fract=16.0, core="#ff4a7a", core_s=2.6, glyph=0.6, shard_s=0.4, fallen=[0], drop=[1, 2], inner="#ff6a90"),
 }
 base_loc = {s_.name: s_.location.copy() for s_ in SHARDS}
+TOON = "--painterly" not in ARGS          # art bible v3: banded light + ink, like the battlefields
+if TOON:
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import toon_pass  # noqa: E402
+    toon_pass.configure(scene=sc, out=OUT, scale=1.0, alpha=True, combined=True)
+    toon_pass.toon_setup()
 for state, st in STATES.items():
     FRACT.inputs[1].default_value = st["fract"]
     B_CORE.inputs["Emission Color"].default_value = lin(st["core"])
@@ -299,7 +305,11 @@ for state, st in STATES.items():
     for i, c in enumerate(CROWN):
         c.hide_render = i in st["fallen"] or (state == "critical" and i == 2)
     sc.render.filepath = os.path.join(OUT, "crystal_%s@2x.png" % state)
-    bpy.ops.render.render(write_still=True)
+    if TOON:
+        bpy.ops.render.render(write_still=False)
+        toon_pass.toon_compose_combined(sc.render.filepath)
+    else:
+        bpy.ops.render.render(write_still=True)
     print("CRYSTAL", state)
 # ------------------------------------------------------------------ Crystal Evolution overlays (drawn over any state)
 if "--paths" in ARGS:

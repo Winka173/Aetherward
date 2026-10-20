@@ -107,6 +107,7 @@ namespace Aetherward.Sim.Combat
             h.Radius = h.Melee ? 0.4f : 0.36f;
             h.Anchor = l.NodeIndex >= 0 && l.NodeIndex < battle.Arena.Nodes.Count ? battle.Arena.Nodes[l.NodeIndex] : Vec2.Zero;
             h.Pos = h.Anchor;
+            h.Post = h.Anchor;
             h.Facing = (Vec2.Zero - h.Anchor).SqrLength > 0.01f ? (h.Anchor - Vec2.Zero).Normalized : new Vec2(1f, 0f);
             h.AttackTimer = 0.2f + 0.1f * l.RosterIndex;
             h.SkillTimer = h.Skill.Cooldown * 0.5f * h.Stats[(int)StatId.SkillCooldown];

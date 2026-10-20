@@ -42,6 +42,9 @@ namespace Aetherward.Sim.Combat
         public int EliteEvery;
         public string CrystalPath;                // Crystal Evolution path id (null = none)
         public TeamTactic Tactic;                 // soft targeting weights chosen before the wave
+        public PartyStance Stance = PartyStance.Balanced;   // how far from the Crystal the party fights
+        /// <summary>Dynamic party (posts re-planned from threat, role and stance). False = legacy fixed node anchors.</summary>
+        public bool DynamicParty = true;
         public bool UtilityTargeting = true;      // feature flag: utility scoring for basic-attack targets
         public float HazardShift;     // Ascension "hazard_shift": biome hazards fire this much more often
     }
@@ -162,6 +165,7 @@ namespace Aetherward.Sim.Combat
             // Team auras (e.g. Zephyr's tailwind) are applied as permanent buffs at battle start.
             foreach (HeroUnit h in Heroes) ApplyBattleStartPassive(h);
             foreach (HeroUnit h in Heroes) ApplyBattleStartTrait(h);
+            ApplyStanceBonus();
         }
 
         private int _eliteCounter;
@@ -232,7 +236,13 @@ namespace Aetherward.Sim.Combat
 
             UpdateCrystal(dt);
             UpdateCrystalPath(dt);
-            for (int i = 0; i < Heroes.Count; i++) UpdateHero(Heroes[i], dt);
+            UpdatePartyPosts(dt);
+            for (int i = 0; i < Heroes.Count; i++)
+            {
+                Vec2 before = Heroes[i].Pos;
+                UpdateHero(Heroes[i], dt);
+                Stats.HeroTravel += Vec2.Distance(before, Heroes[i].Pos);
+            }
             for (int i = 0; i < Enemies.Count; i++) UpdateEnemy(Enemies[i], dt);
             SeparateEnemies();
             UpdateProjectiles(dt);

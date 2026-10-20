@@ -5,21 +5,25 @@
  ],
  "shadowLengthPerHeight": 0.8947,
  "braziersFlat": [
-  -9.864,
-  0.886,
-  -8.455,
-  -8.624,
-  -8.455,
-  5.196
+  2.846,
+  7.368,
+  -12.808,
+  3.474,
+  7.115,
+  8.68,
+  -9.962,
+  11.053,
+  12.808,
+  6.091
  ],
  "aetherCrystalsFlat": [],
  "edgeColor": [
-  0.0839,
-  0.1059,
-  0.1354
+  0.3131,
+  0.3527,
+  0.4099
  ],
- "source": "ArtCache/Env/v2full_stormspire_citadel",
- "gamma": 1.2122,
- "viewMeanBefore": 0.2116,
- "viewMean": 0.16
+ "source": "ArtCache/EnvToon/stormspire_citadel",
+ "gamma": 1.3087,
+ "viewMeanBefore": 0.4861,
+ "viewMean": 0.4
 }

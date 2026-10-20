@@ -145,7 +145,8 @@ namespace Aetherward.Game
         private void FitCamera()
         {
             float aspect = (float)Screen.width / Mathf.Max(1, Screen.height);
-            _cam.orthographicSize = Mathf.Max(7.5f, 13.2f / aspect);
+            // dynamic party: the wider sanctum (ContentDatabase.WorldScale) needs a wider view, ~31 x 17.6 units at 16:9
+            _cam.orthographicSize = Mathf.Max(8.8f, 15.8f / aspect);
         }
 
         // ------------------------------------------------------------------ world construction
@@ -515,9 +516,13 @@ namespace Aetherward.Game
         /// </summary>
         private bool Burst(string flipbook, Vector3 p, float size, Color tint, bool primary, bool reduced)
         {
-            if (!_fx.SpawnFlipbook(flipbook, p, size, Color.white, 1f, 30, Random.value < 0.5f)) return false;
+            // readability guard (art bible v3 section 6): opaque clouds stay smaller and slightly see-through so the
+            // units inside them still read; additive fire/lightning can go big
+            bool cloud = flipbook == "steam_burst" || flipbook == "smoke_puff" || flipbook == "rift_mist" || flipbook == "water_splash";
+            if (cloud) size = Mathf.Min(size, 2f);
+            if (!_fx.SpawnFlipbook(flipbook, p, size, cloud ? new Color(1, 1, 1, 0.8f) : Color.white, 1f, 30, Random.value < 0.5f)) return false;
             Color flash = Color.Lerp(tint, Color.white, 0.35f);
-            _fx.Spawn("Vfx/glow", p + new Vector3(0, 0.45f * size, 0), 0.6f * size, 2.4f * size, 0.22f, flash * new Color(1, 1, 1, 0.9f), 0, 0, default, 32, true, 1f, true);
+            _fx.Spawn("Vfx/glow", p + new Vector3(0, 0.45f * size, 0), 0.6f * size, 2.2f * size, 0.2f, flash * new Color(1, 1, 1, 0.55f), 0, 0, default, 32, true, 1f, true);
             if (reduced) return true;
             _fx.Spawn("Vfx/ring", p + new Vector3(0, 0.05f, 0), 0.3f * size, 1.9f * size, 0.42f, tint * new Color(1, 1, 1, 0.85f), 0, 0, default, -20, true, 1f, true);
             for (int i = 0; i < 6; i++)
@@ -669,11 +674,40 @@ namespace Aetherward.Game
             _shake = Mathf.Min(0.6f, Mathf.Max(_shake, amount * k * (Application.isMobilePlatform ? 0.5f : 1f)));
         }
 
+        private Vector2 _camFocus;
+
+        /// <summary>
+        /// Light tracking: the view leans toward where the party is fighting, never more than the background margin
+        /// allows (the 40 x 20 battlefield vs the ~34 x 19 view), so the Crystal always stays in frame.
+        /// </summary>
+        private void UpdateCameraFocus(float dt)
+        {
+            Vector2 want = Vector2.zero;
+            Battle b = _rc.Battle;
+            if (b != null && _rc.State.Phase == RunPhase.Battle)
+            {
+                Vector2 sum = Vector2.zero;
+                int n = 0;
+                foreach (HeroUnit h in b.Heroes)
+                {
+                    if (!h.Alive) continue;
+                    sum += new Vector2(h.Pos.X, h.Pos.Y);
+                    n++;
+                }
+                if (n > 0) want = sum / n * 0.45f;
+            }
+            float halfW = _cam.orthographicSize * _cam.aspect, halfH = _cam.orthographicSize;
+            float mx = Mathf.Max(0f, 20f - halfW - 0.2f), my = Mathf.Max(0f, 10f - halfH - 0.1f);
+            want = new Vector2(Mathf.Clamp(want.x, -mx, mx), Mathf.Clamp(want.y, -my, my));
+            _camFocus = Vector2.Lerp(_camFocus, want, 1f - Mathf.Exp(-1.6f * dt));
+        }
+
         private void UpdateShake(float dt)
         {
+            UpdateCameraFocus(dt);
             _shake = Mathf.Max(0f, _shake - dt * 1.8f);
             Vector2 o = _shake > 0f ? Random.insideUnitCircle * _shake * 0.35f : Vector2.zero;
-            _cam.transform.position = new Vector3(o.x, o.y, -10f);
+            _cam.transform.position = new Vector3(_camFocus.x + o.x, _camFocus.y + o.y, -10f);
         }
 
         // ------------------------------------------------------------------ view sync: battle
@@ -959,6 +993,9 @@ namespace Aetherward.Game
             bool prep = _rc.State.Phase == RunPhase.Prepare;
             for (int i = 0; i < _nodes.Count; i++)
             {
+                // dynamic party: nodes are only the starting formation, so they disappear once the wave starts
+                _nodes[i].enabled = prep;
+                if (!prep) continue;
                 HeroRunState occ = _rc.State.HeroOnNode(i);
                 string sprite = occ != null ? "World/node_occupied" : "World/node_empty";
                 if (prep && (_dragUid >= 0 || _selectedUid >= 0) && NearestNode(_dragUid >= 0 ? _dragPos : Vector3.one * 999f) == i) sprite = "World/node_highlight";

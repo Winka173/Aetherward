@@ -19,10 +19,10 @@ from env_finish import defringe  # noqa: E402
 
 # per effect: world units across one 256 px cell (the render's ortho extent), playback, blending, pivot (effect origin)
 EFFECTS = {
-    "fire_burst": dict(extent=2.6, fps=24, blend="additive", pivot=[0.5, 0.18], glow="#ff7a2a",
+    "fire_burst": dict(extent=3.05, fps=24, blend="additive", pivot=[0.5, 0.18], glow="#ff7a2a",
                        ramp=("#c0281a", "#ff7a1a", "#ffd23a", "#fff6c0")),
     "smoke_puff": dict(extent=1.62, fps=20, blend="alpha", pivot=[0.5, 0.18], ramp=("#3a3048", "#6e6680", "#b4aec0"), ink="#1b1226"),
-    "steam_burst": dict(extent=1.8, fps=20, blend="alpha", pivot=[0.5, 0.18], ramp=("#7f9fc0", "#c8e2f4", "#ffffff"), ink="#2a3f66"),
+    "steam_burst": dict(extent=1.8, fps=20, blend="alpha", pivot=[0.5, 0.18], ramp=("#5f7fa6", "#9fc2e0", "#d2e9f7"), ink="#2a3f66"),
     "rift_mist": dict(extent=1.62, fps=16, blend="alpha", pivot=[0.5, 0.18], ramp=("#4a1050", "#a0287a", "#ff6ab0"), ink="#1b0a22"),
     "lightning_arc": dict(extent=2.4, fps=24, blend="additive", pivot=[0.5, 0.12], glow="#7fa6ff"),
     "water_splash": dict(extent=2.2, fps=24, blend="alpha", pivot=[0.5, 0.18], ramp=("#1f5fd0", "#3fb8ff", "#d8f8ff"), ink="#0e2350"),

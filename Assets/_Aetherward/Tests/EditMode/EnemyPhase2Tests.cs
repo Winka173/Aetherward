@@ -126,7 +126,7 @@ namespace Aetherward.Tests
             Assert.IsFalse(s.Burrowed);
             Assert.IsTrue(telegraph, "surfacing is telegraphed");
             // surfaces once its remaining lane path (which ends ~2 m from the core) is within surfaceDist
-            Assert.LessOrEqual(Vec2.Distance(s.Pos, b.Crystal.Pos), s.Def.Params.Get("surfaceDist") + 2.5f);
+            Assert.LessOrEqual(Vec2.Distance(s.Pos, b.Crystal.Pos), s.Def.Params.Get("surfaceDist") + 2.5f * ContentDatabase.WorldScale);
         }
 
         [Test]

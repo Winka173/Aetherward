@@ -66,6 +66,8 @@ namespace Aetherward.Sim.Run
     public sealed class WaveRecord
     {
         public int Wave;
+        public float HeroTravel;   // not saved: benchmark only
+        public int CrystalHits;    // not saved: benchmark only
         public float Duration;
         public float CrystalDamage;
         public float CrystalHpAfter;
@@ -145,6 +147,7 @@ namespace Aetherward.Sim.Run
         public string BiomeId;
         public GameMode Mode;
         public Combat.TeamTactic Tactic;
+        public Combat.PartyStance Stance = Combat.PartyStance.Balanced;
         public string CrystalPath;                                    // Crystal Evolution choice (null = not chosen)
         public bool CrystalEvolutionEnabled = FeatureFlags.CrystalEvolution;
         /// <summary>Optional shop lock: one hero/relic/card offer carried into the next shop at its price.</summary>

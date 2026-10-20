@@ -38,7 +38,7 @@ SEED = int(arg("--seed", "7"))
 SIN = 0.62
 ELEV = math.asin(SIN)
 COS = math.cos(ELEV)
-VIEW_W, VIEW_H = 34.0, 17.0      # 4096 x 2048: power-of-two so Unity can compress the sprite (NPOT sprites stay RGBA)
+VIEW_W, VIEW_H = 40.0, 20.0      # 4096 x 2048 (PPU 102.4), the dynamic-party view with room for camera tracking;: power-of-two so Unity can compress the sprite (NPOT sprites stay RGBA)
 RES_X, RES_Y = 4096, 2048
 random.seed(SEED)
 np.random.seed(SEED)
@@ -55,6 +55,21 @@ BIOME_ID = arg("--biome", "verdant_sanctuary")
 BIOME = next(b for b in jsonc(os.path.join(os.path.dirname(ARENA), "biomes.json"))["biomes"] if b["id"] == BIOME_ID)
 if isinstance(BIOME.get("arena"), dict):     # biome arenas are inline in biomes.json
     arena = BIOME["arena"]
+
+# Same widening as the simulation (ContentDatabase.WorldScale): lanes, spawns, start nodes, hazards and covers.
+WORLD_SCALE = float(arg("--world-scale", "1.3"))
+
+
+def _scale_pts(pts):
+    return [[p_[0] * WORLD_SCALE, p_[1] * WORLD_SCALE] for p_ in pts]
+
+
+arena = dict(arena)
+arena["lanes"] = [dict(l_, points=_scale_pts(l_["points"])) for l_ in arena["lanes"]]
+arena["nodes"] = _scale_pts(arena["nodes"])
+BIOME = dict(BIOME)
+BIOME["hazards"] = [dict(h_, points=_scale_pts(h_.get("points", []))) for h_ in BIOME.get("hazards", [])]
+BIOME["covers"] = [dict(c_, pos=_scale_pts([c_["pos"]])[0]) for c_ in BIOME.get("covers", [])]
 
 # Per-biome look. "special" is the second terrain mask channel (moss in the sanctum): how it is drawn, how deep it
 # sinks the ground, where it appears (fbm blobs, bands along some lanes, pools at the hazard points).
@@ -199,7 +214,7 @@ for lane in arena["lanes"]:
         one = np.minimum(one, seg_dist(gx, gy, a, b))
     LANE_DS.append(one)
     lane_d = np.minimum(lane_d, one)
-DAIS_R = 5.9
+DAIS_R = 3.9                 # inner ring: Defensive holds on it, Balanced at its edge, Aggressive out on the field
 dais_d = np.hypot(gx, gy + 0.887)          # centred on the Crystal (game y -0.55 -> ground -0.887)
 
 
@@ -1252,16 +1267,19 @@ if THEME.get("kinds"):
 
 
 # candidate prop spots in screen space, filtered by lane / dais clearance
-spots = [(x, y) for x in np.linspace(-15.5, 15.5, 23) for y in np.linspace(-8.6, 8.6, 13)]
+spots = [(x, y) for x in np.linspace(-VIEW_W / 2 + 1.5, VIEW_W / 2 - 1.5, 27) for y in np.linspace(-VIEW_H / 2 + 0.9, VIEW_H / 2 - 0.9, 15)]
 random.shuffle(spots)
 placed = []
 kinds = THEME.get("kinds") or (["statue"] * 2 + ["arch"] * 2 + ["brazier"] * 2 + ["crystals"] * 4 + ["pillar"] * 4 + ["broken"] * 6
                                + ["fallen"] * 3 + ["deadtree"] * 2 + ["tree"] * 2 + ["roots"] * 2 + ["mossrocks"] * 6 + ["boulder"] * 4 + ["stump"] * 2)
 kinds = list(kinds)
+kinds = kinds + random.sample(kinds, int(len(kinds) * 0.35))     # a third more props for the wider field
 for x, y in spots:
     if not kinds:
         break
     need = {"arch": 2.8, "deadtree": 2.6, "statue": 2.2, "mossrocks": 2.4, "roots": 2.2, "boulder": 2.0}.get(kinds[0], 1.7)
+    if math.hypot(x, y + 0.55) < 5.8:   # the intercept field around the inner ring stays open for the party
+        continue
     if not lane_clear(x, y, need) or any(math.hypot(x - px, y - py) < 2.4 for px, py in placed):
         continue
     kind = kinds.pop(0)
@@ -1358,7 +1376,7 @@ sc.collection.objects.link(so)
 light_dir = Vector((0.55, 0.62, -0.75)).normalized()
 so.rotation_euler = light_dir.to_track_quat("-Z", "Y").to_euler()
 crys = bpy.data.lights.new("CrystalLight", "POINT")
-crys.energy = 2200
+crys.energy = 2200 if "--painterly" in ARGS else 750   # toon bands blow a strong point light out to white
 crys.color = lin("#8fe3ff")[:3]
 crys.shadow_soft_size = 0.25
 crys.use_shadow = False          # its shadows from the lane-mouth steps would darken the roads radially
@@ -1374,161 +1392,6 @@ fo.location = (6, 26, 14)
 fo.rotation_euler = (-(fo.location - Vector((0, 0, 0)))).to_track_quat("-Z", "Y").to_euler()
 sc.collection.objects.link(fo)
 
-
-# ----------------------------------------------------------------------------------------------- toon (art bible v3)
-# Ravenswatch-like comic look: Cycles renders the passes, then the light is cut into three cel bands with cool
-# purple shadows and a warm lit tone, the albedo is flattened (Kuwahara) and pushed saturated, and Freestyle ink
-# lines go on top. Thresholds come from the lit-ground percentile, so every biome's sun strength bands the same way.
-TOON_SHADOW = (0.30, 0.27, 0.58)
-TOON_MID = (0.80, 0.78, 0.88)
-TOON_LIT = (1.10, 1.04, 0.90)
-INK = "#1b1226"
-# per-biome gradient map for the albedo (dark, mid, light) and how much of it replaces the scan's own colour
-TOON_RAMPS = {
-    "verdant_sanctuary": (("#2c3d2a", "#5f8c3e", "#e3cf9a"), 0.45),
-    "molten_crater": (("#2a1a1e", "#8a3a22", "#f0b060"), 0.55),
-    "frostfall_bastion": (("#2a3550", "#6f93c0", "#eaf2ff"), 0.55),
-    "shattered_aether": (("#2a1c48", "#7a4fb0", "#e6c8ff"), 0.55),
-    "stormspire_citadel": (("#232a3c", "#58708f", "#d8e0ea"), 0.5),
-    "sunken_archive": (("#14303a", "#2f7f86", "#d8e8d0"), 0.55),
-}
-
-
-def toon_setup():
-    sc.view_settings.view_transform = "Standard"
-    sc.view_settings.look = "None"
-    vl = sc.view_layers[0]
-    for attr in ("use_pass_diffuse_color", "use_pass_diffuse_direct", "use_pass_diffuse_indirect", "use_pass_glossy_direct",
-                 "use_pass_emit"):
-        setattr(vl, attr, True)
-    vl.use_pass_z = True
-    vl.use_pass_normal = True
-    vl.use_pass_object_index = True
-    sc.render.use_freestyle = False   # Freestyle's view map runs out of memory on this scene: ink comes from passes instead
-    i = 0
-    for o in sc.objects:
-        if o.type in ("MESH", "CURVE"):
-            i += 1
-            o.pass_index = i
-    # passes -> EXR files (the Kuwahara-flattened albedo is the painted base colour)
-    ct = sc.node_tree
-    for n_ in list(ct.nodes):
-        ct.nodes.remove(n_)
-    rl = ct.nodes.new("CompositorNodeRLayers")
-    kw = ct.nodes.new("CompositorNodeKuwahara")
-    try:
-        kw.variation = "ANISOTROPIC"
-    except Exception:  # noqa: BLE001
-        pass
-    if "Size" in kw.inputs:
-        kw.inputs["Size"].default_value = max(3, int(13 * SCALE))
-    elif hasattr(kw, "size"):
-        kw.size = max(3, int(13 * SCALE))
-    ct.links.new(rl.outputs["DiffCol"], kw.inputs["Image"])
-    fo_ = ct.nodes.new("CompositorNodeOutputFile")
-    fo_.base_path = os.path.join(OUT, "passes")
-    fo_.format.file_format = "OPEN_EXR"
-    fo_.format.color_depth = "32"
-    fo_.file_slots.clear()
-    for name, sock_ in (("albedo", kw.outputs["Image"]), ("diffdir", rl.outputs["DiffDir"]), ("diffind", rl.outputs["DiffInd"]),
-                        ("gloss", rl.outputs["GlossDir"]), ("emit", rl.outputs["Emit"]), ("depth", rl.outputs["Depth"]), ("normal", rl.outputs["Normal"]),
-                        ("index", rl.outputs["IndexOB"])):
-        fo_.file_slots.new(name)
-        ct.links.new(sock_, fo_.inputs[name])
-    comp_ = ct.nodes.new("CompositorNodeComposite")
-    ct.links.new(rl.outputs["Image"], comp_.inputs["Image"])
-
-
-def _load_pass(name):
-    d = os.path.join(OUT, "passes")
-    f = sorted(x for x in os.listdir(d) if x.startswith(name) and x.endswith(".exr"))[-1]
-    img = bpy.data.images.load(os.path.join(d, f))
-    img.colorspace_settings.name = "Non-Color"
-    a = np.empty(img.size[0] * img.size[1] * 4, np.float32)
-    img.pixels.foreach_get(a)
-    return a.reshape(img.size[1], img.size[0], 4)
-
-
-def _step(e0, e1, x):
-    t = np.clip((x - e0) / (e1 - e0), 0.0, 1.0)
-    return t * t * (3 - 2 * t)
-
-
-def _shift_max(m, r):
-    out = m.copy()
-    for dy in range(-r, r + 1):
-        for dx in range(-r, r + 1):
-            if dx * dx + dy * dy <= r * r + r:
-                out = np.maximum(out, np.roll(np.roll(m, dy, 0), dx, 1))
-    return out
-
-
-def ink_lines(depth, normal, index):
-    """Comic ink from passes: object-id and depth breaks (silhouettes) everywhere, normal breaks (creases) on props
-    only (the ground's bump would scribble), thickened to ~4 px at full size and softened one pixel for AA."""
-    def grad(a):
-        gx = np.abs(np.roll(a, -1, 1) - a)
-        gy = np.abs(np.roll(a, -1, 0) - a)
-        return np.maximum(gx, gy)
-    obj = (grad(index) > 0.5).astype(np.float32)
-    z = np.minimum(depth, 500.0)
-    dz = grad(z) / np.maximum(z, 1e-3)
-    sil = _step(0.008, 0.02, dz)
-    ground = index == (np.bincount(index.astype(np.int64).ravel()).argmax())
-    dn = 1.0 - np.einsum("ijk,ijk->ij", normal, np.roll(normal, -1, 1)).clip(-1, 1)
-    dn = np.maximum(dn, 1.0 - np.einsum("ijk,ijk->ij", normal, np.roll(normal, -1, 0)).clip(-1, 1))
-    crease = _step(0.6, 0.9, dn) * (~ground) * THEME.get("toon_crease", 0.0)   # creases off by default: displacement speckles
-    e = np.maximum(np.maximum(obj, sil), crease)
-    r = max(1, int(round(2 * SCALE)))
-    e = _shift_max(e, r)
-    e = (e + np.roll(e, 1, 0) + np.roll(e, -1, 0) + np.roll(e, 1, 1) + np.roll(e, -1, 1)) / 5.0
-    return np.clip(e * 1.15, 0, 1) * 0.92
-
-
-def toon_compose(dst):
-    alb, ddir, dind, gl, em, dep, nor, idx = (_load_pass(n) for n in ("albedo", "diffdir", "diffind", "gloss", "emit", "depth", "normal",
-                                                                      "index"))
-    W3 = np.array([0.2126, 0.7152, 0.0722], np.float32)
-    L = ddir[..., :3] @ W3
-    ref = float(np.percentile(L[L > 1e-3], 80)) if (L > 1e-3).any() else 1.0
-    d = L / max(ref, 1e-4)
-    s1, s2 = _step(0.17, 0.23, d)[..., None], _step(0.60, 0.68, d)[..., None]
-    S0, S1, S2 = (np.array(c, np.float32) for c in (TOON_SHADOW, TOON_MID, TOON_LIT))
-    light = S0 + (S1 - S0) * s1 + (S2 - S1) * s2
-    # coloured lights (braziers, crystal, lava) keep their hue inside the bands
-    chroma = ddir[..., :3] / np.maximum(L[..., None], 1e-4)
-    chroma = np.clip(chroma / np.maximum(chroma.max(-1, keepdims=True), 1e-4), 0, 1)
-    warmth = _step(0.9, 2.5, d)[..., None]
-    light = light * (1 - 0.6 * warmth + 0.6 * warmth * chroma) * (1 + 0.5 * warmth)
-    Li = dind[..., :3] @ W3
-    refi = float(np.percentile(Li[Li > 1e-4], 70)) if (Li > 1e-4).any() else 1.0
-    light *= (0.82 + 0.18 * np.clip(Li / max(refi, 1e-5), 0, 1))[..., None]
-    a = alb[..., :3]
-    lum = (a @ W3)[..., None]
-    a = np.clip(lum + (a - lum) * THEME.get("toon_sat", 1.85), 0, 1)
-    a *= THEME.get("toon_albedo", 0.23) / max(float((a @ W3).mean()), 1e-4)
-    ramp, amt = TOON_RAMPS.get(BIOME_ID, (("#303030", "#808080", "#d0d0d0"), 0.0))
-    if amt > 0:
-        la = (a @ W3)[..., None]
-        t = np.clip(la / max(float(np.percentile(la, 97)), 1e-4), 0, 1)
-        c0, c1, c2 = (np.array(lin(h)[:3], np.float32) for h in ramp)
-        g = np.where(t < 0.5, c0 + (c1 - c0) * (t / 0.5), c1 + (c2 - c1) * ((t - 0.5) / 0.5))
-        a = a * (1 - amt) + g * amt
-        a *= THEME.get("toon_albedo", 0.23) / max(float((a @ W3).mean()), 1e-4)
-    # light scans (cobbles, marble) would blow out to white: roll the top of the albedo off softly
-    la = (a @ W3)[..., None]
-    knee = 0.36
-    a *= np.where(la > knee, (knee + (la - knee) / (1 + 2.5 * (la - knee))) / np.maximum(la, 1e-4), 1.0)
-    col = a * light + em[..., :3] + 0.22 * gl[..., :3]
-    ia = ink_lines(dep[..., 0], nor[..., :3], idx[..., 0])[..., None]
-    col = col * (1 - ia) + lin(INK)[:3] * ia
-    out = np.concatenate([np.clip(col, 0, 64), np.ones_like(col[..., :1])], -1).astype(np.float32)
-    h, w = out.shape[:2]
-    img = bpy.data.images.new("toon", w, h, float_buffer=True, alpha=False)
-    img.colorspace_settings.name = "Linear Rec.709"
-    img.pixels.foreach_set(out.ravel())
-    img.save_render(dst, scene=sc)
-    print("TOON ref=%.4f ink=%.3f -> %s" % (ref, float((ia > 0.5).mean()), dst))
 
 # ----------------------------------------------------------------------------------------------- render
 sc.use_nodes = True
@@ -1564,9 +1427,12 @@ if "--clay" in ARGS:     # diagnostics: one grey material everywhere, to tell ge
     bpy.context.view_layer.material_override = clay
 TOON = "--painterly" not in ARGS and "--clay" not in ARGS
 if TOON:
-    toon_setup()
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import toon_pass  # noqa: E402
+    toon_pass.configure(scene=sc, out=OUT, scale=SCALE, theme=THEME, biome=BIOME_ID, alpha=False)
+    toon_pass.toon_setup()
     bpy.ops.render.render(write_still=False)
-    toon_compose(os.path.join(OUT, "flat_raw.png"))
+    toon_pass.toon_compose(os.path.join(OUT, "flat_raw.png"))
 else:
     sc.render.filepath = os.path.join(OUT, "flat_raw.png")
     bpy.ops.render.render(write_still=True)

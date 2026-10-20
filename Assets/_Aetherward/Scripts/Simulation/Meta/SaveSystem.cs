@@ -311,7 +311,7 @@ namespace Aetherward.Sim.Meta
                 .Set("bosses", BossMap(s.BossChoices)).Set("blocked", s.BlockedNode).Set("biome", s.BiomeId)
                 .Set("mode", s.Mode.ToString()).Set("daily", s.DailyKey).Set("modeMods", StringArray(s.ModeModifiers))
                 .Set("heroPool", StringArray(s.HeroPool)).Set("relicPool", StringArray(s.RelicPool))
-                .Set("menuSeconds", Math.Round(s.MenuSeconds, 1)).Set("tactic", s.Tactic.ToString())
+                .Set("menuSeconds", Math.Round(s.MenuSeconds, 1)).Set("tactic", s.Tactic.ToString()).Set("stance", s.Stance.ToString())
                 .Set("crystalPath", s.CrystalPath).Set("crystalEvo", s.CrystalEvolutionEnabled)
                 .Set("lock", s.LockedOffer == null ? JsonNode.NewObject() : JsonNode.NewObject().Set("kind", s.LockedOffer.Kind.ToString()).Set("id", s.LockedOffer.Id)
                     .Set("price", s.LockedOffer.Price).Set("trait", s.LockedOffer.TraitId));
@@ -424,6 +424,7 @@ namespace Aetherward.Sim.Meta
                 foreach (string r in d.StringList("relicPool")) if (db.Relics.ContainsKey(r)) s.RelicPool.Add(r);
                 s.MenuSeconds = d.Float("menuSeconds");
                 s.Tactic = Enum.TryParse(d.Str("tactic") ?? "Balanced", out Combat.TeamTactic tac) ? tac : Combat.TeamTactic.Balanced;
+                s.Stance = Enum.TryParse(d.Str("stance") ?? "Balanced", out Combat.PartyStance st) ? st : Combat.PartyStance.Balanced;
                 string cp = d.Str("crystalPath");
                 s.CrystalPath = Combat.CrystalPaths.IsValid(cp) ? cp : null;
                 s.CrystalEvolutionEnabled = d.Bool("crystalEvo", FeatureFlags.CrystalEvolution);

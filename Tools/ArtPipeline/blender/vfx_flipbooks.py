@@ -83,7 +83,7 @@ def render_frames(sc, name, start, step):
 def mantaflow(name, kind, color_fire="#ff6a1f", smoke_color="#3a3634", flame_rate=1.0, smoke_density=1.0, size=2.0,
               burst=6, res=128, start=4, step=2, temp=1.0, vorticity=0.45, fuel=1.0, blackbody=1.0, smoke_emit=0.0):
     """A short burst from a sphere emitter inside a gas domain; the emitter switches off after `burst` frames."""
-    sc = fresh_scene(size * 0.9)
+    sc = fresh_scene(size * (1.05 if kind == "fire" else 0.9))   # tall fire columns need headroom above the domain
     bpy.ops.mesh.primitive_cube_add(size=size, location=(0, 0, size * 0.42))
     dom = bpy.context.object
     mod = dom.modifiers.new("Fluid", "FLUID")

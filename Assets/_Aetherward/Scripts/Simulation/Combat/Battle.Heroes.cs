@@ -66,12 +66,13 @@ namespace Aetherward.Sim.Combat
                 h.SkillTimer = 0.2f; // nothing worth casting on; re-check shortly
             }
 
-            float leash = h.Stat(StatId.LeashRadius);
+            float leash = EffectiveLeash(h);
             if (h.Target != null)
             {
                 float reach = AttackReach(h, h.Target);
                 float dist = Vec2.Distance(h.Pos, h.Target.Pos);
                 h.Facing = (h.Target.Pos - h.Pos).Normalized;
+                if (h.AttackTimer > 0.15f && Kite(h, leash, dt)) return;
                 if (dist > reach)
                 {
                     if (h.Melee || leash > 0.3f)
@@ -96,7 +97,8 @@ namespace Aetherward.Sim.Combat
             {
                 if (Vec2.SqrDistance(h.Pos, h.Anchor) > 0.0025f)
                 {
-                    h.Pos = Vec2.MoveTowards(h.Pos, h.Anchor, h.Stat(StatId.MoveSpeed) * dt);
+                    if (Setup.DynamicParty) MoveHeroWithinLeash(h, h.Anchor, leash, dt);
+                    else h.Pos = Vec2.MoveTowards(h.Pos, h.Anchor, h.Stat(StatId.MoveSpeed) * dt);
                     h.State = HeroState.Return;
                 }
                 else h.State = HeroState.Idle;
@@ -127,7 +129,7 @@ namespace Aetherward.Sim.Combat
 
         private bool InAcquireRange(HeroUnit h, EnemyUnit e, float slack)
         {
-            float acquire = h.Stat(StatId.Range) + h.Stat(StatId.LeashRadius) + e.Radius;
+            float acquire = h.Stat(StatId.Range) + EffectiveLeash(h) + e.Radius;
             return Vec2.Distance(h.Anchor, e.Pos) <= acquire * slack;
         }
 
@@ -173,7 +175,7 @@ namespace Aetherward.Sim.Combat
 
         public EnemyUnit SelectTarget(HeroUnit h, TargetProfile profile, float extraRange)
         {
-            float range = h.Stat(StatId.Range) + h.Stat(StatId.LeashRadius) + extraRange;
+            float range = h.Stat(StatId.Range) + EffectiveLeash(h) + extraRange;
             List<EnemyUnit> c = RentList();
             QueryEnemies(h.Anchor, range, c);
             EnemyUnit best = null;
@@ -289,7 +291,7 @@ namespace Aetherward.Sim.Combat
         public bool CastSkill(HeroUnit h, float power, bool echo)
         {
             SkillDef s = h.Skill;
-            float range = h.Stat(StatId.Range) + h.Stat(StatId.LeashRadius) + s.Params.Get("rangeBonus", 0f);
+            float range = h.Stat(StatId.Range) + EffectiveLeash(h) + s.Params.Get("rangeBonus", 0f);
             Element el = h.Def.Element;
             float mult = s.Multiplier * power;
             bool cast = false;
@@ -687,7 +689,7 @@ namespace Aetherward.Sim.Combat
 
         private Vec2 ClampToLeash(HeroUnit h, Vec2 desired)
         {
-            float leash = h.Stat(StatId.LeashRadius);
+            float leash = EffectiveLeash(h);
             Vec2 off = desired - h.Anchor;
             if (off.Length > leash) desired = h.Anchor + off.Normalized * leash;
             float minC = Crystal.Radius + h.Radius;
@@ -732,7 +734,7 @@ namespace Aetherward.Sim.Combat
                     for (int i = 0; i < Heroes.Count; i++)
                     {
                         HeroUnit a = Heroes[i];
-                        if (a.Alive && Vec2.Distance(a.Anchor, h.Anchor) <= h.PassiveParams.Get("radius", 3.4f))
+                        if (a.Alive && FormationDistance(a, h) <= h.PassiveParams.Get("radius", 3.4f))
                             AddBuff(a, StatId.AttackInterval, h.PassiveParams.Get("haste", 0.12f), 99999f, "tailwind");
                     }
                     break;
@@ -740,7 +742,7 @@ namespace Aetherward.Sim.Combat
                     for (int i = 0; i < Heroes.Count; i++)
                     {
                         HeroUnit a = Heroes[i];
-                        if (a.Alive && a != h && Vec2.Distance(a.Anchor, h.Anchor) <= h.PassiveParams.Get("radius", 2.8f))
+                        if (a.Alive && a != h && FormationDistance(a, h) <= h.PassiveParams.Get("radius", 2.8f))
                             AddBuff(a, StatId.Defense, h.PassiveParams.Get("defensePct", 0.3f), 99999f, "bulwark");
                     }
                     break;

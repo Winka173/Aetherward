@@ -11,5 +11,7 @@ namespace Aetherward.Sim.Run
 
         /// <summary>Utility-scored basic-attack targeting (false = legacy per-profile targeting).</summary>
         public static bool UtilityTargeting = true;
+        /// <summary>Dynamic party posts (role + stance + threat). False = the legacy fixed-node anchors (benchmarks only).</summary>
+        public static bool DynamicParty = true;
     }
 }

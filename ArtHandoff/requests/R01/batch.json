@@ -1,0 +1,120 @@
+{
+ "_doc": "R01 = Ravenswatch-direction benchmark for the dynamic-party pivot (lead-written, 2026-10-21).",
+ "title": "R01 benchmark: 4 heroes (tank/mage/ranger/healer), 4 enemies, 1 elite, 1 boss, HUD concept",
+ "goal": "Lock the new comic-ink dark arcane style on a small set before any mass production.",
+ "priority": "P0",
+ "depends": "none (supersedes the B01 style lock)",
+ "styleRefs": [],
+ "notes": "See CODEX_ART_REQUEST.md: it overrides COMMON_CONTRACT section 2 (style) and adds walk frames.",
+ "groups": [
+  {
+   "id": "heroes",
+   "title": "Heroes",
+   "priority": "P0",
+   "required": true,
+   "assets": [
+    "Heroes/glacius_idle",
+    "Heroes/glacius_attack",
+    "Heroes/glacius_cast",
+    "Heroes/glacius_downed",
+    "Portraits/glacius",
+    "Heroes/ignis_idle",
+    "Heroes/ignis_attack",
+    "Heroes/ignis_cast",
+    "Heroes/ignis_downed",
+    "Portraits/ignis",
+    "Heroes/veyra_idle",
+    "Heroes/veyra_cast",
+    "Heroes/veyra_downed",
+    "Portraits/veyra",
+    "Heroes/marina_idle",
+    "Heroes/marina_attack",
+    "Heroes/marina_cast",
+    "Heroes/marina_downed",
+    "Portraits/marina"
+   ],
+   "new": [
+    {
+     "id": "Heroes/glacius_walk_a",
+     "like": "Heroes/glacius_idle"
+    },
+    {
+     "id": "Heroes/glacius_walk_b",
+     "like": "Heroes/glacius_idle"
+    },
+    {
+     "id": "Heroes/ignis_walk_a",
+     "like": "Heroes/ignis_idle"
+    },
+    {
+     "id": "Heroes/ignis_walk_b",
+     "like": "Heroes/ignis_idle"
+    },
+    {
+     "id": "Heroes/veyra_walk_a",
+     "like": "Heroes/veyra_idle"
+    },
+    {
+     "id": "Heroes/veyra_walk_b",
+     "like": "Heroes/veyra_idle"
+    },
+    {
+     "id": "Heroes/veyra_attack",
+     "like": "Heroes/veyra_idle"
+    },
+    {
+     "id": "Heroes/marina_walk_a",
+     "like": "Heroes/marina_idle"
+    },
+    {
+     "id": "Heroes/marina_walk_b",
+     "like": "Heroes/marina_idle"
+    }
+   ]
+  },
+  {
+   "id": "enemies",
+   "title": "Enemies, elite, boss",
+   "priority": "P0",
+   "required": true,
+   "assets": [
+    "Enemies/grunt_a",
+    "Enemies/grunt_b",
+    "Enemies/runner_a",
+    "Enemies/runner_b",
+    "Enemies/hexcaster_a",
+    "Enemies/hexcaster_b",
+    "Enemies/juggernaut_a",
+    "Enemies/juggernaut_b",
+    "Enemies/ravager_a",
+    "Enemies/ravager_b",
+    "Enemies/rift_warden_a",
+    "Enemies/rift_warden_b",
+    "Enemies/rift_warden_tell",
+    "Enemies/rift_warden_attack"
+   ],
+   "new": [
+    {
+     "id": "Enemies/grunt_attack",
+     "like": "Enemies/grunt_a"
+    },
+    {
+     "id": "Enemies/runner_attack",
+     "like": "Enemies/runner_a"
+    },
+    {
+     "id": "Enemies/hexcaster_attack",
+     "like": "Enemies/hexcaster_a"
+    },
+    {
+     "id": "Enemies/juggernaut_attack",
+     "like": "Enemies/juggernaut_a"
+    },
+    {
+     "id": "Enemies/ravager_attack",
+     "like": "Enemies/ravager_a"
+    }
+   ]
+  }
+ ]
+}

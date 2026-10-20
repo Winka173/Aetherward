@@ -220,6 +220,21 @@ namespace Aetherward.Game
         }
 
         /// <summary>Team tactic chips (soft targeting weights); shown on the prepare screen, persisted in the run.</summary>
+        /// <summary>Party stance (dynamic party): how far from the Crystal the heroes fight this wave.</summary>
+        private void DrawStancePicker(float x, float y)
+        {
+            RunState s = _rc.State;
+            Ui.Label(x, y, 740, 30, L.Get("stance.label") + ": " + L.Get("stance." + s.Stance.ToString().ToLowerInvariant() + ".desc"), 18, Ui.Muted, TextAnchor.UpperLeft);
+            var values = (PartyStance[])System.Enum.GetValues(typeof(PartyStance));
+            for (int i = 0; i < values.Length; i++)
+            {
+                PartyStance t = values[i];
+                if (Ui.Button(x + i * 190, y + 32, 180, 56, L.Get("stance." + t.ToString().ToLowerInvariant()), s.Stance == t ? Tone.Primary : Tone.Ghost, true, 17))
+                    s.Stance = t;
+            }
+            Block(x, y, values.Length * 190, 90);
+        }
+
         private void DrawTacticPicker(float x, float y)
         {
             RunState s = _rc.State;
@@ -312,6 +327,7 @@ namespace Aetherward.Game
         private void DrawPrepare()
         {
             RunState s = _rc.State;
+            DrawStancePicker(Ui.W / 2 - 370, Ui.H - 360);
             DrawTacticPicker(Ui.W / 2 - 370, Ui.H - 260);
             if (Ui.Button(Ui.W / 2 + 400, Ui.H - 228, 190, 56, L.Get("synergy.toggle"), App.Settings.SynergyVision ? Tone.Secondary : Tone.Ghost, true, 16))
             {

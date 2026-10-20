@@ -20,7 +20,7 @@ namespace Aetherward.Sim.Combat
                 for (int i = 0; i < Heroes.Count; i++)
                 {
                     HeroUnit a = Heroes[i];
-                    if (a.Alive && Vec2.Distance(a.Anchor, h.Anchor) <= b.Get("allyRadius", 3f))
+                    if (a.Alive && FormationDistance(a, h) <= b.Get("allyRadius", 3f))
                         AddBuff(a, StatId.AttackInterval, haste, 99999f, "trait_tactician");
                 }
         }

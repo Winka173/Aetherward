@@ -60,7 +60,7 @@ namespace Aetherward.Sim.Combat
         private EnemyUnit SelectTargetUtility(HeroUnit h)
         {
             TargetDecision d = h.Decision ?? (h.Decision = new TargetDecision());
-            float range = h.Stat(StatId.Range) + h.Stat(StatId.LeashRadius);
+            float range = h.Stat(StatId.Range) + EffectiveLeash(h);
             List<EnemyUnit> c = RentList();
             QueryEnemies(h.Anchor, range, c);
             // Deterministic candidate order: by uid (grid query order depends on cell layout).

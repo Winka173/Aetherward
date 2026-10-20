@@ -1,0 +1,1483 @@
+{
+ "batch": "R01",
+ "generatedBy": "Tools/ArtPipeline/handoff.py request",
+ "camera": null,
+ "groups": [
+  {
+   "id": "heroes",
+   "title": "Heroes",
+   "priority": "P0",
+   "required": true,
+   "assets": [
+    {
+     "id": "Heroes/glacius_idle",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/glacius_idle.png",
+     "size": [
+      512,
+      512
+     ],
+     "mode": "RGBA",
+     "ppu": 256,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "b9855b2c048662731817030234ec1b38",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.Ui.cs:592",
+      "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:193",
+      "Assets/_Aetherward/Scripts/Unity/Menu/MenuController.Training.cs:39",
+      "Assets/_Aetherward/Scripts/Unity/Menu/MenuController.cs:61",
+      "Assets/_Aetherward/Scripts/Unity/UI/SharedPanels.cs:111"
+     ],
+     "footRowFromTop": 476,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/glacius_idle.png",
+     "guide": "ArtHandoff/requests/R01/references/guides/unit__Heroes__glacius_idle.png"
+    },
+    {
+     "id": "Heroes/glacius_attack",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/glacius_attack.png",
+     "size": [
+      512,
+      512
+     ],
+     "mode": "RGBA",
+     "ppu": 256,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "0026c971a2c7a312e4010debf703b043",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:196"
+     ],
+     "footRowFromTop": 476,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/glacius_attack.png",
+     "guide": "ArtHandoff/requests/R01/references/guides/unit__Heroes__glacius_attack.png"
+    },
+    {
+     "id": "Heroes/glacius_cast",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/glacius_cast.png",
+     "size": [
+      512,
+      512
+     ],
+     "mode": "RGBA",
+     "ppu": 256,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "8606b1f5e2bb247f9390d1d17d8a3fe4",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:194"
+     ],
+     "footRowFromTop": 476,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/glacius_cast.png",
+     "guide": "ArtHandoff/requests/R01/references/guides/unit__Heroes__glacius_cast.png"
+    },
+    {
+     "id": "Heroes/glacius_downed",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/glacius_downed.png",
+     "size": [
+      512,
+      512
+     ],
+     "mode": "RGBA",
+     "ppu": 256,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "dbb577fcf0eea13a478c23efae523612",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:195"
+     ],
+     "footRowFromTop": 476,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/glacius_downed.png",
+     "guide": "ArtHandoff/requests/R01/references/guides/unit__Heroes__glacius_downed.png"
+    },
+    {
+     "id": "Portraits/glacius",
+     "livePath": "Assets/_Aetherward/Resources/Art/Portraits/glacius.png",
+     "size": [
+      192,
+      192
+     ],
+     "mode": "RGBA",
+     "ppu": 100,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.92,
+      1.92
+     ],
+     "guid": "f39cb414d402e5ba2120eb8a00fed202",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Portraits/glacius.png"
+    },
+    {
+     "id": "Heroes/ignis_idle",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/ignis_idle.png",
+     "size": [
+      512,
+      512
+     ],
+     "mode": "RGBA",
+     "ppu": 256,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "30a3fce5aea1f241af2ff712d8b63aeb",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.Ui.cs:592",
+      "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:193",
+      "Assets/_Aetherward/Scripts/Unity/Menu/MenuController.Training.cs:39",
+      "Assets/_Aetherward/Scripts/Unity/Menu/MenuController.cs:61",
+      "Assets/_Aetherward/Scripts/Unity/UI/SharedPanels.cs:111"
+     ],
+     "footRowFromTop": 476,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/ignis_idle.png",
+     "guide": "ArtHandoff/requests/R01/references/guides/unit__Heroes__ignis_idle.png"
+    },
+    {
+     "id": "Heroes/ignis_attack",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/ignis_attack.png",
+     "size": [
+      512,
+      512
+     ],
+     "mode": "RGBA",
+     "ppu": 256,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "1309066131c5631a9ad736acb10b9726",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:196"
+     ],
+     "footRowFromTop": 476,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/ignis_attack.png",
+     "guide": "ArtHandoff/requests/R01/references/guides/unit__Heroes__ignis_attack.png"
+    },
+    {
+     "id": "Heroes/ignis_cast",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/ignis_cast.png",
+     "size": [
+      512,
+      512
+     ],
+     "mode": "RGBA",
+     "ppu": 256,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "d3010e160ed1b79ab321c78ee831d7ca",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:194"
+     ],
+     "footRowFromTop": 476,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/ignis_cast.png",
+     "guide": "ArtHandoff/requests/R01/references/guides/unit__Heroes__ignis_cast.png"
+    },
+    {
+     "id": "Heroes/ignis_downed",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/ignis_downed.png",
+     "size": [
+      512,
+      512
+     ],
+     "mode": "RGBA",
+     "ppu": 256,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "01720eca4b6a578d74e1b033a290dbe8",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:195"
+     ],
+     "footRowFromTop": 476,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/ignis_downed.png",
+     "guide": "ArtHandoff/requests/R01/references/guides/unit__Heroes__ignis_downed.png"
+    },
+    {
+     "id": "Portraits/ignis",
+     "livePath": "Assets/_Aetherward/Resources/Art/Portraits/ignis.png",
+     "size": [
+      192,
+      192
+     ],
+     "mode": "RGBA",
+     "ppu": 100,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.92,
+      1.92
+     ],
+     "guid": "29f52de739200c6826601d1e1d8c59d3",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Portraits/ignis.png"
+    },
+    {
+     "id": "Heroes/veyra_idle",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/veyra_idle.png",
+     "size": [
+      512,
+      512
+     ],
+     "mode": "RGBA",
+     "ppu": 256,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "50f19e19b5a6333a5f09113c3124af9b",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.Ui.cs:592",
+      "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:193",
+      "Assets/_Aetherward/Scripts/Unity/Menu/MenuController.Training.cs:39",
+      "Assets/_Aetherward/Scripts/Unity/Menu/MenuController.cs:61",
+      "Assets/_Aetherward/Scripts/Unity/UI/SharedPanels.cs:111"
+     ],
+     "footRowFromTop": 476,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/veyra_idle.png",
+     "guide": "ArtHandoff/requests/R01/references/guides/unit__Heroes__veyra_idle.png"
+    },
+    {
+     "id": "Heroes/veyra_cast",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/veyra_cast.png",
+     "size": [
+      512,
+      512
+     ],
+     "mode": "RGBA",
+     "ppu": 256,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "ba7cfe0dd1fb051a6b99fbe41510dfe0",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:194"
+     ],
+     "footRowFromTop": 476,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/veyra_cast.png",
+     "guide": "ArtHandoff/requests/R01/references/guides/unit__Heroes__veyra_cast.png"
+    },
+    {
+     "id": "Heroes/veyra_downed",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/veyra_downed.png",
+     "size": [
+      512,
+      512
+     ],
+     "mode": "RGBA",
+     "ppu": 256,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "723ae87429895bc26b768fba7c1e962a",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:195"
+     ],
+     "footRowFromTop": 476,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/veyra_downed.png",
+     "guide": "ArtHandoff/requests/R01/references/guides/unit__Heroes__veyra_downed.png"
+    },
+    {
+     "id": "Portraits/veyra",
+     "livePath": "Assets/_Aetherward/Resources/Art/Portraits/veyra.png",
+     "size": [
+      192,
+      192
+     ],
+     "mode": "RGBA",
+     "ppu": 100,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.92,
+      1.92
+     ],
+     "guid": "bb7aef4b869345bea6e0c2c51155e778",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Portraits/veyra.png"
+    },
+    {
+     "id": "Heroes/marina_idle",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/marina_idle.png",
+     "size": [
+      512,
+      512
+     ],
+     "mode": "RGBA",
+     "ppu": 256,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "dcb20a76918e366e76b744f3a1d62ff3",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.Ui.cs:592",
+      "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:193",
+      "Assets/_Aetherward/Scripts/Unity/Menu/MenuController.Training.cs:39",
+      "Assets/_Aetherward/Scripts/Unity/Menu/MenuController.cs:61",
+      "Assets/_Aetherward/Scripts/Unity/UI/SharedPanels.cs:111"
+     ],
+     "footRowFromTop": 476,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/marina_idle.png",
+     "guide": "ArtHandoff/requests/R01/references/guides/unit__Heroes__marina_idle.png"
+    },
+    {
+     "id": "Heroes/marina_attack",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/marina_attack.png",
+     "size": [
+      512,
+      512
+     ],
+     "mode": "RGBA",
+     "ppu": 256,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "09bb81dda4cce9f19dbac04a1d8a1ad9",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:196"
+     ],
+     "footRowFromTop": 476,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/marina_attack.png",
+     "guide": "ArtHandoff/requests/R01/references/guides/unit__Heroes__marina_attack.png"
+    },
+    {
+     "id": "Heroes/marina_cast",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/marina_cast.png",
+     "size": [
+      512,
+      512
+     ],
+     "mode": "RGBA",
+     "ppu": 256,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "2a7fe6af5a10b9d23188d4176fb8733d",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:194"
+     ],
+     "footRowFromTop": 476,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/marina_cast.png",
+     "guide": "ArtHandoff/requests/R01/references/guides/unit__Heroes__marina_cast.png"
+    },
+    {
+     "id": "Heroes/marina_downed",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/marina_downed.png",
+     "size": [
+      512,
+      512
+     ],
+     "mode": "RGBA",
+     "ppu": 256,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": "5edc5112c0c12b55bcc62b02de379547",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:195"
+     ],
+     "footRowFromTop": 476,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/marina_downed.png",
+     "guide": "ArtHandoff/requests/R01/references/guides/unit__Heroes__marina_downed.png"
+    },
+    {
+     "id": "Portraits/marina",
+     "livePath": "Assets/_Aetherward/Resources/Art/Portraits/marina.png",
+     "size": [
+      192,
+      192
+     ],
+     "mode": "RGBA",
+     "ppu": 100,
+     "pivot": [
+      0.5,
+      0.5
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.92,
+      1.92
+     ],
+     "guid": "dea0054064d8734f446f30ac21bc9c02",
+     "codeRefs": [],
+     "currentReference": "Assets/_Aetherward/Resources/Art/Portraits/marina.png"
+    },
+    {
+     "id": "Heroes/glacius_walk_a",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/glacius_walk_a.png",
+     "size": [
+      512,
+      512
+     ],
+     "mode": "RGBA",
+     "ppu": 256,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 476,
+     "new": true,
+     "like": "Heroes/glacius_idle",
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/glacius_idle.png",
+     "guide": "ArtHandoff/requests/R01/references/guides/unit__Heroes__glacius_walk_a.png"
+    },
+    {
+     "id": "Heroes/glacius_walk_b",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/glacius_walk_b.png",
+     "size": [
+      512,
+      512
+     ],
+     "mode": "RGBA",
+     "ppu": 256,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 476,
+     "new": true,
+     "like": "Heroes/glacius_idle",
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/glacius_idle.png",
+     "guide": "ArtHandoff/requests/R01/references/guides/unit__Heroes__glacius_walk_b.png"
+    },
+    {
+     "id": "Heroes/ignis_walk_a",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/ignis_walk_a.png",
+     "size": [
+      512,
+      512
+     ],
+     "mode": "RGBA",
+     "ppu": 256,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 476,
+     "new": true,
+     "like": "Heroes/ignis_idle",
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/ignis_idle.png",
+     "guide": "ArtHandoff/requests/R01/references/guides/unit__Heroes__ignis_walk_a.png"
+    },
+    {
+     "id": "Heroes/ignis_walk_b",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/ignis_walk_b.png",
+     "size": [
+      512,
+      512
+     ],
+     "mode": "RGBA",
+     "ppu": 256,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 476,
+     "new": true,
+     "like": "Heroes/ignis_idle",
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/ignis_idle.png",
+     "guide": "ArtHandoff/requests/R01/references/guides/unit__Heroes__ignis_walk_b.png"
+    },
+    {
+     "id": "Heroes/veyra_walk_a",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/veyra_walk_a.png",
+     "size": [
+      512,
+      512
+     ],
+     "mode": "RGBA",
+     "ppu": 256,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 476,
+     "new": true,
+     "like": "Heroes/veyra_idle",
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/veyra_idle.png",
+     "guide": "ArtHandoff/requests/R01/references/guides/unit__Heroes__veyra_walk_a.png"
+    },
+    {
+     "id": "Heroes/veyra_walk_b",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/veyra_walk_b.png",
+     "size": [
+      512,
+      512
+     ],
+     "mode": "RGBA",
+     "ppu": 256,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 476,
+     "new": true,
+     "like": "Heroes/veyra_idle",
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/veyra_idle.png",
+     "guide": "ArtHandoff/requests/R01/references/guides/unit__Heroes__veyra_walk_b.png"
+    },
+    {
+     "id": "Heroes/veyra_attack",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/veyra_attack.png",
+     "size": [
+      512,
+      512
+     ],
+     "mode": "RGBA",
+     "ppu": 256,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 476,
+     "new": true,
+     "like": "Heroes/veyra_idle",
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/veyra_idle.png",
+     "guide": "ArtHandoff/requests/R01/references/guides/unit__Heroes__veyra_attack.png"
+    },
+    {
+     "id": "Heroes/marina_walk_a",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/marina_walk_a.png",
+     "size": [
+      512,
+      512
+     ],
+     "mode": "RGBA",
+     "ppu": 256,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 476,
+     "new": true,
+     "like": "Heroes/marina_idle",
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/marina_idle.png",
+     "guide": "ArtHandoff/requests/R01/references/guides/unit__Heroes__marina_walk_a.png"
+    },
+    {
+     "id": "Heroes/marina_walk_b",
+     "livePath": "Assets/_Aetherward/Resources/Art/Heroes/marina_walk_b.png",
+     "size": [
+      512,
+      512
+     ],
+     "mode": "RGBA",
+     "ppu": 256,
+     "pivot": [
+      0.5,
+      0.07
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      2.0,
+      2.0
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 476,
+     "new": true,
+     "like": "Heroes/marina_idle",
+     "currentReference": "Assets/_Aetherward/Resources/Art/Heroes/marina_idle.png",
+     "guide": "ArtHandoff/requests/R01/references/guides/unit__Heroes__marina_walk_b.png"
+    }
+   ]
+  },
+  {
+   "id": "enemies",
+   "title": "Enemies, elite, boss",
+   "priority": "P0",
+   "required": true,
+   "assets": [
+    {
+     "id": "Enemies/grunt_a",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/grunt_a.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "625ec6bd6dfed225774551967bdfc776",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.Ui.cs:349",
+      "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:210",
+      "Assets/_Aetherward/Scripts/Unity/Menu/MenuController.cs:336"
+     ],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/grunt_a.png",
+     "guide": "ArtHandoff/requests/R01/references/guides/unit__Enemies__grunt_a.png"
+    },
+    {
+     "id": "Enemies/grunt_b",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/grunt_b.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "25571fef22e68de284a0289f78b5e463",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:211"
+     ],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/grunt_b.png",
+     "guide": "ArtHandoff/requests/R01/references/guides/unit__Enemies__grunt_b.png"
+    },
+    {
+     "id": "Enemies/runner_a",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/runner_a.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "c6387356a9c93228a974009ccf926d30",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.Ui.cs:349",
+      "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:210",
+      "Assets/_Aetherward/Scripts/Unity/Menu/MenuController.cs:336"
+     ],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/runner_a.png",
+     "guide": "ArtHandoff/requests/R01/references/guides/unit__Enemies__runner_a.png"
+    },
+    {
+     "id": "Enemies/runner_b",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/runner_b.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "0bc479415541e9c6ea8b50a1752e3a00",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:211"
+     ],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/runner_b.png",
+     "guide": "ArtHandoff/requests/R01/references/guides/unit__Enemies__runner_b.png"
+    },
+    {
+     "id": "Enemies/hexcaster_a",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/hexcaster_a.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "2a23d3d03dbb88c3feddc0839737b205",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.Ui.cs:349",
+      "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:210",
+      "Assets/_Aetherward/Scripts/Unity/Menu/MenuController.cs:336"
+     ],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/hexcaster_a.png",
+     "guide": "ArtHandoff/requests/R01/references/guides/unit__Enemies__hexcaster_a.png"
+    },
+    {
+     "id": "Enemies/hexcaster_b",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/hexcaster_b.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "878ce9651f8f6bb07c9f35d9f073a09f",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:211"
+     ],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/hexcaster_b.png",
+     "guide": "ArtHandoff/requests/R01/references/guides/unit__Enemies__hexcaster_b.png"
+    },
+    {
+     "id": "Enemies/juggernaut_a",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/juggernaut_a.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "cf711966edd63c2f7d5ecf6894108308",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.Ui.cs:349",
+      "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:210",
+      "Assets/_Aetherward/Scripts/Unity/Menu/MenuController.cs:336"
+     ],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/juggernaut_a.png",
+     "guide": "ArtHandoff/requests/R01/references/guides/unit__Enemies__juggernaut_a.png"
+    },
+    {
+     "id": "Enemies/juggernaut_b",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/juggernaut_b.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "4972650484b903db2bc34e66ae69111d",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:211"
+     ],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/juggernaut_b.png",
+     "guide": "ArtHandoff/requests/R01/references/guides/unit__Enemies__juggernaut_b.png"
+    },
+    {
+     "id": "Enemies/ravager_a",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/ravager_a.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "fcf22ed52ab414fd2cc467b841ee5e03",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.Ui.cs:349",
+      "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:210",
+      "Assets/_Aetherward/Scripts/Unity/Menu/MenuController.cs:336"
+     ],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/ravager_a.png",
+     "guide": "ArtHandoff/requests/R01/references/guides/unit__Enemies__ravager_a.png"
+    },
+    {
+     "id": "Enemies/ravager_b",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/ravager_b.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": "347c6e4f4c7fd06f73a66cf136189682",
+     "codeRefs": [
+      "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:211"
+     ],
+     "footRowFromTop": 236,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/ravager_b.png",
+     "guide": "ArtHandoff/requests/R01/references/guides/unit__Enemies__ravager_b.png"
+    },
+    {
+     "id": "Enemies/rift_warden_a",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/rift_warden_a.png",
+     "size": [
+      512,
+      512
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.05078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      3.2,
+      3.2
+     ],
+     "guid": "c78a0e229b6eee0845aa9e62f255b34e",
+     "codeRefs": [],
+     "footRowFromTop": 486,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/rift_warden_a.png",
+     "guide": "ArtHandoff/requests/R01/references/guides/unit__Enemies__rift_warden_a.png"
+    },
+    {
+     "id": "Enemies/rift_warden_b",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/rift_warden_b.png",
+     "size": [
+      512,
+      512
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.05078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      3.2,
+      3.2
+     ],
+     "guid": "6273f55510dc0191006588876c29fd30",
+     "codeRefs": [],
+     "footRowFromTop": 486,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/rift_warden_b.png",
+     "guide": "ArtHandoff/requests/R01/references/guides/unit__Enemies__rift_warden_b.png"
+    },
+    {
+     "id": "Enemies/rift_warden_tell",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/rift_warden_tell.png",
+     "size": [
+      512,
+      512
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.05078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      3.2,
+      3.2
+     ],
+     "guid": "b692a7c75171208dd95f10f973d007be",
+     "codeRefs": [],
+     "footRowFromTop": 486,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/rift_warden_tell.png",
+     "guide": "ArtHandoff/requests/R01/references/guides/unit__Enemies__rift_warden_tell.png"
+    },
+    {
+     "id": "Enemies/rift_warden_attack",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/rift_warden_attack.png",
+     "size": [
+      512,
+      512
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.05078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      3.2,
+      3.2
+     ],
+     "guid": "cf4f931c07dd23b3f566c617131acdce",
+     "codeRefs": [],
+     "footRowFromTop": 486,
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/rift_warden_attack.png",
+     "guide": "ArtHandoff/requests/R01/references/guides/unit__Enemies__rift_warden_attack.png"
+    },
+    {
+     "id": "Enemies/grunt_attack",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/grunt_attack.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "new": true,
+     "like": "Enemies/grunt_a",
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/grunt_a.png",
+     "guide": "ArtHandoff/requests/R01/references/guides/unit__Enemies__grunt_attack.png"
+    },
+    {
+     "id": "Enemies/runner_attack",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/runner_attack.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "new": true,
+     "like": "Enemies/runner_a",
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/runner_a.png",
+     "guide": "ArtHandoff/requests/R01/references/guides/unit__Enemies__runner_attack.png"
+    },
+    {
+     "id": "Enemies/hexcaster_attack",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/hexcaster_attack.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "new": true,
+     "like": "Enemies/hexcaster_a",
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/hexcaster_a.png",
+     "guide": "ArtHandoff/requests/R01/references/guides/unit__Enemies__hexcaster_attack.png"
+    },
+    {
+     "id": "Enemies/juggernaut_attack",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/juggernaut_attack.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "new": true,
+     "like": "Enemies/juggernaut_a",
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/juggernaut_a.png",
+     "guide": "ArtHandoff/requests/R01/references/guides/unit__Enemies__juggernaut_attack.png"
+    },
+    {
+     "id": "Enemies/ravager_attack",
+     "livePath": "Assets/_Aetherward/Resources/Art/Enemies/ravager_attack.png",
+     "size": [
+      256,
+      256
+     ],
+     "mode": "RGBA",
+     "ppu": 160,
+     "pivot": [
+      0.5,
+      0.078125
+     ],
+     "border": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "worldSize": [
+      1.6,
+      1.6
+     ],
+     "guid": null,
+     "codeRefs": [],
+     "footRowFromTop": 236,
+     "new": true,
+     "like": "Enemies/ravager_a",
+     "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/ravager_a.png",
+     "guide": "ArtHandoff/requests/R01/references/guides/unit__Enemies__ravager_attack.png"
+    }
+   ]
+  }
+ ],
+ "assetCount": 47
+}

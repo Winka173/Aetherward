@@ -86,6 +86,10 @@ namespace Aetherward.Sim.Combat
     /// <summary>Per-battle aggregated statistics consumed by the run results.</summary>
     public sealed class BattleStats
     {
+        /// <summary>Total distance walked by heroes (party liveliness benchmark).</summary>
+        public float HeroTravel;
+        /// <summary>Enemy hits on the Crystal and the damage they did.</summary>
+        public int CrystalHits;
         public readonly Dictionary<string, int> ReactionCounts = new Dictionary<string, int>();
         public readonly Dictionary<string, float> ReactionDamage = new Dictionary<string, float>();
         public readonly Dictionary<string, int> SourceActivations = new Dictionary<string, int>();

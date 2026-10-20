@@ -1839,6 +1839,22 @@
   "ppu": 160,
   "sprite": true
  },
+ "Assets/_Aetherward/Resources/Art/Enemies/grunt_attack.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
  "Assets/_Aetherward/Resources/Art/Enemies/grunt_b.png": {
   "border": [
    0,
@@ -1888,6 +1904,22 @@
   "sprite": true
  },
  "Assets/_Aetherward/Resources/Art/Enemies/hexcaster_a.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Enemies/hexcaster_attack.png": {
   "border": [
    0,
    0,
@@ -2112,6 +2144,22 @@
   "sprite": true
  },
  "Assets/_Aetherward/Resources/Art/Enemies/juggernaut_a.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Enemies/juggernaut_attack.png": {
   "border": [
    0,
    0,
@@ -2383,6 +2431,22 @@
   "ppu": 160,
   "sprite": true
  },
+ "Assets/_Aetherward/Resources/Art/Enemies/ravager_attack.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
  "Assets/_Aetherward/Resources/Art/Enemies/ravager_b.png": {
   "border": [
    0,
@@ -2560,6 +2624,22 @@
   "sprite": true
  },
  "Assets/_Aetherward/Resources/Art/Enemies/runner_a.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.078125
+  ],
+  "ppu": 160,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Enemies/runner_attack.png": {
   "border": [
    0,
    0,
@@ -4591,6 +4671,38 @@
   "ppu": 256,
   "sprite": true
  },
+ "Assets/_Aetherward/Resources/Art/Heroes/glacius_walk_a.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.07
+  ],
+  "ppu": 256,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/glacius_walk_b.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.07
+  ],
+  "ppu": 256,
+  "sprite": true
+ },
  "Assets/_Aetherward/Resources/Art/Heroes/ignis_attack.png": {
   "border": [
    0,
@@ -4736,6 +4848,38 @@
   "sprite": true
  },
  "Assets/_Aetherward/Resources/Art/Heroes/ignis_idle.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.07
+  ],
+  "ppu": 256,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/ignis_walk_a.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.07
+  ],
+  "ppu": 256,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/ignis_walk_b.png": {
   "border": [
    0,
    0,
@@ -5504,6 +5648,38 @@
   "sprite": true
  },
  "Assets/_Aetherward/Resources/Art/Heroes/marina_idle.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.07
+  ],
+  "ppu": 256,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/marina_walk_a.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.07
+  ],
+  "ppu": 256,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/marina_walk_b.png": {
   "border": [
    0,
    0,
@@ -7327,6 +7503,22 @@
   "ppu": 256,
   "sprite": true
  },
+ "Assets/_Aetherward/Resources/Art/Heroes/veyra_attack.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.07
+  ],
+  "ppu": 256,
+  "sprite": true
+ },
  "Assets/_Aetherward/Resources/Art/Heroes/veyra_cast.png": {
   "border": [
    0,
@@ -7424,6 +7616,38 @@
   "sprite": true
  },
  "Assets/_Aetherward/Resources/Art/Heroes/veyra_idle.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.07
+  ],
+  "ppu": 256,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/veyra_walk_a.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.07
+  ],
+  "ppu": 256,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Heroes/veyra_walk_b.png": {
   "border": [
    0,
    0,
@@ -12319,6 +12543,102 @@
   "ppu": 160,
   "sprite": true
  },
+ "Assets/_Aetherward/Resources/Art/Vfx/fb_fire_burst.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 167.869,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Vfx/fb_lightning_arc.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 213.333,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Vfx/fb_rift_mist.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 316.049,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Vfx/fb_smoke_puff.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 316.049,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Vfx/fb_steam_burst.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 284.444,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Vfx/fb_water_splash.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 232.727,
+  "sprite": true
+ },
  "Assets/_Aetherward/Resources/Art/Vfx/field_blight_garden.png": {
   "border": [
    0,
@@ -13516,7 +13836,7 @@
    0.5,
    0.5
   ],
-  "ppu": 120.471,
+  "ppu": 102.4,
   "sprite": true
  },
  "Assets/_Aetherward/Resources/Art/World/bg_frostfall_bastion.png": {
@@ -13532,7 +13852,7 @@
    0.5,
    0.5
   ],
-  "ppu": 120.471,
+  "ppu": 102.4,
   "sprite": true
  },
  "Assets/_Aetherward/Resources/Art/World/bg_molten_crater.png": {
@@ -13548,7 +13868,7 @@
    0.5,
    0.5
   ],
-  "ppu": 120.471,
+  "ppu": 102.4,
   "sprite": true
  },
  "Assets/_Aetherward/Resources/Art/World/bg_shattered_aether.png": {
@@ -13564,7 +13884,7 @@
    0.5,
    0.5
   ],
-  "ppu": 120.471,
+  "ppu": 102.4,
   "sprite": true
  },
  "Assets/_Aetherward/Resources/Art/World/bg_stormspire_citadel.png": {
@@ -13580,7 +13900,7 @@
    0.5,
    0.5
   ],
-  "ppu": 120.471,
+  "ppu": 102.4,
   "sprite": true
  },
  "Assets/_Aetherward/Resources/Art/World/bg_sunken_archive.png": {
@@ -13596,7 +13916,7 @@
    0.5,
    0.5
   ],
-  "ppu": 120.471,
+  "ppu": 102.4,
   "sprite": true
  },
  "Assets/_Aetherward/Resources/Art/World/crystal_cracked.png": {

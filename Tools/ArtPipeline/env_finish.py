@@ -4,7 +4,7 @@
   python Tools/ArtPipeline/env_finish.py --render ArtCache/Env/verdant --asset World/arena_background \
       --out ArtCache/Override [--target-mean 0.16]
 
-- Grades the 16-bit render with one gamma so the mean luminance of the 16:9 view (26.7 x 15 of the 34 x 19.2 units)
+- Grades the 16-bit render with one gamma so the mean luminance of the 16:9 view (34.1 x 19.2 of the 40 x 20 units)
   hits --target-mean (art bible: ground value 15-45 %, battlefield mean ~0.16, units must read lighter).
 - Writes <out>/<asset>.png (RGB), the sidecar <asset>.png.json {"ppu": ...} (new 2K contract) and <out>/<asset>_env.json
   (shadow light, glow positions, edge colour) that EnvironmentFx reads; prints the measured values.
@@ -76,7 +76,7 @@ def main():
     H, W = img.shape[:2]
     vw, vh = meta["camera"]["viewUnits"]
     ppu = W / vw
-    cx, cy, hw, hh = W / 2, H / 2, 26.67 / 2 * ppu, 15.0 / 2 * ppu
+    cx, cy, hw, hh = W / 2, H / 2, 34.1 / 2 * ppu, 19.2 / 2 * ppu      # the dynamic-party camera view (ortho 9.6)
     view = img[int(cy - hh):int(cy + hh), int(cx - hw):int(cx + hw)]
     before = float(lum(view).mean())
     # one gamma that maps the view mean to the target (searched, since the mean of a power is not the power of the mean)

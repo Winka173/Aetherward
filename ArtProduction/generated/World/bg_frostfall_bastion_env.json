@@ -5,21 +5,23 @@
  ],
  "shadowLengthPerHeight": 0.8947,
  "braziersFlat": [
-  -12.682,
-  -0.565,
-  11.273,
-  10.927,
-  7.045,
-  -8.647
+  11.385,
+  6.089,
+  -4.269,
+  4.785,
+  8.538,
+  -5.608,
+  4.269,
+  -4.347
  ],
  "aetherCrystalsFlat": [],
  "edgeColor": [
-  0.1135,
-  0.1249,
-  0.1427
+  0.3844,
+  0.4311,
+  0.5064
  ],
- "source": "ArtCache/Env/v2full_frostfall_bastion",
- "gamma": 1.5566,
- "viewMeanBefore": 0.2918,
- "viewMean": 0.16
+ "source": "ArtCache/EnvToon/frostfall_bastion",
+ "gamma": 1.4031,
+ "viewMeanBefore": 0.5126,
+ "viewMean": 0.4
 }

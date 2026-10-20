@@ -532,8 +532,10 @@ namespace Aetherward.Sim.Run
             setup.BossEnrage = Content.Difficulty.Value("boss_enrage", State.Ascension);
             setup.EliteEvery = (int)Content.Difficulty.Value("double_elite", State.Ascension);
             setup.Tactic = State.Tactic;
+            setup.Stance = State.Stance;
             setup.CrystalPath = State.CrystalPath;
             setup.UtilityTargeting = FeatureFlags.UtilityTargeting;
+            setup.DynamicParty = FeatureFlags.DynamicParty;
             setup.HazardShift = Content.Difficulty.Value("hazard_shift", State.Ascension);
             foreach (HeroRunState h in State.Heroes)
             {
@@ -602,6 +604,8 @@ namespace Aetherward.Sim.Run
                 HeroDowns = b.Stats.HeroDowns,
                 PeakEnemies = b.Stats.PeakEnemies,
                 PeakReactionsPerSecond = b.Stats.PeakReactionsPerSecond,
+                HeroTravel = b.Stats.HeroTravel,
+                CrystalHits = b.Stats.CrystalHits,
                 Cleared = b.Outcome == BattleOutcome.Cleared
             };
             record.Insights.AddRange(BattleInsights.ForWave(b));

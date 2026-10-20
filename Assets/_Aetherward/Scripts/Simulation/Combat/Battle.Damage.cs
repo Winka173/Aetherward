@@ -744,6 +744,7 @@ namespace Aetherward.Sim.Combat
         public void DamageCrystal(float amount, EnemyUnit attacker)
         {
             if (!Crystal.Alive) return;
+            Stats.CrystalHits++;
             float reduction = Crystal.DamageReduction + (Crystal.TempReductionTimer > 0f ? Crystal.TempReduction : 0f);
             amount *= 1f - SimMath.Clamp(reduction, 0f, 0.8f);
             if (attacker != null) amount *= attacker.OutgoingDamageMult;

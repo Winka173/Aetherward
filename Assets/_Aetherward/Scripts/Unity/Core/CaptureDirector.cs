@@ -70,6 +70,7 @@ namespace Aetherward.Game
         public string biome;
         public int wave = 10;
         public string crystalPath;   // optional Crystal Evolution path (bastion / pulse / thorn)
+        public string stance;        // optional party stance: Defensive / Balanced / Aggressive
         public Hero[] heroes;
         public Group[] groups;
         public int[] lanes;
@@ -121,6 +122,7 @@ namespace Aetherward.Game
             }
             rc.State.BlockedNode = -1;
             if (!string.IsNullOrEmpty(spec.crystalPath)) rc.State.CrystalPath = spec.crystalPath;
+            if (!string.IsNullOrEmpty(spec.stance) && System.Enum.TryParse(spec.stance, true, out Aetherward.Sim.Combat.PartyStance ps)) rc.State.Stance = ps;
             rc.State.Wave = spec.wave;
             InstallWave(spec);
             App.ClearRun();

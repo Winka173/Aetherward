@@ -5,19 +5,21 @@
  ],
  "shadowLengthPerHeight": 0.8947,
  "braziersFlat": [
-  -7.045,
-  11.327,
-  8.455,
-  6.598
+  11.385,
+  -3.016,
+  -17.077,
+  3.243,
+  8.538,
+  5.855
  ],
  "aetherCrystalsFlat": [],
  "edgeColor": [
-  0.1589,
-  0.0936,
-  0.0606
+  0.7094,
+  0.4165,
+  0.3094
  ],
- "source": "ArtCache/Env/v2full_molten_crater",
- "gamma": 1.3305,
- "viewMeanBefore": 0.2333,
- "viewMean": 0.16
+ "source": "ArtCache/EnvToon/molten_crater",
+ "gamma": 1.1881,
+ "viewMeanBefore": 0.4552,
+ "viewMean": 0.4
 }

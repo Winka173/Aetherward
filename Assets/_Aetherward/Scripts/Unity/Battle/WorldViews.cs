@@ -9,6 +9,9 @@ namespace Aetherward.Game
     /// <summary>Shared sprite material (flash-capable) and sorting helpers.</summary>
     public static class WorldGfx
     {
+        /// <summary>Unit sprite scale: the dynamic-party camera sees a wider field, so units are drawn a bit larger.</summary>
+        public const float UnitScale = 1.4f;
+
         private static Material _mat;
         private static MaterialPropertyBlock _mpb;
         public static readonly int FlashId = Shader.PropertyToID("_Flash");
@@ -140,7 +143,7 @@ namespace Aetherward.Game
         public SpriteRenderer Body;
         private SpriteRenderer _castShadow;
         private SpriteRenderer _shadow, _hpBg, _hpFill, _status1, _status2, _ring, _shieldFx;
-        private Sprite _idle, _alt, _cast, _down, _attack, _tell;
+        private Sprite _idle, _alt, _cast, _down, _attack, _tell, _walkA, _walkB;
         private bool _isHero;
         private float _baseScale = 1f;
         private float _phase;
@@ -196,7 +199,10 @@ namespace Aetherward.Game
             _attack = Art.Optional("Heroes/" + def.Id + (evo == null ? "_attack" : "_evo" + evo + "_attack")) ?? _idle;
             _tell = null;
             _alt = _idle;
-            _baseScale = 1f;
+            // walk cycle (new with the dynamic party; arrives batch by batch, idle bob when absent)
+            _walkA = evo == null ? Art.Optional("Heroes/" + def.Id + "_walk_a") : null;
+            _walkB = _walkA != null ? Art.Optional("Heroes/" + def.Id + "_walk_b") ?? _idle : null;
+            _baseScale = WorldGfx.UnitScale;
             _ring.enabled = true;
             _ring.color = Ui.ElementColor(def.Element) * new Color(1, 1, 1, 0.55f);
             _ring.transform.localScale = new Vector3(0.42f, 0.2f, 1);
@@ -214,7 +220,8 @@ namespace Aetherward.Game
             _attack = Art.Optional("Enemies/" + def.Id + "_attack") ?? _idle;
             _tell = def.Boss ? Art.Optional("Enemies/" + def.Id + "_tell") : null;
             bool big = def.Boss;
-            _baseScale = (elite && !def.Elite && !def.Boss ? 1.3f : 1f) * (def.Id == "swarmling" ? 0.8f : 1f) * (big ? 1.25f : 1f);
+            _walkA = _walkB = null;
+            _baseScale = WorldGfx.UnitScale * (elite && !def.Elite && !def.Boss ? 1.3f : 1f) * (def.Id == "swarmling" ? 0.8f : 1f) * (big ? 1.25f : 1f);
             float shadowW = big ? 2.6f : (def.Radius * 2.4f) * _baseScale;
             _shadow.transform.localScale = new Vector3(shadowW, shadowW * 0.9f, 1);
             _ring.enabled = elite || !string.IsNullOrEmpty(affix);
@@ -396,6 +403,11 @@ namespace Aetherward.Game
             {
                 _walk += dt * 4f;
                 Body.sprite = ((int)_walk % 2 == 0) ? _idle : _alt;
+            }
+            else if (speed > 0.2f && _walkA != null)
+            {
+                _walk += dt * (2.5f + speed * 1.6f);   // stride rate follows the run speed
+                Body.sprite = ((int)_walk % 2 == 0) ? _walkA : _walkB;
             }
             else Body.sprite = _castTimer > 0f ? _cast : _idle;
 

@@ -267,6 +267,7 @@ namespace Aetherward.Game
                 if (path.EndsWith("_evoA_attack")) return path.Replace("_evoA_attack", "_evoA");
                 if (path.EndsWith("_evoB_attack")) return path.Replace("_evoB_attack", "_evoB");
                 if (path.EndsWith("_attack")) return path.Substring(0, path.Length - "_attack".Length) + "_idle";
+                if (path.EndsWith("_walk_a") || path.EndsWith("_walk_b")) return path.Substring(0, path.Length - "_walk_a".Length) + "_idle";
             }
             if (path.StartsWith("Enemies/"))
             {
