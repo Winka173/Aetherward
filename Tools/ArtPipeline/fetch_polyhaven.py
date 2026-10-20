@@ -27,6 +27,7 @@ TEXTURES = ["burned_ground_01", "aerial_ground_rock", "cobblestone_large_01", "c
 TEX_MAPS = {"Diffuse": "diff", "nor_gl": "nor_gl", "Rough": "rough", "Displacement": "disp"}
 MODELS = ["gothic_statue", "rock_moss_set_01", "rock_moss_set_02", "namaqualand_boulder_02", "namaqualand_boulder_05",
           "dead_tree_trunk_02", "dead_quiver_trunk", "root_cluster_01", "stone_fire_pit", "tree_stump_01"]
+HDRIS = ["kloppenheim_02_puresky", "dikhololo_night", "moonless_golf"]                     # night skies for world lighting
 API = "https://api.polyhaven.com"
 
 
@@ -77,6 +78,17 @@ def main():
         print("have " + os.path.relpath(dst, ROOT), flush=True)
         records.append({"id": mid, "type": "model", "files": {"blend": os.path.relpath(dst, ROOT).replace("\\", "/")},
                         "url": "https://polyhaven.com/a/" + mid, "authors": sorted(info.get("authors", {})), "license": "CC0 1.0 (Poly Haven)"})
+    for hid in HDRIS:
+        files = get_json("%s/files/%s" % (API, hid))
+        info = get_json("%s/info/%s" % (API, hid))
+        f = files["hdri"][a.res]["hdr"]
+        dst = os.path.join(CACHE, hid, "%s_%s.hdr" % (hid, a.res))
+        download(f["url"], dst, f.get("md5"))
+        print("have " + os.path.relpath(dst, ROOT), flush=True)
+        records.append({"id": hid, "type": "hdri", "files": {"hdr": os.path.relpath(dst, ROOT).replace("\\", "/")},
+                        "url": "https://polyhaven.com/a/" + hid, "authors": sorted(info.get("authors", {})), "license": "CC0 1.0 (Poly Haven)"})
+    old_records = json.load(open(MANIFEST, encoding="utf-8"))["assets"] if os.path.exists(MANIFEST) else []
+    records += [r for r in old_records if r.get("source") == "ambientCG" and r["id"] not in {x["id"] for x in records}]
     json.dump({"_doc": "Third-party inputs used by the art pipeline. Only CC0 sources; files are cached under ArtCache/ and re-fetched by "
                        "Tools/ArtPipeline/fetch_polyhaven.py.", "assets": records}, open(MANIFEST, "w", encoding="utf-8"), indent=1)
     print("manifest -> " + os.path.relpath(MANIFEST, ROOT))

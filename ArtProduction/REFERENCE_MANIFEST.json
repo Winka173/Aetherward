@@ -474,6 +474,248 @@
     "Rob Tuytel"
    ],
    "license": "CC0 1.0 (Poly Haven)"
+  },
+  {
+   "id": "kloppenheim_02_puresky",
+   "type": "hdri",
+   "files": {
+    "hdr": "ArtCache/polyhaven/kloppenheim_02_puresky/kloppenheim_02_puresky_2k.hdr"
+   },
+   "url": "https://polyhaven.com/a/kloppenheim_02_puresky",
+   "authors": [
+    "Greg Zaal",
+    "Jarod Guest"
+   ],
+   "license": "CC0 1.0 (Poly Haven)"
+  },
+  {
+   "id": "dikhololo_night",
+   "type": "hdri",
+   "files": {
+    "hdr": "ArtCache/polyhaven/dikhololo_night/dikhololo_night_2k.hdr"
+   },
+   "url": "https://polyhaven.com/a/dikhololo_night",
+   "authors": [
+    "Greg Zaal"
+   ],
+   "license": "CC0 1.0 (Poly Haven)"
+  },
+  {
+   "id": "moonless_golf",
+   "type": "hdri",
+   "files": {
+    "hdr": "ArtCache/polyhaven/moonless_golf/moonless_golf_2k.hdr"
+   },
+   "url": "https://polyhaven.com/a/moonless_golf",
+   "authors": [
+    "Greg Zaal"
+   ],
+   "license": "CC0 1.0 (Poly Haven)"
+  },
+  {
+   "id": "Snow015",
+   "type": "texture",
+   "source": "ambientCG",
+   "url": "https://ambientcg.com/view?id=Snow015",
+   "files": {
+    "Snow015.png": "ArtCache/ambientcg/Snow015/Snow015.png",
+    "Snow015_2K-JPG_AmbientOcclusion.jpg": "ArtCache/ambientcg/Snow015/Snow015_2K-JPG_AmbientOcclusion.jpg",
+    "Snow015_2K-JPG_Color.jpg": "ArtCache/ambientcg/Snow015/Snow015_2K-JPG_Color.jpg",
+    "Snow015_2K-JPG_Displacement.jpg": "ArtCache/ambientcg/Snow015/Snow015_2K-JPG_Displacement.jpg",
+    "Snow015_2K-JPG_NormalDX.jpg": "ArtCache/ambientcg/Snow015/Snow015_2K-JPG_NormalDX.jpg",
+    "Snow015_2K-JPG_NormalGL.jpg": "ArtCache/ambientcg/Snow015/Snow015_2K-JPG_NormalGL.jpg",
+    "Snow015_2K-JPG_Roughness.jpg": "ArtCache/ambientcg/Snow015/Snow015_2K-JPG_Roughness.jpg"
+   },
+   "license": "CC0 1.0 (ambientCG)"
+  },
+  {
+   "id": "Snow010A",
+   "type": "texture",
+   "source": "ambientCG",
+   "url": "https://ambientcg.com/view?id=Snow010A",
+   "files": {
+    "Snow010A.png": "ArtCache/ambientcg/Snow010A/Snow010A.png",
+    "Snow010A_2K-JPG_AmbientOcclusion.jpg": "ArtCache/ambientcg/Snow010A/Snow010A_2K-JPG_AmbientOcclusion.jpg",
+    "Snow010A_2K-JPG_Color.jpg": "ArtCache/ambientcg/Snow010A/Snow010A_2K-JPG_Color.jpg",
+    "Snow010A_2K-JPG_Displacement.jpg": "ArtCache/ambientcg/Snow010A/Snow010A_2K-JPG_Displacement.jpg",
+    "Snow010A_2K-JPG_NormalDX.jpg": "ArtCache/ambientcg/Snow010A/Snow010A_2K-JPG_NormalDX.jpg",
+    "Snow010A_2K-JPG_NormalGL.jpg": "ArtCache/ambientcg/Snow010A/Snow010A_2K-JPG_NormalGL.jpg",
+    "Snow010A_2K-JPG_Roughness.jpg": "ArtCache/ambientcg/Snow010A/Snow010A_2K-JPG_Roughness.jpg"
+   },
+   "license": "CC0 1.0 (ambientCG)"
+  },
+  {
+   "id": "Ice002",
+   "type": "texture",
+   "source": "ambientCG",
+   "url": "https://ambientcg.com/view?id=Ice002",
+   "files": {
+    "Ice002.png": "ArtCache/ambientcg/Ice002/Ice002.png",
+    "Ice002_2K-JPG_Color.jpg": "ArtCache/ambientcg/Ice002/Ice002_2K-JPG_Color.jpg",
+    "Ice002_2K-JPG_Displacement.jpg": "ArtCache/ambientcg/Ice002/Ice002_2K-JPG_Displacement.jpg",
+    "Ice002_2K-JPG_NormalDX.jpg": "ArtCache/ambientcg/Ice002/Ice002_2K-JPG_NormalDX.jpg",
+    "Ice002_2K-JPG_NormalGL.jpg": "ArtCache/ambientcg/Ice002/Ice002_2K-JPG_NormalGL.jpg",
+    "Ice002_2K-JPG_Roughness.jpg": "ArtCache/ambientcg/Ice002/Ice002_2K-JPG_Roughness.jpg"
+   },
+   "license": "CC0 1.0 (ambientCG)"
+  },
+  {
+   "id": "Ice003",
+   "type": "texture",
+   "source": "ambientCG",
+   "url": "https://ambientcg.com/view?id=Ice003",
+   "files": {
+    "Ice003.png": "ArtCache/ambientcg/Ice003/Ice003.png",
+    "Ice003_2K-JPG_Color.jpg": "ArtCache/ambientcg/Ice003/Ice003_2K-JPG_Color.jpg",
+    "Ice003_2K-JPG_Displacement.jpg": "ArtCache/ambientcg/Ice003/Ice003_2K-JPG_Displacement.jpg",
+    "Ice003_2K-JPG_NormalDX.jpg": "ArtCache/ambientcg/Ice003/Ice003_2K-JPG_NormalDX.jpg",
+    "Ice003_2K-JPG_NormalGL.jpg": "ArtCache/ambientcg/Ice003/Ice003_2K-JPG_NormalGL.jpg",
+    "Ice003_2K-JPG_Roughness.jpg": "ArtCache/ambientcg/Ice003/Ice003_2K-JPG_Roughness.jpg"
+   },
+   "license": "CC0 1.0 (ambientCG)"
+  },
+  {
+   "id": "Lava004",
+   "type": "texture",
+   "source": "ambientCG",
+   "url": "https://ambientcg.com/view?id=Lava004",
+   "files": {
+    "Lava004.png": "ArtCache/ambientcg/Lava004/Lava004.png",
+    "Lava004_2K-JPG_Color.jpg": "ArtCache/ambientcg/Lava004/Lava004_2K-JPG_Color.jpg",
+    "Lava004_2K-JPG_Displacement.jpg": "ArtCache/ambientcg/Lava004/Lava004_2K-JPG_Displacement.jpg",
+    "Lava004_2K-JPG_Emission.jpg": "ArtCache/ambientcg/Lava004/Lava004_2K-JPG_Emission.jpg",
+    "Lava004_2K-JPG_NormalDX.jpg": "ArtCache/ambientcg/Lava004/Lava004_2K-JPG_NormalDX.jpg",
+    "Lava004_2K-JPG_NormalGL.jpg": "ArtCache/ambientcg/Lava004/Lava004_2K-JPG_NormalGL.jpg",
+    "Lava004_2K-JPG_Roughness.jpg": "ArtCache/ambientcg/Lava004/Lava004_2K-JPG_Roughness.jpg"
+   },
+   "license": "CC0 1.0 (ambientCG)"
+  },
+  {
+   "id": "Lava001",
+   "type": "texture",
+   "source": "ambientCG",
+   "url": "https://ambientcg.com/view?id=Lava001",
+   "files": {
+    "Lava001.png": "ArtCache/ambientcg/Lava001/Lava001.png",
+    "Lava001_2K-JPG_Color.jpg": "ArtCache/ambientcg/Lava001/Lava001_2K-JPG_Color.jpg",
+    "Lava001_2K-JPG_Displacement.jpg": "ArtCache/ambientcg/Lava001/Lava001_2K-JPG_Displacement.jpg",
+    "Lava001_2K-JPG_Emission.jpg": "ArtCache/ambientcg/Lava001/Lava001_2K-JPG_Emission.jpg",
+    "Lava001_2K-JPG_NormalDX.jpg": "ArtCache/ambientcg/Lava001/Lava001_2K-JPG_NormalDX.jpg",
+    "Lava001_2K-JPG_NormalGL.jpg": "ArtCache/ambientcg/Lava001/Lava001_2K-JPG_NormalGL.jpg",
+    "Lava001_2K-JPG_Roughness.jpg": "ArtCache/ambientcg/Lava001/Lava001_2K-JPG_Roughness.jpg"
+   },
+   "license": "CC0 1.0 (ambientCG)"
+  },
+  {
+   "id": "Rock064",
+   "type": "texture",
+   "source": "ambientCG",
+   "url": "https://ambientcg.com/view?id=Rock064",
+   "files": {
+    "Rock064.png": "ArtCache/ambientcg/Rock064/Rock064.png",
+    "Rock064_2K-JPG_AmbientOcclusion.jpg": "ArtCache/ambientcg/Rock064/Rock064_2K-JPG_AmbientOcclusion.jpg",
+    "Rock064_2K-JPG_Color.jpg": "ArtCache/ambientcg/Rock064/Rock064_2K-JPG_Color.jpg",
+    "Rock064_2K-JPG_Displacement.jpg": "ArtCache/ambientcg/Rock064/Rock064_2K-JPG_Displacement.jpg",
+    "Rock064_2K-JPG_NormalDX.jpg": "ArtCache/ambientcg/Rock064/Rock064_2K-JPG_NormalDX.jpg",
+    "Rock064_2K-JPG_NormalGL.jpg": "ArtCache/ambientcg/Rock064/Rock064_2K-JPG_NormalGL.jpg",
+    "Rock064_2K-JPG_Roughness.jpg": "ArtCache/ambientcg/Rock064/Rock064_2K-JPG_Roughness.jpg"
+   },
+   "license": "CC0 1.0 (ambientCG)"
+  },
+  {
+   "id": "Rock058",
+   "type": "texture",
+   "source": "ambientCG",
+   "url": "https://ambientcg.com/view?id=Rock058",
+   "files": {
+    "Rock058.png": "ArtCache/ambientcg/Rock058/Rock058.png",
+    "Rock058_2K-JPG_AmbientOcclusion.jpg": "ArtCache/ambientcg/Rock058/Rock058_2K-JPG_AmbientOcclusion.jpg",
+    "Rock058_2K-JPG_Color.jpg": "ArtCache/ambientcg/Rock058/Rock058_2K-JPG_Color.jpg",
+    "Rock058_2K-JPG_Displacement.jpg": "ArtCache/ambientcg/Rock058/Rock058_2K-JPG_Displacement.jpg",
+    "Rock058_2K-JPG_NormalDX.jpg": "ArtCache/ambientcg/Rock058/Rock058_2K-JPG_NormalDX.jpg",
+    "Rock058_2K-JPG_NormalGL.jpg": "ArtCache/ambientcg/Rock058/Rock058_2K-JPG_NormalGL.jpg",
+    "Rock058_2K-JPG_Roughness.jpg": "ArtCache/ambientcg/Rock058/Rock058_2K-JPG_Roughness.jpg"
+   },
+   "license": "CC0 1.0 (ambientCG)"
+  },
+  {
+   "id": "Ground068",
+   "type": "texture",
+   "source": "ambientCG",
+   "url": "https://ambientcg.com/view?id=Ground068",
+   "files": {
+    "Ground068.png": "ArtCache/ambientcg/Ground068/Ground068.png",
+    "Ground068_2K-JPG_AmbientOcclusion.jpg": "ArtCache/ambientcg/Ground068/Ground068_2K-JPG_AmbientOcclusion.jpg",
+    "Ground068_2K-JPG_Color.jpg": "ArtCache/ambientcg/Ground068/Ground068_2K-JPG_Color.jpg",
+    "Ground068_2K-JPG_Displacement.jpg": "ArtCache/ambientcg/Ground068/Ground068_2K-JPG_Displacement.jpg",
+    "Ground068_2K-JPG_NormalDX.jpg": "ArtCache/ambientcg/Ground068/Ground068_2K-JPG_NormalDX.jpg",
+    "Ground068_2K-JPG_NormalGL.jpg": "ArtCache/ambientcg/Ground068/Ground068_2K-JPG_NormalGL.jpg",
+    "Ground068_2K-JPG_Roughness.jpg": "ArtCache/ambientcg/Ground068/Ground068_2K-JPG_Roughness.jpg"
+   },
+   "license": "CC0 1.0 (ambientCG)"
+  },
+  {
+   "id": "Bricks097",
+   "type": "texture",
+   "source": "ambientCG",
+   "url": "https://ambientcg.com/view?id=Bricks097",
+   "files": {
+    "Bricks097.png": "ArtCache/ambientcg/Bricks097/Bricks097.png",
+    "Bricks097_2K-JPG_AmbientOcclusion.jpg": "ArtCache/ambientcg/Bricks097/Bricks097_2K-JPG_AmbientOcclusion.jpg",
+    "Bricks097_2K-JPG_Color.jpg": "ArtCache/ambientcg/Bricks097/Bricks097_2K-JPG_Color.jpg",
+    "Bricks097_2K-JPG_Displacement.jpg": "ArtCache/ambientcg/Bricks097/Bricks097_2K-JPG_Displacement.jpg",
+    "Bricks097_2K-JPG_NormalDX.jpg": "ArtCache/ambientcg/Bricks097/Bricks097_2K-JPG_NormalDX.jpg",
+    "Bricks097_2K-JPG_NormalGL.jpg": "ArtCache/ambientcg/Bricks097/Bricks097_2K-JPG_NormalGL.jpg",
+    "Bricks097_2K-JPG_Roughness.jpg": "ArtCache/ambientcg/Bricks097/Bricks097_2K-JPG_Roughness.jpg"
+   },
+   "license": "CC0 1.0 (ambientCG)"
+  },
+  {
+   "id": "Marble012",
+   "type": "texture",
+   "source": "ambientCG",
+   "url": "https://ambientcg.com/view?id=Marble012",
+   "files": {
+    "Marble012.png": "ArtCache/ambientcg/Marble012/Marble012.png",
+    "Marble012_2K-JPG_Color.jpg": "ArtCache/ambientcg/Marble012/Marble012_2K-JPG_Color.jpg",
+    "Marble012_2K-JPG_Displacement.jpg": "ArtCache/ambientcg/Marble012/Marble012_2K-JPG_Displacement.jpg",
+    "Marble012_2K-JPG_NormalDX.jpg": "ArtCache/ambientcg/Marble012/Marble012_2K-JPG_NormalDX.jpg",
+    "Marble012_2K-JPG_NormalGL.jpg": "ArtCache/ambientcg/Marble012/Marble012_2K-JPG_NormalGL.jpg",
+    "Marble012_2K-JPG_Roughness.jpg": "ArtCache/ambientcg/Marble012/Marble012_2K-JPG_Roughness.jpg"
+   },
+   "license": "CC0 1.0 (ambientCG)"
+  },
+  {
+   "id": "Moss002",
+   "type": "texture",
+   "source": "ambientCG",
+   "url": "https://ambientcg.com/view?id=Moss002",
+   "files": {
+    "Moss002.png": "ArtCache/ambientcg/Moss002/Moss002.png",
+    "Moss002_2K-JPG_AmbientOcclusion.jpg": "ArtCache/ambientcg/Moss002/Moss002_2K-JPG_AmbientOcclusion.jpg",
+    "Moss002_2K-JPG_Color.jpg": "ArtCache/ambientcg/Moss002/Moss002_2K-JPG_Color.jpg",
+    "Moss002_2K-JPG_Displacement.jpg": "ArtCache/ambientcg/Moss002/Moss002_2K-JPG_Displacement.jpg",
+    "Moss002_2K-JPG_NormalDX.jpg": "ArtCache/ambientcg/Moss002/Moss002_2K-JPG_NormalDX.jpg",
+    "Moss002_2K-JPG_NormalGL.jpg": "ArtCache/ambientcg/Moss002/Moss002_2K-JPG_NormalGL.jpg",
+    "Moss002_2K-JPG_Roughness.jpg": "ArtCache/ambientcg/Moss002/Moss002_2K-JPG_Roughness.jpg"
+   },
+   "license": "CC0 1.0 (ambientCG)"
+  },
+  {
+   "id": "PavingStones138",
+   "type": "texture",
+   "source": "ambientCG",
+   "url": "https://ambientcg.com/view?id=PavingStones138",
+   "files": {
+    "PavingStones138.png": "ArtCache/ambientcg/PavingStones138/PavingStones138.png",
+    "PavingStones138_2K-JPG_AmbientOcclusion.jpg": "ArtCache/ambientcg/PavingStones138/PavingStones138_2K-JPG_AmbientOcclusion.jpg",
+    "PavingStones138_2K-JPG_Color.jpg": "ArtCache/ambientcg/PavingStones138/PavingStones138_2K-JPG_Color.jpg",
+    "PavingStones138_2K-JPG_Displacement.jpg": "ArtCache/ambientcg/PavingStones138/PavingStones138_2K-JPG_Displacement.jpg",
+    "PavingStones138_2K-JPG_NormalDX.jpg": "ArtCache/ambientcg/PavingStones138/PavingStones138_2K-JPG_NormalDX.jpg",
+    "PavingStones138_2K-JPG_NormalGL.jpg": "ArtCache/ambientcg/PavingStones138/PavingStones138_2K-JPG_NormalGL.jpg",
+    "PavingStones138_2K-JPG_Roughness.jpg": "ArtCache/ambientcg/PavingStones138/PavingStones138_2K-JPG_Roughness.jpg"
+   },
+   "license": "CC0 1.0 (ambientCG)"
   }
  ]
 }

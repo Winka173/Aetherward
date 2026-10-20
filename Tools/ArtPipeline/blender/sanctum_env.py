@@ -65,11 +65,11 @@ THEMES = {
                               tint="#c9ccd6", kinds=None),
     "molten_crater": dict(ground="cracked_red_ground", rock="dark_rock_02", road="patterned_slate_tiles", cliff="rock_boulder_cracked",
                           dais="castle_wall_slates", ruin="rock_boulder_cracked", dark="dark_rock_02", special="lava", special_amount=1.0,
-                          special_depth=0.35, special_lanes=[0, 1], special_lo=0.7, special_hi=0.76, world=("#2a1410", 0.3),
+                          special_depth=0.35, special_lanes=[0, 1], special_lo=0.7, special_hi=0.76, special_scan="Lava004", world=("#2a1410", 0.3),
                           sun=("#ffd9b8", 2.0), brazier="#ff7a2a", rift="#ff5a1f", tint="#b8aca8",
                           kinds=["obsidian"] * 6 + ["pillar"] * 3 + ["broken"] * 6 + ["boulder"] * 6 + ["deadtree"] * 3 + ["brazier"] * 2 + ["rocks"] * 8),
     "frostfall_bastion": dict(ground="rock_ground", rock="castle_wall_varriation", road="large_floor_tiles_02", cliff="marble_cliff_01",
-                              dais="castle_wall_slates", ruin="castle_wall_varriation", dark="dark_rock", special="snow", special_amount=0.6, value=0.5,
+                              dais="castle_wall_slates", ruin="castle_wall_varriation", dark="dark_rock", special="snow", special_amount=0.6, value=0.5, special_scan="Snow015",
                               special_depth=-0.04, special_lo=0.5, special_hi=0.74, world=("#2a3a55", 0.55), sun=("#e6eeff", 2.8),
                               brazier="#ffb35c", rift="#7fd8ff", tint="#d4d8e0",
                               kinds=["icecrystals"] * 6 + ["pillar"] * 5 + ["statue"] * 2 + ["arch"] * 2 + ["brazier"] * 3 + ["broken"] * 5 + ["boulder"] * 4),
@@ -137,6 +137,20 @@ world.use_nodes = True
 bg = world.node_tree.nodes["Background"]
 bg.inputs[0].default_value = lin(THEME["world"][0])
 bg.inputs[1].default_value = THEME["world"][1]
+_hdr = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))),
+                    "ArtCache", "polyhaven", "kloppenheim_02_puresky", "kloppenheim_02_puresky_2k.hdr")
+if os.path.exists(_hdr):   # soft, directional sky light instead of a flat colour; the biome colour tints it
+    wnt = world.node_tree
+    env = wnt.nodes.new("ShaderNodeTexEnvironment")
+    env.image = bpy.data.images.load(_hdr, check_existing=True)
+    tintw = wnt.nodes.new("ShaderNodeMix")
+    tintw.data_type = "RGBA"
+    tintw.blend_type = "MULTIPLY"
+    tintw.inputs["Factor"].default_value = 1.0
+    wnt.links.new(env.outputs["Color"], [x for x in tintw.inputs if x.name == "A" and x.type == "RGBA"][0])
+    [x for x in tintw.inputs if x.name == "B" and x.type == "RGBA"][0].default_value = tuple(min(1.0, c * 3.0) for c in lin(THEME["world"][0])[:3]) + (1.0,)
+    wnt.links.new([x for x in tintw.outputs if x.name == "Result" and x.type == "RGBA"][0], bg.inputs[0])
+    bg.inputs[1].default_value = THEME["world"][1] * 1.1
 
 cam = bpy.data.objects.new("Camera", bpy.data.cameras.new("Camera"))
 sc.collection.objects.link(cam)
@@ -291,6 +305,26 @@ def sock(n, name, kind="RGBA", out=False):  # noqa: E302
 
 
 PH = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))), "ArtCache", "polyhaven")
+
+
+ACG = os.path.join(os.path.dirname(PH), "ambientcg")
+
+
+def acg_tex(mid, kind):
+    """ambientCG CC0 map (Tools/ArtPipeline/fetch_ambientcg.py): kind = Color / Roughness / NormalGL / Displacement / Emission."""
+    f = os.path.join(ACG, mid, "%s_2K-JPG_%s.jpg" % (mid, kind))
+    if not os.path.exists(f):
+        raise FileNotFoundError("run Tools/ArtPipeline/fetch_ambientcg.py first: %s %s" % (mid, kind))
+    return f
+
+
+def acg_image(nt, mid, kind, vec, loc, colorspace="sRGB"):
+    n = nt.nodes.new("ShaderNodeTexImage")
+    n.location = loc
+    n.image = bpy.data.images.load(acg_tex(mid, kind), check_existing=True)
+    n.image.colorspace_settings.name = colorspace
+    nt.links.new(vec, n.inputs["Vector"])
+    return n
 
 
 def ph_tex(tid, kind):
@@ -550,6 +584,18 @@ def terrain_pbr():
     L.new(sep.outputs["Green"], moss_c.inputs["Factor"])
     L.new(col, sock(moss_c, "A"))
     sock(moss_c, "B").default_value = lin(paint)
+    scan = THEME.get("special_scan")
+    scan_emit = None
+    if scan:
+        sv = mapped(0.28 if kind == "lava" else 0.35, 0.4)
+        sc_col = acg_image(nt, scan, "Color", sv, (-300, 1000))
+        dark = node(nt, "ShaderNodeMix", (-100, 1000), data_type="RGBA", blend_type="MULTIPLY")
+        dark.inputs["Factor"].default_value = 1.0
+        L.new(sc_col.outputs["Color"], sock(dark, "A"))
+        sock(dark, "B").default_value = lin("#4a2a20") if kind == "lava" else (1, 1, 1, 1)   # lava crust is dark rock
+        L.new(sock(dark, "Result", out=True), sock(moss_c, "B"))
+        if kind == "lava":
+            scan_emit = acg_image(nt, scan, "Emission", sv, (-300, 1300))
     if kind in ("puddle", "water", "snow"):           # wet surfaces are glossy, snow is soft
         gloss = node(nt, "ShaderNodeMix", (0, 300), data_type="FLOAT")
         L.new(sep.outputs["Green"], gloss.inputs["Factor"])
@@ -608,6 +654,24 @@ def terrain_pbr():
         L.new(rm2.outputs["Value"], tot.inputs[0])
         L.new(pm2.outputs["Value"], tot.inputs[1])
         bsdf.inputs["Emission Color"].default_value = lin("#ff5a1f" if kind == "lava" else "#9f8cff")
+        if scan_emit is not None:
+            # emission colour: rift red on the cracks, the lava scan's own emission inside the lava mask
+            ec = node(nt, "ShaderNodeMix", (900, -700), data_type="RGBA")
+            L.new(sep.outputs["Green"], ec.inputs["Factor"])
+            sock(ec, "A").default_value = lin(THEME["rift"])
+            hot = node(nt, "ShaderNodeMix", (750, -1300), data_type="RGBA", blend_type="MULTIPLY")
+            hot.inputs["Factor"].default_value = 1.0
+            L.new(scan_emit.outputs["Color"], sock(hot, "A"))
+            sock(hot, "B").default_value = lin("#ff6a1f")         # the scan's emission is pale: push it to molten orange
+            L.new(sock(hot, "Result", out=True), sock(ec, "B"))
+            L.new(sock(ec, "Result", out=True), bsdf.inputs["Emission Color"])
+            lv = node(nt, "ShaderNodeMath", (700, -1100), operation="MULTIPLY")
+            L.new(sep.outputs["Green"], lv.inputs[0])
+            lv.inputs[1].default_value = 2.4
+            tot2 = node(nt, "ShaderNodeMath", (850, -1000), operation="ADD")
+            L.new(rm2.outputs["Value"], tot2.inputs[0])
+            L.new(lv.outputs["Value"], tot2.inputs[1])
+            tot = tot2
         L.new(tot.outputs["Value"], bsdf.inputs["Emission Strength"])
     else:
         L.new(rm2.outputs["Value"], bsdf.inputs["Emission Strength"])
@@ -917,6 +981,14 @@ def glow_material(name, base, emit, strength, transmission=0.5):
 
 
 MAT_ICE = glow_material("Ice", "#cfefff", "#9fe8ff", 0.4, 0.85)
+try:
+    _nt = MAT_ICE.node_tree
+    _tc = _nt.nodes.new("ShaderNodeTexCoord")
+    _im = acg_image(_nt, "Ice002", "Color", _tc.outputs["Object"], (-400, 200))
+    _im.projection = "BOX"
+    _nt.links.new(_im.outputs["Color"], _nt.nodes["Principled BSDF"].inputs["Base Color"])
+except FileNotFoundError:
+    pass
 MAT_OBSIDIAN = glow_material("Obsidian", "#120c10", "#ff5a1f", 0.8, 0.0)
 MAT_VIOLET = glow_material("AetherViolet", "#8a6cff", "#b07cff", 2.0, 0.5)
 MAT_COPPER = pbr_material("Copper", THEME["dark"], 0.8, tint="#c07a4a", value=1.0)
