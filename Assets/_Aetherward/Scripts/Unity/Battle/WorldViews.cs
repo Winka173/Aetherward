@@ -13,6 +13,7 @@ namespace Aetherward.Game
         private static MaterialPropertyBlock _mpb;
         public static readonly int FlashId = Shader.PropertyToID("_Flash");
         public static readonly int FlashColorId = Shader.PropertyToID("_FlashColor");
+        public static readonly int DissolveId = Shader.PropertyToID("_Dissolve");
 
         public static Material SpriteMaterial
         {
@@ -26,6 +27,31 @@ namespace Aetherward.Game
                 }
                 return _mat;
             }
+        }
+
+        private static Material _unitMat;
+
+        /// <summary>Hero/enemy bodies: SpriteLive (flash + readability rim + dissolve). Falls back to the shared material.</summary>
+        public static Material UnitMaterial
+        {
+            get
+            {
+                if (_unitMat == null)
+                {
+                    Shader s = Resources.Load<Shader>("Shaders/SpriteLive");
+                    _unitMat = s != null ? new Material(s) : SpriteMaterial;
+                }
+                return _unitMat;
+            }
+        }
+
+        /// <summary>Readability rim on unit sprites (global so units keep batching). High contrast doubles it.</summary>
+        public static void ApplyRim(bool highContrast)
+        {
+            Shader.SetGlobalColor("_AwRimColor", new Color(0.62f, 0.91f, 1f, 1f));
+            Shader.SetGlobalFloat("_AwRimStrength", highContrast ? 1.2f : 0.7f);
+            Shader.SetGlobalFloat("_AwRimWidthPx", 6f);   // texels; a 400 px hero is ~144 px on a 1080p screen
+            Shader.SetGlobalVector("_AwRimDir", new Vector4(1f, 0.55f, 0f, 0f));
         }
 
         public static SpriteRenderer NewSprite(Transform parent, string name, Sprite sprite, int order)
@@ -73,11 +99,17 @@ namespace Aetherward.Game
     {
         public SpriteRenderer Body;
         private SpriteRenderer _shadow, _hpBg, _hpFill, _status1, _status2, _ring, _shieldFx;
-        private Sprite _idle, _alt, _cast, _down;
+        private Sprite _idle, _alt, _cast, _down, _attack, _tell;
         private bool _isHero;
         private float _baseScale = 1f;
         private float _phase;
-        private float _castTimer, _lungeTimer, _flash, _hpShowTimer;
+        private float _castTimer, _lungeTimer, _flash, _hpShowTimer, _attackTimer;
+        private float _spawnT = -1f, _dieT = -1f;   // dissolve in on spawn / out on death; < 0 = not playing
+        private MaterialPropertyBlock _mpb;
+        /// <summary>Set each frame by the battle view while a telegraphed strike from this unit is pending (boss tell pose).</summary>
+        public bool Telegraphing;
+        public const float AttackHold = 0.22f, SpawnTime = 0.35f, DeathTime = 0.4f;
+        public bool Dying => _dieT >= 0f;
         private float _castT = -1f, _hitT = -1f;   // seconds into the cast / hit pose (UnitPose); < 0 = idle
         private bool _hitHeavy;
         private Vector3 _lungeDir, _hitDir;
@@ -96,6 +128,7 @@ namespace Aetherward.Game
             v._shadow.color = new Color(1, 1, 1, 0.9f);
             v._ring = WorldGfx.NewSprite(go.transform, "Ring", Art.Sprite("Vfx/ring"), 0);
             v.Body = WorldGfx.NewSprite(go.transform, "Body", null, 0);
+            v.Body.sharedMaterial = WorldGfx.UnitMaterial;
             v._shieldFx = WorldGfx.NewSprite(go.transform, "Shield", Art.Sprite("Vfx/glow"), 0);
             v._hpBg = WorldGfx.NewSprite(go.transform, "HpBg", Art.Sprite("UI/bar_bg"), 0);
             v._hpFill = WorldGfx.NewSprite(go.transform, "HpFill", Art.Sprite("UI/bar_fill"), 0);
@@ -112,6 +145,8 @@ namespace Aetherward.Game
             _idle = Art.Sprite("Heroes/" + def.Id + (evo == null ? "_idle" : "_evo" + evo));
             _cast = Art.Sprite("Heroes/" + def.Id + (evo == null ? "_cast" : "_evo" + evo + "_cast"));
             _down = Art.Sprite("Heroes/" + def.Id + "_downed");
+            _attack = Art.Optional("Heroes/" + def.Id + (evo == null ? "_attack" : "_evo" + evo + "_attack")) ?? _idle;
+            _tell = null;
             _alt = _idle;
             _baseScale = 1f;
             _ring.enabled = true;
@@ -128,6 +163,8 @@ namespace Aetherward.Game
             _alt = Art.Sprite("Enemies/" + def.Id + "_b");
             _cast = _idle;
             _down = _idle;
+            _attack = Art.Optional("Enemies/" + def.Id + "_attack") ?? _idle;
+            _tell = def.Boss ? Art.Optional("Enemies/" + def.Id + "_tell") : null;
             bool big = def.Boss;
             _baseScale = (elite && !def.Elite && !def.Boss ? 1.3f : 1f) * (def.Id == "swarmling" ? 0.8f : 1f) * (big ? 1.25f : 1f);
             float shadowW = big ? 2.6f : (def.Radius * 2.4f) * _baseScale;
@@ -140,6 +177,7 @@ namespace Aetherward.Game
                 _ring.transform.localScale = new Vector3(rw, rw * 0.5f, 1);
             }
             Init();
+            _spawnT = 0f;
         }
 
         private static Color AffixColor(string affix, bool elite)
@@ -160,16 +198,54 @@ namespace Aetherward.Game
         {
             Body.sprite = _idle;
             Body.color = Color.white;
+            _shadow.color = new Color(1, 1, 1, 0.9f);   // a death fade may have cleared it on a pooled view
             _phase = Random.value * 6f;
-            _castTimer = _lungeTimer = _flash = _hpShowTimer = 0f;
-            _castT = _hitT = -1f;
+            _castTimer = _lungeTimer = _flash = _hpShowTimer = _attackTimer = 0f;
+            _castT = _hitT = _spawnT = _dieT = -1f;
+            Telegraphing = false;
             _s1 = _s2 = Element.None;
             _status1.enabled = _status2.enabled = false;
             _shieldFx.enabled = false;
             gameObject.SetActive(true);
             InUse = true;
             _lastPos = transform.position;
-            WorldGfx.SetFlash(Body, 0f, Color.white);
+            SetBodyProps(0f, 0f);
+        }
+
+        /// <summary>Flash and dissolve share one property block; none at all while idle so bodies keep batching.</summary>
+        private void SetBodyProps(float flash, float dissolve)
+        {
+            flash *= WorldGfx.FlashScale;
+            if (flash <= 0.001f && dissolve <= 0.001f)
+            {
+                if (Body.HasPropertyBlock()) Body.SetPropertyBlock(null);
+                return;
+            }
+            if (_mpb == null) _mpb = new MaterialPropertyBlock();
+            _mpb.SetFloat(WorldGfx.FlashId, flash);
+            _mpb.SetColor(WorldGfx.FlashColorId, Color.white);
+            _mpb.SetFloat(WorldGfx.DissolveId, dissolve);
+            Body.SetPropertyBlock(_mpb);
+        }
+
+        /// <summary>The basic-attack strike pose (heroes: BasicAttack; enemies: the moment their hit lands).</summary>
+        public void Attack() => _attackTimer = AttackHold;
+
+        /// <summary>Enemy killed: plays the dissolve-out; <see cref="TickDeath"/> returns false when it is finished.</summary>
+        public void BeginDeath()
+        {
+            if (_dieT < 0f) _dieT = 0f;
+            _hpBg.enabled = _hpFill.enabled = _status1.enabled = _status2.enabled = _shieldFx.enabled = _ring.enabled = false;
+        }
+
+        public bool TickDeath(float dt)
+        {
+            _dieT += dt;
+            float k = Mathf.Clamp01(_dieT / DeathTime);
+            _shadow.color = new Color(1, 1, 1, 0.9f * (1f - k));
+            Body.transform.localPosition += new Vector3(0, -dt * 0.15f, 0);
+            SetBodyProps(0f, WorldGfx.Feel.AnimAmplitude > 0f ? k : 1f);
+            return _dieT < DeathTime;
         }
 
         public void Release()
@@ -232,7 +308,7 @@ namespace Aetherward.Game
                 _hpBg.enabled = _hpFill.enabled = false;
                 _status1.enabled = _status2.enabled = false;
                 _shieldFx.enabled = false;
-                WorldGfx.SetFlash(Body, 0f, Color.white);
+                SetBodyProps(0f, 0f);
                 return;
             }
 
@@ -243,8 +319,18 @@ namespace Aetherward.Game
             if (_hitT >= 0f && (_hitT += dt) >= (_hitHeavy ? UnitPose.HeavyHitDuration : UnitPose.HitDuration)) { _hitT = -1f; _hitHeavy = false; }
             if (_flash > 0f) _flash = Mathf.Max(0f, _flash - dt * 6f);
             _hpShowTimer -= dt;
+            _attackTimer -= dt;
+            float dissolve = 0f;
+            if (_spawnT >= 0f)
+            {
+                _spawnT += dt;
+                dissolve = WorldGfx.Feel.AnimAmplitude > 0f ? 1f - Mathf.Clamp01(_spawnT / SpawnTime) : 0f;
+                if (_spawnT >= SpawnTime) _spawnT = -1f;
+            }
 
-            if (speed > 0.2f && !_isHero)
+            if (_tell != null && Telegraphing) Body.sprite = _tell;
+            else if (_attackTimer > 0f) Body.sprite = _attack;
+            else if (speed > 0.2f && !_isHero)
             {
                 _walk += dt * 4f;
                 Body.sprite = ((int)_walk % 2 == 0) ? _idle : _alt;
@@ -260,7 +346,7 @@ namespace Aetherward.Game
             float flip = facingX < -0.05f ? -1f : (facingX > 0.05f ? 1f : Mathf.Sign(bt.localScale.x == 0 ? 1 : bt.localScale.x));
             bt.localScale = new Vector3(flip * _baseScale * (1f - squash) * pose.ScaleX, _baseScale * (1f + squash) * pose.ScaleY, 1f);
             Body.color = stunned ? new Color(0.75f, 0.85f, 1f) : Color.white;
-            WorldGfx.SetFlash(Body, _flash * 0.85f, Color.white);
+            SetBodyProps(_flash * 0.85f, dissolve);
 
             float height = Body.sprite != null ? Body.sprite.bounds.size.y * _baseScale : 1.4f;
             bool showHp = alwaysShowHp || _hpShowTimer > 0f || hpFraction < 0.999f && _isHero;

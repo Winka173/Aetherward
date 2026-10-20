@@ -25,6 +25,7 @@ namespace Aetherward.Game
         private readonly Dictionary<int, UnitView> _units = new Dictionary<int, UnitView>();
         private readonly Dictionary<int, UnitView> _prepViews = new Dictionary<int, UnitView>();
         private readonly Stack<UnitView> _unitPool = new Stack<UnitView>();
+        private readonly List<UnitView> _dying = new List<UnitView>();   // killed enemies playing their dissolve
         private readonly Dictionary<int, SpriteRenderer> _projectiles = new Dictionary<int, SpriteRenderer>();
         private readonly Dictionary<int, SpriteRenderer> _zones = new Dictionary<int, SpriteRenderer>();
         private readonly Dictionary<DelayedStrike, SpriteRenderer> _strikes = new Dictionary<DelayedStrike, SpriteRenderer>();
@@ -334,6 +335,7 @@ namespace Aetherward.Game
                         Vector3 from = _units.TryGetValue(e.SourceUid, out UnitView src) ? src.transform.position : WorldGfx.V(e.From);
                         if (e.Id == "hero")
                         {
+                            if (e.Generation == 0 && src != null) src.Attack();
                             if (_units.TryGetValue(e.TargetUid, out UnitView hv))
                             {
                                 hv.Flash(0.8f);
@@ -381,6 +383,7 @@ namespace Aetherward.Game
                     }
                     case SimEventType.BasicAttack:
                     {
+                        if (_units.TryGetValue(e.SourceUid, out UnitView atk)) atk.Attack();
                         if (e.Id == "melee" && _units.TryGetValue(e.SourceUid, out UnitView v) && _units.TryGetValue(e.TargetUid, out UnitView t))
                         {
                             v.Lunge(t.transform.position);
@@ -415,6 +418,7 @@ namespace Aetherward.Game
                         if (e.Value >= 20f) App.Audio.Play("shield_up", 0.4f, 0.04f, SoundCategory.Sfx, 0.25f);
                         break;
                     case SimEventType.CrystalHit:
+                        if (_units.TryGetValue(e.SourceUid, out UnitView striker)) striker.Attack();
                         _crystalWobble = 0.25f;
                         Shake(e.Value > 60f ? 0.35f : 0.12f);
                         if (e.Value > 60f) _hitstop.Trigger(WorldGfx.Feel.HitstopSeconds, _speed, Time.unscaledTime);
@@ -686,8 +690,15 @@ namespace Aetherward.Game
             foreach (var kv in _units) if (!_seen.Contains(kv.Key)) _remove.Add(kv.Key);
             foreach (int id in _remove)
             {
-                ReturnUnit(_units[id]);
+                _units[id].BeginDeath();
+                _dying.Add(_units[id]);
                 _units.Remove(id);
+            }
+            for (int i = _dying.Count - 1; i >= 0; i--)
+            {
+                if (_dying[i].TickDeath(viewDt)) continue;
+                ReturnUnit(_dying[i]);
+                _dying.RemoveAt(i);
             }
 
             // projectiles
@@ -752,8 +763,10 @@ namespace Aetherward.Game
                 ReturnSr(_strikes[s]);
                 _strikes.Remove(s);
             }
+            foreach (UnitView uv in _units.Values) uv.Telegraphing = false;
             foreach (DelayedStrike s in b.Strikes)
             {
+                if (s.EnemySource != null && _units.TryGetValue(s.EnemySource.Uid, out UnitView teller)) teller.Telegraphing = true;
                 if (!_strikes.TryGetValue(s, out SpriteRenderer r))
                 {
                     r = RentSr("Vfx/telegraph");
@@ -822,6 +835,8 @@ namespace Aetherward.Game
         {
             foreach (UnitView v in _units.Values) ReturnUnit(v);
             _units.Clear();
+            foreach (UnitView v in _dying) ReturnUnit(v);
+            _dying.Clear();
             foreach (SpriteRenderer r in _projectiles.Values) ReturnSr(r);
             _projectiles.Clear();
             foreach (SpriteRenderer r in _zones.Values) ReturnSr(r);

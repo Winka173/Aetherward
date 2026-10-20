@@ -576,6 +576,28 @@ def lowest_opaque_row(im):
     return None if bbox is None else bbox[3] - 1
 
 
+SEPARATION_MIN = 0.10
+
+
+def value_separation(stage, ids):
+    """Mean luminance of each unit's 3 px edge band vs the mean of the staged default battlefield."""
+    import numpy as np
+    from scipy.ndimage import binary_erosion
+
+    def lum(a):
+        return (0.2126 * a[..., 0] + 0.7152 * a[..., 1] + 0.0722 * a[..., 2]) / 255.0
+    bg = np.asarray(Image.open(os.path.join(stage, "Art", "World", "arena_background.png")).convert("RGB")).astype(float)
+    ground = float(lum(bg).mean())
+    out = {}
+    for uid in ids:
+        a = np.asarray(Image.open(os.path.join(stage, "Art", uid + ".png")).convert("RGBA")).astype(float)
+        m = a[..., 3] > 128
+        edge = m & ~binary_erosion(m, iterations=3)
+        if edge.any():
+            out[uid] = (float(lum(a[..., :3])[edge].mean()), ground)
+    return out
+
+
 def cmd_intake(a):
     rq = os.path.join(HANDOFF, "requests", a.batch)
     rt = os.path.join(HANDOFF, "returns", a.batch)
@@ -642,6 +664,11 @@ def cmd_intake(a):
             if row["status"] == "OK":
                 dst = os.path.join(stage, "Art", f["id"] + ".png")
                 im.save(dst)
+    # value separation (review warning): a unit's 3 px edge band must read lighter than the battlefield it stands on
+    sep = value_separation(stage, [r_["id"] for r_ in rows if r_["status"] == "OK" and r_["id"].startswith(("Heroes/", "Enemies/"))])
+    for uid, (edge_l, ground_l) in sep.items():
+        if edge_l < ground_l + SEPARATION_MIN:
+            notes.append("%s: edge luminance %.2f vs ground %.2f (needs >= +%.2f): add rim light / lift edge values" % (uid, edge_l, ground_l, SEPARATION_MIN))
     # write scope: nothing outside ArtHandoff/returns/<batch> may change
     r = subprocess.run(["git", "status", "--porcelain", "--untracked-files=all"], cwd=A.ROOT, capture_output=True, text=True)
     stray = [ln[3:].strip('"') for ln in r.stdout.splitlines()]

@@ -1,0 +1,13 @@
+{
+  "kind": "Unity player screenshot (real Battle scene, scripted roster and wave)",
+  "label": "B01 benchmark roster in the real Battle scene",
+  "commit": "b5c1437",
+  "unity": "6000.4.8f1",
+  "platform": "WindowsPlayer",
+  "screen": [1280, 720],
+  "artOverride": "C:/Users/Winka/AppData/Local/Temp/claude/c--Users-Winka-Projects-Aetherward/4c485d1c-4fd3-454a-afa1-d62f374ded82/scratchpad/b01_snapshot_p1",
+  "overridesLoaded": 33,
+  "wave": 12,
+  "phaseAtEnd": "Battle",
+  "shots": ["prep.png", "t06.png", "t10.png", "t15.png", "t22.png"]
+}

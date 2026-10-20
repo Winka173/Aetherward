@@ -76,6 +76,7 @@ namespace Aetherward.Game
             WorldGfx.Feel = Sim.Presentation.FeelProfile.For(Sim.Presentation.FeelProfile.Clamp(Settings.EffectsPreset), Settings.ScreenShake,
                 Settings.FlashIntensity, Settings.ReducedVfx, Settings.BatterySaver);
             WorldGfx.FlashScale = WorldGfx.Feel.FlashScale;
+            WorldGfx.ApplyRim(Settings.HighContrast);
             if (Audio != null) Audio.ApplyVolumes();
         }
 
@@ -182,6 +183,43 @@ namespace Aetherward.Game
             if (s == null && Missing.Add(path)) Debug.LogWarning("Missing sprite Art/" + path);
             Sprites[path] = s;
             return s;
+        }
+
+        /// <summary>Optional frames (attack/tell poses arrive batch by batch): null without a warning when absent.</summary>
+        public static Sprite Optional(string path)
+        {
+            if (Sprites.TryGetValue(path, out Sprite s)) return s;
+            s = Resources.Load<Sprite>("Art/" + path);
+            if (OverrideRoot != null) s = s != null ? Override(path, s) ?? s : OverrideNew(path);
+            Sprites[path] = s;
+            return s;
+        }
+
+        /// <summary>
+        /// A benchmark override for a frame that has no live sprite yet (new animation poses): PPU and pivot come from
+        /// the same unit's base frame (_idle / _evoA / _evoB for heroes, _a for enemies), which shares the contract.
+        /// </summary>
+        private static Sprite OverrideNew(string path)
+        {
+            string basePath = BaseFrameOf(path);
+            Sprite live = basePath != null ? Resources.Load<Sprite>("Art/" + basePath) : null;
+            return live != null ? Override(path, live) : null;
+        }
+
+        private static string BaseFrameOf(string path)
+        {
+            if (path.StartsWith("Heroes/"))
+            {
+                if (path.EndsWith("_evoA_attack")) return path.Replace("_evoA_attack", "_evoA");
+                if (path.EndsWith("_evoB_attack")) return path.Replace("_evoB_attack", "_evoB");
+                if (path.EndsWith("_attack")) return path.Substring(0, path.Length - "_attack".Length) + "_idle";
+            }
+            if (path.StartsWith("Enemies/"))
+            {
+                if (path.EndsWith("_attack")) return path.Substring(0, path.Length - "_attack".Length) + "_a";
+                if (path.EndsWith("_tell")) return path.Substring(0, path.Length - "_tell".Length) + "_a";
+            }
+            return null;
         }
 
         private static Sprite Override(string path, Sprite live)
