@@ -5,7 +5,7 @@ APPROVED needs the owner. INTEGRATED needs an import into Assets/ with backup + 
 
 | Batch | Content | Redraw | New frames | Depends | Status |
 |---|---|---|---|---|---|
-| B01 | Benchmark + style lock | 77 | 0 | - | SENT_TO_CODEX |
+| B01 | Benchmark + style lock | 77 | 0 | - | SENT_TO_CODEX (P0/P1 returned: 39/39 pass hard gates; Unity-captured; R1 defects queued in ArtProduction/reviews/B01/DEFECTS_R1.md) |
 | B02 | Starter heroes complete (7 starters) | 36 | 21 | G1 (owner approves the B01 style) | BRIEF_READY |
 | B03 | Heroes: tidal, raiden, glacius, zephyr, magnus, seren | 48 | 18 | G1; B02 approved as the hero reference | BRIEF_READY |
 | B04 | Heroes: nyxara, ashara, nerissa, voltrix, eirwen, kael | 48 | 18 | G1; B02 approved as the hero reference | BRIEF_READY |
