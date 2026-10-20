@@ -1,0 +1,41 @@
+{
+  "_doc": "Art quality gates (Docs/Enhancement/Final/ART_BIBLE.md). Sizes are facts from the current pipeline; thresholds are PROPOSALS tuned on the current set and recorded in TEST_REPORT.md.",
+  "screen": {
+    "_doc": "Battle camera: orthographicSize = max(7.5, 13.2/aspect) -> 15 world units tall on 16:9. Pixels per world unit at reference heights.",
+    "worldUnitsTall": 15.0,
+    "referenceHeights": { "phone_small_720p": 720, "phone_1080p": 1080, "pc_1440p": 1440 }
+  },
+  "categories": {
+    "Heroes":    { "kind": "unit",  "sizes": [[320, 320]], "footRowFromPivot": true, "safeMargin": 2 },
+    "Enemies":   { "kind": "unit",  "sizes": [[256, 256], [512, 512]], "footRowFromPivot": true, "safeMargin": 2 },
+    "Portraits": { "kind": "icon",  "sizes": [[192, 192]], "safeMargin": 0, "allowBorder": true },
+    "Cards":     { "kind": "icon",  "sizes": [[160, 160]], "safeMargin": 1 },
+    "Relics":    { "kind": "icon",  "sizes": [[128, 128]], "safeMargin": 1 },
+    "Icons":     { "kind": "icon",  "sizes": [[96, 96], [128, 128]], "safeMargin": 1 },
+    "Vfx":       { "kind": "fx",    "sizes": null, "allowBorder": true },
+    "UI":        { "kind": "ui",    "sizes": null, "allowBorder": true, "opaqueOk": true },
+    "World":     { "kind": "world", "sizes": null, "allowBorder": true, "opaqueOk": true }
+  },
+  "thresholds": {
+    "haloFringeRatio": 0.12,
+    "footTolerancePx": 8,
+    "scaleOutlierPct": 0.35,
+    "frameJumpIoU": 0.55,
+    "enemyFrameIoU": 0.6,
+    "weakEvolutionIoU": 0.9,
+    "weakEvolutionHueDist": 0.25,
+    "minEdgeContrast": 1.6,
+    "minSpellContrast": 1.35,
+    "overdrawMinOpaque": 0.12,
+    "cvdMinDeltaE": 12.0,
+    "lightingInversion": 0.06
+  },
+  "budgetsMB": {
+    "_doc": "RGBA32 uncompressed upper bound per category (device compression not measurable here).",
+    "Heroes": 110, "Enemies": 50, "World": 90, "Vfx": 16, "Icons": 6, "Relics": 6, "Cards": 8, "Portraits": 6, "UI": 8
+  },
+  "unitSets": {
+    "heroFrames": ["idle", "cast", "downed", "evoA", "evoA_cast", "evoB", "evoB_cast"],
+    "enemyFrames": ["a", "b"]
+  }
+}

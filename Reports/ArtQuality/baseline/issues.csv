@@ -1,0 +1,301 @@
+asset,check,severity,waived,value,message
+Enemies/goblin_sprinter_b.png,cropped_silhouette,error,False,0.0039,opaque pixels touch the canvas edge (cropped)
+Enemies/siege_colossus_a.png,cropped_silhouette,error,False,0.0107,opaque pixels touch the canvas edge (cropped)
+Enemies/siege_colossus_b.png,cropped_silhouette,error,False,0.0303,opaque pixels touch the canvas edge (cropped)
+Enemies/stone_burrower_a.png,cropped_silhouette,error,False,0.0068,opaque pixels touch the canvas edge (cropped)
+Enemies/stone_burrower_b.png,cropped_silhouette,error,False,0.0068,opaque pixels touch the canvas edge (cropped)
+Heroes/ashara_cast.png,cropped_silhouette,error,False,0.0117,opaque pixels touch the canvas edge (cropped)
+Heroes/ashara_evoA_cast.png,cropped_silhouette,error,False,0.0117,opaque pixels touch the canvas edge (cropped)
+Heroes/ashara_evoB_cast.png,cropped_silhouette,error,False,0.0117,opaque pixels touch the canvas edge (cropped)
+Heroes/cinder_cast.png,cropped_silhouette,error,False,0.0406,opaque pixels touch the canvas edge (cropped)
+Heroes/cinder_evoA.png,cropped_silhouette,error,False,0.0148,opaque pixels touch the canvas edge (cropped)
+Heroes/cinder_evoA_cast.png,cropped_silhouette,error,False,0.0406,opaque pixels touch the canvas edge (cropped)
+Heroes/cinder_evoB.png,cropped_silhouette,error,False,0.0148,opaque pixels touch the canvas edge (cropped)
+Heroes/cinder_evoB_cast.png,cropped_silhouette,error,False,0.0406,opaque pixels touch the canvas edge (cropped)
+Heroes/cinder_idle.png,cropped_silhouette,error,False,0.0148,opaque pixels touch the canvas edge (cropped)
+Heroes/eirwen_downed.png,cropped_silhouette,error,False,0.0336,opaque pixels touch the canvas edge (cropped)
+Heroes/freya_cast.png,cropped_silhouette,error,False,0.0078,opaque pixels touch the canvas edge (cropped)
+Heroes/freya_evoA_cast.png,cropped_silhouette,error,False,0.0078,opaque pixels touch the canvas edge (cropped)
+Heroes/freya_evoB_cast.png,cropped_silhouette,error,False,0.0078,opaque pixels touch the canvas edge (cropped)
+Heroes/glacius_downed.png,cropped_silhouette,error,False,0.0648,opaque pixels touch the canvas edge (cropped)
+Heroes/ignis_cast.png,cropped_silhouette,error,False,0.0281,opaque pixels touch the canvas edge (cropped)
+Heroes/ignis_evoA.png,cropped_silhouette,error,False,0.0164,opaque pixels touch the canvas edge (cropped)
+Heroes/ignis_evoA_cast.png,cropped_silhouette,error,False,0.0281,opaque pixels touch the canvas edge (cropped)
+Heroes/ignis_evoB.png,cropped_silhouette,error,False,0.0164,opaque pixels touch the canvas edge (cropped)
+Heroes/ignis_evoB_cast.png,cropped_silhouette,error,False,0.0281,opaque pixels touch the canvas edge (cropped)
+Heroes/ignis_idle.png,cropped_silhouette,error,False,0.0164,opaque pixels touch the canvas edge (cropped)
+Heroes/kael_cast.png,cropped_silhouette,error,False,0.0086,opaque pixels touch the canvas edge (cropped)
+Heroes/kael_downed.png,cropped_silhouette,error,False,0.0359,opaque pixels touch the canvas edge (cropped)
+Heroes/kael_evoA.png,cropped_silhouette,error,False,0.0086,opaque pixels touch the canvas edge (cropped)
+Heroes/kael_evoA_cast.png,cropped_silhouette,error,False,0.0086,opaque pixels touch the canvas edge (cropped)
+Heroes/kael_evoB.png,cropped_silhouette,error,False,0.0086,opaque pixels touch the canvas edge (cropped)
+Heroes/kael_evoB_cast.png,cropped_silhouette,error,False,0.0086,opaque pixels touch the canvas edge (cropped)
+Heroes/kael_idle.png,cropped_silhouette,error,False,0.0086,opaque pixels touch the canvas edge (cropped)
+Heroes/magnus_cast.png,cropped_silhouette,error,False,0.0102,opaque pixels touch the canvas edge (cropped)
+Heroes/magnus_downed.png,cropped_silhouette,error,False,0.0227,opaque pixels touch the canvas edge (cropped)
+Heroes/magnus_evoA.png,cropped_silhouette,error,False,0.0102,opaque pixels touch the canvas edge (cropped)
+Heroes/magnus_evoA_cast.png,cropped_silhouette,error,False,0.0102,opaque pixels touch the canvas edge (cropped)
+Heroes/magnus_evoB.png,cropped_silhouette,error,False,0.0102,opaque pixels touch the canvas edge (cropped)
+Heroes/magnus_evoB_cast.png,cropped_silhouette,error,False,0.0102,opaque pixels touch the canvas edge (cropped)
+Heroes/magnus_idle.png,cropped_silhouette,error,False,0.0102,opaque pixels touch the canvas edge (cropped)
+Heroes/marina_cast.png,cropped_silhouette,error,False,0.0125,opaque pixels touch the canvas edge (cropped)
+Heroes/marina_evoA_cast.png,cropped_silhouette,error,False,0.0125,opaque pixels touch the canvas edge (cropped)
+Heroes/marina_evoB_cast.png,cropped_silhouette,error,False,0.0125,opaque pixels touch the canvas edge (cropped)
+Heroes/nerissa_cast.png,cropped_silhouette,error,False,0.0242,opaque pixels touch the canvas edge (cropped)
+Heroes/nerissa_evoA_cast.png,cropped_silhouette,error,False,0.0242,opaque pixels touch the canvas edge (cropped)
+Heroes/nerissa_evoB_cast.png,cropped_silhouette,error,False,0.0242,opaque pixels touch the canvas edge (cropped)
+Heroes/sylph_cast.png,cropped_silhouette,error,False,0.025,opaque pixels touch the canvas edge (cropped)
+Heroes/sylph_downed.png,cropped_silhouette,error,False,0.007,opaque pixels touch the canvas edge (cropped)
+Heroes/sylph_evoA_cast.png,cropped_silhouette,error,False,0.025,opaque pixels touch the canvas edge (cropped)
+Heroes/sylph_evoB_cast.png,cropped_silhouette,error,False,0.025,opaque pixels touch the canvas edge (cropped)
+Heroes/terra_cast.png,cropped_silhouette,error,False,0.0234,opaque pixels touch the canvas edge (cropped)
+Heroes/terra_evoA_cast.png,cropped_silhouette,error,False,0.0234,opaque pixels touch the canvas edge (cropped)
+Heroes/terra_evoB_cast.png,cropped_silhouette,error,False,0.0234,opaque pixels touch the canvas edge (cropped)
+Heroes/tidal_downed.png,cropped_silhouette,error,False,0.018,opaque pixels touch the canvas edge (cropped)
+Heroes/volt_cast.png,cropped_silhouette,error,False,0.0258,opaque pixels touch the canvas edge (cropped)
+Heroes/volt_evoA.png,cropped_silhouette,error,False,0.0234,opaque pixels touch the canvas edge (cropped)
+Heroes/volt_evoA_cast.png,cropped_silhouette,error,False,0.0258,opaque pixels touch the canvas edge (cropped)
+Heroes/volt_evoB.png,cropped_silhouette,error,False,0.0234,opaque pixels touch the canvas edge (cropped)
+Heroes/volt_evoB_cast.png,cropped_silhouette,error,False,0.0258,opaque pixels touch the canvas edge (cropped)
+Heroes/volt_idle.png,cropped_silhouette,error,False,0.0234,opaque pixels touch the canvas edge (cropped)
+Heroes/voltrix_cast.png,cropped_silhouette,error,False,0.0391,opaque pixels touch the canvas edge (cropped)
+Heroes/voltrix_evoA_cast.png,cropped_silhouette,error,False,0.0391,opaque pixels touch the canvas edge (cropped)
+Heroes/voltrix_evoB_cast.png,cropped_silhouette,error,False,0.0391,opaque pixels touch the canvas edge (cropped)
+Icons/element_*,cvd_confusable,info,False,6.07,earth vs fire ΔE 6.07 under protanopia (element glyph icons provide a shape cue)
+Icons/element_*,cvd_confusable,info,False,9.7,earth vs nature ΔE 9.7 under protanopia (element glyph icons provide a shape cue)
+Icons/element_*,cvd_confusable,info,False,10.78,fire vs nature ΔE 10.78 under protanopia (element glyph icons provide a shape cue)
+Icons/element_*,cvd_confusable,info,False,8.22,light vs poison ΔE 8.22 under protanopia (element glyph icons provide a shape cue)
+Icons/element_*,cvd_confusable,info,False,9.87,lightning vs void ΔE 9.87 under protanopia (element glyph icons provide a shape cue)
+Icons/element_*,cvd_confusable,info,False,6.84,light vs poison ΔE 6.84 under deuteranopia (element glyph icons provide a shape cue)
+Icons/element_*,cvd_confusable,info,False,11.43,lightning vs void ΔE 11.43 under deuteranopia (element glyph icons provide a shape cue)
+Icons/element_*,cvd_confusable,info,False,11.6,ice vs wind ΔE 11.6 under tritanopia (element glyph icons provide a shape cue)
+Enemies/chaos_elemental_a.png,foot_pivot_mismatch,warning,False,-10.0,lowest opaque row is -10px from the pivot (units float or sink)
+Enemies/chaos_elemental_b.png,foot_pivot_mismatch,warning,False,-10.0,lowest opaque row is -10px from the pivot (units float or sink)
+Enemies/mana_leech_a.png,foot_pivot_mismatch,warning,False,-13.0,lowest opaque row is -13px from the pivot (units float or sink)
+Enemies/mana_leech_b.png,foot_pivot_mismatch,warning,False,-21.0,lowest opaque row is -21px from the pivot (units float or sink)
+Enemies/rift_warden_a.png,foot_pivot_mismatch,warning,False,-20.0,lowest opaque row is -20px from the pivot (units float or sink)
+Enemies/rift_warden_b.png,foot_pivot_mismatch,warning,False,-30.0,lowest opaque row is -30px from the pivot (units float or sink)
+Enemies/riftling_a.png,foot_pivot_mismatch,warning,False,-11.0,lowest opaque row is -11px from the pivot (units float or sink)
+Enemies/riftling_b.png,foot_pivot_mismatch,warning,False,-17.0,lowest opaque row is -17px from the pivot (units float or sink)
+Enemies/rootbound_treant_a.png,foot_pivot_mismatch,warning,False,9.0,lowest opaque row is +9px from the pivot (units float or sink)
+Enemies/rootbound_treant_b.png,foot_pivot_mismatch,warning,False,9.0,lowest opaque row is +9px from the pivot (units float or sink)
+Enemies/soul_binder_a.png,foot_pivot_mismatch,warning,False,-11.0,lowest opaque row is -11px from the pivot (units float or sink)
+Enemies/soul_binder_b.png,foot_pivot_mismatch,warning,False,-17.0,lowest opaque row is -17px from the pivot (units float or sink)
+Enemies/spirit_wisp_a.png,foot_pivot_mismatch,warning,False,-16.0,lowest opaque row is -16px from the pivot (units float or sink)
+Enemies/spirit_wisp_b.png,foot_pivot_mismatch,warning,False,-22.0,lowest opaque row is -22px from the pivot (units float or sink)
+Enemies/storm_harpy_a.png,foot_pivot_mismatch,warning,False,-56.0,lowest opaque row is -56px from the pivot (units float or sink)
+Enemies/storm_harpy_b.png,foot_pivot_mismatch,warning,False,-24.0,lowest opaque row is -24px from the pivot (units float or sink)
+Enemies/storm_wisp_a.png,foot_pivot_mismatch,warning,False,-60.0,lowest opaque row is -60px from the pivot (units float or sink)
+Enemies/storm_wisp_b.png,foot_pivot_mismatch,warning,False,-80.0,lowest opaque row is -80px from the pivot (units float or sink)
+Enemies/warded_b.png,foot_pivot_mismatch,warning,False,10.0,lowest opaque row is +10px from the pivot (units float or sink)
+Heroes/vesper_evoB.png,foot_pivot_mismatch,warning,False,16.0,lowest opaque row is +16px from the pivot (units float or sink)
+Heroes/vesper_evoB_cast.png,foot_pivot_mismatch,warning,False,16.0,lowest opaque row is +16px from the pivot (units float or sink)
+Enemies/storm_harpy_b.png,frame_jump,warning,False,0.4465,silhouette IoU 0.45 vs storm_harpy_a.png (identity drift / pop)
+Enemies/storm_wisp_b.png,frame_jump,warning,False,0.5625,silhouette IoU 0.56 vs storm_wisp_a.png (identity drift / pop)
+Enemies/vaelith_b.png,frame_jump,warning,False,0.5804,silhouette IoU 0.58 vs vaelith_a.png (identity drift / pop)
+Enemies/frost_wraith_a.png,lighting_direction,warning,False,0.257,lower-right brighter than upper-left (shading rule: light from upper-left)
+Enemies/frost_wraith_b.png,lighting_direction,warning,False,0.2493,lower-right brighter than upper-left (shading rule: light from upper-left)
+Enemies/goblin_sprinter_a.png,lighting_direction,warning,False,0.0685,lower-right brighter than upper-left (shading rule: light from upper-left)
+Enemies/mirrath_a.png,lighting_direction,warning,False,0.0711,lower-right brighter than upper-left (shading rule: light from upper-left)
+Enemies/mirrath_b.png,lighting_direction,warning,False,0.0929,lower-right brighter than upper-left (shading rule: light from upper-left)
+Enemies/soul_binder_a.png,lighting_direction,warning,False,0.1085,lower-right brighter than upper-left (shading rule: light from upper-left)
+Enemies/soul_binder_b.png,lighting_direction,warning,False,0.1112,lower-right brighter than upper-left (shading rule: light from upper-left)
+Heroes/aeris_downed.png,lighting_direction,warning,False,0.0929,lower-right brighter than upper-left (shading rule: light from upper-left)
+Heroes/aeris_evoA.png,lighting_direction,warning,False,0.061,lower-right brighter than upper-left (shading rule: light from upper-left)
+Heroes/aeris_evoA_cast.png,lighting_direction,warning,False,0.0735,lower-right brighter than upper-left (shading rule: light from upper-left)
+Heroes/eirwen_downed.png,lighting_direction,warning,False,0.0717,lower-right brighter than upper-left (shading rule: light from upper-left)
+Heroes/elowen_downed.png,lighting_direction,warning,False,0.1192,lower-right brighter than upper-left (shading rule: light from upper-left)
+Heroes/marina_cast.png,lighting_direction,warning,False,0.0637,lower-right brighter than upper-left (shading rule: light from upper-left)
+Heroes/marina_downed.png,lighting_direction,warning,False,0.1574,lower-right brighter than upper-left (shading rule: light from upper-left)
+Heroes/marina_idle.png,lighting_direction,warning,False,0.0669,lower-right brighter than upper-left (shading rule: light from upper-left)
+Heroes/mirel_evoB.png,lighting_direction,warning,False,0.1418,lower-right brighter than upper-left (shading rule: light from upper-left)
+Heroes/mirel_evoB_cast.png,lighting_direction,warning,False,0.171,lower-right brighter than upper-left (shading rule: light from upper-left)
+Heroes/nerissa_cast.png,lighting_direction,warning,False,0.0968,lower-right brighter than upper-left (shading rule: light from upper-left)
+Heroes/nerissa_evoA.png,lighting_direction,warning,False,0.0887,lower-right brighter than upper-left (shading rule: light from upper-left)
+Heroes/nerissa_evoA_cast.png,lighting_direction,warning,False,0.0717,lower-right brighter than upper-left (shading rule: light from upper-left)
+Heroes/nerissa_idle.png,lighting_direction,warning,False,0.1158,lower-right brighter than upper-left (shading rule: light from upper-left)
+Heroes/solenne_cast.png,lighting_direction,warning,False,0.065,lower-right brighter than upper-left (shading rule: light from upper-left)
+Heroes/solenne_downed.png,lighting_direction,warning,False,0.1996,lower-right brighter than upper-left (shading rule: light from upper-left)
+Heroes/solenne_idle.png,lighting_direction,warning,False,0.1133,lower-right brighter than upper-left (shading rule: light from upper-left)
+Heroes/zephyr_cast.png,lighting_direction,warning,False,0.2757,lower-right brighter than upper-left (shading rule: light from upper-left)
+Heroes/zephyr_downed.png,lighting_direction,warning,False,0.2063,lower-right brighter than upper-left (shading rule: light from upper-left)
+Heroes/zephyr_evoA.png,lighting_direction,warning,False,0.1196,lower-right brighter than upper-left (shading rule: light from upper-left)
+Heroes/zephyr_evoA_cast.png,lighting_direction,warning,False,0.2672,lower-right brighter than upper-left (shading rule: light from upper-left)
+Heroes/zephyr_evoB_cast.png,lighting_direction,warning,False,0.2055,lower-right brighter than upper-left (shading rule: light from upper-left)
+Heroes/zephyr_idle.png,lighting_direction,warning,False,0.128,lower-right brighter than upper-left (shading rule: light from upper-left)
+Heroes/nerissa_evoA.png,low_contrast_battlefield,warning,False,1.5708,body/outline contrast 1.57:1 on the least favourable battlefield
+Heroes/nerissa_evoA_cast.png,low_contrast_battlefield,warning,False,1.5674,body/outline contrast 1.57:1 on the least favourable battlefield
+Enemies/aetherion_a.png,low_contrast_spells,warning,False,1.0145,body contrast 1.01:1 against dense spell fields
+Enemies/aetherion_b.png,low_contrast_spells,warning,False,1.0372,body contrast 1.04:1 against dense spell fields
+Enemies/blight_shambler_a.png,low_contrast_spells,warning,False,1.1164,body contrast 1.12:1 against dense spell fields
+Enemies/blight_shambler_b.png,low_contrast_spells,warning,False,1.0889,body contrast 1.09:1 against dense spell fields
+Enemies/chaos_elemental_a.png,low_contrast_spells,warning,False,1.121,body contrast 1.12:1 against dense spell fields
+Enemies/chaos_elemental_b.png,low_contrast_spells,warning,False,1.132,body contrast 1.13:1 against dense spell fields
+Enemies/grunt_a.png,low_contrast_spells,warning,False,1.2616,body contrast 1.26:1 against dense spell fields
+Enemies/grunt_b.png,low_contrast_spells,warning,False,1.2616,body contrast 1.26:1 against dense spell fields
+Enemies/mirror_knight_a.png,low_contrast_spells,warning,False,1.0309,body contrast 1.03:1 against dense spell fields
+Enemies/mirror_knight_b.png,low_contrast_spells,warning,False,1.0309,body contrast 1.03:1 against dense spell fields
+Enemies/ravager_a.png,low_contrast_spells,warning,False,1.2228,body contrast 1.22:1 against dense spell fields
+Enemies/ravager_b.png,low_contrast_spells,warning,False,1.2228,body contrast 1.22:1 against dense spell fields
+Enemies/riftling_a.png,low_contrast_spells,warning,False,1.0211,body contrast 1.02:1 against dense spell fields
+Enemies/riftling_b.png,low_contrast_spells,warning,False,1.0211,body contrast 1.02:1 against dense spell fields
+Enemies/runner_a.png,low_contrast_spells,warning,False,1.025,body contrast 1.02:1 against dense spell fields
+Enemies/runner_b.png,low_contrast_spells,warning,False,1.088,body contrast 1.09:1 against dense spell fields
+Enemies/shieldbearer_a.png,low_contrast_spells,warning,False,1.1763,body contrast 1.18:1 against dense spell fields
+Enemies/shieldbearer_b.png,low_contrast_spells,warning,False,1.1763,body contrast 1.18:1 against dense spell fields
+Enemies/siegebreaker_golem_a.png,low_contrast_spells,warning,False,1.1031,body contrast 1.10:1 against dense spell fields
+Enemies/siegebreaker_golem_b.png,low_contrast_spells,warning,False,1.1031,body contrast 1.10:1 against dense spell fields
+Enemies/spore_carrier_a.png,low_contrast_spells,warning,False,1.3481,body contrast 1.35:1 against dense spell fields
+Enemies/spore_carrier_b.png,low_contrast_spells,warning,False,1.3027,body contrast 1.30:1 against dense spell fields
+Enemies/stone_burrower_a.png,low_contrast_spells,warning,False,1.1782,body contrast 1.18:1 against dense spell fields
+Enemies/stone_burrower_b.png,low_contrast_spells,warning,False,1.336,body contrast 1.34:1 against dense spell fields
+Enemies/storm_harpy_b.png,low_contrast_spells,warning,False,1.2012,body contrast 1.20:1 against dense spell fields
+Enemies/summoner_a.png,low_contrast_spells,warning,False,1.2932,body contrast 1.29:1 against dense spell fields
+Enemies/summoner_b.png,low_contrast_spells,warning,False,1.2932,body contrast 1.29:1 against dense spell fields
+Enemies/thunder_drummer_a.png,low_contrast_spells,warning,False,1.2858,body contrast 1.29:1 against dense spell fields
+Enemies/thunder_drummer_b.png,low_contrast_spells,warning,False,1.2858,body contrast 1.29:1 against dense spell fields
+Enemies/vaelith_a.png,low_contrast_spells,warning,False,1.3242,body contrast 1.32:1 against dense spell fields
+Enemies/vaelith_b.png,low_contrast_spells,warning,False,1.2456,body contrast 1.25:1 against dense spell fields
+Enemies/warded_a.png,low_contrast_spells,warning,False,1.1043,body contrast 1.10:1 against dense spell fields
+Enemies/warded_b.png,low_contrast_spells,warning,False,1.1043,body contrast 1.10:1 against dense spell fields
+Heroes/caelis_cast.png,low_contrast_spells,warning,False,1.3197,body contrast 1.32:1 against dense spell fields
+Heroes/caelis_evoA.png,low_contrast_spells,warning,False,1.0208,body contrast 1.02:1 against dense spell fields
+Heroes/cinder_evoB.png,low_contrast_spells,warning,False,1.2114,body contrast 1.21:1 against dense spell fields
+Heroes/cinder_evoB_cast.png,low_contrast_spells,warning,False,1.2114,body contrast 1.21:1 against dense spell fields
+Heroes/doran_cast.png,low_contrast_spells,warning,False,1.0296,body contrast 1.03:1 against dense spell fields
+Heroes/doran_evoA.png,low_contrast_spells,warning,False,1.1253,body contrast 1.13:1 against dense spell fields
+Heroes/doran_evoA_cast.png,low_contrast_spells,warning,False,1.1959,body contrast 1.20:1 against dense spell fields
+Heroes/doran_evoB.png,low_contrast_spells,warning,False,1.0212,body contrast 1.02:1 against dense spell fields
+Heroes/doran_evoB_cast.png,low_contrast_spells,warning,False,1.2329,body contrast 1.23:1 against dense spell fields
+Heroes/doran_idle.png,low_contrast_spells,warning,False,1.1566,body contrast 1.16:1 against dense spell fields
+Heroes/ignis_cast.png,low_contrast_spells,warning,False,1.1076,body contrast 1.11:1 against dense spell fields
+Heroes/ignis_evoA.png,low_contrast_spells,warning,False,1.1076,body contrast 1.11:1 against dense spell fields
+Heroes/ignis_evoA_cast.png,low_contrast_spells,warning,False,1.1076,body contrast 1.11:1 against dense spell fields
+Heroes/ignis_evoB.png,low_contrast_spells,warning,False,1.1076,body contrast 1.11:1 against dense spell fields
+Heroes/ignis_evoB_cast.png,low_contrast_spells,warning,False,1.1076,body contrast 1.11:1 against dense spell fields
+Heroes/ignis_idle.png,low_contrast_spells,warning,False,1.1076,body contrast 1.11:1 against dense spell fields
+Heroes/isolde_cast.png,low_contrast_spells,warning,False,1.344,body contrast 1.34:1 against dense spell fields
+Heroes/isolde_evoA.png,low_contrast_spells,warning,False,1.0507,body contrast 1.05:1 against dense spell fields
+Heroes/isolde_evoA_cast.png,low_contrast_spells,warning,False,1.0126,body contrast 1.01:1 against dense spell fields
+Heroes/isolde_evoB.png,low_contrast_spells,warning,False,1.2859,body contrast 1.29:1 against dense spell fields
+Heroes/kael_evoB_cast.png,low_contrast_spells,warning,False,1.2451,body contrast 1.25:1 against dense spell fields
+Heroes/liora_evoA.png,low_contrast_spells,warning,False,1.2136,body contrast 1.21:1 against dense spell fields
+Heroes/liora_evoA_cast.png,low_contrast_spells,warning,False,1.2423,body contrast 1.24:1 against dense spell fields
+Heroes/liora_evoB.png,low_contrast_spells,warning,False,1.0425,body contrast 1.04:1 against dense spell fields
+Heroes/liora_evoB_cast.png,low_contrast_spells,warning,False,1.1094,body contrast 1.11:1 against dense spell fields
+Heroes/magnus_cast.png,low_contrast_spells,warning,False,1.1744,body contrast 1.17:1 against dense spell fields
+Heroes/magnus_evoA.png,low_contrast_spells,warning,False,1.1645,body contrast 1.16:1 against dense spell fields
+Heroes/magnus_evoA_cast.png,low_contrast_spells,warning,False,1.1358,body contrast 1.14:1 against dense spell fields
+Heroes/magnus_evoB.png,low_contrast_spells,warning,False,1.2536,body contrast 1.25:1 against dense spell fields
+Heroes/magnus_evoB_cast.png,low_contrast_spells,warning,False,1.0335,body contrast 1.03:1 against dense spell fields
+Heroes/magnus_idle.png,low_contrast_spells,warning,False,1.1876,body contrast 1.19:1 against dense spell fields
+Heroes/marina_cast.png,low_contrast_spells,warning,False,1.0872,body contrast 1.09:1 against dense spell fields
+Heroes/marina_evoA.png,low_contrast_spells,warning,False,1.1419,body contrast 1.14:1 against dense spell fields
+Heroes/marina_evoA_cast.png,low_contrast_spells,warning,False,1.0748,body contrast 1.07:1 against dense spell fields
+Heroes/marina_idle.png,low_contrast_spells,warning,False,1.163,body contrast 1.16:1 against dense spell fields
+Heroes/mirel_cast.png,low_contrast_spells,warning,False,1.1807,body contrast 1.18:1 against dense spell fields
+Heroes/mirel_evoA.png,low_contrast_spells,warning,False,1.0166,body contrast 1.02:1 against dense spell fields
+Heroes/mirel_evoA_cast.png,low_contrast_spells,warning,False,1.0166,body contrast 1.02:1 against dense spell fields
+Heroes/mirel_evoB.png,low_contrast_spells,warning,False,1.2327,body contrast 1.23:1 against dense spell fields
+Heroes/mirel_idle.png,low_contrast_spells,warning,False,1.1109,body contrast 1.11:1 against dense spell fields
+Heroes/nerissa_evoB.png,low_contrast_spells,warning,False,1.2537,body contrast 1.25:1 against dense spell fields
+Heroes/nerissa_evoB_cast.png,low_contrast_spells,warning,False,1.1571,body contrast 1.16:1 against dense spell fields
+Heroes/oriane_evoB.png,low_contrast_spells,warning,False,1.0208,body contrast 1.02:1 against dense spell fields
+Heroes/oriane_evoB_cast.png,low_contrast_spells,warning,False,1.0208,body contrast 1.02:1 against dense spell fields
+Heroes/solenne_cast.png,low_contrast_spells,warning,False,1.0319,body contrast 1.03:1 against dense spell fields
+Heroes/solenne_evoB.png,low_contrast_spells,warning,False,1.3327,body contrast 1.33:1 against dense spell fields
+Heroes/solenne_idle.png,low_contrast_spells,warning,False,1.0954,body contrast 1.10:1 against dense spell fields
+Heroes/sylph_evoA.png,low_contrast_spells,warning,False,1.1186,body contrast 1.12:1 against dense spell fields
+Heroes/sylph_idle.png,low_contrast_spells,warning,False,1.1534,body contrast 1.15:1 against dense spell fields
+Heroes/terra_evoB.png,low_contrast_spells,warning,False,1.2777,body contrast 1.28:1 against dense spell fields
+Heroes/terra_evoB_cast.png,low_contrast_spells,warning,False,1.2777,body contrast 1.28:1 against dense spell fields
+Heroes/tidal_evoB.png,low_contrast_spells,warning,False,1.0266,body contrast 1.03:1 against dense spell fields
+Heroes/tidal_evoB_cast.png,low_contrast_spells,warning,False,1.0266,body contrast 1.03:1 against dense spell fields
+Heroes/volt_evoB.png,low_contrast_spells,warning,False,1.3333,body contrast 1.33:1 against dense spell fields
+Heroes/zephyr_cast.png,low_contrast_spells,warning,False,1.2706,body contrast 1.27:1 against dense spell fields
+Heroes/zephyr_evoA.png,low_contrast_spells,warning,False,1.3247,body contrast 1.32:1 against dense spell fields
+Heroes/zephyr_evoA_cast.png,low_contrast_spells,warning,False,1.2266,body contrast 1.23:1 against dense spell fields
+Heroes/zephyr_idle.png,low_contrast_spells,warning,False,1.3054,body contrast 1.31:1 against dense spell fields
+Enemies/ironclad_warlord_b.png,outside_safe_bounds,warning,False,,silhouette within 2px of the edge
+Enemies/nyxhollow_a.png,outside_safe_bounds,warning,False,,silhouette within 2px of the edge
+Enemies/nyxhollow_b.png,outside_safe_bounds,warning,False,,silhouette within 2px of the edge
+Enemies/riftling_a.png,overdraw_waste,warning,False,0.0974,only 10% of the quad is opaque (fill-rate cost); consider tighter canvas/mesh
+Enemies/riftling_b.png,overdraw_waste,warning,False,0.0974,only 10% of the quad is opaque (fill-rate cost); consider tighter canvas/mesh
+Enemies/spirit_wisp_a.png,overdraw_waste,warning,False,0.1071,only 11% of the quad is opaque (fill-rate cost); consider tighter canvas/mesh
+Enemies/spirit_wisp_b.png,overdraw_waste,warning,False,0.108,only 11% of the quad is opaque (fill-rate cost); consider tighter canvas/mesh
+Enemies/storm_wisp_a.png,overdraw_waste,warning,False,0.1066,only 11% of the quad is opaque (fill-rate cost); consider tighter canvas/mesh
+Enemies/storm_wisp_b.png,overdraw_waste,warning,False,0.1051,only 11% of the quad is opaque (fill-rate cost); consider tighter canvas/mesh
+Enemies/swarmling_a.png,overdraw_waste,warning,False,0.0968,only 10% of the quad is opaque (fill-rate cost); consider tighter canvas/mesh
+Enemies/swarmling_b.png,overdraw_waste,warning,False,0.0998,only 10% of the quad is opaque (fill-rate cost); consider tighter canvas/mesh
+Enemies/storm_wisp_b.png,scale_outlier,warning,False,0.6214,silhouette height 119px vs category median 192px
+Enemies/swarmling_a.png,scale_outlier,warning,False,0.5901,silhouette height 113px vs category median 192px
+Enemies/swarmling_b.png,scale_outlier,warning,False,0.611,silhouette height 117px vs category median 192px
+Heroes/ashara_evoA.png,weak_evolution,warning,False,0.994,idle~evoA: silhouette IoU 0.99 and colour distance 0.08 — branch not visually distinct
+Heroes/borun_evoA.png,weak_evolution,warning,False,0.9805,idle~evoA: silhouette IoU 0.98 and colour distance 0.05 — branch not visually distinct
+Heroes/caelis_evoB.png,weak_evolution,warning,False,0.9035,idle~evoB: silhouette IoU 0.90 and colour distance 0.15 — branch not visually distinct
+Heroes/cinder_evoA.png,weak_evolution,warning,False,0.9916,idle~evoA: silhouette IoU 0.99 and colour distance 0.01 — branch not visually distinct
+Heroes/eirwen_evoA.png,weak_evolution,warning,False,0.9841,idle~evoA: silhouette IoU 0.98 and colour distance 0.06 — branch not visually distinct
+Heroes/freya_evoA.png,weak_evolution,warning,False,0.9821,idle~evoA: silhouette IoU 0.98 and colour distance 0.11 — branch not visually distinct
+Heroes/glacius_evoA.png,weak_evolution,warning,False,0.9871,idle~evoA: silhouette IoU 0.99 and colour distance 0.24 — branch not visually distinct
+Heroes/ignis_evoA.png,weak_evolution,warning,False,0.9865,idle~evoA: silhouette IoU 0.99 and colour distance 0.04 — branch not visually distinct
+Heroes/kael_evoA.png,weak_evolution,warning,False,0.9877,idle~evoA: silhouette IoU 0.99 and colour distance 0.16 — branch not visually distinct
+Heroes/magnus_evoA.png,weak_evolution,warning,False,0.9793,idle~evoA: silhouette IoU 0.98 and colour distance 0.04 — branch not visually distinct
+Heroes/marina_evoA.png,weak_evolution,warning,False,0.9737,idle~evoA: silhouette IoU 0.97 and colour distance 0.12 — branch not visually distinct
+Heroes/nerissa_evoA.png,weak_evolution,warning,False,0.9716,idle~evoA: silhouette IoU 0.97 and colour distance 0.07 — branch not visually distinct
+Heroes/nyxara_evoA.png,weak_evolution,warning,False,0.9858,idle~evoA: silhouette IoU 0.99 and colour distance 0.06 — branch not visually distinct
+Heroes/raiden_evoA.png,weak_evolution,warning,False,0.9747,idle~evoA: silhouette IoU 0.97 and colour distance 0.06 — branch not visually distinct
+Heroes/seren_evoA.png,weak_evolution,warning,False,0.9995,idle~evoA: silhouette IoU 1.00 and colour distance 0.00 — branch not visually distinct
+Heroes/sylph_evoA.png,weak_evolution,warning,False,0.9734,idle~evoA: silhouette IoU 0.97 and colour distance 0.05 — branch not visually distinct
+Heroes/terra_evoA.png,weak_evolution,warning,False,0.9794,idle~evoA: silhouette IoU 0.98 and colour distance 0.07 — branch not visually distinct
+Heroes/tidal_evoA.png,weak_evolution,warning,False,0.9779,idle~evoA: silhouette IoU 0.98 and colour distance 0.04 — branch not visually distinct
+Heroes/volt_evoA.png,weak_evolution,warning,False,0.9913,idle~evoA: silhouette IoU 0.99 and colour distance 0.04 — branch not visually distinct
+Heroes/voltrix_evoA.png,weak_evolution,warning,False,0.9873,idle~evoA: silhouette IoU 0.99 and colour distance 0.02 — branch not visually distinct
+Heroes/zephyr_evoA.png,weak_evolution,warning,False,0.9813,idle~evoA: silhouette IoU 0.98 and colour distance 0.04 — branch not visually distinct
+Heroes/zerith_evoB.png,weak_evolution,warning,False,0.9021,idle~evoB: silhouette IoU 0.90 and colour distance 0.00 — branch not visually distinct
+Enemies/goblin_sprinter_a.png,white_halo,warning,False,0.2145,bright fringe on semi-transparent edge (premultiply/bleed issue)
+Enemies/goblin_sprinter_b.png,white_halo,warning,False,0.2032,bright fringe on semi-transparent edge (premultiply/bleed issue)
+Enemies/spore_carrier_a.png,white_halo,warning,False,0.3743,bright fringe on semi-transparent edge (premultiply/bleed issue)
+Enemies/spore_carrier_b.png,white_halo,warning,False,0.3538,bright fringe on semi-transparent edge (premultiply/bleed issue)
+Enemies/thornmother_a.png,white_halo,warning,False,0.2964,bright fringe on semi-transparent edge (premultiply/bleed issue)
+Enemies/thornmother_b.png,white_halo,warning,False,0.2973,bright fringe on semi-transparent edge (premultiply/bleed issue)
+Heroes/aeris_cast.png,white_halo,warning,False,0.7355,bright fringe on semi-transparent edge (premultiply/bleed issue)
+Heroes/aeris_evoA_cast.png,white_halo,warning,False,0.122,bright fringe on semi-transparent edge (premultiply/bleed issue)
+Heroes/aeris_evoB.png,white_halo,warning,False,0.8498,bright fringe on semi-transparent edge (premultiply/bleed issue)
+Heroes/aeris_evoB_cast.png,white_halo,warning,False,0.8807,bright fringe on semi-transparent edge (premultiply/bleed issue)
+Heroes/aeris_idle.png,white_halo,warning,False,0.6335,bright fringe on semi-transparent edge (premultiply/bleed issue)
+Heroes/eirwen_cast.png,white_halo,warning,False,0.9093,bright fringe on semi-transparent edge (premultiply/bleed issue)
+Heroes/eirwen_evoA.png,white_halo,warning,False,0.1946,bright fringe on semi-transparent edge (premultiply/bleed issue)
+Heroes/eirwen_evoA_cast.png,white_halo,warning,False,0.309,bright fringe on semi-transparent edge (premultiply/bleed issue)
+Heroes/eirwen_evoB.png,white_halo,warning,False,0.8482,bright fringe on semi-transparent edge (premultiply/bleed issue)
+Heroes/eirwen_evoB_cast.png,white_halo,warning,False,0.9059,bright fringe on semi-transparent edge (premultiply/bleed issue)
+Heroes/eirwen_idle.png,white_halo,warning,False,0.8269,bright fringe on semi-transparent edge (premultiply/bleed issue)
+Heroes/elowen_cast.png,white_halo,warning,False,0.6489,bright fringe on semi-transparent edge (premultiply/bleed issue)
+Heroes/elowen_evoB.png,white_halo,warning,False,0.8319,bright fringe on semi-transparent edge (premultiply/bleed issue)
+Heroes/elowen_evoB_cast.png,white_halo,warning,False,0.8267,bright fringe on semi-transparent edge (premultiply/bleed issue)
+Heroes/elowen_idle.png,white_halo,warning,False,0.5468,bright fringe on semi-transparent edge (premultiply/bleed issue)
+Heroes/freya_cast.png,white_halo,warning,False,0.8651,bright fringe on semi-transparent edge (premultiply/bleed issue)
+Heroes/freya_evoA_cast.png,white_halo,warning,False,0.1453,bright fringe on semi-transparent edge (premultiply/bleed issue)
+Heroes/freya_evoB.png,white_halo,warning,False,0.7972,bright fringe on semi-transparent edge (premultiply/bleed issue)
+Heroes/freya_evoB_cast.png,white_halo,warning,False,0.8505,bright fringe on semi-transparent edge (premultiply/bleed issue)
+Heroes/freya_idle.png,white_halo,warning,False,0.7773,bright fringe on semi-transparent edge (premultiply/bleed issue)
+Heroes/glacius_cast.png,white_halo,warning,False,0.7337,bright fringe on semi-transparent edge (premultiply/bleed issue)
+Heroes/glacius_evoB.png,white_halo,warning,False,0.8504,bright fringe on semi-transparent edge (premultiply/bleed issue)
+Heroes/glacius_evoB_cast.png,white_halo,warning,False,0.8758,bright fringe on semi-transparent edge (premultiply/bleed issue)
+Heroes/glacius_idle.png,white_halo,warning,False,0.7055,bright fringe on semi-transparent edge (premultiply/bleed issue)
+Heroes/isolde_cast.png,white_halo,warning,False,0.8684,bright fringe on semi-transparent edge (premultiply/bleed issue)
+Heroes/isolde_evoA_cast.png,white_halo,warning,False,0.2027,bright fringe on semi-transparent edge (premultiply/bleed issue)
+Heroes/isolde_evoB.png,white_halo,warning,False,0.8359,bright fringe on semi-transparent edge (premultiply/bleed issue)
+Heroes/isolde_evoB_cast.png,white_halo,warning,False,0.8445,bright fringe on semi-transparent edge (premultiply/bleed issue)
+Heroes/isolde_idle.png,white_halo,warning,False,0.662,bright fringe on semi-transparent edge (premultiply/bleed issue)
+Heroes/kael_cast.png,white_halo,warning,False,0.856,bright fringe on semi-transparent edge (premultiply/bleed issue)
+Heroes/kael_evoB.png,white_halo,warning,False,0.9323,bright fringe on semi-transparent edge (premultiply/bleed issue)
+Heroes/kael_evoB_cast.png,white_halo,warning,False,0.9372,bright fringe on semi-transparent edge (premultiply/bleed issue)
+Heroes/seren_evoB.png,white_halo,warning,False,0.4032,bright fringe on semi-transparent edge (premultiply/bleed issue)
+Heroes/seren_evoB_cast.png,white_halo,warning,False,0.5033,bright fringe on semi-transparent edge (premultiply/bleed issue)
+Heroes/sylph_cast.png,white_halo,warning,False,0.7884,bright fringe on semi-transparent edge (premultiply/bleed issue)
+Heroes/sylph_evoB.png,white_halo,warning,False,0.9227,bright fringe on semi-transparent edge (premultiply/bleed issue)
+Heroes/sylph_evoB_cast.png,white_halo,warning,False,0.9457,bright fringe on semi-transparent edge (premultiply/bleed issue)
+Heroes/sylph_idle.png,white_halo,warning,False,0.1774,bright fringe on semi-transparent edge (premultiply/bleed issue)
+Heroes/zephyr_cast.png,white_halo,warning,False,0.8198,bright fringe on semi-transparent edge (premultiply/bleed issue)
+Heroes/zephyr_evoB.png,white_halo,warning,False,0.9483,bright fringe on semi-transparent edge (premultiply/bleed issue)
+Heroes/zephyr_evoB_cast.png,white_halo,warning,False,0.9506,bright fringe on semi-transparent edge (premultiply/bleed issue)
