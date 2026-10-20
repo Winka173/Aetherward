@@ -1201,7 +1201,7 @@
   "prep.build": "Đội hình",
   "prep.cards": "Nâng cấp",
   "prep.downed_hint": "{0} đã gục. Hồi sinh với {1} Vàng hoặc để trống.",
-  "prep.drag_hint": "Kéo anh hùng vào các ô phát sáng (hoặc chạm anh hùng rồi chạm ô). Đổi chỗ miễn phí.",
+  "prep.drag_hint": "Đặt đội hình xuất phát: kéo anh hùng vào ô phát sáng (hoặc chạm anh hùng rồi chạm ô). Khi giao tranh, cả đội tự di chuyển theo đội hình đã chọn.",
   "prep.evolve": "Tiến hoá",
   "prep.evolve_ready": "{0} có thể tiến hoá!",
   "prep.incoming": "Sắp tới",

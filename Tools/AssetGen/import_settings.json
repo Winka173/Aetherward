@@ -10079,6 +10079,54 @@
   "ppu": 240,
   "sprite": true
  },
+ "Assets/_Aetherward/Resources/Art/Icons/ui_stance_aggressive.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 240,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Icons/ui_stance_balanced.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 240,
+  "sprite": true
+ },
+ "Assets/_Aetherward/Resources/Art/Icons/ui_stance_defensive.png": {
+  "border": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "filter": 1,
+  "maxSize": 2048,
+  "pivot": [
+   0.5,
+   0.5
+  ],
+  "ppu": 240,
+  "sprite": true
+ },
  "Assets/_Aetherward/Resources/Art/Icons/ui_star.png": {
   "border": [
    0,

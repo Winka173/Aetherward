@@ -1201,7 +1201,7 @@
   "prep.build": "Build",
   "prep.cards": "Upgrades",
   "prep.downed_hint": "{0} is down. Revive for {1} Gold or leave the node empty.",
-  "prep.drag_hint": "Drag heroes onto glowing nodes (or tap a hero, then a node). Swapping is free.",
+  "prep.drag_hint": "Set the starting formation: drag heroes onto glowing spots (or tap a hero, then a spot). In battle the party moves on its own by stance.",
   "prep.evolve": "Evolve",
   "prep.evolve_ready": "{0} can evolve!",
   "prep.incoming": "Incoming",

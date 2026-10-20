@@ -117,7 +117,7 @@ namespace Aetherward.Game
                 st.fontSize = Px(30);
                 st.wordWrap = true;
                 st.padding = new RectOffset(Px(18), Px(18), Px(6), Px(12));
-                Color text = t == Tone.Primary ? new Color(0.2f, 0.1f, 0.05f) : Color.white;
+                Color text = t == Tone.Primary ? new Color(1f, 0.93f, 0.72f) : Color.white;   // v3 dark forged buttons: warm light label on primary
                 st.normal.textColor = st.hover.textColor = st.active.textColor = st.onNormal.textColor = text;
                 Buttons[t] = st;
                 var off = new GUIStyle(st);

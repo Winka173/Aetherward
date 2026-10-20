@@ -2470,95 +2470,107 @@
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Icons/ui_auto.png",
-   "sha256": "145f8e2c042c36549238208d0ca913cd7d585d764931a94af16c0d4be3909c8d"
+   "sha256": "db0d18fdb96d36538016497c2c68e485b575beba6d10e46a5668def75e377df7"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Icons/ui_check.png",
-   "sha256": "c8db4cd857e2685352ebe822f5fba76365112e54a1e00f0499831c51f61f1619"
+   "sha256": "82dcd1e5fc3703c1c1e5a9df9672e2a2f9c0806234d43ab485c124c614a76f51"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Icons/ui_close.png",
-   "sha256": "287a87006ff9484c081146a63d17a097b95ee4ec6e9cf963e29d6bfceb21adfb"
+   "sha256": "add3a506f6d5309af92f86b5b2a0932e5d608c76da2650c7506e5863e2bb349f"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Icons/ui_codex.png",
-   "sha256": "784499687d32f6a6b663f987a257f04636ef323f2bb536791f233848a494ae9f"
+   "sha256": "070a13262f0367c563eee11d6335d33a5755b137e70c5c10aa188483dbca812f"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Icons/ui_crystal.png",
-   "sha256": "9c7958c6734c2a93a7b2b36a51340a4d1a78adcef1dbc18d8ba54f0161aa9221"
+   "sha256": "0fa9633c62c62281b5e402a4a6cb5454b3cd3b97004a7e843ad7518ec1ca9195"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Icons/ui_essence.png",
-   "sha256": "c259ad6327fbe0ce9afb353a605506448a47c70767a08d2ecfd40f265f966794"
+   "sha256": "a4f25490a20d77b7d3e59f32f01482ac9449c1d1238a28581f44b99a957e2b85"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Icons/ui_evolve.png",
-   "sha256": "c79fc77e565ea7cf3327c11e6d263dea4cb3b59b5a64a930404379d0b486b614"
+   "sha256": "9e82f8801c813fcdfca7ec02b06c1b7faa0dd9471c54e3e006535bdfe03bcd34"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Icons/ui_gold.png",
-   "sha256": "988a97dc66bd9b6be95e384e41628f0de31a900698b7b109441ae251ae05c7e1"
+   "sha256": "7530629339dbcf7cdfe0113dd177670fbf2b08a0cc3cd73a8d8f1a799b92b7bd"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Icons/ui_heart.png",
-   "sha256": "dbac5968167942e9d0343586b9c1b037943df9153188508bf0074a42ccf95e0e"
+   "sha256": "b58cb1552e1613de238bee0b4ff6a891b36aecfd651626151dcbb8866008294d"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Icons/ui_history.png",
-   "sha256": "d8e25810bc89275d8ea78eed0cf120a0b440d257f2ff37d4f410531f61aa920f"
+   "sha256": "28b2823bec59fc4e8ef548c136f3a54752b44eb8e4673eb1d7c59f1b536e4b59"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Icons/ui_leak.png",
-   "sha256": "43c1993fec902e2e13cbcc729e00369f4ff2f54d813c31a085e5859f72156891"
+   "sha256": "5eb77da96ed0c69e252254528944db8373e662e932f3b56238203a6078a854e6"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Icons/ui_lock.png",
-   "sha256": "407fc7708f5c9f59d54cb626d020ff641f8660c97e2740807062b277eaa606cf"
+   "sha256": "4526c597e5311a53bb3e687abef48040bcb4280c6b0b9a2a73dbdc01821099df"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Icons/ui_pause.png",
-   "sha256": "da8b5e9feddb8ad9097fd4a771f86c4013f25b1a6bb091c0b7f9b2d8c55942ee"
+   "sha256": "6c320ae5ebbfc0bedcd510345aea6a614af553f590b1f7e825a3bf158da39c2b"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Icons/ui_play.png",
-   "sha256": "59e7e48c6399adec0db83bcf7ac3b191d2230ca9bb8ed3d0bcb852404addccf2"
+   "sha256": "84963b63e89ce24e2318b4d22e9350455da86e4963aaf28f1d9b840a44ad17bd"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Icons/ui_reroll.png",
-   "sha256": "3d4d0945f5fd55719bbecc3f0b5a0e0600cb5d8ef225c3030b152ecabdb09e26"
+   "sha256": "53972aa6978718fbf16c1ee2c0fe5dd053d8df6820c9c50bc12f4c31c26def66"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Icons/ui_settings.png",
-   "sha256": "f7da03d95fd8ec5b28d72e9f331cbc4a4d0ad964df1d633fa051aba52e150a5a"
+   "sha256": "eb2753e31d17f5888be8ea28becad5e7f8e13f987ca715f75c5c0e55321cb368"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Icons/ui_shield.png",
-   "sha256": "3375854a708cd73097562c46265779820a266000baeb2e7e3ea80c177992ef0e"
+   "sha256": "d6abec21c75061a5a686401e456fb14d8ad8dc0874a8c51a6b73a791bab4881a"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Icons/ui_speed.png",
-   "sha256": "c8aa8be9cbf3d21547cfc9e441e82840e1df368bfac1c6be1f327452018ac33b"
+   "sha256": "5ff3797bf19195f2e67342a2185ce413f43edd4eb045f3d476ff198afb9dad48"
+  },
+  {
+   "path": "Assets/_Aetherward/Resources/Art/Icons/ui_stance_aggressive.png",
+   "sha256": "68451663d9d789d158e24cdbdfd5dc97eed0332f1d1afcdf602799f0052421a5"
+  },
+  {
+   "path": "Assets/_Aetherward/Resources/Art/Icons/ui_stance_balanced.png",
+   "sha256": "2da61cf65315191491afe2cf3f43b9ded9a91f3c8ef627c1dd753ae9d6247d93"
+  },
+  {
+   "path": "Assets/_Aetherward/Resources/Art/Icons/ui_stance_defensive.png",
+   "sha256": "da8276dc59878aaf5160b9dd5059921424ed8bdec52c29e479410bf2181e0a9b"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Icons/ui_star.png",
-   "sha256": "0757116b3a2b474af8721a2441cca435cb788460a1be045cf7392cadee35a5d1"
+   "sha256": "be515486c96483a10c51e1803220dfdd1c387c389af71a4846f9286ba565caf3"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Icons/ui_sword.png",
-   "sha256": "323536557b0dbfd0f59d5e3debe4329973eb55c32637e62e57b535e2687a9566"
+   "sha256": "c24cb9d2739b0c5950a5ee10006cda2cd3dfab1dfb775bc1a9d09f8e3bb7c375"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Icons/ui_trophy.png",
-   "sha256": "56c6a6dcb839d8f163081408727913aa7432be14ddf2b1c779e225338dee85ae"
+   "sha256": "53268f61c7668edb7a79c5d8c205275ae56756a4253001998435125256033104"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Icons/ui_wave.png",
-   "sha256": "d112108cd39541482b264a9f1cea3946c099ace0c74bbb29ebe45f7f2815e5c5"
+   "sha256": "5a6cd773da2708156fd09e17d80dedd08382fc2a9655258d4ef183d524445c13"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Icons/ui_xp.png",
-   "sha256": "8e4502d3a289ac22c294641cae29b556c3679407c9c8beb7fcf9bc78acefb854"
+   "sha256": "5806821851a1d5f91cc1dbf738b468c2f5156de6ff852c9aba8d3342b02ce365"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Portraits/aeris.png",
@@ -3030,123 +3042,123 @@
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/UI/bar_bg.png",
-   "sha256": "b43226e6d80fcccba69cfb60061ef73bfb6af0dc5d4708d738f23317471732e9"
+   "sha256": "99c5262b70ba3a2e3765f63786124d09980d82545e64e42f9ad3c489efe88bec"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/UI/bar_fill.png",
-   "sha256": "48eef5361fed7b8a43f53a9323b48c34f6da3c27e8e769c230f3f287387dd2b3"
+   "sha256": "7cb14c48fc880ccf7ec64499b00f133767820a1516c136d08a738d55bd014d3c"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/UI/button_danger_disabled.png",
-   "sha256": "47136b15764d6e0f7ebb9a3dc4085f89d3589960555b2061a2f02f4681dfefde"
+   "sha256": "9021ddceff49f5994e4eda7b64cc039d6527d6bdd9e265450135a73432ad7210"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/UI/button_danger_hover.png",
-   "sha256": "b333bff0268732313d81bf8a685e014093c9897ca7cc13bed698df630bc00fb8"
+   "sha256": "1dfa87f85942a130d30fd2891a532c0974a8b369d0ad067282bf35a400454ce6"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/UI/button_danger_normal.png",
-   "sha256": "277c1ac5b076b51bada365441e7499b4f79da1347eff31d04c46d8fddafcf11c"
+   "sha256": "e8e3ae415970131c345c014b6c7c4b37f4e6ab0083815d57e4805ef5db1b91f6"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/UI/button_danger_pressed.png",
-   "sha256": "908ce85b2c88b947dc068849494ae4b115bd7bc3d618661c0dedb97cf02fadb2"
+   "sha256": "c760009e31a7e131ca6e150d661f4527af4bcc2c03131f5eaf9edc53affbebdd"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/UI/button_ghost_disabled.png",
-   "sha256": "603f7f5d9e6948eca92abc4e7b000c3a26dd6411aa052e6c84743b2ed6d5daf3"
+   "sha256": "46616c34d400be5ad52e9f15a2c630210d7339c161f5e5a1a8a7202bf329a4b6"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/UI/button_ghost_hover.png",
-   "sha256": "b9fba98db298ac69c0fdeaec29e95a6a37a46a5695ad9ddd89fc4383f9f07647"
+   "sha256": "9c6d3c1a5cb826fb556ec5cad73c10c1737cb0ca584ce5f0d04546d81a94a770"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/UI/button_ghost_normal.png",
-   "sha256": "dac41f96fbe9631ee58a1bafe31a008dff2c8d8afef4884b830bc6bee5432d63"
+   "sha256": "3c4bd3eb709f805a950a2fe155b6cdc3a03f3845eafeee2c7e3e5a3ed7004c67"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/UI/button_ghost_pressed.png",
-   "sha256": "206b98f35d49b008b1317e7c9db831f8844ae34271d4aaf197945446e94b8968"
+   "sha256": "3b74051c8519724160844bed22a37962b86d114369638ce75831fa89f3292da6"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/UI/button_primary_disabled.png",
-   "sha256": "f748dd76c4bca262134b99ed02e7d9337342c0163c9851306acc60ff6f0a492f"
+   "sha256": "aa6fe29b79de28a423b311ea2cdb16b7a36fd90f10377d85416009aeee8bd10b"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/UI/button_primary_hover.png",
-   "sha256": "c845e1f73ac18b702521f1c054806036a80e669a445171d6ad7ddaf0ea6166e6"
+   "sha256": "8f2b8d92702d1985cfff0f91d939e028f8b73af6068021c497a0fa5b25c68c0f"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/UI/button_primary_normal.png",
-   "sha256": "9e04918b54cca5505bf2b150aa8d85d69b64ad527508fee0cabd709d746df2c4"
+   "sha256": "76b397bc4ef81b1ae7767ac8a351050e9db9e7550cbb8ea81b710b29868219ef"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/UI/button_primary_pressed.png",
-   "sha256": "7326e8723e31ec70c0897736de790237f74af31d936ac88b98670ed3e8110e29"
+   "sha256": "6f8aee27719ede2f061680e4a2042832120f3edaca2f2b172828bf80a0cd281a"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/UI/button_secondary_disabled.png",
-   "sha256": "3e4dedf7f105993faa473792e21a33810b0aecd391f273e5a6e63cdf95974953"
+   "sha256": "4a4301343b7505af1fcdc292703d5596a170cce5637e024d408b0bf079692c79"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/UI/button_secondary_hover.png",
-   "sha256": "e87651a6c87027983f6b7ec693402a886fc7db6bbd5abb526515f94404f8a7ed"
+   "sha256": "45d158b4155ce0c23e940cb8fa98dbea857e6c56863e2b7f288ff77bdc9210f0"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/UI/button_secondary_normal.png",
-   "sha256": "9c394d3add085f643b3bc93bfd5f7acc512357bb69c2edde3304e024cf81088d"
+   "sha256": "e12f27a589b3552a5bcc97f3309021907723a12ea38a54b6006dfa6d8a812d31"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/UI/button_secondary_pressed.png",
-   "sha256": "472f2d5aa62d8d2679e211acc3aeb2898c2296965eb35360a6ab172400eaa21f"
+   "sha256": "52e2f2bd6cf21b7220509934d373623b9509577a90742e248c9ea9bfd9a1aa1a"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/UI/card_common.png",
-   "sha256": "17603703e299f7c1f36af4eb602d55175f13e8f95d9ac42a669078a274baac27"
+   "sha256": "79088fd8c80c6d77aa749bf1a62dee2dd9836b2d814e5d95c76016d84df3621a"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/UI/card_cursed.png",
-   "sha256": "0d0507aa087315c936786202cc398672f384f92b5fb323b3bef9078fd06250bf"
+   "sha256": "827b247fb193d04676cca2c36a064720d34b89652ec8cb84676c5625527c4399"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/UI/card_epic.png",
-   "sha256": "7b837539b3af64fd689f114b72b95aa63c9d55ac7f1dd80b775ddeb3c001803d"
+   "sha256": "a7c5c4db104f37710c7e93e947de5d40c2aa54f7d125ea5af583c3d564212b8d"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/UI/card_legendary.png",
-   "sha256": "afa80c745bcfe388627618d82053082f9db072831f2e44bf6ed890def9b53eff"
+   "sha256": "7395792d88a95d26582b7716a84b8274983f551a2221e5b7f58b8db49ff33338"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/UI/card_rare.png",
-   "sha256": "fc27ca3c43340400893bada405466fd134fc420da63124ab3c41fdf3de25d1a8"
+   "sha256": "506a4b30b6018c72d696907c3d75caef11db293560516f22d7326723da3cdd68"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/UI/panel_danger.png",
-   "sha256": "057967d4c3caca0ac202d79f071d7deda9e44d0413ddfc91ac4b52974d0abe25"
+   "sha256": "7396a37fb4217010a84e731675ccf4e8823599e6c3d0cb35a9a52d8b6f06e2ea"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/UI/panel_dark.png",
-   "sha256": "a018718a6961cf02057afe27b891a2a67ebcd8532e97e1357412610d626a6d44"
+   "sha256": "4a05aade5842a8b6490a642036ab12c91c711e591e2fb709daa94f34e7bb6783"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/UI/panel_glass.png",
-   "sha256": "7dc0c53d92b740ab9c46f251c446d633b717e3faa36fd25bd7f7c8cc27ded008"
+   "sha256": "8e090b7952147094687b3d0c37ff10f442465376d7cdc8d15386acd331e6a093"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/UI/panel_light.png",
-   "sha256": "944d2440838f5a9bbbefecfab7751a0947667ddeae66e67f826662a03eb759f4"
+   "sha256": "537b743aff4986d1745cc3901882d5c2a6c90ecb37a68d2684e4d462c9a84293"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/UI/title_emblem.png",
-   "sha256": "8a1848e411ce8af99447851974fa63cebbeff61846e70959f6574b1f8bba2226"
+   "sha256": "2db701bb4e12443560c4857ff74756fd02474f2e0f70ed0bcc8c717c85d3b807"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/UI/tooltip.png",
-   "sha256": "4eea2a5bced7f805c38045359484d349d648af0633b681e65c7cda3cc1717947"
+   "sha256": "941fa0858ede45161f84fe14772922637083848b9640304104b0a2d8a798d5d4"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/UI/vignette.png",
-   "sha256": "8a01e0f635d4f78816bd6f2f64d7033694cac6ea17f7dc88132b0db12e2be73b"
+   "sha256": "394a02a494c5571ee400ee1fc761cd66cfc1c87dc3026c27230b86858699ec66"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/Vfx/arrow.png",

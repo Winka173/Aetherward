@@ -229,8 +229,11 @@ namespace Aetherward.Game
             for (int i = 0; i < values.Length; i++)
             {
                 PartyStance t = values[i];
-                if (Ui.Button(x + i * 190, y + 32, 180, 56, L.Get("stance." + t.ToString().ToLowerInvariant()), s.Stance == t ? Tone.Primary : Tone.Ghost, true, 17))
+                string key = t.ToString().ToLowerInvariant();
+                if (Ui.Button(x + i * 190, y + 32, 180, 56, "     " + L.Get("stance." + key), s.Stance == t ? Tone.Primary : Tone.Ghost, true, 17))
                     s.Stance = t;
+                Texture2D icon = Art.Icon("stance_" + key);
+                if (icon != null) Ui.Icon(x + i * 190 + 10, y + 40, 40, 40, icon);
             }
             Block(x, y, values.Length * 190, 90);
         }
@@ -327,8 +330,8 @@ namespace Aetherward.Game
         private void DrawPrepare()
         {
             RunState s = _rc.State;
-            DrawStancePicker(Ui.W / 2 - 370, Ui.H - 360);
-            DrawTacticPicker(Ui.W / 2 - 370, Ui.H - 260);
+            DrawStancePicker(Ui.W / 2 - 370, Ui.H - 410);
+            DrawTacticPicker(Ui.W / 2 - 370, Ui.H - 310);
             if (Ui.Button(Ui.W / 2 + 400, Ui.H - 228, 190, 56, L.Get("synergy.toggle"), App.Settings.SynergyVision ? Tone.Secondary : Tone.Ghost, true, 16))
             {
                 App.Settings.SynergyVision = !App.Settings.SynergyVision;
