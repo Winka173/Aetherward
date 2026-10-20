@@ -333,12 +333,13 @@ def hero_berserker(loc, rot):
 
 def enemy_ghoul(loc, rot):
     root = group("ghoul", loc, rot, 0.9)
-    flesh = mat("ghoul", "#6a7a5a", 0.7, noise=0.4, noise_scale=18)
+    flesh = mat("ghoul", "#3e4a3a", 0.6, noise=0.5, noise_scale=18)
     o = [prim("sphere", (0, 0, 0.75), (0.28, 0.22, 0.32), rot=(0.6, 0, 0), material=flesh),
          prim("sphere", (0, -0.25, 1.0), (0.13, 0.14, 0.14), material=flesh)]
     for s in (-1, 1):
         o.append(limb((s * 0.2, -0.05, 0.85), (s * 0.3, -0.45, 0.35), 0.05, flesh))
         o.append(limb((s * 0.12, 0.05, 0.5), (s * 0.18, 0, 0.0), 0.06, flesh))
+        o.append(prim("cone", (0, 0.12 + s * 0.06, 0.85 + s * 0.12), (0.04, 0.04, 0.12), rot=(-0.9, 0, 0), material=mat("bone", "#b8ae98", 0.5)))
         o.append(prim("ico", (s * 0.05, -0.37, 1.02), (0.022, 0.022, 0.022), material=mat("eye", "#c8ff60", 0.2, emit="#b0ff40", emit_strength=25), subdivisions=1))
     parent_all(o, root)
     return root
@@ -430,14 +431,19 @@ def environment():
     t = bpy.data.textures.new("groundnoise", "CLOUDS")
     t.noise_scale = 1.5
     d.texture, d.strength = t, 0.25
-    g.data.materials.append(mat("ground", "#3a342a", 0.95, noise=0.45, noise_scale=3))
+    g.data.materials.append(mat("ground", "#24221f", 0.95, noise=0.5, noise_scale=3))
     # four lanes (worn paths)
     for ang in (0.15, math.pi / 2 + 0.1, math.pi + 0.15, 3 * math.pi / 2 + 0.1):
         bpy.ops.mesh.primitive_plane_add(size=1, location=(math.cos(ang) * 11, math.sin(ang) * 11, 0.08))
         p = bpy.context.active_object
         p.scale = (14, 1.6, 1)
         p.rotation_euler = (0, 0, ang)
-        p.data.materials.append(mat("path", "#4a3e30", 0.95, noise=0.4, noise_scale=8))
+        p.location.z = 0.02
+        p.modifiers.new("sub", "SUBSURF").levels = 3
+        p.modifiers["sub"].subdivision_type = "SIMPLE"
+        dm = p.modifiers.new("disp", "DISPLACE")
+        dm.texture, dm.strength = t, 0.22
+        p.data.materials.append(mat("path", "#2e2924", 0.95, noise=0.5, noise_scale=8))
     # arena: raised stone platform with ring trim and glowing runes
     prim("cyl", (0, 0, 0.12), (5.2, 5.2, 0.14), material=mat("stone", "#5a5650", 0.8, noise=0.45, noise_scale=4), vertices=64, bevel=0.06)
     prim("torus", (0, 0, 0.27), (5.15, 5.15, 0.5), material=mat("stonetrim", "#6a645a", 0.7, noise=0.3), major_radius=1, minor_radius=0.03)
@@ -465,7 +471,7 @@ def environment():
         prim("cyl", (x, y, 0.5), (0.18, 0.18, 0.5), material=mat("brazier", "#2a2420", 0.4, 0.8), vertices=10)
         prim("ico", (x, y, 1.12), (0.18, 0.18, 0.25), material=mat("fire", "#ffb040", 0.2, emit="#ff8a20", emit_strength=25), subdivisions=2)
         l = bpy.data.lights.new("brazier", "POINT")
-        l.energy, l.color, l.shadow_soft_size = 220, (1.0, 0.55, 0.2), 0.3
+        l.energy, l.color, l.shadow_soft_size = 120, (1.0, 0.55, 0.2), 0.3
         lo = bpy.data.objects.new("brazier", l)
         link(lo)
         lo.location = (x, y, 1.5)
@@ -481,7 +487,7 @@ def environment():
 
 
 def crystal():
-    glass = mat("crystal", "#5ad8ff", 0.08, 0.0, emit="#1aa8e8", emit_strength=1.4, noise=0.35, noise_scale=2.5)
+    glass = mat("crystal", "#5ad8ff", 0.25, 0.0, emit="#1aa8e8", emit_strength=1.1, noise=0.18, noise_scale=11)
     bm = bmesh.new()
     rings = [(0.25, 0.0), (0.6, 0.55), (2.3, 0.75), (3.5, 0.0)]
     loops = []
@@ -507,6 +513,7 @@ def crystal():
     link(ob)
     ob.location = (0, 0, 0.6)
     ob.data.materials.append(glass)
+    ob.visible_shadow = False           # the crystal light sits inside the mesh; let it reach the arena
     # pedestal + orbiting shards
     prim("cyl", (0, 0, 0.45), (1.1, 1.1, 0.2), material=mat("altar", "#4a4640", 0.6, 0.3, noise=0.3), vertices=8, bevel=0.05)
     for k in range(5):
@@ -514,7 +521,7 @@ def crystal():
         sh = prim("cone", (math.cos(a) * 1.5, math.sin(a) * 1.5, 1.6 + 0.4 * math.sin(a * 2)), (0.12, 0.12, 0.35), rot=(0.3, 0.2, a),
                   material=glass, vertices=6, smooth=False)
     l = bpy.data.lights.new("crystal_light", "POINT")
-    l.energy, l.color, l.shadow_soft_size = 1800, (0.35, 0.85, 1.0), 0.6
+    l.energy, l.color, l.shadow_soft_size = 1200, (0.35, 0.85, 1.0), 0.1  # radius < crystal apothem, else the light sphere pokes through the faces as two "eye" blobs
     lo = bpy.data.objects.new("crystal_light", l)
     link(lo)
     lo.location = (0, 0, 2.2)
@@ -626,7 +633,7 @@ def setup_render(look):
     for attr in ("use_stamp_date", "use_stamp_time", "use_stamp_render_time"):
         setattr(sc.render, attr, False)
     sc.view_settings.view_transform = "AgX"
-    sc.view_settings.exposure = {"mythic": 1.2, "painterly": 0.5, "pixel": 1.3}[look]
+    sc.view_settings.exposure = {"mythic": 1.2, "painterly": 0.5, "pixel": 0.9}[look]
     sc.view_settings.look = {"mythic": "AgX - High Contrast", "painterly": "AgX - Base Contrast", "pixel": "AgX - Punchy"}[look]
     if look == "pixel":
         sc.render.filter_size = 0.01      # crisp pixels, no AA blur

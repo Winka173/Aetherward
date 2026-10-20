@@ -142,9 +142,16 @@ def ui_pixel(img):
 
 
 def pixelize(img):
-    """Palette quantisation (48 colours, no dithering) at native res; the frame is then scaled 3x nearest."""
-    q = img.convert("RGB").quantize(colors=48, method=Image.Quantize.MEDIANCUT, dither=Image.Dither.NONE)
-    return q.convert("RGB")
+    """Palette quantisation (40 image colours + 10 reserved accents, no dithering) at native res; the frame is then scaled 3x nearest."""
+    rgb = img.convert("RGB")
+    base = rgb.quantize(colors=40, method=Image.Quantize.MEDIANCUT, dither=Image.Dither.NONE).getpalette()[:40 * 3]
+    # Median cut follows area, so small saturated accents (telegraph red, crystal cyan, magma, class colours) would be
+    # averaged away; they are reserved as fixed palette entries (gameplay-critical colours survive quantisation).
+    accents = ["#ff2a2a", "#ff7a2a", "#ffd060", "#5ae0ff", "#2a90d0", "#c070ff", "#5adf6a", "#4a8aff", "#ffffff", "#0c0c12"]
+    pal = base + [c for h in accents for c in hexc(h)[:3]]
+    pim = Image.new("P", (1, 1))
+    pim.putpalette(pal + [0] * (768 - len(pal)))
+    return rgb.quantize(palette=pim, dither=Image.Dither.NONE).convert("RGB")
 
 
 def main():
