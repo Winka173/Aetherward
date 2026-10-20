@@ -284,10 +284,24 @@ def cmd_pack(a):
 
 # ---------------------------------------------------------------------------- diff / import / rollback
 
+RENDER_TOLERANCE = (8 / 255.0, 0.001)   # Cycles CPU reruns differ by <=5/255 on ~0.02% of pixels (TEST_REPORT.md)
+
+
+def same_render(p1, p2):
+    if A.sha256(p1) == A.sha256(p2):
+        return True
+    a, _ = A.load_rgba(p1)
+    b, _ = A.load_rgba(p2)
+    if a.shape != b.shape:
+        return False
+    d = np.abs(a - b).max(-1)
+    return float(d.max()) <= RENDER_TOLERANCE[0] and float((d > 0).mean()) <= RENDER_TOLERANCE[1]
+
+
 def changed_files(stage_art):
     staged = set(files_under(stage_art))
     live = set(files_under(A.ART))
-    changed = sorted(r for r in staged & live if A.sha256(os.path.join(stage_art, r)) != A.sha256(os.path.join(A.ART, r)))
+    changed = sorted(r for r in staged & live if not same_render(os.path.join(stage_art, r), os.path.join(A.ART, r)))
     return changed, sorted(staged - live), sorted(live - staged)
 
 
