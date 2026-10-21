@@ -196,6 +196,7 @@ namespace Aetherward.Sim.Combat
             if (killer != null)
             {
                 killer.Kills++;
+                ChargeUltimateOnKill(killer);
                 OnKillPassive(killer, e);
             }
             Emit(SimEventType.EnemyDeath, e.Pos, Element.None, gold, killer?.Uid ?? 0, e.Uid, e.Def.Id);

@@ -13,6 +13,10 @@ namespace Aetherward.Game
     {
         private const int Levels = 5;
         private static readonly int ThresholdId = Shader.PropertyToID("_Threshold");
+        private static readonly int HazeId = Shader.PropertyToID("_Haze");
+        private static readonly int SunGlowId = Shader.PropertyToID("_SunGlow");
+        /// <summary>Atmosphere (art bible v3): cool depth haze at the far edge, warm glow from the key-light corner.</summary>
+        public Color Haze = new Color(0.36f, 0.4f, 0.6f, 0.26f), SunGlow = new Color(1f, 0.82f, 0.55f, 0.12f);
         private static readonly int BloomTexId = Shader.PropertyToID("_BloomTex");
         private static readonly int BloomIntensityId = Shader.PropertyToID("_BloomIntensity");
         private static readonly int LiftId = Shader.PropertyToID("_Lift"), GammaId = Shader.PropertyToID("_Gamma"), GainId = Shader.PropertyToID("_Gain");
@@ -20,7 +24,7 @@ namespace Aetherward.Game
         private readonly RenderTexture[] _chain = new RenderTexture[Levels];
         private Material _mat;
 
-        public float Threshold = 0.9f, Knee = 0.25f, BloomIntensity = 0.6f, Saturation = 1.06f, Vignette = 0.32f;
+        public float Threshold = 0.9f, Knee = 0.25f, BloomIntensity = 0.6f, Saturation = 1.06f, Vignette = 0.46f;
         public Color Lift = new Color(0.012f, 0.016f, 0.03f), Gamma = new Color(1f, 1f, 1.02f), Gain = new Color(1.04f, 1.02f, 1f);
 
         private bool Active => App.Settings != null && !App.Settings.BatterySaver && App.Settings.EffectsPreset != (int)EffectsPreset.Minimal;
@@ -36,6 +40,8 @@ namespace Aetherward.Game
             if (!Active) { Graphics.Blit(src, dst); return; }
             bool bloom = !App.Settings.ReducedVfx;
             _mat.SetVector(ThresholdId, new Vector4(Threshold, Knee, 8f, 0));
+            _mat.SetColor(HazeId, Haze);
+            _mat.SetColor(SunGlowId, SunGlow);
             _mat.SetFloat(BloomIntensityId, bloom ? BloomIntensity : 0f);
             _mat.SetColor(LiftId, Lift);
             _mat.SetColor(GammaId, Gamma);

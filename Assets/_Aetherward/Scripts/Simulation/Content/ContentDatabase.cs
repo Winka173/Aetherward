@@ -714,6 +714,7 @@ namespace Aetherward.Sim.Content
                 SurvivorHealPct = n.Float("survivorHealPct", 0.25f),
                 EnemyHpGrowth = n.Float("enemyHpGrowth", 0.16f),
                 EnemyHpGrowthQuad = n.Float("enemyHpGrowthQuad", 0.012f),
+                EnemyHpMult = n.Float("enemyHpMult", 1f),
                 EnemyDamageGrowth = n.Float("enemyDamageGrowth", 0.07f),
                 ReactionLevelGrowth = n.Float("reactionLevelGrowth", 0.12f),
                 MaxActiveEnemies = n.Int("maxActiveEnemies", 160),

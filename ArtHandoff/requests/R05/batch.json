@@ -1,0 +1,168 @@
+{
+ "_doc": "R05 = v3 animation benchmark (lead-written 2026-10-21).",
+ "title": "R05 animation: 4-frame walks, 3-phase attacks, idle breathing",
+ "goal": "Replace stiff 2-frame motion with real key poses for the R01 cast.",
+ "priority": "P0",
+ "depends": "R01",
+ "styleRefs": [],
+ "notes": "See CODEX_ART_REQUEST.md.",
+ "groups": [
+  {
+   "id": "anim",
+   "title": "Animation frames",
+   "priority": "P0",
+   "required": true,
+   "assets": [],
+   "new": [
+    {
+     "id": "Heroes/glacius_walk_c",
+     "like": "Heroes/glacius_idle"
+    },
+    {
+     "id": "Heroes/glacius_walk_d",
+     "like": "Heroes/glacius_idle"
+    },
+    {
+     "id": "Heroes/glacius_windup",
+     "like": "Heroes/glacius_idle"
+    },
+    {
+     "id": "Heroes/glacius_follow",
+     "like": "Heroes/glacius_idle"
+    },
+    {
+     "id": "Heroes/glacius_idle_b",
+     "like": "Heroes/glacius_idle"
+    },
+    {
+     "id": "Heroes/ignis_walk_c",
+     "like": "Heroes/ignis_idle"
+    },
+    {
+     "id": "Heroes/ignis_walk_d",
+     "like": "Heroes/ignis_idle"
+    },
+    {
+     "id": "Heroes/ignis_windup",
+     "like": "Heroes/ignis_idle"
+    },
+    {
+     "id": "Heroes/ignis_follow",
+     "like": "Heroes/ignis_idle"
+    },
+    {
+     "id": "Heroes/ignis_idle_b",
+     "like": "Heroes/ignis_idle"
+    },
+    {
+     "id": "Heroes/veyra_walk_c",
+     "like": "Heroes/veyra_idle"
+    },
+    {
+     "id": "Heroes/veyra_walk_d",
+     "like": "Heroes/veyra_idle"
+    },
+    {
+     "id": "Heroes/veyra_windup",
+     "like": "Heroes/veyra_idle"
+    },
+    {
+     "id": "Heroes/veyra_follow",
+     "like": "Heroes/veyra_idle"
+    },
+    {
+     "id": "Heroes/veyra_idle_b",
+     "like": "Heroes/veyra_idle"
+    },
+    {
+     "id": "Heroes/marina_walk_c",
+     "like": "Heroes/marina_idle"
+    },
+    {
+     "id": "Heroes/marina_walk_d",
+     "like": "Heroes/marina_idle"
+    },
+    {
+     "id": "Heroes/marina_windup",
+     "like": "Heroes/marina_idle"
+    },
+    {
+     "id": "Heroes/marina_follow",
+     "like": "Heroes/marina_idle"
+    },
+    {
+     "id": "Heroes/marina_idle_b",
+     "like": "Heroes/marina_idle"
+    },
+    {
+     "id": "Enemies/grunt_c",
+     "like": "Enemies/grunt_a"
+    },
+    {
+     "id": "Enemies/grunt_d",
+     "like": "Enemies/grunt_a"
+    },
+    {
+     "id": "Enemies/grunt_windup",
+     "like": "Enemies/grunt_a"
+    },
+    {
+     "id": "Enemies/runner_c",
+     "like": "Enemies/runner_a"
+    },
+    {
+     "id": "Enemies/runner_d",
+     "like": "Enemies/runner_a"
+    },
+    {
+     "id": "Enemies/runner_windup",
+     "like": "Enemies/runner_a"
+    },
+    {
+     "id": "Enemies/hexcaster_c",
+     "like": "Enemies/hexcaster_a"
+    },
+    {
+     "id": "Enemies/hexcaster_d",
+     "like": "Enemies/hexcaster_a"
+    },
+    {
+     "id": "Enemies/hexcaster_windup",
+     "like": "Enemies/hexcaster_a"
+    },
+    {
+     "id": "Enemies/juggernaut_c",
+     "like": "Enemies/juggernaut_a"
+    },
+    {
+     "id": "Enemies/juggernaut_d",
+     "like": "Enemies/juggernaut_a"
+    },
+    {
+     "id": "Enemies/juggernaut_windup",
+     "like": "Enemies/juggernaut_a"
+    },
+    {
+     "id": "Enemies/ravager_c",
+     "like": "Enemies/ravager_a"
+    },
+    {
+     "id": "Enemies/ravager_d",
+     "like": "Enemies/ravager_a"
+    },
+    {
+     "id": "Enemies/ravager_windup",
+     "like": "Enemies/ravager_a"
+    },
+    {
+     "id": "Enemies/rift_warden_c",
+     "like": "Enemies/rift_warden_a"
+    },
+    {
+     "id": "Enemies/rift_warden_d",
+     "like": "Enemies/rift_warden_a"
+    }
+   ]
+  }
+ ]
+}

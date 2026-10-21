@@ -16,6 +16,8 @@ Shader "Hidden/Aetherward/PostFX"
     float4 _Lift, _Gamma, _Gain;
     float _Saturation;
     float _Vignette;
+    float4 _Haze;             // rgb colour, a strength: cool depth haze toward the far (top) edge
+    float4 _SunGlow;          // rgb colour, a strength: soft warm light from the key light's corner (upper left)
 
     half3 Prefilter(half3 c)
     {
@@ -72,6 +74,8 @@ Shader "Hidden/Aetherward/PostFX"
                 c = pow(max(c * _Gain.rgb + _Lift.rgb * (1 - c), 0), 1.0 / max(_Gamma.rgb, 0.01));
                 half l = dot(c, half3(0.2126, 0.7152, 0.0722));
                 c = lerp(l.xxx, c, _Saturation);
+                c = lerp(c, _Haze.rgb, _Haze.a * smoothstep(0.55, 1.0, i.uv.y));
+                c += _SunGlow.rgb * _SunGlow.a * (1 - smoothstep(0.0, 0.95, distance(i.uv * float2(1.6, 1), float2(0.0, 1.08))));
                 float2 d = i.uv - 0.5;
                 c *= 1 - _Vignette * smoothstep(0.35, 0.95, dot(d, d) * 2.2);
                 return half4(c, 1);

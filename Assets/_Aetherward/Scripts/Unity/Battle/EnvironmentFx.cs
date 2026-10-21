@@ -17,6 +17,8 @@ namespace Aetherward.Game
         public float[] braziersFlat = new float[0];
         public float[] aetherCrystalsFlat = new float[0];
         public float[] edgeColor = { 0.06f, 0.07f, 0.09f };
+        /// <summary>Painted battlefields are stored squashed to 4096 x 2048 (power of two); the game stretches y back.</summary>
+        public float bgScaleY = 1f;
     }
 
     /// <summary>

@@ -165,6 +165,10 @@ namespace Aetherward.Game
                     float cd = unit.Skill.Cooldown * unit.Stat(StatId.SkillCooldown);
                     float ready = cd > 0 ? 1f - Mathf.Clamp01(unit.SkillTimer / cd) : 1f;
                     Ui.Bar(x, y + slot + 26, slot, 14, ready, ready >= 1f ? Ui.Gold : Ui.ElementColor(def.Element));
+                    // ultimate charge: a gold band across the portrait top, pulsing when ready
+                    float ult = unit.Ult;
+                    Color uc = ult >= 1f ? Color.Lerp(Ui.Gold, Color.white, 0.5f + 0.5f * Mathf.Sin(Time.unscaledTime * 8f)) : new Color(1f, 0.78f, 0.3f, 0.9f);
+                    Ui.Bar(x + 4, y + 4, slot - 8, 10, ult, uc);
                 }
                 if (down) Ui.Label(x, y + slot / 2 - 24, slot, 48, L.Get("hud.downed"), 30, Ui.Bad, TextAnchor.MiddleCenter, true);
                 if (Ui.Hit(x, y, slot, slot))

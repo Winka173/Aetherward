@@ -38,8 +38,8 @@ SEED = int(arg("--seed", "7"))
 SIN = 0.62
 ELEV = math.asin(SIN)
 COS = math.cos(ELEV)
-VIEW_W, VIEW_H = 40.0, 20.0      # 4096 x 2048 (PPU 102.4), the dynamic-party view with room for camera tracking;: power-of-two so Unity can compress the sprite (NPOT sprites stay RGBA)
-RES_X, RES_Y = 4096, 2048
+VIEW_W, VIEW_H = float(arg("--view-w", "40")), float(arg("--view-h", "20"))   # 40 x 20 at 4096 x 2048 = PPU 102.4 (game sprite)
+RES_X, RES_Y = int(arg("--res-x", "4096")), int(arg("--res-y", "2048"))   # R04 layout reference: 36 x 20.25 at 3344 x 1882
 random.seed(SEED)
 np.random.seed(SEED)
 os.makedirs(os.path.join(OUT, "layers"), exist_ok=True)

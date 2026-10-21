@@ -519,6 +519,7 @@ namespace Aetherward.Sim.Content
         public List<int> ShopWaves = new List<int>();
         public float EnemyHpGrowth = 0.16f;       // linear per wave
         public float EnemyHpGrowthQuad = 0.012f;  // quadratic per wave
+        public float EnemyHpMult = 1f;            // flat multiplier (dynamic party + ultimates retune)
         public float EnemyDamageGrowth = 0.07f;
         public float ReactionLevelGrowth = 0.12f;
         public int MaxActiveEnemies = 160;

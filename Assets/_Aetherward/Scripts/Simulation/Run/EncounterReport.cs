@@ -37,7 +37,7 @@ namespace Aetherward.Sim.Run
             EconomyDef eco = db.Economy;
             int lvl = w.EffectiveLevel - 1;
             float asc = 1f + db.Difficulty.HpPerLevel * ascension * db.Difficulty.LevelBonusShare(w.EffectiveLevel);
-            float hpScale = (1f + eco.EnemyHpGrowth * lvl + eco.EnemyHpGrowthQuad * lvl * lvl) * asc * (1f + w.ScalePct);
+            float hpScale = eco.EnemyHpMult * (1f + eco.EnemyHpGrowth * lvl + eco.EnemyHpGrowthQuad * lvl * lvl) * asc * (1f + w.ScalePct);
             float dmgScale = (1f + eco.EnemyDamageGrowth * lvl) * asc * (1f + w.ScalePct * 0.5f);
             var e = new EncounterEntry { Wave = w.Number, Level = w.EffectiveLevel };
             float first = float.MaxValue, last = 0f;

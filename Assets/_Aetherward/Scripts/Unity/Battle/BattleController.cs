@@ -145,8 +145,8 @@ namespace Aetherward.Game
         private void FitCamera()
         {
             float aspect = (float)Screen.width / Mathf.Max(1, Screen.height);
-            // dynamic party: the wider sanctum (ContentDatabase.WorldScale) needs a wider view, ~31 x 17.6 units at 16:9
-            _cam.orthographicSize = Mathf.Max(8.8f, 15.8f / aspect);
+            // dynamic party: the wider sanctum (ContentDatabase.WorldScale) needs a wider view; ~27 x 15 units at 16:9 with tracking toward the fight
+            _cam.orthographicSize = Mathf.Max(7.6f, 13.6f / aspect);
         }
 
         // ------------------------------------------------------------------ world construction
@@ -162,7 +162,11 @@ namespace Aetherward.Game
             string bgPath = Art.Sprite(_rc.Biome.Background) != null ? _rc.Biome.Background : "World/arena_background";
             SpriteRenderer bg = WorldGfx.NewSprite(_world, "Arena", Art.Sprite(bgPath), -10000);
             bg.transform.position = Vector3.zero;
+            EnvMeta bgMeta = EnvironmentFx.Load(bgPath);
+            if (bgMeta != null && bgMeta.bgScaleY > 0f) bg.transform.localScale = new Vector3(1f, bgMeta.bgScaleY, 1f);
+            _bgHalf = bg.bounds.extents;
             EnvironmentFx.Create(_world, bgPath, _cam);
+            AmbientMotes.Create(_world, _rc.Biome.Id, _cam);
             if (_cam.GetComponent<PostFx>() == null) _cam.gameObject.AddComponent<PostFx>();
             for (int i = 0; i < Arena.Nodes.Count; i++)
             {
@@ -541,12 +545,25 @@ namespace Aetherward.Game
             _fx.Spawn("Vfx/glow", p + new Vector3(0, 0.45f * size, 0), 0.6f * size, 2.2f * size, 0.18f, flash * new Color(1, 1, 1, painted != null ? 0.3f : 0.55f), 0, 0, default, 32, true, 1f, true);
             if (reduced) return true;
             _fx.Spawn("Vfx/ring", p + new Vector3(0, 0.05f, 0), 0.3f * size, 1.9f * size, 0.42f, tint * new Color(1, 1, 1, 0.85f), 0, 0, default, -20, true, 1f, true);
-            for (int i = 0; i < 6; i++)
+            // element debris flung out of the blast (embers, ice shards, sparks, droplets)
+            string debris = element == Element.Ice ? "Vfx/projectile_ice" : element == Element.Water ? "Vfx/projectile_water" : "Vfx/spark";
+            bool additiveDebris = element != Element.Ice && element != Element.Water;
+            Color dcol = element == Element.Fire ? new Color(1f, 0.6f, 0.2f) : element == Element.Lightning ? new Color(0.85f, 0.8f, 1f) : Color.white;
+            int count = Mathf.RoundToInt(10 + 3 * size);
+            for (int i = 0; i < count; i++)
             {
                 float a = Random.Range(0f, Mathf.PI * 2f);
-                var v = new Vector3(Mathf.Cos(a), Mathf.Sin(a) * 0.62f + 0.9f, 0) * Random.Range(1.6f, 3.2f) * size * 0.5f;
-                _fx.Spawn("Vfx/glow", p + new Vector3(0, 0.3f * size, 0), 0.22f, 0.05f, Random.Range(0.35f, 0.55f), flash, 0, 0, v, 34, true, 1f, true);
+                var v = new Vector3(Mathf.Cos(a), Mathf.Sin(a) * 0.62f + 0.7f, 0) * Random.Range(1.8f, 4.2f) * size * 0.5f;
+                float ds = debris == "Vfx/spark" ? Random.Range(0.5f, 1.1f) : Random.Range(0.18f, 0.34f);
+                _fx.Spawn(debris, p + new Vector3(0, 0.3f * size, 0), ds, ds * 0.3f, Random.Range(0.4f, 0.75f), dcol, Mathf.Atan2(v.y, v.x) * Mathf.Rad2Deg,
+                    Random.Range(-200f, 200f), v, 34, true, 1f, additiveDebris);
             }
+            // a mark that lingers on the ground after the blast
+            string mark = element == Element.Fire ? "Vfx/zone_burning_ground" : element == Element.Ice ? "Vfx/field_ice_cover"
+                : element == Element.Lightning ? "Vfx/zone_thunderstorm" : element == Element.Water ? "Vfx/zone_healing_rain" : null;
+            if (mark != null && Optional(reduced))
+                _fx.Spawn(mark, p, 0.9f * size, 1.05f * size, element == Element.Fire || element == Element.Ice ? 2.6f : 1.5f,
+                    new Color(1, 1, 1, 0.6f), 0f, 0, default, -25, true, 0.62f);   // no rotation: a rotated sprite would squash off the ground plane
             if (primary) Shake(0.12f + 0.05f * size);
             return true;
         }
@@ -610,6 +627,49 @@ namespace Aetherward.Game
                         _fx.Spawn("Vfx/impact_lightning", to, 0.3f, 0.5f, 0.2f, Color.white);
                     break;
                 }
+                case "ult_cast":
+                {
+                    // the ultimate moment: a beat of hitstop, a call-out over the caster, a big shake
+                    HeroUnit caster = _rc.Battle.HeroByUid(e.SourceUid);
+                    if (caster != null && _units.TryGetValue(caster.Uid, out UnitView cv))
+                    {
+                        cv.Cast();
+                        _text.Add(cv.transform.position + new Vector3(0, 2.2f, 0), App.Loc.Get("hud.ultimate"), Color.Lerp(Ui.ElementColor(e.Element), Ui.Gold, 0.4f), 40, 1.1f);
+                        _fx.Spawn("Vfx/glow", cv.transform.position + new Vector3(0, 0.9f, 0), 0.6f, 4.5f, 0.45f, Ui.ElementColor(e.Element) * new Color(1, 1, 1, 0.7f), 0, 0, default, 33, true, 1f, true);
+                    }
+                    _hitstop.Trigger(WorldGfx.Feel.HitstopSeconds * 2.5f, _speed, Time.unscaledTime);
+                    Shake(0.25f);
+                    App.Audio.Play("react_explosion", 0.8f, 0.03f);
+                    break;
+                }
+                case "ult_fire":
+                    Burst("fire_burst", Element.Fire, p, 2.6f, Ui.ElementColor(Element.Fire), true, reduced);
+                    Shake(0.3f);
+                    break;
+                case "ult_ice":
+                    Burst(null, Element.Ice, p, 3.2f, Ui.ElementColor(Element.Ice), true, reduced);
+                    Shake(0.35f);
+                    break;
+                case "ult_lightning":
+                    Burst("lightning_arc", Element.Lightning, p, 3.2f, Ui.ElementColor(Element.Lightning), true, reduced);
+                    Shake(0.35f);
+                    break;
+                case "ult_water":
+                    Burst("water_splash", Element.Water, p, 3.2f, Ui.ElementColor(Element.Water), true, reduced);
+                    Shake(0.25f);
+                    break;
+                case "ult_wind":
+                case "ult_earth":
+                case "ult_light":
+                case "ult_shadow":
+                case "ult_void":
+                case "ult_arcane":
+                case "ult_nature":
+                case "ult_poison":
+                    Burst(e.Id == "ult_shadow" || e.Id == "ult_void" ? "rift_mist" : "smoke_puff", e.Element, p, 3f, Ui.ElementColor(e.Element), true, reduced);
+                    _fx.Spawn("Vfx/ring", p, 0.4f, 4.2f, 0.5f, Ui.ElementColor(e.Element), 0, 0, default, -20, true, 1f, true);
+                    Shake(0.3f);
+                    break;
                 case "Meteor":
                     Burst("fire_burst", Element.Fire, p, Mathf.Clamp(e.Radius * 1.4f, 1.6f, 3.2f), new Color(1f, 0.55f, 0.2f), true, reduced);
                     _fx.Spawn("Vfx/impact_fire", p + new Vector3(0, 0.3f, 0), e.Radius * 0.4f, e.Radius * 1.1f, 0.45f, Color.white, Random.Range(0, 360));
@@ -707,6 +767,7 @@ namespace Aetherward.Game
         }
 
         private Vector2 _camFocus;
+        private Vector3 _bgHalf = new Vector3(20f, 10f, 0f);
 
         /// <summary>
         /// Light tracking: the view leans toward where the party is fighting, never more than the background margin
@@ -729,7 +790,7 @@ namespace Aetherward.Game
                 if (n > 0) want = sum / n * 0.45f;
             }
             float halfW = _cam.orthographicSize * _cam.aspect, halfH = _cam.orthographicSize;
-            float mx = Mathf.Max(0f, 20f - halfW - 0.2f), my = Mathf.Max(0f, 10f - halfH - 0.1f);
+            float mx = Mathf.Max(0f, _bgHalf.x - halfW - 0.2f), my = Mathf.Max(0f, _bgHalf.y - halfH - 0.1f);
             want = new Vector2(Mathf.Clamp(want.x, -mx, mx), Mathf.Clamp(want.y, -my, my));
             _camFocus = Vector2.Lerp(_camFocus, want, 1f - Mathf.Exp(-1.6f * dt));
         }
@@ -788,6 +849,8 @@ namespace Aetherward.Game
                     _units[h.Uid] = v;
                 }
                 _seen.Add(h.Uid);
+                // windup pose just before the next blow lands (the sim's own attack clock, so it is never late)
+                v.Windup = h.Alive && h.Target != null && h.State != HeroState.Approach && h.AttackTimer > 0f && h.AttackTimer < 0.14f;
                 v.Sync(WorldGfx.V(h.Pos), h.Facing.X, h.HpFraction, h.MaxHp > 0 ? h.Shield / h.MaxHp : 0f, h.Alive, true, h.StunTimer > 0f,
                     Element.None, Element.None, viewDt);
             }
@@ -805,6 +868,7 @@ namespace Aetherward.Game
                 }
                 _seen.Add(e.Uid);
                 e.DominantStatuses(out Element s1, out Element s2);
+                v.Windup = e.Engaged != null && e.AttackTimer > 0f && e.AttackTimer < 0.14f;
                 v.Sync(WorldGfx.V(e.Pos), e.Facing.X, e.HpFraction, e.MaxHp > 0 ? e.Shield / e.MaxHp : 0f, true, e.Elite || e.IsBoss, e.Stunned, s1, s2, viewDt);
             }
             _remove.Clear();

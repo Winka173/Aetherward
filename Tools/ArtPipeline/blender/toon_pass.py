@@ -96,6 +96,15 @@ def toon_setup():
         ct.links.new(rl.outputs["Alpha"], fo_.inputs["alpha"])
 
 
+def _drop_passes():
+    """The 32-bit EXR passes are ~500 MB per battlefield: delete them once the toon image is written."""
+    import shutil
+    for im in list(bpy.data.images):
+        if im.filepath and "passes" in im.filepath:
+            bpy.data.images.remove(im)
+    shutil.rmtree(os.path.join(CFG["out"], "passes"), ignore_errors=True)
+
+
 def _load_pass(name):
     d = os.path.join(CFG["out"], "passes")
     f = sorted(x for x in os.listdir(d) if x.startswith(name) and x.endswith(".exr"))[-1]
@@ -193,6 +202,7 @@ def toon_compose(dst):
     img.colorspace_settings.name = "Linear Rec.709"
     img.pixels.foreach_set(out.ravel())
     img.save_render(dst, scene=sc)
+    _drop_passes()
     print("TOON ref=%.4f ink=%.3f -> %s" % (ref, float((ia > 0.5).mean()), dst))
 
 
@@ -227,4 +237,5 @@ def toon_compose_combined(dst, bands=(35, 65, 88), keep=0.3):
     im.pixels.foreach_set(out.ravel())
     sc.render.image_settings.color_mode = "RGBA"
     im.save_render(dst, scene=sc)
+    _drop_passes()
     print("TOONC ink=%.3f -> %s" % (float((ia > 0.5).mean()), dst))

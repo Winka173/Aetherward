@@ -48,6 +48,8 @@ namespace Aetherward.Sim.Combat
         /// <summary>Dynamic party: where the planner wants this hero (the Anchor eases toward it).</summary>
         public Vec2 Post;
         public int PostLane = -1;
+        /// <summary>Ultimate charge 0..1 (Battle.Ultimates.cs).</summary>
+        public float Ult;
         public int Level = 1;
         public string EvolutionId;
         public SkillDef Skill;

@@ -4,26 +4,8 @@
   0.5729
  ],
  "shadowLengthPerHeight": 0.8947,
- "braziersFlat": [
-  12.808,
-  -3.012,
-  -18.5,
-  8.392
- ],
- "aetherCrystalsFlat": [
-  -8.538,
-  -2.223,
-  9.962,
-  10.446,
-  -18.5,
-  10.596,
-  18.5,
-  10.493,
-  18.5,
-  -3.761,
-  18.5,
-  7.828
- ],
+ "braziersFlat": [],
+ "aetherCrystalsFlat": [],
  "edgeColor": [
   0.4122,
   0.4163,
@@ -32,5 +14,7 @@
  "source": "ArtCache/EnvToon/verdant_wide",
  "gamma": 1.1887,
  "viewMeanBefore": 0.4561,
- "viewMean": 0.4
+ "viewMean": 0.4,
+ "bgScaleY": 1.125,
+ "painted": "verdant_paint.png"
 }

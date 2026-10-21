@@ -66,6 +66,8 @@ namespace Aetherward.Sim.Combat
                 h.SkillTimer = 0.2f; // nothing worth casting on; re-check shortly
             }
 
+            TickUltimate(h, dt);
+            if (h.State == HeroState.Cast && h.CastLock >= 0.6f) return;   // just cast the ultimate
             float leash = EffectiveLeash(h);
             if (h.Target != null)
             {

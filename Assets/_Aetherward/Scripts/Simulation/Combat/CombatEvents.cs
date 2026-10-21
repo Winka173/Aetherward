@@ -90,6 +90,7 @@ namespace Aetherward.Sim.Combat
         public float HeroTravel;
         /// <summary>Enemy hits on the Crystal and the damage they did.</summary>
         public int CrystalHits;
+        public int Ultimates;
         public readonly Dictionary<string, int> ReactionCounts = new Dictionary<string, int>();
         public readonly Dictionary<string, float> ReactionDamage = new Dictionary<string, float>();
         public readonly Dictionary<string, int> SourceActivations = new Dictionary<string, int>();

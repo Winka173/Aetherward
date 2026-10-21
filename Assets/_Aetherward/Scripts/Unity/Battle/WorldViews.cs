@@ -10,7 +10,7 @@ namespace Aetherward.Game
     public static class WorldGfx
     {
         /// <summary>Unit sprite scale: the dynamic-party camera sees a wider field, so units are drawn a bit larger.</summary>
-        public const float UnitScale = 1.4f;
+        public const float UnitScale = 1.5f;
 
         private static Material _mat;
         private static MaterialPropertyBlock _mpb;
@@ -143,7 +143,10 @@ namespace Aetherward.Game
         public SpriteRenderer Body;
         private SpriteRenderer _castShadow;
         private SpriteRenderer _shadow, _hpBg, _hpFill, _status1, _status2, _ring, _shieldFx;
-        private Sprite _idle, _alt, _cast, _down, _attack, _tell, _walkA, _walkB;
+        private Sprite _idle, _alt, _cast, _down, _attack, _tell, _walkA, _walkB, _windup, _follow, _idleB;
+        private Sprite[] _cycle;          // walk cycle (2 or 4 key poses; R05 adds c/d)
+        /// <summary>Set by the battle view each frame: the unit's next attack is about to land (shows the windup pose).</summary>
+        public bool Windup;
         private bool _isHero;
         private float _baseScale = 1f;
         private float _phase;
@@ -152,7 +155,7 @@ namespace Aetherward.Game
         private MaterialPropertyBlock _mpb;
         /// <summary>Set each frame by the battle view while a telegraphed strike from this unit is pending (boss tell pose).</summary>
         public bool Telegraphing;
-        public const float AttackHold = 0.22f, SpawnTime = 0.35f, DeathTime = 0.4f;
+        public const float AttackHold = 0.3f, SpawnTime = 0.35f, DeathTime = 0.4f;
         private const float ShadowBlobAlpha = 0.6f;   // contact occlusion under the feet; the cast shadow carries the light
         public bool Dying => _dieT >= 0f;
         private float _castT = -1f, _hitT = -1f;   // seconds into the cast / hit pose (UnitPose); < 0 = idle
@@ -162,6 +165,9 @@ namespace Aetherward.Game
         private Vector3 _lastPos;
         private Element _s1 = Element.None, _s2 = Element.None;
         public int Uid;
+        private Vector3 _smoothPos;
+        private float _speed;
+        private bool _hasPos;
         public bool IsHero => _isHero;
         public bool InUse;
 
@@ -202,6 +208,11 @@ namespace Aetherward.Game
             // walk cycle (new with the dynamic party; arrives batch by batch, idle bob when absent)
             _walkA = evo == null ? Art.Optional("Heroes/" + def.Id + "_walk_a") : null;
             _walkB = _walkA != null ? Art.Optional("Heroes/" + def.Id + "_walk_b") ?? _idle : null;
+            _cycle = Cycle(_walkA, _walkB, Art.Optional("Heroes/" + def.Id + "_walk_c"), Art.Optional("Heroes/" + def.Id + "_walk_d"));
+            string pre = "Heroes/" + def.Id + (evo == null ? "" : "_evo" + evo);
+            _windup = Art.Optional(pre + "_windup");
+            _follow = Art.Optional(pre + "_follow");
+            _idleB = Art.Optional(pre + "_idle_b");
             _baseScale = WorldGfx.UnitScale;
             _ring.enabled = true;
             _ring.color = Ui.ElementColor(def.Element) * new Color(1, 1, 1, 0.55f);
@@ -221,6 +232,10 @@ namespace Aetherward.Game
             _tell = def.Boss ? Art.Optional("Enemies/" + def.Id + "_tell") : null;
             bool big = def.Boss;
             _walkA = _walkB = null;
+            _cycle = Cycle(_idle, _alt, Art.Optional("Enemies/" + def.Id + "_c"), Art.Optional("Enemies/" + def.Id + "_d"));
+            _windup = Art.Optional("Enemies/" + def.Id + "_windup");
+            _follow = null;
+            _idleB = null;
             _baseScale = WorldGfx.UnitScale * (elite && !def.Elite && !def.Boss ? 1.3f : 1f) * (def.Id == "swarmling" ? 0.8f : 1f) * (big ? 1.25f : 1f);
             float shadowW = big ? 2.6f : (def.Radius * 2.4f) * _baseScale;
             _shadow.transform.localScale = new Vector3(shadowW, shadowW * 0.9f, 1);
@@ -257,6 +272,8 @@ namespace Aetherward.Game
             if (_castShadow != null) _castShadow.color = Color.white;
             _phase = Random.value * 6f;
             _castTimer = _lungeTimer = _flash = _hpShowTimer = _attackTimer = 0f;
+            _hasPos = false;
+            _speed = 0f;
             _castT = _hitT = _spawnT = _dieT = -1f;
             Telegraphing = false;
             _s1 = _s2 = Element.None;
@@ -296,6 +313,13 @@ namespace Aetherward.Game
 
         /// <summary>The basic-attack strike pose (heroes: BasicAttack; enemies: the moment their hit lands).</summary>
         public void Attack() => _attackTimer = AttackHold;
+
+        private static Sprite[] Cycle(Sprite a, Sprite b, Sprite c, Sprite d)
+        {
+            if (a == null) return null;
+            if (c != null && d != null) return new[] { a, b ?? a, c, d };
+            return b != null && b != a ? new[] { a, b } : null;
+        }
 
         /// <summary>Enemy killed: plays the dissolve-out; <see cref="TickDeath"/> returns false when it is finished.</summary>
         public void BeginDeath()
@@ -353,8 +377,16 @@ namespace Aetherward.Game
         /// <summary>Per-frame sync from simulation state.</summary>
         public void Sync(Vector3 pos, float facingX, float hpFraction, float shieldFraction, bool alive, bool alwaysShowHp, bool stunned, Element status1, Element status2, float dt)
         {
-            float speed = (pos - _lastPos).magnitude / Mathf.Max(dt, 0.0001f);
+            // the sim steps at 30 Hz: smooth the drawn position and the speed estimate, or units stutter and flicker
+            // between walk and idle poses at 60+ fps. Teleports (spawn, dash > 2 units) snap.
+            float raw = (pos - _lastPos).magnitude / Mathf.Max(dt, 0.0001f);
+            bool snap = !_hasPos || (pos - _lastPos).sqrMagnitude > 4f;
             _lastPos = pos;
+            _smoothPos = snap ? pos : Vector3.Lerp(_smoothPos, pos, 1f - Mathf.Exp(-22f * dt));
+            _speed = snap ? 0f : Mathf.Lerp(_speed, Mathf.Min(raw, 12f), 1f - Mathf.Exp(-9f * dt));
+            _hasPos = true;
+            float speed = _speed;
+            pos = _smoothPos;
             transform.position = pos;
             int order = WorldGfx.OrderFor(pos.y);
             _shadow.sortingOrder = order;
@@ -398,18 +430,18 @@ namespace Aetherward.Game
             }
 
             if (_tell != null && Telegraphing) Body.sprite = _tell;
-            else if (_attackTimer > 0f) Body.sprite = _attack;
-            else if (speed > 0.2f && !_isHero)
+            else if (_attackTimer > 0f)
+                // strike first (the sim reports the hit), then the follow-through for the rest of the hold
+                Body.sprite = _follow != null && _attackTimer < AttackHold * 0.55f ? _follow : _attack;
+            else if (Windup && _windup != null) Body.sprite = _windup;
+            else if (speed > 0.2f && _cycle != null)
             {
-                _walk += dt * 4f;
-                Body.sprite = ((int)_walk % 2 == 0) ? _idle : _alt;
+                // stride rate follows the run speed; 4-pose cycles step twice as often as the old a/b pair
+                _walk += dt * (_cycle.Length >= 4 ? 2f : 1f) * (_isHero ? 2.5f + speed * 1.6f : 4f);
+                Body.sprite = _cycle[(int)_walk % _cycle.Length];
             }
-            else if (speed > 0.2f && _walkA != null)
-            {
-                _walk += dt * (2.5f + speed * 1.6f);   // stride rate follows the run speed
-                Body.sprite = ((int)_walk % 2 == 0) ? _walkA : _walkB;
-            }
-            else Body.sprite = _castTimer > 0f ? _cast : _idle;
+            else if (_castTimer > 0f) Body.sprite = _cast;
+            else Body.sprite = _idleB != null && Mathf.Repeat(Time.time * 0.8f + Uid * 0.37f, 1f) > 0.5f ? _idleB : _idle;
 
             float bob = speed > 0.2f ? Mathf.Abs(Mathf.Sin(_phase)) * 0.08f : Mathf.Abs(Mathf.Sin(_phase)) * 0.035f;
             float squash = speed > 0.2f ? Mathf.Sin(_phase * 2f) * 0.04f : Mathf.Sin(_phase * 2f) * 0.02f;
