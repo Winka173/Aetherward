@@ -789,6 +789,8 @@ namespace Aetherward.Game
                 }
                 if (n > 0) want = sum / n * 0.45f;
             }
+            // haven: the main gate is in the south wall; frame it above the hero dock instead of the keep's centre
+            if (_rc.Biome?.Arena != null && _rc.Biome.Arena.IsHaven) want += new Vector2(0f, -2.4f);
             float halfW = _cam.orthographicSize * _cam.aspect, halfH = _cam.orthographicSize;
             float mx = Mathf.Max(0f, _bgHalf.x - halfW - 0.2f), my = Mathf.Max(0f, _bgHalf.y - halfH - 0.1f);
             want = new Vector2(Mathf.Clamp(want.x, -mx, mx), Mathf.Clamp(want.y, -my, my));

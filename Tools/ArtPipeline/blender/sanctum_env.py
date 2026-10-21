@@ -162,7 +162,7 @@ bg.inputs[0].default_value = lin(THEME["world"][0])
 bg.inputs[1].default_value = THEME["world"][1]
 _hdr = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))),
                     "ArtCache", "polyhaven", THEME.get("hdri", "kloppenheim_02_puresky"), THEME.get("hdri", "kloppenheim_02_puresky") + "_2k.hdr")
-if os.path.exists(_hdr):   # soft, directional sky light instead of a flat colour; the biome colour tints it
+if os.path.exists(_hdr) and not arena.get("walls"):   # soft, directional sky light (haven: flat sky, its sun casts a second shadow set) instead of a flat colour; the biome colour tints it
     wnt = world.node_tree
     env = wnt.nodes.new("ShaderNodeTexEnvironment")
     env.image = bpy.data.images.load(_hdr, check_existing=True)
@@ -214,7 +214,8 @@ for lane in arena["lanes"]:
         one = np.minimum(one, seg_dist(gx, gy, a, b))
     LANE_DS.append(one)
     lane_d = np.minimum(lane_d, one)
-DAIS_R = 3.9                 # inner ring: Defensive holds on it, Balanced at its edge, Aggressive out on the field
+HAVEN = bool(arena.get("walls"))   # walled keep layout (owner 2026-10-21): walls, gates, courtyard
+DAIS_R = 2.8 if HAVEN else 3.9     # inner ring: Defensive holds on it, Balanced at its edge, Aggressive out on the field
 dais_d = np.hypot(gx, gy + 0.887)          # centred on the Crystal (game y -0.55 -> ground -0.887)
 
 
@@ -749,7 +750,7 @@ z0 = float(height[np.abs(np.linspace(GY0, GY1, MH) - dais_c.y).argmin(), MW // 2
 add_cyl("Dais", DAIS_R, 0.22, (dais_c.x, dais_c.y, z0 + 0.06), MAT_DAIS)
 add_cyl("DaisInner", 3.0, 0.1, (dais_c.x, dais_c.y, z0 + 0.2), MAT_DAIS)
 add_cyl("CrystalPlinth", 1.15, 0.18, (dais_c.x, dais_c.y, z0 + 0.3), MAT_DARK, verts=12, bevel=0.05)
-for r_ in (DAIS_R - 0.8, 4.2, 3.6, 2.2):
+for r_ in (DAIS_R - 0.8, DAIS_R + 0.3, DAIS_R - 0.3, 2.2 * DAIS_R / 3.9):
     bpy.ops.mesh.primitive_torus_add(major_radius=r_, minor_radius=0.035, major_segments=160, minor_segments=6,
                                      location=(dais_c.x, dais_c.y, z0 + (0.17 if r_ > 3.1 else 0.25)))
     bpy.context.object.data.materials.append(MAT_DARK)
@@ -1267,6 +1268,124 @@ if THEME.get("kinds"):
 
 
 # candidate prop spots in screen space, filtered by lane / dais clearance
+# ----------------------------------------------------------------------------------------------- haven keep
+def flagstone_material(name, base, dark, grout, cells=1.6):
+    """Clean painted flagstones: voronoi slabs with dark grout lines and a little per-slab tone variation."""
+    m = bpy.data.materials.new(name)
+    m.use_nodes = True
+    nt = m.node_tree
+    bsdf = nt.nodes["Principled BSDF"]
+    tc = node(nt, "ShaderNodeTexCoord", (-1200, 0))
+    vo = node(nt, "ShaderNodeTexVoronoi", (-900, 200), Scale=cells)
+    vo.feature = "DISTANCE_TO_EDGE"
+    nt.links.new(tc.outputs["Object"], vo.inputs["Vector"])
+    vc = node(nt, "ShaderNodeTexVoronoi", (-900, -100), Scale=cells)
+    nt.links.new(tc.outputs["Object"], vc.inputs["Vector"])
+    tone = node(nt, "ShaderNodeValToRGB", (-650, -100))
+    tone.color_ramp.elements[0].color = lin(dark)
+    tone.color_ramp.elements[1].color = lin(base)
+    nt.links.new(vc.outputs["Distance"], tone.inputs["Fac"])
+    edge = node(nt, "ShaderNodeValToRGB", (-650, 200))
+    edge.color_ramp.elements[0].position, edge.color_ramp.elements[1].position = 0.02, 0.06
+    edge.color_ramp.elements[0].color = lin(grout)
+    edge.color_ramp.elements[1].color = (1, 1, 1, 1)
+    nt.links.new(vo.outputs["Distance"], edge.inputs["Fac"])
+    mix = node(nt, "ShaderNodeMix", (-350, 0))
+    mix.data_type = "RGBA"
+    mix.blend_type = "MULTIPLY"
+    mix.inputs["Factor"].default_value = 1.0
+    nt.links.new(tone.outputs["Color"], [x for x in mix.inputs if x.name == "A" and x.type == "RGBA"][0])
+    nt.links.new(edge.outputs["Color"], [x for x in mix.inputs if x.name == "B" and x.type == "RGBA"][0])
+    nt.links.new([x for x in mix.outputs if x.name == "Result" and x.type == "RGBA"][0], bsdf.inputs["Base Color"])
+    bsdf.inputs["Roughness"].default_value = 0.9
+    return m
+
+
+def brazier_simple(x, y, h=1.0):
+    z = ground_z(x, y)
+    b = G(x, y, z)
+    add_cyl("BrazierStand", 0.12, h, (b.x, b.y, z + h / 2), MAT_DARK, verts=8, bevel=0.02)
+    add_cyl("BrazierBowl", 0.34, 0.16, (b.x, b.y, z + h + 0.05), MAT_DARK, verts=16, bevel=0.03)
+    bpy.ops.mesh.primitive_uv_sphere_add(radius=0.2, location=(b.x, b.y, z + h + 0.2))
+    bpy.context.object.data.materials.append(glow_material("BrazierFire", "#ff8a2a", "#ffb04a", 6.0, 0.0))
+    BRAZIERS.append((x, y + (z + h + 0.2) * COS))
+
+
+KEEP = None
+if HAVEN:
+    MAT_FLAG = flagstone_material("Flagstone", "#b8ad98", "#8c826f", "#3a3330")
+    MAT_WALL = flagstone_material("WallStone", "#8e93a3", "#6a6e7c", "#24222c", cells=2.6)   # cool grey: walls must read apart from the warm courtyard
+    sca = arena.get("scale", 1.0)
+    walls = [[v * sca for v in r_] for r_ in arena["walls"]]
+    KEEP = (min(r_[0] for r_ in walls) - 0.6, min(r_[1] for r_ in walls) - 0.6, max(r_[2] for r_ in walls) + 0.6, max(r_[3] for r_ in walls) + 0.6)
+    inner = [r_ for r_ in arena["walk"]][0]
+    ix0, iy0, ix1, iy1 = [v * sca for v in inner]
+    zs = [ground_z(x, y) for x in np.linspace(KEEP[0], KEEP[2], 12) for y in np.linspace(KEEP[1], KEEP[3], 12)]
+    zk = max(zs) + 0.25          # above every ground bump: terrain poking through reads as ink speckles
+    # courtyard flagstones (between the walls) and a low step under the gate passages
+    c0, c1 = G(KEEP[0] + 0.6, KEEP[1] + 0.6), G(KEEP[2] - 0.6, KEEP[3] - 0.6)
+    bpy.ops.mesh.primitive_cube_add(size=1, location=((c0.x + c1.x) / 2, (c0.y + c1.y) / 2, zk - 0.2))
+    floor = bpy.context.object
+    floor.name = "Courtyard"
+    floor.scale = (c1.x - c0.x, c1.y - c0.y, 0.42)
+    floor.data.materials.append(MAT_FLAG)
+    bpy.ops.object.transform_apply(location=False, rotation=False, scale=True)   # slab size in real units
+    # the dais and its rings sit on the courtyard floor now
+    for o in list(sc.objects):
+        if o.name.startswith(("Dais", "CrystalPlinth", "Torus", "Cube")) and o is not floor and o.location.z < zk + 0.1:
+            o.location.z += zk + 0.02 - z0
+    WALL_H = 2.0
+    for x0, y0, x1, y1 in walls:
+        # render the wall thinner than its footprint (the footprint is the gameplay keep-out band)
+        if x1 - x0 >= y1 - y0:
+            y0, y1 = y0 + 0.3, y1 - 0.3
+        else:
+            x0, x1 = x0 + 0.3, x1 - 0.3
+        a_, b_ = G(x0, y0), G(x1, y1)
+        bpy.ops.mesh.primitive_cube_add(size=1, location=((a_.x + b_.x) / 2, (a_.y + b_.y) / 2, zk + WALL_H / 2 - 0.2))
+        w_ = bpy.context.object
+        w_.name = "Wall"
+        w_.scale = (abs(b_.x - a_.x), abs(b_.y - a_.y), WALL_H + 0.4)
+        w_.data.materials.append(MAT_WALL)
+        bpy.ops.object.transform_apply(location=False, rotation=False, scale=True)
+        bv = w_.modifiers.new("bevel", "BEVEL")
+        bv.width, bv.segments = 0.06, 2
+        # battlements along the long side
+        horiz = abs(b_.x - a_.x) >= abs(b_.y - a_.y)
+        length = abs(b_.x - a_.x) if horiz else abs(b_.y - a_.y)
+        n_ = max(1, int(length / 0.7))
+        for k in range(n_):
+            t = (k + 0.5) / n_
+            cx_ = a_.x + (b_.x - a_.x) * t if horiz else (a_.x + b_.x) / 2
+            cy_ = (a_.y + b_.y) / 2 if horiz else a_.y + (b_.y - a_.y) * t
+            for side in (-1, 1):
+                off = (abs(b_.y - a_.y) / 2 - 0.12) * side if horiz else (abs(b_.x - a_.x) / 2 - 0.12) * side
+                bpy.ops.mesh.primitive_cube_add(size=1, location=(cx_ + (0 if horiz else off), cy_ + (off if horiz else 0), zk + WALL_H + 0.18))
+                m_ = bpy.context.object
+                m_.scale = (0.36 if horiz else 0.24, 0.24 if horiz else 0.36, 0.38)
+                m_.data.materials.append(MAT_WALL)
+    # gate towers on both sides of every gate
+    gates = []
+    for lane in arena["lanes"]:
+        g_ = lane.get("gate")
+        if g_ and all(math.hypot(g_[0] * sca - q[0], g_[1] * sca - q[1]) > 2.5 for q in gates):
+            gates.append((g_[0] * sca, g_[1] * sca))
+    for gx_, gy_ in gates:
+        vertical_wall = abs(gx_) > abs(gy_)
+        for side in (-1, 1):
+            tx, ty = (gx_, gy_ + 2.05 * side) if vertical_wall else (gx_ + 2.25 * side, gy_)
+            tp = G(tx, ty)
+            add_cyl("GateTower", 0.85, WALL_H + 1.2, (tp.x, tp.y, zk + (WALL_H + 1.2) / 2 - 0.2), MAT_WALL, verts=16, bevel=0.05)
+            add_cyl("GateTowerCap", 1.1, 0.3, (tp.x, tp.y, zk + WALL_H + 1.2), MAT_DARK, verts=16, bevel=0.04)
+    # braziers in the courtyard corners
+    for bx_, by_ in ((ix0 + 1.2, iy0 + 1.0), (ix1 - 1.2, iy0 + 1.0), (ix0 + 1.2, iy1 - 1.1), (ix1 - 1.2, iy1 - 1.1)):
+        brazier_simple(bx_, by_)
+
+
+def in_keep(x, y):
+    return KEEP is not None and KEEP[0] - 0.8 <= x <= KEEP[2] + 0.8 and KEEP[1] - 1.5 <= y <= KEEP[3] + 0.8
+
+
 spots = [(x, y) for x in np.linspace(-VIEW_W / 2 + 1.5, VIEW_W / 2 - 1.5, 27) for y in np.linspace(-VIEW_H / 2 + 0.9, VIEW_H / 2 - 0.9, 15)]
 random.shuffle(spots)
 placed = []
@@ -1278,7 +1397,7 @@ for x, y in spots:
     if not kinds:
         break
     need = {"arch": 2.8, "deadtree": 2.6, "statue": 2.2, "mossrocks": 2.4, "roots": 2.2, "boulder": 2.0}.get(kinds[0], 1.7)
-    if math.hypot(x, y + 0.55) < 5.8:   # the intercept field around the inner ring stays open for the party
+    if math.hypot(x, y + 0.55) < 5.8 or in_keep(x, y):   # the intercept field / the keep stay open for the party
         continue
     if not lane_clear(x, y, need) or any(math.hypot(x - px, y - py) < 2.4 for px, py in placed):
         continue
@@ -1387,6 +1506,7 @@ fill = bpy.data.lights.new("Fill", "AREA")
 fill.energy = 900
 fill.size = 30
 fill.color = lin("#3c5c9a")[:3]
+fill.use_shadow = not HAVEN     # its huge soft shadows cross the courtyard in an X
 fo = bpy.data.objects.new("Fill", fill)
 fo.location = (6, 26, 14)
 fo.rotation_euler = (-(fo.location - Vector((0, 0, 0)))).to_track_quat("-Z", "Y").to_euler()

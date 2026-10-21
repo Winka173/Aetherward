@@ -5,7 +5,7 @@
   "Tools/ArtPipeline/blender/crystal_states.py": "c95cbef97c978b89ce18dd7b42cb34fac656cde3090240dc436122f0352e1eab",
   "Tools/ArtPipeline/blender/direction_benchmark.py": "63175bf39ceb486a43a226e647fd59f768d081b241bcbecc7af31db94253ba2d",
   "Tools/ArtPipeline/blender/pose_mannequins.py": "67294091c963fc2f21137ea5ebbb55d2fdbb02c868d497efae19e5d3543bca70",
-  "Tools/ArtPipeline/blender/sanctum_env.py": "45e0b0f5f4df2af3f2042fc37bae1c14367520c67316c6b2360a3704a72de09d",
+  "Tools/ArtPipeline/blender/sanctum_env.py": "692543f8f291c17b1e26062d882eebc199026184d50f69e372d13c1446fde0c7",
   "Tools/ArtPipeline/blender/toon_pass.py": "a2aa70484a831513d5afd46da7519c11520638f403fa2659ab455a8c103a2de7",
   "Tools/ArtPipeline/blender/vfx_flipbooks.py": "2356360cdc6f874e9f15dbf05ae79a869383804618091bca9f1058773177628a",
   "Tools/AssetGen/art/build_all.py": "0f483337c832f6f576d937c2f1c5d618b716d583b27190063165f39e684f7546",
@@ -3606,7 +3606,7 @@
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/World/arena_background.png",
-   "sha256": "3973181ac38f952951ca8a461c168d55a373aa0d4931892fed976845b88c9d35"
+   "sha256": "46c9c71e8bca488d30707b0f7123417cd4c069f6119601c32789c45aa90e575e"
   },
   {
    "path": "Assets/_Aetherward/Resources/Art/World/bg_frostfall_bastion.png",

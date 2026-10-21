@@ -4,17 +4,42 @@
   0.5729
  ],
  "shadowLengthPerHeight": 0.8947,
- "braziersFlat": [],
- "aetherCrystalsFlat": [],
- "edgeColor": [
-  0.4122,
-  0.4163,
-  0.3404
+ "braziersFlat": [
+  -5.4,
+  -2.851,
+  5.4,
+  -2.871,
+  -5.4,
+  5.629,
+  5.4,
+  5.619,
+  15.654,
+  4.776,
+  12.808,
+  -3.012
  ],
- "source": "ArtCache/EnvToon/verdant_wide",
- "gamma": 1.1887,
- "viewMeanBefore": 0.4561,
- "viewMean": 0.4,
- "bgScaleY": 1.125,
- "painted": "verdant_paint.png"
+ "aetherCrystalsFlat": [
+  -18.5,
+  7.905,
+  9.962,
+  10.446,
+  -18.5,
+  10.596,
+  18.5,
+  10.496,
+  -9.962,
+  6.897,
+  -9.962,
+  -4.789
+ ],
+ "edgeColor": [
+  0.27,
+  0.2776,
+  0.233
+ ],
+ "source": "ArtCache/EnvHaven/game",
+ "gamma": 1.3988,
+ "viewMeanBefore": 0.4624,
+ "viewMean": 0.36,
+ "bgScaleY": 1.0
 }
