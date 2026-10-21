@@ -43,7 +43,7 @@ def main():
     cn = ControlNetModel.from_pretrained("diffusers/controlnet-canny-sdxl-1.0", torch_dtype=torch.float16, variant="fp16")
     pipe = StableDiffusionXLControlNetImg2ImgPipeline.from_pretrained(
         "stabilityai/stable-diffusion-xl-base-1.0", controlnet=cn, torch_dtype=torch.float16, variant="fp16").to("cuda")
-    pipe.enable_vae_slicing()
+    if hasattr(pipe, "vae") and hasattr(pipe.vae, "enable_slicing"): pipe.vae.enable_slicing()
     for s in range(a.seeds):
         g = torch.Generator("cuda").manual_seed(1000 + s)
         img = pipe(PROMPT, negative_prompt=NEGATIVE, image=base, control_image=control, strength=a.strength,
