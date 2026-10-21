@@ -159,6 +159,7 @@ namespace Aetherward.Tests
             HeroUnit doc = b.Heroes[0], ally = b.Heroes[1];
             for (int i = 0; i < 3; i++) Dummy(b, doc.Pos + new Vec2(2.4f + i * 0.3f, 0.2f * i));
             b.Tick();
+            ally.Pos = doc.Pos + new Vec2(-1.2f, 0f);   // heal range is live distance: keep the ally beside Sable
             ally.Hp = ally.MaxHp * 0.4f;
             float before = ally.Hp;
             Assert.IsTrue(b.CastSkill(doc, 1f, false));
@@ -184,6 +185,7 @@ namespace Aetherward.Tests
             HeroUnit pa = p.Heroes[1];
             EnemyUnit victim = Dummy(p, p.Heroes[0].Pos + new Vec2(2f, 0f));
             p.Tick();
+            pa.Pos = p.Heroes[0].Pos + new Vec2(-1.2f, 0f);
             pa.Hp = pa.MaxHp * 0.5f;
             p.AddPoison(victim, 3, 5f, null);
             float hp = pa.Hp;

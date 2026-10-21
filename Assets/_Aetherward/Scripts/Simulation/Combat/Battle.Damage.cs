@@ -69,7 +69,7 @@ namespace Aetherward.Sim.Combat
                 return 0f;
             }
 
-            float raw = req.Attack * req.Multiplier;
+            float raw = req.Attack * req.Multiplier * GateHoldBonus(req.Source);
             bool crit = false;
             HeroUnit src = req.Source;
 
@@ -190,7 +190,7 @@ namespace Aetherward.Sim.Combat
             e.Alive = false;
             e.Hp = 0f;
             Stats.Kills++;
-            float gold = e.Def.Gold * (e.Elite && !e.Def.Elite ? 3f : 1f) * (1f + Mods.EnemyGoldPct);
+            float gold = e.Def.Gold * (e.Elite && !e.Def.Elite ? 3f : 1f) * (1f + Mods.EnemyGoldPct) * SallyGold();
             Stats.GoldFromKills += gold;
             Stats.EssenceFromKills += e.Def.Essence + (e.Elite && !e.Def.Elite && !e.Def.Boss ? 1 : 0);
             if (killer != null)

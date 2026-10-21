@@ -51,7 +51,7 @@ namespace Aetherward.Sim.Combat
                 for (int j = i + 1; j < hs.Count; j++)
                 {
                     HeroUnit x = hs[i], y = hs[j];
-                    float d = Battle.FormationDistance(x, y);
+                    float d = b.FormationDistance(x, y);
                     bool overlap = d < Reach(x) + Reach(y);
                     foreach (Element ex in Elements(x))
                     {
@@ -79,7 +79,7 @@ namespace Aetherward.Sim.Combat
                 for (int j = 0; j < hs.Count; j++)
                 {
                     if (j == i) continue;
-                    float d = Battle.FormationDistance(s, hs[j]);
+                    float d = b.FormationDistance(s, hs[j]);
                     if (d <= radius)
                         r.Links.Add(new SynergyLink { Kind = SynergyKind.Buff, A = i, B = j, RuleId = "buff:" + s.PassiveKind, Active = true, Distance = d });
                     else if (d <= radius * 1.5f)

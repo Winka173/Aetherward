@@ -19,6 +19,7 @@ namespace Aetherward.Tests
         {
             BattleSetup s = TestContent.Setup(12, 21, Party);
             s.Stance = stance;
+            s.DynamicParty = true;
             var b = new Battle(s);
             for (int t = 0; t < seconds * 30 && b.Outcome == BattleOutcome.Running; t++)
             {

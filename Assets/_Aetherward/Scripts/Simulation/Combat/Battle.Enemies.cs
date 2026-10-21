@@ -58,6 +58,7 @@ namespace Aetherward.Sim.Combat
             if (e.Chilled) speed *= 0.85f;
             if (e.RootTimer > 0f) speed = 0f; // rooted: holds position but can still attack in reach
             speed *= MechanicSpeed(e);
+            speed *= GateCrowding(e);
             EnemyBehavior b = e.Def.Behavior;
 
             if (e.SealTimer <= 0f)

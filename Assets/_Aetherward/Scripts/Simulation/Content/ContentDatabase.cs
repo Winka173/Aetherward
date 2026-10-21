@@ -9,6 +9,8 @@ namespace Aetherward.Sim.Content
         public string Id;
         public string NameKey;
         public List<Vec2> Points = new List<Vec2>(); // spawn -> crystal
+        /// <summary>Haven arenas: where this lane passes through a gate (stances post relative to it). Null = open field.</summary>
+        public Vec2? Gate;
     }
 
     public sealed class HazardDef
@@ -74,6 +76,13 @@ namespace Aetherward.Sim.Content
         public float CrystalRadius = 0.85f;
         public List<Vec2> Nodes = new List<Vec2>();
         public List<LaneDef> Lanes = new List<LaneDef>();
+        /// <summary>Haven arenas: rectangles (x0, y0, x1, y1) heroes may stand in (the keep, gate passages, aprons). Empty = open field.</summary>
+        public List<float[]> Walk = new List<float[]>();
+        /// <summary>Haven arenas: wall rectangles (x0, y0, x1, y1), for art guides and readability tools.</summary>
+        public List<float[]> Walls = new List<float[]>();
+        public bool IsHaven => Walk.Count > 0;
+        /// <summary>The scale the layout was authored at (1 for haven layouts, WorldScale for the legacy open ones).</summary>
+        public float Scale = 1f;
     }
 
     /// <summary>
@@ -788,15 +797,19 @@ namespace Aetherward.Sim.Content
         /// </summary>
         public static float WorldScale = 1.3f;
 
-        private static Vec2 W(JsonNode p) => new Vec2(p[0].AsFloat() * WorldScale, p[1].AsFloat() * WorldScale);
+        private static float _arenaScale = 1f;   // per-arena "scale" (haven layouts are authored in final units)
+        private static Vec2 W(JsonNode p) => new Vec2(p[0].AsFloat() * _arenaScale, p[1].AsFloat() * _arenaScale);
+
+        private static float[] Rect(JsonNode r) => new[] { r[0].AsFloat() * _arenaScale, r[1].AsFloat() * _arenaScale, r[2].AsFloat() * _arenaScale, r[3].AsFloat() * _arenaScale };
 
         private static ArenaDef ParseArena(JsonNode n)
         {
+            _arenaScale = n.Float("scale", WorldScale);
             var a = new ArenaDef
             {
                 Id = n.Str("id", "arcane_sanctuary"),
-                HalfWidth = n.Float("halfWidth", 12f) * WorldScale,
-                HalfHeight = n.Float("halfHeight", 7f) * WorldScale,
+                HalfWidth = n.Float("halfWidth", 12f) * _arenaScale,
+                HalfHeight = n.Float("halfHeight", 7f) * _arenaScale,
                 CrystalRadius = n.Float("crystalRadius", 0.85f)
             };
             foreach (JsonNode p in n["nodes"].Items) a.Nodes.Add(W(p));
@@ -804,8 +817,13 @@ namespace Aetherward.Sim.Content
             {
                 var lane = new LaneDef { Id = l.Str("id"), NameKey = "lane." + l.Str("id") };
                 foreach (JsonNode p in l["points"].Items) lane.Points.Add(W(p));
+                if (l["gate"].Kind == JsonKind.Array) lane.Gate = W(l["gate"]);
                 a.Lanes.Add(lane);
             }
+            a.Scale = _arenaScale;
+            foreach (JsonNode r in n["walk"].Items) a.Walk.Add(Rect(r));
+            foreach (JsonNode r in n["walls"].Items) a.Walls.Add(Rect(r));
+            _arenaScale = WorldScale;
             return a;
         }
 

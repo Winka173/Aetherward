@@ -63,7 +63,9 @@ namespace Aetherward.Tests
                 Wave = db.Waves[wave - 1],
                 Seed = seed,
                 CrystalHp = db.Economy.CrystalHp,
-                CrystalMaxHp = db.Economy.CrystalHp
+                CrystalMaxHp = db.Economy.CrystalHp,
+                // mechanics tests run on fixed anchors without the haven rules; DynamicPartyTests turn the party on
+                DynamicParty = false
             };
             int i = 0;
             foreach (var (hero, node) in heroes)

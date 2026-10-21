@@ -237,6 +237,7 @@ namespace Aetherward.Sim.Combat
             UpdateCrystal(dt);
             UpdateCrystalPath(dt);
             UpdatePartyPosts(dt);
+            UpdatePillage(dt);
             for (int i = 0; i < Heroes.Count; i++)
             {
                 Vec2 before = Heroes[i].Pos;

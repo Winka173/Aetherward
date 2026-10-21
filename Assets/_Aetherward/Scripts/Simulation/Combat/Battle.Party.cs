@@ -49,16 +49,20 @@ namespace Aetherward.Sim.Combat
         /// battlefield was widened by <see cref="ContentDatabase.WorldScale"/>, the formation rings with it, and the
         /// aura radii in content were tuned for the old spacing.
         /// </summary>
-        public static float FormationDistance(HeroUnit a, HeroUnit b) => Vec2.Distance(a.Anchor, b.Anchor) / ContentDatabase.WorldScale;
+        public float FormationDistance(HeroUnit a, HeroUnit b) => Vec2.Distance(a.Anchor, b.Anchor) / Arena.Scale;
 
-        /// <summary>Aggressive "Momentum": fighting out on the lanes is riskier, so it hits harder (+12% attack).</summary>
-        public const float AggressiveMomentum = 0.12f;
+        /// <summary>Aggressive "Momentum": fighting out on the lanes is riskier, so it hits harder (+18% attack).</summary>
+        public const float AggressiveMomentum = 0.18f;
+
+        /// <summary>Defensive "Hold the keep": the enemy comes to you, so you fight more carefully (-15% attack).</summary>
+        public const float DefensiveHold = -0.15f;
 
         private void ApplyStanceBonus()
         {
-            if (!Setup.DynamicParty || Setup.Stance != PartyStance.Aggressive) return;
+            if (!Setup.DynamicParty || Setup.Stance == PartyStance.Balanced) return;
+            float pct = Setup.Stance == PartyStance.Aggressive ? AggressiveMomentum : DefensiveHold;
             for (int i = 0; i < Heroes.Count; i++)
-                if (Heroes[i].Alive) AddBuff(Heroes[i], StatId.Attack, AggressiveMomentum, 99999f, "stance_momentum");
+                if (Heroes[i].Alive) AddBuff(Heroes[i], StatId.Attack, pct, 99999f, Setup.Stance == PartyStance.Aggressive ? "stance_momentum" : "stance_hold");
         }
 
         private static bool IsFrontline(HeroRole r) => r == HeroRole.Guardian || r == HeroRole.Bruiser;
@@ -170,16 +174,21 @@ namespace Aetherward.Sim.Combat
             }
 
             PickRescuers(breacher, stance == PartyStance.Defensive ? 3 : 2);
-            for (int i = 0; i < Heroes.Count; i++)
+            // frontliners claim gates first, then the others join the gate where their element reacts with a holder's
+            _order.Clear();
+            for (int i = 0; i < Heroes.Count; i++) if (IsFrontline(Heroes[i].Role)) _order.Add(Heroes[i]);
+            for (int i = 0; i < Heroes.Count; i++) if (!IsFrontline(Heroes[i].Role)) _order.Add(Heroes[i]);
+            for (int i = 0; i < _order.Count; i++)
             {
-                HeroUnit h = Heroes[i];
+                HeroUnit h = _order[i];
                 if (!h.Alive) continue;
                 if (_rescuers.Contains(h))
                 {
                     h.Post = c + (breacher.Pos - c).Normalized * (Crystal.Radius + 0.9f);
                     continue;
                 }
-                int lane = PickLane(h, IsFrontline(h.Role) ? front : back);
+                int lane = IsFrontline(h.Role) ? PickLane(h, front) : PickSynergyLane(h, back);
+                R = LaneRadius(lane, stance);
                 Vec2 dir = lane >= 0 ? (LanePointAt(lane, R) - c).Normalized : (h.Post - c).Normalized;
                 if (dir.SqrLength < 1e-4f) dir = h.Facing.SqrLength > 1e-4f ? h.Facing : new Vec2(1f, 0f);
                 Vec2 side = new Vec2(-dir.Y, dir.X);
@@ -252,6 +261,42 @@ namespace Aetherward.Sim.Combat
             }
         }
 
+        private readonly List<HeroUnit> _order = new List<HeroUnit>(6);
+
+        /// <summary>
+        /// Backline lane choice: the hot lane whose already-posted heroes react with this hero's element (Fire with
+        /// Lightning, Water with Ice...), so a party split over several gates still lands elemental combos. Falls back
+        /// to the round-robin hot lane.
+        /// </summary>
+        private int PickSynergyLane(HeroUnit h, int k)
+        {
+            if (_hotLanes.Count == 0) return h.PostLane;
+            int best = -1;
+            float bestScore = 0f;
+            for (int li = 0; li < _hotLanes.Count; li++)
+            {
+                int lane = _hotLanes[li];
+                float score = 0f;
+                for (int j = 0; j < _order.Count; j++)
+                {
+                    HeroUnit o = _order[j];
+                    if (o == h) break;                       // only heroes already planned this pass
+                    if (!o.Alive || o.PostLane != lane) continue;
+                    if (o.Def.Element != h.Def.Element && Content.ReactionFor(h.Def.Element, o.Def.Element) != null) score += 2f;
+                }
+                if (score <= 0f) continue;
+                score += _laneThreat[lane] / System.Math.Max(1f, _laneThreat[_hotLanes[0]]);
+                if (score > bestScore)
+                {
+                    bestScore = score;
+                    best = lane;
+                }
+            }
+            if (best < 0) return PickLane(h, k);
+            h.PostLane = best;
+            return best;
+        }
+
         /// <summary>Lane for the k-th hero of a group, with hysteresis so posts do not flicker between lanes.</summary>
         private int PickLane(HeroUnit h, int k)
         {
@@ -287,8 +332,98 @@ namespace Aetherward.Sim.Combat
             return best;
         }
 
+        /// <summary>
+        /// Haven arenas: the radius a stance posts at on this lane, measured from its gate. Defensive holds the keep,
+        /// Balanced stands just inside the gate, Aggressive meets the wave out on the apron.
+        /// </summary>
+        private float LaneRadius(int lane, PartyStance stance)
+        {
+            Vec2? gate = lane >= 0 && lane < Arena.Lanes.Count ? Arena.Lanes[lane].Gate : null;
+            if (gate == null) return StanceRadius(stance);
+            float g = Vec2.Distance(gate.Value, Crystal.Pos);
+            return stance == PartyStance.Defensive ? 0.6f * g : stance == PartyStance.Aggressive ? g + 1.5f : g - 0.8f;
+        }
+
+        /// <summary>
+        /// Haven "pillage": every ground enemy inside the walls ransacks the keep, chipping the Crystal for this share of
+        /// its crystal damage per second. Holding the gates is what protects the haven, not only standing by the Crystal.
+        /// </summary>
+        public const float PillageRate = 0.03f;
+        private float _pillage;
+
+        private void UpdatePillage(float dt)
+        {
+            if (!Setup.DynamicParty || !Arena.IsHaven) return;
+            float sum = 0f;
+            for (int i = 0; i < Enemies.Count; i++)
+            {
+                EnemyUnit e = Enemies[i];
+                if (!e.Alive || e.Lane < 0 || e.Lane >= Arena.Lanes.Count || IsFlying(e)) continue;
+                Vec2? g = Arena.Lanes[e.Lane].Gate;
+                if (g == null) continue;
+                if (Vec2.Distance(e.Pos, Crystal.Pos) < Vec2.Distance(g.Value, Crystal.Pos) - 0.8f) sum += e.CrystalDamage * PillageRate;
+            }
+            _pillage += sum * dt;
+            if (_pillage >= 5f)   // applied in chunks so the Crystal flashes a readable hit, not a constant drizzle
+            {
+                DamageCrystal(_pillage, null);
+                _pillage = 0f;
+            }
+        }
+
+        /// <summary>Balanced "Hold the gate" (haven): heroes fighting within 2.5 of a gate deal +20% damage.</summary>
+        public const float GateHoldDamage = 0.2f, GateHoldRadius = 2.5f;
+        /// <summary>Aggressive "Sally out": kills loot the field for +20% gold.</summary>
+        public const float SallyGoldPct = 0.2f;
+
+        private float GateHoldBonus(HeroUnit h)
+        {
+            if (h == null || !Setup.DynamicParty || Setup.Stance != PartyStance.Balanced || !Arena.IsHaven) return 1f;
+            for (int i = 0; i < Arena.Lanes.Count; i++)
+            {
+                Vec2? g = Arena.Lanes[i].Gate;
+                if (g != null && Vec2.Distance(h.Pos, g.Value) <= GateHoldRadius) return 1f + GateHoldDamage;
+            }
+            return 1f;
+        }
+
+        private float SallyGold() => Setup.DynamicParty && Setup.Stance == PartyStance.Aggressive ? 1f + SallyGoldPct : 1f;
+
+        /// <summary>Haven arenas: a wave squeezing through a gate slows down (chokepoint), flyers excepted.</summary>
+        public const float GateSlow = 0.6f, GateSlowRadius = 1.8f;
+
+        private float GateCrowding(EnemyUnit e)
+        {
+            if (!Setup.DynamicParty || !Arena.IsHaven || e.Lane < 0 || e.Lane >= Arena.Lanes.Count || IsFlying(e)) return 1f;
+            Vec2? g = Arena.Lanes[e.Lane].Gate;
+            return g != null && Vec2.Distance(e.Pos, g.Value) < GateSlowRadius ? GateSlow : 1f;
+        }
+
+        /// <summary>Haven arenas: keep a point inside the walkable rectangles (keep, gate passages, aprons) so heroes never cross walls.</summary>
+        public Vec2 ClampToWalk(Vec2 p, float r)
+        {
+            if (!Arena.IsHaven) return p;
+            float best = float.MaxValue;
+            Vec2 bestP = p;
+            for (int i = 0; i < Arena.Walk.Count; i++)
+            {
+                float[] w = Arena.Walk[i];
+                float x = System.Math.Max(w[0] + r, System.Math.Min(w[2] - r, p.X));
+                float y = System.Math.Max(w[1] + r, System.Math.Min(w[3] - r, p.Y));
+                float d = (x - p.X) * (x - p.X) + (y - p.Y) * (y - p.Y);
+                if (d < best)
+                {
+                    best = d;
+                    bestP = new Vec2(x, y);
+                    if (d <= 0f) break;
+                }
+            }
+            return bestP;
+        }
+
         private Vec2 ClampToArena(Vec2 p, float r)
         {
+            p = ClampToWalk(p, r);
             float hw = Arena.HalfWidth - r - 0.4f, hh = Arena.HalfHeight - r - 0.4f;
             p = new Vec2(System.Math.Max(-hw, System.Math.Min(hw, p.X)), System.Math.Max(-hh, System.Math.Min(hh, p.Y)));
             float minC = Crystal.Radius + r + 0.2f;

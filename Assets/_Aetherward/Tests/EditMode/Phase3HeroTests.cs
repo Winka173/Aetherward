@@ -33,7 +33,7 @@ namespace Aetherward.Tests
         {
             Battle b = Make(null, ("caelis", 4), ("ignis", 5), ("terra", 0));
             HeroUnit caelis = b.Heroes[0], ignis = b.Heroes[1];
-            for (int i = 0; i < 3; i++) Dummy(b, new Vec2(5.5f + i * 0.3f, 1.2f + 0.2f * i));
+            for (int i = 0; i < 3; i++) Dummy(b, caelis.Pos + new Vec2(1.5f + i * 0.3f, 0.2f * i));   // relative: layout independent
             b.Tick();
             Assert.IsTrue(b.CastSkill(caelis, 1f, false));
             Assert.Greater(caelis.EchoPrimed, 0f);

@@ -3,7 +3,26 @@
   // (0 east, 1 west, 2 north, 3 south, 4 northeast, 5 southwest) but changes geometry and rules.
   // Hazards are always telegraphed (delay) and hit heroes AND enemies; walls/covers never fully block a lane.
   "biomes": [
-    { "id": "verdant_sanctuary", "default": true, "arena": "arena", "background": "World/arena_background", "music": "battle_loop" },
+    { "id": "verdant_sanctuary", "default": true, "background": "World/arena_background", "music": "battle_loop",
+      // Haven (owner 2026-10-21): the Crystal stands inside a walled keep; the wave breaks in through three gates
+      // (main south gate, west and east side gates). Authored in final game units ("scale": 1). Heroes only walk the
+      // keep, the gate passages and the aprons in front of the gates; four lanes funnel into the south gate.
+      "arena": { "id": "verdant_haven", "scale": 1.0, "halfWidth": 19.5, "halfHeight": 15.5, "crystalRadius": 0.85,
+        "nodes": [ [1.6, 1.3], [-1.6, 1.3], [-1.6, -1.3], [1.6, -1.3],
+                   [-1.3, -4.0], [1.3, -4.0], [0.0, -3.0], [-5.4, 0.4],
+                   [-4.2, -0.9], [5.4, 0.4], [4.2, -0.9], [0.0, 3.4] ],
+        "lanes": [
+          { "id": "east",      "gate": [7.5, 0.3],   "points": [[19.0, 0.3], [12.0, 0.3], [7.5, 0.3], [4.5, 0.3], [1.9, 0.2]] },
+          { "id": "west",      "gate": [-7.5, 0.3],  "points": [[-19.0, 0.3], [-12.0, 0.3], [-7.5, 0.3], [-4.5, 0.3], [-1.9, 0.2]] },
+          { "id": "north",     "gate": [-0.5, -5.7], "points": [[-1.0, -15.0], [-0.8, -9.0], [-0.5, -5.7], [-0.3, -3.0], [0.0, -1.9]] },
+          { "id": "south",     "gate": [0.5, -5.7],  "points": [[1.0, -15.0], [0.8, -9.0], [0.5, -5.7], [0.3, -3.0], [0.0, -1.9]] },
+          { "id": "northeast", "gate": [0.6, -5.7],  "points": [[16.0, -13.0], [8.0, -9.4], [2.0, -7.2], [0.6, -5.7], [0.3, -3.0], [0.0, -1.9]] },
+          { "id": "southwest", "gate": [-0.6, -5.7], "points": [[-16.0, -13.0], [-8.0, -9.4], [-2.0, -7.2], [-0.6, -5.7], [-0.3, -3.0], [0.0, -1.9]] }
+        ],
+        "walk": [ [-6.6, -4.8, 6.6, 5.8], [-1.6, -6.6, 1.6, -4.6], [-4.5, -10.0, 4.5, -6.4],
+                  [-8.6, -1.0, -6.4, 1.6], [-12.5, -2.4, -8.4, 3.0], [6.4, -1.0, 8.6, 1.6], [8.4, -2.4, 12.5, 3.0] ],
+        "walls": [ [-8.0, 5.8, 8.0, 7.0], [-8.0, -6.4, -1.7, -4.8], [1.7, -6.4, 8.0, -4.8],
+                   [-8.0, -4.8, -6.6, -1.2], [-8.0, 1.8, -6.6, 5.8], [6.6, -4.8, 8.0, -1.2], [6.6, 1.8, 8.0, 5.8] ] } },
 
     { "id": "molten_crater", "background": "World/bg_molten_crater", "music": "battle_loop",
       // Two narrow basalt bridges: east+northeast and west+southwest share a crossing. Lava vents erupt

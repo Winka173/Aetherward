@@ -30,7 +30,8 @@ def jsonc(path):
 
 def main():
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    p.add_argument("--render", required=True)
+    p.add_argument("--render", default=None, help="Blender layout render; omitted = a plain canvas (haven layouts)")
+    p.add_argument("--size", nargs=2, type=int, default=[3344, 1882])
     p.add_argument("--biome", default="verdant_sanctuary")
     p.add_argument("--view", nargs=2, type=float, default=[36.0, 20.25])
     p.add_argument("--out", required=True)
@@ -41,7 +42,7 @@ def main():
     if isinstance(biome.get("arena"), dict):
         arena = biome["arena"]
     W, H = a.view
-    img = Image.open(a.render).convert("RGB")
+    img = Image.open(a.render).convert("RGB") if a.render else Image.new("RGB", tuple(a.size), (96, 118, 74))
     w, h = img.size
 
     def px(x, y):
@@ -54,8 +55,20 @@ def main():
     m = Image.new("L", img.size, 0)
     dm = ImageDraw.Draw(m)
     ppu = w / W
+    sc = arena.get("scale", WORLD_SCALE)
+    # haven: walls (footprint = where the wall meets the ground) and where heroes may walk
+    for x0, y0, x1, y1 in arena.get("walk", []):
+        (ax, ay), (bx, by) = px(x0 * sc, y1 * sc), px(x1 * sc, y0 * sc)
+        d.rectangle([ax, ay, bx, by], fill=(255, 255, 255, 28), outline=(255, 255, 255, 90), width=2)
+    for x0, y0, x1, y1 in arena.get("walls", []):
+        (ax, ay), (bx, by) = px(x0 * sc, y1 * sc), px(x1 * sc, y0 * sc)
+        d.rectangle([ax, ay, bx, by], fill=(40, 40, 52, 235), outline=(255, 255, 255, 255), width=3)
     for lane in arena["lanes"]:
-        pts = [px(x * WORLD_SCALE, y * WORLD_SCALE) for x, y in lane["points"]]
+        if "gate" in lane:
+            gx, gy = px(lane["gate"][0] * sc, lane["gate"][1] * sc)
+            d.ellipse([gx - 10, gy - 10, gx + 10, gy + 10], outline=(80, 255, 120, 255), width=4)
+    for lane in arena["lanes"]:
+        pts = [px(x * sc, y * sc) for x, y in lane["points"]]
         d.line(pts, fill=(255, 40, 40, 110), width=int(2 * LANE_HALF * ppu), joint="curve")
         d.line(pts, fill=(255, 255, 255, 255), width=4, joint="curve")
         dm.line(pts, fill=255, width=int(2 * LANE_HALF * ppu), joint="curve")
@@ -64,15 +77,19 @@ def main():
         d.text((x0 + 16, y0 - 8), "spawn " + lane["id"], fill=(255, 255, 255, 255))
     cx, cy = px(*CRYSTAL)
     # the open field is a game-space circle (screen circle); the dais is a ground-space circle (screen ellipse)
-    for r, ky, col, wd in ((FIELD_R, 1.0, (255, 255, 255, 200), 3), (DAIS_R, 0.62, (255, 220, 60, 255), 5)):
+    rings = ((FIELD_R, 1.0, (255, 255, 255, 200), 3), (DAIS_R, 0.62, (255, 220, 60, 255), 5))
+    if arena.get("walls"):     # haven: no open field; a smaller ritual platform for the Crystal
+        rings = ((2.8, 0.62, (255, 220, 60, 255), 5),)
+    for r, ky, col, wd in rings:
         rx, ry = r * ppu, r * ky * ppu
         d.ellipse([cx - rx, cy - ry, cx + rx, cy + ry], outline=col, width=wd)
     d.ellipse([cx - 0.85 * ppu, cy - 0.85 * 0.62 * ppu, cx + 0.85 * ppu, cy + 0.85 * 0.62 * ppu], outline=(80, 240, 255, 255), width=5)
-    d.text((cx + DAIS_R * ppu + 8, cy - 8), "inner dais ring (keep)", fill=(255, 220, 60, 255))
-    d.text((cx + FIELD_R * ppu + 8, cy + 10), "open intercept field: no props inside", fill=(255, 255, 255, 255))
+    if not arena.get("walls"):
+        d.text((cx + DAIS_R * ppu + 8, cy - 8), "inner dais ring (keep)", fill=(255, 220, 60, 255))
+        d.text((cx + FIELD_R * ppu + 8, cy + 10), "open intercept field: no props inside", fill=(255, 255, 255, 255))
     for hz in biome.get("hazards", []):
         for x, y in hz.get("points", []):
-            hx, hy = px(x * WORLD_SCALE, y * WORLD_SCALE)
+            hx, hy = px(x * sc, y * sc)
             r = hz.get("radius", 1.3) * ppu
             d.ellipse([hx - r, hy - r * 0.62, hx + r, hy + r * 0.62], outline=(255, 140, 0, 255), width=4)
             d.text((hx + r + 4, hy - 6), "hazard " + hz.get("kind", ""), fill=(255, 160, 40, 255))

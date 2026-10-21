@@ -1,0 +1,265 @@
+{
+ "batch": "R05",
+ "delivered": 37,
+ "requested": 37,
+ "blocking": [
+  "Enemies/runner_windup: blocked (image generation failed: http 429 Too Many Requests: Some(\"{\\\"error\\\":{\\\"type\\\":\\\"usage_limit_reached\\\",\\\"message\\\":\\\"The usage limit has been reached\\\",\\\"plan_type\\\":\\\"plus\\\",\\\"resets_at\\\":1792611366,\\\"eligible_promo\\\":null,\\\"limit_window_minutes\\\":1440,\\\"resets_in_seconds\\\":62669}}\"))",
+  "Enemies/hexcaster_c: blocked (image generation failed: http 429 Too Many Requests: Some(\"{\\\"error\\\":{\\\"type\\\":\\\"usage_limit_reached\\\",\\\"message\\\":\\\"The usage limit has been reached\\\",\\\"plan_type\\\":\\\"plus\\\",\\\"resets_at\\\":1792611365,\\\"eligible_promo\\\":null,\\\"limit_window_minutes\\\":1440,\\\"resets_in_seconds\\\":62652}}\"))",
+  "Enemies/hexcaster_d: blocked (image generation failed: http 429 Too Many Requests: Some(\"{\\\"error\\\":{\\\"type\\\":\\\"usage_limit_reached\\\",\\\"message\\\":\\\"The usage limit has been reached\\\",\\\"plan_type\\\":\\\"plus\\\",\\\"resets_at\\\":1792611365,\\\"eligible_promo\\\":null,\\\"limit_window_minutes\\\":1440,\\\"resets_in_seconds\\\":62538}}\"))",
+  "Enemies/hexcaster_windup: blocked (image generation failed: http 429 Too Many Requests: Some(\"{\\\"error\\\":{\\\"type\\\":\\\"usage_limit_reached\\\",\\\"message\\\":\\\"The usage limit has been reached\\\",\\\"plan_type\\\":\\\"plus\\\",\\\"resets_at\\\":1792611366,\\\"eligible_promo\\\":null,\\\"limit_window_minutes\\\":1440,\\\"resets_in_seconds\\\":62538}}\"))",
+  "Enemies/juggernaut_c: blocked (image generation failed: http 429 Too Many Requests: Some(\"{\\\"error\\\":{\\\"type\\\":\\\"usage_limit_reached\\\",\\\"message\\\":\\\"The usage limit has been reached\\\",\\\"plan_type\\\":\\\"plus\\\",\\\"resets_at\\\":1792611365,\\\"eligible_promo\\\":null,\\\"limit_window_minutes\\\":1440,\\\"resets_in_seconds\\\":62651}}\"))",
+  "Enemies/juggernaut_d: blocked (image generation failed: http 429 Too Many Requests: Some(\"{\\\"error\\\":{\\\"type\\\":\\\"usage_limit_reached\\\",\\\"message\\\":\\\"The usage limit has been reached\\\",\\\"plan_type\\\":\\\"plus\\\",\\\"resets_at\\\":1792611366,\\\"eligible_promo\\\":null,\\\"limit_window_minutes\\\":1440,\\\"resets_in_seconds\\\":62537}}\"))",
+  "Enemies/juggernaut_windup: blocked (image generation failed: http 429 Too Many Requests: Some(\"{\\\"error\\\":{\\\"type\\\":\\\"usage_limit_reached\\\",\\\"message\\\":\\\"The usage limit has been reached\\\",\\\"plan_type\\\":\\\"plus\\\",\\\"resets_at\\\":1792611365,\\\"eligible_promo\\\":null,\\\"limit_window_minutes\\\":1440,\\\"resets_in_seconds\\\":62536}}\"))",
+  "Enemies/ravager_c: blocked (image generation failed: http 429 Too Many Requests: Some(\"{\\\"error\\\":{\\\"type\\\":\\\"usage_limit_reached\\\",\\\"message\\\":\\\"The usage limit has been reached\\\",\\\"plan_type\\\":\\\"plus\\\",\\\"resets_at\\\":1792611365,\\\"eligible_promo\\\":null,\\\"limit_window_minutes\\\":1440,\\\"resets_in_seconds\\\":62650}}\"))",
+  "Enemies/ravager_d: blocked (image generation failed: http 429 Too Many Requests: Some(\"{\\\"error\\\":{\\\"type\\\":\\\"usage_limit_reached\\\",\\\"message\\\":\\\"The usage limit has been reached\\\",\\\"plan_type\\\":\\\"plus\\\",\\\"resets_at\\\":1792611365,\\\"eligible_promo\\\":null,\\\"limit_window_minutes\\\":1440,\\\"resets_in_seconds\\\":62535}}\"))",
+  "Enemies/ravager_windup: blocked (image generation failed: http 429 Too Many Requests: Some(\"{\\\"error\\\":{\\\"type\\\":\\\"usage_limit_reached\\\",\\\"message\\\":\\\"The usage limit has been reached\\\",\\\"plan_type\\\":\\\"plus\\\",\\\"resets_at\\\":1792611365,\\\"eligible_promo\\\":null,\\\"limit_window_minutes\\\":1440,\\\"resets_in_seconds\\\":62534}}\"))",
+  "Enemies/rift_warden_c: blocked (image generation failed: http 429 Too Many Requests: Some(\"{\\\"error\\\":{\\\"type\\\":\\\"usage_limit_reached\\\",\\\"message\\\":\\\"The usage limit has been reached\\\",\\\"plan_type\\\":\\\"plus\\\",\\\"resets_at\\\":1792611365,\\\"eligible_promo\\\":null,\\\"limit_window_minutes\\\":1440,\\\"resets_in_seconds\\\":62649}}\"))",
+  "Enemies/rift_warden_d: blocked (image generation failed: http 429 Too Many Requests: Some(\"{\\\"error\\\":{\\\"type\\\":\\\"usage_limit_reached\\\",\\\"message\\\":\\\"The usage limit has been reached\\\",\\\"plan_type\\\":\\\"plus\\\",\\\"resets_at\\\":1792611365,\\\"eligible_promo\\\":null,\\\"limit_window_minutes\\\":1440,\\\"resets_in_seconds\\\":62533}}\"))"
+ ],
+ "notes": [
+  "Heroes/marina_windup: edge luminance 0.25: no dark ink contour (needs <= 0.22 in the 3 px edge band)",
+  "Heroes/marina_follow: edge luminance 0.26: no dark ink contour (needs <= 0.22 in the 3 px edge band)"
+ ],
+ "rows": [
+  {
+   "id": "Heroes/glacius_walk_c",
+   "group": "anim",
+   "status": "OK",
+   "footRow": 476
+  },
+  {
+   "id": "Heroes/glacius_walk_d",
+   "group": "anim",
+   "status": "OK",
+   "footRow": 476
+  },
+  {
+   "id": "Heroes/glacius_windup",
+   "group": "anim",
+   "status": "OK",
+   "footRow": 476
+  },
+  {
+   "id": "Heroes/glacius_follow",
+   "group": "anim",
+   "status": "OK",
+   "footRow": 476
+  },
+  {
+   "id": "Heroes/glacius_idle_b",
+   "group": "anim",
+   "status": "OK",
+   "footRow": 476
+  },
+  {
+   "id": "Heroes/ignis_walk_c",
+   "group": "anim",
+   "status": "OK",
+   "footRow": 476
+  },
+  {
+   "id": "Heroes/ignis_walk_d",
+   "group": "anim",
+   "status": "OK",
+   "footRow": 475
+  },
+  {
+   "id": "Heroes/ignis_windup",
+   "group": "anim",
+   "status": "OK",
+   "footRow": 476
+  },
+  {
+   "id": "Heroes/ignis_follow",
+   "group": "anim",
+   "status": "OK",
+   "footRow": 476
+  },
+  {
+   "id": "Heroes/ignis_idle_b",
+   "group": "anim",
+   "status": "OK",
+   "footRow": 475
+  },
+  {
+   "id": "Heroes/veyra_walk_c",
+   "group": "anim",
+   "status": "OK",
+   "footRow": 475
+  },
+  {
+   "id": "Heroes/veyra_walk_d",
+   "group": "anim",
+   "status": "OK",
+   "footRow": 475
+  },
+  {
+   "id": "Heroes/veyra_windup",
+   "group": "anim",
+   "status": "OK",
+   "footRow": 475
+  },
+  {
+   "id": "Heroes/veyra_follow",
+   "group": "anim",
+   "status": "OK",
+   "footRow": 475
+  },
+  {
+   "id": "Heroes/veyra_idle_b",
+   "group": "anim",
+   "status": "OK",
+   "footRow": 475
+  },
+  {
+   "id": "Heroes/marina_walk_c",
+   "group": "anim",
+   "status": "OK",
+   "footRow": 476
+  },
+  {
+   "id": "Heroes/marina_walk_d",
+   "group": "anim",
+   "status": "OK",
+   "footRow": 476
+  },
+  {
+   "id": "Heroes/marina_windup",
+   "group": "anim",
+   "status": "OK",
+   "footRow": 475
+  },
+  {
+   "id": "Heroes/marina_follow",
+   "group": "anim",
+   "status": "OK",
+   "footRow": 476
+  },
+  {
+   "id": "Heroes/marina_idle_b",
+   "group": "anim",
+   "status": "OK",
+   "footRow": 475
+  },
+  {
+   "id": "Enemies/grunt_c",
+   "group": "anim",
+   "status": "OK",
+   "footRow": 235
+  },
+  {
+   "id": "Enemies/grunt_d",
+   "group": "anim",
+   "status": "OK",
+   "footRow": 235
+  },
+  {
+   "id": "Enemies/grunt_windup",
+   "group": "anim",
+   "status": "OK",
+   "footRow": 236
+  },
+  {
+   "id": "Enemies/runner_c",
+   "group": "anim",
+   "status": "OK",
+   "footRow": 235
+  },
+  {
+   "id": "Enemies/runner_d",
+   "group": "anim",
+   "status": "OK",
+   "footRow": 235
+  },
+  {
+   "id": "Enemies/runner_windup",
+   "group": "anim",
+   "status": "BLOCKED"
+  },
+  {
+   "id": "Enemies/hexcaster_c",
+   "group": "anim",
+   "status": "BLOCKED"
+  },
+  {
+   "id": "Enemies/hexcaster_d",
+   "group": "anim",
+   "status": "BLOCKED"
+  },
+  {
+   "id": "Enemies/hexcaster_windup",
+   "group": "anim",
+   "status": "BLOCKED"
+  },
+  {
+   "id": "Enemies/juggernaut_c",
+   "group": "anim",
+   "status": "BLOCKED"
+  },
+  {
+   "id": "Enemies/juggernaut_d",
+   "group": "anim",
+   "status": "BLOCKED"
+  },
+  {
+   "id": "Enemies/juggernaut_windup",
+   "group": "anim",
+   "status": "BLOCKED"
+  },
+  {
+   "id": "Enemies/ravager_c",
+   "group": "anim",
+   "status": "BLOCKED"
+  },
+  {
+   "id": "Enemies/ravager_d",
+   "group": "anim",
+   "status": "BLOCKED"
+  },
+  {
+   "id": "Enemies/ravager_windup",
+   "group": "anim",
+   "status": "BLOCKED"
+  },
+  {
+   "id": "Enemies/rift_warden_c",
+   "group": "anim",
+   "status": "BLOCKED"
+  },
+  {
+   "id": "Enemies/rift_warden_d",
+   "group": "anim",
+   "status": "BLOCKED"
+  }
+ ],
+ "strayWorkingTreeChanges": [
+  "Assets/_Aetherward/Resources/Content/biomes.json",
+  "Assets/_Aetherward/Resources/Content/loc_en.json",
+  "Assets/_Aetherward/Resources/Content/loc_vi.json",
+  "Assets/_Aetherward/Scripts/Simulation/Combat/Battle.Damage.cs",
+  "Assets/_Aetherward/Scripts/Simulation/Combat/Battle.Enemies.cs",
+  "Assets/_Aetherward/Scripts/Simulation/Combat/Battle.Heroes.cs",
+  "Assets/_Aetherward/Scripts/Simulation/Combat/Battle.Party.cs",
+  "Assets/_Aetherward/Scripts/Simulation/Combat/Battle.cs",
+  "Assets/_Aetherward/Scripts/Simulation/Combat/SynergyVision.cs",
+  "Assets/_Aetherward/Scripts/Simulation/Content/ContentDatabase.cs",
+  "Assets/_Aetherward/Tests/EditMode/DynamicPartyTests.cs",
+  "Assets/_Aetherward/Tests/EditMode/MechanicsTests.cs",
+  "Assets/_Aetherward/Tests/EditMode/NatureHeroTests.cs",
+  "Assets/_Aetherward/Tests/EditMode/Phase3HeroTests.cs",
+  "Assets/_Aetherward/Tests/EditMode/SynergyVisionTests.cs",
+  "Assets/_Aetherward/Tests/EditMode/TestContent.cs",
+  "Docs/ASSET_MANIFEST.json",
+  "Reports/ArtQuality/R02_vfx/capture_info.json",
+  "Reports/ArtQuality/R02_vfx/prep.png",
+  "Reports/ArtQuality/R02_vfx/t04.png",
+  "Reports/ArtQuality/R02_vfx/t08.png",
+  "Reports/ArtQuality/R02_vfx/t12.png",
+  "Reports/ArtQuality/R02_vfx/t17.png",
+  "Reports/ArtQuality/R02_vfx/t23.png",
+  "Reports/ArtQuality/R04_paint/capture_info.json",
+  "Reports/ArtQuality/R06_polish/capture_info.json",
+  "Reports/ArtQuality/R07_ultimates/capture_info.json"
+ ],
+ "stage": "ArtCache\\ArtStage-R05"
+}

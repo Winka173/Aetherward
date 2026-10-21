@@ -124,7 +124,7 @@ namespace Aetherward.Sim.Combat
                 float len = d.Length;
                 if (len < min && len > 1e-4f) next = o.Pos + d / len * min;
             }
-            h.Pos = next;
+            h.Pos = ClampToWalk(next, h.Radius);
         }
 
         public float AttackReach(HeroUnit h, EnemyUnit e) => h.Stat(StatId.Range) + e.Radius + h.Radius * 0.5f;

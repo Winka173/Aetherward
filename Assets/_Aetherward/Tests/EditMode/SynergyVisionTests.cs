@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Aetherward.Sim.Combat;
 using Aetherward.Sim.Content;
+using Aetherward.Sim.Core;
 using NUnit.Framework;
 
 namespace Aetherward.Tests
@@ -62,8 +63,12 @@ namespace Aetherward.Tests
         [Test]
         public void SupportAuraLinksDependOnDistance()
         {
-            // terra (bulwark r=2.8) on node 4 (4.5,0): node 5 (3.2,2.45) is 2.77 away, node 8 (-4.5,0) is 9 away.
-            SynergyReport r = SynergyReport.Analyze(Place(5, 8, 2, 4, 9, 10));
+            // terra (bulwark r=2.8): one ally 2 units away (linked), one 9 units away (not); positions set explicitly
+            Battle b = Place(5, 8, 2, 4, 9, 10);
+            Vec2 t = b.Heroes[3].Anchor;
+            b.Heroes[0].Anchor = t + new Vec2(2f * b.Arena.Scale, 0f);
+            b.Heroes[1].Anchor = t + new Vec2(9f * b.Arena.Scale, 0f);
+            SynergyReport r = SynergyReport.Analyze(b);
             Assert.IsTrue(r.Links.Any(x => x.Kind == SynergyKind.Buff && x.RuleId == "buff:bulwark" && x.A == 3 && x.B == 0 && x.Active));
             Assert.IsFalse(r.Links.Any(x => x.RuleId == "buff:bulwark" && x.A == 3 && x.B == 1), "far ally: no aura link");
         }

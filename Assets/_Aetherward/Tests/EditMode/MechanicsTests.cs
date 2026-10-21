@@ -24,9 +24,10 @@ namespace Aetherward.Tests
         public void StuckEnemiesAreNudgedForward()
         {
             Battle b = TestContent.EmptyBattle(("terra", 0));
-            EnemyUnit e = b.SpawnEnemy(b.Content.Enemies["grunt"], 0, false, null, new Vec2(10f, 1f));
+            // a point on lane 0 between its first two waypoints (layout independent)
+            var pinned = (b.Arena.Lanes[0].Points[0] + b.Arena.Lanes[0].Points[1]) * 0.5f;
+            EnemyUnit e = b.SpawnEnemy(b.Content.Enemies["grunt"], 0, false, null, pinned);
             // Simulate a jam: the enemy keeps trying to walk but something pins it in place.
-            var pinned = new Vec2(10f, 1f);
             for (int i = 0; i < 30 * 8; i++)
             {
                 b.Tick();
