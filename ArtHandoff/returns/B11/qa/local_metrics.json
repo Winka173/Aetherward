@@ -1,0 +1,568 @@
+{
+  "assets": [
+    {
+      "id": "Enemies/siegebreaker_golem_a",
+      "size": [
+        512,
+        512
+      ],
+      "footRow": 485,
+      "height": 419,
+      "edgeLuminance": 0.3789493347993403,
+      "silhouetteCrossSectionMedian": 218.5,
+      "registeredTorsoX": 256.18
+    },
+    {
+      "id": "Enemies/siegebreaker_golem_b",
+      "size": [
+        512,
+        512
+      ],
+      "footRow": 486,
+      "height": 425,
+      "edgeLuminance": 0.36282804257751106,
+      "silhouetteCrossSectionMedian": 215.0,
+      "registeredTorsoX": 256.07,
+      "walkIoU": 0.7978853466665542
+    },
+    {
+      "id": "Enemies/ignaroth_a",
+      "size": [
+        512,
+        512
+      ],
+      "footRow": 485,
+      "height": 419,
+      "edgeLuminance": 0.3081368115224837,
+      "silhouetteCrossSectionMedian": 227.0,
+      "registeredTorsoX": 255.76
+    },
+    {
+      "id": "Enemies/ignaroth_b",
+      "size": [
+        512,
+        512
+      ],
+      "footRow": 485,
+      "height": 418,
+      "edgeLuminance": 0.3173406204259065,
+      "silhouetteCrossSectionMedian": 215.0,
+      "registeredTorsoX": 258.07,
+      "walkIoU": 0.7908652476883058
+    },
+    {
+      "id": "Enemies/vaelith_a",
+      "size": [
+        512,
+        512
+      ],
+      "footRow": 485,
+      "height": 419,
+      "edgeLuminance": 0.390181966967951,
+      "silhouetteCrossSectionMedian": 188.5,
+      "registeredTorsoX": 255.84
+    },
+    {
+      "id": "Enemies/vaelith_b",
+      "size": [
+        512,
+        512
+      ],
+      "footRow": 485,
+      "height": 416,
+      "edgeLuminance": 0.38170748959905837,
+      "silhouetteCrossSectionMedian": 185.5,
+      "registeredTorsoX": 258.04,
+      "walkIoU": 0.8064924420836402
+    },
+    {
+      "id": "Enemies/mirrath_a",
+      "size": [
+        512,
+        512
+      ],
+      "footRow": 485,
+      "height": 416,
+      "edgeLuminance": 0.4315204593222534,
+      "silhouetteCrossSectionMedian": 232.0,
+      "registeredTorsoX": 258.04
+    },
+    {
+      "id": "Enemies/mirrath_b",
+      "size": [
+        512,
+        512
+      ],
+      "footRow": 485,
+      "height": 406,
+      "edgeLuminance": 0.4311705574313179,
+      "silhouetteCrossSectionMedian": 232.0,
+      "registeredTorsoX": 258.02,
+      "walkIoU": 0.7821770448298739
+    },
+    {
+      "id": "Enemies/aetherion_a",
+      "size": [
+        512,
+        512
+      ],
+      "footRow": 485,
+      "height": 422,
+      "edgeLuminance": 0.3484966332308981,
+      "silhouetteCrossSectionMedian": 207.5,
+      "registeredTorsoX": 256.09
+    },
+    {
+      "id": "Enemies/aetherion_b",
+      "size": [
+        512,
+        512
+      ],
+      "footRow": 486,
+      "height": 404,
+      "edgeLuminance": 0.35535684869747514,
+      "silhouetteCrossSectionMedian": 219.5,
+      "registeredTorsoX": 256.17,
+      "walkIoU": 0.6970261265606946
+    },
+    {
+      "id": "Enemies/thornmother_a",
+      "size": [
+        512,
+        512
+      ],
+      "footRow": 485,
+      "height": 410,
+      "edgeLuminance": 0.33319088862735347,
+      "silhouetteCrossSectionMedian": 238.0,
+      "registeredTorsoX": 258.03
+    },
+    {
+      "id": "Enemies/thornmother_b",
+      "size": [
+        512,
+        512
+      ],
+      "footRow": 486,
+      "height": 415,
+      "edgeLuminance": 0.349912475738856,
+      "silhouetteCrossSectionMedian": 214.5,
+      "registeredTorsoX": 255.78,
+      "walkIoU": 0.6919939355406661
+    },
+    {
+      "id": "Enemies/ironclad_warlord_a",
+      "size": [
+        512,
+        512
+      ],
+      "footRow": 485,
+      "height": 400,
+      "edgeLuminance": 0.3399501047867711,
+      "silhouetteCrossSectionMedian": 205.5,
+      "registeredTorsoX": 256.23
+    },
+    {
+      "id": "Enemies/ironclad_warlord_b",
+      "size": [
+        512,
+        512
+      ],
+      "footRow": 486,
+      "height": 408,
+      "edgeLuminance": 0.3298760144751379,
+      "silhouetteCrossSectionMedian": 199.5,
+      "registeredTorsoX": 256.12,
+      "walkIoU": 0.7816669676357872
+    },
+    {
+      "id": "Enemies/ashen_matriarch_a",
+      "size": [
+        512,
+        512
+      ],
+      "footRow": 485,
+      "height": 419,
+      "edgeLuminance": 0.338708285591948,
+      "silhouetteCrossSectionMedian": 232.0,
+      "registeredTorsoX": 256.11
+    },
+    {
+      "id": "Enemies/ashen_matriarch_b",
+      "size": [
+        512,
+        512
+      ],
+      "footRow": 485,
+      "height": 410,
+      "edgeLuminance": 0.3628333486668163,
+      "silhouetteCrossSectionMedian": 232.0,
+      "registeredTorsoX": 258.1,
+      "walkIoU": 0.864052360602929
+    },
+    {
+      "id": "Enemies/nyxhollow_a",
+      "size": [
+        512,
+        512
+      ],
+      "footRow": 485,
+      "height": 412,
+      "edgeLuminance": 0.3574821558364679,
+      "silhouetteCrossSectionMedian": 245.5,
+      "registeredTorsoX": 257.61
+    },
+    {
+      "id": "Enemies/nyxhollow_b",
+      "size": [
+        512,
+        512
+      ],
+      "footRow": 485,
+      "height": 406,
+      "edgeLuminance": 0.41384987153036745,
+      "silhouetteCrossSectionMedian": 254.0,
+      "registeredTorsoX": 258.09,
+      "walkIoU": 0.742018567929499
+    },
+    {
+      "id": "Enemies/seraphyne_a",
+      "size": [
+        512,
+        512
+      ],
+      "footRow": 486,
+      "height": 419,
+      "edgeLuminance": 0.6459416795502282,
+      "silhouetteCrossSectionMedian": 229.5,
+      "registeredTorsoX": 256.07
+    },
+    {
+      "id": "Enemies/seraphyne_b",
+      "size": [
+        512,
+        512
+      ],
+      "footRow": 486,
+      "height": 422,
+      "edgeLuminance": 0.6420839168641769,
+      "silhouetteCrossSectionMedian": 217.0,
+      "registeredTorsoX": 258.07,
+      "walkIoU": 0.8500849768783842
+    },
+    {
+      "id": "Enemies/gravemaw_a",
+      "size": [
+        512,
+        512
+      ],
+      "footRow": 486,
+      "height": 420,
+      "edgeLuminance": 0.34572954871691386,
+      "silhouetteCrossSectionMedian": 234.0,
+      "registeredTorsoX": 255.84
+    },
+    {
+      "id": "Enemies/gravemaw_b",
+      "size": [
+        512,
+        512
+      ],
+      "footRow": 485,
+      "height": 425,
+      "edgeLuminance": 0.4000717836744532,
+      "silhouetteCrossSectionMedian": 226.0,
+      "registeredTorsoX": 256.23,
+      "walkIoU": 0.8552670200459278
+    },
+    {
+      "id": "Enemies/siegebreaker_golem_attack",
+      "size": [
+        512,
+        512
+      ],
+      "footRow": 486,
+      "height": 401,
+      "edgeLuminance": 0.34771531345828405,
+      "silhouetteCrossSectionMedian": 268.0,
+      "registeredTorsoX": 255.76
+    },
+    {
+      "id": "Enemies/siegebreaker_golem_tell",
+      "size": [
+        512,
+        512
+      ],
+      "footRow": 485,
+      "height": 404,
+      "edgeLuminance": 0.3411614247895955,
+      "silhouetteCrossSectionMedian": 258.0,
+      "registeredTorsoX": 258.06
+    },
+    {
+      "id": "Enemies/ignaroth_attack",
+      "size": [
+        512,
+        512
+      ],
+      "footRow": 485,
+      "height": 402,
+      "edgeLuminance": 0.35436868213747635,
+      "silhouetteCrossSectionMedian": 251.5,
+      "registeredTorsoX": 258.08
+    },
+    {
+      "id": "Enemies/ignaroth_tell",
+      "size": [
+        512,
+        512
+      ],
+      "footRow": 485,
+      "height": 433,
+      "edgeLuminance": 0.3375140113209745,
+      "silhouetteCrossSectionMedian": 238.5,
+      "registeredTorsoX": 256.06
+    },
+    {
+      "id": "Enemies/vaelith_attack",
+      "size": [
+        512,
+        512
+      ],
+      "footRow": 485,
+      "height": 419,
+      "edgeLuminance": 0.4000189620297336,
+      "silhouetteCrossSectionMedian": 211.0,
+      "registeredTorsoX": 256.01
+    },
+    {
+      "id": "Enemies/vaelith_tell",
+      "size": [
+        512,
+        512
+      ],
+      "footRow": 485,
+      "height": 417,
+      "edgeLuminance": 0.41976069660298176,
+      "silhouetteCrossSectionMedian": 195.0,
+      "registeredTorsoX": 256.05
+    },
+    {
+      "id": "Enemies/mirrath_attack",
+      "size": [
+        512,
+        512
+      ],
+      "footRow": 485,
+      "height": 400,
+      "edgeLuminance": 0.4027682337847976,
+      "silhouetteCrossSectionMedian": 213.0,
+      "registeredTorsoX": 254.81
+    },
+    {
+      "id": "Enemies/mirrath_tell",
+      "size": [
+        512,
+        512
+      ],
+      "footRow": 486,
+      "height": 417,
+      "edgeLuminance": 0.40781356016626524,
+      "silhouetteCrossSectionMedian": 197.0,
+      "registeredTorsoX": 257.0
+    },
+    {
+      "id": "Enemies/aetherion_attack",
+      "size": [
+        512,
+        512
+      ],
+      "footRow": 485,
+      "height": 400,
+      "edgeLuminance": 0.35872040618972545,
+      "silhouetteCrossSectionMedian": 209.5,
+      "registeredTorsoX": 255.89
+    },
+    {
+      "id": "Enemies/aetherion_tell",
+      "size": [
+        512,
+        512
+      ],
+      "footRow": 486,
+      "height": 416,
+      "edgeLuminance": 0.3505090199100253,
+      "silhouetteCrossSectionMedian": 217.5,
+      "registeredTorsoX": 255.89
+    },
+    {
+      "id": "Enemies/thornmother_attack",
+      "size": [
+        512,
+        512
+      ],
+      "footRow": 485,
+      "height": 400,
+      "edgeLuminance": 0.3744920186822771,
+      "silhouetteCrossSectionMedian": 239.0,
+      "registeredTorsoX": 255.95
+    },
+    {
+      "id": "Enemies/thornmother_tell",
+      "size": [
+        512,
+        512
+      ],
+      "footRow": 485,
+      "height": 408,
+      "edgeLuminance": 0.36021482435697755,
+      "silhouetteCrossSectionMedian": 221.5,
+      "registeredTorsoX": 256.66
+    },
+    {
+      "id": "Enemies/ironclad_warlord_attack",
+      "size": [
+        512,
+        512
+      ],
+      "footRow": 485,
+      "height": 403,
+      "edgeLuminance": 0.3292029963535169,
+      "silhouetteCrossSectionMedian": 182.5,
+      "registeredTorsoX": 258.03
+    },
+    {
+      "id": "Enemies/ironclad_warlord_tell",
+      "size": [
+        512,
+        512
+      ],
+      "footRow": 486,
+      "height": 419,
+      "edgeLuminance": 0.31970867814919995,
+      "silhouetteCrossSectionMedian": 198.5,
+      "registeredTorsoX": 258.04
+    },
+    {
+      "id": "Enemies/ashen_matriarch_attack",
+      "size": [
+        512,
+        512
+      ],
+      "footRow": 485,
+      "height": 401,
+      "edgeLuminance": 0.3698045860577427,
+      "silhouetteCrossSectionMedian": 230.5,
+      "registeredTorsoX": 255.99
+    },
+    {
+      "id": "Enemies/ashen_matriarch_tell",
+      "size": [
+        512,
+        512
+      ],
+      "footRow": 485,
+      "height": 413,
+      "edgeLuminance": 0.4086646141572636,
+      "silhouetteCrossSectionMedian": 249.0,
+      "registeredTorsoX": 258.1
+    },
+    {
+      "id": "Enemies/nyxhollow_attack",
+      "size": [
+        512,
+        512
+      ],
+      "footRow": 486,
+      "height": 401,
+      "edgeLuminance": 0.3690009680167752,
+      "silhouetteCrossSectionMedian": 232.5,
+      "registeredTorsoX": 256.11
+    },
+    {
+      "id": "Enemies/nyxhollow_tell",
+      "size": [
+        512,
+        512
+      ],
+      "footRow": 486,
+      "height": 427,
+      "edgeLuminance": 0.37060904996946875,
+      "silhouetteCrossSectionMedian": 234.0,
+      "registeredTorsoX": 258.1
+    },
+    {
+      "id": "Enemies/seraphyne_attack",
+      "size": [
+        512,
+        512
+      ],
+      "footRow": 486,
+      "height": 413,
+      "edgeLuminance": 0.6495854305556387,
+      "silhouetteCrossSectionMedian": 220.0,
+      "registeredTorsoX": 258.04
+    },
+    {
+      "id": "Enemies/seraphyne_tell",
+      "size": [
+        512,
+        512
+      ],
+      "footRow": 485,
+      "height": 418,
+      "edgeLuminance": 0.6993506461917942,
+      "silhouetteCrossSectionMedian": 218.5,
+      "registeredTorsoX": 258.05
+    },
+    {
+      "id": "Enemies/gravemaw_attack",
+      "size": [
+        512,
+        512
+      ],
+      "footRow": 485,
+      "height": 421,
+      "edgeLuminance": 0.4025498900047824,
+      "silhouetteCrossSectionMedian": 203.0,
+      "registeredTorsoX": 256.05
+    },
+    {
+      "id": "Enemies/gravemaw_tell",
+      "size": [
+        512,
+        512
+      ],
+      "footRow": 486,
+      "height": 417,
+      "edgeLuminance": 0.3628067032640805,
+      "silhouetteCrossSectionMedian": 217.0,
+      "registeredTorsoX": 256.02
+    },
+    {
+      "id": "Enemies/rift_warden_attack",
+      "size": [
+        512,
+        512
+      ],
+      "footRow": 485,
+      "height": 407,
+      "edgeLuminance": 0.3919723943763466,
+      "silhouetteCrossSectionMedian": 227.0,
+      "registeredTorsoX": 255.83
+    },
+    {
+      "id": "Enemies/rift_warden_tell",
+      "size": [
+        512,
+        512
+      ],
+      "footRow": 485,
+      "height": 419,
+      "edgeLuminance": 0.34864453960763786,
+      "silhouetteCrossSectionMedian": 247.5,
+      "registeredTorsoX": 255.9
+    }
+  ],
+  "problems": []
+}

@@ -1,0 +1,13 @@
+{
+  "id": "Portraits/nyxara",
+  "prompt": "Dark Mythic Fantasy, painterly stylized 2.5D; orthographic 38.3-degree elevation, three-quarter front body turned 25 degrees toward screen-right. Key upper-left-front #ffe9d0, rim back-right #9fe8ff, ambient #16233a. Controlled broad brush planes, coloured local-hue dark edges without black outlines.\nUse case: stylized-concept. Head-and-shoulders portrait of nyxara from attached IDENTITY reference3, same face, hood/helm/hair/costume and light. Reference1 approved B01/B02 style atlas only, reference2 clay for matching camera/facing. Oathbinder assassin with a CRESCENT HOOD, a slim black-and-wine coat, FLOATING OATH-CHAINS of dark silver orbiting the body, a slim crescent-headed staff. Compact and low. Attack: staff slash with a chain whipping toward +X.\nSquare portrait, tight head and shoulders composition, dark vignette background, crisp deliberate brushwork and facial planes, no text, no border, no extra object. Native at least768x768. No full-body figure. No projectiles/VFX.",
+  "refs": [
+    "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\returns\\B04\\source\\references\\approved_style_atlas.png",
+    "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\pose_refs\\slim_staff_idle.png",
+    "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\returns\\B04\\source\\sheets\\nyxara_idle.png"
+  ],
+  "source": "source/sheets/nyxara_portrait.png",
+  "promptFile": "source/prompts/nyxara_portrait.json",
+  "branch": "base",
+  "pose": "portrait"
+}

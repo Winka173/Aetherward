@@ -1,0 +1,11 @@
+{
+  "name": "zephyr_evoB_actions",
+  "refs": [
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B03/source/sheets/zephyr_evoB.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Heroes/ignis_cast.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Heroes/sylph_idle.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B02/exports/Art/Heroes/volt_idle.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B02/exports/Art/Heroes/freya_idle.png"
+  ],
+  "prompt": "Dark Mythic Fantasy, painterly stylized 2.5D; orthographic 38.3-degree elevation, three-quarter front body turned 25 degrees toward screen-right. Key upper-left-front #ffe9d0, rim back-right #9fe8ff, ambient #16233a. Controlled broad brush planes, coloured local-hue dark edges without black outlines.\nUse case stylized-concept. WIDE2560x1440 TWO separate full-body sprites of exact GALE TACTICIAN ref1 same greying hair masculine face feather command circlet fitted grey teal coat two banner tails short feather collar bronze clasps TWO smaller bone silk fans. LEFT CAST both fans raised close beside shoulders, narrow bright air ring behind upper back, upright lifted pose. RIGHT ATTACK right fan swept SCREEN RIGHT near extended hand, other fan held across chest, calm upright body. Preserve two small fans coat circlet; no full wing cloak. Compact reach and narrow hanging tails, keep head-tofeet taller than full width, no spread legs. Transparent central gutter no overlap full feet. No wind projectile, slash or vortex, no ground shadow, no lettering. Bright key ash cloth broad planes cool #9fe8ff contour rim, edge mean>=.30 on basalt0.16. Actual alpha background."
+}

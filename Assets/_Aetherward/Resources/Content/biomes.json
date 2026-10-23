@@ -1,156 +1,1203 @@
 {
-  // Functional battlefields. Each keeps 12 defense nodes and the 6 lane slots the waves reference
-  // (0 east, 1 west, 2 north, 3 south, 4 northeast, 5 southwest) but changes geometry and rules.
-  // Hazards are always telegraphed (delay) and hit heroes AND enemies; walls/covers never fully block a lane.
   "biomes": [
-    { "id": "verdant_sanctuary", "default": true, "background": "World/arena_background", "music": "battle_loop",
-      // Haven (owner 2026-10-21): the Crystal stands inside a walled keep; the wave breaks in through three gates
-      // (main south gate, west and east side gates). Authored in final game units ("scale": 1). Heroes only walk the
-      // keep, the gate passages and the aprons in front of the gates; four lanes funnel into the south gate.
-      "arena": { "id": "verdant_haven", "scale": 1.0, "halfWidth": 19.5, "halfHeight": 15.5, "crystalRadius": 0.85,
-        "nodes": [ [1.6, 1.3], [-1.6, 1.3], [-1.6, -1.3], [1.6, -1.3],
-                   [-1.3, -4.0], [1.3, -4.0], [0.0, -3.0], [-5.4, 0.4],
-                   [-4.2, -0.9], [5.4, 0.4], [4.2, -0.9], [0.0, 3.4] ],
-        "lanes": [
-          { "id": "east",      "gate": [7.5, 0.3],   "points": [[19.0, 0.3], [12.0, 0.3], [7.5, 0.3], [4.5, 0.3], [1.9, 0.2]] },
-          { "id": "west",      "gate": [-7.5, 0.3],  "points": [[-19.0, 0.3], [-12.0, 0.3], [-7.5, 0.3], [-4.5, 0.3], [-1.9, 0.2]] },
-          { "id": "north",     "gate": [-0.5, -5.7], "points": [[-1.0, -15.0], [-0.8, -9.0], [-0.5, -5.7], [-0.3, -3.0], [0.0, -1.9]] },
-          { "id": "south",     "gate": [0.5, -5.7],  "points": [[1.0, -15.0], [0.8, -9.0], [0.5, -5.7], [0.3, -3.0], [0.0, -1.9]] },
-          { "id": "northeast", "gate": [0.6, -5.7],  "points": [[16.0, -13.0], [8.0, -9.4], [2.0, -7.2], [0.6, -5.7], [0.3, -3.0], [0.0, -1.9]] },
-          { "id": "southwest", "gate": [-0.6, -5.7], "points": [[-16.0, -13.0], [-8.0, -9.4], [-2.0, -7.2], [-0.6, -5.7], [-0.3, -3.0], [0.0, -1.9]] }
+    {
+      "id": "verdant_sanctuary",
+      "default": true,
+      "background": "World/arena_background",
+      "music": "battle_loop",
+      "arena": {
+        "id": "verdant_haven",
+        "scale": 1.0,
+        "halfWidth": 19.5,
+        "halfHeight": 15.5,
+        "crystalRadius": 0.85,
+        "nodes": [
+          [1.6, 1.3],
+          [-1.6, 1.3],
+          [-1.6, -1.3],
+          [1.6, -1.3],
+          [-1.3, -4.0],
+          [1.3, -4.0],
+          [0.0, -3.0],
+          [-5.4, 0.4],
+          [-4.2, -0.9],
+          [5.4, 0.4],
+          [4.2, -0.9],
+          [0.0, 3.4]
         ],
-        "walk": [ [-6.6, -4.8, 6.6, 5.8], [-1.6, -6.6, 1.6, -4.6], [-4.5, -10.0, 4.5, -6.4],
-                  [-8.6, -1.0, -6.4, 1.6], [-12.5, -2.4, -8.4, 3.0], [6.4, -1.0, 8.6, 1.6], [8.4, -2.4, 12.5, 3.0] ],
-        "walls": [ [-8.0, 5.8, 8.0, 7.0], [-8.0, -6.4, -1.7, -4.8], [1.7, -6.4, 8.0, -4.8],
-                   [-8.0, -4.8, -6.6, -1.2], [-8.0, 1.8, -6.6, 5.8], [6.6, -4.8, 8.0, -1.2], [6.6, 1.8, 8.0, 5.8] ] } },
-
-    { "id": "molten_crater", "background": "World/bg_molten_crater", "music": "battle_loop",
-      // Two narrow basalt bridges: east+northeast and west+southwest share a crossing. Lava vents erupt
-      // (telegraphed) every few seconds next to the bridges: standing there is strong but risky.
-      "arena": { "id": "molten_crater", "halfWidth": 12.0, "halfHeight": 7.0, "crystalRadius": 0.85,
-        "nodes": [ [1.75, 1.45], [-1.75, 1.45], [-1.75, -1.45], [1.75, -1.45],
-                   [4.6, 0.7], [3.3, 2.5], [0.0, 3.4], [-3.2, 2.45],
-                   [-4.6, -0.7], [-3.3, -2.5], [0.0, -3.4], [3.2, -2.45] ],
         "lanes": [
-          { "id": "east",      "points": [[13.0, 1.4], [9.2, 2.4], [6.4, 0.9], [4.0, 0.1], [2.0, 0.0]] },
-          { "id": "west",      "points": [[-13.0, -1.4], [-9.2, -2.4], [-6.4, -0.9], [-4.0, -0.1], [-2.0, 0.0]] },
-          { "id": "north",     "points": [[-1.4, 8.2], [-0.7, 5.6], [1.2, 4.6], [0.0, 1.9]] },
-          { "id": "south",     "points": [[1.4, -8.2], [0.7, -5.6], [-1.2, -4.6], [0.0, -1.9]] },
-          { "id": "northeast", "points": [[12.6, 7.6], [9.6, 4.6], [6.4, 0.9], [4.0, 0.1], [2.0, 0.0]] },
-          { "id": "southwest", "points": [[-12.6, -7.6], [-9.6, -4.6], [-6.4, -0.9], [-4.0, -0.1], [-2.0, 0.0]] }
-        ] },
-      "hazards": [ { "kind": "lava_vents", "interval": 9.0, "delay": 1.6, "radius": 1.3, "count": 2, "heroDamagePct": 0.12, "power": 45,
-                     "points": [[5.6, 2.6], [-5.6, -2.6], [5.8, -1.8], [-5.8, 1.8], [2.6, 5.4], [-2.6, -5.4]] } ],
-      "nodeTraits": [
-        { "node": 4, "trait": "heated_bridge", "effects": [ { "op": "stat", "stat": "attack", "value": 0.15, "pct": true } ] },
-        { "node": 5, "trait": "heated_bridge", "effects": [ { "op": "stat", "stat": "attack", "value": 0.15, "pct": true } ] },
-        { "node": 8, "trait": "heated_bridge", "effects": [ { "op": "stat", "stat": "attack", "value": 0.15, "pct": true } ] },
-        { "node": 9, "trait": "heated_bridge", "effects": [ { "op": "stat", "stat": "attack", "value": 0.15, "pct": true } ] } ],
-      "extra": [ { "enemy": "flame_devourer", "count": 2, "start": 9.0, "interval": 3.0, "fromWave": 6, "toWave": 14 },
-                 { "enemy": "flame_devourer", "count": 3, "start": 7.0, "interval": 2.5, "fromWave": 15, "toWave": 19 } ],
-      "bossPools": { "10": ["ignaroth", "gravemaw"] } },
-
-    { "id": "frostfall_bastion", "background": "World/bg_frostfall_bastion", "music": "battle_loop",
-      // A fortress in a blizzard. Frozen tiles toughen heroes but slow their swings; ice covers absorb enemy
-      // projectiles until they shatter; the diagonal gates only open from wave 8 (until then those groups use east/west).
-      "arena": { "id": "frostfall_bastion", "halfWidth": 12.0, "halfHeight": 7.0, "crystalRadius": 0.85,
-        "nodes": [ [1.75, 1.45], [-1.75, 1.45], [-1.75, -1.45], [1.75, -1.45],
-                   [4.5, 0.2], [3.2, 2.45], [0.0, 3.35], [-3.2, 2.45],
-                   [-4.5, -0.2], [-3.2, -2.45], [0.0, -3.35], [3.2, -2.45] ],
+          {
+            "id": "east",
+            "gate": [7.5, 0.3],
+            "points": [
+              [19.0, 0.3],
+              [12.0, 0.3],
+              [7.5, 0.3],
+              [4.5, 0.3],
+              [1.9, 0.2]
+            ]
+          },
+          {
+            "id": "west",
+            "gate": [-7.5, 0.3],
+            "points": [
+              [-19.0, 0.3],
+              [-12.0, 0.3],
+              [-7.5, 0.3],
+              [-4.5, 0.3],
+              [-1.9, 0.2]
+            ]
+          },
+          {
+            "id": "north",
+            "gate": [-0.5, -5.7],
+            "points": [
+              [-1.0, -15.0],
+              [-0.8, -9.0],
+              [-0.5, -5.7],
+              [-0.3, -3.0],
+              [0.0, -1.9]
+            ]
+          },
+          {
+            "id": "south",
+            "gate": [0.5, -5.7],
+            "points": [
+              [1.0, -15.0],
+              [0.8, -9.0],
+              [0.5, -5.7],
+              [0.3, -3.0],
+              [0.0, -1.9]
+            ]
+          },
+          {
+            "id": "northeast",
+            "gate": [0.6, -5.7],
+            "points": [
+              [16.0, -13.0],
+              [8.0, -9.4],
+              [2.0, -7.2],
+              [0.6, -5.7],
+              [0.3, -3.0],
+              [0.0, -1.9]
+            ]
+          },
+          {
+            "id": "southwest",
+            "gate": [-0.6, -5.7],
+            "points": [
+              [-16.0, -13.0],
+              [-8.0, -9.4],
+              [-2.0, -7.2],
+              [-0.6, -5.7],
+              [-0.3, -3.0],
+              [0.0, -1.9]
+            ]
+          }
+        ],
+        "walk": [
+          [-6.6, -4.8, 6.6, 5.8],
+          [-1.6, -6.6, 1.6, -4.6],
+          [-4.5, -10.0, 4.5, -6.4],
+          [-8.6, -1.0, -6.4, 1.6],
+          [-12.5, -2.4, -8.4, 3.0],
+          [6.4, -1.0, 8.6, 1.6],
+          [8.4, -2.4, 12.5, 3.0]
+        ],
+        "walls": [
+          [-8.0, 5.8, 8.0, 7.0],
+          [-8.0, -6.4, -1.7, -4.8],
+          [1.7, -6.4, 8.0, -4.8],
+          [-8.0, -4.8, -6.6, -1.2],
+          [-8.0, 1.8, -6.6, 5.8],
+          [6.6, -4.8, 8.0, -1.2],
+          [6.6, 1.8, 8.0, 5.8]
+        ]
+      }
+    },
+    {
+      "id": "molten_crater",
+      "background": "World/bg_molten_crater",
+      "music": "battle_loop",
+      "arena": {
+        "id": "molten_crater_haven",
+        "scale": 1.0,
+        "halfWidth": 19.5,
+        "halfHeight": 15.5,
+        "crystalRadius": 0.85,
+        "nodes": [
+          [1.6, 1.3],
+          [-1.6, 1.3],
+          [-1.6, -1.3],
+          [1.6, -1.3],
+          [-1.3, -4.0],
+          [1.3, -4.0],
+          [0.0, -3.0],
+          [-5.4, 0.4],
+          [-4.2, -0.9],
+          [5.4, 0.4],
+          [4.2, -0.9],
+          [0.0, 3.4]
+        ],
         "lanes": [
-          { "id": "east",      "points": [[13.0, 0.0], [9.0, -1.8], [6.0, 0.8], [2.0, 0.0]] },
-          { "id": "west",      "points": [[-13.0, 0.0], [-9.0, 1.8], [-6.0, -0.8], [-2.0, 0.0]] },
-          { "id": "north",     "points": [[-3.0, 8.2], [-2.2, 5.2], [0.6, 3.9], [0.0, 1.9]] },
-          { "id": "south",     "points": [[3.0, -8.2], [2.2, -5.2], [-0.6, -3.9], [0.0, -1.9]] },
-          { "id": "northeast", "points": [[12.6, 7.6], [7.4, 6.2], [4.6, 3.4], [1.6, 1.3]] },
-          { "id": "southwest", "points": [[-12.6, -7.6], [-7.4, -6.2], [-4.6, -3.4], [-1.6, -1.3]] }
-        ] },
-      "nodeTraits": [
-        { "node": 4, "trait": "frozen_tile", "effects": [ { "op": "stat", "stat": "defense", "value": 0.25, "pct": true }, { "op": "stat", "stat": "attack_interval", "value": -0.12, "pct": true } ] },
-        { "node": 8, "trait": "frozen_tile", "effects": [ { "op": "stat", "stat": "defense", "value": 0.25, "pct": true }, { "op": "stat", "stat": "attack_interval", "value": -0.12, "pct": true } ] },
-        { "node": 6, "trait": "frozen_tile", "effects": [ { "op": "stat", "stat": "defense", "value": 0.25, "pct": true }, { "op": "stat", "stat": "attack_interval", "value": -0.12, "pct": true } ] },
-        { "node": 10, "trait": "frozen_tile", "effects": [ { "op": "stat", "stat": "defense", "value": 0.25, "pct": true }, { "op": "stat", "stat": "attack_interval", "value": -0.12, "pct": true } ] } ],
-      "covers": [ { "pos": [6.2, 2.4], "radius": 1.0, "hits": 8 }, { "pos": [-6.2, -2.4], "radius": 1.0, "hits": 8 },
-                  { "pos": [2.4, 5.4], "radius": 1.0, "hits": 8 }, { "pos": [-2.4, -5.4], "radius": 1.0, "hits": 8 } ],
-      "laneSchedule": [ { "lane": 4, "opensAt": 8, "useBefore": 0 }, { "lane": 5, "opensAt": 8, "useBefore": 1 } ],
-      "extra": [ { "enemy": "frost_wraith", "count": 2, "start": 8.0, "interval": 3.0, "fromWave": 7, "toWave": 13 },
-                 { "enemy": "frost_wraith", "count": 4, "start": 6.0, "interval": 2.0, "fromWave": 14, "toWave": 19 } ],
-      "bossPools": { "10": ["seraphyne"] } },
-
-    { "id": "shattered_aether", "background": "World/bg_shattered_aether", "music": "battle_loop",
-      // Floating islands over the rift. Aether rifts tear open between the lanes (telegraphed): they drag
-      // enemies together and sting heroes caught inside. Aether nodes boost Elemental Mastery.
-      "arena": { "id": "shattered_aether", "halfWidth": 12.0, "halfHeight": 7.0, "crystalRadius": 0.85,
-        "nodes": [ [1.75, 1.45], [-1.75, 1.45], [-1.75, -1.45], [1.75, -1.45],
-                   [4.5, 0.0], [3.2, 2.45], [0.0, 3.35], [-3.2, 2.45],
-                   [-4.5, 0.0], [-3.2, -2.45], [0.0, -3.35], [3.2, -2.45] ],
+          {
+            "id": "east",
+            "gate": [7.5, 0.3],
+            "points": [
+              [19, 3.5],
+              [12, 0.3],
+              [7.5, 0.3],
+              [4.5, 0.3],
+              [1.9, 0.2]
+            ]
+          },
+          {
+            "id": "west",
+            "gate": [-7.5, 0.3],
+            "points": [
+              [-19, -3.5],
+              [-12, 0.3],
+              [-7.5, 0.3],
+              [-4.5, 0.3],
+              [-1.9, 0.2]
+            ]
+          },
+          {
+            "id": "north",
+            "gate": [-0.5, -5.7],
+            "points": [
+              [-1.0, -15.0],
+              [-0.8, -9.0],
+              [-0.5, -5.7],
+              [-0.3, -3.0],
+              [0.0, -1.9]
+            ]
+          },
+          {
+            "id": "south",
+            "gate": [0.5, -5.7],
+            "points": [
+              [1.0, -15.0],
+              [0.8, -9.0],
+              [0.5, -5.7],
+              [0.3, -3.0],
+              [0.0, -1.9]
+            ]
+          },
+          {
+            "id": "northeast",
+            "gate": [0.6, -5.7],
+            "points": [
+              [16.0, -13.0],
+              [8.0, -9.4],
+              [2.0, -7.2],
+              [0.6, -5.7],
+              [0.3, -3.0],
+              [0.0, -1.9]
+            ]
+          },
+          {
+            "id": "southwest",
+            "gate": [-0.6, -5.7],
+            "points": [
+              [-16.0, -13.0],
+              [-8.0, -9.4],
+              [-2.0, -7.2],
+              [-0.6, -5.7],
+              [-0.3, -3.0],
+              [0.0, -1.9]
+            ]
+          }
+        ],
+        "walk": [
+          [-6.6, -4.8, 6.6, 5.8],
+          [-1.6, -6.6, 1.6, -4.6],
+          [-3.2, -11, 3.2, -6.4],
+          [-8.6, -1.0, -6.4, 1.6],
+          [-13, -1.8, -8.4, 2.4],
+          [6.4, -1.0, 8.6, 1.6],
+          [8.4, -1.8, 13, 2.4]
+        ],
+        "walls": [
+          [-8.0, 5.8, 8.0, 7.0],
+          [-8.0, -6.4, -1.7, -4.8],
+          [1.7, -6.4, 8.0, -4.8],
+          [-8.0, -4.8, -6.6, -1.2],
+          [-8.0, 1.8, -6.6, 5.8],
+          [6.6, -4.8, 8.0, -1.2],
+          [6.6, 1.8, 8.0, 5.8]
+        ]
+      },
+      "hazards": [
+        {
+          "kind": "lava_vents",
+          "interval": 9.0,
+          "delay": 1.6,
+          "radius": 1.3,
+          "count": 2,
+          "heroDamagePct": 0.12,
+          "power": 45,
+          "points": [
+            [9.5, 0.3],
+            [-9.5, 0.3],
+            [1.8, -8],
+            [-1.8, -8],
+            [4.8, -2.8],
+            [-4.8, 2.8]
+          ]
+        }
+      ],
+      "extra": [
+        {
+          "enemy": "flame_devourer",
+          "count": 2,
+          "start": 9.0,
+          "interval": 3.0,
+          "fromWave": 6,
+          "toWave": 14
+        },
+        {
+          "enemy": "flame_devourer",
+          "count": 3,
+          "start": 7.0,
+          "interval": 2.5,
+          "fromWave": 15,
+          "toWave": 19
+        }
+      ],
+      "bossPools": {
+        "10": [
+          "ignaroth",
+          "gravemaw"
+        ]
+      },
+      "areaTraits": [
+        {
+          "trait": "heated_bridge",
+          "effects": [
+            {
+              "op": "stat",
+              "stat": "attack",
+              "value": 0.15,
+              "pct": true
+            }
+          ],
+          "pos": [5.3, 0.3],
+          "radius": 1.6
+        },
+        {
+          "trait": "heated_bridge",
+          "effects": [
+            {
+              "op": "stat",
+              "stat": "attack",
+              "value": 0.15,
+              "pct": true
+            }
+          ],
+          "pos": [-5.3, 0.3],
+          "radius": 1.6
+        },
+        {
+          "trait": "heated_bridge",
+          "effects": [
+            {
+              "op": "stat",
+              "stat": "attack",
+              "value": 0.15,
+              "pct": true
+            }
+          ],
+          "pos": [0, -3.8],
+          "radius": 1.6
+        },
+        {
+          "trait": "heated_bridge",
+          "effects": [
+            {
+              "op": "stat",
+              "stat": "attack",
+              "value": 0.15,
+              "pct": true
+            }
+          ],
+          "pos": [0, 3.5],
+          "radius": 1.6
+        }
+      ]
+    },
+    {
+      "id": "frostfall_bastion",
+      "background": "World/bg_frostfall_bastion",
+      "music": "battle_loop",
+      "arena": {
+        "id": "frostfall_bastion_haven",
+        "scale": 1.0,
+        "halfWidth": 19.5,
+        "halfHeight": 15.5,
+        "crystalRadius": 0.85,
+        "nodes": [
+          [1.6, 1.3],
+          [-1.6, 1.3],
+          [-1.6, -1.3],
+          [1.6, -1.3],
+          [-1.3, -4.0],
+          [1.3, -4.0],
+          [0.0, -3.0],
+          [-5.4, 0.4],
+          [-4.2, -0.9],
+          [5.4, 0.4],
+          [4.2, -0.9],
+          [0.0, 3.4]
+        ],
         "lanes": [
-          { "id": "east",      "points": [[13.0, 0.8], [9.0, 1.4], [6.0, 0.4], [2.0, 0.0]] },
-          { "id": "west",      "points": [[-13.0, -0.8], [-9.0, -1.4], [-6.0, -0.4], [-2.0, 0.0]] },
-          { "id": "north",     "points": [[-1.6, 8.2], [-0.9, 5.6], [0.2, 3.6], [0.0, 1.9]] },
-          { "id": "south",     "points": [[1.6, -8.2], [0.9, -5.6], [-0.2, -3.6], [0.0, -1.9]] },
-          { "id": "northeast", "points": [[12.6, 7.6], [8.2, 5.2], [5.0, 3.6], [1.6, 1.3]] },
-          { "id": "southwest", "points": [[-12.6, -7.6], [-8.2, -5.2], [-5.0, -3.6], [-1.6, -1.3]] }
-        ] },
-      "hazards": [ { "kind": "aether_rifts", "interval": 10.0, "delay": 1.6, "radius": 1.4, "count": 2, "heroDamagePct": 0.08, "power": 40,
-                     "points": [[6.4, 2.6], [-6.4, -2.6], [3.0, 5.6], [-3.0, -5.6], [7.0, -3.0], [-7.0, 3.0]] } ],
-      "nodeTraits": [
-        { "node": 5, "trait": "aether_node", "effects": [ { "op": "stat", "stat": "elemental_mastery", "value": 40 } ] },
-        { "node": 7, "trait": "aether_node", "effects": [ { "op": "stat", "stat": "elemental_mastery", "value": 40 } ] },
-        { "node": 9, "trait": "aether_node", "effects": [ { "op": "stat", "stat": "elemental_mastery", "value": 40 } ] },
-        { "node": 11, "trait": "aether_node", "effects": [ { "op": "stat", "stat": "elemental_mastery", "value": 40 } ] } ],
-      "extra": [ { "enemy": "chaos_elemental", "count": 2, "start": 9.0, "interval": 4.0, "fromWave": 8, "toWave": 19 } ],
-      "bossPools": { "10": ["ashen_matriarch"], "20": ["aetherion", "nyxhollow"] } },
-
-    { "id": "stormspire_citadel", "background": "World/bg_stormspire_citadel", "music": "battle_loop",
-      // A citadel on a storm peak. Lightning strikes the battlements (telegraphed) and lightning-rod nodes
-      // speed up attacks. Storm wisps join the waves.
-      "arena": { "id": "stormspire_citadel", "halfWidth": 12.0, "halfHeight": 7.0, "crystalRadius": 0.85,
-        "nodes": [ [1.75, 1.45], [-1.75, 1.45], [-1.75, -1.45], [1.75, -1.45],
-                   [4.5, 0.0], [3.2, 2.45], [0.0, 3.35], [-3.2, 2.45],
-                   [-4.5, 0.0], [-3.2, -2.45], [0.0, -3.35], [3.2, -2.45] ],
+          {
+            "id": "east",
+            "gate": [7.5, 0.3],
+            "points": [
+              [19.0, 0.3],
+              [12.0, 0.3],
+              [7.5, 0.3],
+              [4.5, 0.3],
+              [1.9, 0.2]
+            ]
+          },
+          {
+            "id": "west",
+            "gate": [-7.5, 0.3],
+            "points": [
+              [-19.0, 0.3],
+              [-12.0, 0.3],
+              [-7.5, 0.3],
+              [-4.5, 0.3],
+              [-1.9, 0.2]
+            ]
+          },
+          {
+            "id": "north",
+            "gate": [-0.5, -5.7],
+            "points": [
+              [-1.0, -15.0],
+              [-0.8, -9.0],
+              [-0.5, -5.7],
+              [-0.3, -3.0],
+              [0.0, -1.9]
+            ]
+          },
+          {
+            "id": "south",
+            "gate": [0.5, -5.7],
+            "points": [
+              [1.0, -15.0],
+              [0.8, -9.0],
+              [0.5, -5.7],
+              [0.3, -3.0],
+              [0.0, -1.9]
+            ]
+          },
+          {
+            "id": "northeast",
+            "gate": [0.6, -5.7],
+            "points": [
+              [16.0, -13.0],
+              [8.0, -9.4],
+              [2.0, -7.2],
+              [0.6, -5.7],
+              [0.3, -3.0],
+              [0.0, -1.9]
+            ]
+          },
+          {
+            "id": "southwest",
+            "gate": [-0.6, -5.7],
+            "points": [
+              [-16.0, -13.0],
+              [-8.0, -9.4],
+              [-2.0, -7.2],
+              [-0.6, -5.7],
+              [-0.3, -3.0],
+              [0.0, -1.9]
+            ]
+          }
+        ],
+        "walk": [
+          [-6.6, -4.8, 6.6, 5.8],
+          [-1.6, -6.6, 1.6, -4.6],
+          [-4.5, -10.0, 4.5, -6.4],
+          [-8.6, -1.0, -6.4, 1.6],
+          [-12.5, -2.4, -8.4, 3.0],
+          [6.4, -1.0, 8.6, 1.6],
+          [8.4, -2.4, 12.5, 3.0]
+        ],
+        "walls": [
+          [-8.0, 5.8, 8.0, 7.0],
+          [-8.0, -6.4, -1.7, -4.8],
+          [1.7, -6.4, 8.0, -4.8],
+          [-8.0, -4.8, -6.6, -1.2],
+          [-8.0, 1.8, -6.6, 5.8],
+          [6.6, -4.8, 8.0, -1.2],
+          [6.6, 1.8, 8.0, 5.8]
+        ]
+      },
+      "covers": [
+        {
+          "pos": [5.2, 1.5],
+          "radius": 1.0,
+          "hits": 8
+        },
+        {
+          "pos": [-5.2, -0.8],
+          "radius": 1.0,
+          "hits": 8
+        },
+        {
+          "pos": [1.8, -3.8],
+          "radius": 1.0,
+          "hits": 8
+        },
+        {
+          "pos": [-1.8, -3.8],
+          "radius": 1.0,
+          "hits": 8
+        }
+      ],
+      "laneSchedule": [
+        {
+          "lane": 4,
+          "opensAt": 8,
+          "useBefore": 0
+        },
+        {
+          "lane": 5,
+          "opensAt": 8,
+          "useBefore": 1
+        }
+      ],
+      "extra": [
+        {
+          "enemy": "frost_wraith",
+          "count": 2,
+          "start": 8.0,
+          "interval": 3.0,
+          "fromWave": 7,
+          "toWave": 13
+        },
+        {
+          "enemy": "frost_wraith",
+          "count": 4,
+          "start": 6.0,
+          "interval": 2.0,
+          "fromWave": 14,
+          "toWave": 19
+        }
+      ],
+      "bossPools": {
+        "10": [
+          "seraphyne"
+        ]
+      },
+      "areaTraits": [
+        {
+          "trait": "frozen_tile",
+          "effects": [
+            {
+              "op": "stat",
+              "stat": "defense",
+              "value": 0.25,
+              "pct": true
+            },
+            {
+              "op": "stat",
+              "stat": "attack_interval",
+              "value": -0.12,
+              "pct": true
+            }
+          ],
+          "pos": [5.3, 0.3],
+          "radius": 1.6
+        },
+        {
+          "trait": "frozen_tile",
+          "effects": [
+            {
+              "op": "stat",
+              "stat": "defense",
+              "value": 0.25,
+              "pct": true
+            },
+            {
+              "op": "stat",
+              "stat": "attack_interval",
+              "value": -0.12,
+              "pct": true
+            }
+          ],
+          "pos": [-5.3, 0.3],
+          "radius": 1.6
+        },
+        {
+          "trait": "frozen_tile",
+          "effects": [
+            {
+              "op": "stat",
+              "stat": "defense",
+              "value": 0.25,
+              "pct": true
+            },
+            {
+              "op": "stat",
+              "stat": "attack_interval",
+              "value": -0.12,
+              "pct": true
+            }
+          ],
+          "pos": [0, -3.8],
+          "radius": 1.6
+        },
+        {
+          "trait": "frozen_tile",
+          "effects": [
+            {
+              "op": "stat",
+              "stat": "defense",
+              "value": 0.25,
+              "pct": true
+            },
+            {
+              "op": "stat",
+              "stat": "attack_interval",
+              "value": -0.12,
+              "pct": true
+            }
+          ],
+          "pos": [0, 3.5],
+          "radius": 1.6
+        }
+      ]
+    },
+    {
+      "id": "shattered_aether",
+      "background": "World/bg_shattered_aether",
+      "music": "battle_loop",
+      "arena": {
+        "id": "shattered_aether_haven",
+        "scale": 1.0,
+        "halfWidth": 19.5,
+        "halfHeight": 15.5,
+        "crystalRadius": 0.85,
+        "nodes": [
+          [1.6, 1.3],
+          [-1.6, 1.3],
+          [-1.6, -1.3],
+          [1.6, -1.3],
+          [-1.3, -4.0],
+          [1.3, -4.0],
+          [0.0, -3.0],
+          [-5.4, 0.4],
+          [-4.2, -0.9],
+          [5.4, 0.4],
+          [4.2, -0.9],
+          [0.0, 3.4]
+        ],
         "lanes": [
-          { "id": "east",      "points": [[13.0, 0.8], [9.0, 1.4], [6.0, 0.4], [2.0, 0.0]] },
-          { "id": "west",      "points": [[-13.0, -0.8], [-9.0, -1.4], [-6.0, -0.4], [-2.0, 0.0]] },
-          { "id": "north",     "points": [[-1.6, 8.2], [-0.9, 5.6], [0.2, 3.6], [0.0, 1.9]] },
-          { "id": "south",     "points": [[1.6, -8.2], [0.9, -5.6], [-0.2, -3.6], [0.0, -1.9]] },
-          { "id": "northeast", "points": [[12.6, 7.6], [8.2, 5.2], [5.0, 3.6], [1.6, 1.3]] },
-          { "id": "southwest", "points": [[-12.6, -7.6], [-8.2, -5.2], [-5.0, -3.6], [-1.6, -1.3]] }
-        ] },
-      "hazards": [ { "kind": "lightning_strikes", "interval": 7.0, "delay": 1.4, "radius": 1.1, "count": 3, "heroDamagePct": 0.1, "power": 42,
-                     "points": [[7.6, 3.2], [-7.6, -3.2], [7.8, -2.6], [-7.8, 2.6], [2.2, 6.0], [-2.2, -6.0]] } ],
-      "nodeTraits": [
-        { "node": 4, "trait": "lightning_rod", "effects": [ { "op": "stat", "stat": "attack_interval", "value": 0.1, "pct": true } ] },
-        { "node": 8, "trait": "lightning_rod", "effects": [ { "op": "stat", "stat": "attack_interval", "value": 0.1, "pct": true } ] },
-        { "node": 6, "trait": "lightning_rod", "effects": [ { "op": "stat", "stat": "attack_interval", "value": 0.1, "pct": true } ] },
-        { "node": 10, "trait": "lightning_rod", "effects": [ { "op": "stat", "stat": "attack_interval", "value": 0.1, "pct": true } ] } ],
-      "extra": [ { "enemy": "storm_wisp", "count": 3, "start": 7.0, "interval": 1.5, "fromWave": 6, "toWave": 19 } ],
-      "bossPools": { "10": ["ironclad_warlord"], "20": ["vaelith"] } },
-
-    { "id": "sunken_archive", "background": "World/bg_sunken_archive", "music": "battle_loop",
-      // A drowned library. Tidal surges (telegraphed) wash enemies back but also batter heroes in the water;
-      // the north/south stairs stay flooded until wave 6. Tome nodes shorten cooldowns.
-      "arena": { "id": "sunken_archive", "halfWidth": 12.0, "halfHeight": 7.0, "crystalRadius": 0.85,
-        "nodes": [ [1.75, 1.45], [-1.75, 1.45], [-1.75, -1.45], [1.75, -1.45],
-                   [4.5, 0.0], [3.2, 2.45], [0.0, 3.35], [-3.2, 2.45],
-                   [-4.5, 0.0], [-3.2, -2.45], [0.0, -3.35], [3.2, -2.45] ],
+          {
+            "id": "east",
+            "gate": [7.5, 0.3],
+            "points": [
+              [19.0, 0.3],
+              [12.0, 0.3],
+              [7.5, 0.3],
+              [4.5, 0.3],
+              [1.9, 0.2]
+            ]
+          },
+          {
+            "id": "west",
+            "gate": [-7.5, 0.3],
+            "points": [
+              [-19.0, 0.3],
+              [-12.0, 0.3],
+              [-7.5, 0.3],
+              [-4.5, 0.3],
+              [-1.9, 0.2]
+            ]
+          },
+          {
+            "id": "north",
+            "gate": [-0.5, -5.7],
+            "points": [
+              [-1.0, -15.0],
+              [-0.8, -9.0],
+              [-0.5, -5.7],
+              [-0.3, -3.0],
+              [0.0, -1.9]
+            ]
+          },
+          {
+            "id": "south",
+            "gate": [0.5, -5.7],
+            "points": [
+              [1.0, -15.0],
+              [0.8, -9.0],
+              [0.5, -5.7],
+              [0.3, -3.0],
+              [0.0, -1.9]
+            ]
+          },
+          {
+            "id": "northeast",
+            "gate": [0.6, -5.7],
+            "points": [
+              [17, -14],
+              [10, -11],
+              [2, -8],
+              [0.6, -5.7],
+              [0.3, -3.0],
+              [0.0, -1.9]
+            ]
+          },
+          {
+            "id": "southwest",
+            "gate": [-0.6, -5.7],
+            "points": [
+              [-17, -14],
+              [-10, -11],
+              [-2, -8],
+              [-0.6, -5.7],
+              [-0.3, -3.0],
+              [0.0, -1.9]
+            ]
+          }
+        ],
+        "walk": [
+          [-6.6, -4.8, 6.6, 5.8],
+          [-1.6, -6.6, 1.6, -4.6],
+          [-4.5, -10.0, 4.5, -6.4],
+          [-8.6, -1.0, -6.4, 1.6],
+          [-12.5, -2.4, -8.4, 3.0],
+          [6.4, -1.0, 8.6, 1.6],
+          [8.4, -2.4, 12.5, 3.0]
+        ],
+        "walls": [
+          [-8.0, 5.8, 8.0, 7.0],
+          [-8.0, -6.4, -1.7, -4.8],
+          [1.7, -6.4, 8.0, -4.8],
+          [-8.0, -4.8, -6.6, -1.2],
+          [-8.0, 1.8, -6.6, 5.8],
+          [6.6, -4.8, 8.0, -1.2],
+          [6.6, 1.8, 8.0, 5.8]
+        ]
+      },
+      "hazards": [
+        {
+          "kind": "aether_rifts",
+          "interval": 10.0,
+          "delay": 1.6,
+          "radius": 1.4,
+          "count": 2,
+          "heroDamagePct": 0.08,
+          "power": 40,
+          "points": [
+            [9.5, 0.3],
+            [-9.5, 0.3],
+            [1.8, -8],
+            [-1.8, -8],
+            [4.8, -2.8],
+            [-4.8, 2.8]
+          ]
+        }
+      ],
+      "extra": [
+        {
+          "enemy": "chaos_elemental",
+          "count": 2,
+          "start": 9.0,
+          "interval": 4.0,
+          "fromWave": 8,
+          "toWave": 19
+        }
+      ],
+      "bossPools": {
+        "10": [
+          "ashen_matriarch"
+        ],
+        "20": [
+          "aetherion",
+          "nyxhollow"
+        ]
+      },
+      "areaTraits": [
+        {
+          "trait": "aether_node",
+          "effects": [
+            {
+              "op": "stat",
+              "stat": "elemental_mastery",
+              "value": 40
+            }
+          ],
+          "pos": [5.3, 0.3],
+          "radius": 1.6
+        },
+        {
+          "trait": "aether_node",
+          "effects": [
+            {
+              "op": "stat",
+              "stat": "elemental_mastery",
+              "value": 40
+            }
+          ],
+          "pos": [-5.3, 0.3],
+          "radius": 1.6
+        },
+        {
+          "trait": "aether_node",
+          "effects": [
+            {
+              "op": "stat",
+              "stat": "elemental_mastery",
+              "value": 40
+            }
+          ],
+          "pos": [0, -3.8],
+          "radius": 1.6
+        },
+        {
+          "trait": "aether_node",
+          "effects": [
+            {
+              "op": "stat",
+              "stat": "elemental_mastery",
+              "value": 40
+            }
+          ],
+          "pos": [0, 3.5],
+          "radius": 1.6
+        }
+      ]
+    },
+    {
+      "id": "stormspire_citadel",
+      "background": "World/bg_stormspire_citadel",
+      "music": "battle_loop",
+      "arena": {
+        "id": "stormspire_citadel_haven",
+        "scale": 1.0,
+        "halfWidth": 19.5,
+        "halfHeight": 15.5,
+        "crystalRadius": 0.85,
+        "nodes": [
+          [1.6, 1.3],
+          [-1.6, 1.3],
+          [-1.6, -1.3],
+          [1.6, -1.3],
+          [-1.3, -4.0],
+          [1.3, -4.0],
+          [0.0, -3.0],
+          [-5.4, 0.4],
+          [-4.2, -0.9],
+          [5.4, 0.4],
+          [4.2, -0.9],
+          [0.0, 3.4]
+        ],
         "lanes": [
-          { "id": "east",      "points": [[13.0, 0.8], [9.0, 1.4], [6.0, 0.4], [2.0, 0.0]] },
-          { "id": "west",      "points": [[-13.0, -0.8], [-9.0, -1.4], [-6.0, -0.4], [-2.0, 0.0]] },
-          { "id": "north",     "points": [[-1.6, 8.2], [-0.9, 5.6], [0.2, 3.6], [0.0, 1.9]] },
-          { "id": "south",     "points": [[1.6, -8.2], [0.9, -5.6], [-0.2, -3.6], [0.0, -1.9]] },
-          { "id": "northeast", "points": [[12.6, 7.6], [8.2, 5.2], [5.0, 3.6], [1.6, 1.3]] },
-          { "id": "southwest", "points": [[-12.6, -7.6], [-8.2, -5.2], [-5.0, -3.6], [-1.6, -1.3]] }
-        ] },
-      "hazards": [ { "kind": "tidal_surge", "interval": 10.0, "delay": 1.8, "radius": 1.5, "count": 2, "heroDamagePct": 0.07, "power": 30,
-                     "points": [[7.2, 0.6], [-7.2, -0.6], [1.4, 6.2], [-1.4, -6.2]] } ],
-      "nodeTraits": [
-        { "node": 5, "trait": "archive_tome", "effects": [ { "op": "stat", "stat": "skill_cooldown", "value": 0.1, "pct": true } ] },
-        { "node": 7, "trait": "archive_tome", "effects": [ { "op": "stat", "stat": "skill_cooldown", "value": 0.1, "pct": true } ] },
-        { "node": 9, "trait": "archive_tome", "effects": [ { "op": "stat", "stat": "skill_cooldown", "value": 0.1, "pct": true } ] },
-        { "node": 11, "trait": "archive_tome", "effects": [ { "op": "stat", "stat": "skill_cooldown", "value": 0.1, "pct": true } ] } ],
-      "laneSchedule": [ { "lane": 2, "opensAt": 6, "useBefore": 0 }, { "lane": 3, "opensAt": 6, "useBefore": 1 } ],
-      "extra": [ { "enemy": "arcane_mimic", "count": 2, "start": 10.0, "interval": 5.0, "fromWave": 9, "toWave": 19 } ],
-      "bossPools": { "10": ["thornmother"], "20": ["mirrath"] } }
+          {
+            "id": "east",
+            "gate": [7.5, 0.3],
+            "points": [
+              [19, 4],
+              [12.0, 0.3],
+              [7.5, 0.3],
+              [4.5, 0.3],
+              [1.9, 0.2]
+            ]
+          },
+          {
+            "id": "west",
+            "gate": [-7.5, 0.3],
+            "points": [
+              [-19, 4],
+              [-12.0, 0.3],
+              [-7.5, 0.3],
+              [-4.5, 0.3],
+              [-1.9, 0.2]
+            ]
+          },
+          {
+            "id": "north",
+            "gate": [-0.5, -5.7],
+            "points": [
+              [-1.0, -15.0],
+              [-0.8, -9.0],
+              [-0.5, -5.7],
+              [-0.3, -3.0],
+              [0.0, -1.9]
+            ]
+          },
+          {
+            "id": "south",
+            "gate": [0.5, -5.7],
+            "points": [
+              [1.0, -15.0],
+              [0.8, -9.0],
+              [0.5, -5.7],
+              [0.3, -3.0],
+              [0.0, -1.9]
+            ]
+          },
+          {
+            "id": "northeast",
+            "gate": [0.6, -5.7],
+            "points": [
+              [16.0, -13.0],
+              [8.0, -9.4],
+              [2.0, -7.2],
+              [0.6, -5.7],
+              [0.3, -3.0],
+              [0.0, -1.9]
+            ]
+          },
+          {
+            "id": "southwest",
+            "gate": [-0.6, -5.7],
+            "points": [
+              [-16.0, -13.0],
+              [-8.0, -9.4],
+              [-2.0, -7.2],
+              [-0.6, -5.7],
+              [-0.3, -3.0],
+              [0.0, -1.9]
+            ]
+          }
+        ],
+        "walk": [
+          [-6.6, -4.8, 6.6, 5.8],
+          [-1.6, -6.6, 1.6, -4.6],
+          [-4.5, -10.0, 4.5, -6.4],
+          [-8.6, -1.0, -6.4, 1.6],
+          [-14, -2.4, -8.4, 3],
+          [6.4, -1.0, 8.6, 1.6],
+          [8.4, -2.4, 14, 3]
+        ],
+        "walls": [
+          [-8.0, 5.8, 8.0, 7.0],
+          [-8.0, -6.4, -1.7, -4.8],
+          [1.7, -6.4, 8.0, -4.8],
+          [-8.0, -4.8, -6.6, -1.2],
+          [-8.0, 1.8, -6.6, 5.8],
+          [6.6, -4.8, 8.0, -1.2],
+          [6.6, 1.8, 8.0, 5.8]
+        ]
+      },
+      "hazards": [
+        {
+          "kind": "lightning_strikes",
+          "interval": 7.0,
+          "delay": 1.4,
+          "radius": 1.1,
+          "count": 3,
+          "heroDamagePct": 0.1,
+          "power": 42,
+          "points": [
+            [9.5, 0.3],
+            [-9.5, 0.3],
+            [1.8, -8],
+            [-1.8, -8],
+            [4.8, -2.8],
+            [-4.8, 2.8]
+          ]
+        }
+      ],
+      "extra": [
+        {
+          "enemy": "storm_wisp",
+          "count": 3,
+          "start": 7.0,
+          "interval": 1.5,
+          "fromWave": 6,
+          "toWave": 19
+        }
+      ],
+      "bossPools": {
+        "10": [
+          "ironclad_warlord"
+        ],
+        "20": [
+          "vaelith"
+        ]
+      },
+      "areaTraits": [
+        {
+          "trait": "lightning_rod",
+          "effects": [
+            {
+              "op": "stat",
+              "stat": "attack_interval",
+              "value": 0.1,
+              "pct": true
+            }
+          ],
+          "pos": [5.3, 0.3],
+          "radius": 1.6
+        },
+        {
+          "trait": "lightning_rod",
+          "effects": [
+            {
+              "op": "stat",
+              "stat": "attack_interval",
+              "value": 0.1,
+              "pct": true
+            }
+          ],
+          "pos": [-5.3, 0.3],
+          "radius": 1.6
+        },
+        {
+          "trait": "lightning_rod",
+          "effects": [
+            {
+              "op": "stat",
+              "stat": "attack_interval",
+              "value": 0.1,
+              "pct": true
+            }
+          ],
+          "pos": [0, -3.8],
+          "radius": 1.6
+        },
+        {
+          "trait": "lightning_rod",
+          "effects": [
+            {
+              "op": "stat",
+              "stat": "attack_interval",
+              "value": 0.1,
+              "pct": true
+            }
+          ],
+          "pos": [0, 3.5],
+          "radius": 1.6
+        }
+      ]
+    },
+    {
+      "id": "sunken_archive",
+      "background": "World/bg_sunken_archive",
+      "music": "battle_loop",
+      "arena": {
+        "id": "sunken_archive_haven",
+        "scale": 1.0,
+        "halfWidth": 19.5,
+        "halfHeight": 15.5,
+        "crystalRadius": 0.85,
+        "nodes": [
+          [1.6, 1.3],
+          [-1.6, 1.3],
+          [-1.6, -1.3],
+          [1.6, -1.3],
+          [-1.3, -4.0],
+          [1.3, -4.0],
+          [0.0, -3.0],
+          [-5.4, 0.4],
+          [-4.2, -0.9],
+          [5.4, 0.4],
+          [4.2, -0.9],
+          [0.0, 3.4]
+        ],
+        "lanes": [
+          {
+            "id": "east",
+            "gate": [7.5, 0.3],
+            "points": [
+              [19.0, 0.3],
+              [12.0, 0.3],
+              [7.5, 0.3],
+              [4.5, 0.3],
+              [1.9, 0.2]
+            ]
+          },
+          {
+            "id": "west",
+            "gate": [-7.5, 0.3],
+            "points": [
+              [-19.0, 0.3],
+              [-12.0, 0.3],
+              [-7.5, 0.3],
+              [-4.5, 0.3],
+              [-1.9, 0.2]
+            ]
+          },
+          {
+            "id": "north",
+            "gate": [-0.5, -5.7],
+            "points": [
+              [-4, -15],
+              [-2, -9],
+              [-0.5, -5.7],
+              [-0.3, -3.0],
+              [0.0, -1.9]
+            ]
+          },
+          {
+            "id": "south",
+            "gate": [0.5, -5.7],
+            "points": [
+              [4, -15],
+              [2, -9],
+              [0.5, -5.7],
+              [0.3, -3.0],
+              [0.0, -1.9]
+            ]
+          },
+          {
+            "id": "northeast",
+            "gate": [0.6, -5.7],
+            "points": [
+              [16.0, -13.0],
+              [8.0, -9.4],
+              [2.0, -7.2],
+              [0.6, -5.7],
+              [0.3, -3.0],
+              [0.0, -1.9]
+            ]
+          },
+          {
+            "id": "southwest",
+            "gate": [-0.6, -5.7],
+            "points": [
+              [-16.0, -13.0],
+              [-8.0, -9.4],
+              [-2.0, -7.2],
+              [-0.6, -5.7],
+              [-0.3, -3.0],
+              [0.0, -1.9]
+            ]
+          }
+        ],
+        "walk": [
+          [-6.6, -4.8, 6.6, 5.8],
+          [-1.6, -6.6, 1.6, -4.6],
+          [-4.5, -10.0, 4.5, -6.4],
+          [-8.6, -1.0, -6.4, 1.6],
+          [-12.5, -2.4, -8.4, 3.0],
+          [6.4, -1.0, 8.6, 1.6],
+          [8.4, -2.4, 12.5, 3.0]
+        ],
+        "walls": [
+          [-8.0, 5.8, 8.0, 7.0],
+          [-8.0, -6.4, -1.7, -4.8],
+          [1.7, -6.4, 8.0, -4.8],
+          [-8.0, -4.8, -6.6, -1.2],
+          [-8.0, 1.8, -6.6, 5.8],
+          [6.6, -4.8, 8.0, -1.2],
+          [6.6, 1.8, 8.0, 5.8]
+        ]
+      },
+      "hazards": [
+        {
+          "kind": "tidal_surge",
+          "interval": 10.0,
+          "delay": 1.8,
+          "radius": 1.5,
+          "count": 2,
+          "heroDamagePct": 0.07,
+          "power": 30,
+          "points": [
+            [9.5, 0.3],
+            [-9.5, 0.3],
+            [1.8, -8],
+            [-1.8, -8],
+            [4.8, -2.8],
+            [-4.8, 2.8]
+          ]
+        }
+      ],
+      "laneSchedule": [
+        {
+          "lane": 2,
+          "opensAt": 6,
+          "useBefore": 0
+        },
+        {
+          "lane": 3,
+          "opensAt": 6,
+          "useBefore": 1
+        }
+      ],
+      "extra": [
+        {
+          "enemy": "arcane_mimic",
+          "count": 2,
+          "start": 10.0,
+          "interval": 5.0,
+          "fromWave": 9,
+          "toWave": 19
+        }
+      ],
+      "bossPools": {
+        "10": [
+          "thornmother"
+        ],
+        "20": [
+          "mirrath"
+        ]
+      },
+      "areaTraits": [
+        {
+          "trait": "archive_tome",
+          "effects": [
+            {
+              "op": "stat",
+              "stat": "skill_cooldown",
+              "value": 0.1,
+              "pct": true
+            }
+          ],
+          "pos": [5.3, 0.3],
+          "radius": 1.6
+        },
+        {
+          "trait": "archive_tome",
+          "effects": [
+            {
+              "op": "stat",
+              "stat": "skill_cooldown",
+              "value": 0.1,
+              "pct": true
+            }
+          ],
+          "pos": [-5.3, 0.3],
+          "radius": 1.6
+        },
+        {
+          "trait": "archive_tome",
+          "effects": [
+            {
+              "op": "stat",
+              "stat": "skill_cooldown",
+              "value": 0.1,
+              "pct": true
+            }
+          ],
+          "pos": [0, -3.8],
+          "radius": 1.6
+        },
+        {
+          "trait": "archive_tome",
+          "effects": [
+            {
+              "op": "stat",
+              "stat": "skill_cooldown",
+              "value": 0.1,
+              "pct": true
+            }
+          ],
+          "pos": [0, 3.5],
+          "radius": 1.6
+        }
+      ]
+    }
   ]
 }

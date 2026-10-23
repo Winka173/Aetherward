@@ -1,0 +1,112 @@
+[
+  {
+    "id": "Heroes/nyxara_idle",
+    "source": "source/sheets/nyxara_idle.png",
+    "prompt": "source/prompts/nyxara_idle_v2.json",
+    "height": 275,
+    "torsoXRatio": 0.55
+  },
+  {
+    "id": "Heroes/nyxara_cast",
+    "source": "source/sheets/nyxara_cast.png",
+    "prompt": "source/prompts/nyxara_cast.json",
+    "height": 280,
+    "torsoXRatio": 0.54
+  },
+  {
+    "id": "Heroes/nyxara_downed",
+    "source": "source/sheets/nyxara_downed.png",
+    "prompt": "source/prompts/nyxara_downed.json",
+    "height": 225,
+    "torsoXRatio": 0.59
+  },
+  {
+    "id": "Heroes/nyxara_evoA",
+    "source": "source/sheets/nyxara_evoA.png",
+    "prompt": "source/prompts/nyxara_evoA.json",
+    "height": 269,
+    "torsoXRatio": 0.54
+  },
+  {
+    "id": "Heroes/nyxara_evoA_cast",
+    "source": "source/sheets/nyxara_evoA_cast.png",
+    "prompt": "source/prompts/nyxara_evoA_cast.json",
+    "height": 275,
+    "torsoXRatio": 0.54
+  },
+  {
+    "id": "Heroes/nyxara_evoA_attack",
+    "source": "source/sheets/nyxara_evoA_attack.png",
+    "prompt": "source/prompts/nyxara_evoA_attack.json",
+    "height": 280,
+    "torsoXRatio": 0.48
+  },
+  {
+    "id": "Heroes/nyxara_evoB_attack",
+    "source": "source/sheets/nyxara_evoB_attack.png",
+    "prompt": "source/prompts/nyxara_evoB_attack.json",
+    "height": 260,
+    "torsoXRatio": 0.55
+  },
+  {
+    "id": "Heroes/nyxara_attack",
+    "source": "source/sheets/nyxara_attack.png",
+    "prompt": "source/prompts/nyxara_attack.json",
+    "height": 260,
+    "torsoXRatio": 0.5
+  },
+  {
+    "id": "Portraits/nyxara",
+    "source": "source/sheets/nyxara_portrait.png",
+    "prompt": "source/prompts/nyxara_portrait.json"
+  },
+  {
+    "id": "Heroes/nyxara_evoB",
+    "source": "source/sheets/nyxara_evoB.png",
+    "prompt": "source/prompts/nyxara_evoB_v2.json",
+    "height": 264,
+    "torsoXRatio": 0.55
+  },
+  {
+    "id": "Heroes/nyxara_evoB_cast",
+    "source": "source/sheets/nyxara_evoB_cast.png",
+    "prompt": "source/prompts/nyxara_evoB_cast_v2.json",
+    "height": 267,
+    "torsoXRatio": 0.55
+  },
+  {
+    "id": "Heroes/ashara_idle",
+    "source": "source/sheets/ashara_idle.png",
+    "prompt": "source/prompts/ashara_idle.json",
+    "height": 275,
+    "torsoXRatio": 0.5
+  },
+  {
+    "id": "Heroes/ashara_cast",
+    "source": "source/sheets/ashara_cast.png",
+    "prompt": "source/prompts/ashara_cast.json",
+    "height": 290,
+    "torsoXRatio": 0.52
+  },
+  {
+    "id": "Heroes/ashara_downed",
+    "source": "source/sheets/ashara_downed.png",
+    "prompt": "source/prompts/ashara_downed.json",
+    "height": 190,
+    "torsoXRatio": 0.6
+  },
+  {
+    "id": "Heroes/ashara_evoA",
+    "source": "source/sheets/ashara_evoA.png",
+    "prompt": "source/prompts/ashara_evoA.json",
+    "height": 280,
+    "torsoXRatio": 0.5
+  },
+  {
+    "id": "Heroes/ashara_evoA_cast",
+    "source": "source/sheets/ashara_evoA_cast.png",
+    "prompt": "source/prompts/ashara_evoA_cast.json",
+    "height": 280,
+    "torsoXRatio": 0.5
+  }
+]

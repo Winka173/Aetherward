@@ -1,0 +1,20 @@
+{
+  "id": "Enemies/shieldbearer_a",
+  "character": "shieldbearer",
+  "height": 178,
+  "width": 210,
+  "bottom": 236,
+  "raw": "C:\\Users\\Winka\\.codex\\generated_images\\01a15a1b-9a40-7c03-81f5-c129d348dd11\\exec-82f6bdb5-c040-4e48-8ca3-cebc9e837abe.png",
+  "prompt": "Dark Mythic Fantasy, painterly stylized 2.5D; orthographic 38.3-degree elevation, three-quarter front body turned 25 degrees toward screen-right. Key upper-left-front #ffe9d0, rim back-right #9fe8ff, ambient #16233a. Controlled broad brush planes, coloured local-hue dark edges without black outlines. Use case: precise-object-edit. First reference EDIT TARGET current B08 shieldbearer_a. Other images STYLE ONLY. REVISION 1 PALETTE ONLY: Grey husk, tarnished STEEL tower shield, iron helm; ash grey cloth. Red only shield rift sigil <=15%; remove red cloth. Preserve EXACT design, pose, anatomy, silhouette, props, framing and placement. Mean 3px contour luminance >=0.27 via warm lit facets and selective 2-3px cyan rim at native 256. Transparent background; exclude any RGB rays in transparent pixels, no background/ground/shadow/text or extra effects. High resolution >=1024 square, same full-canvas framing for 512 master.",
+  "references": [
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B08/source/revision0/exports/Art/Enemies/shieldbearer_a.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Enemies/grunt_a.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Enemies/juggernaut_a.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Enemies/hexcaster_a.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Enemies/storm_harpy_a.png"
+  ],
+  "anchor": 0.53,
+  "sourceName": "r1_shieldbearer_a",
+  "registration": "Original R0 crop-relative torso anchor retained; inspect R1 comparison for residual drift.",
+  "revision": 1
+}

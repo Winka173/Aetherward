@@ -1,0 +1,15 @@
+{
+  "id": "Enemies/runner_a",
+  "character": "runner",
+  "height": 145,
+  "width": 230,
+  "anchor": 0.5,
+  "raw": "C:\\Users\\Winka\\.codex\\generated_images\\01a15a1b-9a40-7c03-81f5-c129d348dd11\\exec-7fe50d9a-1520-4f14-9b05-382fa8e0f362.png",
+  "prompt": "Dark Mythic Fantasy, painterly stylized 2.5D; orthographic 38.3-degree elevation, three-quarter front body turned 25 degrees toward screen-right. Key upper-left-front #ffe9d0, rim back-right #9fe8ff, ambient #16233a. Controlled broad brush planes, coloured local-hue dark edges without black outlines. Use case: precise-object-edit. Edit target: attached current B08 runner_a export. REVISION 1 palette correction ONLY. Keep EXACT design, silhouette, anatomy, gallop pose, framing, and position from target. Recolour Rift Hound to ash-grey hide (60-70% of figure) with prominent BONE-WHITE ribs and jaw. Wine-red ONLY thin cracks and eyes <=15%; eliminate red mass across hide and ribs. Preserve bright warm lit planes and cool rim so mean 3px contour luminance >=0.27 against basalt mean 0.16. Real transparent background, no ground/shadow/text. Output high resolution >=1024 square suitable for a 512 master and 256 export, same full-canvas framing as target.",
+  "references": [
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B08/source/revision0/exports/Art/Enemies/runner_a.png"
+  ],
+  "sourceName": "r1_runner_a",
+  "registration": "Original R0 crop-relative torso anchor retained; inspect R1 comparison for residual drift.",
+  "revision": 1
+}

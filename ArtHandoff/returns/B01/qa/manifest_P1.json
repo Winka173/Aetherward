@@ -1,0 +1,1175 @@
+{
+  "batch": "B01",
+  "producer": "Codex (gpt-6.1-sol)",
+  "date": "2026-10-20",
+  "styleLock": {
+    "palette": [
+      "#2a2c31",
+      "#625c55",
+      "#6b2734",
+      "#ff6a2b",
+      "#8fe3ff",
+      "#2b5cff",
+      "#1d1f24"
+    ],
+    "light": "key upper-left-front #ffe9d0, rim back-right #9fe8ff, ambient #16233a",
+    "edge": "Dark local-hue edge, no uniform black outline; cool 1–3 px rim; controlled broad brush planes.",
+    "promptTemplate": "Dark Mythic Fantasy, painterly stylized 2.5D; orthographic 38.3-degree elevation, three-quarter front body turned 25 degrees toward screen-right. Key upper-left-front #ffe9d0, rim back-right #9fe8ff, ambient #16233a. Controlled broad brush planes, coloured local-hue dark edges without black outlines."
+  },
+  "tools": [
+    {
+      "name": "image_generation (Codex built-in)",
+      "version": "built-in image_gen (version not exposed)"
+    },
+    {
+      "name": "Blender",
+      "version": "4.5.14 LTS",
+      "path": "C:\\Users\\Winka\\Tools\\blender-4.5.14-windows-x64\\blender.exe"
+    },
+    {
+      "name": "Python",
+      "version": "3.11",
+      "packages": [
+        "Pillow",
+        "numpy",
+        "opencv"
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "id": "Heroes/ignis_idle",
+      "status": "delivered",
+      "size": [
+        400,
+        400
+      ],
+      "priority": "P0",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Heroes/ignis_idle.png",
+      "source": "source/sheets/ignis_base.png",
+      "generator": "image_generation",
+      "prompt": "README.md: Ignis base prompt (verbatim in source/prompts.json)",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/Heroes/ignis_idle@2x.png"
+    },
+    {
+      "id": "Enemies/grunt_a",
+      "status": "delivered",
+      "size": [
+        256,
+        256
+      ],
+      "priority": "P0",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Enemies/grunt_a.png",
+      "source": "source/sheets/grunt.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts.json: grunt",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/Enemies/grunt_a@2x.png"
+    },
+    {
+      "id": "World/crystal_intact",
+      "status": "delivered",
+      "size": [
+        320,
+        400
+      ],
+      "priority": "P0",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/World/crystal_intact.png",
+      "source": "source/blender/crystal.blend",
+      "generator": "blender:source/blender/crystal.py",
+      "prompt": "source/blender/crystal.py",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Same camera, pedestal and exterior bounds. Damage changes seams/core/glyphs; shards fall inside fixed bounds. Crisp render remains less painterly than character art.",
+      "master": "source/masters/World/crystal_intact@2x.png"
+    },
+    {
+      "id": "Heroes/ignis_cast",
+      "status": "delivered",
+      "size": [
+        400,
+        400
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Heroes/ignis_cast.png",
+      "source": "source/sheets/ignis_base.png",
+      "generator": "image_generation",
+      "prompt": "README.md: Ignis base prompt (verbatim in source/prompts.json)",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/Heroes/ignis_cast@2x.png"
+    },
+    {
+      "id": "Heroes/ignis_downed",
+      "status": "delivered",
+      "size": [
+        400,
+        400
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Heroes/ignis_downed.png",
+      "source": "source/sheets/ignis_base.png",
+      "generator": "image_generation",
+      "prompt": "README.md: Ignis base prompt (verbatim in source/prompts.json)",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/Heroes/ignis_downed@2x.png"
+    },
+    {
+      "id": "Heroes/ignis_evoA",
+      "status": "delivered",
+      "size": [
+        400,
+        400
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Heroes/ignis_evoA.png",
+      "source": "source/sheets/ignis_evolutions.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts/ignis_evolutions.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/Heroes/ignis_evoA@2x.png"
+    },
+    {
+      "id": "Heroes/ignis_evoA_cast",
+      "status": "delivered",
+      "size": [
+        400,
+        400
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Heroes/ignis_evoA_cast.png",
+      "source": "source/sheets/ignis_evolutions.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts/ignis_evolutions.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/Heroes/ignis_evoA_cast@2x.png"
+    },
+    {
+      "id": "Heroes/ignis_evoB",
+      "status": "delivered",
+      "size": [
+        400,
+        400
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Heroes/ignis_evoB.png",
+      "source": "source/sheets/ignis_evolutions.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts/ignis_evolutions.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/Heroes/ignis_evoB@2x.png"
+    },
+    {
+      "id": "Heroes/ignis_evoB_cast",
+      "status": "delivered",
+      "size": [
+        400,
+        400
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Heroes/ignis_evoB_cast.png",
+      "source": "source/sheets/ignis_evolutions.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts/ignis_evolutions.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/Heroes/ignis_evoB_cast@2x.png"
+    },
+    {
+      "id": "Heroes/terra_idle",
+      "status": "delivered",
+      "size": [
+        400,
+        400
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Heroes/terra_idle.png",
+      "source": "source/sheets/terra_wide.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts/terra_wide.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/Heroes/terra_idle@2x.png"
+    },
+    {
+      "id": "Heroes/terra_cast",
+      "status": "delivered",
+      "size": [
+        400,
+        400
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Heroes/terra_cast.png",
+      "source": "source/sheets/terra_wide.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts/terra_wide.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/Heroes/terra_cast@2x.png"
+    },
+    {
+      "id": "Heroes/terra_downed",
+      "status": "delivered",
+      "size": [
+        400,
+        400
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Heroes/terra_downed.png",
+      "source": "source/sheets/terra_wide.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts/terra_wide.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/Heroes/terra_downed@2x.png"
+    },
+    {
+      "id": "Heroes/sylph_idle",
+      "status": "delivered",
+      "size": [
+        400,
+        400
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Heroes/sylph_idle.png",
+      "source": "source/sheets/sylph_base.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts/sylph_base.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/Heroes/sylph_idle@2x.png"
+    },
+    {
+      "id": "Heroes/sylph_cast",
+      "status": "delivered",
+      "size": [
+        400,
+        400
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Heroes/sylph_cast.png",
+      "source": "source/sheets/sylph_base.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts/sylph_base.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/Heroes/sylph_cast@2x.png"
+    },
+    {
+      "id": "Heroes/sylph_downed",
+      "status": "delivered",
+      "size": [
+        400,
+        400
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Heroes/sylph_downed.png",
+      "source": "source/sheets/sylph_base.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts/sylph_base.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/Heroes/sylph_downed@2x.png"
+    },
+    {
+      "id": "Heroes/marina_idle",
+      "status": "delivered",
+      "size": [
+        400,
+        400
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Heroes/marina_idle.png",
+      "source": "source/sheets/marina_base.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts/marina_base.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/Heroes/marina_idle@2x.png"
+    },
+    {
+      "id": "Heroes/marina_cast",
+      "status": "delivered",
+      "size": [
+        400,
+        400
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Heroes/marina_cast.png",
+      "source": "source/sheets/marina_base.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts/marina_base.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/Heroes/marina_cast@2x.png"
+    },
+    {
+      "id": "Heroes/marina_downed",
+      "status": "delivered",
+      "size": [
+        400,
+        400
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Heroes/marina_downed.png",
+      "source": "source/sheets/marina_base.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts/marina_base.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/Heroes/marina_downed@2x.png"
+    },
+    {
+      "id": "Portraits/ignis",
+      "status": "delivered",
+      "size": [
+        192,
+        192
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Portraits/ignis.png",
+      "source": "source/sheets/portrait_ignis.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts/portrait_ignis.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/Portraits/ignis@2x.png"
+    },
+    {
+      "id": "Portraits/terra",
+      "status": "delivered",
+      "size": [
+        192,
+        192
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Portraits/terra.png",
+      "source": "source/sheets/portrait_terra.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts/portrait_terra.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/Portraits/terra@2x.png"
+    },
+    {
+      "id": "Portraits/sylph",
+      "status": "delivered",
+      "size": [
+        192,
+        192
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Portraits/sylph.png",
+      "source": "source/sheets/portrait_sylph.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts/portrait_sylph.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/Portraits/sylph@2x.png"
+    },
+    {
+      "id": "Portraits/marina",
+      "status": "delivered",
+      "size": [
+        192,
+        192
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Portraits/marina.png",
+      "source": "source/sheets/portrait_marina.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts/portrait_marina.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/Portraits/marina@2x.png"
+    },
+    {
+      "id": "Enemies/grunt_b",
+      "status": "delivered",
+      "size": [
+        256,
+        256
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Enemies/grunt_b.png",
+      "source": "source/sheets/grunt.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts.json: grunt",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/Enemies/grunt_b@2x.png"
+    },
+    {
+      "id": "Enemies/juggernaut_a",
+      "status": "delivered",
+      "size": [
+        256,
+        256
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Enemies/juggernaut_a.png",
+      "source": "source/sheets/juggernaut.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts/juggernaut.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/Enemies/juggernaut_a@2x.png"
+    },
+    {
+      "id": "Enemies/juggernaut_b",
+      "status": "delivered",
+      "size": [
+        256,
+        256
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Enemies/juggernaut_b.png",
+      "source": "source/sheets/juggernaut.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts/juggernaut.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/Enemies/juggernaut_b@2x.png"
+    },
+    {
+      "id": "Enemies/hexcaster_a",
+      "status": "delivered",
+      "size": [
+        256,
+        256
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Enemies/hexcaster_a.png",
+      "source": "source/sheets/hexcaster_v2.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts/hexcaster_v2.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/Enemies/hexcaster_a@2x.png"
+    },
+    {
+      "id": "Enemies/hexcaster_b",
+      "status": "delivered",
+      "size": [
+        256,
+        256
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Enemies/hexcaster_b.png",
+      "source": "source/sheets/hexcaster_v2.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts/hexcaster_v2.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/Enemies/hexcaster_b@2x.png"
+    },
+    {
+      "id": "Enemies/storm_harpy_a",
+      "status": "delivered",
+      "size": [
+        256,
+        256
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Enemies/storm_harpy_a.png",
+      "source": "source/sheets/storm_harpy_v3.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts/storm_harpy_v3.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/Enemies/storm_harpy_a@2x.png"
+    },
+    {
+      "id": "Enemies/storm_harpy_b",
+      "status": "delivered",
+      "size": [
+        256,
+        256
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Enemies/storm_harpy_b.png",
+      "source": "source/sheets/storm_harpy_v3.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts/storm_harpy_v3.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/Enemies/storm_harpy_b@2x.png"
+    },
+    {
+      "id": "Enemies/rift_warden_a",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Enemies/rift_warden_a.png",
+      "source": "source/sheets/rift_warden.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts/rift_warden.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/Enemies/rift_warden_a@2x.png"
+    },
+    {
+      "id": "Enemies/rift_warden_b",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Enemies/rift_warden_b.png",
+      "source": "source/sheets/rift_warden.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts/rift_warden.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/Enemies/rift_warden_b@2x.png"
+    },
+    {
+      "id": "World/crystal_cracked",
+      "status": "delivered",
+      "size": [
+        320,
+        400
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/World/crystal_cracked.png",
+      "source": "source/blender/crystal.blend",
+      "generator": "blender:source/blender/crystal.py",
+      "prompt": "source/blender/crystal.py",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Same camera, pedestal and exterior bounds. Damage changes seams/core/glyphs; shards fall inside fixed bounds. Crisp render remains less painterly than character art.",
+      "master": "source/masters/World/crystal_cracked@2x.png"
+    },
+    {
+      "id": "World/crystal_critical",
+      "status": "delivered",
+      "size": [
+        320,
+        400
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/World/crystal_critical.png",
+      "source": "source/blender/crystal.blend",
+      "generator": "blender:source/blender/crystal.py",
+      "prompt": "source/blender/crystal.py",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Same camera, pedestal and exterior bounds. Damage changes seams/core/glyphs; shards fall inside fixed bounds. Crisp render remains less painterly than character art.",
+      "master": "source/masters/World/crystal_critical@2x.png"
+    },
+    {
+      "id": "World/arena_background",
+      "status": "delivered",
+      "size": [
+        2400,
+        1360
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/World/arena_background.png",
+      "source": "source/blender/battlefield.blend",
+      "generator": "blender:source/blender/battlefield.py",
+      "prompt": "source/blender/battlefield.py",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Geometry follows live lane/node coordinates. Eight isolated render layers; between-layer cast shadows are approximated in layer08. Owner review needed for painterly finish."
+    },
+    {
+      "id": "World/node_empty",
+      "status": "delivered",
+      "size": [
+        192,
+        128
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/World/node_empty.png",
+      "source": "source/sheets/node_empty.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts/node_empty.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/World/node_empty@2x.png"
+    },
+    {
+      "id": "World/node_highlight",
+      "status": "delivered",
+      "size": [
+        192,
+        128
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/World/node_highlight.png",
+      "source": "source/sheets/node_highlight.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts/node_highlight.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/World/node_highlight@2x.png"
+    },
+    {
+      "id": "World/node_occupied",
+      "status": "delivered",
+      "size": [
+        192,
+        128
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/World/node_occupied.png",
+      "source": "source/sheets/node_occupied.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts/node_occupied.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/World/node_occupied@2x.png"
+    },
+    {
+      "id": "World/lane_arrow",
+      "status": "delivered",
+      "size": [
+        128,
+        128
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/World/lane_arrow.png",
+      "source": "source/sheets/lane_arrow.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts/lane_arrow.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/World/lane_arrow@2x.png"
+    },
+    {
+      "id": "World/shadow",
+      "status": "delivered",
+      "size": [
+        128,
+        48
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/World/shadow.png",
+      "source": "source/sheets/shadow.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts/shadow.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/World/shadow@2x.png"
+    },
+    {
+      "id": "Vfx/impact_fire",
+      "status": "blocked",
+      "size": [
+        192,
+        192
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P2",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Vfx/impact_water",
+      "status": "blocked",
+      "size": [
+        192,
+        192
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P2",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Vfx/impact_wind",
+      "status": "blocked",
+      "size": [
+        192,
+        192
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P2",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Vfx/impact_earth",
+      "status": "blocked",
+      "size": [
+        192,
+        192
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P2",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Vfx/projectile_water",
+      "status": "blocked",
+      "size": [
+        128,
+        128
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P2",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Vfx/fireball",
+      "status": "blocked",
+      "size": [
+        192,
+        192
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P2",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Vfx/arrow",
+      "status": "blocked",
+      "size": [
+        192,
+        96
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P2",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Vfx/slash",
+      "status": "blocked",
+      "size": [
+        256,
+        256
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P2",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Vfx/glow",
+      "status": "blocked",
+      "size": [
+        128,
+        128
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P2",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Vfx/ring",
+      "status": "blocked",
+      "size": [
+        256,
+        256
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P2",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Vfx/telegraph",
+      "status": "blocked",
+      "size": [
+        256,
+        256
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P2",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Vfx/zone_burning_ground",
+      "status": "blocked",
+      "size": [
+        256,
+        256
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P2",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Icons/element_fire",
+      "status": "blocked",
+      "size": [
+        128,
+        128
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P3",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Icons/element_water",
+      "status": "blocked",
+      "size": [
+        128,
+        128
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P3",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Icons/element_wind",
+      "status": "blocked",
+      "size": [
+        128,
+        128
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P3",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Icons/element_earth",
+      "status": "blocked",
+      "size": [
+        128,
+        128
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P3",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Icons/role_guardian",
+      "status": "blocked",
+      "size": [
+        96,
+        96
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P3",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Icons/role_mage",
+      "status": "blocked",
+      "size": [
+        96,
+        96
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P3",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Icons/role_ranger",
+      "status": "blocked",
+      "size": [
+        96,
+        96
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P3",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Icons/role_healer",
+      "status": "blocked",
+      "size": [
+        96,
+        96
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P3",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Icons/status_burn",
+      "status": "blocked",
+      "size": [
+        96,
+        96
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P3",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Icons/status_wet",
+      "status": "blocked",
+      "size": [
+        96,
+        96
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P3",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Icons/status_stun",
+      "status": "blocked",
+      "size": [
+        96,
+        96
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P3",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Icons/status_shield",
+      "status": "blocked",
+      "size": [
+        96,
+        96
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P3",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Icons/reaction_vaporize",
+      "status": "blocked",
+      "size": [
+        128,
+        128
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P3",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Icons/reaction_firestorm",
+      "status": "blocked",
+      "size": [
+        128,
+        128
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P3",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Icons/ui_crystal",
+      "status": "blocked",
+      "size": [
+        96,
+        96
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P3",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Icons/ui_gold",
+      "status": "blocked",
+      "size": [
+        96,
+        96
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P3",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Icons/ui_wave",
+      "status": "blocked",
+      "size": [
+        96,
+        96
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P3",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "UI/panel_dark",
+      "status": "blocked",
+      "size": [
+        128,
+        128
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P3",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "UI/tooltip",
+      "status": "blocked",
+      "size": [
+        96,
+        96
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P3",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "UI/bar_bg",
+      "status": "blocked",
+      "size": [
+        128,
+        40
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P3",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "UI/bar_fill",
+      "status": "blocked",
+      "size": [
+        128,
+        40
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P3",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "UI/button_primary_disabled",
+      "status": "blocked",
+      "size": [
+        192,
+        96
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P3",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "UI/button_primary_hover",
+      "status": "blocked",
+      "size": [
+        192,
+        96
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P3",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "UI/button_primary_normal",
+      "status": "blocked",
+      "size": [
+        192,
+        96
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P3",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "UI/button_primary_pressed",
+      "status": "blocked",
+      "size": [
+        192,
+        96
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P3",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "UI/card_rare",
+      "status": "blocked",
+      "size": [
+        256,
+        360
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P3",
+      "thirdPartyInputs": []
+    }
+  ],
+  "extras": [
+    {
+      "path": "previews/style_frame_1080p.png",
+      "kind": "concept painting"
+    },
+    {
+      "path": "source/battlefield/layers/01_base_terrain.png",
+      "kind": "battlefield layer"
+    },
+    {
+      "path": "source/battlefield/layers/02_path_traffic_wear.png",
+      "kind": "battlefield layer"
+    },
+    {
+      "path": "source/battlefield/layers/03_ruins_structure.png",
+      "kind": "battlefield layer"
+    },
+    {
+      "path": "source/battlefield/layers/04_cliffs_height_planes.png",
+      "kind": "battlefield layer"
+    },
+    {
+      "path": "source/battlefield/layers/05_cracks_decals.png",
+      "kind": "battlefield layer"
+    },
+    {
+      "path": "source/battlefield/layers/06_ambient_particles_fog.png",
+      "kind": "battlefield layer"
+    },
+    {
+      "path": "source/battlefield/layers/07_static_props.png",
+      "kind": "battlefield layer"
+    },
+    {
+      "path": "source/battlefield/layers/08_occlusion_shadows.png",
+      "kind": "battlefield layer"
+    }
+  ],
+  "knownIssues": [],
+  "blockers": [],
+  "checkpoints": [
+    {
+      "tier": "P0",
+      "delivered": 6
+    },
+    {
+      "tier": "P1",
+      "delivered": 39
+    },
+    {
+      "tier": "P1",
+      "delivered": 39
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "zephyr_base",
+  "refs": [
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B03/source/sheets/zephyr_idle.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Heroes/ignis_cast.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Heroes/sylph_idle.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B02/exports/Art/Heroes/volt_idle.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B02/exports/Art/Heroes/freya_idle.png"
+  ],
+  "prompt": "Dark Mythic Fantasy, painterly stylized 2.5D; orthographic 38.3-degree elevation, three-quarter front body turned 25 degrees toward screen-right. Key upper-left-front #ffe9d0, rim back-right #9fe8ff, ambient #16233a. Controlled broad brush planes, coloured local-hue dark edges without black outlines.\nUse case stylized-concept. 2560x2560 2x2 production grid FOUR isolated SQUARE panels, no lines labels. Exact male ZEPHYR from reference1 greying dark hair calm face grey teal feather mantle ash white robes bronze clasps ONE oversized bone silk war FAN. TOP LEFT CAST fan raised beside head, open hand raised, narrow shoulder air-ring brighter, body lifted6%, feet visible. TOP RIGHT DOWNED kneeling head bowed same fan lowered beside knee, desaturate40%. BOTTOM LEFT ATTACK fan sweep toward SCREEN RIGHT, open fan extended +X beside shoulder, other hand balanced, torso upright central. NO discharged wind projectile, beam, slash, vortex, trail. BOTTOM RIGHT PORTRAIT same head shoulders mantle and clasp on dark charcoal vignette. All figures upright long adult proportions, narrow cloak and compact fan, no spread robe. Each figure complete inside own quarter with 10% transparent cross gutter and no overlap. Figures fill88% panel height, 5% margins. Character only true alpha, no shadows floor text. #9fe8ff bright directional rim, warm lit ash cloth broad planes, contour mean>=0.30 on basalt0.16."
+}

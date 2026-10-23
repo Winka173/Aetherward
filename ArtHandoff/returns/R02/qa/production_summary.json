@@ -1,0 +1,11 @@
+{
+  "delivered": 21,
+  "blocked": 0,
+  "intakeBlocking": 0,
+  "additionalBlocking": 0,
+  "risks": [
+    "Runtime blend, opacity, scaling, animation and multi-effect stacking are not verified in Unity; burst exports have a uniform 0.65 alpha multiplier.",
+    "Fire embers, ice facets and water foam have more inner detail than ideal at small sizes; burst_water retains a soft peripheral halo.",
+    "Neutral telegraph requires runtime red tint and top-layer ordering; tiny projectiles can lose white-core contrast on pale lanes."
+  ]
+}

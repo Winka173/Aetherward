@@ -1,0 +1,11 @@
+{
+  "name": "seren_base",
+  "refs": [
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B03/source/sheets/seren_idle.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Heroes/ignis_cast.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Heroes/sylph_idle.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B02/exports/Art/Heroes/volt_idle.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B02/exports/Art/Heroes/freya_idle.png"
+  ],
+  "prompt": "Dark Mythic Fantasy, painterly stylized 2.5D; orthographic 38.3-degree elevation, three-quarter front body turned 25 degrees toward screen-right. Key upper-left-front #ffe9d0, rim back-right #9fe8ff, ambient #16233a. Controlled broad brush planes, coloured local-hue dark edges without black outlines.\nUse case stylized-concept. Square2560x2560 FOUR isolated 2x2 square panels. EXACT SEREN female DAWN WARDEN reference1 same face brown eyes dark blonde hair sun-disc open halo helm pale gold ivory plate white gold tabard kite SUNBURST SHIELD left arm short ARMING SWORD right. TOP LEFT CAST sword raised diagonally CLOSE beside shoulder, shield close chest, halo facets bright and upright lifted body. TOP RIGHT DOWNED kneeling helm bowed sword low shield close, desaturate40%. BOTTOM LEFT ATTACK SWORD THRUST toward SCREEN RIGHT +X from BEHIND shield, short sword extended horizontally from right hand, shield protects body, compact braced legs. BOTTOM RIGHT PORTRAIT exact same female face helm shoulders on dark charcoal vignette. Keep each full-body figure inside own quarter with 10% central transparent cross gutter and no overlap, full feet props, fill88% panel height. No beams light burst slash trail projectiles or ground shadows floor, no text. Real alpha exterior. Adult guardian proportions and broad crisp metal cloth planes warm key cool #9fe8ff rim contour mean>=.30."
+}

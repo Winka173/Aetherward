@@ -1,0 +1,12 @@
+{
+  "prompt": "Dark Mythic Fantasy, painterly stylized 2.5D; orthographic 38.3-degree elevation, three-quarter front body turned 25 degrees toward screen-right. Key upper-left-front #ffe9d0, rim back-right #9fe8ff, ambient #16233a. Controlled broad brush planes, coloured local-hue dark edges without black outlines.\nUse case: stylized-concept. Aetherward production sprite, Tidal Wavebinder IDENTITY IDLE. Attached B01 and B02 heroes are style references only (ignore their defringed invisible RGB). Create one adult 5.5-6 heads tall hooded wavebinder, dark TEAL oilcloth coat, face wrap, bronze grips in BOTH hands with twin living-water whips coiling asymmetrically around body. Water hue #2f8cff. Neutral ready stance screen-right. Torso centered. Crisp broad painted planes, visibly lit teal grey cloth planes and bright cool directional rim 2-3 export pixels; edge-band average luminance >=0.30 against basalt mean 0.16. Signature whip shapes are attached held weapons, no emitted attack VFX. No ground/shadow, no letters, no border. Genuine transparent background. Generate at 2048x2048 or larger native, full square canvas: figure head y=32%, soles y=93%, torso x=50%, all props within x=10..90%, y=20..94%; head-to-foot 61% canvas, props at most 72%. Adult proportions, never chibi. Style quality for 2560x1440 game.",
+  "references": [
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Heroes/ignis_idle.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Heroes/terra_idle.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Heroes/marina_idle.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B02/exports/Art/Heroes/volt_idle.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B02/exports/Art/Heroes/freya_idle.png"
+  ],
+  "tool": "built-in image_gen",
+  "note": "Initial reference-count rejection (maximum 5); successful retry uses 5 references."
+}

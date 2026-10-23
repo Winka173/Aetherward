@@ -71,8 +71,8 @@ namespace Aetherward.Sim.Combat
                     if (op.Op == "stat") Accumulate(op, 1, flat, pct);
             }
 
-            // Biome node traits (frozen tiles, heated bridges...) modify heroes standing on that node.
-            if (battle.Biome != null && battle.Biome.NodeTraitOps.TryGetValue(l.NodeIndex, out var nodeOps))
+            // Legacy benchmark compatibility only. Live parties use positional area bonuses.
+            if (!battle.Setup.DynamicParty && battle.Biome != null && battle.Biome.NodeTraitOps.TryGetValue(l.NodeIndex, out var nodeOps))
                 foreach (EffectOp op in nodeOps)
                     if (op.Op == "stat") Accumulate(op, 1, flat, pct);
 

@@ -1,0 +1,7 @@
+{
+  "observedAt": "2026-10-20T20:26:48.746987",
+  "note": "External working-tree changes observed during production. No commands from this batch wrote to these paths. Services.cs was already modified before production; other requests and tooling changed concurrently.",
+  "outsideReturn": [
+    "?? ArtProduction/reviews/B01/intake_interim/intake.json"
+  ]
+}

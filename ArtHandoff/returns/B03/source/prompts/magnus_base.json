@@ -1,0 +1,11 @@
+{
+  "name": "magnus_base",
+  "refs": [
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B03/source/sheets/magnus_idle.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Heroes/ignis_cast.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Heroes/sylph_idle.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B02/exports/Art/Heroes/volt_idle.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B02/exports/Art/Heroes/freya_idle.png"
+  ],
+  "prompt": "Dark Mythic Fantasy, painterly stylized 2.5D; orthographic 38.3-degree elevation, three-quarter front body turned 25 degrees toward screen-right. Key upper-left-front #ffe9d0, rim back-right #9fe8ff, ambient #16233a. Controlled broad brush planes, coloured local-hue dark edges without black outlines.\nUse case stylized-concept. SQUARE2560x2560 2x2 grid FOUR SEPARATED square panels. EXACT MAGNUS ref1 same rugged face dark mohawk short beard bare huge tattooed arms enormous stone gauntlets leather belt carved buckle wrapped legs. TOP LEFT CAST: both boulder fists raised close at shoulder level, body lifted, warm earth inlay brightest; NO rocks or quake. TOP RIGHT DOWNED kneeling exhausted head bowed gauntlets low, desaturate40%. BOTTOM LEFT ATTACK right stone GAUNTLET PUNCH extended SCREEN RIGHT +X at strike endpoint, left fist close chest, compact forward lean and close feet. BOTTOM RIGHT PORTRAIT same face mohawk tattoos shoulders leather collar on dark charcoal vignette. Each full-body figure inside own quarter, 10% transparent cross gutter, no overlap, complete feet and fists, fill88% panel height. No text projectiles shockwaves dust ground or shadow. Character only real alpha. Bright skin key planes and cool #9fe8ff stone rim, contour average>=.30 against basalt0.16. Adult long leg proportions, broad deliberate painterly planes."
+}

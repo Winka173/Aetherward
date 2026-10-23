@@ -1,0 +1,933 @@
+{
+  "batch": "B01",
+  "producer": "Codex (gpt-6.1-sol)",
+  "date": "2026-10-20",
+  "styleLock": {
+    "palette": [
+      "#2a2c31",
+      "#625c55",
+      "#6b2734",
+      "#ff6a2b",
+      "#8fe3ff",
+      "#2b5cff",
+      "#1d1f24"
+    ],
+    "light": "key upper-left-front #ffe9d0, rim back-right #9fe8ff, ambient #16233a",
+    "edge": "Dark local-hue edge, no uniform black outline; cool 1–3 px rim; controlled broad brush planes.",
+    "promptTemplate": "Dark Mythic Fantasy, painterly stylized 2.5D; orthographic 38.3-degree elevation, three-quarter front body turned 25 degrees toward screen-right. Key upper-left-front #ffe9d0, rim back-right #9fe8ff, ambient #16233a. Controlled broad brush planes, coloured local-hue dark edges without black outlines."
+  },
+  "tools": [
+    {
+      "name": "image_generation (Codex built-in)",
+      "version": "built-in image_gen (version not exposed)"
+    },
+    {
+      "name": "Blender",
+      "version": "4.5.14 LTS",
+      "path": "C:\\Users\\Winka\\Tools\\blender-4.5.14-windows-x64\\blender.exe"
+    },
+    {
+      "name": "Python",
+      "version": "3.11",
+      "packages": [
+        "Pillow",
+        "numpy",
+        "opencv"
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "id": "Heroes/ignis_idle",
+      "status": "delivered",
+      "size": [
+        400,
+        400
+      ],
+      "priority": "P0",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Heroes/ignis_idle.png",
+      "source": "source/sheets/ignis_base.png",
+      "generator": "image_generation",
+      "prompt": "README.md: Ignis base prompt (verbatim in source/prompts.json)",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/Heroes/ignis_idle@2x.png"
+    },
+    {
+      "id": "Enemies/grunt_a",
+      "status": "delivered",
+      "size": [
+        256,
+        256
+      ],
+      "priority": "P0",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Enemies/grunt_a.png",
+      "source": "source/sheets/grunt.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts.json: grunt",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/Enemies/grunt_a@2x.png"
+    },
+    {
+      "id": "World/crystal_intact",
+      "status": "delivered",
+      "size": [
+        320,
+        400
+      ],
+      "priority": "P0",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/World/crystal_intact.png",
+      "source": "source/blender/crystal.blend",
+      "generator": "blender:source/blender/crystal.py",
+      "prompt": "source/blender/crystal.py",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Faceted relic with procedural painterly surface; requires owner review.",
+      "master": "source/masters/World/crystal_intact@2x.png"
+    },
+    {
+      "id": "Heroes/ignis_cast",
+      "status": "delivered",
+      "size": [
+        400,
+        400
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Heroes/ignis_cast.png",
+      "source": "source/sheets/ignis_base.png",
+      "generator": "image_generation",
+      "prompt": "README.md: Ignis base prompt (verbatim in source/prompts.json)",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/Heroes/ignis_cast@2x.png"
+    },
+    {
+      "id": "Heroes/ignis_downed",
+      "status": "delivered",
+      "size": [
+        400,
+        400
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Heroes/ignis_downed.png",
+      "source": "source/sheets/ignis_base.png",
+      "generator": "image_generation",
+      "prompt": "README.md: Ignis base prompt (verbatim in source/prompts.json)",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/Heroes/ignis_downed@2x.png"
+    },
+    {
+      "id": "Heroes/ignis_evoA",
+      "status": "blocked",
+      "size": [
+        400,
+        400
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P1",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Heroes/ignis_evoA_cast",
+      "status": "blocked",
+      "size": [
+        400,
+        400
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P1",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Heroes/ignis_evoB",
+      "status": "blocked",
+      "size": [
+        400,
+        400
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P1",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Heroes/ignis_evoB_cast",
+      "status": "blocked",
+      "size": [
+        400,
+        400
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P1",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Heroes/terra_idle",
+      "status": "blocked",
+      "size": [
+        400,
+        400
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P1",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Heroes/terra_cast",
+      "status": "blocked",
+      "size": [
+        400,
+        400
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P1",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Heroes/terra_downed",
+      "status": "blocked",
+      "size": [
+        400,
+        400
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P1",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Heroes/sylph_idle",
+      "status": "blocked",
+      "size": [
+        400,
+        400
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P1",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Heroes/sylph_cast",
+      "status": "blocked",
+      "size": [
+        400,
+        400
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P1",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Heroes/sylph_downed",
+      "status": "blocked",
+      "size": [
+        400,
+        400
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P1",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Heroes/marina_idle",
+      "status": "blocked",
+      "size": [
+        400,
+        400
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P1",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Heroes/marina_cast",
+      "status": "blocked",
+      "size": [
+        400,
+        400
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P1",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Heroes/marina_downed",
+      "status": "blocked",
+      "size": [
+        400,
+        400
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P1",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Portraits/ignis",
+      "status": "blocked",
+      "size": [
+        192,
+        192
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P1",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Portraits/terra",
+      "status": "blocked",
+      "size": [
+        192,
+        192
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P1",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Portraits/sylph",
+      "status": "blocked",
+      "size": [
+        192,
+        192
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P1",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Portraits/marina",
+      "status": "blocked",
+      "size": [
+        192,
+        192
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P1",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Enemies/grunt_b",
+      "status": "delivered",
+      "size": [
+        256,
+        256
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Enemies/grunt_b.png",
+      "source": "source/sheets/grunt.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts.json: grunt",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/Enemies/grunt_b@2x.png"
+    },
+    {
+      "id": "Enemies/juggernaut_a",
+      "status": "blocked",
+      "size": [
+        256,
+        256
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P1",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Enemies/juggernaut_b",
+      "status": "blocked",
+      "size": [
+        256,
+        256
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P1",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Enemies/hexcaster_a",
+      "status": "blocked",
+      "size": [
+        256,
+        256
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P1",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Enemies/hexcaster_b",
+      "status": "blocked",
+      "size": [
+        256,
+        256
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P1",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Enemies/storm_harpy_a",
+      "status": "blocked",
+      "size": [
+        256,
+        256
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P1",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Enemies/storm_harpy_b",
+      "status": "blocked",
+      "size": [
+        256,
+        256
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P1",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Enemies/rift_warden_a",
+      "status": "blocked",
+      "size": [
+        512,
+        512
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P1",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Enemies/rift_warden_b",
+      "status": "blocked",
+      "size": [
+        512,
+        512
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P1",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "World/crystal_cracked",
+      "status": "blocked",
+      "size": [
+        320,
+        400
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P1",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "World/crystal_critical",
+      "status": "blocked",
+      "size": [
+        320,
+        400
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P1",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "World/arena_background",
+      "status": "blocked",
+      "size": [
+        2400,
+        1360
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P1",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "World/node_empty",
+      "status": "blocked",
+      "size": [
+        192,
+        128
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P1",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "World/node_highlight",
+      "status": "blocked",
+      "size": [
+        192,
+        128
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P1",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "World/node_occupied",
+      "status": "blocked",
+      "size": [
+        192,
+        128
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P1",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "World/lane_arrow",
+      "status": "blocked",
+      "size": [
+        128,
+        128
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P1",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "World/shadow",
+      "status": "blocked",
+      "size": [
+        128,
+        48
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P1",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Vfx/impact_fire",
+      "status": "blocked",
+      "size": [
+        192,
+        192
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P2",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Vfx/impact_water",
+      "status": "blocked",
+      "size": [
+        192,
+        192
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P2",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Vfx/impact_wind",
+      "status": "blocked",
+      "size": [
+        192,
+        192
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P2",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Vfx/impact_earth",
+      "status": "blocked",
+      "size": [
+        192,
+        192
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P2",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Vfx/projectile_water",
+      "status": "blocked",
+      "size": [
+        128,
+        128
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P2",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Vfx/fireball",
+      "status": "blocked",
+      "size": [
+        192,
+        192
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P2",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Vfx/arrow",
+      "status": "blocked",
+      "size": [
+        192,
+        96
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P2",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Vfx/slash",
+      "status": "blocked",
+      "size": [
+        256,
+        256
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P2",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Vfx/glow",
+      "status": "blocked",
+      "size": [
+        128,
+        128
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P2",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Vfx/ring",
+      "status": "blocked",
+      "size": [
+        256,
+        256
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P2",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Vfx/telegraph",
+      "status": "blocked",
+      "size": [
+        256,
+        256
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P2",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Vfx/zone_burning_ground",
+      "status": "blocked",
+      "size": [
+        256,
+        256
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P2",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Icons/element_fire",
+      "status": "blocked",
+      "size": [
+        128,
+        128
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P3",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Icons/element_water",
+      "status": "blocked",
+      "size": [
+        128,
+        128
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P3",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Icons/element_wind",
+      "status": "blocked",
+      "size": [
+        128,
+        128
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P3",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Icons/element_earth",
+      "status": "blocked",
+      "size": [
+        128,
+        128
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P3",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Icons/role_guardian",
+      "status": "blocked",
+      "size": [
+        96,
+        96
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P3",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Icons/role_mage",
+      "status": "blocked",
+      "size": [
+        96,
+        96
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P3",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Icons/role_ranger",
+      "status": "blocked",
+      "size": [
+        96,
+        96
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P3",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Icons/role_healer",
+      "status": "blocked",
+      "size": [
+        96,
+        96
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P3",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Icons/status_burn",
+      "status": "blocked",
+      "size": [
+        96,
+        96
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P3",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Icons/status_wet",
+      "status": "blocked",
+      "size": [
+        96,
+        96
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P3",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Icons/status_stun",
+      "status": "blocked",
+      "size": [
+        96,
+        96
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P3",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Icons/status_shield",
+      "status": "blocked",
+      "size": [
+        96,
+        96
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P3",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Icons/reaction_vaporize",
+      "status": "blocked",
+      "size": [
+        128,
+        128
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P3",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Icons/reaction_firestorm",
+      "status": "blocked",
+      "size": [
+        128,
+        128
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P3",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Icons/ui_crystal",
+      "status": "blocked",
+      "size": [
+        96,
+        96
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P3",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Icons/ui_gold",
+      "status": "blocked",
+      "size": [
+        96,
+        96
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P3",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "Icons/ui_wave",
+      "status": "blocked",
+      "size": [
+        96,
+        96
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P3",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "UI/panel_dark",
+      "status": "blocked",
+      "size": [
+        128,
+        128
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P3",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "UI/tooltip",
+      "status": "blocked",
+      "size": [
+        96,
+        96
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P3",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "UI/bar_bg",
+      "status": "blocked",
+      "size": [
+        128,
+        40
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P3",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "UI/bar_fill",
+      "status": "blocked",
+      "size": [
+        128,
+        40
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P3",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "UI/button_primary_disabled",
+      "status": "blocked",
+      "size": [
+        192,
+        96
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P3",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "UI/button_primary_hover",
+      "status": "blocked",
+      "size": [
+        192,
+        96
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P3",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "UI/button_primary_normal",
+      "status": "blocked",
+      "size": [
+        192,
+        96
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P3",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "UI/button_primary_pressed",
+      "status": "blocked",
+      "size": [
+        192,
+        96
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P3",
+      "thirdPartyInputs": []
+    },
+    {
+      "id": "UI/card_rare",
+      "status": "blocked",
+      "size": [
+        256,
+        360
+      ],
+      "reason": "Pending production in priority order",
+      "priority": "P3",
+      "thirdPartyInputs": []
+    }
+  ],
+  "extras": [],
+  "knownIssues": [],
+  "blockers": [],
+  "checkpoints": [
+    {
+      "tier": "P0",
+      "delivered": 6
+    }
+  ]
+}

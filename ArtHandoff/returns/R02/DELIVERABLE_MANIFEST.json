@@ -1,0 +1,681 @@
+{
+  "batch": "R02",
+  "producer": "Codex",
+  "date": "2026-10-21",
+  "styleLock": {
+    "direction": "Art Bible v3 / R01 section 1 / R02 VFX style; supersedes B01 and old rim-light rules",
+    "edge": "Hard cel bands; black-violet ink on solid forms, none on pure light"
+  },
+  "tools": [
+    {
+      "name": "image_gen.imagegen (built-in)",
+      "version": "not reported by tool"
+    },
+    {
+      "name": "Python",
+      "version": "3.11.5",
+      "packages": {
+        "Pillow": "10.0.1",
+        "numpy": "2.4.6",
+        "scipy": "1.17.1"
+      }
+    }
+  ],
+  "assets": [
+    {
+      "id": "Vfx/impact_fire",
+      "status": "delivered",
+      "export": "exports/Art/Vfx/impact_fire.png",
+      "size": [
+        192,
+        192
+      ],
+      "source": "source/generations/impact_fire.png",
+      "master": "source/masters/Vfx/impact_fire@4x.png",
+      "generator": "image_gen.imagegen (built-in)",
+      "prompt": "Use case: stylized-concept. Single isolated production VFX sprite for Aetherward, premium dark arcane comic-ink, hard-edged flat colours in 3-4 bands, chunky readable silhouette. Genuine transparent background, 1024x1024 or larger. Reference 1 combat concept and reference 2 previous fire burst provide ONLY graphic style; the requested shape below completely replaces their subject and composition. No characters, text, numbers, border, scenery, baked ground or shadow. A centred RADIAL flame-petal HIT STAR, viewed straight-on. Exactly eight broad flame petals shoot outward from a small bright central impact, evenly covering all radial directions. Filled compact star silhouette with tapered curled flame points, not a hollow wreath or dome. Fire #fff3b0 #ffd23a #ff7a1a #c0281a, black-violet accents on flame tips. 85% of canvas.\n",
+      "cleanup": "source/scripts/process_vfx.py impact_fire source/generations/impact_fire.png --prompt source/prompts/impact_fire.txt",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reviewed in colour, grayscale and silhouette offline sheets; specific element/direction and transparency contract checked. Runtime tint, blend, motion and stacking remain unverified.",
+      "references": [
+        {
+          "path": "../R01/concepts/combat_scene_concept_LOW_RES_DRAFT.png",
+          "role": "comic VFX target; repository-owned concept, not gameplay"
+        },
+        {
+          "path": "source/generations/burst_fire.png",
+          "role": "previous burst graphic treatment; initial pass attached its processed master, corrective passes attached raw fire source"
+        }
+      ],
+      "promptFile": "source/prompts/impact_fire.txt",
+      "sourceSha256": "034521226a0e156edd8fc4b4204e3902fd0dc3dd6d4803d602fe49cfdcb3e87c",
+      "exportSha256": "3038be54b2df6b5338e0dd925e1101ce50004cd8773017a86f6c4168c7aab42b"
+    },
+    {
+      "id": "Vfx/impact_ice",
+      "status": "delivered",
+      "export": "exports/Art/Vfx/impact_ice.png",
+      "size": [
+        192,
+        192
+      ],
+      "source": "source/generations/impact_ice.png",
+      "master": "source/masters/Vfx/impact_ice@4x.png",
+      "generator": "image_gen.imagegen (built-in)",
+      "prompt": "Use case: stylized-concept. Single isolated production VFX sprite for Aetherward, premium dark arcane comic-ink, hard-edged flat colours in 3-4 bands, chunky readable silhouette. Genuine transparent background, 1024x1024 or larger. Reference 1 combat concept and reference 2 previous fire burst provide ONLY graphic style; the requested shape below completely replaces their subject and composition. No characters, text, numbers, border, scenery, baked ground or shadow. A centred RADIAL ice-shard HIT STAR, viewed straight-on. Eight large broad faceted spear crystals point outward from the small centre in eight evenly spaced radial directions (up, down, left, right and diagonals). Symmetrical star silhouette, flat facing viewer, not a ground eruption, crown, ring or dome. White #ffffff #bff4ff #7fe3ff #2a6fd0, black-violet shard contours. 85% of canvas.\n",
+      "cleanup": "source/scripts/process_vfx.py impact_ice source/generations/impact_ice.png --prompt source/prompts/impact_ice.txt",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reviewed in colour, grayscale and silhouette offline sheets; specific element/direction and transparency contract checked. Runtime tint, blend, motion and stacking remain unverified.",
+      "references": [
+        {
+          "path": "../R01/concepts/combat_scene_concept_LOW_RES_DRAFT.png",
+          "role": "comic VFX target; repository-owned concept, not gameplay"
+        },
+        {
+          "path": "source/generations/burst_fire.png",
+          "role": "previous burst graphic treatment; initial pass attached its processed master, corrective passes attached raw fire source"
+        }
+      ],
+      "promptFile": "source/prompts/impact_ice.txt",
+      "sourceSha256": "e28bbcfde4ede44ceb8065313884127cae5a54f7b3cb9666ffdc148ea97426dc",
+      "exportSha256": "62eb882b22af9226330774540b262854c61c38a20b40c689ec7f94cab3a374d2"
+    },
+    {
+      "id": "Vfx/impact_lightning",
+      "status": "delivered",
+      "export": "exports/Art/Vfx/impact_lightning.png",
+      "size": [
+        192,
+        192
+      ],
+      "source": "source/generations/impact_lightning.png",
+      "master": "source/masters/Vfx/impact_lightning@4x.png",
+      "generator": "image_gen.imagegen (built-in)",
+      "prompt": "Use case: stylized-concept. Production Aetherward comic-ink dark arcane fantasy VFX sprite, single isolated effect on genuine transparent RGBA background. Hard-edged flat cel colour shapes in 3-4 bands, bold tapered black-violet #1b1226 ink accents on solid flame tongues, shards and splash crowns; no ink on pure light. Exaggerated chunky readable shapes. No airbrush gradients except a thin outer halo. No text, characters, scenery, ground, baked shadow, border or watermark. Square 1024x1024 minimum master. Centre pivot. Generous transparent margin; entire effect contained. Asset impact_lightning: Centred radial hit burst, thick forked lightning spark star; #ffffff #fff36a #a98bff #5a2bd0. 85% canvas. Pure light, no dark outline.\n",
+      "cleanup": "source/scripts/process_vfx.py impact_lightning source/generations/impact_lightning.png --prompt source/prompts/impact_lightning.txt",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reviewed in colour, grayscale and silhouette offline sheets; specific element/direction and transparency contract checked. Runtime tint, blend, motion and stacking remain unverified.",
+      "references": [
+        {
+          "path": "../R01/concepts/combat_scene_concept_LOW_RES_DRAFT.png",
+          "role": "comic VFX target; repository-owned concept, not gameplay"
+        },
+        {
+          "path": "source/generations/burst_water.png",
+          "role": "previous burst graphic treatment; initial pass attached its processed master, corrective passes attached raw fire source"
+        }
+      ],
+      "promptFile": "source/prompts/impact_lightning.txt",
+      "sourceSha256": "3f236ec7b57f779d2b54ac2ca2db857ff3e81e58d499f11b72ddb9f9237bf2ca",
+      "exportSha256": "fc34df5e9c23f0824cd71b1ca38d85b57685c47d47d29ead0cdaafc3c22633cd"
+    },
+    {
+      "id": "Vfx/impact_water",
+      "status": "delivered",
+      "export": "exports/Art/Vfx/impact_water.png",
+      "size": [
+        192,
+        192
+      ],
+      "source": "source/generations/impact_water.png",
+      "master": "source/masters/Vfx/impact_water@4x.png",
+      "generator": "image_gen.imagegen (built-in)",
+      "prompt": "Use case: stylized-concept. Production Aetherward comic-ink dark arcane fantasy VFX sprite, single isolated effect on genuine transparent RGBA background. Hard-edged flat cel colour shapes in 3-4 bands, bold tapered black-violet #1b1226 ink accents on solid flame tongues, shards and splash crowns; no ink on pure light. Exaggerated chunky readable shapes. No airbrush gradients except a thin outer halo. No text, characters, scenery, ground, baked shadow, border or watermark. Square 1024x1024 minimum master. Centre pivot. Generous transparent margin; entire effect contained. Asset impact_water: Centred radial hit burst, chunky splash crown, #e8fbff #5fe0ff #2fb8b0 #1f5fd0, 85% canvas.\n",
+      "cleanup": "source/scripts/process_vfx.py impact_water source/generations/impact_water.png --prompt source/prompts/impact_water.txt",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reviewed in colour, grayscale and silhouette offline sheets; specific element/direction and transparency contract checked. Runtime tint, blend, motion and stacking remain unverified.",
+      "references": [
+        {
+          "path": "../R01/concepts/combat_scene_concept_LOW_RES_DRAFT.png",
+          "role": "comic VFX target; repository-owned concept, not gameplay"
+        },
+        {
+          "path": "source/generations/burst_water.png",
+          "role": "previous burst graphic treatment; initial pass attached its processed master, corrective passes attached raw fire source"
+        }
+      ],
+      "promptFile": "source/prompts/impact_water.txt",
+      "sourceSha256": "579552b65cf8b37b66eb5b783bb8377090d5073ebe45c3401b1eda6f117012e2",
+      "exportSha256": "f04a2e0e361387feedb713c01a069dd0bd4da8d8e756ff1ad0cf7011e7356319"
+    },
+    {
+      "id": "Vfx/projectile_fire",
+      "status": "delivered",
+      "export": "exports/Art/Vfx/projectile_fire.png",
+      "size": [
+        128,
+        128
+      ],
+      "source": "source/generations/projectile_fire.png",
+      "master": "source/masters/Vfx/projectile_fire@4x.png",
+      "generator": "image_gen.imagegen (built-in)",
+      "prompt": "Use case: stylized-concept. Production Aetherward comic-ink dark arcane fantasy VFX sprite, single isolated effect on genuine transparent RGBA background. Hard-edged flat cel colour shapes in 3-4 bands, bold tapered black-violet #1b1226 ink accents on solid flame tongues, shards and splash crowns; no ink on pure light. Exaggerated chunky readable shapes. No airbrush gradients except a thin outer halo. No text, characters, scenery, ground, baked shadow, border or watermark. Square 1024x1024 minimum master. Centre pivot. Generous transparent margin; entire effect contained. Asset projectile_fire: Horizontal fire comet travels +X right. Rounded white-hot head on RIGHT, pointed curling flame tail trails LEFT. Centred on horizontal midline, width 85%, height 42%. #fff3b0 #ffd23a #ff7a1a #c0281a.\n",
+      "cleanup": "source/scripts/process_vfx.py projectile_fire source/generations/projectile_fire.png --prompt source/prompts/projectile_fire.txt",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Right-facing head and left wake checked; small in the literal PPU preview, so runtime scale and white-core visibility on pale lanes need Unity review.",
+      "references": [
+        {
+          "path": "../R01/concepts/combat_scene_concept_LOW_RES_DRAFT.png",
+          "role": "comic VFX target; repository-owned concept, not gameplay"
+        },
+        {
+          "path": "source/generations/burst_water.png",
+          "role": "previous burst graphic treatment; initial pass attached its processed master, corrective passes attached raw fire source"
+        }
+      ],
+      "promptFile": "source/prompts/projectile_fire.txt",
+      "sourceSha256": "d7e75141995a7cc81e8ad565340b2b792d1887b5448cffb7c22202303661bfbb",
+      "exportSha256": "ca5623786a1fe0db68c7342c793dbb7e4738e74153cac3b208f9e49317bf80a6"
+    },
+    {
+      "id": "Vfx/projectile_ice",
+      "status": "delivered",
+      "export": "exports/Art/Vfx/projectile_ice.png",
+      "size": [
+        128,
+        128
+      ],
+      "source": "source/generations/projectile_ice.png",
+      "master": "source/masters/Vfx/projectile_ice@4x.png",
+      "generator": "image_gen.imagegen (built-in)",
+      "prompt": "Use case: stylized-concept. Production Aetherward comic-ink dark arcane fantasy VFX sprite, single isolated effect on genuine transparent RGBA background. Hard-edged flat cel colour shapes in 3-4 bands, bold tapered black-violet #1b1226 ink accents on solid flame tongues, shards and splash crowns; no ink on pure light. Exaggerated chunky readable shapes. No airbrush gradients except a thin outer halo. No text, characters, scenery, ground, baked shadow, border or watermark. Square 1024x1024 minimum master. Centre pivot. Generous transparent margin; entire effect contained. Asset projectile_ice: Horizontal spear shard travels +X right. Sharp long crystal tip on RIGHT, tiny broken icy wake trails LEFT. Centred horizontal midline, width 85%, height 28%. #ffffff #bff4ff #7fe3ff #2a6fd0.\n",
+      "cleanup": "source/scripts/process_vfx.py projectile_ice source/generations/projectile_ice.png --prompt source/prompts/projectile_ice.txt",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Right-facing head and left wake checked; small in the literal PPU preview, so runtime scale and white-core visibility on pale lanes need Unity review.",
+      "references": [
+        {
+          "path": "../R01/concepts/combat_scene_concept_LOW_RES_DRAFT.png",
+          "role": "comic VFX target; repository-owned concept, not gameplay"
+        },
+        {
+          "path": "source/generations/burst_water.png",
+          "role": "previous burst graphic treatment; initial pass attached its processed master, corrective passes attached raw fire source"
+        }
+      ],
+      "promptFile": "source/prompts/projectile_ice.txt",
+      "sourceSha256": "93f6fbd2d7bcb7046f9778ac412d60c0409d35feffbe7a8543f5a1824e657c97",
+      "exportSha256": "c43d47c8b39ab53986f8f5eb0663ecf6ff0138b8e7181d97f8965ddf42424e5c"
+    },
+    {
+      "id": "Vfx/projectile_lightning",
+      "status": "delivered",
+      "export": "exports/Art/Vfx/projectile_lightning.png",
+      "size": [
+        128,
+        128
+      ],
+      "source": "source/generations/projectile_lightning.png",
+      "master": "source/masters/Vfx/projectile_lightning@4x.png",
+      "generator": "image_gen.imagegen (built-in)",
+      "prompt": "Use case: stylized-concept. Production Aetherward comic-ink dark arcane fantasy VFX sprite, single isolated effect on genuine transparent RGBA background. Hard-edged flat cel colour shapes in 3-4 bands, bold tapered black-violet #1b1226 ink accents on solid flame tongues, shards and splash crowns; no ink on pure light. Exaggerated chunky readable shapes. No airbrush gradients except a thin outer halo. No text, characters, scenery, ground, baked shadow, border or watermark. Square 1024x1024 minimum master. Centre pivot. Generous transparent margin; entire effect contained. Asset projectile_lightning: Horizontal thick jagged bolt segment travels +X right. Arrow-like leading branch tip on RIGHT, thinner tail LEFT, nearly full width with margins. Centred horizontal midline, height 32%. #ffffff #fff36a #a98bff #5a2bd0. No dark outline on light.\n",
+      "cleanup": "source/scripts/process_vfx.py projectile_lightning source/generations/projectile_lightning.png --prompt source/prompts/projectile_lightning.txt",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Right-facing head and left wake checked; small in the literal PPU preview, so runtime scale and white-core visibility on pale lanes need Unity review.",
+      "references": [
+        {
+          "path": "../R01/concepts/combat_scene_concept_LOW_RES_DRAFT.png",
+          "role": "comic VFX target; repository-owned concept, not gameplay"
+        },
+        {
+          "path": "source/generations/burst_water.png",
+          "role": "previous burst graphic treatment; initial pass attached its processed master, corrective passes attached raw fire source"
+        }
+      ],
+      "promptFile": "source/prompts/projectile_lightning.txt",
+      "sourceSha256": "04e7327f3fcff76f0c05be58e7983b40bdde86eecbcd86cd5cb989c28aca4023",
+      "exportSha256": "1fb2a58ca984e312c705b7ebfad5585f7cdb756a282a3083508348becd1f6290"
+    },
+    {
+      "id": "Vfx/projectile_water",
+      "status": "delivered",
+      "export": "exports/Art/Vfx/projectile_water.png",
+      "size": [
+        128,
+        128
+      ],
+      "source": "source/generations/projectile_water.png",
+      "master": "source/masters/Vfx/projectile_water@4x.png",
+      "generator": "image_gen.imagegen (built-in)",
+      "prompt": "Use case: stylized-concept. Production Aetherward comic-ink dark arcane fantasy VFX sprite, single isolated effect on genuine transparent RGBA background. Hard-edged flat cel colour shapes in 3-4 bands, bold tapered black-violet #1b1226 ink accents on solid flame tongues, shards and splash crowns; no ink on pure light. Exaggerated chunky readable shapes. No airbrush gradients except a thin outer halo. No text, characters, scenery, ground, baked shadow, border or watermark. Square 1024x1024 minimum master. Centre pivot. Generous transparent margin; entire effect contained. Asset projectile_water: Horizontal water droplet orb travels +X right. Rounded droplet orb head RIGHT, tapered wake LEFT. Centred horizontal midline, width 85%, height 40%. #e8fbff #5fe0ff #2fb8b0 #1f5fd0.\n",
+      "cleanup": "source/scripts/process_vfx.py projectile_water source/generations/projectile_water.png --prompt source/prompts/projectile_water.txt",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Right-facing head and left wake checked; small in the literal PPU preview, so runtime scale and white-core visibility on pale lanes need Unity review.",
+      "references": [
+        {
+          "path": "../R01/concepts/combat_scene_concept_LOW_RES_DRAFT.png",
+          "role": "comic VFX target; repository-owned concept, not gameplay"
+        },
+        {
+          "path": "source/generations/burst_water.png",
+          "role": "previous burst graphic treatment; initial pass attached its processed master, corrective passes attached raw fire source"
+        }
+      ],
+      "promptFile": "source/prompts/projectile_water.txt",
+      "sourceSha256": "1b26b7d6baf5f9d9540310aa6a6ddfe6b14df9762badca02177a53921e535ef1",
+      "exportSha256": "569515213b05d2da0608ba101336b05d0eaf7563f909e076b0914933d5723014"
+    },
+    {
+      "id": "Vfx/fireball",
+      "status": "delivered",
+      "export": "exports/Art/Vfx/fireball.png",
+      "size": [
+        192,
+        192
+      ],
+      "source": "source/generations/fireball.png",
+      "master": "source/masters/Vfx/fireball@4x.png",
+      "generator": "image_gen.imagegen (built-in)",
+      "prompt": "Use case: stylized-concept. Production Aetherward comic-ink dark arcane fantasy VFX sprite, single isolated effect on genuine transparent RGBA background. Hard-edged flat cel colour shapes in 3-4 bands, bold tapered black-violet #1b1226 ink accents on solid flame tongues, shards and splash crowns; no ink on pure light. Exaggerated chunky readable shapes. No airbrush gradients except a thin outer halo. No text, characters, scenery, ground, baked shadow, border or watermark. Square 1024x1024 minimum master. Centre pivot. Generous transparent margin; entire effect contained. Asset fireball: Big horizontal fire comet travelling +X right. Massive round white-hot head RIGHT, curling flame tail streams LEFT. Width 70% of canvas, height 48%, centred on horizontal midline. #fff3b0 #ffd23a #ff7a1a #c0281a.\n",
+      "cleanup": "source/scripts/process_vfx.py fireball source/generations/fireball.png --prompt source/prompts/fireball.txt",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Right-facing head and left wake checked; small in the literal PPU preview, so runtime scale and white-core visibility on pale lanes need Unity review.",
+      "references": [
+        {
+          "path": "../R01/concepts/combat_scene_concept_LOW_RES_DRAFT.png",
+          "role": "comic VFX target; repository-owned concept, not gameplay"
+        },
+        {
+          "path": "source/generations/burst_water.png",
+          "role": "previous burst graphic treatment; initial pass attached its processed master, corrective passes attached raw fire source"
+        }
+      ],
+      "promptFile": "source/prompts/fireball.txt",
+      "sourceSha256": "f7aaf720a924d0a94d27caa19764a70fc7355bb3cd447453731ab5a3cc817e49",
+      "exportSha256": "1a61fb68ccd85f9a8e93a5b5d4054a81a0d872cc14091380a00db2af1828c02d"
+    },
+    {
+      "id": "Vfx/slash",
+      "status": "delivered",
+      "export": "exports/Art/Vfx/slash.png",
+      "size": [
+        256,
+        256
+      ],
+      "source": "source/generations/slash.png",
+      "master": "source/masters/Vfx/slash@4x.png",
+      "generator": "image_gen.imagegen (built-in)",
+      "prompt": "Use case: stylized-concept. Production Aetherward comic-ink dark arcane fantasy VFX sprite, single isolated effect on genuine transparent RGBA background. Hard-edged flat cel colour shapes in 3-4 bands, bold tapered black-violet #1b1226 ink accents on solid flame tongues, shards and splash crowns; no ink on pure light. Exaggerated chunky readable shapes. No airbrush gradients except a thin outer halo. No text, characters, scenery, ground, baked shadow, border or watermark. Square 1024x1024 minimum master. Centre pivot. Generous transparent margin; entire effect contained. Asset slash: Melee arc: single broad crescent swoosh opening toward +X RIGHT, with sharp speed-line tail. White core with pale gold band, hard cel shapes, no dark outline, transparent interior.\n",
+      "cleanup": "source/scripts/process_vfx.py slash source/generations/slash.png --prompt source/prompts/slash.txt",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reviewed in colour, grayscale and silhouette offline sheets; specific element/direction and transparency contract checked. Runtime tint, blend, motion and stacking remain unverified.",
+      "references": [
+        {
+          "path": "../R01/concepts/combat_scene_concept_LOW_RES_DRAFT.png",
+          "role": "comic VFX target; repository-owned concept, not gameplay"
+        },
+        {
+          "path": "source/generations/burst_water.png",
+          "role": "previous burst graphic treatment; initial pass attached its processed master, corrective passes attached raw fire source"
+        }
+      ],
+      "promptFile": "source/prompts/slash.txt",
+      "sourceSha256": "a2c13f092acb9fccf6164561296214722b5e78c47dc653c9132bc10bdbfd7cff",
+      "exportSha256": "8bf61e4335b30148434f4c582ef94c8cfba9588e8d2c89b4a636de6cb71f845b"
+    },
+    {
+      "id": "Vfx/ring",
+      "status": "delivered",
+      "export": "exports/Art/Vfx/ring.png",
+      "size": [
+        256,
+        256
+      ],
+      "source": "source/generations/ring.png",
+      "master": "source/masters/Vfx/ring@4x.png",
+      "generator": "image_gen.imagegen (built-in)",
+      "prompt": "Use case: stylized-concept. Single isolated production VFX sprite for Aetherward, premium dark arcane comic-ink, hard-edged flat colours in 3-4 bands, chunky readable silhouette. Genuine transparent background, 1024x1024 or larger. Reference 1 combat concept and reference 2 previous fire burst provide ONLY graphic style; the requested shape below completely replaces their subject and composition. No characters, text, numbers, border, scenery, baked ground or shadow. A simple perfectly circular TOP-DOWN WHITE SHOCKWAVE RING. Orthographic straight down with no perspective; outer width and height equal. One broad neutral-white ring band, ragged broken comic edges and a few short pointed shock fragments. Hollow fully transparent centre. WHITE AND NEUTRAL GREY ONLY. Pure light, NO black outline. No water curls, droplets, waves, flames, swirls, crystals, sphere or dome. 85% canvas diameter.\n",
+      "cleanup": "source/scripts/process_vfx.py ring source/generations/ring.png --prompt source/prompts/ring.txt",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reviewed in colour, grayscale and silhouette offline sheets; specific element/direction and transparency contract checked. Runtime tint, blend, motion and stacking remain unverified.",
+      "references": [
+        {
+          "path": "../R01/concepts/combat_scene_concept_LOW_RES_DRAFT.png",
+          "role": "comic VFX target; repository-owned concept, not gameplay"
+        },
+        {
+          "path": "source/generations/burst_fire.png",
+          "role": "previous burst graphic treatment; initial pass attached its processed master, corrective passes attached raw fire source"
+        }
+      ],
+      "promptFile": "source/prompts/ring.txt",
+      "sourceSha256": "4868b893091344a98951330e6d0195f0db4c0c1a07de6b739af597590a9868bd",
+      "exportSha256": "c2d1ba57cba4154c18619c3b6f1540cb5b1df3a83939bdf4f61e23e1c9fd0965"
+    },
+    {
+      "id": "Vfx/spark",
+      "status": "delivered",
+      "export": "exports/Art/Vfx/spark.png",
+      "size": [
+        48,
+        48
+      ],
+      "source": "source/generations/spark.png",
+      "master": "source/masters/Vfx/spark@4x.png",
+      "generator": "image_gen.imagegen (built-in)",
+      "prompt": "Use case: stylized-concept. Single isolated production VFX sprite for Aetherward, premium dark arcane comic-ink, hard-edged flat colours in 3-4 bands, chunky readable silhouette. Genuine transparent background, 1024x1024 or larger. Reference 1 combat concept and reference 2 previous fire burst provide ONLY graphic style; the requested shape below completely replaces their subject and composition. No characters, text, numbers, border, scenery, baked ground or shadow. A single simple FOUR-POINT STAR GLINT. Four long sharply tapered white rays point up/down/left/right from one compact white diamond core, centred. Only four points; no diagonal rays. Neutral white and light grey ONLY. Hard-edged clean silhouette with a very thin halo. Fully transparent outside star. No black outline, ornament, circles, swirl, water or snowflake. 85% canvas height.\n",
+      "cleanup": "source/scripts/process_vfx.py spark source/generations/spark.png --prompt source/prompts/spark.txt",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reviewed in colour, grayscale and silhouette offline sheets; specific element/direction and transparency contract checked. Runtime tint, blend, motion and stacking remain unverified.",
+      "references": [
+        {
+          "path": "../R01/concepts/combat_scene_concept_LOW_RES_DRAFT.png",
+          "role": "comic VFX target; repository-owned concept, not gameplay"
+        },
+        {
+          "path": "source/generations/burst_fire.png",
+          "role": "previous burst graphic treatment; initial pass attached its processed master, corrective passes attached raw fire source"
+        }
+      ],
+      "promptFile": "source/prompts/spark.txt",
+      "sourceSha256": "b53c16b74b71cac0fc3ca7a45ee015a1fad578034c2295d0ab0765e4a3e6a601",
+      "exportSha256": "8973040cbb6e4827974673a339654685109382e4875a267d8f8625af3da4a594"
+    },
+    {
+      "id": "Vfx/telegraph",
+      "status": "delivered",
+      "export": "exports/Art/Vfx/telegraph.png",
+      "size": [
+        256,
+        256
+      ],
+      "source": "source/generations/telegraph.png",
+      "master": "source/masters/Vfx/telegraph@4x.png",
+      "generator": "image_gen.imagegen (built-in)",
+      "prompt": "Use case: stylized-concept. Single isolated production VFX sprite for Aetherward, premium dark arcane comic-ink, hard-edged flat colours in 3-4 bands, chunky readable silhouette. Genuine transparent background, 1024x1024 or larger. Reference 1 combat concept and reference 2 previous fire burst provide ONLY graphic style; the requested shape below completely replaces their subject and composition. No characters, text, numbers, border, scenery, baked ground or shadow. A perfectly circular TOP-DOWN DANGER TARGET ZONE. Orthographic straight down; equal width and height. Thick solid WHITE outer circular hazard rim with exactly twelve large WHITE triangular chevrons distributed evenly just inside, all pointing inward to the centre. Sparse clean geometry, hard cel comic edges. Empty transparent centre with a very faint 15% opacity neutral grey wash permitted. WHITE AND NEUTRAL GREY ONLY, for red code tinting. No water curls, droplets, waves, flames, swirls, sphere or dome. 85% canvas diameter.\n",
+      "cleanup": "source/scripts/process_vfx.py telegraph source/generations/telegraph.png --prompt source/prompts/telegraph.txt",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Regenerated as a circular hazard rim with inward chevrons; neutral greys and interior opacity verified. Red tint and top-layer visibility need Unity review.",
+      "references": [
+        {
+          "path": "../R01/concepts/combat_scene_concept_LOW_RES_DRAFT.png",
+          "role": "comic VFX target; repository-owned concept, not gameplay"
+        },
+        {
+          "path": "source/generations/burst_fire.png",
+          "role": "previous burst graphic treatment; initial pass attached its processed master, corrective passes attached raw fire source"
+        }
+      ],
+      "promptFile": "source/prompts/telegraph.txt",
+      "sourceSha256": "45785b2e778691cfd7eaba32c0c641ab342eaa943fb511e1a31e4c387da5583d",
+      "exportSha256": "1365d66b8581f4f0e27185477915534b96aaf7771f9e56435123b16beb21e19b"
+    },
+    {
+      "id": "Vfx/zone_burning_ground",
+      "status": "delivered",
+      "export": "exports/Art/Vfx/zone_burning_ground.png",
+      "size": [
+        256,
+        256
+      ],
+      "source": "source/generations/zone_burning_ground.png",
+      "master": "source/masters/Vfx/zone_burning_ground@4x.png",
+      "generator": "image_gen.imagegen (built-in)",
+      "prompt": "Use case: stylized-concept. Production Aetherward comic-ink dark arcane fantasy VFX sprite, single isolated effect on genuine transparent RGBA background. Hard-edged flat cel colour shapes in 3-4 bands, bold tapered black-violet #1b1226 ink accents on solid flame tongues, shards and splash crowns; no ink on pure light. Exaggerated chunky readable shapes. No airbrush gradients except a thin outer halo. No text, characters, scenery, ground, baked shadow, border or watermark. Square 1024x1024 minimum master. Centre pivot. Generous transparent margin; entire effect contained. Asset zone_burning_ground: Top-down perfectly circular burning cracks and low flame tongues, no solid ground or rocks. Transparent gaps between fiery cracks and flames. Mostly transparent central area (alpha <= 35%). #fff3b0 #ffd23a #ff7a1a #c0281a. No perspective squash.\n",
+      "cleanup": "source/scripts/process_vfx.py zone_burning_ground source/generations/zone_burning_ground.png --prompt source/prompts/zone_burning_ground.txt",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reviewed in colour, grayscale and silhouette offline sheets; specific element/direction and transparency contract checked. Runtime tint, blend, motion and stacking remain unverified.",
+      "references": [
+        {
+          "path": "../R01/concepts/combat_scene_concept_LOW_RES_DRAFT.png",
+          "role": "comic VFX target; repository-owned concept, not gameplay"
+        },
+        {
+          "path": "source/generations/burst_water.png",
+          "role": "previous burst graphic treatment; initial pass attached its processed master, corrective passes attached raw fire source"
+        }
+      ],
+      "promptFile": "source/prompts/zone_burning_ground.txt",
+      "sourceSha256": "c60c8f1a3eec709430d06d07cb390b397d883815be692e7630231349d8e17515",
+      "exportSha256": "2c406c3b6c3e29bf3dbd5be1b1d809beb3aaa330c842f46be0265a1c405c2f6c"
+    },
+    {
+      "id": "Vfx/zone_thunderstorm",
+      "status": "delivered",
+      "export": "exports/Art/Vfx/zone_thunderstorm.png",
+      "size": [
+        256,
+        256
+      ],
+      "source": "source/generations/zone_thunderstorm.png",
+      "master": "source/masters/Vfx/zone_thunderstorm@4x.png",
+      "generator": "image_gen.imagegen (built-in)",
+      "prompt": "Use case: stylized-concept. A single isolated production game VFX sprite. Premium dark arcane comic ink with broad hard-edged flat cel colour bands. Genuine transparent RGBA, square 1024x1024 minimum, fully contained with margins. Reference combat scene and previous fire burst supply only graphic treatment; replace their subject and composition with the exact flat ground design specified. No text, numbers, character, ground surface, baked shadow or border. TOP-DOWN perfectly circular storm magic ground decal, orthographic straight downward. A large central abstract angular lightning-bolt SIGIL, surrounded by two broken circular rings of crackling arcs and four geometric diamond markers. Flat circle equal width and height; no dome perspective. White #ffffff #fff36a #a98bff #5a2bd0. Central wash and marks at <=35% alpha, rim arcs may be opaque. Large simple geometric marks, transparent gaps. No crystals, smoke, rocks, water curls, flames, letters or numbers.\n",
+      "cleanup": "source/scripts/process_vfx.py zone_thunderstorm source/generations/zone_thunderstorm.png --prompt source/prompts/zone_thunderstorm.txt",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reviewed in colour, grayscale and silhouette offline sheets; specific element/direction and transparency contract checked. Runtime tint, blend, motion and stacking remain unverified.",
+      "references": [
+        {
+          "path": "../R01/concepts/combat_scene_concept_LOW_RES_DRAFT.png",
+          "role": "comic VFX target; repository-owned concept, not gameplay"
+        },
+        {
+          "path": "source/generations/burst_fire.png",
+          "role": "previous burst graphic treatment; initial pass attached its processed master, corrective passes attached raw fire source"
+        }
+      ],
+      "promptFile": "source/prompts/zone_thunderstorm.txt",
+      "sourceSha256": "b7fdb474a003d5d4127979ecc48f77482f913649e66e7a622eafb3cdc3b08354",
+      "exportSha256": "4fd09f72e47a1f254729cc4bc8148e5ed40f32157766837aa92ed73c830422b4"
+    },
+    {
+      "id": "Vfx/zone_healing_rain",
+      "status": "delivered",
+      "export": "exports/Art/Vfx/zone_healing_rain.png",
+      "size": [
+        256,
+        256
+      ],
+      "source": "source/generations/zone_healing_rain.png",
+      "master": "source/masters/Vfx/zone_healing_rain@4x.png",
+      "generator": "image_gen.imagegen (built-in)",
+      "prompt": "Use case: stylized-concept. A single isolated production game VFX sprite. Premium dark arcane comic ink with broad hard-edged flat cel colour bands. Genuine transparent RGBA, square 1024x1024 minimum, fully contained with margins. Reference combat scene and previous fire burst supply only graphic treatment; replace their subject and composition with the exact flat ground design specified. No text, numbers, character, ground surface, baked shadow or border. TOP-DOWN perfectly circular water healing magic ground decal, orthographic straight downward. A large central abstract DROPLET-SHAPED SIGIL, surrounded by three concentric broken circular ripples and eight large separate droplets around the rim. Flat circle equal width and height, no dome or waves rising upward. #e8fbff #5fe0ff #2fb8b0 #1f5fd0, dark-violet ink on solid droplets. Central wash and central sigil at <=35% alpha; rim droplets may be opaque. Sparse large marks, transparent gaps, no letters or numbers.\n",
+      "cleanup": "source/scripts/process_vfx.py zone_healing_rain source/generations/zone_healing_rain.png --prompt source/prompts/zone_healing_rain.txt",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reviewed in colour, grayscale and silhouette offline sheets; specific element/direction and transparency contract checked. Runtime tint, blend, motion and stacking remain unverified.",
+      "references": [
+        {
+          "path": "../R01/concepts/combat_scene_concept_LOW_RES_DRAFT.png",
+          "role": "comic VFX target; repository-owned concept, not gameplay"
+        },
+        {
+          "path": "source/generations/burst_fire.png",
+          "role": "previous burst graphic treatment; initial pass attached its processed master, corrective passes attached raw fire source"
+        }
+      ],
+      "promptFile": "source/prompts/zone_healing_rain.txt",
+      "sourceSha256": "eeddecd6aa0578290dbea671bbf6d6b5c01357b33007d3f1c3763e11d059398a",
+      "exportSha256": "1e2a64d8087c4a2775f059c9280a3bce23389351d1eab84f408d05d94a9ea141"
+    },
+    {
+      "id": "Vfx/field_ice_cover",
+      "status": "delivered",
+      "export": "exports/Art/Vfx/field_ice_cover.png",
+      "size": [
+        256,
+        256
+      ],
+      "source": "source/generations/field_ice_cover.png",
+      "master": "source/masters/Vfx/field_ice_cover@4x.png",
+      "generator": "image_gen.imagegen (built-in)",
+      "prompt": "Use case: stylized-concept. Production Aetherward comic-ink dark arcane fantasy VFX sprite, single isolated effect on genuine transparent RGBA background. Hard-edged flat cel colour shapes in 3-4 bands, bold tapered black-violet #1b1226 ink accents on solid flame tongues, shards and splash crowns; no ink on pure light. Exaggerated chunky readable shapes. No airbrush gradients except a thin outer halo. No text, characters, scenery, ground, baked shadow, border or watermark. Square 1024x1024 minimum master. Centre pivot. Generous transparent margin; entire effect contained. Asset field_ice_cover: Top-down perfectly circular frozen patch, sparse ice fissures and big faceted ice-shard clusters on rim. Transparent between cracks and shards; central ice wash <=25% alpha. No opaque disk, no ground. #ffffff #bff4ff #7fe3ff #2a6fd0. No perspective squash.\n",
+      "cleanup": "source/scripts/process_vfx.py field_ice_cover source/generations/field_ice_cover.png --prompt source/prompts/field_ice_cover.txt",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reviewed in colour, grayscale and silhouette offline sheets; specific element/direction and transparency contract checked. Runtime tint, blend, motion and stacking remain unverified.",
+      "references": [
+        {
+          "path": "../R01/concepts/combat_scene_concept_LOW_RES_DRAFT.png",
+          "role": "comic VFX target; repository-owned concept, not gameplay"
+        },
+        {
+          "path": "source/generations/burst_water.png",
+          "role": "previous burst graphic treatment; initial pass attached its processed master, corrective passes attached raw fire source"
+        }
+      ],
+      "promptFile": "source/prompts/field_ice_cover.txt",
+      "sourceSha256": "7bd44be2739169e811024c4be6b8ff92d40caeb450e05782664b01e2dd507342",
+      "exportSha256": "b931c05f4f214119d3af4c6156c7b9a1b0b838e1ee788522a8fb52b3c99c4cc4"
+    },
+    {
+      "id": "Vfx/burst_fire",
+      "status": "delivered",
+      "export": "exports/Art/Vfx/burst_fire.png",
+      "size": [
+        256,
+        256
+      ],
+      "source": "source/generations/burst_fire.png",
+      "master": "source/masters/Vfx/burst_fire@4x.png",
+      "generator": "image_gen.imagegen (built-in)",
+      "prompt": "Use case: stylized-concept. Production Aetherward comic-ink dark arcane fantasy VFX sprite, single isolated effect on genuine transparent RGBA background. Hard-edged flat cel colour shapes in 3-4 bands, bold tapered black-violet #1b1226 ink accents on solid flame tongues, shards and splash crowns; no ink on pure light. Exaggerated chunky readable shapes. No airbrush gradients except a thin outer halo. No text, characters, scenery, ground, baked shadow, border or watermark. Square 1024x1024 minimum master. Centre pivot. Generous transparent margin; entire effect contained. Asset burst_fire: meteor explosion with a huge mushroom canopy of curling flame tongues, flying embers and an open central arch; explosive circular spread seen from 38 degree elevated game camera. Fire palette #fff3b0 #ffd23a #ff7a1a #c0281a. Match the giant curling fire in the supplied combat concept, but isolate the fire only. Occupy 86% of canvas. Leave open negative-space channels through the central half so a hero beneath stays readable; use sparsely spaced tongues around the canopy, not a solid opaque disk.\n",
+      "cleanup": "source/scripts/process_vfx.py burst_fire source/generations/burst_fire.png --prompt source/prompts/burst_fire.txt",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Strong concept-like curling fire and open arch; dense small embers are the weakest detail at 720p. Uniform 0.65 alpha protects the hero, reducing punch.",
+      "references": [
+        {
+          "path": "../R01/concepts/combat_scene_concept_LOW_RES_DRAFT.png",
+          "role": "comic VFX target; repository-owned concept, not gameplay"
+        }
+      ],
+      "promptFile": "source/prompts/burst_fire.txt",
+      "sourceSha256": "10c270aa1bf8bca60432df072b0512e03d0332c09191896bf793eb62f8d172bd",
+      "exportSha256": "d427fcf9e2e7f049d1a28864f365833756c49d2bb85aed5f8e189a737978595d"
+    },
+    {
+      "id": "Vfx/burst_ice",
+      "status": "delivered",
+      "export": "exports/Art/Vfx/burst_ice.png",
+      "size": [
+        256,
+        256
+      ],
+      "source": "source/generations/burst_ice.png",
+      "master": "source/masters/Vfx/burst_ice@4x.png",
+      "generator": "image_gen.imagegen (built-in)",
+      "prompt": "Use case: stylized-concept. Production Aetherward comic-ink dark arcane fantasy VFX sprite, single isolated effect on genuine transparent RGBA background. Hard-edged flat cel colour shapes in 3-4 bands, bold tapered black-violet #1b1226 ink accents on solid flame tongues, shards and splash crowns; no ink on pure light. Exaggerated chunky readable shapes. No airbrush gradients except a thin outer halo. No text, characters, scenery, ground, baked shadow, border or watermark. Square 1024x1024 minimum master. Centre pivot. Generous transparent margin; entire effect contained. Asset burst_ice: Huge ice bloom: ring of enormous faceted crystal spikes erupting outward, 38 degree elevated camera, open central space for hero. White #ffffff pale #bff4ff cyan #7fe3ff blue #2a6fd0. Angular thick ink contours, few large spikes instead of dense tiny detail.\n",
+      "cleanup": "source/scripts/process_vfx.py burst_ice source/generations/burst_ice.png --prompt source/prompts/burst_ice.txt",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Large facets and open centre read clearly; small splinters and interior facets compress at game scale. Uniform 0.65 alpha protects the hero.",
+      "references": [
+        {
+          "path": "../R01/concepts/combat_scene_concept_LOW_RES_DRAFT.png",
+          "role": "comic VFX target; repository-owned concept, not gameplay"
+        },
+        {
+          "path": "source/generations/burst_fire.png",
+          "role": "previous burst graphic treatment; initial pass attached its processed master, corrective passes attached raw fire source"
+        }
+      ],
+      "promptFile": "source/prompts/burst_ice.txt",
+      "sourceSha256": "82f5fd9fd16d5b0083f95bb5307e748b3cc473b18872b937a045b29e20d97ea6",
+      "exportSha256": "b7abbe534a0fc97441e5946a444f42666c3026ba0402aa3aa7e58952dcee03fc"
+    },
+    {
+      "id": "Vfx/burst_lightning",
+      "status": "delivered",
+      "export": "exports/Art/Vfx/burst_lightning.png",
+      "size": [
+        256,
+        256
+      ],
+      "source": "source/generations/burst_lightning.png",
+      "master": "source/masters/Vfx/burst_lightning@4x.png",
+      "generator": "image_gen.imagegen (built-in)",
+      "prompt": "Use case: stylized-concept. Single isolated production VFX sprite for Aetherward, premium dark arcane comic-ink, hard-edged flat colours in 3-4 bands, chunky readable silhouette. Genuine transparent background, 1024x1024 or larger. Reference 1 combat concept and reference 2 previous fire burst provide ONLY graphic style; the requested shape below completely replaces their subject and composition. No characters, text, numbers, border, scenery, baked ground or shadow. A thunder dome made ONLY of a sparse interconnected web of THICK jagged lightning bolts arcing in a rough sphere, elevated 38-degree game view. Broad flat white #ffffff bolt cores, yellow #fff36a edges, violet #a98bff #5a2bd0 outer colour bands. The empty gaps between bolts are genuinely transparent. No crystals, shards, stones, smoke, clouds, solid purple surfaces, fill disk, black outlines, or broad blurry glow. Centre is open for a hero. About 85% of square canvas.\n",
+      "cleanup": "source/scripts/process_vfx.py burst_lightning source/generations/burst_lightning.png --prompt source/prompts/burst_lightning.txt",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Corrected to a hard-banded bolt web with open gaps, removing inherited crystals and broad haze. Uniform 0.65 alpha protects the hero.",
+      "references": [
+        {
+          "path": "../R01/concepts/combat_scene_concept_LOW_RES_DRAFT.png",
+          "role": "comic VFX target; repository-owned concept, not gameplay"
+        },
+        {
+          "path": "source/generations/burst_fire.png",
+          "role": "previous burst graphic treatment; initial pass attached its processed master, corrective passes attached raw fire source"
+        }
+      ],
+      "promptFile": "source/prompts/burst_lightning.txt",
+      "sourceSha256": "0516df50ddfd3186f9d12f2fcd7c61980837ba84861b8822c65929be1ed46ab1",
+      "exportSha256": "16f3f97ba3a61d753d36691cb4e858237ba82acde5e16950407430cef7783909"
+    },
+    {
+      "id": "Vfx/burst_water",
+      "status": "delivered",
+      "export": "exports/Art/Vfx/burst_water.png",
+      "size": [
+        256,
+        256
+      ],
+      "source": "source/generations/burst_water.png",
+      "master": "source/masters/Vfx/burst_water@4x.png",
+      "generator": "image_gen.imagegen (built-in)",
+      "prompt": "Use case: stylized-concept. Production Aetherward comic-ink dark arcane fantasy VFX sprite, single isolated effect on genuine transparent RGBA background. Hard-edged flat cel colour shapes in 3-4 bands, bold tapered black-violet #1b1226 ink accents on solid flame tongues, shards and splash crowns; no ink on pure light. Exaggerated chunky readable shapes. No airbrush gradients except a thin outer halo. No text, characters, scenery, ground, baked shadow, border or watermark. Square 1024x1024 minimum master. Centre pivot. Generous transparent margin; entire effect contained. Asset burst_water: Tidal healing dome: swirling teal water ring, chunky splash crown and arching vortex dome, pearl #e8fbff cyan #5fe0ff teal #2fb8b0 blue #1f5fd0. Open transparent middle for a hero, 38 degree elevated camera, bold ink only on solid splash crowns.\n",
+      "cleanup": "source/scripts/process_vfx.py burst_water source/generations/burst_water.png --prompt source/prompts/burst_water.txt",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Clear curled crown and open protective dome; peripheral cyan halo is softer than the strongest ink/cel target. Uniform 0.65 alpha protects the hero.",
+      "references": [
+        {
+          "path": "../R01/concepts/combat_scene_concept_LOW_RES_DRAFT.png",
+          "role": "comic VFX target; repository-owned concept, not gameplay"
+        },
+        {
+          "path": "source/generations/rejected/burst_lightning_v1.png",
+          "role": "previous burst graphic treatment; initial pass attached its processed master, corrective passes attached raw fire source"
+        }
+      ],
+      "promptFile": "source/prompts/burst_water.txt",
+      "sourceSha256": "057638fe4fa389b039c8b88e12352f71211ca96c7afecebd9986554e95305953",
+      "exportSha256": "d1dcaf703e681413d3859beab2ffee0f10a36728adf3ad62794c903e11bb2201"
+    }
+  ],
+  "knownIssues": [
+    "Runtime blend, opacity, scaling, animation and multi-effect stacking are not verified in Unity; burst exports have a uniform 0.65 alpha multiplier.",
+    "Fire embers, ice facets and water foam have more inner detail than ideal at small sizes; burst_water retains a soft peripheral halo.",
+    "Neutral telegraph requires runtime red tint and top-layer ordering; tiny projectiles can lose white-core contrast on pale lanes."
+  ],
+  "blockers": [],
+  "extras": [
+    {
+      "path": "previews/flat_R02.png",
+      "kind": "offline composite / contact sheet, not gameplay"
+    },
+    {
+      "path": "previews/scene_R02_1080p.png",
+      "kind": "offline composite / contact sheet, not gameplay"
+    },
+    {
+      "path": "previews/scene_R02_1440p.png",
+      "kind": "offline composite / contact sheet, not gameplay"
+    },
+    {
+      "path": "previews/scene_R02_720p.png",
+      "kind": "offline composite / contact sheet, not gameplay"
+    },
+    {
+      "path": "previews/vfx_gray_720.png",
+      "kind": "offline composite / contact sheet, not gameplay"
+    },
+    {
+      "path": "previews/vfx_on_battlefield_1080.png",
+      "kind": "offline composite / contact sheet, not gameplay"
+    },
+    {
+      "path": "previews/vfx_on_battlefield_1440.png",
+      "kind": "offline composite / contact sheet, not gameplay"
+    },
+    {
+      "path": "previews/vfx_on_battlefield_720.png",
+      "kind": "offline composite / contact sheet, not gameplay"
+    },
+    {
+      "path": "previews/vfx_silhouette_720.png",
+      "kind": "offline composite / contact sheet, not gameplay"
+    }
+  ],
+  "qa": {
+    "intake": "qa/intake.json",
+    "additionalChecks": "qa/vfx_checks.json",
+    "preview": "previews/vfx_on_battlefield_1440.png",
+    "evidence": "Offline composite only; no Unity approval claimed"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "prompt": "Dark Mythic Fantasy, painterly stylized 2.5D; orthographic 38.3-degree elevation, three-quarter front body turned 25 degrees toward screen-right. Key upper-left-front #ffe9d0, rim back-right #9fe8ff, ambient #16233a. Controlled broad brush planes, coloured local-hue dark edges without black outlines.\nUse case: stylized-concept. Production game boss sprite, Siegebreaker Golem walk contact pose A. References are B01 style and light/material references only; create a towering nonhuman siege golem of pale sanctum stone bound with iron bands, enormous asymmetric battering-ram right arm, glowing oxblood armor seams. Broad colossal shoulders, small recessed stone head. Whole single character facing right, torso centered, feet level, ram arm carried low ready to charge. Sharp deliberate chipped stone planes and brushed iron. Bright warm key planes and 2–3 px cyan back-right rim at 512 export; edge-band average luminance must exceed 0.27 against dark basalt 0.16. Transparent background, no floor, shadow, ground glow, scenery, text, projectile or explosion. Full body and every prop inside generous transparent margin, figure 84% canvas height. Generate at least 1536x1536 native raster, intended for a 1024 master then 512 export. Adult colossal threatening proportions, no chibi. Preserve reference alpha; their hidden RGB defringe colors are not painted backgrounds.",
+  "transparent_background": true,
+  "referenced_image_paths": [
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Enemies/rift_warden_a.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Enemies/rift_warden_b.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Enemies/grunt_a.png"
+  ]
+}

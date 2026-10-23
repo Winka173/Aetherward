@@ -1,0 +1,20 @@
+{
+  "id": "Enemies/runner_attack",
+  "character": "runner",
+  "height": 145,
+  "width": 235,
+  "bottom": 236,
+  "raw": "C:\\Users\\Winka\\.codex\\generated_images\\01a15a1b-9a40-7c03-81f5-c129d348dd11\\exec-b2c58fd0-8923-40ac-8ebe-3d98e8699650.png",
+  "prompt": "Dark Mythic Fantasy, painterly stylized 2.5D; orthographic 38.3-degree elevation, three-quarter front body turned 25 degrees toward screen-right. Key upper-left-front #ffe9d0, rim back-right #9fe8ff, ambient #16233a. Controlled broad brush planes, coloured local-hue dark edges without black outlines. Use case: precise-object-edit. Image 1 EDIT TARGET current B08 runner_attack export. Other images STYLE ONLY. R1: recolour only: Ash-grey hide 60-70%, BONE-WHITE exposed ribs and jaw; wine red only eyes and thin cracks <=15%. Keep EXACT design, anatomy, silhouette, pose, prop, framing and placement. Maintain warm key lit broad planes and 2-3px cool rim at 256 export; mean edge luminance >=0.27 against basalt 0.16. No background/ground/shadow/text/extra VFX. Genuine transparent alpha. High resolution >=1024 square, same full-canvas framing suitable for 512 master.",
+  "references": [
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B08/source/revision0/exports/Art/Enemies/runner_attack.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Enemies/grunt_a.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Enemies/juggernaut_a.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Enemies/hexcaster_a.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Enemies/storm_harpy_a.png"
+  ],
+  "version": 3,
+  "sourceName": "r1_runner_attack",
+  "registration": "Original R0 crop-relative torso anchor retained; inspect R1 comparison for residual drift.",
+  "revision": 1
+}

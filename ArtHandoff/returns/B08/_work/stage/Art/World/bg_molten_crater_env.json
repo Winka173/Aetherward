@@ -1,0 +1,23 @@
+{
+ "shadowDirScreen": [
+  0.8197,
+  0.5729
+ ],
+ "shadowLengthPerHeight": 0.8947,
+ "braziersFlat": [
+  -1.409,
+  4.893,
+  -7.045,
+  11.327
+ ],
+ "aetherCrystalsFlat": [],
+ "edgeColor": [
+  0.1807,
+  0.1036,
+  0.0699
+ ],
+ "source": "ArtCache/Env/pot_molten_crater",
+ "gamma": 1.2237,
+ "viewMeanBefore": 0.2126,
+ "viewMean": 0.16
+}

@@ -1,0 +1,332 @@
+[
+  {
+    "id": "Heroes/nyxara_idle",
+    "source": {
+      "path": "source/sheets/nyxara_idle.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "2276f15ea80d56d1d5089d3b9843feea7796252d180fd9a351213929bf694f18"
+    },
+    "master": {
+      "path": "source/masters/Heroes/nyxara_idle@2x.png",
+      "size": [
+        800,
+        800
+      ],
+      "mode": "RGBA",
+      "sha256": "18060c10088284b08372699f28ce55da2ecdd56933cc63650d00808b53e38a6a"
+    },
+    "export": {
+      "path": "exports/Art/Heroes/nyxara_idle.png",
+      "size": [
+        400,
+        400
+      ],
+      "mode": "RGBA",
+      "sha256": "9055fe45a06f5f33c2aa78396042068ce35cd654bd2010f0ad2fe576e251ad47"
+    }
+  },
+  {
+    "id": "Heroes/nyxara_cast",
+    "source": {
+      "path": "source/sheets/nyxara_cast.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "93975bc9567c6b6d26be0755fe86794fe566d83f77f4fd255f839a053347a167"
+    },
+    "master": {
+      "path": "source/masters/Heroes/nyxara_cast@2x.png",
+      "size": [
+        800,
+        800
+      ],
+      "mode": "RGBA",
+      "sha256": "7a5d862ae33215224768625e08b78a68821c12b4154ec3792457bb172a657c1d"
+    },
+    "export": {
+      "path": "exports/Art/Heroes/nyxara_cast.png",
+      "size": [
+        400,
+        400
+      ],
+      "mode": "RGBA",
+      "sha256": "a153c2c302665b6a9396e8991363d583345e228b1f8677c10ef826b49211f071"
+    }
+  },
+  {
+    "id": "Heroes/nyxara_downed",
+    "source": {
+      "path": "source/sheets/nyxara_downed.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "c6b7737bbf01e65ef3c2ac0a1c8ddebf761095860a9f021c7b9661899ad90e67"
+    },
+    "master": {
+      "path": "source/masters/Heroes/nyxara_downed@2x.png",
+      "size": [
+        800,
+        800
+      ],
+      "mode": "RGBA",
+      "sha256": "5d4b2738d9d8ddd80cfaf65c51ace3218d6cdba1af8b3a6583f913e6e851370a"
+    },
+    "export": {
+      "path": "exports/Art/Heroes/nyxara_downed.png",
+      "size": [
+        400,
+        400
+      ],
+      "mode": "RGBA",
+      "sha256": "1d908bf28b1b51fa185de9a6f69a45d8d61b71750d4e0f104b404a2579756ba9"
+    }
+  },
+  {
+    "id": "Heroes/nyxara_evoA",
+    "source": {
+      "path": "source/sheets/nyxara_evoA.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "e6988f8407d02ab8537bf2bbfad19abf25b4abe7b870af69cface3d3087a84de"
+    },
+    "master": {
+      "path": "source/masters/Heroes/nyxara_evoA@2x.png",
+      "size": [
+        800,
+        800
+      ],
+      "mode": "RGBA",
+      "sha256": "721d0eb1b247ba230ac274acad1a368629f8cc129431cd67628b9c474fb9cc85"
+    },
+    "export": {
+      "path": "exports/Art/Heroes/nyxara_evoA.png",
+      "size": [
+        400,
+        400
+      ],
+      "mode": "RGBA",
+      "sha256": "fda1be7616521d16c45e2243d4da1a20c8abe8ca7c3416e6c4c2c09fbfa83872"
+    }
+  },
+  {
+    "id": "Heroes/nyxara_evoA_cast",
+    "source": {
+      "path": "source/sheets/nyxara_evoA_cast.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "66e560a646387fda6162eee859aa912997b72f9c29f551eabd8be6ddf24e8a9b"
+    },
+    "master": {
+      "path": "source/masters/Heroes/nyxara_evoA_cast@2x.png",
+      "size": [
+        800,
+        800
+      ],
+      "mode": "RGBA",
+      "sha256": "8822827fe18d865fa81ea7c77e6240e9407e04e9d8fc314261a2a6fcceb7a860"
+    },
+    "export": {
+      "path": "exports/Art/Heroes/nyxara_evoA_cast.png",
+      "size": [
+        400,
+        400
+      ],
+      "mode": "RGBA",
+      "sha256": "a5a1888964e511c7de1ab32ade04b173314c76f974a568fe914328a85d92abe0"
+    }
+  },
+  {
+    "id": "Heroes/nyxara_evoB",
+    "source": {
+      "path": "source/sheets/nyxara_evoB.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "85def0f8b6ead586f5adee2201a9d837ac1545d17dfdf6ca0eaf08372fb7e755"
+    },
+    "master": {
+      "path": "source/masters/Heroes/nyxara_evoB@2x.png",
+      "size": [
+        800,
+        800
+      ],
+      "mode": "RGBA",
+      "sha256": "377c2c63675adae0b2fa910dd2761c8dbcf9ccb66c981093eff49281b886cb75"
+    },
+    "export": {
+      "path": "exports/Art/Heroes/nyxara_evoB.png",
+      "size": [
+        400,
+        400
+      ],
+      "mode": "RGBA",
+      "sha256": "4e3084e6f1980e12ebdf3cf95a60cfe494fc4b4185c878748662621874300519"
+    }
+  },
+  {
+    "id": "Heroes/nyxara_evoB_cast",
+    "source": {
+      "path": "source/sheets/nyxara_evoB_cast.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "f07d8c6b93ab8a6e0de36365ce48beea2b04d4816047db201447962d3f28d3c7"
+    },
+    "master": {
+      "path": "source/masters/Heroes/nyxara_evoB_cast@2x.png",
+      "size": [
+        800,
+        800
+      ],
+      "mode": "RGBA",
+      "sha256": "2781dfde9028a6b111009d1671892cdca955cdc72553458b2636f0da56429a8f"
+    },
+    "export": {
+      "path": "exports/Art/Heroes/nyxara_evoB_cast.png",
+      "size": [
+        400,
+        400
+      ],
+      "mode": "RGBA",
+      "sha256": "1ff050351a577c34d72a48c5ae51574c649601d9078f6723345885114f8f83c6"
+    }
+  },
+  {
+    "id": "Portraits/nyxara",
+    "source": {
+      "path": "source/sheets/nyxara_portrait.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "sha256": "c65a8ffdbca51d2d95b16c11fe4232a8cd4692a36c9c828c8d482eef069bca0f"
+    },
+    "master": {
+      "path": "source/masters/Portraits/nyxara@2x.png",
+      "size": [
+        384,
+        384
+      ],
+      "mode": "RGBA",
+      "sha256": "850ff261db3971ad13dc2be295598205328c721e768ec92628150efa6cfee89d"
+    },
+    "export": {
+      "path": "exports/Art/Portraits/nyxara.png",
+      "size": [
+        192,
+        192
+      ],
+      "mode": "RGBA",
+      "sha256": "1122b6b2851aed317300b1838a7829bf8743d45866ba5bfa2c8212adfdc2c028"
+    }
+  },
+  {
+    "id": "Heroes/nyxara_attack",
+    "source": {
+      "path": "source/sheets/nyxara_attack.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "f8126397a891109bdf33827a96e7c63929ce47ba31ccd7ec7f2e3aa5929c6d38"
+    },
+    "master": {
+      "path": "source/masters/Heroes/nyxara_attack@2x.png",
+      "size": [
+        800,
+        800
+      ],
+      "mode": "RGBA",
+      "sha256": "1b87a1f2aa7565d914e069dce69cfef57ddf40994ab3a2381196bc132c855288"
+    },
+    "export": {
+      "path": "exports/Art/Heroes/nyxara_attack.png",
+      "size": [
+        400,
+        400
+      ],
+      "mode": "RGBA",
+      "sha256": "4be8b1ac78f3d74c413be8eca10267b1c6d0c12b20a96bb18e795afc40b31462"
+    }
+  },
+  {
+    "id": "Heroes/nyxara_evoA_attack",
+    "source": {
+      "path": "source/sheets/nyxara_evoA_attack.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "1019bc5c168a5c456ca2ae483ff5fff0f08255ec7a483363847cf6297a3e3328"
+    },
+    "master": {
+      "path": "source/masters/Heroes/nyxara_evoA_attack@2x.png",
+      "size": [
+        800,
+        800
+      ],
+      "mode": "RGBA",
+      "sha256": "f0c23ebc2422ca7913415a30d81b666ace16e9ddb3b4d8c302948a102f749911"
+    },
+    "export": {
+      "path": "exports/Art/Heroes/nyxara_evoA_attack.png",
+      "size": [
+        400,
+        400
+      ],
+      "mode": "RGBA",
+      "sha256": "70bf0a672924e2ba0ad0fa258409c1c314a65ca4e1fef79c216de1f55df465bb"
+    }
+  },
+  {
+    "id": "Heroes/nyxara_evoB_attack",
+    "source": {
+      "path": "source/sheets/nyxara_evoB_attack.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "ae2e73589798734f07463435c96625575b7e0d39b952b473d60b1972df101ee3"
+    },
+    "master": {
+      "path": "source/masters/Heroes/nyxara_evoB_attack@2x.png",
+      "size": [
+        800,
+        800
+      ],
+      "mode": "RGBA",
+      "sha256": "63a76bca1094e325d95f3c0f07342118203a55430e64d960f2d68edb5b04ad93"
+    },
+    "export": {
+      "path": "exports/Art/Heroes/nyxara_evoB_attack.png",
+      "size": [
+        400,
+        400
+      ],
+      "mode": "RGBA",
+      "sha256": "abb6c6e2c9211e778a19c9e582a47162fdae77def66b773cb3c63d6597ec2ca4"
+    }
+  }
+]

@@ -1,0 +1,96 @@
+{
+  "kind": "Custom R06 reference-image checks; not standard intake or art approval",
+  "delivered": 3,
+  "blockedAssets": 0,
+  "blockingImageChecks": 0,
+  "standardIntake": "BLOCKED: missing requests/R06/INPUT_MANIFEST.json",
+  "checks": [
+    {
+      "file": "exports\\glacius_front_apose.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "opaque": true,
+      "backgroundCornerRGBA": [
+        208,
+        208,
+        208,
+        255
+      ],
+      "foregroundBounds": [
+        79,
+        75,
+        1175,
+        1179
+      ],
+      "minimumMarginFraction": 0.0598,
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "noUpscaling": true,
+      "sha256": "0ade1f2674de25a28dd2ab57e8a6df6e35004e0e63756e715e58952a6e36ecfb",
+      "passed": true
+    },
+    {
+      "file": "exports\\glacius_threequarter_apose.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "opaque": true,
+      "backgroundCornerRGBA": [
+        208,
+        208,
+        208,
+        255
+      ],
+      "foregroundBounds": [
+        125,
+        75,
+        1129,
+        1179
+      ],
+      "minimumMarginFraction": 0.0598,
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "noUpscaling": true,
+      "sha256": "b40efa03fa62665b032cd1a27c07affd94f3e1ca3f53e0389424bc31c5abb24b",
+      "passed": true
+    },
+    {
+      "file": "exports\\glacius_back_apose.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "opaque": true,
+      "backgroundCornerRGBA": [
+        208,
+        208,
+        208,
+        255
+      ],
+      "foregroundBounds": [
+        101,
+        75,
+        1152,
+        1179
+      ],
+      "minimumMarginFraction": 0.0598,
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "noUpscaling": true,
+      "sha256": "6d8eca5f733254b74e0cb27aeac878a09beec6adb78147b666b2dcb7d1fe644a",
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,240 @@
+[
+  {
+    "id": "Enemies/runner_a",
+    "mode": "RGBA",
+    "bitDepth": 8,
+    "hasSRGB": true,
+    "transparentPixels": 49190
+  },
+  {
+    "id": "Enemies/runner_b",
+    "mode": "RGBA",
+    "bitDepth": 8,
+    "hasSRGB": true,
+    "transparentPixels": 47006
+  },
+  {
+    "id": "Enemies/swarmling_a",
+    "mode": "RGBA",
+    "bitDepth": 8,
+    "hasSRGB": true,
+    "transparentPixels": 54535
+  },
+  {
+    "id": "Enemies/swarmling_b",
+    "mode": "RGBA",
+    "bitDepth": 8,
+    "hasSRGB": true,
+    "transparentPixels": 54244
+  },
+  {
+    "id": "Enemies/shieldbearer_a",
+    "mode": "RGBA",
+    "bitDepth": 8,
+    "hasSRGB": true,
+    "transparentPixels": 48632
+  },
+  {
+    "id": "Enemies/shieldbearer_b",
+    "mode": "RGBA",
+    "bitDepth": 8,
+    "hasSRGB": true,
+    "transparentPixels": 48638
+  },
+  {
+    "id": "Enemies/sapper_a",
+    "mode": "RGBA",
+    "bitDepth": 8,
+    "hasSRGB": true,
+    "transparentPixels": 54073
+  },
+  {
+    "id": "Enemies/sapper_b",
+    "mode": "RGBA",
+    "bitDepth": 8,
+    "hasSRGB": true,
+    "transparentPixels": 54036
+  },
+  {
+    "id": "Enemies/warded_a",
+    "mode": "RGBA",
+    "bitDepth": 8,
+    "hasSRGB": true,
+    "transparentPixels": 44576
+  },
+  {
+    "id": "Enemies/warded_b",
+    "mode": "RGBA",
+    "bitDepth": 8,
+    "hasSRGB": true,
+    "transparentPixels": 44078
+  },
+  {
+    "id": "Enemies/summoner_a",
+    "mode": "RGBA",
+    "bitDepth": 8,
+    "hasSRGB": true,
+    "transparentPixels": 46042
+  },
+  {
+    "id": "Enemies/summoner_b",
+    "mode": "RGBA",
+    "bitDepth": 8,
+    "hasSRGB": true,
+    "transparentPixels": 46249
+  },
+  {
+    "id": "Enemies/banner_a",
+    "mode": "RGBA",
+    "bitDepth": 8,
+    "hasSRGB": true,
+    "transparentPixels": 53592
+  },
+  {
+    "id": "Enemies/banner_b",
+    "mode": "RGBA",
+    "bitDepth": 8,
+    "hasSRGB": true,
+    "transparentPixels": 53299
+  },
+  {
+    "id": "Enemies/mimic_a",
+    "mode": "RGBA",
+    "bitDepth": 8,
+    "hasSRGB": true,
+    "transparentPixels": 49546
+  },
+  {
+    "id": "Enemies/mimic_b",
+    "mode": "RGBA",
+    "bitDepth": 8,
+    "hasSRGB": true,
+    "transparentPixels": 48753
+  },
+  {
+    "id": "Enemies/riftling_a",
+    "mode": "RGBA",
+    "bitDepth": 8,
+    "hasSRGB": true,
+    "transparentPixels": 56448
+  },
+  {
+    "id": "Enemies/riftling_b",
+    "mode": "RGBA",
+    "bitDepth": 8,
+    "hasSRGB": true,
+    "transparentPixels": 55996
+  },
+  {
+    "id": "Enemies/ravager_a",
+    "mode": "RGBA",
+    "bitDepth": 8,
+    "hasSRGB": true,
+    "transparentPixels": 41120
+  },
+  {
+    "id": "Enemies/ravager_b",
+    "mode": "RGBA",
+    "bitDepth": 8,
+    "hasSRGB": true,
+    "transparentPixels": 40856
+  },
+  {
+    "id": "Enemies/runner_attack",
+    "mode": "RGBA",
+    "bitDepth": 8,
+    "hasSRGB": true,
+    "transparentPixels": 45750
+  },
+  {
+    "id": "Enemies/swarmling_attack",
+    "mode": "RGBA",
+    "bitDepth": 8,
+    "hasSRGB": true,
+    "transparentPixels": 54584
+  },
+  {
+    "id": "Enemies/shieldbearer_attack",
+    "mode": "RGBA",
+    "bitDepth": 8,
+    "hasSRGB": true,
+    "transparentPixels": 42086
+  },
+  {
+    "id": "Enemies/sapper_attack",
+    "mode": "RGBA",
+    "bitDepth": 8,
+    "hasSRGB": true,
+    "transparentPixels": 55429
+  },
+  {
+    "id": "Enemies/warded_attack",
+    "mode": "RGBA",
+    "bitDepth": 8,
+    "hasSRGB": true,
+    "transparentPixels": 39601
+  },
+  {
+    "id": "Enemies/summoner_attack",
+    "mode": "RGBA",
+    "bitDepth": 8,
+    "hasSRGB": true,
+    "transparentPixels": 45491
+  },
+  {
+    "id": "Enemies/banner_attack",
+    "mode": "RGBA",
+    "bitDepth": 8,
+    "hasSRGB": true,
+    "transparentPixels": 46534
+  },
+  {
+    "id": "Enemies/mimic_attack",
+    "mode": "RGBA",
+    "bitDepth": 8,
+    "hasSRGB": true,
+    "transparentPixels": 44802
+  },
+  {
+    "id": "Enemies/riftling_attack",
+    "mode": "RGBA",
+    "bitDepth": 8,
+    "hasSRGB": true,
+    "transparentPixels": 53926
+  },
+  {
+    "id": "Enemies/ravager_attack",
+    "mode": "RGBA",
+    "bitDepth": 8,
+    "hasSRGB": true,
+    "transparentPixels": 41917
+  },
+  {
+    "id": "Enemies/grunt_attack",
+    "mode": "RGBA",
+    "bitDepth": 8,
+    "hasSRGB": true,
+    "transparentPixels": 54054
+  },
+  {
+    "id": "Enemies/juggernaut_attack",
+    "mode": "RGBA",
+    "bitDepth": 8,
+    "hasSRGB": true,
+    "transparentPixels": 41640
+  },
+  {
+    "id": "Enemies/hexcaster_attack",
+    "mode": "RGBA",
+    "bitDepth": 8,
+    "hasSRGB": true,
+    "transparentPixels": 42371
+  },
+  {
+    "id": "Enemies/storm_harpy_attack",
+    "mode": "RGBA",
+    "bitDepth": 8,
+    "hasSRGB": true,
+    "transparentPixels": 47294
+  }
+]

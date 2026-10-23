@@ -1,0 +1,1173 @@
+{
+  "batch": "R03",
+  "kind": "supplemental asset checks; not approval",
+  "assets": [
+    {
+      "id": "UI/bar_bg",
+      "size": [
+        128,
+        40
+      ],
+      "mode": "RGBA",
+      "masterSize": [
+        256,
+        80
+      ],
+      "sizePass": true,
+      "masterPass": true,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "sha256": "99c5262b70ba3a2e3765f63786124d09980d82545e64e42f9ad3c489efe88bec",
+      "defringePass": true,
+      "embeddedSrgb": true,
+      "pngBitDepth": 8
+    },
+    {
+      "id": "UI/bar_fill",
+      "size": [
+        128,
+        40
+      ],
+      "mode": "RGBA",
+      "masterSize": [
+        256,
+        80
+      ],
+      "sizePass": true,
+      "masterPass": true,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "sha256": "7cb14c48fc880ccf7ec64499b00f133767820a1516c136d08a738d55bd014d3c",
+      "defringePass": true,
+      "embeddedSrgb": true,
+      "pngBitDepth": 8,
+      "neutralPass": true
+    },
+    {
+      "id": "UI/button_danger_disabled",
+      "size": [
+        192,
+        96
+      ],
+      "mode": "RGBA",
+      "masterSize": [
+        384,
+        192
+      ],
+      "sizePass": true,
+      "masterPass": true,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "sha256": "9021ddceff49f5994e4eda7b64cc039d6527d6bdd9e265450135a73432ad7210",
+      "defringePass": true,
+      "embeddedSrgb": true,
+      "pngBitDepth": 8,
+      "minWhiteContrastOverCentreRGB": 19.64801547180585,
+      "whiteContrastPass": true
+    },
+    {
+      "id": "UI/button_danger_hover",
+      "size": [
+        192,
+        96
+      ],
+      "mode": "RGBA",
+      "masterSize": [
+        384,
+        192
+      ],
+      "sizePass": true,
+      "masterPass": true,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "sha256": "1dfa87f85942a130d30fd2891a532c0974a8b369d0ad067282bf35a400454ce6",
+      "defringePass": true,
+      "embeddedSrgb": true,
+      "pngBitDepth": 8,
+      "minWhiteContrastOverCentreRGB": 18.243020423828575,
+      "whiteContrastPass": true
+    },
+    {
+      "id": "UI/button_danger_normal",
+      "size": [
+        192,
+        96
+      ],
+      "mode": "RGBA",
+      "masterSize": [
+        384,
+        192
+      ],
+      "sizePass": true,
+      "masterPass": true,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "sha256": "e8e3ae415970131c345c014b6c7c4b37f4e6ab0083815d57e4805ef5db1b91f6",
+      "defringePass": true,
+      "embeddedSrgb": true,
+      "pngBitDepth": 8,
+      "minWhiteContrastOverCentreRGB": 18.737034102297137,
+      "whiteContrastPass": true
+    },
+    {
+      "id": "UI/button_danger_pressed",
+      "size": [
+        192,
+        96
+      ],
+      "mode": "RGBA",
+      "masterSize": [
+        384,
+        192
+      ],
+      "sizePass": true,
+      "masterPass": true,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "sha256": "c760009e31a7e131ca6e150d661f4527af4bcc2c03131f5eaf9edc53affbebdd",
+      "defringePass": true,
+      "embeddedSrgb": true,
+      "pngBitDepth": 8,
+      "minWhiteContrastOverCentreRGB": 19.775447361946014,
+      "whiteContrastPass": true
+    },
+    {
+      "id": "UI/button_ghost_disabled",
+      "size": [
+        192,
+        96
+      ],
+      "mode": "RGBA",
+      "masterSize": [
+        384,
+        192
+      ],
+      "sizePass": true,
+      "masterPass": true,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "sha256": "46616c34d400be5ad52e9f15a2c630210d7339c161f5e5a1a8a7202bf329a4b6",
+      "defringePass": true,
+      "embeddedSrgb": true,
+      "pngBitDepth": 8,
+      "minWhiteContrastOverCentreRGB": 19.765108301111393,
+      "whiteContrastPass": true
+    },
+    {
+      "id": "UI/button_ghost_hover",
+      "size": [
+        192,
+        96
+      ],
+      "mode": "RGBA",
+      "masterSize": [
+        384,
+        192
+      ],
+      "sizePass": true,
+      "masterPass": true,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "sha256": "9c6d3c1a5cb826fb556ec5cad73c10c1737cb0ca584ce5f0d04546d81a94a770",
+      "defringePass": true,
+      "embeddedSrgb": true,
+      "pngBitDepth": 8,
+      "minWhiteContrastOverCentreRGB": 18.755236817600377,
+      "whiteContrastPass": true
+    },
+    {
+      "id": "UI/button_ghost_normal",
+      "size": [
+        192,
+        96
+      ],
+      "mode": "RGBA",
+      "masterSize": [
+        384,
+        192
+      ],
+      "sizePass": true,
+      "masterPass": true,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "sha256": "3c4bd3eb709f805a950a2fe155b6cdc3a03f3845eafeee2c7e3e5a3ed7004c67",
+      "defringePass": true,
+      "embeddedSrgb": true,
+      "pngBitDepth": 8,
+      "minWhiteContrastOverCentreRGB": 18.81984746482609,
+      "whiteContrastPass": true
+    },
+    {
+      "id": "UI/button_ghost_pressed",
+      "size": [
+        192,
+        96
+      ],
+      "mode": "RGBA",
+      "masterSize": [
+        384,
+        192
+      ],
+      "sizePass": true,
+      "masterPass": true,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "sha256": "3b74051c8519724160844bed22a37962b86d114369638ce75831fa89f3292da6",
+      "defringePass": true,
+      "embeddedSrgb": true,
+      "pngBitDepth": 8,
+      "minWhiteContrastOverCentreRGB": 19.484205880864128,
+      "whiteContrastPass": true
+    },
+    {
+      "id": "UI/button_primary_disabled",
+      "size": [
+        192,
+        96
+      ],
+      "mode": "RGBA",
+      "masterSize": [
+        384,
+        192
+      ],
+      "sizePass": true,
+      "masterPass": true,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "sha256": "aa6fe29b79de28a423b311ea2cdb16b7a36fd90f10377d85416009aeee8bd10b",
+      "defringePass": true,
+      "embeddedSrgb": true,
+      "pngBitDepth": 8,
+      "minWhiteContrastOverCentreRGB": 19.388077475995708,
+      "whiteContrastPass": true
+    },
+    {
+      "id": "UI/button_primary_hover",
+      "size": [
+        192,
+        96
+      ],
+      "mode": "RGBA",
+      "masterSize": [
+        384,
+        192
+      ],
+      "sizePass": true,
+      "masterPass": true,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "sha256": "8f2b8d92702d1985cfff0f91d939e028f8b73af6068021c497a0fa5b25c68c0f",
+      "defringePass": true,
+      "embeddedSrgb": true,
+      "pngBitDepth": 8,
+      "minWhiteContrastOverCentreRGB": 18.19332690768189,
+      "whiteContrastPass": true
+    },
+    {
+      "id": "UI/button_primary_normal",
+      "size": [
+        192,
+        96
+      ],
+      "mode": "RGBA",
+      "masterSize": [
+        384,
+        192
+      ],
+      "sizePass": true,
+      "masterPass": true,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "sha256": "76b397bc4ef81b1ae7767ac8a351050e9db9e7550cbb8ea81b710b29868219ef",
+      "defringePass": true,
+      "embeddedSrgb": true,
+      "pngBitDepth": 8,
+      "minWhiteContrastOverCentreRGB": 18.24418498683755,
+      "whiteContrastPass": true
+    },
+    {
+      "id": "UI/button_primary_pressed",
+      "size": [
+        192,
+        96
+      ],
+      "mode": "RGBA",
+      "masterSize": [
+        384,
+        192
+      ],
+      "sizePass": true,
+      "masterPass": true,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "sha256": "6f8aee27719ede2f061680e4a2042832120f3edaca2f2b172828bf80a0cd281a",
+      "defringePass": true,
+      "embeddedSrgb": true,
+      "pngBitDepth": 8,
+      "minWhiteContrastOverCentreRGB": 19.365242613086384,
+      "whiteContrastPass": true
+    },
+    {
+      "id": "UI/button_secondary_disabled",
+      "size": [
+        192,
+        96
+      ],
+      "mode": "RGBA",
+      "masterSize": [
+        384,
+        192
+      ],
+      "sizePass": true,
+      "masterPass": true,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "sha256": "4a4301343b7505af1fcdc292703d5596a170cce5637e024d408b0bf079692c79",
+      "defringePass": true,
+      "embeddedSrgb": true,
+      "pngBitDepth": 8,
+      "minWhiteContrastOverCentreRGB": 19.416029268599825,
+      "whiteContrastPass": true
+    },
+    {
+      "id": "UI/button_secondary_hover",
+      "size": [
+        192,
+        96
+      ],
+      "mode": "RGBA",
+      "masterSize": [
+        384,
+        192
+      ],
+      "sizePass": true,
+      "masterPass": true,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "sha256": "45d158b4155ce0c23e940cb8fa98dbea857e6c56863e2b7f288ff77bdc9210f0",
+      "defringePass": true,
+      "embeddedSrgb": true,
+      "pngBitDepth": 8,
+      "minWhiteContrastOverCentreRGB": 18.365067646509775,
+      "whiteContrastPass": true
+    },
+    {
+      "id": "UI/button_secondary_normal",
+      "size": [
+        192,
+        96
+      ],
+      "mode": "RGBA",
+      "masterSize": [
+        384,
+        192
+      ],
+      "sizePass": true,
+      "masterPass": true,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "sha256": "e12f27a589b3552a5bcc97f3309021907723a12ea38a54b6006dfa6d8a812d31",
+      "defringePass": true,
+      "embeddedSrgb": true,
+      "pngBitDepth": 8,
+      "minWhiteContrastOverCentreRGB": 18.346815854932434,
+      "whiteContrastPass": true
+    },
+    {
+      "id": "UI/button_secondary_pressed",
+      "size": [
+        192,
+        96
+      ],
+      "mode": "RGBA",
+      "masterSize": [
+        384,
+        192
+      ],
+      "sizePass": true,
+      "masterPass": true,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "sha256": "52e2f2bd6cf21b7220509934d373623b9509577a90742e248c9ea9bfd9a1aa1a",
+      "defringePass": true,
+      "embeddedSrgb": true,
+      "pngBitDepth": 8,
+      "minWhiteContrastOverCentreRGB": 19.546058549268718,
+      "whiteContrastPass": true
+    },
+    {
+      "id": "UI/card_common",
+      "size": [
+        256,
+        360
+      ],
+      "mode": "RGBA",
+      "masterSize": [
+        512,
+        720
+      ],
+      "sizePass": true,
+      "masterPass": true,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "sha256": "79088fd8c80c6d77aa749bf1a62dee2dd9836b2d814e5d95c76016d84df3621a",
+      "defringePass": true,
+      "embeddedSrgb": true,
+      "pngBitDepth": 8
+    },
+    {
+      "id": "UI/card_cursed",
+      "size": [
+        256,
+        360
+      ],
+      "mode": "RGBA",
+      "masterSize": [
+        512,
+        720
+      ],
+      "sizePass": true,
+      "masterPass": true,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "sha256": "827b247fb193d04676cca2c36a064720d34b89652ec8cb84676c5625527c4399",
+      "defringePass": true,
+      "embeddedSrgb": true,
+      "pngBitDepth": 8
+    },
+    {
+      "id": "UI/card_epic",
+      "size": [
+        256,
+        360
+      ],
+      "mode": "RGBA",
+      "masterSize": [
+        512,
+        720
+      ],
+      "sizePass": true,
+      "masterPass": true,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "sha256": "a7c5c4db104f37710c7e93e947de5d40c2aa54f7d125ea5af583c3d564212b8d",
+      "defringePass": true,
+      "embeddedSrgb": true,
+      "pngBitDepth": 8
+    },
+    {
+      "id": "UI/card_legendary",
+      "size": [
+        256,
+        360
+      ],
+      "mode": "RGBA",
+      "masterSize": [
+        512,
+        720
+      ],
+      "sizePass": true,
+      "masterPass": true,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "sha256": "7395792d88a95d26582b7716a84b8274983f551a2221e5b7f58b8db49ff33338",
+      "defringePass": true,
+      "embeddedSrgb": true,
+      "pngBitDepth": 8
+    },
+    {
+      "id": "UI/card_rare",
+      "size": [
+        256,
+        360
+      ],
+      "mode": "RGBA",
+      "masterSize": [
+        512,
+        720
+      ],
+      "sizePass": true,
+      "masterPass": true,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "sha256": "506a4b30b6018c72d696907c3d75caef11db293560516f22d7326723da3cdd68",
+      "defringePass": true,
+      "embeddedSrgb": true,
+      "pngBitDepth": 8
+    },
+    {
+      "id": "UI/panel_danger",
+      "size": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "masterSize": [
+        256,
+        256
+      ],
+      "sizePass": true,
+      "masterPass": true,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "sha256": "7396a37fb4217010a84e731675ccf4e8823599e6c3d0cb35a9a52d8b6f06e2ea",
+      "defringePass": true,
+      "embeddedSrgb": true,
+      "pngBitDepth": 8,
+      "minWhiteContrastOverCentreRGB": 18.83636778079876,
+      "whiteContrastPass": true
+    },
+    {
+      "id": "UI/panel_dark",
+      "size": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "masterSize": [
+        256,
+        256
+      ],
+      "sizePass": true,
+      "masterPass": true,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "sha256": "4a05aade5842a8b6490a642036ab12c91c711e591e2fb709daa94f34e7bb6783",
+      "defringePass": true,
+      "embeddedSrgb": true,
+      "pngBitDepth": 8,
+      "minWhiteContrastOverCentreRGB": 18.634086960940714,
+      "whiteContrastPass": true
+    },
+    {
+      "id": "UI/panel_glass",
+      "size": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "masterSize": [
+        256,
+        256
+      ],
+      "sizePass": true,
+      "masterPass": true,
+      "alphaMin": 0,
+      "alphaMax": 187,
+      "sha256": "8e090b7952147094687b3d0c37ff10f442465376d7cdc8d15386acd331e6a093",
+      "defringePass": true,
+      "embeddedSrgb": true,
+      "pngBitDepth": 8,
+      "minWhiteContrastOverCentreRGB": 17.09587905831449,
+      "whiteContrastPass": true,
+      "whiteContrastOverBrightestBattlefieldSample": 4.549825089116974,
+      "glassContrastLimitation": "55% translucent centre cannot guarantee 4.5:1 white contrast over every possible bright background; use opaque panel_dark for critical text."
+    },
+    {
+      "id": "UI/panel_light",
+      "size": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "masterSize": [
+        256,
+        256
+      ],
+      "sizePass": true,
+      "masterPass": true,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "sha256": "537b743aff4986d1745cc3901882d5c2a6c90ecb37a68d2684e4d462c9a84293",
+      "defringePass": true,
+      "embeddedSrgb": true,
+      "pngBitDepth": 8,
+      "minWhiteContrastOverCentreRGB": 17.835519669967173,
+      "whiteContrastPass": true
+    },
+    {
+      "id": "UI/title_emblem",
+      "size": [
+        1024,
+        320
+      ],
+      "mode": "RGBA",
+      "masterSize": [
+        2048,
+        640
+      ],
+      "sizePass": true,
+      "masterPass": true,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "sha256": "2db701bb4e12443560c4857ff74756fd02474f2e0f70ed0bcc8c717c85d3b807",
+      "defringePass": true,
+      "embeddedSrgb": true,
+      "pngBitDepth": 8
+    },
+    {
+      "id": "UI/tooltip",
+      "size": [
+        96,
+        96
+      ],
+      "mode": "RGBA",
+      "masterSize": [
+        192,
+        192
+      ],
+      "sizePass": true,
+      "masterPass": true,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "sha256": "941fa0858ede45161f84fe14772922637083848b9640304104b0a2d8a798d5d4",
+      "defringePass": true,
+      "embeddedSrgb": true,
+      "pngBitDepth": 8,
+      "minWhiteContrastOverCentreRGB": 18.38612948788203,
+      "whiteContrastPass": true
+    },
+    {
+      "id": "UI/vignette",
+      "size": [
+        512,
+        288
+      ],
+      "mode": "RGBA",
+      "masterSize": [
+        1024,
+        576
+      ],
+      "sizePass": true,
+      "masterPass": true,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "sha256": "394a02a494c5571ee400ee1fc761cd66cfc1c87dc3026c27230b86858699ec66",
+      "defringePass": true,
+      "embeddedSrgb": true,
+      "pngBitDepth": 8,
+      "centreAlpha": 0,
+      "cornerAlpha": 252
+    },
+    {
+      "id": "Icons/ui_auto",
+      "size": [
+        96,
+        96
+      ],
+      "mode": "RGBA",
+      "masterSize": [
+        192,
+        192
+      ],
+      "sizePass": true,
+      "masterPass": true,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "sha256": "db0d18fdb96d36538016497c2c68e485b575beba6d10e46a5668def75e377df7",
+      "defringePass": true,
+      "embeddedSrgb": true,
+      "pngBitDepth": 8
+    },
+    {
+      "id": "Icons/ui_check",
+      "size": [
+        96,
+        96
+      ],
+      "mode": "RGBA",
+      "masterSize": [
+        192,
+        192
+      ],
+      "sizePass": true,
+      "masterPass": true,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "sha256": "82dcd1e5fc3703c1c1e5a9df9672e2a2f9c0806234d43ab485c124c614a76f51",
+      "defringePass": true,
+      "embeddedSrgb": true,
+      "pngBitDepth": 8
+    },
+    {
+      "id": "Icons/ui_close",
+      "size": [
+        96,
+        96
+      ],
+      "mode": "RGBA",
+      "masterSize": [
+        192,
+        192
+      ],
+      "sizePass": true,
+      "masterPass": true,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "sha256": "add3a506f6d5309af92f86b5b2a0932e5d608c76da2650c7506e5863e2bb349f",
+      "defringePass": true,
+      "embeddedSrgb": true,
+      "pngBitDepth": 8
+    },
+    {
+      "id": "Icons/ui_codex",
+      "size": [
+        96,
+        96
+      ],
+      "mode": "RGBA",
+      "masterSize": [
+        192,
+        192
+      ],
+      "sizePass": true,
+      "masterPass": true,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "sha256": "070a13262f0367c563eee11d6335d33a5755b137e70c5c10aa188483dbca812f",
+      "defringePass": true,
+      "embeddedSrgb": true,
+      "pngBitDepth": 8
+    },
+    {
+      "id": "Icons/ui_crystal",
+      "size": [
+        96,
+        96
+      ],
+      "mode": "RGBA",
+      "masterSize": [
+        192,
+        192
+      ],
+      "sizePass": true,
+      "masterPass": true,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "sha256": "0fa9633c62c62281b5e402a4a6cb5454b3cd3b97004a7e843ad7518ec1ca9195",
+      "defringePass": true,
+      "embeddedSrgb": true,
+      "pngBitDepth": 8
+    },
+    {
+      "id": "Icons/ui_essence",
+      "size": [
+        96,
+        96
+      ],
+      "mode": "RGBA",
+      "masterSize": [
+        192,
+        192
+      ],
+      "sizePass": true,
+      "masterPass": true,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "sha256": "a4f25490a20d77b7d3e59f32f01482ac9449c1d1238a28581f44b99a957e2b85",
+      "defringePass": true,
+      "embeddedSrgb": true,
+      "pngBitDepth": 8
+    },
+    {
+      "id": "Icons/ui_evolve",
+      "size": [
+        96,
+        96
+      ],
+      "mode": "RGBA",
+      "masterSize": [
+        192,
+        192
+      ],
+      "sizePass": true,
+      "masterPass": true,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "sha256": "9e82f8801c813fcdfca7ec02b06c1b7faa0dd9471c54e3e006535bdfe03bcd34",
+      "defringePass": true,
+      "embeddedSrgb": true,
+      "pngBitDepth": 8
+    },
+    {
+      "id": "Icons/ui_gold",
+      "size": [
+        96,
+        96
+      ],
+      "mode": "RGBA",
+      "masterSize": [
+        192,
+        192
+      ],
+      "sizePass": true,
+      "masterPass": true,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "sha256": "7530629339dbcf7cdfe0113dd177670fbf2b08a0cc3cd73a8d8f1a799b92b7bd",
+      "defringePass": true,
+      "embeddedSrgb": true,
+      "pngBitDepth": 8
+    },
+    {
+      "id": "Icons/ui_heart",
+      "size": [
+        96,
+        96
+      ],
+      "mode": "RGBA",
+      "masterSize": [
+        192,
+        192
+      ],
+      "sizePass": true,
+      "masterPass": true,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "sha256": "b58cb1552e1613de238bee0b4ff6a891b36aecfd651626151dcbb8866008294d",
+      "defringePass": true,
+      "embeddedSrgb": true,
+      "pngBitDepth": 8
+    },
+    {
+      "id": "Icons/ui_history",
+      "size": [
+        96,
+        96
+      ],
+      "mode": "RGBA",
+      "masterSize": [
+        192,
+        192
+      ],
+      "sizePass": true,
+      "masterPass": true,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "sha256": "28b2823bec59fc4e8ef548c136f3a54752b44eb8e4673eb1d7c59f1b536e4b59",
+      "defringePass": true,
+      "embeddedSrgb": true,
+      "pngBitDepth": 8
+    },
+    {
+      "id": "Icons/ui_leak",
+      "size": [
+        96,
+        96
+      ],
+      "mode": "RGBA",
+      "masterSize": [
+        192,
+        192
+      ],
+      "sizePass": true,
+      "masterPass": true,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "sha256": "5eb77da96ed0c69e252254528944db8373e662e932f3b56238203a6078a854e6",
+      "defringePass": true,
+      "embeddedSrgb": true,
+      "pngBitDepth": 8
+    },
+    {
+      "id": "Icons/ui_lock",
+      "size": [
+        96,
+        96
+      ],
+      "mode": "RGBA",
+      "masterSize": [
+        192,
+        192
+      ],
+      "sizePass": true,
+      "masterPass": true,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "sha256": "4526c597e5311a53bb3e687abef48040bcb4280c6b0b9a2a73dbdc01821099df",
+      "defringePass": true,
+      "embeddedSrgb": true,
+      "pngBitDepth": 8
+    },
+    {
+      "id": "Icons/ui_pause",
+      "size": [
+        96,
+        96
+      ],
+      "mode": "RGBA",
+      "masterSize": [
+        192,
+        192
+      ],
+      "sizePass": true,
+      "masterPass": true,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "sha256": "6c320ae5ebbfc0bedcd510345aea6a614af553f590b1f7e825a3bf158da39c2b",
+      "defringePass": true,
+      "embeddedSrgb": true,
+      "pngBitDepth": 8
+    },
+    {
+      "id": "Icons/ui_play",
+      "size": [
+        96,
+        96
+      ],
+      "mode": "RGBA",
+      "masterSize": [
+        192,
+        192
+      ],
+      "sizePass": true,
+      "masterPass": true,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "sha256": "84963b63e89ce24e2318b4d22e9350455da86e4963aaf28f1d9b840a44ad17bd",
+      "defringePass": true,
+      "embeddedSrgb": true,
+      "pngBitDepth": 8
+    },
+    {
+      "id": "Icons/ui_reroll",
+      "size": [
+        96,
+        96
+      ],
+      "mode": "RGBA",
+      "masterSize": [
+        192,
+        192
+      ],
+      "sizePass": true,
+      "masterPass": true,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "sha256": "53972aa6978718fbf16c1ee2c0fe5dd053d8df6820c9c50bc12f4c31c26def66",
+      "defringePass": true,
+      "embeddedSrgb": true,
+      "pngBitDepth": 8
+    },
+    {
+      "id": "Icons/ui_settings",
+      "size": [
+        96,
+        96
+      ],
+      "mode": "RGBA",
+      "masterSize": [
+        192,
+        192
+      ],
+      "sizePass": true,
+      "masterPass": true,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "sha256": "eb2753e31d17f5888be8ea28becad5e7f8e13f987ca715f75c5c0e55321cb368",
+      "defringePass": true,
+      "embeddedSrgb": true,
+      "pngBitDepth": 8
+    },
+    {
+      "id": "Icons/ui_shield",
+      "size": [
+        96,
+        96
+      ],
+      "mode": "RGBA",
+      "masterSize": [
+        192,
+        192
+      ],
+      "sizePass": true,
+      "masterPass": true,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "sha256": "d6abec21c75061a5a686401e456fb14d8ad8dc0874a8c51a6b73a791bab4881a",
+      "defringePass": true,
+      "embeddedSrgb": true,
+      "pngBitDepth": 8
+    },
+    {
+      "id": "Icons/ui_speed",
+      "size": [
+        96,
+        96
+      ],
+      "mode": "RGBA",
+      "masterSize": [
+        192,
+        192
+      ],
+      "sizePass": true,
+      "masterPass": true,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "sha256": "5ff3797bf19195f2e67342a2185ce413f43edd4eb045f3d476ff198afb9dad48",
+      "defringePass": true,
+      "embeddedSrgb": true,
+      "pngBitDepth": 8
+    },
+    {
+      "id": "Icons/ui_star",
+      "size": [
+        96,
+        96
+      ],
+      "mode": "RGBA",
+      "masterSize": [
+        192,
+        192
+      ],
+      "sizePass": true,
+      "masterPass": true,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "sha256": "be515486c96483a10c51e1803220dfdd1c387c389af71a4846f9286ba565caf3",
+      "defringePass": true,
+      "embeddedSrgb": true,
+      "pngBitDepth": 8
+    },
+    {
+      "id": "Icons/ui_sword",
+      "size": [
+        96,
+        96
+      ],
+      "mode": "RGBA",
+      "masterSize": [
+        192,
+        192
+      ],
+      "sizePass": true,
+      "masterPass": true,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "sha256": "c24cb9d2739b0c5950a5ee10006cda2cd3dfab1dfb775bc1a9d09f8e3bb7c375",
+      "defringePass": true,
+      "embeddedSrgb": true,
+      "pngBitDepth": 8
+    },
+    {
+      "id": "Icons/ui_trophy",
+      "size": [
+        96,
+        96
+      ],
+      "mode": "RGBA",
+      "masterSize": [
+        192,
+        192
+      ],
+      "sizePass": true,
+      "masterPass": true,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "sha256": "53268f61c7668edb7a79c5d8c205275ae56756a4253001998435125256033104",
+      "defringePass": true,
+      "embeddedSrgb": true,
+      "pngBitDepth": 8
+    },
+    {
+      "id": "Icons/ui_wave",
+      "size": [
+        96,
+        96
+      ],
+      "mode": "RGBA",
+      "masterSize": [
+        192,
+        192
+      ],
+      "sizePass": true,
+      "masterPass": true,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "sha256": "5a6cd773da2708156fd09e17d80dedd08382fc2a9655258d4ef183d524445c13",
+      "defringePass": true,
+      "embeddedSrgb": true,
+      "pngBitDepth": 8
+    },
+    {
+      "id": "Icons/ui_xp",
+      "size": [
+        96,
+        96
+      ],
+      "mode": "RGBA",
+      "masterSize": [
+        192,
+        192
+      ],
+      "sizePass": true,
+      "masterPass": true,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "sha256": "5806821851a1d5f91cc1dbf738b468c2f5156de6ff852c9aba8d3342b02ce365",
+      "defringePass": true,
+      "embeddedSrgb": true,
+      "pngBitDepth": 8
+    },
+    {
+      "id": "Icons/ui_stance_defensive",
+      "size": [
+        96,
+        96
+      ],
+      "mode": "RGBA",
+      "masterSize": [
+        192,
+        192
+      ],
+      "sizePass": true,
+      "masterPass": true,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "sha256": "da8276dc59878aaf5160b9dd5059921424ed8bdec52c29e479410bf2181e0a9b",
+      "defringePass": true,
+      "embeddedSrgb": true,
+      "pngBitDepth": 8
+    },
+    {
+      "id": "Icons/ui_stance_balanced",
+      "size": [
+        96,
+        96
+      ],
+      "mode": "RGBA",
+      "masterSize": [
+        192,
+        192
+      ],
+      "sizePass": true,
+      "masterPass": true,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "sha256": "2da61cf65315191491afe2cf3f43b9ded9a91f3c8ef627c1dd753ae9d6247d93",
+      "defringePass": true,
+      "embeddedSrgb": true,
+      "pngBitDepth": 8
+    },
+    {
+      "id": "Icons/ui_stance_aggressive",
+      "size": [
+        96,
+        96
+      ],
+      "mode": "RGBA",
+      "masterSize": [
+        192,
+        192
+      ],
+      "sizePass": true,
+      "masterPass": true,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "sha256": "68451663d9d789d158e24cdbdfd5dc97eed0332f1d1afcdf602799f0052421a5",
+      "defringePass": true,
+      "embeddedSrgb": true,
+      "pngBitDepth": 8
+    }
+  ]
+}

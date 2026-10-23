@@ -16,7 +16,7 @@ Auto-battler / crystal defense roguelike 2D (Unity **6000.4.8f1**, Windows · An
 3. Menu **Aetherward > Play From Boot** (hoặc mở `Assets/_Aetherward/Scenes/Boot.unity` rồi Play).
 4. Build: **Aetherward > Build > …** (chi tiết `Docs/BUILD.md`).
 
-Điều khiển: kéo-thả hoặc chạm anh hùng rồi chạm ô; Space = bắt đầu đợt; F = 1×/2×; Esc = tạm dừng; F3 = hiện tầm đánh. Mọi thao tác đều làm được bằng chạm.
+Điều khiển: chọn thế trận (Giữ thành / Giữ cổng / Xuất kích) và đội hình (Chia cổng / Tập trung boss / Đánh tập trung) trước đợt; anh hùng tự vào vị trí. Chạm chân dung để xem chi tiết, rê chuột để xem tuyệt kỹ; Space = bắt đầu đợt; F = 1×/2×; Esc = tạm dừng; F3 = hiện tầm đánh.
 
 ## Tài liệu
 | File | Nội dung |

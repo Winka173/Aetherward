@@ -1,0 +1,11 @@
+{
+  "name": "raiden_evoB_actions",
+  "refs": [
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B03/source/sheets/raiden_evoB.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Heroes/ignis_cast.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Heroes/sylph_idle.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B02/exports/Art/Heroes/volt_idle.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B02/exports/Art/Heroes/freya_idle.png"
+  ],
+  "prompt": "Dark Mythic Fantasy, painterly stylized 2.5D; orthographic 38.3-degree elevation, three-quarter front body turned 25 degrees toward screen-right. Key upper-left-front #ffe9d0, rim back-right #9fe8ff, ambient #16233a. Controlled broad brush planes, coloured local-hue dark edges without black outlines.\nUse case stylized-concept. WIDE 2560x1440 two clearly separated full-body sprites EXACT STATIC EXECUTIONER ref1: charcoal hooded mantle, pale bone mask, violet scarf, fitted graphite leather armour, one large HOOKED blade and one smaller forked dagger. LEFT CAST lifted crouch, hooked blade raised close beside shoulder and small dagger across chest, restrained violet inlay glow. RIGHT ATTACK compact dash strike toward SCREEN RIGHT, heavy hooked blade and small dagger extended +X, legs close under body, torso centered in own half. Keep both different weapons, same hood mask coat. No effects or slash trail or lightning. Big transparent center gutter no overlap, margins and full feet. Narrow controlled scarf/cape silhouette; do not spread legs widely. Adult anatomy. Bright warm ash leather planes, #9fe8ff cool rim, edge mean>=0.30 on basalt0.16. No text, floor or shadow; actual alpha background."
+}

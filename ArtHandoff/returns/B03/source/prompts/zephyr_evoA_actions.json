@@ -1,0 +1,11 @@
+{
+  "name": "zephyr_evoA_actions",
+  "refs": [
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B03/source/sheets/zephyr_evoA.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Heroes/ignis_cast.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Heroes/sylph_idle.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B02/exports/Art/Heroes/volt_idle.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B02/exports/Art/Heroes/freya_idle.png"
+  ],
+  "prompt": "Dark Mythic Fantasy, painterly stylized 2.5D; orthographic 38.3-degree elevation, three-quarter front body turned 25 degrees toward screen-right. Key upper-left-front #ffe9d0, rim back-right #9fe8ff, ambient #16233a. Controlled broad brush planes, coloured local-hue dark edges without black outlines.\nUse case stylized-concept. WIDE2560x1440 TWO separate full-body poses of EXACT CYCLONE SAGE ref1 mature grey-haired man ash white robes bronze clasps long wing-like grey teal feather mantle ONE huge bone silk feather-edged fan and tiny close body leaf orbit. LEFT CAST fan raised just beside head, free hand lifted palm up, shoulder air-ring bright but contained. RIGHT ATTACK fan sweep to SCREEN RIGHT, fan extended +X close beside torso, upright calm stance. Same face outfit large fan. Narrow hanging feather wings, no sprawling cloak, compact fan reach to keep figure width<=1.2x headfoot. Separate figures clear wide central alpha gutter, full feet and props. No projectile, no wind slash, no emitted vortex, no ground shadow/floor, no letters. Crisp lit ash cloth and feathers, bright cool #9fe8ff rim and warm key, edge mean>=.30 against basalt. Transparent background."
+}

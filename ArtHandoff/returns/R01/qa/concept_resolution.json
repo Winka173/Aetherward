@@ -1,0 +1,76 @@
+[
+  {
+    "id": "concepts/hud_concept",
+    "draftPath": "concepts/hud_concept_LOW_RES_DRAFT.png",
+    "draftSource": "source/generations/concepts/hud_concept.png",
+    "draftSize": [
+      1672,
+      941
+    ],
+    "attempts": [
+      {
+        "requestedSize": [
+          2560,
+          1440
+        ],
+        "returnedSize": [
+          1672,
+          941
+        ],
+        "source": "source/generations/concepts/hud_concept_native_v1.png",
+        "promptFile": "source/prompts/concepts__hud_concept_v1.txt"
+      },
+      {
+        "requestedSize": [
+          3840,
+          2160
+        ],
+        "returnedSize": [
+          1672,
+          941
+        ],
+        "source": "source/generations/concepts/hud_concept.png",
+        "promptFile": "source/prompts/concepts__hud_concept.txt"
+      }
+    ],
+    "status": "blocked",
+    "reason": "Both native2560x1440 and native3840x2160 requests returned1672x941. Required2560x1440 delivery is blocked; no generation was upscaled."
+  },
+  {
+    "id": "concepts/combat_scene_concept",
+    "draftPath": "concepts/combat_scene_concept_LOW_RES_DRAFT.png",
+    "draftSource": "source/generations/concepts/combat_scene_concept_native_v1.png",
+    "draftSize": [
+      1672,
+      941
+    ],
+    "attempts": [
+      {
+        "requestedSize": [
+          2560,
+          1440
+        ],
+        "returnedSize": [
+          1672,
+          941
+        ],
+        "source": "source/generations/concepts/combat_scene_concept_native_v1.png",
+        "promptFile": "source/prompts/concepts__combat_scene_concept_v1.txt"
+      },
+      {
+        "requestedSize": [
+          3840,
+          2160
+        ],
+        "returnedSize": [
+          1672,
+          941
+        ],
+        "source": "source/generations/concepts/combat_scene_concept.png",
+        "promptFile": "source/prompts/concepts__combat_scene_concept.txt"
+      }
+    ],
+    "status": "blocked",
+    "reason": "Both native2560x1440 and native3840x2160 requests returned1672x941. Required2560x1440 delivery is blocked; no generation was upscaled."
+  }
+]

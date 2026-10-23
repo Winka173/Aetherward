@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: d00b44fd5b3a4bafb08ab1aa4bb44bbc
+AudioImporter:
+  externalObjects: {}
+  serializedVersion: 7
+  defaultSettings:
+    serializedVersion: 2
+    loadType: 0
+    sampleRateSetting: 0
+    sampleRateOverride: 22050
+    compressionFormat: 1
+    quality: 0.7
+    conversionMode: 0
+  platformSettingOverrides: {}
+  forceToMono: 1
+  normalize: 1
+  preloadAudioData: 1
+  loadInBackground: 0
+  ambisonic: 0
+  3D: 0
+  userData: Original procedural cue; regenerate with Tools/AudioPipeline/ultimate_cues.py
+  assetBundleName: 
+  assetBundleVariant: 

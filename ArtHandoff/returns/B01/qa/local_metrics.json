@@ -1,0 +1,1575 @@
+{
+  "rows": [
+    {
+      "id": "Heroes/ignis_idle",
+      "size": [
+        400,
+        400
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        87,
+        98,
+        313,
+        371
+      ],
+      "lowestOpaque": 371,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "comX": 206.2
+    },
+    {
+      "id": "Enemies/grunt_a",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        48,
+        82,
+        207,
+        235
+      ],
+      "lowestOpaque": 235,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "comX": 111.68
+    },
+    {
+      "id": "World/crystal_intact",
+      "size": [
+        320,
+        400
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        63,
+        67,
+        255,
+        371
+      ],
+      "lowestOpaque": 371,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "comX": 158.55
+    },
+    {
+      "id": "Heroes/ignis_cast",
+      "size": [
+        400,
+        400
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        50,
+        88,
+        348,
+        371
+      ],
+      "lowestOpaque": 371,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "comX": 205.28
+    },
+    {
+      "id": "Heroes/ignis_downed",
+      "size": [
+        400,
+        400
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        100,
+        159,
+        301,
+        371
+      ],
+      "lowestOpaque": 371,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "comX": 216.87
+    },
+    {
+      "id": "Heroes/ignis_evoA",
+      "size": [
+        400,
+        400
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        108,
+        111,
+        290,
+        371
+      ],
+      "lowestOpaque": 371,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "comX": 199.69
+    },
+    {
+      "id": "Heroes/ignis_evoA_cast",
+      "size": [
+        400,
+        400
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        96,
+        86,
+        302,
+        372
+      ],
+      "lowestOpaque": 372,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "comX": 202.64
+    },
+    {
+      "id": "Heroes/ignis_evoB",
+      "size": [
+        400,
+        400
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        83,
+        94,
+        316,
+        372
+      ],
+      "lowestOpaque": 372,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "comX": 193.47
+    },
+    {
+      "id": "Heroes/ignis_evoB_cast",
+      "size": [
+        400,
+        400
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        75,
+        93,
+        325,
+        371
+      ],
+      "lowestOpaque": 371,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "comX": 198.33
+    },
+    {
+      "id": "Heroes/terra_idle",
+      "size": [
+        400,
+        400
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        43,
+        104,
+        356,
+        371
+      ],
+      "lowestOpaque": 371,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "comX": 211.94
+    },
+    {
+      "id": "Heroes/terra_cast",
+      "size": [
+        400,
+        400
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        85,
+        89,
+        313,
+        372
+      ],
+      "lowestOpaque": 372,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "comX": 218.3
+    },
+    {
+      "id": "Heroes/terra_downed",
+      "size": [
+        400,
+        400
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        71,
+        148,
+        328,
+        371
+      ],
+      "lowestOpaque": 371,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "comX": 233.96
+    },
+    {
+      "id": "Heroes/sylph_idle",
+      "size": [
+        400,
+        400
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        112,
+        93,
+        287,
+        372
+      ],
+      "lowestOpaque": 372,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "comX": 203.52
+    },
+    {
+      "id": "Heroes/sylph_cast",
+      "size": [
+        400,
+        400
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        85,
+        88,
+        314,
+        371
+      ],
+      "lowestOpaque": 371,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "comX": 203.08
+    },
+    {
+      "id": "Heroes/sylph_downed",
+      "size": [
+        400,
+        400
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        107,
+        214,
+        292,
+        372
+      ],
+      "lowestOpaque": 372,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "comX": 205.23
+    },
+    {
+      "id": "Heroes/marina_idle",
+      "size": [
+        400,
+        400
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        105,
+        93,
+        295,
+        371
+      ],
+      "lowestOpaque": 371,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "comX": 203.19
+    },
+    {
+      "id": "Heroes/marina_cast",
+      "size": [
+        400,
+        400
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        75,
+        88,
+        323,
+        372
+      ],
+      "lowestOpaque": 372,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "comX": 208.53
+    },
+    {
+      "id": "Heroes/marina_downed",
+      "size": [
+        400,
+        400
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        139,
+        176,
+        259,
+        371
+      ],
+      "lowestOpaque": 371,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "comX": 202.63
+    },
+    {
+      "id": "Portraits/ignis",
+      "size": [
+        192,
+        192
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        0,
+        0,
+        191,
+        191
+      ],
+      "lowestOpaque": 191,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "comX": 95.5
+    },
+    {
+      "id": "Portraits/terra",
+      "size": [
+        192,
+        192
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        0,
+        0,
+        191,
+        191
+      ],
+      "lowestOpaque": 191,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "comX": 95.5
+    },
+    {
+      "id": "Portraits/sylph",
+      "size": [
+        192,
+        192
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        0,
+        0,
+        191,
+        191
+      ],
+      "lowestOpaque": 191,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "comX": 95.5
+    },
+    {
+      "id": "Portraits/marina",
+      "size": [
+        192,
+        192
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        0,
+        0,
+        191,
+        191
+      ],
+      "lowestOpaque": 191,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "comX": 95.5
+    },
+    {
+      "id": "Enemies/grunt_b",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        50,
+        82,
+        205,
+        235
+      ],
+      "lowestOpaque": 235,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "comX": 113.73
+    },
+    {
+      "id": "Enemies/juggernaut_a",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        22,
+        31,
+        233,
+        235
+      ],
+      "lowestOpaque": 235,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "comX": 133.36
+    },
+    {
+      "id": "Enemies/juggernaut_b",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        28,
+        34,
+        227,
+        235
+      ],
+      "lowestOpaque": 235,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "comX": 136.6
+    },
+    {
+      "id": "Enemies/hexcaster_a",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        41,
+        55,
+        213,
+        235
+      ],
+      "lowestOpaque": 235,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "comX": 137.25
+    },
+    {
+      "id": "Enemies/hexcaster_b",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        39,
+        57,
+        216,
+        235
+      ],
+      "lowestOpaque": 235,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "comX": 137.64
+    },
+    {
+      "id": "Enemies/storm_harpy_a",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        17,
+        20,
+        237,
+        201
+      ],
+      "lowestOpaque": 201,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "comX": 124.94
+    },
+    {
+      "id": "Enemies/storm_harpy_b",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        20,
+        36,
+        236,
+        201
+      ],
+      "lowestOpaque": 201,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "comX": 126.46
+    },
+    {
+      "id": "Enemies/rift_warden_a",
+      "size": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        49,
+        52,
+        462,
+        485
+      ],
+      "lowestOpaque": 485,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "comX": 247.67
+    },
+    {
+      "id": "Enemies/rift_warden_b",
+      "size": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        46,
+        53,
+        467,
+        485
+      ],
+      "lowestOpaque": 485,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "comX": 260.0
+    },
+    {
+      "id": "World/crystal_cracked",
+      "size": [
+        320,
+        400
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        63,
+        67,
+        255,
+        371
+      ],
+      "lowestOpaque": 371,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "comX": 158.56
+    },
+    {
+      "id": "World/crystal_critical",
+      "size": [
+        320,
+        400
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        63,
+        67,
+        255,
+        371
+      ],
+      "lowestOpaque": 371,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "comX": 158.59
+    },
+    {
+      "id": "World/arena_background",
+      "size": [
+        2400,
+        1360
+      ],
+      "mode": "RGB"
+    },
+    {
+      "id": "World/node_empty",
+      "size": [
+        192,
+        128
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        7,
+        6,
+        184,
+        121
+      ],
+      "lowestOpaque": 121,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "comX": 95.94
+    },
+    {
+      "id": "World/node_highlight",
+      "size": [
+        192,
+        128
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        7,
+        6,
+        184,
+        121
+      ],
+      "lowestOpaque": 121,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "comX": 95.76
+    },
+    {
+      "id": "World/node_occupied",
+      "size": [
+        192,
+        128
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        7,
+        6,
+        184,
+        121
+      ],
+      "lowestOpaque": 121,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "comX": 95.82
+    },
+    {
+      "id": "World/lane_arrow",
+      "size": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        35,
+        21,
+        96,
+        106
+      ],
+      "lowestOpaque": 106,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "comX": 61.1
+    },
+    {
+      "id": "World/shadow",
+      "size": [
+        128,
+        48
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        45,
+        22,
+        80,
+        27
+      ],
+      "lowestOpaque": 27,
+      "alphaRange": [
+        0,
+        191
+      ],
+      "comX": 62.55
+    },
+    {
+      "id": "Vfx/impact_fire",
+      "size": [
+        192,
+        192
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        12,
+        21,
+        179,
+        170
+      ],
+      "lowestOpaque": 170,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "comX": 96.16
+    },
+    {
+      "id": "Vfx/impact_water",
+      "size": [
+        192,
+        192
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        12,
+        14,
+        179,
+        177
+      ],
+      "lowestOpaque": 177,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "comX": 102.27
+    },
+    {
+      "id": "Vfx/impact_wind",
+      "size": [
+        192,
+        192
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        12,
+        12,
+        179,
+        179
+      ],
+      "lowestOpaque": 179,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "comX": 94.74
+    },
+    {
+      "id": "Vfx/impact_earth",
+      "size": [
+        192,
+        192
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        12,
+        16,
+        179,
+        174
+      ],
+      "lowestOpaque": 174,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "comX": 94.5
+    },
+    {
+      "id": "Vfx/projectile_water",
+      "size": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        9,
+        46,
+        119,
+        81
+      ],
+      "lowestOpaque": 81,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "comX": 74.89
+    },
+    {
+      "id": "Vfx/fireball",
+      "size": [
+        192,
+        192
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        12,
+        62,
+        178,
+        129
+      ],
+      "lowestOpaque": 129,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "comX": 115.55
+    },
+    {
+      "id": "Vfx/arrow",
+      "size": [
+        192,
+        96
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        14,
+        25,
+        179,
+        71
+      ],
+      "lowestOpaque": 71,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "comX": 77.16
+    },
+    {
+      "id": "Vfx/slash",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        15,
+        17,
+        236,
+        238
+      ],
+      "lowestOpaque": 238,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "comX": 89.16
+    },
+    {
+      "id": "Vfx/glow",
+      "size": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        31,
+        30,
+        102,
+        100
+      ],
+      "lowestOpaque": 100,
+      "alphaRange": [
+        0,
+        254
+      ],
+      "comX": 65.78
+    },
+    {
+      "id": "Vfx/ring",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        20,
+        21,
+        235,
+        234
+      ],
+      "lowestOpaque": 234,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "comX": 128.1
+    },
+    {
+      "id": "Vfx/telegraph",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        19,
+        18,
+        236,
+        237
+      ],
+      "lowestOpaque": 237,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "comX": 126.18
+    },
+    {
+      "id": "Vfx/zone_burning_ground",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        16,
+        18,
+        239,
+        238
+      ],
+      "lowestOpaque": 238,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "comX": 127.36
+    },
+    {
+      "id": "Icons/element_fire",
+      "size": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        8,
+        8,
+        119,
+        119
+      ],
+      "lowestOpaque": 119,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "comX": 63.14
+    },
+    {
+      "id": "Icons/element_water",
+      "size": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        8,
+        8,
+        119,
+        119
+      ],
+      "lowestOpaque": 119,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "comX": 63.09
+    },
+    {
+      "id": "Icons/element_wind",
+      "size": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        8,
+        8,
+        119,
+        118
+      ],
+      "lowestOpaque": 118,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "comX": 63.14
+    },
+    {
+      "id": "Icons/element_earth",
+      "size": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        8,
+        8,
+        119,
+        118
+      ],
+      "lowestOpaque": 118,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "comX": 63.19
+    },
+    {
+      "id": "Icons/role_guardian",
+      "size": [
+        96,
+        96
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        6,
+        6,
+        89,
+        89
+      ],
+      "lowestOpaque": 89,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "comX": 47.16
+    },
+    {
+      "id": "Icons/role_mage",
+      "size": [
+        96,
+        96
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        6,
+        6,
+        89,
+        89
+      ],
+      "lowestOpaque": 89,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "comX": 47.15
+    },
+    {
+      "id": "Icons/role_ranger",
+      "size": [
+        96,
+        96
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        6,
+        6,
+        89,
+        88
+      ],
+      "lowestOpaque": 88,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "comX": 47.19
+    },
+    {
+      "id": "Icons/role_healer",
+      "size": [
+        96,
+        96
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        6,
+        6,
+        89,
+        89
+      ],
+      "lowestOpaque": 89,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "comX": 47.14
+    },
+    {
+      "id": "Icons/status_burn",
+      "size": [
+        96,
+        96
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        6,
+        6,
+        89,
+        89
+      ],
+      "lowestOpaque": 89,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "comX": 47.22
+    },
+    {
+      "id": "Icons/status_wet",
+      "size": [
+        96,
+        96
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        6,
+        6,
+        89,
+        89
+      ],
+      "lowestOpaque": 89,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "comX": 47.17
+    },
+    {
+      "id": "Icons/status_stun",
+      "size": [
+        96,
+        96
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        6,
+        6,
+        89,
+        89
+      ],
+      "lowestOpaque": 89,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "comX": 47.15
+    },
+    {
+      "id": "Icons/status_shield",
+      "size": [
+        96,
+        96
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        6,
+        6,
+        89,
+        89
+      ],
+      "lowestOpaque": 89,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "comX": 47.24
+    },
+    {
+      "id": "Icons/reaction_vaporize",
+      "size": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        8,
+        8,
+        119,
+        119
+      ],
+      "lowestOpaque": 119,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "comX": 63.16
+    },
+    {
+      "id": "Icons/reaction_firestorm",
+      "size": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        8,
+        9,
+        119,
+        118
+      ],
+      "lowestOpaque": 118,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "comX": 63.22
+    },
+    {
+      "id": "Icons/ui_crystal",
+      "size": [
+        96,
+        96
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        6,
+        6,
+        89,
+        89
+      ],
+      "lowestOpaque": 89,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "comX": 47.2
+    },
+    {
+      "id": "Icons/ui_gold",
+      "size": [
+        96,
+        96
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        6,
+        6,
+        89,
+        88
+      ],
+      "lowestOpaque": 88,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "comX": 47.09
+    },
+    {
+      "id": "Icons/ui_wave",
+      "size": [
+        96,
+        96
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        6,
+        7,
+        89,
+        88
+      ],
+      "lowestOpaque": 88,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "comX": 47.06
+    },
+    {
+      "id": "UI/panel_dark",
+      "size": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        3,
+        6,
+        124,
+        119
+      ],
+      "lowestOpaque": 119,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "comX": 63.53
+    },
+    {
+      "id": "UI/tooltip",
+      "size": [
+        96,
+        96
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        0,
+        0,
+        95,
+        93
+      ],
+      "lowestOpaque": 93,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "comX": 47.34
+    },
+    {
+      "id": "UI/bar_bg",
+      "size": [
+        128,
+        40
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        1,
+        8,
+        126,
+        31
+      ],
+      "lowestOpaque": 31,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "comX": 63.57
+    },
+    {
+      "id": "UI/bar_fill",
+      "size": [
+        128,
+        40
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        1,
+        6,
+        126,
+        33
+      ],
+      "lowestOpaque": 33,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "comX": 63.5
+    },
+    {
+      "id": "UI/button_primary_disabled",
+      "size": [
+        192,
+        96
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        0,
+        18,
+        191,
+        77
+      ],
+      "lowestOpaque": 77,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "comX": 95.61
+    },
+    {
+      "id": "UI/button_primary_hover",
+      "size": [
+        192,
+        96
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        0,
+        18,
+        191,
+        77
+      ],
+      "lowestOpaque": 77,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "comX": 95.5
+    },
+    {
+      "id": "UI/button_primary_normal",
+      "size": [
+        192,
+        96
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        1,
+        18,
+        191,
+        77
+      ],
+      "lowestOpaque": 77,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "comX": 95.5
+    },
+    {
+      "id": "UI/button_primary_pressed",
+      "size": [
+        192,
+        96
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        0,
+        17,
+        191,
+        77
+      ],
+      "lowestOpaque": 77,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "comX": 95.54
+    },
+    {
+      "id": "UI/card_rare",
+      "size": [
+        256,
+        360
+      ],
+      "mode": "RGBA",
+      "opaqueBounds": [
+        9,
+        4,
+        246,
+        351
+      ],
+      "lowestOpaque": 351,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "comX": 127.52
+    }
+  ],
+  "enemyPairs": [
+    {
+      "enemy": "grunt",
+      "iou": 0.6885653104925054
+    },
+    {
+      "enemy": "juggernaut",
+      "iou": 0.7759973957391398
+    },
+    {
+      "enemy": "hexcaster",
+      "iou": 0.7232783901304479
+    },
+    {
+      "enemy": "storm_harpy",
+      "iou": 0.6694867772299418
+    },
+    {
+      "enemy": "rift_warden",
+      "iou": 0.6867274157930807
+    }
+  ],
+  "crystalBounds": [
+    [
+      63,
+      67,
+      255,
+      371
+    ],
+    [
+      63,
+      67,
+      255,
+      371
+    ],
+    [
+      63,
+      67,
+      255,
+      371
+    ]
+  ],
+  "problems": []
+}

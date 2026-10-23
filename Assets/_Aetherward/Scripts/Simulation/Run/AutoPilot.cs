@@ -486,68 +486,12 @@ namespace Aetherward.Sim.Run
     public static class Formation
     {
         /// <summary>
-        /// Melee heroes guard the inner ring facing the telegraphed lanes; ranged heroes take outer
-        /// nodes closest to the upcoming lanes. Deterministic.
+        /// Assign stable roster slots for legacy saves. The Battle planner selects all live posts
+        /// from formation, role, gate pressure and stance.
         /// </summary>
         public static void AutoArrange(RunController rc)
         {
-            RunState s = rc.State;
-            ArenaDef arena = rc.Arena;
-            WaveDef wave = rc.CurrentWave;
-            List<int> lanes = Battle.LanesForWave(wave, rc.Biome);
-            var taken = new HashSet<int>();
-            if (s.BlockedNode >= 0) taken.Add(s.BlockedNode);
-            var melee = new List<HeroRunState>();
-            var ranged = new List<HeroRunState>();
-            foreach (HeroRunState h in s.Heroes)
-            {
-                HeroDef d = rc.Content.Heroes[h.DefId];
-                bool isMelee = d.Melee;
-                if (!string.IsNullOrEmpty(h.EvolutionId) && rc.Content.Evolutions[h.EvolutionId].MeleeOverride.HasValue)
-                    isMelee = rc.Content.Evolutions[h.EvolutionId].MeleeOverride.Value;
-                (isMelee ? melee : ranged).Add(h);
-            }
-            foreach (HeroRunState h in melee) h.Node = PickNode(arena, lanes, taken, true, rc.Content.Heroes[h.DefId].Role == HeroRole.Guardian);
-            foreach (HeroRunState h in ranged) h.Node = PickNode(arena, lanes, taken, false, false);
-            CoverEmptyLanes(rc, lanes, taken, ranged.Count > 0 ? ranged : melee);
-        }
-
-        /// <summary>
-        /// Minimal fix-up found by the balance lab (wave-2 West breaches): if a lane carrying >= 25% of the wave has
-        /// nobody in reach, move the longest-reach hero there. Concentration elsewhere is kept, because spreading
-        /// every hero evenly measurably lowered clear rates (Reports/Balance/lab_* A/B).
-        /// </summary>
-        private static void CoverEmptyLanes(RunController rc, List<int> lanes, HashSet<int> taken, List<HeroRunState> movable)
-        {
-            if (lanes.Count < 2 || movable.Count == 0 || rc.State.Heroes.Count < 2) return;
-            WaveDef wave = rc.CurrentWave;
-            Dictionary<int, float> weight = LaneWeights(wave, lanes, rc.Biome);
-            float total = 0f;
-            foreach (float v in weight.Values) total += v;
-            var moved = new HashSet<string>();
-            for (int pass = 0; pass < lanes.Count; pass++)
-            {
-                var battle = new Battle(rc.BuildBattleSetup());
-                SynergyReport cov = SynergyReport.Analyze(battle);
-                int gap = -1;
-                float gapWeight = 0f;
-                foreach (int l in lanes)
-                    if (cov.LaneCoverage.TryGetValue(l, out float c) && c < 0.2f && weight[l] / total >= 0.25f && weight[l] > gapWeight) { gap = l; gapWeight = weight[l]; }
-                if (gap < 0) return;
-                HeroRunState pick = null;
-                float bestReach = -1f;
-                foreach (HeroUnit u in battle.Heroes)
-                {
-                    HeroRunState h = movable.Find(x => x.DefId == u.Def.Id);
-                    if (h == null || moved.Contains(h.DefId)) continue;
-                    float r = SynergyReport.Reach(u);
-                    if (r > bestReach) { bestReach = r; pick = h; }
-                }
-                if (pick == null) return;
-                taken.Remove(pick.Node);
-                pick.Node = PickNode(rc.Arena, new List<int> { gap }, taken, false, false);
-                moved.Add(pick.DefId);
-            }
+            for (int i = 0; i < rc.State.Heroes.Count; i++) rc.State.Heroes[i].Node = i;
         }
 
         /// <summary>Enemies per lane for the wave (rotating groups split evenly over the wave's lanes).</summary>
@@ -575,32 +519,5 @@ namespace Aetherward.Sim.Run
             return w;
         }
 
-        private static int PickNode(ArenaDef arena, List<int> lanes, HashSet<int> taken, bool melee, bool guardian)
-        {
-            int best = -1;
-            float bestScore = float.MaxValue;
-            for (int n = 0; n < arena.Nodes.Count; n++)
-            {
-                if (taken.Contains(n)) continue;
-                Vec2 p = arena.Nodes[n];
-                float laneDist = float.MaxValue;
-                foreach (int l in lanes)
-                {
-                    LaneDef lane = arena.Lanes[l % arena.Lanes.Count];
-                    for (int i = 0; i < lane.Points.Count - 1; i++)
-                        laneDist = Math.Min(laneDist, Vec2.DistanceToSegment(p, lane.Points[i], lane.Points[i + 1]));
-                }
-                float radius = p.Length;
-                // Melee: stand on/near a lane close to the crystal. Ranged: outer ring, near lanes but not on them.
-                float score = melee
-                    ? laneDist * 2f + radius * (guardian ? 0.6f : 0.3f)
-                    : Math.Abs(laneDist - 1.2f) + Math.Abs(radius - 4f) * 0.5f;
-                // Spread out: penalise nodes adjacent to already-taken ones.
-                foreach (int t in taken) if (Vec2.Distance(arena.Nodes[t], p) < 2.2f) score += 0.8f;
-                if (score < bestScore) { bestScore = score; best = n; }
-            }
-            if (best >= 0) taken.Add(best);
-            return best;
-        }
     }
 }

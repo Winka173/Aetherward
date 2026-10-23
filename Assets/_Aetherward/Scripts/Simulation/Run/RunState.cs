@@ -141,8 +141,10 @@ namespace Aetherward.Sim.Run
         public readonly List<string> SeenEnemies = new List<string>();
         /// <summary>Boss chosen for each wave that has a boss pool (deterministic per seed, saved).</summary>
         public readonly Dictionary<int, string> BossChoices = new Dictionary<int, string>();
-        /// <summary>Ascension "blocked_node": a defense node unusable for the current wave (-1 = none).</summary>
-        public int BlockedNode = -1;
+        /// <summary>Legacy blocked slot retained for old save compatibility; new runs seal entrances.</summary>
+        public int BlockedNode = -1; // legacy save field only
+        public int SealedGate = -1;
+        public Combat.PartyFormation Formation;
         /// <summary>Battlefield of this run (null = default biome; unknown ids degrade to default).</summary>
         public string BiomeId;
         public GameMode Mode;

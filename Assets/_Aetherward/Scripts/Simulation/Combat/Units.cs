@@ -20,6 +20,7 @@ namespace Aetherward.Sim.Combat
     {
         public StatId Stat;
         public float Percent;
+        public float Flat;
         public float Remaining;
         public string Source;
     }
@@ -48,6 +49,9 @@ namespace Aetherward.Sim.Combat
         /// <summary>Dynamic party: where the planner wants this hero (the Anchor eases toward it).</summary>
         public Vec2 Post;
         public int PostLane = -1;
+        internal readonly List<Vec2> Route = new List<Vec2>();
+        internal Vec2 RouteGoal;
+        internal float RouteTimer;
         /// <summary>Ultimate charge 0..1 (Battle.Ultimates.cs).</summary>
         public float Ult;
         public int Level = 1;
@@ -123,6 +127,7 @@ namespace Aetherward.Sim.Combat
             for (int i = 0; i < Buffs.Count; i++)
             {
                 if (Buffs[i].Stat != id) continue;
+                v += Buffs[i].Flat;
                 if (id == StatId.AttackInterval || id == StatId.SkillCooldown) v /= 1f + Buffs[i].Percent;
                 else v *= 1f + Buffs[i].Percent;
             }

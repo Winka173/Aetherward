@@ -1,0 +1,11 @@
+{
+  "name": "glacius_base",
+  "refs": [
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B03/source/sheets/glacius_idle.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Heroes/ignis_cast.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Heroes/sylph_idle.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B02/exports/Art/Heroes/volt_idle.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B02/exports/Art/Heroes/freya_idle.png"
+  ],
+  "prompt": "Dark Mythic Fantasy, painterly stylized 2.5D; orthographic 38.3-degree elevation, three-quarter front body turned 25 degrees toward screen-right. Key upper-left-front #ffe9d0, rim back-right #9fe8ff, ambient #16233a. Controlled broad brush planes, coloured local-hue dark edges without black outlines.\nUse case stylized-concept. SQUARE 2560x2560 production sheet with 2x2 FOUR SEPARATE SQUARE PANELS. Exact GLACIUS identity from ref1 same closed ice-crest helm full frost-steel plate blue-white tabard huge ICE TOWER SHIELD on left arm and short frost mace right hand. TOP LEFT CAST shield raised slightly at shoulder with bright inner ice facets, mace raised close to shoulder; body lifted but grounded. TOP RIGHT DOWNED kneeling, helm bowed, shield resting upright close, mace low, desaturate40%. BOTTOM LEFT ATTACK SHIELD BASH toward SCREEN RIGHT, left shield extended forward +X, right mace tucked by hip, compact stance. BOTTOM RIGHT PORTRAIT helmet and shoulders with same crest plate tabard, dark charcoal vignette. Each full-body figure fills 88% panel HEIGHT, complete feet/props inside own quarter, transparent central cross gutter at least8%, absolutely no overlap. Broad guardian mass adult anatomy not chibi. Genuine alpha, no text ground shadow, no projectile beam snow burst or effects. Crisp broad steel and ice planes, warm key and #9fe8ff cool rim, contour average>=0.30. Keep shield design identical."
+}

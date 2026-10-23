@@ -26,6 +26,9 @@ namespace Aetherward.Sim.Run
     public sealed class TrainingConfig
     {
         public readonly List<TrainingHero> Heroes = new List<TrainingHero>();
+        public PartyStance Stance = PartyStance.Balanced;
+        public PartyFormation Formation;
+        public string BiomeId;
         public DummyProfile Profile = DummyProfile.Swarm;
         public float Seconds = 20f;
         public ulong Seed = 1;
@@ -120,7 +123,8 @@ namespace Aetherward.Sim.Run
                 Seed = cfg.Seed,
                 CrystalMaxHp = 1e9f,      // dummies: the Crystal cannot fall, so every test runs its full duration
                 CrystalHp = 1e9f,
-                Biome = db.DefaultBiome
+                Biome = cfg.BiomeId != null && db.Biomes.TryGetValue(cfg.BiomeId, out var biome) ? biome : db.DefaultBiome,
+                Stance = cfg.Stance, Formation = cfg.Formation
             };
             for (int i = 0; i < cfg.Heroes.Count; i++)
             {

@@ -1,0 +1,22 @@
+{
+  "aetherion_a": {
+    "rejected": "source/sheets/aetherion_a.png",
+    "selected": "source/sheets/aetherion_a_v2.png",
+    "reason": "First identity inherited an unrequested glaive from B01 style references. Image-generated correction removes the weapon before dependent pose generation."
+  },
+  "ironclad_warlord_a": {
+    "rejected": "source/sheets/ironclad_warlord_a.png",
+    "selected": "source/sheets/ironclad_warlord_a_v2.png",
+    "reason": "First source clipped the top banner pole. Corrected identity fits the complete banner within transparent margins before dependent pose generation."
+  },
+  "mirrath_attack": {
+    "rejected": "source/sheets/mirrath_attack.png",
+    "selected": "source/sheets/mirrath_attack_v2.png",
+    "reason": "First attack clipped the glass focus tip. Revised compact grip keeps the complete focus inside the raw canvas."
+  },
+  "siegebreaker_golem_attack": {
+    "rejected": "source/sheets/siegebreaker_golem_attack.png",
+    "selected": "source/sheets/siegebreaker_golem_attack_v2.png",
+    "reason": "First impact too close to walk pose. Revised image has a stronger torso bow, ram follow-through and raised off-hand."
+  }
+}

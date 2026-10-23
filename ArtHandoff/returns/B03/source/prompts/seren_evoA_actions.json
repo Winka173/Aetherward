@@ -1,0 +1,11 @@
+{
+  "name": "seren_evoA_actions",
+  "refs": [
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B03/source/sheets/seren_evoA.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Heroes/ignis_cast.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Heroes/sylph_idle.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B02/exports/Art/Heroes/volt_idle.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B02/exports/Art/Heroes/freya_idle.png"
+  ],
+  "prompt": "Dark Mythic Fantasy, painterly stylized 2.5D; orthographic 38.3-degree elevation, three-quarter front body turned 25 degrees toward screen-right. Key upper-left-front #ffe9d0, rim back-right #9fe8ff, ambient #16233a. Controlled broad brush planes, coloured local-hue dark edges without black outlines.\nUse case stylized-concept. Wide2560x1440 TWO separate full-body sprites exact SEREN AEGIS OF DAWN ref1 same female face halo helm large gold disc behind body ivory gold plate long white cape light-forged gold tower shield left arm short sword right hand. LEFT CAST: shield raised close chest, sword angled upward close beside shoulder, large halo slightly brighter, lifted vertical body. RIGHT ATTACK: short sword THRUST SCREEN RIGHT +X from behind tower shield, sword point extends only shortly beyond shield, compact braced feet. Keep same large disc shield design costume. No beams slash light wave projectile ground shadow floor letters. Genuine transparent background, wide alpha center gutter no overlap complete feet all props, narrow cape falling down. Compact silhouette width<=1.2x headfeet. Warm bright gold ivory broad planes cool #9fe8ff directional rim, contour mean>=.30 against basalt0.16."
+}

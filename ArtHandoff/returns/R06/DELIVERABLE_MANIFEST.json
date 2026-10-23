@@ -1,0 +1,105 @@
+{
+  "batch": "R06",
+  "producer": "Codex",
+  "date": "2026-10-21",
+  "purpose": "Glacius image-to-3D A-pose references; not game sprites",
+  "tools": [
+    {
+      "name": "image_gen.imagegen (built-in)",
+      "version": "not reported"
+    },
+    {
+      "name": "Python",
+      "packages": [
+        "Pillow",
+        "numpy",
+        "scipy"
+      ]
+    }
+  ],
+  "styleLock": {
+    "direction": "R01 section 1 comic-ink; R06 neutral flat lighting override",
+    "palette": [
+      "#1b1226",
+      "#3b2f6b",
+      "#7fe3ff",
+      "#d0d0d0"
+    ],
+    "light": "Even neutral diffuse; no rim light",
+    "edge": "Tapering black-violet ink"
+  },
+  "assets": [
+    {
+      "id": "glacius_front_apose",
+      "character": "glacius",
+      "status": "delivered",
+      "export": "exports/glacius_front_apose.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "source": "source/masters/glacius_front_apose.png",
+      "master": "source/masters/glacius_front_apose.png",
+      "generator": "image_gen.imagegen (built-in)",
+      "prompt": "source/prompts/glacius_front_apose.txt",
+      "references": [
+        "source/references/glacius_idle.png"
+      ],
+      "cleanup": "python source/scripts/finalize.py",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Strong ice-guardian identity; clean torso silhouette; some extra faceting versus game sprite."
+    },
+    {
+      "id": "glacius_threequarter_apose",
+      "character": "glacius",
+      "status": "delivered",
+      "export": "exports/glacius_threequarter_apose.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "source": "source/masters/glacius_threequarter_apose.png",
+      "master": "source/masters/glacius_threequarter_apose.png",
+      "generator": "image_gen.imagegen (built-in)",
+      "prompt": "source/prompts/glacius_threequarter_apose.txt",
+      "references": [
+        "source/references/glacius_idle.png",
+        "source/masters/glacius_front_apose.png"
+      ],
+      "cleanup": "python source/scripts/finalize.py",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Strong ice-guardian identity; clean torso silhouette; some extra faceting versus game sprite."
+    },
+    {
+      "id": "glacius_back_apose",
+      "character": "glacius",
+      "status": "delivered",
+      "export": "exports/glacius_back_apose.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "source": "source/masters/glacius_back_apose.png",
+      "master": "source/masters/glacius_back_apose.png",
+      "generator": "image_gen.imagegen (built-in)",
+      "prompt": "source/prompts/glacius_back_apose.txt",
+      "references": [
+        "source/references/glacius_idle.png",
+        "source/masters/glacius_front_apose.png",
+        "source/masters/glacius_threequarter_apose.png"
+      ],
+      "cleanup": "python source/scripts/finalize.py",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Identity and prop handedness retained; small facet drift. Rear-only surfaces inferred."
+    }
+  ],
+  "knownIssues": [
+    "Backplate, shield mounting and rear cloth are inferred from front-only identity.",
+    "Small armor facet and ornament differences remain across views.",
+    "Native generator returned 1254 square despite request for 2048; no upscaling or artificial 2x masters.",
+    "Standard intake unavailable: R06 request has no INPUT_MANIFEST.json."
+  ],
+  "blockers": [
+    "Standard sprite intake cannot run without the lead-owned R06 INPUT_MANIFEST.json."
+  ]
+}

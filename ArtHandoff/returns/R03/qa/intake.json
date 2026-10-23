@@ -1,0 +1,300 @@
+{
+ "batch": "R03",
+ "delivered": 56,
+ "requested": 56,
+ "blocking": [],
+ "notes": [],
+ "rows": [
+  {
+   "id": "UI/bar_bg",
+   "group": "ui",
+   "status": "OK"
+  },
+  {
+   "id": "UI/bar_fill",
+   "group": "ui",
+   "status": "OK"
+  },
+  {
+   "id": "UI/button_danger_disabled",
+   "group": "ui",
+   "status": "OK"
+  },
+  {
+   "id": "UI/button_danger_hover",
+   "group": "ui",
+   "status": "OK"
+  },
+  {
+   "id": "UI/button_danger_normal",
+   "group": "ui",
+   "status": "OK"
+  },
+  {
+   "id": "UI/button_danger_pressed",
+   "group": "ui",
+   "status": "OK"
+  },
+  {
+   "id": "UI/button_ghost_disabled",
+   "group": "ui",
+   "status": "OK"
+  },
+  {
+   "id": "UI/button_ghost_hover",
+   "group": "ui",
+   "status": "OK"
+  },
+  {
+   "id": "UI/button_ghost_normal",
+   "group": "ui",
+   "status": "OK"
+  },
+  {
+   "id": "UI/button_ghost_pressed",
+   "group": "ui",
+   "status": "OK"
+  },
+  {
+   "id": "UI/button_primary_disabled",
+   "group": "ui",
+   "status": "OK"
+  },
+  {
+   "id": "UI/button_primary_hover",
+   "group": "ui",
+   "status": "OK"
+  },
+  {
+   "id": "UI/button_primary_normal",
+   "group": "ui",
+   "status": "OK"
+  },
+  {
+   "id": "UI/button_primary_pressed",
+   "group": "ui",
+   "status": "OK"
+  },
+  {
+   "id": "UI/button_secondary_disabled",
+   "group": "ui",
+   "status": "OK"
+  },
+  {
+   "id": "UI/button_secondary_hover",
+   "group": "ui",
+   "status": "OK"
+  },
+  {
+   "id": "UI/button_secondary_normal",
+   "group": "ui",
+   "status": "OK"
+  },
+  {
+   "id": "UI/button_secondary_pressed",
+   "group": "ui",
+   "status": "OK"
+  },
+  {
+   "id": "UI/card_common",
+   "group": "ui",
+   "status": "OK"
+  },
+  {
+   "id": "UI/card_cursed",
+   "group": "ui",
+   "status": "OK"
+  },
+  {
+   "id": "UI/card_epic",
+   "group": "ui",
+   "status": "OK"
+  },
+  {
+   "id": "UI/card_legendary",
+   "group": "ui",
+   "status": "OK"
+  },
+  {
+   "id": "UI/card_rare",
+   "group": "ui",
+   "status": "OK"
+  },
+  {
+   "id": "UI/panel_danger",
+   "group": "ui",
+   "status": "OK"
+  },
+  {
+   "id": "UI/panel_dark",
+   "group": "ui",
+   "status": "OK"
+  },
+  {
+   "id": "UI/panel_glass",
+   "group": "ui",
+   "status": "OK"
+  },
+  {
+   "id": "UI/panel_light",
+   "group": "ui",
+   "status": "OK"
+  },
+  {
+   "id": "UI/title_emblem",
+   "group": "ui",
+   "status": "OK"
+  },
+  {
+   "id": "UI/tooltip",
+   "group": "ui",
+   "status": "OK"
+  },
+  {
+   "id": "UI/vignette",
+   "group": "ui",
+   "status": "OK"
+  },
+  {
+   "id": "Icons/ui_auto",
+   "group": "icons",
+   "status": "OK"
+  },
+  {
+   "id": "Icons/ui_check",
+   "group": "icons",
+   "status": "OK"
+  },
+  {
+   "id": "Icons/ui_close",
+   "group": "icons",
+   "status": "OK"
+  },
+  {
+   "id": "Icons/ui_codex",
+   "group": "icons",
+   "status": "OK"
+  },
+  {
+   "id": "Icons/ui_crystal",
+   "group": "icons",
+   "status": "OK"
+  },
+  {
+   "id": "Icons/ui_essence",
+   "group": "icons",
+   "status": "OK"
+  },
+  {
+   "id": "Icons/ui_evolve",
+   "group": "icons",
+   "status": "OK"
+  },
+  {
+   "id": "Icons/ui_gold",
+   "group": "icons",
+   "status": "OK"
+  },
+  {
+   "id": "Icons/ui_heart",
+   "group": "icons",
+   "status": "OK"
+  },
+  {
+   "id": "Icons/ui_history",
+   "group": "icons",
+   "status": "OK"
+  },
+  {
+   "id": "Icons/ui_leak",
+   "group": "icons",
+   "status": "OK"
+  },
+  {
+   "id": "Icons/ui_lock",
+   "group": "icons",
+   "status": "OK"
+  },
+  {
+   "id": "Icons/ui_pause",
+   "group": "icons",
+   "status": "OK"
+  },
+  {
+   "id": "Icons/ui_play",
+   "group": "icons",
+   "status": "OK"
+  },
+  {
+   "id": "Icons/ui_reroll",
+   "group": "icons",
+   "status": "OK"
+  },
+  {
+   "id": "Icons/ui_settings",
+   "group": "icons",
+   "status": "OK"
+  },
+  {
+   "id": "Icons/ui_shield",
+   "group": "icons",
+   "status": "OK"
+  },
+  {
+   "id": "Icons/ui_speed",
+   "group": "icons",
+   "status": "OK"
+  },
+  {
+   "id": "Icons/ui_star",
+   "group": "icons",
+   "status": "OK"
+  },
+  {
+   "id": "Icons/ui_sword",
+   "group": "icons",
+   "status": "OK"
+  },
+  {
+   "id": "Icons/ui_trophy",
+   "group": "icons",
+   "status": "OK"
+  },
+  {
+   "id": "Icons/ui_wave",
+   "group": "icons",
+   "status": "OK"
+  },
+  {
+   "id": "Icons/ui_xp",
+   "group": "icons",
+   "status": "OK"
+  },
+  {
+   "id": "Icons/ui_stance_defensive",
+   "group": "icons",
+   "status": "OK"
+  },
+  {
+   "id": "Icons/ui_stance_balanced",
+   "group": "icons",
+   "status": "OK"
+  },
+  {
+   "id": "Icons/ui_stance_aggressive",
+   "group": "icons",
+   "status": "OK"
+  }
+ ],
+ "strayWorkingTreeChanges": [
+  "Docs/ASSET_MANIFEST.json",
+  "Reports/ArtQuality/R02_vfx/capture_info.json",
+  "Reports/ArtQuality/R02_vfx/prep.png",
+  "Reports/ArtQuality/R02_vfx/t04.png",
+  "Reports/ArtQuality/R02_vfx/t08.png",
+  "Reports/ArtQuality/R02_vfx/t12.png",
+  "Reports/ArtQuality/R02_vfx/t17.png",
+  "Reports/ArtQuality/R02_vfx/t23.png"
+ ],
+ "stage": "ArtHandoff\\returns\\R03\\_work\\stage"
+}

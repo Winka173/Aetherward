@@ -1,0 +1,5 @@
+[
+  {"id":"Heroes/glacius_cast","height":371,"offset":36,"method":"Visual torso centering from cast pair overlay; translation only."},
+  {"id":"Heroes/ignis_cast","height":371,"offset":-20,"method":"Visual torso centering from cast pair overlay; translation only."},
+  {"id":"Heroes/veyra_cast","height":371,"offset":32,"method":"Visual torso centering from cast pair overlay; translation only."}
+]

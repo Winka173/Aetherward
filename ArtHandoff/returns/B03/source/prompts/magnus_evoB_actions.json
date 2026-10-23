@@ -1,0 +1,11 @@
+{
+  "name": "magnus_evoB_actions",
+  "refs": [
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B03/source/sheets/magnus_evoB.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Heroes/ignis_cast.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Heroes/sylph_idle.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B02/exports/Art/Heroes/volt_idle.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B02/exports/Art/Heroes/freya_idle.png"
+  ],
+  "prompt": "Dark Mythic Fantasy, painterly stylized 2.5D; orthographic 38.3-degree elevation, three-quarter front body turned 25 degrees toward screen-right. Key upper-left-front #ffe9d0, rim back-right #9fe8ff, ambient #16233a. Controlled broad brush planes, coloured local-hue dark edges without black outlines.\nUse case stylized-concept. Wide2560x1440 TWO distinct full-body sprites exact MAGNUS SHARDBREAKER ref1 same mohawk beard tattooed arms leather buckle wrapped legs, one spiked stone BREAKER-PICK GAUNTLET and one crystal-shard knuckle gauntlet. LEFT CAST: pick-gauntlet raised close beside shoulder, other crystal fist held chest, brightest amber inset seams, body lifted slightly. RIGHT ATTACK: breaker-pick fist PUNCH toward SCREEN RIGHT +X at endpoint, other crystal fist held close chest, focused compact hunting lunge. Keep exact DIFFERENT gauntlets from ref1 not two plain fists, no separate weapon. Narrow stance legs close, figure wider at shoulders than waist, full boots inside own half, large transparent central gutter no overlap. Genuine TRANSPARENT background, no floor shadow, no rocks shockwave dust trail text or other effects. Bright warm key stone skin planes #9fe8ff cool rim, contour mean>=.30 against basalt0.16."
+}

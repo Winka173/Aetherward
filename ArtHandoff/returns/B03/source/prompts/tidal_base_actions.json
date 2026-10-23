@@ -1,0 +1,11 @@
+{
+  "name": "tidal_base_actions",
+  "refs": [
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B03/source/sheets/tidal_idle.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Heroes/ignis_cast.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Heroes/sylph_idle.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B02/exports/Art/Heroes/volt_idle.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B02/exports/Art/Heroes/freya_idle.png"
+  ],
+  "prompt": "Dark Mythic Fantasy, painterly stylized 2.5D; orthographic 38.3-degree elevation, three-quarter front body turned 25 degrees toward screen-right. Key upper-left-front #ffe9d0, rim back-right #9fe8ff, ambient #16233a. Controlled broad brush planes, coloured local-hue dark edges without black outlines.\nUse case stylized-concept. Wide landscape 2560x1440 two-panel production sprite sheet, transparent background. TWO FULL-BODY images of EXACT SAME Tidal base identity from image1. Maintain teal hood face wrap bronze clasps twin bronze grips with TWO WATER WHIPS. Left CAST: arms raised with blue water whips coiled closely around raised grips, skill focus above shoulders. Right ATTACK: torso upright centered, right arm extended SCREEN-RIGHT releasing a held water-whip lash, single continuous thin blue whip curves back alongside his arm to stay in panel; other whip held low in other hand. NO separate projectile/wave/beam/slash or scenery. Both adult 6 heads tall, feet visible, each character fits entirely into its own half with a LARGE transparent 15% center gutter, no overlap. Figure height 80% image, weapon width constrained. Clear 5% outer margins, no text/shadows/ground. Same costume/face/prop, broad painted planes, brighter key teal-grey folds and #9fe8ff directional rim, edge luminance >=0.30 on dark basalt0.16. All held water weapons intact; no detached water droplets."
+}

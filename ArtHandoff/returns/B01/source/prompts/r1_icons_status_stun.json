@@ -1,0 +1,6 @@
+{
+  "prompt": "Dark Mythic Fantasy, painterly stylized 2.5D; orthographic 38.3-degree elevation, three-quarter front body turned 25 degrees toward screen-right. Key upper-left-front #ffe9d0, rim back-right #9fe8ff, ambient #16233a. Controlled broad brush planes, coloured local-hue dark edges without black outlines. Use case: stylized-concept. Asset: Icons/status_stun. Create ONE square game icon in the exact same engraved medallion visual family as the reference. Front-facing dark engraved bronze and slate round medallion. Bright symbol: Orbiting stars over a jagged ring. Color: pale gold. Symbol occupies 60–70% of frame, with bold simple shapes and negative spaces readable at 32 px. Restrained bronze rim, crisp deliberate brush planes, clear material separation. Transparent outside medallion with 6% clear margin. No text, letters, numbers, ground shadow, tiny filigree or extra symbols. Generate 1024x1024 or larger with actual transparency.",
+  "reference": "source/sheets/r1_icons_element_fire.png",
+  "mode": "built-in image_gen",
+  "useCase": "stylized-concept"
+}

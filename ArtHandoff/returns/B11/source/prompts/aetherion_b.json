@@ -1,0 +1,10 @@
+{
+  "prompt": "Dark Mythic Fantasy, painterly stylized 2.5D; orthographic 38.3-degree elevation, three-quarter front body turned 25 degrees toward screen-right. Key upper-left-front #ffe9d0, rim back-right #9fe8ff, ambient #16233a. Controlled broad brush planes, coloured local-hue dark edges without black outlines.\nUse case: stylized-concept. Generate a single production sprite of Aetherion, the Fallen Crystal, pose b. Image1 is the approved-for-production identity reference, preserve its faceless crystal formation, exact smoky violet-blue/magenta fractured core, angular shoulders, giant crystal arms and floating facet arrangement. Other images are B01 style references only; do NOT copy their weapons. Walk PASSING pose, subtle opposite leg weight and slight arm counter-swing, upper body stays almost unchanged, silhouette IoU with identity >=0.6.\nEntirely crystal anatomy. Empty hands, NO detached weapon, glaive, shaft, spear, blade, staff, cloth, flesh or metal. Full character screen-right, central torso x=50%, same body scale and grounded baseline as identity. Whole body and every crystal facet fit in generous transparent margins; height84%, width<=88%, compact bent arms. Warm upper-left-front lit planes and cyan back-right 2–3px export rim, edge luminance>=0.27 on basalt0.16. Controlled broad painterly facets, no texture noise. Actual transparent background, no ground, shadow, red glow, decal, text, scenery, explosion, beam, trail, projectile or extra characters. Native at least1536 square for1024master and512export.",
+  "referenced_image_paths": [
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B11/source/sheets/aetherion_a_v2.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Enemies/rift_warden_a.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Enemies/rift_warden_b.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Enemies/grunt_a.png"
+  ],
+  "transparent_background": true
+}

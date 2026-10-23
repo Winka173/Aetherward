@@ -1,0 +1,372 @@
+[
+  {
+    "id": "Heroes/glacius_walk_c",
+    "references": [
+      "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\glacius_idle.png",
+      "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\glacius_walk_a.png",
+      "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R05\\references\\guides\\unit__Heroes__glacius_walk_c.png"
+    ],
+    "prompt": "Use case: stylized-concept. Production animation sprite Heroes/glacius_walk_c for Aetherward. Input 1 is CHARACTER IDENTITY; input 2 is NEIGHBOURING POSE; input 3 is canvas guide ONLY, never draw the guide. Generate ONE character pose on a 1024x1024 genuinely transparent RGBA canvas. Preserve exact identity, face, anatomy, costume, palette, prop design, handedness, and scale of input 1. Opposite-leg CONTACT walking pose relative to the walk_a reference: swap leading and trailing legs, other foot forward toward +X, arms counter-swung the opposite way. Clear foot separation. Premium action-game key pose, strong line of action, about 15% more limb stretch than realistic. Camera unchanged: orthographic three-quarter front, 38 degree elevation, facing screen-RIGHT. Torso on x=512; feet at y=952; match head and body scale of identity. Dark arcane fantasy, premium hand-inked comic 2.5D; tapered bold black-violet #1b1226 outer contours, thinner internal ink; 2-3 flat cel tones per material; hard cool violet-blue #3b2f6b shadows; warm upper-left-front key; saturated jewel hero colours and muted bone/rust/charcoal enemies with magenta/violet rift accents under 15%. No rim light, no airbrush gradients. Character only. No background, ground shadow, particles, projectile, beam, extra limbs, labels, letters, guide lines or framing. Only a small local glow on existing weapon/focus allowed. Never redesign the character.",
+    "promptFile": "source/prompts/Heroes/glacius_walk_c.txt"
+  },
+  {
+    "id": "Heroes/glacius_walk_d",
+    "references": [
+      "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\glacius_idle.png",
+      "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\glacius_walk_b.png",
+      "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R05\\references\\guides\\unit__Heroes__glacius_walk_d.png"
+    ],
+    "prompt": "Use case: stylized-concept. Production animation sprite Heroes/glacius_walk_d for Aetherward. Input 1 is CHARACTER IDENTITY; input 2 is NEIGHBOURING POSE; input 3 is canvas guide ONLY, never draw the guide. Generate ONE character pose on a 1024x1024 genuinely transparent RGBA canvas. Preserve exact identity, face, anatomy, costume, palette, prop design, handedness, and scale of input 1. Opposite PASSING pose relative to walk_b reference: reverse leg roles, trailing foot passing under torso, other foot planted, body at highest point of the cycle, arms counter-swung. Exaggerated clear leg separation. Premium action-game key pose, strong line of action, about 15% more limb stretch than realistic. Camera unchanged: orthographic three-quarter front, 38 degree elevation, facing screen-RIGHT. Torso on x=512; feet at y=952; match head and body scale of identity. Dark arcane fantasy, premium hand-inked comic 2.5D; tapered bold black-violet #1b1226 outer contours, thinner internal ink; 2-3 flat cel tones per material; hard cool violet-blue #3b2f6b shadows; warm upper-left-front key; saturated jewel hero colours and muted bone/rust/charcoal enemies with magenta/violet rift accents under 15%. No rim light, no airbrush gradients. Character only. No background, ground shadow, particles, projectile, beam, extra limbs, labels, letters, guide lines or framing. Only a small local glow on existing weapon/focus allowed. Never redesign the character.",
+    "promptFile": "source/prompts/Heroes/glacius_walk_d.txt"
+  },
+  {
+    "id": "Heroes/glacius_windup",
+    "references": [
+      "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\glacius_idle.png",
+      "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\glacius_attack.png",
+      "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R05\\references\\guides\\unit__Heroes__glacius_windup.png"
+    ],
+    "prompt": "Use case: stylized-concept. Production animation sprite Heroes/glacius_windup for Aetherward. Input 1 is CHARACTER IDENTITY; input 2 is NEIGHBOURING POSE; input 3 is canvas guide ONLY, never draw the guide. Generate ONE character pose on a 1024x1024 genuinely transparent RGBA canvas. Preserve exact identity, face, anatomy, costume, palette, prop design, handedness, and scale of input 1. Strong ANTICIPATION before attack reference. Weight on rear foot, body coiled, torso twisted away from +X; melee weapon drawn BACK and UP behind body, claws pulled back; ranged bow at FULL DRAW with string hand near cheek; caster staff pulled back with tiny charging focus glow. Clearly differs from strike. Premium action-game key pose, strong line of action, about 15% more limb stretch than realistic. Camera unchanged: orthographic three-quarter front, 38 degree elevation, facing screen-RIGHT. Torso on x=512; feet at y=952; match head and body scale of identity. Dark arcane fantasy, premium hand-inked comic 2.5D; tapered bold black-violet #1b1226 outer contours, thinner internal ink; 2-3 flat cel tones per material; hard cool violet-blue #3b2f6b shadows; warm upper-left-front key; saturated jewel hero colours and muted bone/rust/charcoal enemies with magenta/violet rift accents under 15%. No rim light, no airbrush gradients. Character only. No background, ground shadow, particles, projectile, beam, extra limbs, labels, letters, guide lines or framing. Only a small local glow on existing weapon/focus allowed. Never redesign the character.",
+    "promptFile": "source/prompts/Heroes/glacius_windup.txt"
+  },
+  {
+    "id": "Heroes/glacius_follow",
+    "references": [
+      "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\glacius_idle.png",
+      "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\glacius_attack.png",
+      "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R05\\references\\guides\\unit__Heroes__glacius_follow.png"
+    ],
+    "prompt": "Use case: stylized-concept. Production animation sprite Heroes/glacius_follow for Aetherward. Input 1 is CHARACTER IDENTITY; input 2 is NEIGHBOURING POSE; input 3 is canvas guide ONLY, never draw the guide. Generate ONE character pose on a 1024x1024 genuinely transparent RGBA canvas. Preserve exact identity, face, anatomy, costume, palette, prop design, handedness, and scale of input 1. Strong FOLLOW-THROUGH AFTER attack reference. Weight fully forward, torso leaning toward +X, melee weapon PAST target LOW and ACROSS body; ranged/caster arm still extended with visible recoil, cloth swinging forward. Clearly differs from strike. Premium action-game key pose, strong line of action, about 15% more limb stretch than realistic. Camera unchanged: orthographic three-quarter front, 38 degree elevation, facing screen-RIGHT. Torso on x=512; feet at y=952; match head and body scale of identity. Dark arcane fantasy, premium hand-inked comic 2.5D; tapered bold black-violet #1b1226 outer contours, thinner internal ink; 2-3 flat cel tones per material; hard cool violet-blue #3b2f6b shadows; warm upper-left-front key; saturated jewel hero colours and muted bone/rust/charcoal enemies with magenta/violet rift accents under 15%. No rim light, no airbrush gradients. Character only. No background, ground shadow, particles, projectile, beam, extra limbs, labels, letters, guide lines or framing. Only a small local glow on existing weapon/focus allowed. Never redesign the character.",
+    "promptFile": "source/prompts/Heroes/glacius_follow.txt"
+  },
+  {
+    "id": "Heroes/glacius_idle_b",
+    "references": [
+      "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\glacius_idle.png",
+      "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\glacius_walk_b.png",
+      "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R05\\references\\guides\\unit__Heroes__glacius_idle_b.png"
+    ],
+    "prompt": "Use case: stylized-concept. Production animation sprite Heroes/glacius_idle_b for Aetherward. Input 1 is CHARACTER IDENTITY; input 2 is NEIGHBOURING POSE; input 3 is canvas guide ONLY, never draw the guide. Generate ONE character pose on a 1024x1024 genuinely transparent RGBA canvas. Preserve exact identity, face, anatomy, costume, palette, prop design, handedness, and scale of input 1. Extremely subtle BREATHING variant of identity idle. Keep feet, legs, head, hands, prop, costume and silhouette position exactly fixed. Raise only chest and shoulders 2-3 export pixels (4-6 master pixels), shift cloth and hair slightly. Must alternate as breathing, never a jump or new stance. Camera unchanged: orthographic three-quarter front, 38 degree elevation, facing screen-RIGHT. Torso on x=512; feet at y=952; match head and body scale of identity. Dark arcane fantasy, premium hand-inked comic 2.5D; tapered bold black-violet #1b1226 outer contours, thinner internal ink; 2-3 flat cel tones per material; hard cool violet-blue #3b2f6b shadows; warm upper-left-front key; saturated jewel hero colours and muted bone/rust/charcoal enemies with magenta/violet rift accents under 15%. No rim light, no airbrush gradients. Character only. No background, ground shadow, particles, projectile, beam, extra limbs, labels, letters, guide lines or framing. Only a small local glow on existing weapon/focus allowed. Never redesign the character.",
+    "promptFile": "source/prompts/Heroes/glacius_idle_b.txt"
+  },
+  {
+    "id": "Heroes/ignis_walk_c",
+    "references": [
+      "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\ignis_idle.png",
+      "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\ignis_walk_a.png",
+      "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R05\\references\\guides\\unit__Heroes__ignis_walk_c.png"
+    ],
+    "prompt": "Use case: stylized-concept. Production animation sprite Heroes/ignis_walk_c for Aetherward. Input 1 is CHARACTER IDENTITY; input 2 is NEIGHBOURING POSE; input 3 is canvas guide ONLY, never draw the guide. Generate ONE character pose on a 1024x1024 genuinely transparent RGBA canvas. Preserve exact identity, face, anatomy, costume, palette, prop design, handedness, and scale of input 1. Opposite-leg CONTACT walking pose relative to the walk_a reference: swap leading and trailing legs, other foot forward toward +X, arms counter-swung the opposite way. Clear foot separation. Premium action-game key pose, strong line of action, about 15% more limb stretch than realistic. Camera unchanged: orthographic three-quarter front, 38 degree elevation, facing screen-RIGHT. Torso on x=512; feet at y=952; match head and body scale of identity. Dark arcane fantasy, premium hand-inked comic 2.5D; tapered bold black-violet #1b1226 outer contours, thinner internal ink; 2-3 flat cel tones per material; hard cool violet-blue #3b2f6b shadows; warm upper-left-front key; saturated jewel hero colours and muted bone/rust/charcoal enemies with magenta/violet rift accents under 15%. No rim light, no airbrush gradients. Character only. No background, ground shadow, particles, projectile, beam, extra limbs, labels, letters, guide lines or framing. Only a small local glow on existing weapon/focus allowed. Never redesign the character.",
+    "promptFile": "source/prompts/Heroes/ignis_walk_c.txt"
+  },
+  {
+    "id": "Heroes/ignis_walk_d",
+    "references": [
+      "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\ignis_idle.png",
+      "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\ignis_walk_b.png",
+      "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R05\\references\\guides\\unit__Heroes__ignis_walk_d.png"
+    ],
+    "prompt": "Use case: stylized-concept. Production animation sprite Heroes/ignis_walk_d for Aetherward. Input 1 is CHARACTER IDENTITY; input 2 is NEIGHBOURING POSE; input 3 is canvas guide ONLY, never draw the guide. Generate ONE character pose on a 1024x1024 genuinely transparent RGBA canvas. Preserve exact identity, face, anatomy, costume, palette, prop design, handedness, and scale of input 1. Opposite PASSING pose relative to walk_b reference: reverse leg roles, trailing foot passing under torso, other foot planted, body at highest point of the cycle, arms counter-swung. Exaggerated clear leg separation. Premium action-game key pose, strong line of action, about 15% more limb stretch than realistic. Camera unchanged: orthographic three-quarter front, 38 degree elevation, facing screen-RIGHT. Torso on x=512; feet at y=952; match head and body scale of identity. Dark arcane fantasy, premium hand-inked comic 2.5D; tapered bold black-violet #1b1226 outer contours, thinner internal ink; 2-3 flat cel tones per material; hard cool violet-blue #3b2f6b shadows; warm upper-left-front key; saturated jewel hero colours and muted bone/rust/charcoal enemies with magenta/violet rift accents under 15%. No rim light, no airbrush gradients. Character only. No background, ground shadow, particles, projectile, beam, extra limbs, labels, letters, guide lines or framing. Only a small local glow on existing weapon/focus allowed. Never redesign the character.",
+    "promptFile": "source/prompts/Heroes/ignis_walk_d.txt"
+  },
+  {
+    "id": "Heroes/ignis_windup",
+    "references": [
+      "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\ignis_idle.png",
+      "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\ignis_attack.png",
+      "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R05\\references\\guides\\unit__Heroes__ignis_windup.png"
+    ],
+    "prompt": "Use case: stylized-concept. Production animation sprite Heroes/ignis_windup for Aetherward. Input 1 is CHARACTER IDENTITY; input 2 is NEIGHBOURING POSE; input 3 is canvas guide ONLY, never draw the guide. Generate ONE character pose on a 1024x1024 genuinely transparent RGBA canvas. Preserve exact identity, face, anatomy, costume, palette, prop design, handedness, and scale of input 1. Strong ANTICIPATION before attack reference. Weight on rear foot, body coiled, torso twisted away from +X; melee weapon drawn BACK and UP behind body, claws pulled back; ranged bow at FULL DRAW with string hand near cheek; caster staff pulled back with tiny charging focus glow. Clearly differs from strike. Premium action-game key pose, strong line of action, about 15% more limb stretch than realistic. Camera unchanged: orthographic three-quarter front, 38 degree elevation, facing screen-RIGHT. Torso on x=512; feet at y=952; match head and body scale of identity. Dark arcane fantasy, premium hand-inked comic 2.5D; tapered bold black-violet #1b1226 outer contours, thinner internal ink; 2-3 flat cel tones per material; hard cool violet-blue #3b2f6b shadows; warm upper-left-front key; saturated jewel hero colours and muted bone/rust/charcoal enemies with magenta/violet rift accents under 15%. No rim light, no airbrush gradients. Character only. No background, ground shadow, particles, projectile, beam, extra limbs, labels, letters, guide lines or framing. Only a small local glow on existing weapon/focus allowed. Never redesign the character.",
+    "promptFile": "source/prompts/Heroes/ignis_windup.txt"
+  },
+  {
+    "id": "Heroes/ignis_follow",
+    "references": [
+      "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\ignis_idle.png",
+      "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\ignis_attack.png",
+      "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R05\\references\\guides\\unit__Heroes__ignis_follow.png"
+    ],
+    "prompt": "Use case: stylized-concept. Production animation sprite Heroes/ignis_follow for Aetherward. Input 1 is CHARACTER IDENTITY; input 2 is NEIGHBOURING POSE; input 3 is canvas guide ONLY, never draw the guide. Generate ONE character pose on a 1024x1024 genuinely transparent RGBA canvas. Preserve exact identity, face, anatomy, costume, palette, prop design, handedness, and scale of input 1. Strong FOLLOW-THROUGH AFTER attack reference. Weight fully forward, torso leaning toward +X, melee weapon PAST target LOW and ACROSS body; ranged/caster arm still extended with visible recoil, cloth swinging forward. Clearly differs from strike. Premium action-game key pose, strong line of action, about 15% more limb stretch than realistic. Camera unchanged: orthographic three-quarter front, 38 degree elevation, facing screen-RIGHT. Torso on x=512; feet at y=952; match head and body scale of identity. Dark arcane fantasy, premium hand-inked comic 2.5D; tapered bold black-violet #1b1226 outer contours, thinner internal ink; 2-3 flat cel tones per material; hard cool violet-blue #3b2f6b shadows; warm upper-left-front key; saturated jewel hero colours and muted bone/rust/charcoal enemies with magenta/violet rift accents under 15%. No rim light, no airbrush gradients. Character only. No background, ground shadow, particles, projectile, beam, extra limbs, labels, letters, guide lines or framing. Only a small local glow on existing weapon/focus allowed. Never redesign the character.",
+    "promptFile": "source/prompts/Heroes/ignis_follow.txt"
+  },
+  {
+    "id": "Heroes/ignis_idle_b",
+    "references": [
+      "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\ignis_idle.png",
+      "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\ignis_walk_b.png",
+      "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R05\\references\\guides\\unit__Heroes__ignis_idle_b.png"
+    ],
+    "prompt": "Use case: stylized-concept. Production animation sprite Heroes/ignis_idle_b for Aetherward. Input 1 is CHARACTER IDENTITY; input 2 is NEIGHBOURING POSE; input 3 is canvas guide ONLY, never draw the guide. Generate ONE character pose on a 1024x1024 genuinely transparent RGBA canvas. Preserve exact identity, face, anatomy, costume, palette, prop design, handedness, and scale of input 1. Extremely subtle BREATHING variant of identity idle. Keep feet, legs, head, hands, prop, costume and silhouette position exactly fixed. Raise only chest and shoulders 2-3 export pixels (4-6 master pixels), shift cloth and hair slightly. Must alternate as breathing, never a jump or new stance. Camera unchanged: orthographic three-quarter front, 38 degree elevation, facing screen-RIGHT. Torso on x=512; feet at y=952; match head and body scale of identity. Dark arcane fantasy, premium hand-inked comic 2.5D; tapered bold black-violet #1b1226 outer contours, thinner internal ink; 2-3 flat cel tones per material; hard cool violet-blue #3b2f6b shadows; warm upper-left-front key; saturated jewel hero colours and muted bone/rust/charcoal enemies with magenta/violet rift accents under 15%. No rim light, no airbrush gradients. Character only. No background, ground shadow, particles, projectile, beam, extra limbs, labels, letters, guide lines or framing. Only a small local glow on existing weapon/focus allowed. Never redesign the character.",
+    "promptFile": "source/prompts/Heroes/ignis_idle_b.txt"
+  },
+  {
+    "id": "Heroes/veyra_walk_c",
+    "references": [
+      "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\veyra_idle.png",
+      "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\veyra_walk_a.png",
+      "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R05\\references\\guides\\unit__Heroes__veyra_walk_c.png"
+    ],
+    "prompt": "Use case: stylized-concept. Production animation sprite Heroes/veyra_walk_c for Aetherward. Input 1 is CHARACTER IDENTITY; input 2 is NEIGHBOURING POSE; input 3 is canvas guide ONLY, never draw the guide. Generate ONE character pose on a 1024x1024 genuinely transparent RGBA canvas. Preserve exact identity, face, anatomy, costume, palette, prop design, handedness, and scale of input 1. Opposite-leg CONTACT walking pose relative to the walk_a reference: swap leading and trailing legs, other foot forward toward +X, arms counter-swung the opposite way. Clear foot separation. Premium action-game key pose, strong line of action, about 15% more limb stretch than realistic. Camera unchanged: orthographic three-quarter front, 38 degree elevation, facing screen-RIGHT. Torso on x=512; feet at y=952; match head and body scale of identity. Dark arcane fantasy, premium hand-inked comic 2.5D; tapered bold black-violet #1b1226 outer contours, thinner internal ink; 2-3 flat cel tones per material; hard cool violet-blue #3b2f6b shadows; warm upper-left-front key; saturated jewel hero colours and muted bone/rust/charcoal enemies with magenta/violet rift accents under 15%. No rim light, no airbrush gradients. Character only. No background, ground shadow, particles, projectile, beam, extra limbs, labels, letters, guide lines or framing. Only a small local glow on existing weapon/focus allowed. Never redesign the character.",
+    "promptFile": "source/prompts/Heroes/veyra_walk_c.txt"
+  },
+  {
+    "id": "Heroes/veyra_walk_d",
+    "references": [
+      "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\veyra_idle.png",
+      "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\veyra_walk_b.png",
+      "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R05\\references\\guides\\unit__Heroes__veyra_walk_d.png"
+    ],
+    "prompt": "Use case: stylized-concept. Production animation sprite Heroes/veyra_walk_d for Aetherward. Input 1 is CHARACTER IDENTITY; input 2 is NEIGHBOURING POSE; input 3 is canvas guide ONLY, never draw the guide. Generate ONE character pose on a 1024x1024 genuinely transparent RGBA canvas. Preserve exact identity, face, anatomy, costume, palette, prop design, handedness, and scale of input 1. Opposite PASSING pose relative to walk_b reference: reverse leg roles, trailing foot passing under torso, other foot planted, body at highest point of the cycle, arms counter-swung. Exaggerated clear leg separation. Premium action-game key pose, strong line of action, about 15% more limb stretch than realistic. Camera unchanged: orthographic three-quarter front, 38 degree elevation, facing screen-RIGHT. Torso on x=512; feet at y=952; match head and body scale of identity. Dark arcane fantasy, premium hand-inked comic 2.5D; tapered bold black-violet #1b1226 outer contours, thinner internal ink; 2-3 flat cel tones per material; hard cool violet-blue #3b2f6b shadows; warm upper-left-front key; saturated jewel hero colours and muted bone/rust/charcoal enemies with magenta/violet rift accents under 15%. No rim light, no airbrush gradients. Character only. No background, ground shadow, particles, projectile, beam, extra limbs, labels, letters, guide lines or framing. Only a small local glow on existing weapon/focus allowed. Never redesign the character.",
+    "promptFile": "source/prompts/Heroes/veyra_walk_d.txt"
+  },
+  {
+    "id": "Heroes/veyra_windup",
+    "references": [
+      "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\veyra_idle.png",
+      "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\veyra_attack.png",
+      "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R05\\references\\guides\\unit__Heroes__veyra_windup.png"
+    ],
+    "prompt": "Use case: stylized-concept. Production animation sprite Heroes/veyra_windup for Aetherward. Input 1 is CHARACTER IDENTITY; input 2 is NEIGHBOURING POSE; input 3 is canvas guide ONLY, never draw the guide. Generate ONE character pose on a 1024x1024 genuinely transparent RGBA canvas. Preserve exact identity, face, anatomy, costume, palette, prop design, handedness, and scale of input 1. Strong ANTICIPATION before attack reference. Weight on rear foot, body coiled, torso twisted away from +X; melee weapon drawn BACK and UP behind body, claws pulled back; ranged bow at FULL DRAW with string hand near cheek; caster staff pulled back with tiny charging focus glow. Clearly differs from strike. Premium action-game key pose, strong line of action, about 15% more limb stretch than realistic. Camera unchanged: orthographic three-quarter front, 38 degree elevation, facing screen-RIGHT. Torso on x=512; feet at y=952; match head and body scale of identity. Dark arcane fantasy, premium hand-inked comic 2.5D; tapered bold black-violet #1b1226 outer contours, thinner internal ink; 2-3 flat cel tones per material; hard cool violet-blue #3b2f6b shadows; warm upper-left-front key; saturated jewel hero colours and muted bone/rust/charcoal enemies with magenta/violet rift accents under 15%. No rim light, no airbrush gradients. Character only. No background, ground shadow, particles, projectile, beam, extra limbs, labels, letters, guide lines or framing. Only a small local glow on existing weapon/focus allowed. Never redesign the character.",
+    "promptFile": "source/prompts/Heroes/veyra_windup.txt"
+  },
+  {
+    "id": "Heroes/veyra_follow",
+    "references": [
+      "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\veyra_idle.png",
+      "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\veyra_attack.png",
+      "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R05\\references\\guides\\unit__Heroes__veyra_follow.png"
+    ],
+    "prompt": "Use case: stylized-concept. Production animation sprite Heroes/veyra_follow for Aetherward. Input 1 is CHARACTER IDENTITY; input 2 is NEIGHBOURING POSE; input 3 is canvas guide ONLY, never draw the guide. Generate ONE character pose on a 1024x1024 genuinely transparent RGBA canvas. Preserve exact identity, face, anatomy, costume, palette, prop design, handedness, and scale of input 1. Strong FOLLOW-THROUGH AFTER attack reference. Weight fully forward, torso leaning toward +X, melee weapon PAST target LOW and ACROSS body; ranged/caster arm still extended with visible recoil, cloth swinging forward. Clearly differs from strike. Premium action-game key pose, strong line of action, about 15% more limb stretch than realistic. Camera unchanged: orthographic three-quarter front, 38 degree elevation, facing screen-RIGHT. Torso on x=512; feet at y=952; match head and body scale of identity. Dark arcane fantasy, premium hand-inked comic 2.5D; tapered bold black-violet #1b1226 outer contours, thinner internal ink; 2-3 flat cel tones per material; hard cool violet-blue #3b2f6b shadows; warm upper-left-front key; saturated jewel hero colours and muted bone/rust/charcoal enemies with magenta/violet rift accents under 15%. No rim light, no airbrush gradients. Character only. No background, ground shadow, particles, projectile, beam, extra limbs, labels, letters, guide lines or framing. Only a small local glow on existing weapon/focus allowed. Never redesign the character.",
+    "promptFile": "source/prompts/Heroes/veyra_follow.txt"
+  },
+  {
+    "id": "Heroes/veyra_idle_b",
+    "references": [
+      "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\veyra_idle.png",
+      "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\veyra_walk_b.png",
+      "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R05\\references\\guides\\unit__Heroes__veyra_idle_b.png"
+    ],
+    "prompt": "Use case: stylized-concept. Production animation sprite Heroes/veyra_idle_b for Aetherward. Input 1 is CHARACTER IDENTITY; input 2 is NEIGHBOURING POSE; input 3 is canvas guide ONLY, never draw the guide. Generate ONE character pose on a 1024x1024 genuinely transparent RGBA canvas. Preserve exact identity, face, anatomy, costume, palette, prop design, handedness, and scale of input 1. Extremely subtle BREATHING variant of identity idle. Keep feet, legs, head, hands, prop, costume and silhouette position exactly fixed. Raise only chest and shoulders 2-3 export pixels (4-6 master pixels), shift cloth and hair slightly. Must alternate as breathing, never a jump or new stance. Camera unchanged: orthographic three-quarter front, 38 degree elevation, facing screen-RIGHT. Torso on x=512; feet at y=952; match head and body scale of identity. Dark arcane fantasy, premium hand-inked comic 2.5D; tapered bold black-violet #1b1226 outer contours, thinner internal ink; 2-3 flat cel tones per material; hard cool violet-blue #3b2f6b shadows; warm upper-left-front key; saturated jewel hero colours and muted bone/rust/charcoal enemies with magenta/violet rift accents under 15%. No rim light, no airbrush gradients. Character only. No background, ground shadow, particles, projectile, beam, extra limbs, labels, letters, guide lines or framing. Only a small local glow on existing weapon/focus allowed. Never redesign the character.",
+    "promptFile": "source/prompts/Heroes/veyra_idle_b.txt"
+  },
+  {
+    "id": "Heroes/marina_walk_c",
+    "references": [
+      "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\marina_idle.png",
+      "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\marina_walk_a.png",
+      "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R05\\references\\guides\\unit__Heroes__marina_walk_c.png"
+    ],
+    "prompt": "Use case: stylized-concept. Production animation sprite Heroes/marina_walk_c for Aetherward. Input 1 is CHARACTER IDENTITY; input 2 is NEIGHBOURING POSE; input 3 is canvas guide ONLY, never draw the guide. Generate ONE character pose on a 1024x1024 genuinely transparent RGBA canvas. Preserve exact identity, face, anatomy, costume, palette, prop design, handedness, and scale of input 1. Opposite-leg CONTACT walking pose relative to the walk_a reference: swap leading and trailing legs, other foot forward toward +X, arms counter-swung the opposite way. Clear foot separation. Premium action-game key pose, strong line of action, about 15% more limb stretch than realistic. Camera unchanged: orthographic three-quarter front, 38 degree elevation, facing screen-RIGHT. Torso on x=512; feet at y=952; match head and body scale of identity. Dark arcane fantasy, premium hand-inked comic 2.5D; tapered bold black-violet #1b1226 outer contours, thinner internal ink; 2-3 flat cel tones per material; hard cool violet-blue #3b2f6b shadows; warm upper-left-front key; saturated jewel hero colours and muted bone/rust/charcoal enemies with magenta/violet rift accents under 15%. No rim light, no airbrush gradients. Character only. No background, ground shadow, particles, projectile, beam, extra limbs, labels, letters, guide lines or framing. Only a small local glow on existing weapon/focus allowed. Never redesign the character.",
+    "promptFile": "source/prompts/Heroes/marina_walk_c.txt"
+  },
+  {
+    "id": "Heroes/marina_walk_d",
+    "references": [
+      "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\marina_idle.png",
+      "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\marina_walk_b.png",
+      "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R05\\references\\guides\\unit__Heroes__marina_walk_d.png"
+    ],
+    "prompt": "Use case: stylized-concept. Production animation sprite Heroes/marina_walk_d for Aetherward. Input 1 is CHARACTER IDENTITY; input 2 is NEIGHBOURING POSE; input 3 is canvas guide ONLY, never draw the guide. Generate ONE character pose on a 1024x1024 genuinely transparent RGBA canvas. Preserve exact identity, face, anatomy, costume, palette, prop design, handedness, and scale of input 1. Opposite PASSING pose relative to walk_b reference: reverse leg roles, trailing foot passing under torso, other foot planted, body at highest point of the cycle, arms counter-swung. Exaggerated clear leg separation. Premium action-game key pose, strong line of action, about 15% more limb stretch than realistic. Camera unchanged: orthographic three-quarter front, 38 degree elevation, facing screen-RIGHT. Torso on x=512; feet at y=952; match head and body scale of identity. Dark arcane fantasy, premium hand-inked comic 2.5D; tapered bold black-violet #1b1226 outer contours, thinner internal ink; 2-3 flat cel tones per material; hard cool violet-blue #3b2f6b shadows; warm upper-left-front key; saturated jewel hero colours and muted bone/rust/charcoal enemies with magenta/violet rift accents under 15%. No rim light, no airbrush gradients. Character only. No background, ground shadow, particles, projectile, beam, extra limbs, labels, letters, guide lines or framing. Only a small local glow on existing weapon/focus allowed. Never redesign the character.",
+    "promptFile": "source/prompts/Heroes/marina_walk_d.txt"
+  },
+  {
+    "id": "Heroes/marina_windup",
+    "references": [
+      "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\marina_idle.png",
+      "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\marina_attack.png",
+      "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R05\\references\\guides\\unit__Heroes__marina_windup.png"
+    ],
+    "prompt": "Use case: stylized-concept. Production animation sprite Heroes/marina_windup for Aetherward. Input 1 is CHARACTER IDENTITY; input 2 is NEIGHBOURING POSE; input 3 is canvas guide ONLY, never draw the guide. Generate ONE character pose on a 1024x1024 genuinely transparent RGBA canvas. Preserve exact identity, face, anatomy, costume, palette, prop design, handedness, and scale of input 1. Strong ANTICIPATION before attack reference. Weight on rear foot, body coiled, torso twisted away from +X; melee weapon drawn BACK and UP behind body, claws pulled back; ranged bow at FULL DRAW with string hand near cheek; caster staff pulled back with tiny charging focus glow. Clearly differs from strike. Premium action-game key pose, strong line of action, about 15% more limb stretch than realistic. Camera unchanged: orthographic three-quarter front, 38 degree elevation, facing screen-RIGHT. Torso on x=512; feet at y=952; match head and body scale of identity. Dark arcane fantasy, premium hand-inked comic 2.5D; tapered bold black-violet #1b1226 outer contours, thinner internal ink; 2-3 flat cel tones per material; hard cool violet-blue #3b2f6b shadows; warm upper-left-front key; saturated jewel hero colours and muted bone/rust/charcoal enemies with magenta/violet rift accents under 15%. No rim light, no airbrush gradients. Character only. No background, ground shadow, particles, projectile, beam, extra limbs, labels, letters, guide lines or framing. Only a small local glow on existing weapon/focus allowed. Never redesign the character.",
+    "promptFile": "source/prompts/Heroes/marina_windup.txt"
+  },
+  {
+    "id": "Heroes/marina_follow",
+    "references": [
+      "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\marina_idle.png",
+      "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\marina_attack.png",
+      "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R05\\references\\guides\\unit__Heroes__marina_follow.png"
+    ],
+    "prompt": "Use case: stylized-concept. Production animation sprite Heroes/marina_follow for Aetherward. Input 1 is CHARACTER IDENTITY; input 2 is NEIGHBOURING POSE; input 3 is canvas guide ONLY, never draw the guide. Generate ONE character pose on a 1024x1024 genuinely transparent RGBA canvas. Preserve exact identity, face, anatomy, costume, palette, prop design, handedness, and scale of input 1. Strong FOLLOW-THROUGH AFTER attack reference. Weight fully forward, torso leaning toward +X, melee weapon PAST target LOW and ACROSS body; ranged/caster arm still extended with visible recoil, cloth swinging forward. Clearly differs from strike. Premium action-game key pose, strong line of action, about 15% more limb stretch than realistic. Camera unchanged: orthographic three-quarter front, 38 degree elevation, facing screen-RIGHT. Torso on x=512; feet at y=952; match head and body scale of identity. Dark arcane fantasy, premium hand-inked comic 2.5D; tapered bold black-violet #1b1226 outer contours, thinner internal ink; 2-3 flat cel tones per material; hard cool violet-blue #3b2f6b shadows; warm upper-left-front key; saturated jewel hero colours and muted bone/rust/charcoal enemies with magenta/violet rift accents under 15%. No rim light, no airbrush gradients. Character only. No background, ground shadow, particles, projectile, beam, extra limbs, labels, letters, guide lines or framing. Only a small local glow on existing weapon/focus allowed. Never redesign the character.",
+    "promptFile": "source/prompts/Heroes/marina_follow.txt"
+  },
+  {
+    "id": "Heroes/marina_idle_b",
+    "references": [
+      "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\marina_idle.png",
+      "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\marina_walk_b.png",
+      "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R05\\references\\guides\\unit__Heroes__marina_idle_b.png"
+    ],
+    "prompt": "Use case: stylized-concept. Production animation sprite Heroes/marina_idle_b for Aetherward. Input 1 is CHARACTER IDENTITY; input 2 is NEIGHBOURING POSE; input 3 is canvas guide ONLY, never draw the guide. Generate ONE character pose on a 1024x1024 genuinely transparent RGBA canvas. Preserve exact identity, face, anatomy, costume, palette, prop design, handedness, and scale of input 1. Extremely subtle BREATHING variant of identity idle. Keep feet, legs, head, hands, prop, costume and silhouette position exactly fixed. Raise only chest and shoulders 2-3 export pixels (4-6 master pixels), shift cloth and hair slightly. Must alternate as breathing, never a jump or new stance. Camera unchanged: orthographic three-quarter front, 38 degree elevation, facing screen-RIGHT. Torso on x=512; feet at y=952; match head and body scale of identity. Dark arcane fantasy, premium hand-inked comic 2.5D; tapered bold black-violet #1b1226 outer contours, thinner internal ink; 2-3 flat cel tones per material; hard cool violet-blue #3b2f6b shadows; warm upper-left-front key; saturated jewel hero colours and muted bone/rust/charcoal enemies with magenta/violet rift accents under 15%. No rim light, no airbrush gradients. Character only. No background, ground shadow, particles, projectile, beam, extra limbs, labels, letters, guide lines or framing. Only a small local glow on existing weapon/focus allowed. Never redesign the character.",
+    "promptFile": "source/prompts/Heroes/marina_idle_b.txt"
+  },
+  {
+    "id": "Enemies/grunt_c",
+    "references": [
+      "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Enemies\\grunt_a.png",
+      "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Enemies\\grunt_a.png",
+      "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R05\\references\\guides\\unit__Enemies__grunt_c.png"
+    ],
+    "prompt": "Use case: stylized-concept. Production animation sprite Enemies/grunt_c for Aetherward. Input 1 is CHARACTER IDENTITY; input 2 is NEIGHBOURING POSE; input 3 is canvas guide ONLY, never draw the guide. Generate ONE character pose on a 512x512 genuinely transparent RGBA canvas. Preserve exact identity, face, anatomy, costume, palette, prop design, handedness, and scale of input 1. Opposite-leg CONTACT walking pose relative to a reference: reverse which leg leads and which trails, other foot forward toward +X, arms counter-swung. Clear silhouette. Premium action-game key pose, strong line of action, about 15% more limb stretch than realistic. Camera unchanged: orthographic three-quarter front, 38 degree elevation, facing screen-RIGHT. Torso on x=256; feet at y=472; match head and body scale of identity. Dark arcane fantasy, premium hand-inked comic 2.5D; tapered bold black-violet #1b1226 outer contours, thinner internal ink; 2-3 flat cel tones per material; hard cool violet-blue #3b2f6b shadows; warm upper-left-front key; saturated jewel hero colours and muted bone/rust/charcoal enemies with magenta/violet rift accents under 15%. No rim light, no airbrush gradients. Character only. No background, ground shadow, particles, projectile, beam, extra limbs, labels, letters, guide lines or framing. Only a small local glow on existing weapon/focus allowed. Never redesign the character.",
+    "promptFile": "source/prompts/Enemies/grunt_c.txt"
+  },
+  {
+    "id": "Enemies/grunt_d",
+    "references": [
+      "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Enemies\\grunt_a.png",
+      "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Enemies\\grunt_b.png",
+      "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R05\\references\\guides\\unit__Enemies__grunt_d.png"
+    ],
+    "prompt": "Use case: stylized-concept. Production animation sprite Enemies/grunt_d for Aetherward. Input 1 is CHARACTER IDENTITY; input 2 is NEIGHBOURING POSE; input 3 is canvas guide ONLY, never draw the guide. Generate ONE character pose on a 512x512 genuinely transparent RGBA canvas. Preserve exact identity, face, anatomy, costume, palette, prop design, handedness, and scale of input 1. Opposite PASSING pose relative to b reference: reverse leg roles, other foot supports body, trailing foot passes underneath. Body at highest cycle point. Premium action-game key pose, strong line of action, about 15% more limb stretch than realistic. Camera unchanged: orthographic three-quarter front, 38 degree elevation, facing screen-RIGHT. Torso on x=256; feet at y=472; match head and body scale of identity. Dark arcane fantasy, premium hand-inked comic 2.5D; tapered bold black-violet #1b1226 outer contours, thinner internal ink; 2-3 flat cel tones per material; hard cool violet-blue #3b2f6b shadows; warm upper-left-front key; saturated jewel hero colours and muted bone/rust/charcoal enemies with magenta/violet rift accents under 15%. No rim light, no airbrush gradients. Character only. No background, ground shadow, particles, projectile, beam, extra limbs, labels, letters, guide lines or framing. Only a small local glow on existing weapon/focus allowed. Never redesign the character.",
+    "promptFile": "source/prompts/Enemies/grunt_d.txt"
+  },
+  {
+    "id": "Enemies/grunt_windup",
+    "references": [
+      "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Enemies\\grunt_a.png",
+      "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Enemies\\grunt_attack.png",
+      "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R05\\references\\guides\\unit__Enemies__grunt_windup.png"
+    ],
+    "prompt": "Use case: stylized-concept. Production animation sprite Enemies/grunt_windup for Aetherward. Input 1 is CHARACTER IDENTITY; input 2 is NEIGHBOURING POSE; input 3 is canvas guide ONLY, never draw the guide. Generate ONE character pose on a 512x512 genuinely transparent RGBA canvas. Preserve exact identity, face, anatomy, costume, palette, prop design, handedness, and scale of input 1. Strong ANTICIPATION before attack reference. Weight on rear foot, body coiled, torso twisted away from +X; melee weapon drawn BACK and UP behind body, claws pulled back; ranged bow at FULL DRAW with string hand near cheek; caster staff pulled back with tiny charging focus glow. Clearly differs from strike. Premium action-game key pose, strong line of action, about 15% more limb stretch than realistic. Camera unchanged: orthographic three-quarter front, 38 degree elevation, facing screen-RIGHT. Torso on x=256; feet at y=472; match head and body scale of identity. Dark arcane fantasy, premium hand-inked comic 2.5D; tapered bold black-violet #1b1226 outer contours, thinner internal ink; 2-3 flat cel tones per material; hard cool violet-blue #3b2f6b shadows; warm upper-left-front key; saturated jewel hero colours and muted bone/rust/charcoal enemies with magenta/violet rift accents under 15%. No rim light, no airbrush gradients. Character only. No background, ground shadow, particles, projectile, beam, extra limbs, labels, letters, guide lines or framing. Only a small local glow on existing weapon/focus allowed. Never redesign the character.",
+    "promptFile": "source/prompts/Enemies/grunt_windup.txt"
+  },
+  {
+    "id": "Enemies/runner_c",
+    "references": [
+      "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Enemies\\runner_a.png",
+      "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Enemies\\runner_a.png",
+      "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R05\\references\\guides\\unit__Enemies__runner_c.png"
+    ],
+    "prompt": "Use case: stylized-concept. Production animation sprite Enemies/runner_c for Aetherward. Input 1 is CHARACTER IDENTITY; input 2 is NEIGHBOURING POSE; input 3 is canvas guide ONLY, never draw the guide. Generate ONE character pose on a 512x512 genuinely transparent RGBA canvas. Preserve exact identity, face, anatomy, costume, palette, prop design, handedness, and scale of input 1. Opposite-leg CONTACT walking pose relative to a reference: reverse which leg leads and which trails, other foot forward toward +X, arms counter-swung. Clear silhouette. Premium action-game key pose, strong line of action, about 15% more limb stretch than realistic. Camera unchanged: orthographic three-quarter front, 38 degree elevation, facing screen-RIGHT. Torso on x=256; feet at y=472; match head and body scale of identity. Dark arcane fantasy, premium hand-inked comic 2.5D; tapered bold black-violet #1b1226 outer contours, thinner internal ink; 2-3 flat cel tones per material; hard cool violet-blue #3b2f6b shadows; warm upper-left-front key; saturated jewel hero colours and muted bone/rust/charcoal enemies with magenta/violet rift accents under 15%. No rim light, no airbrush gradients. Character only. No background, ground shadow, particles, projectile, beam, extra limbs, labels, letters, guide lines or framing. Only a small local glow on existing weapon/focus allowed. Never redesign the character.",
+    "promptFile": "source/prompts/Enemies/runner_c.txt"
+  },
+  {
+    "id": "Enemies/runner_d",
+    "references": [
+      "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Enemies\\runner_a.png",
+      "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Enemies\\runner_b.png",
+      "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R05\\references\\guides\\unit__Enemies__runner_d.png"
+    ],
+    "prompt": "Use case: stylized-concept. Production animation sprite Enemies/runner_d for Aetherward. Input 1 is CHARACTER IDENTITY; input 2 is NEIGHBOURING POSE; input 3 is canvas guide ONLY, never draw the guide. Generate ONE character pose on a 512x512 genuinely transparent RGBA canvas. Preserve exact identity, face, anatomy, costume, palette, prop design, handedness, and scale of input 1. Opposite PASSING pose relative to b reference: reverse leg roles, other foot supports body, trailing foot passes underneath. Body at highest cycle point. Premium action-game key pose, strong line of action, about 15% more limb stretch than realistic. Camera unchanged: orthographic three-quarter front, 38 degree elevation, facing screen-RIGHT. Torso on x=256; feet at y=472; match head and body scale of identity. Dark arcane fantasy, premium hand-inked comic 2.5D; tapered bold black-violet #1b1226 outer contours, thinner internal ink; 2-3 flat cel tones per material; hard cool violet-blue #3b2f6b shadows; warm upper-left-front key; saturated jewel hero colours and muted bone/rust/charcoal enemies with magenta/violet rift accents under 15%. No rim light, no airbrush gradients. Character only. No background, ground shadow, particles, projectile, beam, extra limbs, labels, letters, guide lines or framing. Only a small local glow on existing weapon/focus allowed. Never redesign the character.",
+    "promptFile": "source/prompts/Enemies/runner_d.txt"
+  },
+  {
+    "id": "Enemies/runner_windup",
+    "references": [
+      "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Enemies\\runner_a.png",
+      "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Enemies\\runner_attack.png",
+      "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R05\\references\\guides\\unit__Enemies__runner_windup.png"
+    ],
+    "prompt": "Use case: stylized-concept. Production animation sprite Enemies/runner_windup for Aetherward. Input 1 is CHARACTER IDENTITY; input 2 is NEIGHBOURING POSE; input 3 is canvas guide ONLY, never draw the guide. Generate ONE character pose on a 512x512 genuinely transparent RGBA canvas. Preserve exact identity, face, anatomy, costume, palette, prop design, handedness, and scale of input 1. Strong ANTICIPATION before attack reference. Weight on rear foot, body coiled, torso twisted away from +X; melee weapon drawn BACK and UP behind body, claws pulled back; ranged bow at FULL DRAW with string hand near cheek; caster staff pulled back with tiny charging focus glow. Clearly differs from strike. Premium action-game key pose, strong line of action, about 15% more limb stretch than realistic. Camera unchanged: orthographic three-quarter front, 38 degree elevation, facing screen-RIGHT. Torso on x=256; feet at y=472; match head and body scale of identity. Dark arcane fantasy, premium hand-inked comic 2.5D; tapered bold black-violet #1b1226 outer contours, thinner internal ink; 2-3 flat cel tones per material; hard cool violet-blue #3b2f6b shadows; warm upper-left-front key; saturated jewel hero colours and muted bone/rust/charcoal enemies with magenta/violet rift accents under 15%. No rim light, no airbrush gradients. Character only. No background, ground shadow, particles, projectile, beam, extra limbs, labels, letters, guide lines or framing. Only a small local glow on existing weapon/focus allowed. Never redesign the character.",
+    "promptFile": "source/prompts/Enemies/runner_windup.txt"
+  },
+  {
+    "id": "Enemies/hexcaster_c",
+    "references": [
+      "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Enemies\\hexcaster_a.png",
+      "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Enemies\\hexcaster_a.png",
+      "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R05\\references\\guides\\unit__Enemies__hexcaster_c.png"
+    ],
+    "prompt": "Use case: stylized-concept. Production animation sprite Enemies/hexcaster_c for Aetherward. Input 1 is CHARACTER IDENTITY; input 2 is NEIGHBOURING POSE; input 3 is canvas guide ONLY, never draw the guide. Generate ONE character pose on a 512x512 genuinely transparent RGBA canvas. Preserve exact identity, face, anatomy, costume, palette, prop design, handedness, and scale of input 1. Opposite-leg CONTACT walking pose relative to a reference: reverse which leg leads and which trails, other foot forward toward +X, arms counter-swung. Clear silhouette. Premium action-game key pose, strong line of action, about 15% more limb stretch than realistic. Camera unchanged: orthographic three-quarter front, 38 degree elevation, facing screen-RIGHT. Torso on x=256; feet at y=472; match head and body scale of identity. Dark arcane fantasy, premium hand-inked comic 2.5D; tapered bold black-violet #1b1226 outer contours, thinner internal ink; 2-3 flat cel tones per material; hard cool violet-blue #3b2f6b shadows; warm upper-left-front key; saturated jewel hero colours and muted bone/rust/charcoal enemies with magenta/violet rift accents under 15%. No rim light, no airbrush gradients. Character only. No background, ground shadow, particles, projectile, beam, extra limbs, labels, letters, guide lines or framing. Only a small local glow on existing weapon/focus allowed. Never redesign the character.",
+    "promptFile": "source/prompts/Enemies/hexcaster_c.txt"
+  },
+  {
+    "id": "Enemies/hexcaster_d",
+    "references": [
+      "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Enemies\\hexcaster_a.png",
+      "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Enemies\\hexcaster_b.png",
+      "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R05\\references\\guides\\unit__Enemies__hexcaster_d.png"
+    ],
+    "prompt": "Use case: stylized-concept. Production animation sprite Enemies/hexcaster_d for Aetherward. Input 1 is CHARACTER IDENTITY; input 2 is NEIGHBOURING POSE; input 3 is canvas guide ONLY, never draw the guide. Generate ONE character pose on a 512x512 genuinely transparent RGBA canvas. Preserve exact identity, face, anatomy, costume, palette, prop design, handedness, and scale of input 1. Opposite PASSING pose relative to b reference: reverse leg roles, other foot supports body, trailing foot passes underneath. Body at highest cycle point. Premium action-game key pose, strong line of action, about 15% more limb stretch than realistic. Camera unchanged: orthographic three-quarter front, 38 degree elevation, facing screen-RIGHT. Torso on x=256; feet at y=472; match head and body scale of identity. Dark arcane fantasy, premium hand-inked comic 2.5D; tapered bold black-violet #1b1226 outer contours, thinner internal ink; 2-3 flat cel tones per material; hard cool violet-blue #3b2f6b shadows; warm upper-left-front key; saturated jewel hero colours and muted bone/rust/charcoal enemies with magenta/violet rift accents under 15%. No rim light, no airbrush gradients. Character only. No background, ground shadow, particles, projectile, beam, extra limbs, labels, letters, guide lines or framing. Only a small local glow on existing weapon/focus allowed. Never redesign the character.",
+    "promptFile": "source/prompts/Enemies/hexcaster_d.txt"
+  },
+  {
+    "id": "Enemies/hexcaster_windup",
+    "references": [
+      "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Enemies\\hexcaster_a.png",
+      "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Enemies\\hexcaster_attack.png",
+      "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R05\\references\\guides\\unit__Enemies__hexcaster_windup.png"
+    ],
+    "prompt": "Use case: stylized-concept. Production animation sprite Enemies/hexcaster_windup for Aetherward. Input 1 is CHARACTER IDENTITY; input 2 is NEIGHBOURING POSE; input 3 is canvas guide ONLY, never draw the guide. Generate ONE character pose on a 512x512 genuinely transparent RGBA canvas. Preserve exact identity, face, anatomy, costume, palette, prop design, handedness, and scale of input 1. Strong ANTICIPATION before attack reference. Weight on rear foot, body coiled, torso twisted away from +X; melee weapon drawn BACK and UP behind body, claws pulled back; ranged bow at FULL DRAW with string hand near cheek; caster staff pulled back with tiny charging focus glow. Clearly differs from strike. Premium action-game key pose, strong line of action, about 15% more limb stretch than realistic. Camera unchanged: orthographic three-quarter front, 38 degree elevation, facing screen-RIGHT. Torso on x=256; feet at y=472; match head and body scale of identity. Dark arcane fantasy, premium hand-inked comic 2.5D; tapered bold black-violet #1b1226 outer contours, thinner internal ink; 2-3 flat cel tones per material; hard cool violet-blue #3b2f6b shadows; warm upper-left-front key; saturated jewel hero colours and muted bone/rust/charcoal enemies with magenta/violet rift accents under 15%. No rim light, no airbrush gradients. Character only. No background, ground shadow, particles, projectile, beam, extra limbs, labels, letters, guide lines or framing. Only a small local glow on existing weapon/focus allowed. Never redesign the character.",
+    "promptFile": "source/prompts/Enemies/hexcaster_windup.txt"
+  },
+  {
+    "id": "Enemies/juggernaut_c",
+    "references": [
+      "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Enemies\\juggernaut_a.png",
+      "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Enemies\\juggernaut_a.png",
+      "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R05\\references\\guides\\unit__Enemies__juggernaut_c.png"
+    ],
+    "prompt": "Use case: stylized-concept. Production animation sprite Enemies/juggernaut_c for Aetherward. Input 1 is CHARACTER IDENTITY; input 2 is NEIGHBOURING POSE; input 3 is canvas guide ONLY, never draw the guide. Generate ONE character pose on a 512x512 genuinely transparent RGBA canvas. Preserve exact identity, face, anatomy, costume, palette, prop design, handedness, and scale of input 1. Opposite-leg CONTACT walking pose relative to a reference: reverse which leg leads and which trails, other foot forward toward +X, arms counter-swung. Clear silhouette. Premium action-game key pose, strong line of action, about 15% more limb stretch than realistic. Camera unchanged: orthographic three-quarter front, 38 degree elevation, facing screen-RIGHT. Torso on x=256; feet at y=472; match head and body scale of identity. Dark arcane fantasy, premium hand-inked comic 2.5D; tapered bold black-violet #1b1226 outer contours, thinner internal ink; 2-3 flat cel tones per material; hard cool violet-blue #3b2f6b shadows; warm upper-left-front key; saturated jewel hero colours and muted bone/rust/charcoal enemies with magenta/violet rift accents under 15%. No rim light, no airbrush gradients. Character only. No background, ground shadow, particles, projectile, beam, extra limbs, labels, letters, guide lines or framing. Only a small local glow on existing weapon/focus allowed. Never redesign the character.",
+    "promptFile": "source/prompts/Enemies/juggernaut_c.txt"
+  },
+  {
+    "id": "Enemies/juggernaut_d",
+    "references": [
+      "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Enemies\\juggernaut_a.png",
+      "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Enemies\\juggernaut_b.png",
+      "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R05\\references\\guides\\unit__Enemies__juggernaut_d.png"
+    ],
+    "prompt": "Use case: stylized-concept. Production animation sprite Enemies/juggernaut_d for Aetherward. Input 1 is CHARACTER IDENTITY; input 2 is NEIGHBOURING POSE; input 3 is canvas guide ONLY, never draw the guide. Generate ONE character pose on a 512x512 genuinely transparent RGBA canvas. Preserve exact identity, face, anatomy, costume, palette, prop design, handedness, and scale of input 1. Opposite PASSING pose relative to b reference: reverse leg roles, other foot supports body, trailing foot passes underneath. Body at highest cycle point. Premium action-game key pose, strong line of action, about 15% more limb stretch than realistic. Camera unchanged: orthographic three-quarter front, 38 degree elevation, facing screen-RIGHT. Torso on x=256; feet at y=472; match head and body scale of identity. Dark arcane fantasy, premium hand-inked comic 2.5D; tapered bold black-violet #1b1226 outer contours, thinner internal ink; 2-3 flat cel tones per material; hard cool violet-blue #3b2f6b shadows; warm upper-left-front key; saturated jewel hero colours and muted bone/rust/charcoal enemies with magenta/violet rift accents under 15%. No rim light, no airbrush gradients. Character only. No background, ground shadow, particles, projectile, beam, extra limbs, labels, letters, guide lines or framing. Only a small local glow on existing weapon/focus allowed. Never redesign the character.",
+    "promptFile": "source/prompts/Enemies/juggernaut_d.txt"
+  },
+  {
+    "id": "Enemies/juggernaut_windup",
+    "references": [
+      "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Enemies\\juggernaut_a.png",
+      "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Enemies\\juggernaut_attack.png",
+      "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R05\\references\\guides\\unit__Enemies__juggernaut_windup.png"
+    ],
+    "prompt": "Use case: stylized-concept. Production animation sprite Enemies/juggernaut_windup for Aetherward. Input 1 is CHARACTER IDENTITY; input 2 is NEIGHBOURING POSE; input 3 is canvas guide ONLY, never draw the guide. Generate ONE character pose on a 512x512 genuinely transparent RGBA canvas. Preserve exact identity, face, anatomy, costume, palette, prop design, handedness, and scale of input 1. Strong ANTICIPATION before attack reference. Weight on rear foot, body coiled, torso twisted away from +X; melee weapon drawn BACK and UP behind body, claws pulled back; ranged bow at FULL DRAW with string hand near cheek; caster staff pulled back with tiny charging focus glow. Clearly differs from strike. Premium action-game key pose, strong line of action, about 15% more limb stretch than realistic. Camera unchanged: orthographic three-quarter front, 38 degree elevation, facing screen-RIGHT. Torso on x=256; feet at y=472; match head and body scale of identity. Dark arcane fantasy, premium hand-inked comic 2.5D; tapered bold black-violet #1b1226 outer contours, thinner internal ink; 2-3 flat cel tones per material; hard cool violet-blue #3b2f6b shadows; warm upper-left-front key; saturated jewel hero colours and muted bone/rust/charcoal enemies with magenta/violet rift accents under 15%. No rim light, no airbrush gradients. Character only. No background, ground shadow, particles, projectile, beam, extra limbs, labels, letters, guide lines or framing. Only a small local glow on existing weapon/focus allowed. Never redesign the character.",
+    "promptFile": "source/prompts/Enemies/juggernaut_windup.txt"
+  },
+  {
+    "id": "Enemies/ravager_c",
+    "references": [
+      "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Enemies\\ravager_a.png",
+      "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Enemies\\ravager_a.png",
+      "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R05\\references\\guides\\unit__Enemies__ravager_c.png"
+    ],
+    "prompt": "Use case: stylized-concept. Production animation sprite Enemies/ravager_c for Aetherward. Input 1 is CHARACTER IDENTITY; input 2 is NEIGHBOURING POSE; input 3 is canvas guide ONLY, never draw the guide. Generate ONE character pose on a 512x512 genuinely transparent RGBA canvas. Preserve exact identity, face, anatomy, costume, palette, prop design, handedness, and scale of input 1. Opposite-leg CONTACT walking pose relative to a reference: reverse which leg leads and which trails, other foot forward toward +X, arms counter-swung. Clear silhouette. Premium action-game key pose, strong line of action, about 15% more limb stretch than realistic. Camera unchanged: orthographic three-quarter front, 38 degree elevation, facing screen-RIGHT. Torso on x=256; feet at y=472; match head and body scale of identity. Dark arcane fantasy, premium hand-inked comic 2.5D; tapered bold black-violet #1b1226 outer contours, thinner internal ink; 2-3 flat cel tones per material; hard cool violet-blue #3b2f6b shadows; warm upper-left-front key; saturated jewel hero colours and muted bone/rust/charcoal enemies with magenta/violet rift accents under 15%. No rim light, no airbrush gradients. Character only. No background, ground shadow, particles, projectile, beam, extra limbs, labels, letters, guide lines or framing. Only a small local glow on existing weapon/focus allowed. Never redesign the character.",
+    "promptFile": "source/prompts/Enemies/ravager_c.txt"
+  },
+  {
+    "id": "Enemies/ravager_d",
+    "references": [
+      "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Enemies\\ravager_a.png",
+      "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Enemies\\ravager_b.png",
+      "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R05\\references\\guides\\unit__Enemies__ravager_d.png"
+    ],
+    "prompt": "Use case: stylized-concept. Production animation sprite Enemies/ravager_d for Aetherward. Input 1 is CHARACTER IDENTITY; input 2 is NEIGHBOURING POSE; input 3 is canvas guide ONLY, never draw the guide. Generate ONE character pose on a 512x512 genuinely transparent RGBA canvas. Preserve exact identity, face, anatomy, costume, palette, prop design, handedness, and scale of input 1. Opposite PASSING pose relative to b reference: reverse leg roles, other foot supports body, trailing foot passes underneath. Body at highest cycle point. Premium action-game key pose, strong line of action, about 15% more limb stretch than realistic. Camera unchanged: orthographic three-quarter front, 38 degree elevation, facing screen-RIGHT. Torso on x=256; feet at y=472; match head and body scale of identity. Dark arcane fantasy, premium hand-inked comic 2.5D; tapered bold black-violet #1b1226 outer contours, thinner internal ink; 2-3 flat cel tones per material; hard cool violet-blue #3b2f6b shadows; warm upper-left-front key; saturated jewel hero colours and muted bone/rust/charcoal enemies with magenta/violet rift accents under 15%. No rim light, no airbrush gradients. Character only. No background, ground shadow, particles, projectile, beam, extra limbs, labels, letters, guide lines or framing. Only a small local glow on existing weapon/focus allowed. Never redesign the character.",
+    "promptFile": "source/prompts/Enemies/ravager_d.txt"
+  },
+  {
+    "id": "Enemies/ravager_windup",
+    "references": [
+      "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Enemies\\ravager_a.png",
+      "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Enemies\\ravager_attack.png",
+      "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R05\\references\\guides\\unit__Enemies__ravager_windup.png"
+    ],
+    "prompt": "Use case: stylized-concept. Production animation sprite Enemies/ravager_windup for Aetherward. Input 1 is CHARACTER IDENTITY; input 2 is NEIGHBOURING POSE; input 3 is canvas guide ONLY, never draw the guide. Generate ONE character pose on a 512x512 genuinely transparent RGBA canvas. Preserve exact identity, face, anatomy, costume, palette, prop design, handedness, and scale of input 1. Strong ANTICIPATION before attack reference. Weight on rear foot, body coiled, torso twisted away from +X; melee weapon drawn BACK and UP behind body, claws pulled back; ranged bow at FULL DRAW with string hand near cheek; caster staff pulled back with tiny charging focus glow. Clearly differs from strike. Premium action-game key pose, strong line of action, about 15% more limb stretch than realistic. Camera unchanged: orthographic three-quarter front, 38 degree elevation, facing screen-RIGHT. Torso on x=256; feet at y=472; match head and body scale of identity. Dark arcane fantasy, premium hand-inked comic 2.5D; tapered bold black-violet #1b1226 outer contours, thinner internal ink; 2-3 flat cel tones per material; hard cool violet-blue #3b2f6b shadows; warm upper-left-front key; saturated jewel hero colours and muted bone/rust/charcoal enemies with magenta/violet rift accents under 15%. No rim light, no airbrush gradients. Character only. No background, ground shadow, particles, projectile, beam, extra limbs, labels, letters, guide lines or framing. Only a small local glow on existing weapon/focus allowed. Never redesign the character.",
+    "promptFile": "source/prompts/Enemies/ravager_windup.txt"
+  },
+  {
+    "id": "Enemies/rift_warden_c",
+    "references": [
+      "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Enemies\\rift_warden_a.png",
+      "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Enemies\\rift_warden_a.png",
+      "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R05\\references\\guides\\unit__Enemies__rift_warden_c.png"
+    ],
+    "prompt": "Use case: stylized-concept. Production animation sprite Enemies/rift_warden_c for Aetherward. Input 1 is CHARACTER IDENTITY; input 2 is NEIGHBOURING POSE; input 3 is canvas guide ONLY, never draw the guide. Generate ONE character pose on a 1024x1024 genuinely transparent RGBA canvas. Preserve exact identity, face, anatomy, costume, palette, prop design, handedness, and scale of input 1. Opposite-leg CONTACT walking pose relative to a reference: reverse which leg leads and which trails, other foot forward toward +X, arms counter-swung. Clear silhouette. Premium action-game key pose, strong line of action, about 15% more limb stretch than realistic. Camera unchanged: orthographic three-quarter front, 38 degree elevation, facing screen-RIGHT. Torso on x=512; feet at y=972; match head and body scale of identity. Dark arcane fantasy, premium hand-inked comic 2.5D; tapered bold black-violet #1b1226 outer contours, thinner internal ink; 2-3 flat cel tones per material; hard cool violet-blue #3b2f6b shadows; warm upper-left-front key; saturated jewel hero colours and muted bone/rust/charcoal enemies with magenta/violet rift accents under 15%. No rim light, no airbrush gradients. Character only. No background, ground shadow, particles, projectile, beam, extra limbs, labels, letters, guide lines or framing. Only a small local glow on existing weapon/focus allowed. Never redesign the character.",
+    "promptFile": "source/prompts/Enemies/rift_warden_c.txt"
+  },
+  {
+    "id": "Enemies/rift_warden_d",
+    "references": [
+      "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Enemies\\rift_warden_a.png",
+      "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Enemies\\rift_warden_b.png",
+      "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R05\\references\\guides\\unit__Enemies__rift_warden_d.png"
+    ],
+    "prompt": "Use case: stylized-concept. Production animation sprite Enemies/rift_warden_d for Aetherward. Input 1 is CHARACTER IDENTITY; input 2 is NEIGHBOURING POSE; input 3 is canvas guide ONLY, never draw the guide. Generate ONE character pose on a 1024x1024 genuinely transparent RGBA canvas. Preserve exact identity, face, anatomy, costume, palette, prop design, handedness, and scale of input 1. Opposite PASSING pose relative to b reference: reverse leg roles, other foot supports body, trailing foot passes underneath. Body at highest cycle point. Premium action-game key pose, strong line of action, about 15% more limb stretch than realistic. Camera unchanged: orthographic three-quarter front, 38 degree elevation, facing screen-RIGHT. Torso on x=512; feet at y=972; match head and body scale of identity. Dark arcane fantasy, premium hand-inked comic 2.5D; tapered bold black-violet #1b1226 outer contours, thinner internal ink; 2-3 flat cel tones per material; hard cool violet-blue #3b2f6b shadows; warm upper-left-front key; saturated jewel hero colours and muted bone/rust/charcoal enemies with magenta/violet rift accents under 15%. No rim light, no airbrush gradients. Character only. No background, ground shadow, particles, projectile, beam, extra limbs, labels, letters, guide lines or framing. Only a small local glow on existing weapon/focus allowed. Never redesign the character.",
+    "promptFile": "source/prompts/Enemies/rift_warden_d.txt"
+  }
+]

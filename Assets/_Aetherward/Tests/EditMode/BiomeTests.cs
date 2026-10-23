@@ -142,14 +142,19 @@ namespace Aetherward.Tests
         }
 
         [Test]
-        public void NodeTraitsChangeHeroStatsOnlyOnTheirNodes()
+        public void AreaTraitsFollowPositionAndExpireWhenLeaving()
         {
-            Battle plain = BiomeBattle("verdant_sanctuary", 1, ("terra", 4), ("ignis", 0));
-            Battle molten = BiomeBattle("molten_crater", 1, ("terra", 4), ("ignis", 0));
-            Assert.AreEqual(plain.Heroes[0].Stat(StatId.Attack) * 1.15f, molten.Heroes[0].Stat(StatId.Attack), 0.01f, "heated bridge");
-            Assert.AreEqual(plain.Heroes[1].Stat(StatId.Attack), molten.Heroes[1].Stat(StatId.Attack), 0.01f, "inner node unaffected");
-            Battle frost = BiomeBattle("frostfall_bastion", 1, ("terra", 4));
-            Assert.Greater(frost.Heroes[0].Stat(StatId.Defense), plain.Heroes[0].Stat(StatId.Defense));
+            Battle b = BiomeBattle("molten_crater", 1, ("terra", 0));
+            HeroUnit h = b.Heroes[0];
+            float attack = h.Stat(StatId.Attack);
+            EnemyUnit dummy = b.SpawnEnemy(b.Content.Enemies["grunt"], 0, false, null, new Vec2(18, 0));
+            dummy.Speed = 0f;
+            h.Pos = h.Anchor = b.Biome.AreaTraits[0].Pos;
+            b.Tick();
+            Assert.AreEqual(attack * 1.15f, h.Stat(StatId.Attack), 0.01f);
+            h.Pos = h.Anchor = new Vec2(1.6f, 1.3f);
+            b.Tick();
+            Assert.AreEqual(attack, h.Stat(StatId.Attack), 0.01f, "leaving a region removes its bonus");
         }
 
         [Test]

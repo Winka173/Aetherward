@@ -1,0 +1,11 @@
+{
+  "name": "raiden_evoA_actions",
+  "refs": [
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B03/source/sheets/raiden_evoA.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Heroes/ignis_cast.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Heroes/sylph_idle.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B02/exports/Art/Heroes/volt_idle.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B02/exports/Art/Heroes/freya_idle.png"
+  ],
+  "prompt": "Dark Mythic Fantasy, painterly stylized 2.5D; orthographic 38.3-degree elevation, three-quarter front body turned 25 degrees toward screen-right. Key upper-left-front #ffe9d0, rim back-right #9fe8ff, ambient #16233a. Controlled broad brush planes, coloured local-hue dark edges without black outlines.\nUse case stylized-concept. Wide landscape 2560x1440 two separate full-body key poses exact RAIDEN STORMBLADE from reference1, same silver hair halfmask twin long short swords violet two-tail scarf light storm shoulder guard. LEFT CAST: crossed blades raised to shoulders, compact lifted crouch, small blade glow. RIGHT ATTACK: compact lunge toward SCREEN RIGHT, BOTH short swords thrust forward +X together, legs tucked close under torso, torso remains centered in own half. Scarf tails compact behind. Constrain weapon reach and scarf width so each figure width<=1.2x head-to-feet height. Full feet visible. Large transparent center gutter, no overlap. Same palette armour and face. NO lightning trail, slash effect, projectile, floor or shadow, no text. Bright ash leather lit planes and #9fe8ff cool rim, edge mean>=0.30 against basalt0.16. Genuine transparent background. Precise adult anatomy."
+}

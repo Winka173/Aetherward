@@ -1,0 +1,2031 @@
+{
+  "batch": "B03",
+  "producer": "Codex",
+  "date": "2026-10-20",
+  "styleLock": {
+    "palette": [
+      "#2a2c31",
+      "#625c55",
+      "#6b2734",
+      "#ff6a2b",
+      "#8fe3ff",
+      "#2b5cff",
+      "#1d1f24"
+    ],
+    "light": "key upper-left-front #ffe9d0, rim back-right #9fe8ff, ambient #16233a",
+    "edge": "Dark local-hue edge, no uniform black outline; cool 1–3 px rim; controlled broad brush planes.",
+    "promptTemplate": "Dark Mythic Fantasy, painterly stylized 2.5D; orthographic 38.3-degree elevation, three-quarter front body turned 25 degrees toward screen-right. Key upper-left-front #ffe9d0, rim back-right #9fe8ff, ambient #16233a. Controlled broad brush planes, coloured local-hue dark edges without black outlines."
+  },
+  "tools": [
+    {
+      "name": "image_generation (Codex built-in)",
+      "version": "not exposed"
+    },
+    {
+      "name": "Python",
+      "version": "3.11",
+      "packages": [
+        "Pillow",
+        "numpy",
+        "scipy"
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "id": "Heroes/tidal_idle",
+      "size": [
+        400,
+        400
+      ],
+      "status": "delivered",
+      "reason": "Production pending",
+      "master": "source/masters/Heroes/tidal_idle@2x.png",
+      "export": "exports/Art/Heroes/tidal_idle.png",
+      "rawSize": [
+        1254,
+        1254
+      ],
+      "source": "source/sheets/tidal_idle.png",
+      "prompt": "source/prompts/tidal_idle.json",
+      "cleanup": "source/scripts/produce.py",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reference-guided original generation; identity, material and pose reviewed in offline sheets. Owner approval pending.",
+      "registration": {
+        "uniformScale": 0.48258745666561614,
+        "sourceCropSize": [
+          1254,
+          1254
+        ],
+        "annotatedHeadToFootExport": 245.0,
+        "annotatedTorsoExportX": 199.8760833595966,
+        "annotationNote": "Manual approximate source head/torso landmarks; not automated anatomy detection."
+      }
+    },
+    {
+      "id": "Heroes/tidal_cast",
+      "size": [
+        400,
+        400
+      ],
+      "status": "delivered",
+      "reason": "Production pending",
+      "master": "source/masters/Heroes/tidal_cast@2x.png",
+      "export": "exports/Art/Heroes/tidal_cast.png",
+      "rawSize": [
+        1672,
+        941
+      ],
+      "source": "source/sheets/tidal_base_actions.png",
+      "prompt": "source/prompts/tidal_base_actions.json",
+      "cleanup": "source/scripts/produce.py",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reference-guided original generation; identity, material and pose reviewed in offline sheets. Owner approval pending.",
+      "registration": {
+        "uniformScale": 0.651685393258427,
+        "sourceCropSize": [
+          769,
+          941
+        ],
+        "annotatedHeadToFootExport": 231.34179775280901,
+        "annotatedTorsoExportX": 199.83741573033709,
+        "annotationNote": "Manual approximate source head/torso landmarks; not automated anatomy detection."
+      }
+    },
+    {
+      "id": "Heroes/tidal_downed",
+      "size": [
+        400,
+        400
+      ],
+      "status": "delivered",
+      "reason": "Production pending",
+      "master": "source/masters/Heroes/tidal_downed@2x.png",
+      "export": "exports/Art/Heroes/tidal_downed.png",
+      "rawSize": [
+        1254,
+        1254
+      ],
+      "source": "source/sheets/tidal_base_poses.png",
+      "prompt": "source/prompts/tidal_base_poses.json",
+      "cleanup": "source/scripts/produce.py",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reference-guided original generation; identity, material and pose reviewed in offline sheets. Owner approval pending.",
+      "registration": {
+        "uniformScale": 0.860719874804382,
+        "sourceCropSize": [
+          614,
+          464
+        ],
+        "annotatedHeadToFootExport": 165.0,
+        "annotatedTorsoExportX": 200.7566510172144,
+        "annotationNote": "Manual approximate source head/torso landmarks; not automated anatomy detection."
+      }
+    },
+    {
+      "id": "Heroes/tidal_evoA",
+      "size": [
+        400,
+        400
+      ],
+      "status": "delivered",
+      "reason": "Production pending",
+      "master": "source/masters/Heroes/tidal_evoA@2x.png",
+      "export": "exports/Art/Heroes/tidal_evoA.png",
+      "rawSize": [
+        1254,
+        1254
+      ],
+      "source": "source/sheets/tidal_evoA.png",
+      "prompt": "source/prompts/tidal_evoA.json",
+      "cleanup": "source/scripts/produce.py",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reference-guided original generation; identity, material and pose reviewed in offline sheets. Owner approval pending.",
+      "registration": {
+        "uniformScale": 0.44448072858555343,
+        "sourceCropSize": [
+          1254,
+          1254
+        ],
+        "annotatedHeadToFootExport": 245.0,
+        "annotatedTorsoExportX": 200.09288286572146,
+        "annotationNote": "Manual approximate source head/torso landmarks; not automated anatomy detection."
+      }
+    },
+    {
+      "id": "Heroes/tidal_evoA_cast",
+      "size": [
+        400,
+        400
+      ],
+      "status": "delivered",
+      "reason": "Production pending",
+      "master": "source/masters/Heroes/tidal_evoA_cast@2x.png",
+      "export": "exports/Art/Heroes/tidal_evoA_cast.png",
+      "rawSize": [
+        1983,
+        793
+      ],
+      "source": "source/sheets/tidal_evoA_actions.png",
+      "prompt": "source/prompts/tidal_evoA_actions.json",
+      "cleanup": "source/scripts/produce.py",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reference-guided original generation; identity, material and pose reviewed in offline sheets. Owner approval pending.",
+      "registration": {
+        "uniformScale": 0.7380518443764968,
+        "sourceCropSize": [
+          912,
+          793
+        ],
+        "annotatedHeadToFootExport": 245.0,
+        "annotatedTorsoExportX": 200.79197481586363,
+        "annotationNote": "Manual approximate source head/torso landmarks; not automated anatomy detection."
+      }
+    },
+    {
+      "id": "Heroes/tidal_evoB",
+      "size": [
+        400,
+        400
+      ],
+      "status": "delivered",
+      "reason": "Production pending",
+      "master": "source/masters/Heroes/tidal_evoB@2x.png",
+      "export": "exports/Art/Heroes/tidal_evoB.png",
+      "rawSize": [
+        1254,
+        1254
+      ],
+      "source": "source/sheets/tidal_evoB.png",
+      "prompt": "source/prompts/tidal_evoB.json",
+      "cleanup": "source/scripts/produce.py",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reference-guided original generation; identity, material and pose reviewed in offline sheets. Owner approval pending.",
+      "registration": {
+        "uniformScale": 0.43392784399851225,
+        "sourceCropSize": [
+          1254,
+          1254
+        ],
+        "annotatedHeadToFootExport": 245.0,
+        "annotatedTorsoExportX": 200.08037406351286,
+        "annotationNote": "Manual approximate source head/torso landmarks; not automated anatomy detection."
+      }
+    },
+    {
+      "id": "Heroes/tidal_evoB_cast",
+      "size": [
+        400,
+        400
+      ],
+      "status": "delivered",
+      "reason": "Production pending",
+      "master": "source/masters/Heroes/tidal_evoB_cast@2x.png",
+      "export": "exports/Art/Heroes/tidal_evoB_cast.png",
+      "rawSize": [
+        1672,
+        941
+      ],
+      "source": "source/sheets/tidal_evoB_actions.png",
+      "prompt": "source/prompts/tidal_evoB_actions.json",
+      "cleanup": "source/scripts/produce.py",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reference-guided original generation; identity, material and pose reviewed in offline sheets. Owner approval pending.",
+      "registration": {
+        "uniformScale": 0.5568498210125575,
+        "sourceCropSize": [
+          836,
+          941
+        ],
+        "annotatedHeadToFootExport": 245.0,
+        "annotatedTorsoExportX": 199.83902494459915,
+        "annotationNote": "Manual approximate source head/torso landmarks; not automated anatomy detection."
+      }
+    },
+    {
+      "id": "Portraits/tidal",
+      "size": [
+        192,
+        192
+      ],
+      "status": "delivered",
+      "reason": "Production pending",
+      "master": "source/masters/Portraits/tidal@2x.png",
+      "export": "exports/Art/Portraits/tidal.png",
+      "rawSize": [
+        1254,
+        1254
+      ],
+      "source": "source/sheets/tidal_base_poses.png",
+      "prompt": "source/prompts/tidal_base_poses.json",
+      "cleanup": "source/scripts/produce.py",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reference-guided original generation; identity, material and pose reviewed in offline sheets. Owner approval pending.",
+      "registration": {}
+    },
+    {
+      "id": "Heroes/raiden_idle",
+      "size": [
+        400,
+        400
+      ],
+      "status": "delivered",
+      "reason": "Production pending",
+      "master": "source/masters/Heroes/raiden_idle@2x.png",
+      "export": "exports/Art/Heroes/raiden_idle.png",
+      "rawSize": [
+        1254,
+        1254
+      ],
+      "source": "source/sheets/raiden_idle.png",
+      "prompt": "source/prompts/raiden_idle.json",
+      "cleanup": "source/scripts/produce.py",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reference-guided original generation; identity, material and pose reviewed in offline sheets. Owner approval pending.",
+      "registration": {
+        "uniformScale": 0.5129815745393634,
+        "sourceCropSize": [
+          1254,
+          1254
+        ],
+        "annotatedHeadToFootExport": 245.0,
+        "annotatedTorsoExportX": 200.21053182579564,
+        "annotationNote": "Manual approximate source head/torso landmarks; not automated anatomy detection."
+      }
+    },
+    {
+      "id": "Heroes/raiden_cast",
+      "size": [
+        400,
+        400
+      ],
+      "status": "delivered",
+      "reason": "Production pending",
+      "master": "source/masters/Heroes/raiden_cast@2x.png",
+      "export": "exports/Art/Heroes/raiden_cast.png",
+      "rawSize": [
+        1254,
+        1254
+      ],
+      "source": "source/sheets/raiden_base.png",
+      "prompt": "source/prompts/raiden_base.json",
+      "cleanup": "source/scripts/produce.py",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reference-guided original generation; identity, material and pose reviewed in offline sheets. Owner approval pending.",
+      "registration": {
+        "uniformScale": 0.8300863967474166,
+        "sourceCropSize": [
+          614,
+          677
+        ],
+        "annotatedHeadToFootExport": 244.99999999999997,
+        "annotatedTorsoExportX": 200.15949517194645,
+        "annotationNote": "Manual approximate source head/torso landmarks; not automated anatomy detection."
+      }
+    },
+    {
+      "id": "Heroes/raiden_downed",
+      "size": [
+        400,
+        400
+      ],
+      "status": "delivered",
+      "reason": "Production pending",
+      "master": "source/masters/Heroes/raiden_downed@2x.png",
+      "export": "exports/Art/Heroes/raiden_downed.png",
+      "rawSize": [
+        1254,
+        1254
+      ],
+      "source": "source/sheets/raiden_base.png",
+      "prompt": "source/prompts/raiden_base.json",
+      "cleanup": "source/scripts/produce.py",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reference-guided original generation; identity, material and pose reviewed in offline sheets. Owner approval pending.",
+      "registration": {
+        "uniformScale": 0.6948538701254948,
+        "sourceCropSize": [
+          627,
+          526
+        ],
+        "annotatedHeadToFootExport": 165.0,
+        "annotatedTorsoExportX": 200.10315421544684,
+        "annotationNote": "Manual approximate source head/torso landmarks; not automated anatomy detection."
+      }
+    },
+    {
+      "id": "Heroes/raiden_evoA",
+      "size": [
+        400,
+        400
+      ],
+      "status": "delivered",
+      "reason": "Production pending",
+      "master": "source/masters/Heroes/raiden_evoA@2x.png",
+      "export": "exports/Art/Heroes/raiden_evoA.png",
+      "rawSize": [
+        1254,
+        1254
+      ],
+      "source": "source/sheets/raiden_evoA.png",
+      "prompt": "source/prompts/raiden_evoA.json",
+      "cleanup": "source/scripts/produce.py",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reference-guided original generation; identity, material and pose reviewed in offline sheets. Owner approval pending.",
+      "registration": {
+        "uniformScale": 0.4521963824289406,
+        "sourceCropSize": [
+          1254,
+          1254
+        ],
+        "annotatedHeadToFootExport": 245.0,
+        "annotatedTorsoExportX": 200.15633074935403,
+        "annotationNote": "Manual approximate source head/torso landmarks; not automated anatomy detection."
+      }
+    },
+    {
+      "id": "Heroes/raiden_evoA_cast",
+      "size": [
+        400,
+        400
+      ],
+      "status": "delivered",
+      "reason": "Production pending",
+      "master": "source/masters/Heroes/raiden_evoA_cast@2x.png",
+      "export": "exports/Art/Heroes/raiden_evoA_cast.png",
+      "rawSize": [
+        1672,
+        941
+      ],
+      "source": "source/sheets/raiden_evoA_actions.png",
+      "prompt": "source/prompts/raiden_evoA_actions.json",
+      "cleanup": "source/scripts/produce.py",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reference-guided original generation; identity, material and pose reviewed in offline sheets. Owner approval pending.",
+      "registration": {
+        "uniformScale": 0.6026467260294189,
+        "sourceCropSize": [
+          686,
+          941
+        ],
+        "annotatedHeadToFootExport": 244.99999999999997,
+        "annotatedTorsoExportX": 199.75992522261032,
+        "annotationNote": "Manual approximate source head/torso landmarks; not automated anatomy detection."
+      }
+    },
+    {
+      "id": "Heroes/raiden_evoB",
+      "size": [
+        400,
+        400
+      ],
+      "status": "delivered",
+      "reason": "Production pending",
+      "master": "source/masters/Heroes/raiden_evoB@2x.png",
+      "export": "exports/Art/Heroes/raiden_evoB.png",
+      "rawSize": [
+        1254,
+        1254
+      ],
+      "source": "source/sheets/raiden_evoB.png",
+      "prompt": "source/prompts/raiden_evoB.json",
+      "cleanup": "source/scripts/produce.py",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reference-guided original generation; identity, material and pose reviewed in offline sheets. Owner approval pending.",
+      "registration": {
+        "uniformScale": 0.4637867716654678,
+        "sourceCropSize": [
+          1254,
+          1254
+        ],
+        "annotatedHeadToFootExport": 245.0,
+        "annotatedTorsoExportX": 199.77675765721426,
+        "annotationNote": "Manual approximate source head/torso landmarks; not automated anatomy detection."
+      }
+    },
+    {
+      "id": "Heroes/raiden_evoB_cast",
+      "size": [
+        400,
+        400
+      ],
+      "status": "delivered",
+      "reason": "Production pending",
+      "master": "source/masters/Heroes/raiden_evoB_cast@2x.png",
+      "export": "exports/Art/Heroes/raiden_evoB_cast.png",
+      "rawSize": [
+        1983,
+        793
+      ],
+      "source": "source/sheets/raiden_evoB_actions.png",
+      "prompt": "source/prompts/raiden_evoB_actions.json",
+      "cleanup": "source/scripts/produce.py",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reference-guided original generation; identity, material and pose reviewed in offline sheets. Owner approval pending.",
+      "registration": {
+        "uniformScale": 0.7447034864281589,
+        "sourceCropSize": [
+          873,
+          793
+        ],
+        "annotatedHeadToFootExport": 245.0,
+        "annotatedTorsoExportX": 227.7620900331317,
+        "annotationNote": "Manual approximate source head/torso landmarks; not automated anatomy detection."
+      }
+    },
+    {
+      "id": "Portraits/raiden",
+      "size": [
+        192,
+        192
+      ],
+      "status": "delivered",
+      "reason": "Production pending",
+      "master": "source/masters/Portraits/raiden@2x.png",
+      "export": "exports/Art/Portraits/raiden.png",
+      "rawSize": [
+        1254,
+        1254
+      ],
+      "source": "source/sheets/raiden_base.png",
+      "prompt": "source/prompts/raiden_base.json",
+      "cleanup": "source/scripts/produce.py",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reference-guided original generation; identity, material and pose reviewed in offline sheets. Owner approval pending.",
+      "registration": {}
+    },
+    {
+      "id": "Heroes/glacius_idle",
+      "size": [
+        400,
+        400
+      ],
+      "status": "delivered",
+      "reason": "Production pending",
+      "master": "source/masters/Heroes/glacius_idle@2x.png",
+      "export": "exports/Art/Heroes/glacius_idle.png",
+      "rawSize": [
+        1254,
+        1254
+      ],
+      "source": "source/sheets/glacius_idle.png",
+      "prompt": "source/prompts/glacius_idle.json",
+      "cleanup": "source/scripts/produce.py",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reference-guided original generation; identity, material and pose reviewed in offline sheets. Owner approval pending.",
+      "registration": {
+        "uniformScale": 0.5023786089238845,
+        "sourceCropSize": [
+          1254,
+          1254
+        ],
+        "annotatedHeadToFootExport": 245.0,
+        "annotatedTorsoExportX": 200.1419783464567,
+        "annotationNote": "Manual approximate source head/torso landmarks; not automated anatomy detection."
+      }
+    },
+    {
+      "id": "Heroes/glacius_cast",
+      "size": [
+        400,
+        400
+      ],
+      "status": "delivered",
+      "reason": "Production pending",
+      "master": "source/masters/Heroes/glacius_cast@2x.png",
+      "export": "exports/Art/Heroes/glacius_cast.png",
+      "rawSize": [
+        1254,
+        1254
+      ],
+      "source": "source/sheets/glacius_base.png",
+      "prompt": "source/prompts/glacius_base.json",
+      "cleanup": "source/scripts/produce.py",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reference-guided original generation; identity, material and pose reviewed in offline sheets. Owner approval pending.",
+      "registration": {
+        "uniformScale": 0.8855955178022773,
+        "sourceCropSize": [
+          665,
+          627
+        ],
+        "annotatedHeadToFootExport": 245.0,
+        "annotatedTorsoExportX": 199.98508946322067,
+        "annotationNote": "Manual approximate source head/torso landmarks; not automated anatomy detection."
+      }
+    },
+    {
+      "id": "Heroes/glacius_downed",
+      "size": [
+        400,
+        400
+      ],
+      "status": "delivered",
+      "reason": "Production pending",
+      "master": "source/masters/Heroes/glacius_downed@2x.png",
+      "export": "exports/Art/Heroes/glacius_downed.png",
+      "rawSize": [
+        1254,
+        1254
+      ],
+      "source": "source/sheets/glacius_base.png",
+      "prompt": "source/prompts/glacius_base.json",
+      "cleanup": "source/scripts/produce.py",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reference-guided original generation; identity, material and pose reviewed in offline sheets. Owner approval pending.",
+      "registration": {
+        "uniformScale": 0.6721662083715246,
+        "sourceCropSize": [
+          627,
+          521
+        ],
+        "annotatedHeadToFootExport": 165.0,
+        "annotatedTorsoExportX": 200.2322028719829,
+        "annotationNote": "Manual approximate source head/torso landmarks; not automated anatomy detection."
+      }
+    },
+    {
+      "id": "Heroes/glacius_evoA",
+      "size": [
+        400,
+        400
+      ],
+      "status": "delivered",
+      "reason": "Production pending",
+      "master": "source/masters/Heroes/glacius_evoA@2x.png",
+      "export": "exports/Art/Heroes/glacius_evoA.png",
+      "rawSize": [
+        1254,
+        1254
+      ],
+      "source": "source/sheets/glacius_evoA.png",
+      "prompt": "source/prompts/glacius_evoA.json",
+      "cleanup": "source/scripts/produce.py",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reference-guided original generation; identity, material and pose reviewed in offline sheets. Owner approval pending.",
+      "registration": {
+        "uniformScale": 0.4526475261427041,
+        "sourceCropSize": [
+          1254,
+          1254
+        ],
+        "annotatedHeadToFootExport": 245.0,
+        "annotatedTorsoExportX": 199.79534789195583,
+        "annotationNote": "Manual approximate source head/torso landmarks; not automated anatomy detection."
+      }
+    },
+    {
+      "id": "Heroes/glacius_evoA_cast",
+      "size": [
+        400,
+        400
+      ],
+      "status": "delivered",
+      "reason": "Production pending",
+      "master": "source/masters/Heroes/glacius_evoA_cast@2x.png",
+      "export": "exports/Art/Heroes/glacius_evoA_cast.png",
+      "rawSize": [
+        1983,
+        793
+      ],
+      "source": "source/sheets/glacius_evoA_actions.png",
+      "prompt": "source/prompts/glacius_evoA_actions.json",
+      "cleanup": "source/scripts/produce.py",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reference-guided original generation; identity, material and pose reviewed in offline sheets. Owner approval pending.",
+      "registration": {
+        "uniformScale": 0.7326883681983343,
+        "sourceCropSize": [
+          863,
+          793
+        ],
+        "annotatedHeadToFootExport": 245.0,
+        "annotatedTorsoExportX": 200.561329006983,
+        "annotationNote": "Manual approximate source head/torso landmarks; not automated anatomy detection."
+      }
+    },
+    {
+      "id": "Heroes/glacius_evoB",
+      "size": [
+        400,
+        400
+      ],
+      "status": "delivered",
+      "reason": "Production pending",
+      "master": "source/masters/Heroes/glacius_evoB@2x.png",
+      "export": "exports/Art/Heroes/glacius_evoB.png",
+      "rawSize": [
+        1254,
+        1254
+      ],
+      "source": "source/sheets/glacius_evoB.png",
+      "prompt": "source/prompts/glacius_evoB.json",
+      "cleanup": "source/scripts/produce.py",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reference-guided original generation; identity, material and pose reviewed in offline sheets. Owner approval pending.",
+      "registration": {
+        "uniformScale": 0.475312833446503,
+        "sourceCropSize": [
+          1254,
+          1254
+        ],
+        "annotatedHeadToFootExport": 245.0,
+        "annotatedTorsoExportX": 199.76646619458725,
+        "annotationNote": "Manual approximate source head/torso landmarks; not automated anatomy detection."
+      }
+    },
+    {
+      "id": "Heroes/glacius_evoB_cast",
+      "size": [
+        400,
+        400
+      ],
+      "status": "delivered",
+      "reason": "Production pending",
+      "master": "source/masters/Heroes/glacius_evoB_cast@2x.png",
+      "export": "exports/Art/Heroes/glacius_evoB_cast.png",
+      "rawSize": [
+        1672,
+        941
+      ],
+      "source": "source/sheets/glacius_evoB_actions.png",
+      "prompt": "source/prompts/glacius_evoB_actions.json",
+      "cleanup": "source/scripts/produce.py",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reference-guided original generation; identity, material and pose reviewed in offline sheets. Owner approval pending.",
+      "registration": {
+        "uniformScale": 0.6361488328616312,
+        "sourceCropSize": [
+          811,
+          941
+        ],
+        "annotatedHeadToFootExport": 245.0,
+        "annotatedTorsoExportX": 199.77973671227898,
+        "annotationNote": "Manual approximate source head/torso landmarks; not automated anatomy detection."
+      }
+    },
+    {
+      "id": "Portraits/glacius",
+      "size": [
+        192,
+        192
+      ],
+      "status": "delivered",
+      "reason": "Production pending",
+      "master": "source/masters/Portraits/glacius@2x.png",
+      "export": "exports/Art/Portraits/glacius.png",
+      "rawSize": [
+        1254,
+        1254
+      ],
+      "source": "source/sheets/glacius_base.png",
+      "prompt": "source/prompts/glacius_base.json",
+      "cleanup": "source/scripts/produce.py",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reference-guided original generation; identity, material and pose reviewed in offline sheets. Owner approval pending.",
+      "registration": {}
+    },
+    {
+      "id": "Heroes/zephyr_idle",
+      "size": [
+        400,
+        400
+      ],
+      "status": "delivered",
+      "reason": "Production pending",
+      "master": "source/masters/Heroes/zephyr_idle@2x.png",
+      "export": "exports/Art/Heroes/zephyr_idle.png",
+      "rawSize": [
+        1254,
+        1254
+      ],
+      "source": "source/sheets/zephyr_idle.png",
+      "prompt": "source/prompts/zephyr_idle.json",
+      "cleanup": "source/scripts/produce.py",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reference-guided original generation; identity, material and pose reviewed in offline sheets. Owner approval pending.",
+      "registration": {
+        "uniformScale": 0.4372345361744655,
+        "sourceCropSize": [
+          1254,
+          1254
+        ],
+        "annotatedHeadToFootExport": 245.00000000000003,
+        "annotatedTorsoExportX": 200.2021094335582,
+        "annotationNote": "Manual approximate source head/torso landmarks; not automated anatomy detection."
+      }
+    },
+    {
+      "id": "Heroes/zephyr_cast",
+      "size": [
+        400,
+        400
+      ],
+      "status": "delivered",
+      "reason": "Production pending",
+      "master": "source/masters/Heroes/zephyr_cast@2x.png",
+      "export": "exports/Art/Heroes/zephyr_cast.png",
+      "rawSize": [
+        1254,
+        1254
+      ],
+      "source": "source/sheets/zephyr_base.png",
+      "prompt": "source/prompts/zephyr_base.json",
+      "cleanup": "source/scripts/produce.py",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reference-guided original generation; identity, material and pose reviewed in offline sheets. Owner approval pending.",
+      "registration": {
+        "uniformScale": 0.8999247001781483,
+        "sourceCropSize": [
+          627,
+          627
+        ],
+        "annotatedHeadToFootExport": 245.0,
+        "annotatedTorsoExportX": 200.0078330180536,
+        "annotationNote": "Manual approximate source head/torso landmarks; not automated anatomy detection."
+      }
+    },
+    {
+      "id": "Heroes/zephyr_downed",
+      "size": [
+        400,
+        400
+      ],
+      "status": "delivered",
+      "reason": "Production pending",
+      "master": "source/masters/Heroes/zephyr_downed@2x.png",
+      "export": "exports/Art/Heroes/zephyr_downed.png",
+      "rawSize": [
+        1254,
+        1254
+      ],
+      "source": "source/sheets/zephyr_base.png",
+      "prompt": "source/prompts/zephyr_base.json",
+      "cleanup": "source/scripts/produce.py",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reference-guided original generation; identity, material and pose reviewed in offline sheets. Owner approval pending.",
+      "registration": {
+        "uniformScale": 0.7093418167748592,
+        "sourceCropSize": [
+          614,
+          489
+        ],
+        "annotatedHeadToFootExport": 165.0,
+        "annotatedTorsoExportX": 200.01631486178582,
+        "annotationNote": "Manual approximate source head/torso landmarks; not automated anatomy detection."
+      }
+    },
+    {
+      "id": "Heroes/zephyr_evoA",
+      "size": [
+        400,
+        400
+      ],
+      "status": "delivered",
+      "reason": "Production pending",
+      "master": "source/masters/Heroes/zephyr_evoA@2x.png",
+      "export": "exports/Art/Heroes/zephyr_evoA.png",
+      "rawSize": [
+        1254,
+        1254
+      ],
+      "source": "source/sheets/zephyr_evoA.png",
+      "prompt": "source/prompts/zephyr_evoA.json",
+      "cleanup": "source/scripts/produce.py",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reference-guided original generation; identity, material and pose reviewed in offline sheets. Owner approval pending.",
+      "registration": {
+        "uniformScale": 0.43201495300735304,
+        "sourceCropSize": [
+          1254,
+          1254
+        ],
+        "annotatedHeadToFootExport": 245.0,
+        "annotatedTorsoExportX": 200.12405000793498,
+        "annotationNote": "Manual approximate source head/torso landmarks; not automated anatomy detection."
+      }
+    },
+    {
+      "id": "Heroes/zephyr_evoA_cast",
+      "size": [
+        400,
+        400
+      ],
+      "status": "delivered",
+      "reason": "Production pending",
+      "master": "source/masters/Heroes/zephyr_evoA_cast@2x.png",
+      "export": "exports/Art/Heroes/zephyr_evoA_cast.png",
+      "rawSize": [
+        1983,
+        793
+      ],
+      "source": "source/sheets/zephyr_evoA_actions.png",
+      "prompt": "source/prompts/zephyr_evoA_actions.json",
+      "cleanup": "source/scripts/produce.py",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reference-guided original generation; identity, material and pose reviewed in offline sheets. Owner approval pending.",
+      "registration": {
+        "uniformScale": 0.7051983190374762,
+        "sourceCropSize": [
+          942,
+          793
+        ],
+        "annotatedHeadToFootExport": 245.0,
+        "annotatedTorsoExportX": 204.02912900811694,
+        "annotationNote": "Manual approximate source head/torso landmarks; not automated anatomy detection."
+      }
+    },
+    {
+      "id": "Heroes/zephyr_evoB",
+      "size": [
+        400,
+        400
+      ],
+      "status": "delivered",
+      "reason": "Production pending",
+      "master": "source/masters/Heroes/zephyr_evoB@2x.png",
+      "export": "exports/Art/Heroes/zephyr_evoB.png",
+      "rawSize": [
+        1254,
+        1254
+      ],
+      "source": "source/sheets/zephyr_evoB.png",
+      "prompt": "source/prompts/zephyr_evoB.json",
+      "cleanup": "source/scripts/produce.py",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reference-guided original generation; identity, material and pose reviewed in offline sheets. Owner approval pending.",
+      "registration": {
+        "uniformScale": 0.42674748741530366,
+        "sourceCropSize": [
+          1254,
+          1254
+        ],
+        "annotatedHeadToFootExport": 245.0,
+        "annotatedTorsoExportX": 199.77511278326455,
+        "annotationNote": "Manual approximate source head/torso landmarks; not automated anatomy detection."
+      }
+    },
+    {
+      "id": "Heroes/zephyr_evoB_cast",
+      "size": [
+        400,
+        400
+      ],
+      "status": "delivered",
+      "reason": "Production pending",
+      "master": "source/masters/Heroes/zephyr_evoB_cast@2x.png",
+      "export": "exports/Art/Heroes/zephyr_evoB_cast.png",
+      "rawSize": [
+        1672,
+        941
+      ],
+      "source": "source/sheets/zephyr_evoB_actions.png",
+      "prompt": "source/prompts/zephyr_evoB_actions.json",
+      "cleanup": "source/scripts/produce.py",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reference-guided original generation; identity, material and pose reviewed in offline sheets. Owner approval pending.",
+      "registration": {
+        "uniformScale": 0.5686301814974701,
+        "sourceCropSize": [
+          844,
+          941
+        ],
+        "annotatedHeadToFootExport": 245.0,
+        "annotatedTorsoExportX": 200.24878150675391,
+        "annotationNote": "Manual approximate source head/torso landmarks; not automated anatomy detection."
+      }
+    },
+    {
+      "id": "Portraits/zephyr",
+      "size": [
+        192,
+        192
+      ],
+      "status": "delivered",
+      "reason": "Production pending",
+      "master": "source/masters/Portraits/zephyr@2x.png",
+      "export": "exports/Art/Portraits/zephyr.png",
+      "rawSize": [
+        1254,
+        1254
+      ],
+      "source": "source/sheets/zephyr_base.png",
+      "prompt": "source/prompts/zephyr_base.json",
+      "cleanup": "source/scripts/produce.py",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reference-guided original generation; identity, material and pose reviewed in offline sheets. Owner approval pending.",
+      "registration": {}
+    },
+    {
+      "id": "Heroes/magnus_idle",
+      "size": [
+        400,
+        400
+      ],
+      "status": "delivered",
+      "reason": "Production pending",
+      "master": "source/masters/Heroes/magnus_idle@2x.png",
+      "export": "exports/Art/Heroes/magnus_idle.png",
+      "rawSize": [
+        1254,
+        1254
+      ],
+      "source": "source/sheets/magnus_idle.png",
+      "prompt": "source/prompts/magnus_idle.json",
+      "cleanup": "source/scripts/produce.py",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reference-guided original generation; identity, material and pose reviewed in offline sheets. Owner approval pending.",
+      "registration": {
+        "uniformScale": 0.41957802438690234,
+        "sourceCropSize": [
+          1254,
+          1254
+        ],
+        "annotatedHeadToFootExport": 245.0,
+        "annotatedTorsoExportX": 200.1420057542129,
+        "annotationNote": "Manual approximate source head/torso landmarks; not automated anatomy detection."
+      }
+    },
+    {
+      "id": "Heroes/magnus_cast",
+      "size": [
+        400,
+        400
+      ],
+      "status": "delivered",
+      "reason": "Production pending",
+      "master": "source/masters/Heroes/magnus_cast@2x.png",
+      "export": "exports/Art/Heroes/magnus_cast.png",
+      "rawSize": [
+        1254,
+        1254
+      ],
+      "source": "source/sheets/magnus_base_alpha.png",
+      "prompt": "source/prompts/magnus_base_alpha.json",
+      "cleanup": "source/scripts/produce.py",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reference-guided original generation; identity, material and pose reviewed in offline sheets. Owner approval pending.",
+      "registration": {
+        "uniformScale": 0.9685708638070766,
+        "sourceCropSize": [
+          627,
+          614
+        ],
+        "annotatedHeadToFootExport": 245.0,
+        "annotatedTorsoExportX": 200.05366673255588,
+        "annotationNote": "Manual approximate source head/torso landmarks; not automated anatomy detection."
+      }
+    },
+    {
+      "id": "Heroes/magnus_downed",
+      "size": [
+        400,
+        400
+      ],
+      "status": "delivered",
+      "reason": "Production pending",
+      "master": "source/masters/Heroes/magnus_downed@2x.png",
+      "export": "exports/Art/Heroes/magnus_downed.png",
+      "rawSize": [
+        1254,
+        1254
+      ],
+      "source": "source/sheets/magnus_base_alpha.png",
+      "prompt": "source/prompts/magnus_base_alpha.json",
+      "cleanup": "source/scripts/produce.py",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reference-guided original generation; identity, material and pose reviewed in offline sheets. Owner approval pending.",
+      "registration": {
+        "uniformScale": 0.7296849087893864,
+        "sourceCropSize": [
+          614,
+          495
+        ],
+        "annotatedHeadToFootExport": 165.0,
+        "annotatedTorsoExportX": 200.17031509121063,
+        "annotationNote": "Manual approximate source head/torso landmarks; not automated anatomy detection."
+      }
+    },
+    {
+      "id": "Heroes/magnus_evoA",
+      "size": [
+        400,
+        400
+      ],
+      "status": "delivered",
+      "reason": "Production pending",
+      "master": "source/masters/Heroes/magnus_evoA@2x.png",
+      "export": "exports/Art/Heroes/magnus_evoA.png",
+      "rawSize": [
+        1254,
+        1254
+      ],
+      "source": "source/sheets/magnus_evoA.png",
+      "prompt": "source/prompts/magnus_evoA.json",
+      "cleanup": "source/scripts/produce.py",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reference-guided original generation; identity, material and pose reviewed in offline sheets. Owner approval pending.",
+      "registration": {
+        "uniformScale": 0.4177892977729273,
+        "sourceCropSize": [
+          1254,
+          1254
+        ],
+        "annotatedHeadToFootExport": 245.0,
+        "annotatedTorsoExportX": 199.9155042461035,
+        "annotationNote": "Manual approximate source head/torso landmarks; not automated anatomy detection."
+      }
+    },
+    {
+      "id": "Heroes/magnus_evoA_cast",
+      "size": [
+        400,
+        400
+      ],
+      "status": "delivered",
+      "reason": "Production pending",
+      "master": "source/masters/Heroes/magnus_evoA_cast@2x.png",
+      "export": "exports/Art/Heroes/magnus_evoA_cast.png",
+      "rawSize": [
+        1672,
+        940
+      ],
+      "source": "source/sheets/magnus_evoA_actions.png",
+      "prompt": "source/prompts/magnus_evoA_actions.json",
+      "cleanup": "source/scripts/produce.py",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reference-guided original generation; identity, material and pose reviewed in offline sheets. Owner approval pending.",
+      "registration": {
+        "uniformScale": 0.6246812850586436,
+        "sourceCropSize": [
+          777,
+          940
+        ],
+        "annotatedHeadToFootExport": 245.00000000000003,
+        "annotatedTorsoExportX": 199.78352881183073,
+        "annotationNote": "Manual approximate source head/torso landmarks; not automated anatomy detection."
+      }
+    },
+    {
+      "id": "Heroes/magnus_evoB",
+      "size": [
+        400,
+        400
+      ],
+      "status": "delivered",
+      "reason": "Production pending",
+      "master": "source/masters/Heroes/magnus_evoB@2x.png",
+      "export": "exports/Art/Heroes/magnus_evoB.png",
+      "rawSize": [
+        1254,
+        1254
+      ],
+      "source": "source/sheets/magnus_evoB.png",
+      "prompt": "source/prompts/magnus_evoB.json",
+      "cleanup": "source/scripts/produce.py",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reference-guided original generation; identity, material and pose reviewed in offline sheets. Owner approval pending.",
+      "registration": {
+        "uniformScale": 0.4170780702053046,
+        "sourceCropSize": [
+          1254,
+          1254
+        ],
+        "annotatedHeadToFootExport": 245.0,
+        "annotatedTorsoExportX": 199.9185591229444,
+        "annotationNote": "Manual approximate source head/torso landmarks; not automated anatomy detection."
+      }
+    },
+    {
+      "id": "Heroes/magnus_evoB_cast",
+      "size": [
+        400,
+        400
+      ],
+      "status": "delivered",
+      "reason": "Production pending",
+      "master": "source/masters/Heroes/magnus_evoB_cast@2x.png",
+      "export": "exports/Art/Heroes/magnus_evoB_cast.png",
+      "rawSize": [
+        1983,
+        793
+      ],
+      "source": "source/sheets/magnus_evoB_actions.png",
+      "prompt": "source/prompts/magnus_evoB_actions.json",
+      "cleanup": "source/scripts/produce.py",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reference-guided original generation; identity, material and pose reviewed in offline sheets. Owner approval pending.",
+      "registration": {
+        "uniformScale": 0.703386302628368,
+        "sourceCropSize": [
+          873,
+          793
+        ],
+        "annotatedHeadToFootExport": 245.0,
+        "annotatedTorsoExportX": 199.80886553837763,
+        "annotationNote": "Manual approximate source head/torso landmarks; not automated anatomy detection."
+      }
+    },
+    {
+      "id": "Portraits/magnus",
+      "size": [
+        192,
+        192
+      ],
+      "status": "delivered",
+      "reason": "Production pending",
+      "master": "source/masters/Portraits/magnus@2x.png",
+      "export": "exports/Art/Portraits/magnus.png",
+      "rawSize": [
+        1254,
+        1254
+      ],
+      "source": "source/sheets/magnus_base_alpha.png",
+      "prompt": "source/prompts/magnus_base_alpha.json",
+      "cleanup": "source/scripts/produce.py",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reference-guided original generation; identity, material and pose reviewed in offline sheets. Owner approval pending.",
+      "registration": {}
+    },
+    {
+      "id": "Heroes/seren_idle",
+      "size": [
+        400,
+        400
+      ],
+      "status": "delivered",
+      "reason": "Production pending",
+      "master": "source/masters/Heroes/seren_idle@2x.png",
+      "export": "exports/Art/Heroes/seren_idle.png",
+      "rawSize": [
+        1254,
+        1254
+      ],
+      "source": "source/sheets/seren_idle.png",
+      "prompt": "source/prompts/seren_idle.json",
+      "cleanup": "source/scripts/produce.py",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reference-guided original generation; identity, material and pose reviewed in offline sheets. Owner approval pending.",
+      "registration": {
+        "uniformScale": 0.4445896165641388,
+        "sourceCropSize": [
+          1254,
+          1254
+        ],
+        "annotatedHeadToFootExport": 245.0,
+        "annotatedTorsoExportX": 200.16453445115866,
+        "annotationNote": "Manual approximate source head/torso landmarks; not automated anatomy detection."
+      }
+    },
+    {
+      "id": "Heroes/seren_cast",
+      "size": [
+        400,
+        400
+      ],
+      "status": "delivered",
+      "reason": "Production pending",
+      "master": "source/masters/Heroes/seren_cast@2x.png",
+      "export": "exports/Art/Heroes/seren_cast.png",
+      "rawSize": [
+        1254,
+        1254
+      ],
+      "source": "source/sheets/seren_base.png",
+      "prompt": "source/prompts/seren_base.json",
+      "cleanup": "source/scripts/produce.py",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reference-guided original generation; identity, material and pose reviewed in offline sheets. Owner approval pending.",
+      "registration": {
+        "uniformScale": 0.850399166955918,
+        "sourceCropSize": [
+          614,
+          665
+        ],
+        "annotatedHeadToFootExport": 245.0,
+        "annotatedTorsoExportX": 199.77872266574107,
+        "annotationNote": "Manual approximate source head/torso landmarks; not automated anatomy detection."
+      }
+    },
+    {
+      "id": "Heroes/seren_downed",
+      "size": [
+        400,
+        400
+      ],
+      "status": "delivered",
+      "reason": "Production pending",
+      "master": "source/masters/Heroes/seren_downed@2x.png",
+      "export": "exports/Art/Heroes/seren_downed.png",
+      "rawSize": [
+        1254,
+        1254
+      ],
+      "source": "source/sheets/seren_base.png",
+      "prompt": "source/prompts/seren_base.json",
+      "cleanup": "source/scripts/produce.py",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reference-guided original generation; identity, material and pose reviewed in offline sheets. Owner approval pending.",
+      "registration": {
+        "uniformScale": 0.6948831332912192,
+        "sourceCropSize": [
+          627,
+          502
+        ],
+        "annotatedHeadToFootExport": 165.0,
+        "annotatedTorsoExportX": 199.7634238787113,
+        "annotationNote": "Manual approximate source head/torso landmarks; not automated anatomy detection."
+      }
+    },
+    {
+      "id": "Heroes/seren_evoA",
+      "size": [
+        400,
+        400
+      ],
+      "status": "delivered",
+      "reason": "Production pending",
+      "master": "source/masters/Heroes/seren_evoA@2x.png",
+      "export": "exports/Art/Heroes/seren_evoA.png",
+      "rawSize": [
+        1254,
+        1254
+      ],
+      "source": "source/sheets/seren_evoA.png",
+      "prompt": "source/prompts/seren_evoA.json",
+      "cleanup": "source/scripts/produce.py",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reference-guided original generation; identity, material and pose reviewed in offline sheets. Owner approval pending.",
+      "registration": {
+        "uniformScale": 0.43588876830288037,
+        "sourceCropSize": [
+          1254,
+          1254
+        ],
+        "annotatedHeadToFootExport": 245.0,
+        "annotatedTorsoExportX": 199.79948227089153,
+        "annotationNote": "Manual approximate source head/torso landmarks; not automated anatomy detection."
+      }
+    },
+    {
+      "id": "Heroes/seren_evoA_cast",
+      "size": [
+        400,
+        400
+      ],
+      "status": "delivered",
+      "reason": "Production pending",
+      "master": "source/masters/Heroes/seren_evoA_cast@2x.png",
+      "export": "exports/Art/Heroes/seren_evoA_cast.png",
+      "rawSize": [
+        1983,
+        793
+      ],
+      "source": "source/sheets/seren_evoA_actions.png",
+      "prompt": "source/prompts/seren_evoA_actions.json",
+      "cleanup": "source/scripts/produce.py",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reference-guided original generation; identity, material and pose reviewed in offline sheets. Owner approval pending.",
+      "registration": {
+        "uniformScale": 0.6819193943442441,
+        "sourceCropSize": [
+          912,
+          793
+        ],
+        "annotatedHeadToFootExport": 245.0,
+        "annotatedTorsoExportX": 199.80511022044087,
+        "annotationNote": "Manual approximate source head/torso landmarks; not automated anatomy detection."
+      }
+    },
+    {
+      "id": "Heroes/seren_evoB",
+      "size": [
+        400,
+        400
+      ],
+      "status": "delivered",
+      "reason": "Production pending",
+      "master": "source/masters/Heroes/seren_evoB@2x.png",
+      "export": "exports/Art/Heroes/seren_evoB.png",
+      "rawSize": [
+        1254,
+        1254
+      ],
+      "source": "source/sheets/seren_evoB.png",
+      "prompt": "source/prompts/seren_evoB.json",
+      "cleanup": "source/scripts/produce.py",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reference-guided original generation; identity, material and pose reviewed in offline sheets. Owner approval pending.",
+      "registration": {
+        "uniformScale": 0.4793388429752066,
+        "sourceCropSize": [
+          1254,
+          1254
+        ],
+        "annotatedHeadToFootExport": 242.1523966942149,
+        "annotatedTorsoExportX": 200.13636363636363,
+        "annotationNote": "Manual approximate source head/torso landmarks; not automated anatomy detection."
+      }
+    },
+    {
+      "id": "Heroes/seren_evoB_cast",
+      "size": [
+        400,
+        400
+      ],
+      "status": "delivered",
+      "reason": "Production pending",
+      "master": "source/masters/Heroes/seren_evoB_cast@2x.png",
+      "export": "exports/Art/Heroes/seren_evoB_cast.png",
+      "rawSize": [
+        1983,
+        793
+      ],
+      "source": "source/sheets/seren_evoB_actions.png",
+      "prompt": "source/prompts/seren_evoB_actions.json",
+      "cleanup": "source/scripts/produce.py",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reference-guided original generation; identity, material and pose reviewed in offline sheets. Owner approval pending.",
+      "registration": {
+        "uniformScale": 0.7369758576874206,
+        "sourceCropSize": [
+          992,
+          793
+        ],
+        "annotatedHeadToFootExport": 234.84841168996186,
+        "annotatedTorsoExportX": 199.8561626429479,
+        "annotationNote": "Manual approximate source head/torso landmarks; not automated anatomy detection."
+      }
+    },
+    {
+      "id": "Portraits/seren",
+      "size": [
+        192,
+        192
+      ],
+      "status": "delivered",
+      "reason": "Production pending",
+      "master": "source/masters/Portraits/seren@2x.png",
+      "export": "exports/Art/Portraits/seren.png",
+      "rawSize": [
+        1254,
+        1254
+      ],
+      "source": "source/sheets/seren_base.png",
+      "prompt": "source/prompts/seren_base.json",
+      "cleanup": "source/scripts/produce.py",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reference-guided original generation; identity, material and pose reviewed in offline sheets. Owner approval pending.",
+      "registration": {}
+    },
+    {
+      "id": "Heroes/tidal_attack",
+      "size": [
+        400,
+        400
+      ],
+      "status": "delivered",
+      "reason": "Production pending",
+      "master": "source/masters/Heroes/tidal_attack@2x.png",
+      "export": "exports/Art/Heroes/tidal_attack.png",
+      "rawSize": [
+        1672,
+        941
+      ],
+      "source": "source/sheets/tidal_base_actions.png",
+      "prompt": "source/prompts/tidal_base_actions.json",
+      "cleanup": "source/scripts/produce.py",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reference-guided original generation; identity, material and pose reviewed in offline sheets. Owner approval pending.",
+      "registration": {
+        "uniformScale": 0.6882215792578443,
+        "sourceCropSize": [
+          903,
+          941
+        ],
+        "annotatedHeadToFootExport": 245.0,
+        "annotatedTorsoExportX": 196.10309278350516,
+        "annotationNote": "Manual approximate source head/torso landmarks; not automated anatomy detection."
+      }
+    },
+    {
+      "id": "Heroes/tidal_evoA_attack",
+      "size": [
+        400,
+        400
+      ],
+      "status": "delivered",
+      "reason": "Production pending",
+      "master": "source/masters/Heroes/tidal_evoA_attack@2x.png",
+      "export": "exports/Art/Heroes/tidal_evoA_attack.png",
+      "rawSize": [
+        1983,
+        793
+      ],
+      "source": "source/sheets/tidal_evoA_actions.png",
+      "prompt": "source/prompts/tidal_evoA_actions.json",
+      "cleanup": "source/scripts/produce.py",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reference-guided original generation; identity, material and pose reviewed in offline sheets. Owner approval pending.",
+      "registration": {
+        "uniformScale": 0.6128404669260701,
+        "sourceCropSize": [
+          1071,
+          793
+        ],
+        "annotatedHeadToFootExport": 203.43545719844357,
+        "annotatedTorsoExportX": 188.91332684824906,
+        "annotationNote": "Manual approximate source head/torso landmarks; not automated anatomy detection."
+      }
+    },
+    {
+      "id": "Heroes/tidal_evoB_attack",
+      "size": [
+        400,
+        400
+      ],
+      "status": "delivered",
+      "reason": "Production pending",
+      "master": "source/masters/Heroes/tidal_evoB_attack@2x.png",
+      "export": "exports/Art/Heroes/tidal_evoB_attack.png",
+      "rawSize": [
+        1672,
+        941
+      ],
+      "source": "source/sheets/tidal_evoB_actions.png",
+      "prompt": "source/prompts/tidal_evoB_actions.json",
+      "cleanup": "source/scripts/produce.py",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reference-guided original generation; identity, material and pose reviewed in offline sheets. Owner approval pending.",
+      "registration": {
+        "uniformScale": 0.557483360828261,
+        "sourceCropSize": [
+          836,
+          941
+        ],
+        "annotatedHeadToFootExport": 245.00000000000003,
+        "annotatedTorsoExportX": 199.95008248478297,
+        "annotationNote": "Manual approximate source head/torso landmarks; not automated anatomy detection."
+      }
+    },
+    {
+      "id": "Heroes/raiden_attack",
+      "size": [
+        400,
+        400
+      ],
+      "status": "delivered",
+      "reason": "Production pending",
+      "master": "source/masters/Heroes/raiden_attack@2x.png",
+      "export": "exports/Art/Heroes/raiden_attack.png",
+      "rawSize": [
+        1254,
+        1254
+      ],
+      "source": "source/sheets/raiden_base.png",
+      "prompt": "source/prompts/raiden_base.json",
+      "cleanup": "source/scripts/produce.py",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reference-guided original generation; identity, material and pose reviewed in offline sheets. Owner approval pending.",
+      "registration": {
+        "uniformScale": 0.7627118644067796,
+        "sourceCropSize": [
+          840,
+          564
+        ],
+        "annotatedHeadToFootExport": 201.63050847457626,
+        "annotatedTorsoExportX": 182.51694915254237,
+        "annotationNote": "Manual approximate source head/torso landmarks; not automated anatomy detection."
+      }
+    },
+    {
+      "id": "Heroes/raiden_evoA_attack",
+      "size": [
+        400,
+        400
+      ],
+      "status": "delivered",
+      "reason": "Production pending",
+      "master": "source/masters/Heroes/raiden_evoA_attack@2x.png",
+      "export": "exports/Art/Heroes/raiden_evoA_attack.png",
+      "rawSize": [
+        1672,
+        941
+      ],
+      "source": "source/sheets/raiden_evoA_actions.png",
+      "prompt": "source/prompts/raiden_evoA_actions.json",
+      "cleanup": "source/scripts/produce.py",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reference-guided original generation; identity, material and pose reviewed in offline sheets. Owner approval pending.",
+      "registration": {
+        "uniformScale": 0.6194063811498205,
+        "sourceCropSize": [
+          986,
+          941
+        ],
+        "annotatedHeadToFootExport": 245.0,
+        "annotatedTorsoExportX": 199.88226222379532,
+        "annotationNote": "Manual approximate source head/torso landmarks; not automated anatomy detection."
+      }
+    },
+    {
+      "id": "Heroes/raiden_evoB_attack",
+      "size": [
+        400,
+        400
+      ],
+      "status": "delivered",
+      "reason": "Production pending",
+      "master": "source/masters/Heroes/raiden_evoB_attack@2x.png",
+      "export": "exports/Art/Heroes/raiden_evoB_attack.png",
+      "rawSize": [
+        1983,
+        793
+      ],
+      "source": "source/sheets/raiden_evoB_actions.png",
+      "prompt": "source/prompts/raiden_evoB_actions.json",
+      "cleanup": "source/scripts/produce.py",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reference-guided original generation; identity, material and pose reviewed in offline sheets. Owner approval pending.",
+      "registration": {
+        "uniformScale": 0.5898876404494382,
+        "sourceCropSize": [
+          1110,
+          793
+        ],
+        "annotatedHeadToFootExport": 190.82275280898878,
+        "annotatedTorsoExportX": 175.74859550561797,
+        "annotationNote": "Manual approximate source head/torso landmarks; not automated anatomy detection."
+      }
+    },
+    {
+      "id": "Heroes/glacius_attack",
+      "size": [
+        400,
+        400
+      ],
+      "status": "delivered",
+      "reason": "Production pending",
+      "master": "source/masters/Heroes/glacius_attack@2x.png",
+      "export": "exports/Art/Heroes/glacius_attack.png",
+      "rawSize": [
+        1254,
+        1254
+      ],
+      "source": "source/sheets/glacius_base.png",
+      "prompt": "source/prompts/glacius_base.json",
+      "cleanup": "source/scripts/produce.py",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reference-guided original generation; identity, material and pose reviewed in offline sheets. Owner approval pending.",
+      "registration": {
+        "uniformScale": 0.8748125401699636,
+        "sourceCropSize": [
+          709,
+          596
+        ],
+        "annotatedHeadToFootExport": 245.0,
+        "annotatedTorsoExportX": 192.40680568449616,
+        "annotationNote": "Manual approximate source head/torso landmarks; not automated anatomy detection."
+      }
+    },
+    {
+      "id": "Heroes/glacius_evoA_attack",
+      "size": [
+        400,
+        400
+      ],
+      "status": "delivered",
+      "reason": "Production pending",
+      "master": "source/masters/Heroes/glacius_evoA_attack@2x.png",
+      "export": "exports/Art/Heroes/glacius_evoA_attack.png",
+      "rawSize": [
+        1983,
+        793
+      ],
+      "source": "source/sheets/glacius_evoA_actions.png",
+      "prompt": "source/prompts/glacius_evoA_actions.json",
+      "cleanup": "source/scripts/produce.py",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reference-guided original generation; identity, material and pose reviewed in offline sheets. Owner approval pending.",
+      "registration": {
+        "uniformScale": 0.5932203389830508,
+        "sourceCropSize": [
+          1120,
+          793
+        ],
+        "annotatedHeadToFootExport": 200.1436440677966,
+        "annotatedTorsoExportX": 192.65254237288133,
+        "annotationNote": "Manual approximate source head/torso landmarks; not automated anatomy detection."
+      }
+    },
+    {
+      "id": "Heroes/glacius_evoB_attack",
+      "size": [
+        400,
+        400
+      ],
+      "status": "delivered",
+      "reason": "Production pending",
+      "master": "source/masters/Heroes/glacius_evoB_attack@2x.png",
+      "export": "exports/Art/Heroes/glacius_evoB_attack.png",
+      "rawSize": [
+        1672,
+        941
+      ],
+      "source": "source/sheets/glacius_evoB_actions.png",
+      "prompt": "source/prompts/glacius_evoB_actions.json",
+      "cleanup": "source/scripts/produce.py",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reference-guided original generation; identity, material and pose reviewed in offline sheets. Owner approval pending.",
+      "registration": {
+        "uniformScale": 0.6361488328616312,
+        "sourceCropSize": [
+          861,
+          941
+        ],
+        "annotatedHeadToFootExport": 245.0,
+        "annotatedTorsoExportX": 199.95379482252744,
+        "annotationNote": "Manual approximate source head/torso landmarks; not automated anatomy detection."
+      }
+    },
+    {
+      "id": "Heroes/zephyr_attack",
+      "size": [
+        400,
+        400
+      ],
+      "status": "delivered",
+      "reason": "Production pending",
+      "master": "source/masters/Heroes/zephyr_attack@2x.png",
+      "export": "exports/Art/Heroes/zephyr_attack.png",
+      "rawSize": [
+        1254,
+        1254
+      ],
+      "source": "source/sheets/zephyr_base.png",
+      "prompt": "source/prompts/zephyr_base.json",
+      "cleanup": "source/scripts/produce.py",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reference-guided original generation; identity, material and pose reviewed in offline sheets. Owner approval pending.",
+      "registration": {
+        "uniformScale": 0.8666737415543528,
+        "sourceCropSize": [
+          709,
+          627
+        ],
+        "annotatedHeadToFootExport": 245.0,
+        "annotatedTorsoExportX": 185.91136934451166,
+        "annotationNote": "Manual approximate source head/torso landmarks; not automated anatomy detection."
+      }
+    },
+    {
+      "id": "Heroes/zephyr_evoA_attack",
+      "size": [
+        400,
+        400
+      ],
+      "status": "delivered",
+      "reason": "Production pending",
+      "master": "source/masters/Heroes/zephyr_evoA_attack@2x.png",
+      "export": "exports/Art/Heroes/zephyr_evoA_attack.png",
+      "rawSize": [
+        1983,
+        793
+      ],
+      "source": "source/sheets/zephyr_evoA_actions.png",
+      "prompt": "source/prompts/zephyr_evoA_actions.json",
+      "cleanup": "source/scripts/produce.py",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reference-guided original generation; identity, material and pose reviewed in offline sheets. Owner approval pending.",
+      "registration": {
+        "uniformScale": 0.6256206554121152,
+        "sourceCropSize": [
+          1041,
+          793
+        ],
+        "annotatedHeadToFootExport": 216.4146971201589,
+        "annotatedTorsoExportX": 166.49553128103278,
+        "annotationNote": "Manual approximate source head/torso landmarks; not automated anatomy detection."
+      }
+    },
+    {
+      "id": "Heroes/zephyr_evoB_attack",
+      "size": [
+        400,
+        400
+      ],
+      "status": "delivered",
+      "reason": "Production pending",
+      "master": "source/masters/Heroes/zephyr_evoB_attack@2x.png",
+      "export": "exports/Art/Heroes/zephyr_evoB_attack.png",
+      "rawSize": [
+        1672,
+        941
+      ],
+      "source": "source/sheets/zephyr_evoB_actions.png",
+      "prompt": "source/prompts/zephyr_evoB_actions.json",
+      "cleanup": "source/scripts/produce.py",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reference-guided original generation; identity, material and pose reviewed in offline sheets. Owner approval pending.",
+      "registration": {
+        "uniformScale": 0.5739586749754018,
+        "sourceCropSize": [
+          828,
+          941
+        ],
+        "annotatedHeadToFootExport": 245.0,
+        "annotatedTorsoExportX": 200.02082650049198,
+        "annotationNote": "Manual approximate source head/torso landmarks; not automated anatomy detection."
+      }
+    },
+    {
+      "id": "Heroes/magnus_attack",
+      "size": [
+        400,
+        400
+      ],
+      "status": "delivered",
+      "reason": "Production pending",
+      "master": "source/masters/Heroes/magnus_attack@2x.png",
+      "export": "exports/Art/Heroes/magnus_attack.png",
+      "rawSize": [
+        1254,
+        1254
+      ],
+      "source": "source/sheets/magnus_base_alpha.png",
+      "prompt": "source/prompts/magnus_base_alpha.json",
+      "cleanup": "source/scripts/produce.py",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reference-guided original generation; identity, material and pose reviewed in offline sheets. Owner approval pending.",
+      "registration": {
+        "uniformScale": 0.8982420120621071,
+        "sourceCropSize": [
+          614,
+          583
+        ],
+        "annotatedHeadToFootExport": 245.0,
+        "annotatedTorsoExportX": 200.0503657128192,
+        "annotationNote": "Manual approximate source head/torso landmarks; not automated anatomy detection."
+      }
+    },
+    {
+      "id": "Heroes/magnus_evoA_attack",
+      "size": [
+        400,
+        400
+      ],
+      "status": "delivered",
+      "reason": "Production pending",
+      "master": "source/masters/Heroes/magnus_evoA_attack@2x.png",
+      "export": "exports/Art/Heroes/magnus_evoA_attack.png",
+      "rawSize": [
+        1672,
+        940
+      ],
+      "source": "source/sheets/magnus_evoA_actions.png",
+      "prompt": "source/prompts/magnus_evoA_actions.json",
+      "cleanup": "source/scripts/produce.py",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reference-guided original generation; identity, material and pose reviewed in offline sheets. Owner approval pending.",
+      "registration": {
+        "uniformScale": 0.6215119228817859,
+        "sourceCropSize": [
+          895,
+          940
+        ],
+        "annotatedHeadToFootExport": 245.0,
+        "annotatedTorsoExportX": 200.15696347031962,
+        "annotationNote": "Manual approximate source head/torso landmarks; not automated anatomy detection."
+      }
+    },
+    {
+      "id": "Heroes/magnus_evoB_attack",
+      "size": [
+        400,
+        400
+      ],
+      "status": "delivered",
+      "reason": "Production pending",
+      "master": "source/masters/Heroes/magnus_evoB_attack@2x.png",
+      "export": "exports/Art/Heroes/magnus_evoB_attack.png",
+      "rawSize": [
+        1983,
+        793
+      ],
+      "source": "source/sheets/magnus_evoB_actions.png",
+      "prompt": "source/prompts/magnus_evoB_actions.json",
+      "cleanup": "source/scripts/produce.py",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reference-guided original generation; identity, material and pose reviewed in offline sheets. Owner approval pending.",
+      "registration": {
+        "uniformScale": 0.6435137895812053,
+        "sourceCropSize": [
+          1110,
+          793
+        ],
+        "annotatedHeadToFootExport": 225.75429009193053,
+        "annotatedTorsoExportX": 178.46475995914196,
+        "annotationNote": "Manual approximate source head/torso landmarks; not automated anatomy detection."
+      }
+    },
+    {
+      "id": "Heroes/seren_attack",
+      "size": [
+        400,
+        400
+      ],
+      "status": "delivered",
+      "reason": "Production pending",
+      "master": "source/masters/Heroes/seren_attack@2x.png",
+      "export": "exports/Art/Heroes/seren_attack.png",
+      "rawSize": [
+        1254,
+        1254
+      ],
+      "source": "source/sheets/seren_base.png",
+      "prompt": "source/prompts/seren_base.json",
+      "cleanup": "source/scripts/produce.py",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reference-guided original generation; identity, material and pose reviewed in offline sheets. Owner approval pending.",
+      "registration": {
+        "uniformScale": 0.8583106267029973,
+        "sourceCropSize": [
+          803,
+          589
+        ],
+        "annotatedHeadToFootExport": 233.69652588555857,
+        "annotatedTorsoExportX": 194.54775204359672,
+        "annotationNote": "Manual approximate source head/torso landmarks; not automated anatomy detection."
+      }
+    },
+    {
+      "id": "Heroes/seren_evoA_attack",
+      "size": [
+        400,
+        400
+      ],
+      "status": "delivered",
+      "reason": "Production pending",
+      "master": "source/masters/Heroes/seren_evoA_attack@2x.png",
+      "export": "exports/Art/Heroes/seren_evoA_attack.png",
+      "rawSize": [
+        1983,
+        793
+      ],
+      "source": "source/sheets/seren_evoA_actions.png",
+      "prompt": "source/prompts/seren_evoA_actions.json",
+      "cleanup": "source/scripts/produce.py",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reference-guided original generation; identity, material and pose reviewed in offline sheets. Owner approval pending.",
+      "registration": {
+        "uniformScale": 0.6857366771159875,
+        "sourceCropSize": [
+          1071,
+          793
+        ],
+        "annotatedHeadToFootExport": 245.0,
+        "annotatedTorsoExportX": 176.97168887147336,
+        "annotationNote": "Manual approximate source head/torso landmarks; not automated anatomy detection."
+      }
+    },
+    {
+      "id": "Heroes/seren_evoB_attack",
+      "size": [
+        400,
+        400
+      ],
+      "status": "delivered",
+      "reason": "Production pending",
+      "master": "source/masters/Heroes/seren_evoB_attack@2x.png",
+      "export": "exports/Art/Heroes/seren_evoB_attack.png",
+      "rawSize": [
+        1983,
+        793
+      ],
+      "source": "source/sheets/seren_evoB_actions.png",
+      "prompt": "source/prompts/seren_evoB_actions.json",
+      "cleanup": "source/scripts/produce.py",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Reference-guided original generation; identity, material and pose reviewed in offline sheets. Owner approval pending.",
+      "registration": {
+        "uniformScale": 0.7503234152652005,
+        "sourceCropSize": [
+          991,
+          793
+        ],
+        "annotatedHeadToFootExport": 239.47697283311769,
+        "annotatedTorsoExportX": 207.30711513583444,
+        "annotationNote": "Manual approximate source head/torso landmarks; not automated anatomy detection."
+      }
+    }
+  ],
+  "extras": [],
+  "knownIssues": [],
+  "blockers": []
+}

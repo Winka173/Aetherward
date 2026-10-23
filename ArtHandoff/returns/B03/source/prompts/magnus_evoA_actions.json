@@ -1,0 +1,11 @@
+{
+  "name": "magnus_evoA_actions",
+  "refs": [
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B03/source/sheets/magnus_evoA.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Heroes/ignis_cast.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Heroes/sylph_idle.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B02/exports/Art/Heroes/volt_idle.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B02/exports/Art/Heroes/freya_idle.png"
+  ],
+  "prompt": "Dark Mythic Fantasy, painterly stylized 2.5D; orthographic 38.3-degree elevation, three-quarter front body turned 25 degrees toward screen-right. Key upper-left-front #ffe9d0, rim back-right #9fe8ff, ambient #16233a. Controlled broad brush planes, coloured local-hue dark edges without black outlines.\nUse case stylized-concept. Wide2560x1440 TWO separate FULL-BODY key poses exact MAGNUS QUAKE CHAMPION ref1 same mohawk beard face huge bare tattooed arms champion stone belt shoulder stone caps enormous BOULDER FISTS amber glowing seams. LEFT CAST both boulder gauntlets raised CLOSE beside shoulders, lifted body, brightest seams. RIGHT ATTACK right BOULDER FIST PUNCH fully extended SCREEN RIGHT +X, left fist held close chest, compact forward-leaning stance knees close, torso centered. Same gauntlets costume identity. No quake no shockwave no flying rocks dust floor shadow or trails, no letters. CLEAN TRANSPARENT ALPHA background, full feet and fists visible within own half, wide transparent gutter, no overlap. Width<=1.2x headfoot height by compact legs and short fist reach. Broad painted warm skin grey stone planes bright #9fe8ff rim, contour mean>=.30 against basalt0.16."
+}

@@ -742,7 +742,7 @@ namespace Aetherward.Sim.Combat
             Emit(SimEventType.ShieldGain, Crystal.Pos, Element.Ice, amount, 0, -1, "crystal");
         }
 
-        public void DamageCrystal(float amount, EnemyUnit attacker)
+        public void DamageCrystal(float amount, EnemyUnit attacker, string pillagerId = null, int pillagerLane = -1)
         {
             if (!Crystal.Alive) return;
             Stats.CrystalHits++;
@@ -758,21 +758,23 @@ namespace Aetherward.Sim.Combat
             Crystal.Hp -= amount;
             Crystal.HitFlash = 0.15f;
             Crystal.DamageTakenThisWave += amount;
-            if (attacker != null)
+            string sourceId = attacker?.Def.Id ?? pillagerId;
+            int sourceLane = attacker?.Lane ?? pillagerLane;
+            if (sourceId != null)
             {
-                Stats.CrystalDamageByEnemy.TryGetValue(attacker.Def.Id, out float d);
-                Stats.CrystalDamageByEnemy[attacker.Def.Id] = d + amount;
-                if (!attacker.Leaked) { attacker.Leaked = true; Stats.Leaks++; }
-                Stats.CrystalDamageByLane.TryGetValue(attacker.Lane, out float ld);
-                Stats.CrystalDamageByLane[attacker.Lane] = ld + amount;
+                Stats.CrystalDamageByEnemy.TryGetValue(sourceId, out float d);
+                Stats.CrystalDamageByEnemy[sourceId] = d + amount;
+                if (attacker != null && !attacker.Leaked) { attacker.Leaked = true; Stats.Leaks++; }
+                Stats.CrystalDamageByLane.TryGetValue(sourceLane, out float ld);
+                Stats.CrystalDamageByLane[sourceLane] = ld + amount;
             }
             if (Stats.FirstGuardianDownTime >= 0f) Stats.CrystalDamageAfterGuardianDown += amount;
-            Emit(SimEventType.CrystalHit, Crystal.Pos, Element.None, amount, attacker?.Uid ?? 0, -1, attacker?.Def.Id);
+            Emit(SimEventType.CrystalHit, Crystal.Pos, Element.None, amount, attacker?.Uid ?? 0, -1, sourceId);
             FireTrigger("crystal_hit", null, attacker, Crystal.Pos, null);
             if (Crystal.Hp <= 0f)
             {
                 Crystal.Hp = 0f;
-                DefeatSource = attacker?.Def.Id ?? "breach";
+                DefeatSource = sourceId ?? "breach";
             }
             if (attacker != null && Crystal.Thorns > 0f && attacker.Alive)
                 DealDamage(attacker, new DamageRequest { Attack = Crystal.Thorns * WaveLevelScale, Multiplier = 1f, Element = Element.Earth, Kind = DamageKind.Trigger, Generation = MaxProcGeneration, IgnoreDefense = true, SourceTag = "crystal_thorns" });

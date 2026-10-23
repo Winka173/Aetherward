@@ -1,0 +1,19 @@
+{
+  "id": "Enemies/sapper_a",
+  "character": "sapper",
+  "height": 150,
+  "width": 205,
+  "bottom": 236,
+  "raw": "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\returns\\B08\\source\\sheets\\sapper_a_v2.png",
+  "prompt": "Dark Mythic Fantasy, painterly stylized 2.5D; orthographic 38.3-degree elevation, three-quarter front body turned 25 degrees toward screen-right. Key upper-left-front #ffe9d0, rim back-right #9fe8ff, ambient #16233a. Controlled broad brush planes, coloured local-hue dark edges without black outlines. EDIT the first image only. Other images are B01 style references. Lighting correction ONLY: preserve the exact pose and silhouette. Raise the visible charcoal cloth hems, boot edges and bomb silhouette with brighter warm key planes and stronger selective cool rim. Whole 3 px contour average must rise from 0.264 to at least 0.31. No anatomy or pose changes. Keep exact identity, face, costume, materials, prop design and palette. Full character fits within ample transparent margins; screen-right +X facing, 38.3 degree elevation. Transparent background, no shadow, floor, text, projectiles or detached effects. Native high resolution; no black outline. Bright broad key planes, #9fe8ff cool directional rim 2–3 pixels at final export; contour luminance target >=0.33.",
+  "references": [
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B08/source/sheets/sapper_a.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Enemies/grunt_a.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Enemies/juggernaut_a.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Enemies/hexcaster_a.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Enemies/storm_harpy_a.png"
+  ],
+  "sourceName": "sapper_a_v2",
+  "anchor": 0.58,
+  "registration": "Torso centre visually estimated; uncertainty approximately 5–8 native export pixels."
+}

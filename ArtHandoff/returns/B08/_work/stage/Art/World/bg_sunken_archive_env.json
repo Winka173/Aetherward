@@ -1,0 +1,25 @@
+{
+ "shadowDirScreen": [
+  0.8197,
+  0.5729
+ ],
+ "shadowLengthPerHeight": 0.8947,
+ "braziersFlat": [
+  5.636,
+  8.496,
+  14.091,
+  -3.512,
+  -4.227,
+  3.756
+ ],
+ "aetherCrystalsFlat": [],
+ "edgeColor": [
+  0.1109,
+  0.1457,
+  0.1492
+ ],
+ "source": "ArtCache/Env/pot_sunken_archive",
+ "gamma": 1.1391,
+ "viewMeanBefore": 0.1923,
+ "viewMean": 0.16
+}

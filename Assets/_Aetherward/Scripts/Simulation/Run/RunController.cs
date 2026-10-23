@@ -261,7 +261,7 @@ namespace Aetherward.Sim.Run
                 // Melee starters guard the inner ring by default, ranged ones take the outer ring.
                 h.Node = content.Heroes[starters[i]].Melee ? innerNodes[inner++ % innerNodes.Length] : outerNodes[outer++ % outerNodes.Length];
             }
-            rc.RollBlockedNode();
+            rc.RollSealedGate();
             rc.DrawRunPools();
             s.Trace("new run seed=" + Pcg32.FormatSeed(seed) + " starters=" + string.Join(",", starters) + " asc=" + ascension);
             return rc;
@@ -317,27 +317,29 @@ namespace Aetherward.Sim.Run
 
         public int FreeNode()
         {
-            int[] preference = { 4, 8, 0, 2, 1, 3, 6, 10, 5, 7, 9, 11 };
-            foreach (int n in preference) if (n != State.BlockedNode && State.HeroOnNode(n) == null) return n;
+            for (int n = 0; n < System.Math.Max(Arena.Nodes.Count, Eco.MaxHeroes); n++)
+                if (State.HeroOnNode(n) == null) return n;
             return -1;
         }
 
         /// <summary>
-        /// Ascension: telegraph one blocked node for the coming wave (deterministic per seed/wave). Heroes on
-        /// it are moved to a free node; the player sees it during preparation and can rearrange.
+        /// Ascension: seal one active entrance for the coming wave (deterministic per seed/wave).
+        /// Enemy groups redirect to another entrance; preparation displays the sealed gate.
         /// </summary>
-        public void RollBlockedNode()
+        public void RollSealedGate()
         {
             State.BlockedNode = -1;
-            if (!Content.Difficulty.Has("blocked_node", State.Ascension)) return;
-            Pcg32 rng = Pcg32.Derive(State.Seed, "block:" + State.Wave);
-            State.BlockedNode = rng.Range(0, Arena.Nodes.Count);
-            HeroRunState on = State.HeroOnNode(State.BlockedNode);
-            if (on != null)
+            State.SealedGate = -1;
+            if (!Content.Difficulty.Has("sealed_gate", State.Ascension)) return;
+            var gates = new List<int>();
+            foreach (int lane in Battle.LanesForWave(CurrentWave, Biome))
             {
-                on.Node = -1;
-                on.Node = FreeNode();
+                int gate = Battle.GateLane(Arena, lane);
+                if (!gates.Contains(gate)) gates.Add(gate);
             }
+            // At least one other entrance remains open; groups concentrate there.
+            if (gates.Count > 1)
+                State.SealedGate = gates[Pcg32.Derive(State.Seed, "seal:" + State.Wave).Range(0, gates.Count)];
         }
 
         // ================================================================== economy helpers
@@ -533,13 +535,15 @@ namespace Aetherward.Sim.Run
             setup.EliteEvery = (int)Content.Difficulty.Value("double_elite", State.Ascension);
             setup.Tactic = State.Tactic;
             setup.Stance = State.Stance;
+            setup.Formation = State.Formation;
+            setup.SealedGate = State.SealedGate;
             setup.CrystalPath = State.CrystalPath;
             setup.UtilityTargeting = FeatureFlags.UtilityTargeting;
             setup.DynamicParty = FeatureFlags.DynamicParty;
             setup.HazardShift = Content.Difficulty.Value("hazard_shift", State.Ascension);
             foreach (HeroRunState h in State.Heroes)
             {
-                if (h.Node < 0) continue;
+                if (!FeatureFlags.DynamicParty && h.Node < 0) continue;
                 setup.Heroes.Add(new HeroLoadout
                 {
                     Def = Content.Heroes[h.DefId],
@@ -561,6 +565,7 @@ namespace Aetherward.Sim.Run
             if (State.Phase != RunPhase.Prepare) return null;
             bool anyPlaced = false;
             foreach (HeroRunState h in State.Heroes) if (h.Node >= 0) anyPlaced = true;
+            if (FeatureFlags.DynamicParty) anyPlaced = State.Heroes.Exists(h => !h.Downed);
             if (!anyPlaced) return null;
             Battle = new Battle(BuildBattleSetup());
             State.Phase = RunPhase.Battle;
@@ -732,7 +737,7 @@ namespace Aetherward.Sim.Run
             State.Offers.Clear();
             State.Phase = RunPhase.Prepare;
             State.Wave++;
-            RollBlockedNode();
+            RollSealedGate();
             AutoPlaceNewHeroes();
         }
 

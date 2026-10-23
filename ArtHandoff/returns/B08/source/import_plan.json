@@ -1,0 +1,716 @@
+{
+  "batch": "B08",
+  "owner": "lead integration",
+  "instructions": "Read-only plan; no Unity metadata authored by Codex. Apply fixed input-manifest PPU, pivots, borders and flyer flags when importing new attack sprites.",
+  "assets": [
+    {
+      "id": "Enemies/runner_a",
+      "size": [
+        256,
+        256
+      ],
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 236,
+      "guid": "c6387356a9c93228a974009ccf926d30"
+    },
+    {
+      "id": "Enemies/runner_b",
+      "size": [
+        256,
+        256
+      ],
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 236,
+      "guid": "0bc479415541e9c6ea8b50a1752e3a00"
+    },
+    {
+      "id": "Enemies/swarmling_a",
+      "size": [
+        256,
+        256
+      ],
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 236,
+      "guid": "ed0ea0a1f97a7ca352b011ab005d88d7"
+    },
+    {
+      "id": "Enemies/swarmling_b",
+      "size": [
+        256,
+        256
+      ],
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 236,
+      "guid": "76b9bf0be706544dc728639dcbc36dfc"
+    },
+    {
+      "id": "Enemies/shieldbearer_a",
+      "size": [
+        256,
+        256
+      ],
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 236,
+      "guid": "075ba38cfbee727caf169c0c64f196f1"
+    },
+    {
+      "id": "Enemies/shieldbearer_b",
+      "size": [
+        256,
+        256
+      ],
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 236,
+      "guid": "8fbd11afeb3a7d7dd4fa87b4c7ef4e9c"
+    },
+    {
+      "id": "Enemies/sapper_a",
+      "size": [
+        256,
+        256
+      ],
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 236,
+      "guid": "888cb2f4d285db3f9426a810dedbdb5d"
+    },
+    {
+      "id": "Enemies/sapper_b",
+      "size": [
+        256,
+        256
+      ],
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 236,
+      "guid": "40e01739e287dcd61b1be046767056b7"
+    },
+    {
+      "id": "Enemies/warded_a",
+      "size": [
+        256,
+        256
+      ],
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 236,
+      "guid": "108e5f1da4cf7ace83ea51a25a0f024f"
+    },
+    {
+      "id": "Enemies/warded_b",
+      "size": [
+        256,
+        256
+      ],
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 236,
+      "guid": "9b36cb35ea5075b55e576cd9ac41e043"
+    },
+    {
+      "id": "Enemies/summoner_a",
+      "size": [
+        256,
+        256
+      ],
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 236,
+      "guid": "1f8f92d30729b4b548797d3624efeda4"
+    },
+    {
+      "id": "Enemies/summoner_b",
+      "size": [
+        256,
+        256
+      ],
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 236,
+      "guid": "e3d15baf730cae9749a4401cb06b1944"
+    },
+    {
+      "id": "Enemies/banner_a",
+      "size": [
+        256,
+        256
+      ],
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 236,
+      "guid": "d30e4aa2ec91e30af1ccf04c0a9c4c57"
+    },
+    {
+      "id": "Enemies/banner_b",
+      "size": [
+        256,
+        256
+      ],
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 236,
+      "guid": "474b7c22f52b9f9130b21b80cff3703a"
+    },
+    {
+      "id": "Enemies/mimic_a",
+      "size": [
+        256,
+        256
+      ],
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 236,
+      "guid": "9ccbffa74cd23430104dabfce6d88766"
+    },
+    {
+      "id": "Enemies/mimic_b",
+      "size": [
+        256,
+        256
+      ],
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 236,
+      "guid": "1269d6ed7f22af42dd7d0cadc51f43a5"
+    },
+    {
+      "id": "Enemies/riftling_a",
+      "size": [
+        256,
+        256
+      ],
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 236,
+      "guid": "4d2cd3d0734b74653f6f992d7d9f75d7"
+    },
+    {
+      "id": "Enemies/riftling_b",
+      "size": [
+        256,
+        256
+      ],
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 236,
+      "guid": "d5dc32e255a1f0e8b9ba3762f463f0f4"
+    },
+    {
+      "id": "Enemies/ravager_a",
+      "size": [
+        256,
+        256
+      ],
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 236,
+      "guid": "fcf22ed52ab414fd2cc467b841ee5e03"
+    },
+    {
+      "id": "Enemies/ravager_b",
+      "size": [
+        256,
+        256
+      ],
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 236,
+      "guid": "347c6e4f4c7fd06f73a66cf136189682"
+    },
+    {
+      "id": "Enemies/runner_attack",
+      "size": [
+        256,
+        256
+      ],
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 236,
+      "new": true,
+      "like": "Enemies/runner_a",
+      "guid": null
+    },
+    {
+      "id": "Enemies/swarmling_attack",
+      "size": [
+        256,
+        256
+      ],
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 236,
+      "new": true,
+      "like": "Enemies/swarmling_a",
+      "guid": null
+    },
+    {
+      "id": "Enemies/shieldbearer_attack",
+      "size": [
+        256,
+        256
+      ],
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 236,
+      "new": true,
+      "like": "Enemies/shieldbearer_a",
+      "guid": null
+    },
+    {
+      "id": "Enemies/sapper_attack",
+      "size": [
+        256,
+        256
+      ],
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 236,
+      "new": true,
+      "like": "Enemies/sapper_a",
+      "guid": null
+    },
+    {
+      "id": "Enemies/warded_attack",
+      "size": [
+        256,
+        256
+      ],
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 236,
+      "new": true,
+      "like": "Enemies/warded_a",
+      "guid": null
+    },
+    {
+      "id": "Enemies/summoner_attack",
+      "size": [
+        256,
+        256
+      ],
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 236,
+      "new": true,
+      "like": "Enemies/summoner_a",
+      "guid": null
+    },
+    {
+      "id": "Enemies/banner_attack",
+      "size": [
+        256,
+        256
+      ],
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 236,
+      "new": true,
+      "like": "Enemies/banner_a",
+      "guid": null
+    },
+    {
+      "id": "Enemies/mimic_attack",
+      "size": [
+        256,
+        256
+      ],
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 236,
+      "new": true,
+      "like": "Enemies/mimic_a",
+      "guid": null
+    },
+    {
+      "id": "Enemies/riftling_attack",
+      "size": [
+        256,
+        256
+      ],
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 236,
+      "new": true,
+      "like": "Enemies/riftling_a",
+      "guid": null
+    },
+    {
+      "id": "Enemies/ravager_attack",
+      "size": [
+        256,
+        256
+      ],
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 236,
+      "new": true,
+      "like": "Enemies/ravager_a",
+      "guid": null
+    },
+    {
+      "id": "Enemies/grunt_attack",
+      "size": [
+        256,
+        256
+      ],
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 236,
+      "new": true,
+      "like": "Enemies/grunt_a",
+      "guid": null
+    },
+    {
+      "id": "Enemies/juggernaut_attack",
+      "size": [
+        256,
+        256
+      ],
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 236,
+      "new": true,
+      "like": "Enemies/juggernaut_a",
+      "guid": null
+    },
+    {
+      "id": "Enemies/hexcaster_attack",
+      "size": [
+        256,
+        256
+      ],
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 236,
+      "new": true,
+      "like": "Enemies/hexcaster_a",
+      "guid": null
+    },
+    {
+      "id": "Enemies/storm_harpy_attack",
+      "size": [
+        256,
+        256
+      ],
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 236,
+      "flyer": true,
+      "new": true,
+      "like": "Enemies/storm_harpy_a",
+      "guid": null
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "Enemies/runner_attack",
+  "character": "runner",
+  "height": 145,
+  "width": 235,
+  "bottom": 236,
+  "raw": "C:\\Users\\Winka\\.codex\\generated_images\\01a159d8-948e-7791-af53-743787b45395\\exec-99dcee67-a656-47ba-ab8a-7bb997bc947d.png",
+  "prompt": "Dark Mythic Fantasy, painterly stylized 2.5D; orthographic 38.3-degree elevation, three-quarter front body turned 25 degrees toward screen-right. Key upper-left-front #ffe9d0, rim back-right #9fe8ff, ambient #16233a. Controlled broad brush planes, coloured local-hue dark edges without black outlines. EDIT the first image only. Other images are B01 style references. COMPACT BITE POSE. Arched spine high with raised ribcage, jaws open toward screen-right. Hind legs extend DOWN to baseline while front paws tucked. Curl shredded tail UPWARD behind rump, not trailing horizontally. Keep quadruped anatomy. Overall opaque silhouette must have WIDTH divided by HEIGHT no greater than 1.75. Example final width225 and height140. Do not draw a long horizontal torpedo silhouette. Compact body, shorter neck reach, tall hunched spine. Identity still exact same bone Hound. Full head and tail within frame. Keep exact identity, face, costume, materials, prop design and palette. Full character fits within ample transparent margins; screen-right +X facing, 38.3 degree elevation. Transparent background, no shadow, floor, text, projectiles or detached effects. Native high resolution; no black outline. Bright broad key planes, #9fe8ff cool directional rim 2–3 pixels at final export; contour luminance target >=0.33.",
+  "references": [
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B08/source/sheets/runner_attack.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Enemies/grunt_a.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Enemies/juggernaut_a.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Enemies/hexcaster_a.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Enemies/storm_harpy_a.png"
+  ],
+  "version": 3,
+  "sourceName": "runner_attack_v3"
+}

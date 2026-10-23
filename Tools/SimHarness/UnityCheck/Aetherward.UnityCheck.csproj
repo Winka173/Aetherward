@@ -14,9 +14,13 @@
     <Compile Include="../../../Assets/_Aetherward/Scripts/Unity/**/*.cs" />
     <Compile Include="../../../Assets/_Aetherward/Scripts/Editor/**/*.cs" />
   </ItemGroup>
-  <ItemGroup>
+  <ItemGroup Condition="'$(UnityManagedPath)' == ''">
     <Reference Include="UnityEngine"><HintPath>../../UnityRefs/UnityEngine.dll</HintPath></Reference>
     <Reference Include="UnityEditor"><HintPath>../../UnityRefs/UnityEditor.dll</HintPath></Reference>
+  </ItemGroup>
+  <ItemGroup Condition="'$(UnityManagedPath)' != ''">
+    <Reference Include="$(UnityManagedPath)/UnityEngine/*.dll" />
+    <Reference Include="$(UnityManagedPath)/UnityEditor.*.dll" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="../Simulation/Aetherward.Simulation.csproj" />

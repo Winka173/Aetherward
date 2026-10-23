@@ -1,0 +1,230 @@
+{
+ "batch": "B08",
+ "delivered": 34,
+ "requested": 34,
+ "blocking": [],
+ "notes": [],
+ "rows": [
+  {
+   "id": "Enemies/runner_a",
+   "group": "launch",
+   "status": "OK",
+   "footRow": 236
+  },
+  {
+   "id": "Enemies/runner_b",
+   "group": "launch",
+   "status": "OK",
+   "footRow": 236
+  },
+  {
+   "id": "Enemies/swarmling_a",
+   "group": "launch",
+   "status": "OK",
+   "footRow": 236
+  },
+  {
+   "id": "Enemies/swarmling_b",
+   "group": "launch",
+   "status": "OK",
+   "footRow": 235
+  },
+  {
+   "id": "Enemies/shieldbearer_a",
+   "group": "launch",
+   "status": "OK",
+   "footRow": 236
+  },
+  {
+   "id": "Enemies/shieldbearer_b",
+   "group": "launch",
+   "status": "OK",
+   "footRow": 236
+  },
+  {
+   "id": "Enemies/sapper_a",
+   "group": "launch",
+   "status": "OK",
+   "footRow": 236
+  },
+  {
+   "id": "Enemies/sapper_b",
+   "group": "launch",
+   "status": "OK",
+   "footRow": 236
+  },
+  {
+   "id": "Enemies/warded_a",
+   "group": "launch",
+   "status": "OK",
+   "footRow": 236
+  },
+  {
+   "id": "Enemies/warded_b",
+   "group": "launch",
+   "status": "OK",
+   "footRow": 236
+  },
+  {
+   "id": "Enemies/summoner_a",
+   "group": "launch",
+   "status": "OK",
+   "footRow": 236
+  },
+  {
+   "id": "Enemies/summoner_b",
+   "group": "launch",
+   "status": "OK",
+   "footRow": 236
+  },
+  {
+   "id": "Enemies/banner_a",
+   "group": "launch",
+   "status": "OK",
+   "footRow": 236
+  },
+  {
+   "id": "Enemies/banner_b",
+   "group": "launch",
+   "status": "OK",
+   "footRow": 236
+  },
+  {
+   "id": "Enemies/mimic_a",
+   "group": "launch",
+   "status": "OK",
+   "footRow": 236
+  },
+  {
+   "id": "Enemies/mimic_b",
+   "group": "launch",
+   "status": "OK",
+   "footRow": 236
+  },
+  {
+   "id": "Enemies/riftling_a",
+   "group": "launch",
+   "status": "OK",
+   "footRow": 236
+  },
+  {
+   "id": "Enemies/riftling_b",
+   "group": "launch",
+   "status": "OK",
+   "footRow": 236
+  },
+  {
+   "id": "Enemies/ravager_a",
+   "group": "launch",
+   "status": "OK",
+   "footRow": 236
+  },
+  {
+   "id": "Enemies/ravager_b",
+   "group": "launch",
+   "status": "OK",
+   "footRow": 236
+  },
+  {
+   "id": "Enemies/runner_attack",
+   "group": "launch",
+   "status": "OK",
+   "footRow": 236
+  },
+  {
+   "id": "Enemies/swarmling_attack",
+   "group": "launch",
+   "status": "OK",
+   "footRow": 235
+  },
+  {
+   "id": "Enemies/shieldbearer_attack",
+   "group": "launch",
+   "status": "OK",
+   "footRow": 236
+  },
+  {
+   "id": "Enemies/sapper_attack",
+   "group": "launch",
+   "status": "OK",
+   "footRow": 236
+  },
+  {
+   "id": "Enemies/warded_attack",
+   "group": "launch",
+   "status": "OK",
+   "footRow": 236
+  },
+  {
+   "id": "Enemies/summoner_attack",
+   "group": "launch",
+   "status": "OK",
+   "footRow": 236
+  },
+  {
+   "id": "Enemies/banner_attack",
+   "group": "launch",
+   "status": "OK",
+   "footRow": 236
+  },
+  {
+   "id": "Enemies/mimic_attack",
+   "group": "launch",
+   "status": "OK",
+   "footRow": 236
+  },
+  {
+   "id": "Enemies/riftling_attack",
+   "group": "launch",
+   "status": "OK",
+   "footRow": 236
+  },
+  {
+   "id": "Enemies/ravager_attack",
+   "group": "launch",
+   "status": "OK",
+   "footRow": 236
+  },
+  {
+   "id": "Enemies/grunt_attack",
+   "group": "b01_attack",
+   "status": "OK",
+   "footRow": 236
+  },
+  {
+   "id": "Enemies/juggernaut_attack",
+   "group": "b01_attack",
+   "status": "OK",
+   "footRow": 236
+  },
+  {
+   "id": "Enemies/hexcaster_attack",
+   "group": "b01_attack",
+   "status": "OK",
+   "footRow": 236
+  },
+  {
+   "id": "Enemies/storm_harpy_attack",
+   "group": "b01_attack",
+   "status": "OK",
+   "footRow": 208
+  }
+ ],
+ "strayWorkingTreeChanges": [
+  "ArtProduction/generated/World/arena_background.png",
+  "ArtProduction/generated/World/arena_background_env.json",
+  "ArtProduction/generated/World/bg_frostfall_bastion.png",
+  "ArtProduction/generated/World/bg_frostfall_bastion_env.json",
+  "ArtProduction/generated/World/bg_molten_crater.png",
+  "ArtProduction/generated/World/bg_molten_crater.render_meta.json",
+  "ArtProduction/generated/World/bg_molten_crater_env.json",
+  "ArtProduction/generated/World/bg_shattered_aether.png",
+  "ArtProduction/generated/World/bg_shattered_aether_env.json",
+  "ArtProduction/generated/World/bg_stormspire_citadel.png",
+  "ArtProduction/generated/World/bg_stormspire_citadel_env.json",
+  "Docs/ASSET_MANIFEST.json",
+  "Tools/ArtPipeline/blender/vfx_flipbooks.py",
+  "waveletNoiseTile.bin"
+ ],
+ "stage": "ArtHandoff\\returns\\B08\\_work\\stage"
+}

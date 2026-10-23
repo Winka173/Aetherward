@@ -1,0 +1,846 @@
+[
+  {
+    "id": "Heroes/tidal_idle",
+    "raw": "source/sheets/tidal_idle.png",
+    "prompt": "source/prompts/tidal_idle.json",
+    "head": 0.16,
+    "torso": 0.53
+  },
+  {
+    "id": "Heroes/tidal_downed",
+    "raw": "source/sheets/tidal_base_poses.png",
+    "prompt": "source/prompts/tidal_base_poses.json",
+    "crop": [
+      0.51,
+      0.17,
+      1,
+      0.54
+    ],
+    "head": 0.15,
+    "torso": 0.61,
+    "height": 330,
+    "largestOnly": true
+  },
+  {
+    "id": "Portraits/tidal",
+    "raw": "source/sheets/tidal_base_poses.png",
+    "prompt": "source/prompts/tidal_base_poses.json",
+    "crop": [
+      0.55,
+      0.55,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "Heroes/tidal_evoA",
+    "raw": "source/sheets/tidal_evoA.png",
+    "prompt": "source/prompts/tidal_evoA.json",
+    "head": 0.085,
+    "torso": 0.53
+  },
+  {
+    "id": "Heroes/tidal_evoB",
+    "raw": "source/sheets/tidal_evoB.png",
+    "prompt": "source/prompts/tidal_evoB.json",
+    "head": 0.07,
+    "torso": 0.51
+  },
+  {
+    "id": "Heroes/tidal_cast",
+    "raw": "source/sheets/tidal_base_actions.png",
+    "prompt": "source/prompts/tidal_base_actions.json",
+    "crop": [
+      0,
+      0,
+      0.46,
+      1
+    ],
+    "head": 0.22,
+    "torso": 0.53,
+    "largestOnly": true
+  },
+  {
+    "id": "Heroes/tidal_attack",
+    "raw": "source/sheets/tidal_base_actions.png",
+    "prompt": "source/prompts/tidal_base_actions.json",
+    "crop": [
+      0.46,
+      0,
+      1,
+      1
+    ],
+    "head": 0.22,
+    "torso": 0.45,
+    "largestOnly": true
+  },
+  {
+    "id": "Heroes/tidal_evoA_cast",
+    "raw": "source/sheets/tidal_evoA_actions.png",
+    "prompt": "source/prompts/tidal_evoA_actions.json",
+    "crop": [
+      0,
+      0,
+      0.46,
+      1
+    ],
+    "head": 0.13,
+    "torso": 0.56,
+    "largestOnly": true
+  },
+  {
+    "id": "Heroes/tidal_evoA_attack",
+    "raw": "source/sheets/tidal_evoA_actions.png",
+    "prompt": "source/prompts/tidal_evoA_actions.json",
+    "crop": [
+      0.46,
+      0,
+      1,
+      1
+    ],
+    "head": 0.13,
+    "torso": 0.46,
+    "largestOnly": true
+  },
+  {
+    "id": "Heroes/tidal_evoB_cast",
+    "raw": "source/sheets/tidal_evoB_actions.png",
+    "prompt": "source/prompts/tidal_evoB_actions.json",
+    "crop": [
+      0,
+      0,
+      0.5,
+      1
+    ],
+    "head": 0.05,
+    "torso": 0.51,
+    "largestOnly": true
+  },
+  {
+    "id": "Heroes/tidal_evoB_attack",
+    "raw": "source/sheets/tidal_evoB_actions.png",
+    "prompt": "source/prompts/tidal_evoB_actions.json",
+    "crop": [
+      0.5,
+      0,
+      1,
+      1
+    ],
+    "head": 0.05,
+    "torso": 0.52,
+    "largestOnly": true
+  },
+  {
+    "id": "Heroes/raiden_idle",
+    "raw": "source/sheets/raiden_idle.png",
+    "prompt": "source/prompts/raiden_idle.json",
+    "head": 0.2,
+    "torso": 0.55,
+    "height": 490
+  },
+  {
+    "id": "Heroes/raiden_evoA",
+    "raw": "source/sheets/raiden_evoA.png",
+    "prompt": "source/prompts/raiden_evoA.json",
+    "head": 0.1,
+    "torso": 0.54,
+    "height": 490
+  },
+  {
+    "id": "Heroes/raiden_evoB",
+    "raw": "source/sheets/raiden_evoB.png",
+    "prompt": "source/prompts/raiden_evoB.json",
+    "head": 0.12,
+    "torso": 0.55,
+    "height": 490
+  },
+  {
+    "id": "Heroes/raiden_cast",
+    "raw": "source/sheets/raiden_base.png",
+    "prompt": "source/prompts/raiden_base.json",
+    "head": 0.1,
+    "torso": 0.6,
+    "height": 490,
+    "crop": [
+      0,
+      0,
+      0.49,
+      0.54
+    ],
+    "largestOnly": true
+  },
+  {
+    "id": "Heroes/raiden_downed",
+    "raw": "source/sheets/raiden_base.png",
+    "prompt": "source/prompts/raiden_base.json",
+    "head": 0.08,
+    "torso": 0.67,
+    "height": 330,
+    "crop": [
+      0.5,
+      0.14,
+      1,
+      0.56
+    ],
+    "largestOnly": true
+  },
+  {
+    "id": "Heroes/raiden_attack",
+    "raw": "source/sheets/raiden_base.png",
+    "prompt": "source/prompts/raiden_base.json",
+    "head": 0.02,
+    "torso": 0.44,
+    "height": 490,
+    "crop": [
+      0,
+      0.55,
+      0.67,
+      1
+    ],
+    "largestOnly": true
+  },
+  {
+    "id": "Portraits/raiden",
+    "raw": "source/sheets/raiden_base.png",
+    "prompt": "source/prompts/raiden_base.json",
+    "head": 0.1,
+    "torso": 0.5,
+    "height": 490,
+    "crop": [
+      0.54,
+      0.55,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "Heroes/raiden_evoA_cast",
+    "raw": "source/sheets/raiden_evoA_actions.png",
+    "prompt": "source/prompts/raiden_evoA_actions.json",
+    "head": 0.12,
+    "torso": 0.64,
+    "height": 490,
+    "crop": [
+      0,
+      0,
+      0.41,
+      1
+    ],
+    "largestOnly": true
+  },
+  {
+    "id": "Heroes/raiden_evoA_attack",
+    "raw": "source/sheets/raiden_evoA_actions.png",
+    "prompt": "source/prompts/raiden_evoA_actions.json",
+    "head": 0.12,
+    "torso": 0.48,
+    "height": 490,
+    "crop": [
+      0.41,
+      0,
+      1,
+      1
+    ],
+    "largestOnly": true
+  },
+  {
+    "id": "Heroes/raiden_evoB_cast",
+    "raw": "source/sheets/raiden_evoB_actions.png",
+    "prompt": "source/prompts/raiden_evoB_actions.json",
+    "head": 0.14,
+    "torso": 0.62,
+    "height": 490,
+    "crop": [
+      0,
+      0,
+      0.44,
+      1
+    ],
+    "largestOnly": true
+  },
+  {
+    "id": "Heroes/raiden_evoB_attack",
+    "raw": "source/sheets/raiden_evoB_actions.png",
+    "prompt": "source/prompts/raiden_evoB_actions.json",
+    "head": 0.14,
+    "torso": 0.43,
+    "height": 490,
+    "crop": [
+      0.44,
+      0,
+      1,
+      1
+    ],
+    "largestOnly": true
+  },
+  {
+    "id": "Heroes/glacius_idle",
+    "raw": "source/sheets/glacius_idle.png",
+    "prompt": "source/prompts/glacius_idle.json",
+    "head": 0.16,
+    "torso": 0.54,
+    "height": 490
+  },
+  {
+    "id": "Heroes/glacius_evoA",
+    "raw": "source/sheets/glacius_evoA.png",
+    "prompt": "source/prompts/glacius_evoA.json",
+    "head": 0.12,
+    "torso": 0.55,
+    "height": 490
+  },
+  {
+    "id": "Heroes/glacius_evoB",
+    "raw": "source/sheets/glacius_evoB.png",
+    "prompt": "source/prompts/glacius_evoB.json",
+    "head": 0.15,
+    "torso": 0.55,
+    "height": 490
+  },
+  {
+    "id": "Heroes/glacius_cast",
+    "raw": "source/sheets/glacius_base.png",
+    "prompt": "source/prompts/glacius_base.json",
+    "head": 0.1,
+    "torso": 0.48,
+    "height": 490,
+    "crop": [
+      0,
+      0,
+      0.53,
+      0.5
+    ],
+    "largestOnly": true
+  },
+  {
+    "id": "Heroes/glacius_downed",
+    "raw": "source/sheets/glacius_base.png",
+    "prompt": "source/prompts/glacius_base.json",
+    "head": 0.05,
+    "torso": 0.52,
+    "height": 330,
+    "crop": [
+      0.5,
+      0.1,
+      1,
+      0.515
+    ],
+    "largestOnly": true
+  },
+  {
+    "id": "Heroes/glacius_attack",
+    "raw": "source/sheets/glacius_base.png",
+    "prompt": "source/prompts/glacius_base.json",
+    "head": 0.03,
+    "torso": 0.46,
+    "height": 490,
+    "crop": [
+      0,
+      0.5,
+      0.565,
+      0.975
+    ],
+    "largestOnly": true
+  },
+  {
+    "id": "Portraits/glacius",
+    "raw": "source/sheets/glacius_base.png",
+    "prompt": "source/prompts/glacius_base.json",
+    "head": 0.1,
+    "torso": 0.5,
+    "height": 490,
+    "crop": [
+      0.565,
+      0.515,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "Heroes/glacius_evoA_cast",
+    "raw": "source/sheets/glacius_evoA_actions.png",
+    "prompt": "source/prompts/glacius_evoA_actions.json",
+    "head": 0.11,
+    "torso": 0.56,
+    "height": 490,
+    "crop": [
+      0,
+      0,
+      0.435,
+      1
+    ],
+    "largestOnly": true
+  },
+  {
+    "id": "Heroes/glacius_evoA_attack",
+    "raw": "source/sheets/glacius_evoA_actions.png",
+    "prompt": "source/prompts/glacius_evoA_actions.json",
+    "head": 0.11,
+    "torso": 0.49,
+    "height": 490,
+    "crop": [
+      0.435,
+      0,
+      1,
+      1
+    ],
+    "largestOnly": true
+  },
+  {
+    "id": "Heroes/glacius_evoB_cast",
+    "raw": "source/sheets/glacius_evoB_actions.png",
+    "prompt": "source/prompts/glacius_evoB_actions.json",
+    "head": 0.14,
+    "torso": 0.6,
+    "height": 490,
+    "crop": [
+      0,
+      0,
+      0.485,
+      1
+    ],
+    "largestOnly": true
+  },
+  {
+    "id": "Heroes/glacius_evoB_attack",
+    "raw": "source/sheets/glacius_evoB_actions.png",
+    "prompt": "source/prompts/glacius_evoB_actions.json",
+    "head": 0.14,
+    "torso": 0.48,
+    "height": 490,
+    "crop": [
+      0.485,
+      0,
+      1,
+      1
+    ],
+    "largestOnly": true
+  },
+  {
+    "id": "Heroes/zephyr_idle",
+    "raw": "source/sheets/zephyr_idle.png",
+    "prompt": "source/prompts/zephyr_idle.json",
+    "head": 0.08,
+    "torso": 0.55,
+    "height": 490
+  },
+  {
+    "id": "Heroes/zephyr_evoA",
+    "raw": "source/sheets/zephyr_evoA.png",
+    "prompt": "source/prompts/zephyr_evoA.json",
+    "head": 0.07,
+    "torso": 0.55,
+    "height": 490
+  },
+  {
+    "id": "Heroes/zephyr_evoB",
+    "raw": "source/sheets/zephyr_evoB.png",
+    "prompt": "source/prompts/zephyr_evoB.json",
+    "head": 0.07,
+    "torso": 0.54,
+    "height": 490
+  },
+  {
+    "id": "Heroes/zephyr_cast",
+    "raw": "source/sheets/zephyr_base.png",
+    "prompt": "source/prompts/zephyr_base.json",
+    "head": 0.13,
+    "torso": 0.52,
+    "height": 490,
+    "crop": [
+      0,
+      0,
+      0.5,
+      0.5
+    ],
+    "largestOnly": true
+  },
+  {
+    "id": "Heroes/zephyr_downed",
+    "raw": "source/sheets/zephyr_base.png",
+    "prompt": "source/prompts/zephyr_base.json",
+    "head": 0.02,
+    "torso": 0.55,
+    "height": 330,
+    "crop": [
+      0.51,
+      0.11,
+      1,
+      0.5
+    ],
+    "largestOnly": true
+  },
+  {
+    "id": "Heroes/zephyr_attack",
+    "raw": "source/sheets/zephyr_base.png",
+    "prompt": "source/prompts/zephyr_base.json",
+    "head": 0.06,
+    "torso": 0.43,
+    "height": 490,
+    "crop": [
+      0,
+      0.5,
+      0.565,
+      1
+    ],
+    "largestOnly": true
+  },
+  {
+    "id": "Portraits/zephyr",
+    "raw": "source/sheets/zephyr_base.png",
+    "prompt": "source/prompts/zephyr_base.json",
+    "head": 0.1,
+    "torso": 0.5,
+    "height": 490,
+    "crop": [
+      0.53,
+      0.515,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "Heroes/zephyr_evoA_cast",
+    "raw": "source/sheets/zephyr_evoA_actions.png",
+    "prompt": "source/prompts/zephyr_evoA_actions.json",
+    "head": 0.12,
+    "torso": 0.6,
+    "height": 490,
+    "crop": [
+      0,
+      0,
+      0.475,
+      1
+    ],
+    "largestOnly": true
+  },
+  {
+    "id": "Heroes/zephyr_evoA_attack",
+    "raw": "source/sheets/zephyr_evoA_actions.png",
+    "prompt": "source/prompts/zephyr_evoA_actions.json",
+    "head": 0.12,
+    "torso": 0.4,
+    "height": 490,
+    "crop": [
+      0.475,
+      0,
+      1,
+      1
+    ],
+    "largestOnly": true
+  },
+  {
+    "id": "Heroes/zephyr_evoB_cast",
+    "raw": "source/sheets/zephyr_evoB_actions.png",
+    "prompt": "source/prompts/zephyr_evoB_actions.json",
+    "head": 0.08,
+    "torso": 0.57,
+    "height": 490,
+    "crop": [
+      0,
+      0,
+      0.505,
+      1
+    ],
+    "largestOnly": true
+  },
+  {
+    "id": "Heroes/zephyr_evoB_attack",
+    "raw": "source/sheets/zephyr_evoB_actions.png",
+    "prompt": "source/prompts/zephyr_evoB_actions.json",
+    "head": 0.08,
+    "torso": 0.46,
+    "height": 490,
+    "crop": [
+      0.505,
+      0,
+      1,
+      1
+    ],
+    "largestOnly": true
+  },
+  {
+    "id": "Heroes/magnus_idle",
+    "raw": "source/sheets/magnus_idle.png",
+    "prompt": "source/prompts/magnus_idle.json",
+    "head": 0.04,
+    "torso": 0.52,
+    "height": 490
+  },
+  {
+    "id": "Heroes/magnus_evoA",
+    "raw": "source/sheets/magnus_evoA.png",
+    "prompt": "source/prompts/magnus_evoA.json",
+    "head": 0.04,
+    "torso": 0.52,
+    "height": 490
+  },
+  {
+    "id": "Heroes/magnus_evoB",
+    "raw": "source/sheets/magnus_evoB.png",
+    "prompt": "source/prompts/magnus_evoB.json",
+    "head": 0.04,
+    "torso": 0.53,
+    "height": 490
+  },
+  {
+    "id": "Heroes/magnus_cast",
+    "raw": "source/sheets/magnus_base_alpha.png",
+    "prompt": "source/prompts/magnus_base_alpha.json",
+    "head": 0.15,
+    "torso": 0.54,
+    "height": 490,
+    "crop": [
+      0,
+      0,
+      0.5,
+      0.49
+    ],
+    "largestOnly": true
+  },
+  {
+    "id": "Heroes/magnus_downed",
+    "raw": "source/sheets/magnus_base_alpha.png",
+    "prompt": "source/prompts/magnus_base_alpha.json",
+    "head": 0.05,
+    "torso": 0.54,
+    "height": 330,
+    "crop": [
+      0.51,
+      0.075,
+      1,
+      0.47
+    ],
+    "largestOnly": true
+  },
+  {
+    "id": "Heroes/magnus_attack",
+    "raw": "source/sheets/magnus_base_alpha.png",
+    "prompt": "source/prompts/magnus_base_alpha.json",
+    "head": 0.03,
+    "torso": 0.5,
+    "height": 490,
+    "crop": [
+      0,
+      0.51,
+      0.49,
+      0.975
+    ],
+    "largestOnly": true
+  },
+  {
+    "id": "Portraits/magnus",
+    "raw": "source/sheets/magnus_base_alpha.png",
+    "prompt": "source/prompts/magnus_base_alpha.json",
+    "head": 0.1,
+    "torso": 0.5,
+    "height": 490,
+    "crop": [
+      0.5,
+      0.5,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "Heroes/magnus_evoA_cast",
+    "raw": "source/sheets/magnus_evoA_actions.png",
+    "prompt": "source/prompts/magnus_evoA_actions.json",
+    "head": 0.14,
+    "torso": 0.56,
+    "height": 490,
+    "crop": [
+      0,
+      0,
+      0.465,
+      1
+    ],
+    "largestOnly": true
+  },
+  {
+    "id": "Heroes/magnus_evoA_attack",
+    "raw": "source/sheets/magnus_evoA_actions.png",
+    "prompt": "source/prompts/magnus_evoA_actions.json",
+    "head": 0.14,
+    "torso": 0.45,
+    "height": 490,
+    "crop": [
+      0.465,
+      0,
+      1,
+      1
+    ],
+    "largestOnly": true
+  },
+  {
+    "id": "Heroes/magnus_evoB_cast",
+    "raw": "source/sheets/magnus_evoB_actions.png",
+    "prompt": "source/prompts/magnus_evoB_actions.json",
+    "head": 0.09,
+    "torso": 0.56,
+    "height": 490,
+    "crop": [
+      0,
+      0,
+      0.44,
+      1
+    ],
+    "largestOnly": true
+  },
+  {
+    "id": "Heroes/magnus_evoB_attack",
+    "raw": "source/sheets/magnus_evoB_actions.png",
+    "prompt": "source/prompts/magnus_evoB_actions.json",
+    "head": 0.09,
+    "torso": 0.48,
+    "height": 490,
+    "crop": [
+      0.44,
+      0,
+      1,
+      1
+    ],
+    "largestOnly": true
+  },
+  {
+    "id": "Heroes/seren_idle",
+    "raw": "source/sheets/seren_idle.png",
+    "prompt": "source/prompts/seren_idle.json",
+    "head": 0.09,
+    "torso": 0.52,
+    "height": 490
+  },
+  {
+    "id": "Heroes/seren_evoA",
+    "raw": "source/sheets/seren_evoA.png",
+    "prompt": "source/prompts/seren_evoA.json",
+    "head": 0.09,
+    "torso": 0.53,
+    "height": 490
+  },
+  {
+    "id": "Heroes/seren_evoB",
+    "raw": "source/sheets/seren_evoB.png",
+    "prompt": "source/prompts/seren_evoB.json",
+    "head": 0.16,
+    "torso": 0.5,
+    "height": 490
+  },
+  {
+    "id": "Heroes/seren_cast",
+    "raw": "source/sheets/seren_base.png",
+    "prompt": "source/prompts/seren_base.json",
+    "head": 0.12,
+    "torso": 0.55,
+    "height": 490,
+    "crop": [
+      0,
+      0,
+      0.49,
+      0.53
+    ],
+    "largestOnly": true
+  },
+  {
+    "id": "Heroes/seren_downed",
+    "raw": "source/sheets/seren_base.png",
+    "prompt": "source/prompts/seren_base.json",
+    "head": 0.05,
+    "torso": 0.53,
+    "height": 330,
+    "crop": [
+      0.5,
+      0.12,
+      1,
+      0.52
+    ],
+    "largestOnly": true
+  },
+  {
+    "id": "Heroes/seren_attack",
+    "raw": "source/sheets/seren_base.png",
+    "prompt": "source/prompts/seren_base.json",
+    "head": 0.05,
+    "torso": 0.49,
+    "height": 490,
+    "crop": [
+      0,
+      0.515,
+      0.64,
+      0.985
+    ],
+    "largestOnly": true
+  },
+  {
+    "id": "Portraits/seren",
+    "raw": "source/sheets/seren_base.png",
+    "prompt": "source/prompts/seren_base.json",
+    "head": 0.1,
+    "torso": 0.5,
+    "height": 490,
+    "crop": [
+      0.525,
+      0.515,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "Heroes/seren_evoA_cast",
+    "raw": "source/sheets/seren_evoA_actions.png",
+    "prompt": "source/prompts/seren_evoA_actions.json",
+    "head": 0.08,
+    "torso": 0.62,
+    "height": 490,
+    "crop": [
+      0,
+      0,
+      0.46,
+      1
+    ],
+    "largestOnly": true
+  },
+  {
+    "id": "Heroes/seren_evoA_attack",
+    "raw": "source/sheets/seren_evoA_actions.png",
+    "prompt": "source/prompts/seren_evoA_actions.json",
+    "head": 0.08,
+    "torso": 0.43,
+    "height": 490,
+    "crop": [
+      0.46,
+      0,
+      1,
+      1
+    ],
+    "largestOnly": true
+  },
+  {
+    "id": "Heroes/seren_evoB_cast",
+    "raw": "source/sheets/seren_evoB_actions.png",
+    "prompt": "source/prompts/seren_evoB_actions.json",
+    "head": 0.19,
+    "torso": 0.61,
+    "height": 490,
+    "crop": [
+      0,
+      0,
+      0.5,
+      1
+    ]
+  },
+  {
+    "id": "Heroes/seren_evoB_attack",
+    "raw": "source/sheets/seren_evoB_actions.png",
+    "prompt": "source/prompts/seren_evoB_actions.json",
+    "head": 0.19,
+    "torso": 0.56,
+    "height": 490,
+    "crop": [
+      0.5,
+      0,
+      1,
+      1
+    ]
+  }
+]

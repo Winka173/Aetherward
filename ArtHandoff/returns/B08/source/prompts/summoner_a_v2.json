@@ -1,0 +1,17 @@
+{
+  "id": "Enemies/summoner_a",
+  "character": "summoner",
+  "height": 180,
+  "width": 210,
+  "bottom": 236,
+  "raw": "C:\\Users\\Winka\\.codex\\generated_images\\01a159d8-948e-7791-af53-743787b45395\\exec-3803eb83-621c-4a15-b286-e487a3eb5364.png",
+  "prompt": "Dark Mythic Fantasy, painterly stylized 2.5D; orthographic 38.3-degree elevation, three-quarter front body turned 25 degrees toward screen-right. Key upper-left-front #ffe9d0, rim back-right #9fe8ff, ambient #16233a. Controlled broad brush planes, coloured local-hue dark edges without black outlines. EDIT the first image only. Other images are B01 style references. Lighting correction ONLY: preserve exact pose and silhouette. Substantially brighten broad ash-grey cloth edge planes and pale robe lining especially along left/back tattered hem and sleeves. Stronger selective cool rim and warm key planes. Raise contour mean from 0.253 to >=0.33, no white uniform outline. Keep interior charcoal folds dark. Keep exact identity, face, costume, materials, prop design and palette. Full character fits within ample transparent margins; screen-right +X facing, 38.3 degree elevation. Transparent background, no shadow, floor, text, projectiles or detached effects. Native high resolution; no black outline. Bright broad key planes, #9fe8ff cool directional rim 2–3 pixels at final export; contour luminance target >=0.33.",
+  "references": [
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B08/source/sheets/summoner_a.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Enemies/grunt_a.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Enemies/juggernaut_a.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Enemies/hexcaster_a.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Enemies/storm_harpy_a.png"
+  ],
+  "sourceName": "summoner_a_v2"
+}

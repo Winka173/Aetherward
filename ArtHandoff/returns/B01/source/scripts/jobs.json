@@ -1,0 +1,1252 @@
+[
+  {
+    "source": "source/sheets/ignis_base.png",
+    "prompt": "README.md: Ignis base prompt (verbatim in source/prompts.json)",
+    "assets": [
+      {
+        "id": "Heroes/ignis_idle",
+        "size": [
+          400,
+          400
+        ],
+        "crop": [
+          0,
+          0,
+          700,
+          724
+        ],
+        "height": 280,
+        "foot": 372,
+        "maxWidth": 310
+      },
+      {
+        "id": "Heroes/ignis_cast",
+        "size": [
+          400,
+          400
+        ],
+        "crop": [
+          700,
+          0,
+          1470,
+          724
+        ],
+        "height": 285,
+        "foot": 372,
+        "maxWidth": 310
+      },
+      {
+        "id": "Heroes/ignis_downed",
+        "size": [
+          400,
+          400
+        ],
+        "crop": [
+          1470,
+          0,
+          2172,
+          724
+        ],
+        "height": 225,
+        "foot": 372,
+        "maxWidth": 310
+      }
+    ]
+  },
+  {
+    "source": "source/sheets/grunt.png",
+    "prompt": "source/prompts.json: grunt",
+    "assets": [
+      {
+        "id": "Enemies/grunt_a",
+        "size": [
+          256,
+          256
+        ],
+        "crop": [
+          0,
+          0,
+          888,
+          888
+        ],
+        "height": 155,
+        "foot": 236,
+        "maxWidth": 188,
+        "flip": true
+      },
+      {
+        "id": "Enemies/grunt_b",
+        "size": [
+          256,
+          256
+        ],
+        "crop": [
+          888,
+          0,
+          1776,
+          888
+        ],
+        "height": 155,
+        "foot": 236,
+        "maxWidth": 188,
+        "flip": true
+      }
+    ]
+  },
+  {
+    "source": "source/sheets/terra_base.png",
+    "prompt": "source/prompts/terra_base.json",
+    "assets": [
+      {
+        "id": "Heroes/terra_idle",
+        "size": [
+          400,
+          400
+        ],
+        "crop": [
+          0,
+          0,
+          560,
+          887
+        ],
+        "height": 270,
+        "foot": 372,
+        "maxWidth": 316,
+        "removeCutNeighbours": true
+      },
+      {
+        "id": "Heroes/terra_cast",
+        "size": [
+          400,
+          400
+        ],
+        "crop": [
+          560,
+          0,
+          1200,
+          887
+        ],
+        "height": 285,
+        "foot": 372,
+        "maxWidth": 316,
+        "removeCutNeighbours": true
+      },
+      {
+        "id": "Heroes/terra_downed",
+        "size": [
+          400,
+          400
+        ],
+        "crop": [
+          1200,
+          0,
+          1774,
+          887
+        ],
+        "height": 225,
+        "foot": 372,
+        "maxWidth": 316,
+        "removeCutNeighbours": true
+      }
+    ]
+  },
+  {
+    "source": "source/sheets/sylph_base.png",
+    "prompt": "source/prompts/sylph_base.json",
+    "assets": [
+      {
+        "id": "Heroes/sylph_idle",
+        "size": [
+          400,
+          400
+        ],
+        "crop": [
+          0,
+          0,
+          550,
+          887
+        ],
+        "height": 280,
+        "foot": 372,
+        "maxWidth": 308,
+        "removeCutNeighbours": true
+      },
+      {
+        "id": "Heroes/sylph_cast",
+        "size": [
+          400,
+          400
+        ],
+        "crop": [
+          550,
+          0,
+          1240,
+          887
+        ],
+        "height": 285,
+        "foot": 372,
+        "maxWidth": 308,
+        "removeCutNeighbours": true
+      },
+      {
+        "id": "Heroes/sylph_downed",
+        "size": [
+          400,
+          400
+        ],
+        "crop": [
+          1240,
+          0,
+          1774,
+          887
+        ],
+        "height": 225,
+        "foot": 372,
+        "maxWidth": 308,
+        "removeCutNeighbours": true
+      }
+    ]
+  },
+  {
+    "source": "source/sheets/marina_base.png",
+    "prompt": "source/prompts/marina_base.json",
+    "assets": [
+      {
+        "id": "Heroes/marina_idle",
+        "size": [
+          400,
+          400
+        ],
+        "crop": [
+          0,
+          0,
+          550,
+          887
+        ],
+        "height": 280,
+        "foot": 372,
+        "maxWidth": 308,
+        "removeCutNeighbours": true
+      },
+      {
+        "id": "Heroes/marina_cast",
+        "size": [
+          400,
+          400
+        ],
+        "crop": [
+          550,
+          0,
+          1320,
+          887
+        ],
+        "height": 285,
+        "foot": 372,
+        "maxWidth": 308,
+        "removeCutNeighbours": true
+      },
+      {
+        "id": "Heroes/marina_downed",
+        "size": [
+          400,
+          400
+        ],
+        "crop": [
+          1320,
+          0,
+          1774,
+          887
+        ],
+        "height": 225,
+        "foot": 372,
+        "maxWidth": 308,
+        "removeCutNeighbours": true
+      }
+    ]
+  },
+  {
+    "source": "source/sheets/ignis_evolutions.png",
+    "prompt": "source/prompts/ignis_evolutions.json",
+    "assets": [
+      {
+        "id": "Heroes/ignis_evoA",
+        "size": [
+          400,
+          400
+        ],
+        "crop": [
+          0,
+          0,
+          460,
+          768
+        ],
+        "height": 288,
+        "foot": 372,
+        "maxWidth": 312,
+        "removeCutNeighbours": true
+      },
+      {
+        "id": "Heroes/ignis_evoA_cast",
+        "size": [
+          400,
+          400
+        ],
+        "crop": [
+          460,
+          0,
+          1025,
+          768
+        ],
+        "height": 288,
+        "foot": 372,
+        "maxWidth": 312,
+        "removeCutNeighbours": true
+      },
+      {
+        "id": "Heroes/ignis_evoB",
+        "size": [
+          400,
+          400
+        ],
+        "crop": [
+          1025,
+          0,
+          1515,
+          768
+        ],
+        "height": 280,
+        "foot": 372,
+        "maxWidth": 312,
+        "removeCutNeighbours": true
+      },
+      {
+        "id": "Heroes/ignis_evoB_cast",
+        "size": [
+          400,
+          400
+        ],
+        "crop": [
+          1515,
+          0,
+          2048,
+          768
+        ],
+        "height": 280,
+        "foot": 372,
+        "maxWidth": 312,
+        "removeCutNeighbours": true
+      }
+    ]
+  },
+  {
+    "source": "source/sheets/juggernaut.png",
+    "prompt": "source/prompts/juggernaut.json",
+    "assets": [
+      {
+        "id": "Enemies/juggernaut_a",
+        "size": [
+          256,
+          256
+        ],
+        "crop": [
+          0,
+          0,
+          887,
+          887
+        ],
+        "height": 210,
+        "foot": 236,
+        "maxWidth": 224,
+        "removeCutNeighbours": true
+      },
+      {
+        "id": "Enemies/juggernaut_b",
+        "size": [
+          256,
+          256
+        ],
+        "crop": [
+          887,
+          0,
+          1774,
+          887
+        ],
+        "height": 210,
+        "foot": 236,
+        "maxWidth": 224,
+        "removeCutNeighbours": true
+      }
+    ]
+  },
+  {
+    "source": "source/sheets/hexcaster.png",
+    "prompt": "source/prompts/hexcaster.json",
+    "assets": [
+      {
+        "id": "Enemies/hexcaster_a",
+        "size": [
+          256,
+          256
+        ],
+        "crop": [
+          0,
+          0,
+          887,
+          887
+        ],
+        "height": 185,
+        "foot": 236,
+        "maxWidth": 208,
+        "removeCutNeighbours": true
+      },
+      {
+        "id": "Enemies/hexcaster_b",
+        "size": [
+          256,
+          256
+        ],
+        "crop": [
+          887,
+          0,
+          1774,
+          887
+        ],
+        "height": 185,
+        "foot": 236,
+        "maxWidth": 208,
+        "removeCutNeighbours": true
+      }
+    ]
+  },
+  {
+    "source": "source/sheets/storm_harpy.png",
+    "prompt": "source/prompts/storm_harpy.json",
+    "assets": [
+      {
+        "id": "Enemies/storm_harpy_a",
+        "size": [
+          256,
+          256
+        ],
+        "crop": [
+          0,
+          0,
+          950,
+          887
+        ],
+        "height": 205,
+        "foot": 208,
+        "maxWidth": 232,
+        "removeCutNeighbours": true
+      },
+      {
+        "id": "Enemies/storm_harpy_b",
+        "size": [
+          256,
+          256
+        ],
+        "crop": [
+          900,
+          0,
+          1774,
+          887
+        ],
+        "height": 191.00115740740742,
+        "foot": 208,
+        "maxWidth": 232,
+        "removeCutNeighbours": true
+      }
+    ]
+  },
+  {
+    "source": "source/sheets/rift_warden.png",
+    "prompt": "source/prompts/rift_warden.json",
+    "assets": [
+      {
+        "id": "Enemies/rift_warden_a",
+        "size": [
+          512,
+          512
+        ],
+        "crop": [
+          0,
+          0,
+          887,
+          887
+        ],
+        "height": 435,
+        "foot": 486,
+        "maxWidth": 464,
+        "removeCutNeighbours": true
+      },
+      {
+        "id": "Enemies/rift_warden_b",
+        "size": [
+          512,
+          512
+        ],
+        "crop": [
+          887,
+          0,
+          1774,
+          887
+        ],
+        "height": 435,
+        "foot": 486,
+        "maxWidth": 464,
+        "removeCutNeighbours": true
+      }
+    ]
+  },
+  {
+    "source": "source/sheets/terra_wide.png",
+    "prompt": "source/prompts/terra_wide.json",
+    "assets": [
+      {
+        "id": "Heroes/terra_idle",
+        "size": [
+          400,
+          400
+        ],
+        "crop": [
+          0,
+          0,
+          730,
+          724
+        ],
+        "height": 270,
+        "foot": 372,
+        "maxWidth": 316,
+        "removeCutNeighbours": true
+      },
+      {
+        "id": "Heroes/terra_cast",
+        "size": [
+          400,
+          400
+        ],
+        "crop": [
+          730,
+          0,
+          1370,
+          724
+        ],
+        "height": 285,
+        "foot": 372,
+        "maxWidth": 316,
+        "removeCutNeighbours": true
+      },
+      {
+        "id": "Heroes/terra_downed",
+        "size": [
+          400,
+          400
+        ],
+        "crop": [
+          1370,
+          0,
+          2048,
+          724
+        ],
+        "height": 225,
+        "foot": 372,
+        "maxWidth": 316,
+        "removeCutNeighbours": true
+      }
+    ]
+  },
+  {
+    "source": "source/sheets/hexcaster_v2.png",
+    "prompt": "source/prompts/hexcaster_v2.json",
+    "assets": [
+      {
+        "id": "Enemies/hexcaster_a",
+        "size": [
+          256,
+          256
+        ],
+        "crop": [
+          0,
+          0,
+          887,
+          887
+        ],
+        "height": 185,
+        "foot": 236,
+        "maxWidth": 208,
+        "removeCutNeighbours": true
+      },
+      {
+        "id": "Enemies/hexcaster_b",
+        "size": [
+          256,
+          256
+        ],
+        "crop": [
+          887,
+          0,
+          1774,
+          887
+        ],
+        "height": 185,
+        "foot": 236,
+        "maxWidth": 208,
+        "removeCutNeighbours": true
+      }
+    ]
+  },
+  {
+    "source": "source/sheets/storm_harpy_v2.png",
+    "prompt": "source/prompts/storm_harpy_v2.json",
+    "assets": [
+      {
+        "id": "Enemies/storm_harpy_a",
+        "size": [
+          256,
+          256
+        ],
+        "crop": [
+          0,
+          0,
+          887,
+          887
+        ],
+        "height": 173,
+        "foot": 202,
+        "maxWidth": 228,
+        "removeCutNeighbours": true
+      },
+      {
+        "id": "Enemies/storm_harpy_b",
+        "size": [
+          256,
+          256
+        ],
+        "crop": [
+          887,
+          0,
+          1774,
+          887
+        ],
+        "height": 173,
+        "foot": 202,
+        "maxWidth": 228,
+        "removeCutNeighbours": true
+      }
+    ]
+  },
+  {
+    "source": "source/sheets/storm_harpy_v3.png",
+    "prompt": "source/prompts/storm_harpy_v3.json",
+    "assets": [
+      {
+        "id": "Enemies/storm_harpy_a",
+        "size": [
+          256,
+          256
+        ],
+        "crop": [
+          0,
+          0,
+          887,
+          887
+        ],
+        "height": 184,
+        "foot": 202,
+        "maxWidth": 232,
+        "removeCutNeighbours": true
+      },
+      {
+        "id": "Enemies/storm_harpy_b",
+        "size": [
+          256,
+          256
+        ],
+        "crop": [
+          887,
+          0,
+          1774,
+          887
+        ],
+        "height": 167.92233009708738,
+        "foot": 202,
+        "maxWidth": 232,
+        "removeCutNeighbours": true
+      }
+    ]
+  },
+  {
+    "source": "source/masters/World/crystal_intact_render@2x.png",
+    "prompt": "source/blender/crystal.py",
+    "assets": [
+      {
+        "id": "World/crystal_intact",
+        "size": [
+          320,
+          400
+        ],
+        "height": 306,
+        "foot": 372,
+        "maxWidth": 276
+      }
+    ]
+  },
+  {
+    "source": "source/masters/World/crystal_cracked_render@2x.png",
+    "prompt": "source/blender/crystal.py",
+    "assets": [
+      {
+        "id": "World/crystal_cracked",
+        "size": [
+          320,
+          400
+        ],
+        "height": 306,
+        "foot": 372,
+        "maxWidth": 276
+      }
+    ]
+  },
+  {
+    "source": "source/masters/World/crystal_critical_render@2x.png",
+    "prompt": "source/blender/crystal.py",
+    "assets": [
+      {
+        "id": "World/crystal_critical",
+        "size": [
+          320,
+          400
+        ],
+        "height": 306,
+        "foot": 372,
+        "maxWidth": 276
+      }
+    ]
+  },
+  {
+    "source": "source/sheets/portrait_ignis.png",
+    "prompt": "source/prompts/portrait_ignis.json",
+    "assets": [
+      {
+        "id": "Portraits/ignis",
+        "size": [
+          192,
+          192
+        ],
+        "masterScale": 2,
+        "neutral": false
+      }
+    ]
+  },
+  {
+    "source": "source/sheets/portrait_terra.png",
+    "prompt": "source/prompts/portrait_terra.json",
+    "assets": [
+      {
+        "id": "Portraits/terra",
+        "size": [
+          192,
+          192
+        ],
+        "masterScale": 2,
+        "neutral": false
+      }
+    ]
+  },
+  {
+    "source": "source/sheets/portrait_sylph.png",
+    "prompt": "source/prompts/portrait_sylph.json",
+    "assets": [
+      {
+        "id": "Portraits/sylph",
+        "size": [
+          192,
+          192
+        ],
+        "masterScale": 2,
+        "neutral": false
+      }
+    ]
+  },
+  {
+    "source": "source/sheets/portrait_marina.png",
+    "prompt": "source/prompts/portrait_marina.json",
+    "assets": [
+      {
+        "id": "Portraits/marina",
+        "size": [
+          192,
+          192
+        ],
+        "masterScale": 2,
+        "neutral": false
+      }
+    ]
+  },
+  {
+    "source": "source/sheets/node_empty.png",
+    "prompt": "source/prompts/node_empty.json",
+    "assets": [
+      {
+        "id": "World/node_empty",
+        "size": [
+          192,
+          128
+        ],
+        "masterScale": 2,
+        "neutral": true,
+        "crop": [
+          38,
+          145,
+          1219,
+          1096
+        ]
+      }
+    ]
+  },
+  {
+    "source": "source/sheets/node_occupied.png",
+    "prompt": "source/prompts/node_occupied.json",
+    "assets": [
+      {
+        "id": "World/node_occupied",
+        "size": [
+          192,
+          128
+        ],
+        "masterScale": 2,
+        "neutral": true,
+        "crop": [
+          37,
+          144,
+          1219,
+          1096
+        ]
+      }
+    ]
+  },
+  {
+    "source": "source/sheets/node_highlight.png",
+    "prompt": "source/prompts/node_highlight.json",
+    "assets": [
+      {
+        "id": "World/node_highlight",
+        "size": [
+          192,
+          128
+        ],
+        "masterScale": 2,
+        "neutral": true,
+        "crop": [
+          36,
+          140,
+          1220,
+          1097
+        ]
+      }
+    ]
+  },
+  {
+    "source": "source/sheets/lane_arrow.png",
+    "prompt": "source/prompts/lane_arrow.json",
+    "assets": [
+      {
+        "id": "World/lane_arrow",
+        "size": [
+          128,
+          128
+        ],
+        "masterScale": 2,
+        "neutral": false
+      }
+    ]
+  },
+  {
+    "source": "source/sheets/shadow.png",
+    "prompt": "source/prompts/shadow.json",
+    "assets": [
+      {
+        "id": "World/shadow",
+        "size": [
+          128,
+          48
+        ],
+        "masterScale": 2,
+        "neutral": false
+      }
+    ]
+  },
+  {
+    "source": "source/sheets/vfx_impact_fire.png",
+    "prompt": "source/prompts/vfx_impact_fire.json",
+    "assets": [
+      {
+        "id": "Vfx/impact_fire",
+        "size": [
+          192,
+          192
+        ],
+        "masterScale": 4,
+        "neutral": false,
+        "fit": true,
+        "margin": 0.06
+      }
+    ]
+  },
+  {
+    "source": "source/sheets/vfx_impact_water.png",
+    "prompt": "source/prompts/vfx_impact_water.json",
+    "assets": [
+      {
+        "id": "Vfx/impact_water",
+        "size": [
+          192,
+          192
+        ],
+        "masterScale": 4,
+        "neutral": false,
+        "fit": true,
+        "margin": 0.06
+      }
+    ]
+  },
+  {
+    "source": "source/sheets/vfx_impact_wind.png",
+    "prompt": "source/prompts/vfx_impact_wind.json",
+    "assets": [
+      {
+        "id": "Vfx/impact_wind",
+        "size": [
+          192,
+          192
+        ],
+        "masterScale": 4,
+        "neutral": false,
+        "fit": true,
+        "margin": 0.06
+      }
+    ]
+  },
+  {
+    "source": "source/sheets/vfx_impact_earth.png",
+    "prompt": "source/prompts/vfx_impact_earth.json",
+    "assets": [
+      {
+        "id": "Vfx/impact_earth",
+        "size": [
+          192,
+          192
+        ],
+        "masterScale": 4,
+        "neutral": false,
+        "fit": true,
+        "margin": 0.06
+      }
+    ]
+  },
+  {
+    "source": "source/sheets/vfx_projectile_water.png",
+    "prompt": "source/prompts/vfx_projectile_water.json",
+    "assets": [
+      {
+        "id": "Vfx/projectile_water",
+        "size": [
+          128,
+          128
+        ],
+        "masterScale": 4,
+        "neutral": false,
+        "fit": true,
+        "margin": 0.06
+      }
+    ]
+  },
+  {
+    "source": "source/sheets/vfx_fireball.png",
+    "prompt": "source/prompts/vfx_fireball.json",
+    "assets": [
+      {
+        "id": "Vfx/fireball",
+        "size": [
+          192,
+          192
+        ],
+        "masterScale": 4,
+        "neutral": false,
+        "fit": true,
+        "margin": 0.06
+      }
+    ]
+  },
+  {
+    "source": "source/sheets/vfx_arrow.png",
+    "prompt": "source/prompts/vfx_arrow.json",
+    "assets": [
+      {
+        "id": "Vfx/arrow",
+        "size": [
+          192,
+          96
+        ],
+        "masterScale": 4,
+        "neutral": false,
+        "fit": true,
+        "margin": 0.06
+      }
+    ]
+  },
+  {
+    "source": "source/sheets/vfx_slash.png",
+    "prompt": "source/prompts/vfx_slash.json",
+    "assets": [
+      {
+        "id": "Vfx/slash",
+        "size": [
+          256,
+          256
+        ],
+        "masterScale": 4,
+        "neutral": false,
+        "fit": true,
+        "margin": 0.06
+      }
+    ]
+  },
+  {
+    "source": "source/sheets/vfx_glow.png",
+    "prompt": "source/prompts/vfx_glow.json",
+    "assets": [
+      {
+        "id": "Vfx/glow",
+        "size": [
+          128,
+          128
+        ],
+        "masterScale": 4,
+        "neutral": true,
+        "fit": true,
+        "margin": 0.06
+      }
+    ]
+  },
+  {
+    "source": "source/sheets/vfx_ring.png",
+    "prompt": "source/prompts/vfx_ring.json",
+    "assets": [
+      {
+        "id": "Vfx/ring",
+        "size": [
+          256,
+          256
+        ],
+        "masterScale": 4,
+        "neutral": true,
+        "fit": true,
+        "margin": 0.06
+      }
+    ]
+  },
+  {
+    "source": "source/sheets/vfx_telegraph.png",
+    "prompt": "source/prompts/vfx_telegraph.json",
+    "assets": [
+      {
+        "id": "Vfx/telegraph",
+        "size": [
+          256,
+          256
+        ],
+        "masterScale": 4,
+        "neutral": true,
+        "fit": true,
+        "margin": 0.06
+      }
+    ]
+  },
+  {
+    "source": "source/sheets/vfx_zone_burning_ground.png",
+    "prompt": "source/prompts/vfx_zone_burning_ground.json",
+    "assets": [
+      {
+        "id": "Vfx/zone_burning_ground",
+        "size": [
+          256,
+          256
+        ],
+        "masterScale": 4,
+        "neutral": false,
+        "fit": true,
+        "margin": 0.06
+      }
+    ]
+  },
+  {
+    "source": "source/sheets/ui_panel_dark.png",
+    "prompt": "source/prompts/ui_panel_dark.json",
+    "assets": [
+      {
+        "id": "UI/panel_dark",
+        "size": [
+          128,
+          128
+        ],
+        "masterScale": 4,
+        "neutral": false
+      }
+    ]
+  },
+  {
+    "source": "source/sheets/ui_tooltip.png",
+    "prompt": "source/prompts/ui_tooltip.json",
+    "assets": [
+      {
+        "id": "UI/tooltip",
+        "size": [
+          96,
+          96
+        ],
+        "masterScale": 4,
+        "neutral": false
+      }
+    ]
+  },
+  {
+    "source": "source/sheets/ui_bar_bg.png",
+    "prompt": "source/prompts/ui_bar_bg.json",
+    "assets": [
+      {
+        "id": "UI/bar_bg",
+        "size": [
+          128,
+          40
+        ],
+        "masterScale": 4,
+        "neutral": false
+      }
+    ]
+  },
+  {
+    "source": "source/sheets/ui_bar_fill.png",
+    "prompt": "source/prompts/ui_bar_fill.json",
+    "assets": [
+      {
+        "id": "UI/bar_fill",
+        "size": [
+          128,
+          40
+        ],
+        "masterScale": 4,
+        "neutral": true
+      }
+    ]
+  },
+  {
+    "source": "source/sheets/ui_button_primary_disabled.png",
+    "prompt": "source/prompts/ui_button_primary_disabled.json",
+    "assets": [
+      {
+        "id": "UI/button_primary_disabled",
+        "size": [
+          192,
+          96
+        ],
+        "masterScale": 4,
+        "neutral": false
+      }
+    ]
+  },
+  {
+    "source": "source/sheets/ui_button_primary_hover.png",
+    "prompt": "source/prompts/ui_button_primary_hover.json",
+    "assets": [
+      {
+        "id": "UI/button_primary_hover",
+        "size": [
+          192,
+          96
+        ],
+        "masterScale": 4,
+        "neutral": false
+      }
+    ]
+  },
+  {
+    "source": "source/sheets/ui_button_primary_normal.png",
+    "prompt": "source/prompts/ui_button_primary_normal.json",
+    "assets": [
+      {
+        "id": "UI/button_primary_normal",
+        "size": [
+          192,
+          96
+        ],
+        "masterScale": 4,
+        "neutral": false
+      }
+    ]
+  },
+  {
+    "source": "source/sheets/ui_button_primary_pressed.png",
+    "prompt": "source/prompts/ui_button_primary_pressed.json",
+    "assets": [
+      {
+        "id": "UI/button_primary_pressed",
+        "size": [
+          192,
+          96
+        ],
+        "masterScale": 4,
+        "neutral": false
+      }
+    ]
+  },
+  {
+    "source": "source/sheets/ui_card_rare.png",
+    "prompt": "source/prompts/ui_card_rare.json",
+    "assets": [
+      {
+        "id": "UI/card_rare",
+        "size": [
+          256,
+          360
+        ],
+        "masterScale": 4,
+        "neutral": false
+      }
+    ]
+  },
+  {
+    "source": "source/sheets/vfx_glow_v2.png",
+    "prompt": "source/prompts/vfx_glow_v2.json",
+    "assets": [
+      {
+        "id": "Vfx/glow",
+        "size": [
+          128,
+          128
+        ],
+        "masterScale": 4,
+        "neutral": true,
+        "fit": true,
+        "margin": 0.06
+      }
+    ]
+  },
+  {
+    "source": "source/sheets/vfx_zone_burning_ground_v2.png",
+    "prompt": "source/prompts/vfx_zone_burning_ground_v2.json",
+    "assets": [
+      {
+        "id": "Vfx/zone_burning_ground",
+        "size": [
+          256,
+          256
+        ],
+        "masterScale": 4,
+        "neutral": false,
+        "fit": true,
+        "margin": 0.06
+      }
+    ]
+  }
+]

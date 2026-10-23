@@ -42,6 +42,8 @@ namespace Aetherward.Game
             {
                 DrawBossBar();
                 DrawHeroDock(true);
+                if (_rc.Battle.Pillagers > 0)
+                    Ui.Label(0, 140, Ui.W, 64, L.Format("hud.pillage", _rc.Battle.Pillagers), 36, Ui.Bad, TextAnchor.MiddleCenter, true);
                 DrawBattleControls();
                 DrawTutorial();
             }
@@ -139,12 +141,13 @@ namespace Aetherward.Game
         private void DrawHeroDock(bool battle)
         {
             RunState s = _rc.State;
+            HeroDef ultimateTip = null;
             int n = Mathf.Max(1, s.Heroes.Count);
-            float slot = 150, gap = 14;
+            float slot = battle ? 80 : 150, gap = battle ? 8 : 14;
             float total = n * slot + (n - 1) * gap;
-            float x0 = Ui.W / 2 - total / 2, y = Ui.H - 196;
-            Ui.Panel(x0 - 20, y - 12, total + 40, 204, "glass");
-            Block(x0 - 20, y - 12, total + 40, 204);
+            float x0 = Ui.W / 2 - total / 2, y = Ui.H - (battle ? 126 : 196);
+            Ui.Panel(x0 - 20, y - 12, total + 40, battle ? 134 : 204, "glass");
+            Block(x0 - 20, y - 12, total + 40, battle ? 134 : 204);
             for (int i = 0; i < s.Heroes.Count; i++)
             {
                 HeroRunState h = s.Heroes[i];
@@ -171,11 +174,22 @@ namespace Aetherward.Game
                     Ui.Bar(x + 4, y + 4, slot - 8, 10, ult, uc);
                 }
                 if (down) Ui.Label(x, y + slot / 2 - 24, slot, 48, L.Get("hud.downed"), 30, Ui.Bad, TextAnchor.MiddleCenter, true);
+                if (def.Ultimate != null && Ui.Hover(x, y, slot, slot)) ultimateTip = def;
                 if (Ui.Hit(x, y, slot, slot))
                 {
                     if (!battle && s.Phase == RunPhase.Prepare) _selectedUid = _selectedUid == h.Uid ? -1 : h.Uid;
                     _heroInfoUid = _heroInfoUid == h.Uid ? -1 : h.Uid;
                 }
+            }
+            if (ultimateTip != null)
+            {
+                string title = L.Get("hero." + ultimateTip.Id + ".ultimate.name");
+                string body = L.Get("hero." + ultimateTip.Id + ".ultimate.desc");
+                float width = 760, height = Ui.TextHeight(body, 21, width - 36) + 65;
+                float left = Ui.W / 2 - width / 2, top = y - height - 20;
+                Ui.Tooltip(left, top, width, height);
+                Ui.Label(left + 18, top + 10, width - 36, 32, title, 24, Ui.Gold, TextAnchor.UpperLeft, true);
+                Ui.Label(left + 18, top + 45, width - 36, height - 50, body, 21, Ui.White);
             }
             if (_heroInfoUid >= 0)
             {
@@ -213,13 +227,13 @@ namespace Aetherward.Game
 
         // ------------------------------------------------------------------ preparation
 
-        /// <summary>"Heated bridge: +15% attack. " for each distinct node trait of the current biome.</summary>
-        private string NodeTraitSummary()
+        /// <summary>Explain the current biome's positional bonuses.</summary>
+        private string AreaTraitSummary()
         {
             var seen = new HashSet<string>();
             var sb = new System.Text.StringBuilder();
-            foreach (string t in _rc.Biome.NodeTraitIds.Values)
-                if (seen.Add(t)) sb.Append(App.Loc.Get("nodetrait." + t)).Append(". ");
+            foreach (AreaTraitDef t in _rc.Biome.AreaTraits)
+                if (seen.Add(t.Id)) sb.Append(App.Loc.Get("nodetrait." + t.Id)).Append(". ");
             return sb.ToString();
         }
 
@@ -240,6 +254,15 @@ namespace Aetherward.Game
                 if (icon != null) Ui.Icon(x + i * 190 + 10, y + 40, 40, 40, icon);
             }
             Block(x, y, values.Length * 190, 90);
+        }
+
+        private void DrawFormationPicker(float x, float y)
+        {
+            Ui.Label(x, y, 740, 28, L.Get("formation.label"), 18, Ui.Muted);
+            foreach (PartyFormation f in System.Enum.GetValues(typeof(PartyFormation)))
+                if (Ui.Button(x + (int)f * 190, y + 30, 180, 50, L.Get("formation." + f.ToString().ToLowerInvariant()),
+                    _rc.State.Formation == f ? Tone.Primary : Tone.Ghost, true, 17)) _rc.State.Formation = f;
+            Block(x, y, 570, 86);
         }
 
         private void DrawTacticPicker(float x, float y)
@@ -267,14 +290,16 @@ namespace Aetherward.Game
         {
             var sb = new System.Text.StringBuilder();
             foreach (HeroRunState h in _rc.State.Heroes) sb.Append(h.DefId).Append(':').Append(h.Node).Append(':').Append(h.EvolutionId).Append(':').Append(h.Level).Append(':').Append(h.Downed).Append(';');
-            return sb.Append(_rc.State.Wave).ToString();
+            foreach (string relic in _rc.State.Relics) sb.Append(relic).Append(';');
+            foreach (string card in _rc.State.CardOrder) sb.Append(card).Append(':').Append(_rc.State.CardStacks(card)).Append(';');
+            return sb.Append(_rc.State.Wave).Append(_rc.State.Stance).Append(_rc.State.Formation).Append(_rc.State.Tactic).Append(_rc.State.SealedGate).Append(_rc.State.CrystalPath).ToString();
         }
 
         /// <summary>
         /// Pre-wave overlay: lines between heroes for reaction rules (element colour), support auras (green), bonds (gold)
         /// and conflicts (red). Dashed = conditional, with the reason. Explains, never recommends a formation.
         /// </summary>
-        private void DrawSynergyVision()
+        private void EnsureFormationPreview()
         {
             string key = FormationKey();
             if (key != _synergyKey)
@@ -283,6 +308,11 @@ namespace Aetherward.Game
                 _synergyBattle = new Battle(_rc.BuildBattleSetup());
                 _synergy = SynergyReport.Analyze(_synergyBattle, _rc.ActiveBonds());
             }
+        }
+
+        private void DrawSynergyVision()
+        {
+            EnsureFormationPreview();
             Battle b = _synergyBattle;
             if (b == null || _synergy == null) return;
             var pos = new Vector2[b.Heroes.Count];
@@ -314,14 +344,14 @@ namespace Aetherward.Game
             // Coverage & missing pieces panel (bottom-left, above the tactic picker).
             float px = 16, py = Ui.H - 420, pw = 520;
             var lines = new List<string> { L.Format("synergy.crystal", Mathf.RoundToInt(_synergy.CrystalCoverage * 100f)) };
-            foreach (var kv in _synergy.LaneCoverage)
+            foreach (var kv in (_synergy.GateCoverage.Count > 0 ? _synergy.GateCoverage : _synergy.LaneCoverage))
                 lines.Add(L.Format("synergy.lane", L.Get(Arena.Lanes[kv.Key].NameKey), Mathf.RoundToInt(kv.Value * 100f)));
             foreach (string m in _synergy.Missing)
             {
                 int c = m.IndexOf(':');
                 string arg = m.Substring(c + 1);
                 if (m.StartsWith("isolated_element")) arg = L.Get("element." + arg);
-                else if (m.StartsWith("lane_uncovered") && int.TryParse(arg, out int li) && li < Arena.Lanes.Count) arg = L.Get(Arena.Lanes[li].NameKey);
+                else if ((m.StartsWith("lane_uncovered") || m.StartsWith("gate_uncovered")) && int.TryParse(arg, out int li) && li < Arena.Lanes.Count) arg = L.Get(Arena.Lanes[li].NameKey);
                 lines.Add("• " + L.Format("synergy.missing." + m.Substring(0, c), arg));
             }
             float ph = 50 + lines.Count * 26;
@@ -334,6 +364,7 @@ namespace Aetherward.Game
         private void DrawPrepare()
         {
             RunState s = _rc.State;
+            DrawFormationPicker(Ui.W / 2 - 370, Ui.H - 510);
             DrawStancePicker(Ui.W / 2 - 370, Ui.H - 410);
             DrawTacticPicker(Ui.W / 2 - 370, Ui.H - 310);
             if (Ui.Button(Ui.W / 2 + 400, Ui.H - 228, 190, 56, L.Get("synergy.toggle"), App.Settings.SynergyVision ? Tone.Secondary : Tone.Ghost, true, 16))
@@ -347,7 +378,8 @@ namespace Aetherward.Game
             float px = 16, py = 156, pw = 560;
             List<KeyValuePair<string, int>> counts = _rc.PreviewEnemies(w);
             string hint = L.Get(w.HintKey);
-            if (!_rc.Biome.Default) hint = L.Get(_rc.Biome.NameKey) + " — " + NodeTraitSummary() + hint;
+            if (s.SealedGate >= 0 && s.SealedGate < Arena.Lanes.Count) hint = L.Format("prep.sealed_gate", L.Get(Arena.Lanes[s.SealedGate].NameKey)) + "\n" + hint;
+            if (!_rc.Biome.Default) hint = L.Get(_rc.Biome.NameKey) + " — " + AreaTraitSummary() + hint;
             // Boss threat preview (P4): mechanics only once the boss is in the codex; first encounters get a generic,
             // non-spoiler reading guide.
             string bossId = _rc.BossFor(w);
@@ -361,7 +393,13 @@ namespace Aetherward.Game
             Block(px, py, pw, ph);
             Ui.Label(px + 20, py + 18, pw - 40, 40, L.Get("prep.incoming"), 26, Ui.Gold, TextAnchor.UpperLeft, true);
             var laneNames = new List<string>();
-            foreach (int l in Battle.LanesForWave(w, _rc.Biome)) laneNames.Add(L.Get(Arena.Lanes[l].NameKey));
+            EnsureFormationPreview();
+            foreach (int l in Battle.LanesForWave(w, _rc.Biome))
+            {
+                int gate = Battle.GateLane(Arena, _synergyBattle.EffectiveLane(l));
+                string name = L.Get(Arena.Lanes[gate].NameKey);
+                if (!laneNames.Contains(name)) laneNames.Add(name);
+            }
             Ui.Label(px + 20, py + 56, pw - 40, 34, L.Format("prep.lanes", string.Join(", ", laneNames)), 22, Ui.Bad);
             Ui.Label(px + 20, py + 92, pw - 40, hintH + 10, hint, 22, Ui.White);
             float ey = py + 110 + hintH;
@@ -391,7 +429,7 @@ namespace Aetherward.Game
             Block(bx, by, bw, 720);
             if (Ui.Button(bx, by, bw, 120, L.Get("prep.start"), Tone.Primary, true, 40)) StartWave();
             by += 136;
-            if (Ui.Button(bx, by, bw, 92, L.Get("prep.auto"), Tone.Secondary, true, 28)) Formation.AutoArrange(_rc);
+            if (Ui.Button(bx, by, bw, 92, L.Get("prep.auto"), Tone.Secondary, true, 28)) { s.Formation = PartyFormation.Split; s.Stance = PartyStance.Balanced; Formation.AutoArrange(_rc); }
             by += 104;
             bool damaged = s.CrystalHp < _rc.CrystalMaxHp - 0.5f;
             if (Ui.Button(bx, by, bw, 92, L.Format("prep.repair", _rc.RepairCost), Tone.Ghost, damaged && s.Gold >= _rc.RepairCost, 26))

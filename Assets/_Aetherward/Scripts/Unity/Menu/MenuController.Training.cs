@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Aetherward.Sim.Content;
+using Aetherward.Sim.Combat;
 using Aetherward.Sim.Run;
 using UnityEngine;
 
@@ -17,7 +18,8 @@ namespace Aetherward.Game
         private bool _trainSandbox;
         private TrainingReport _trainReport;
         private string _trainError;
-        private Vector2 _trainScroll;
+        private PartyStance _trainStance = PartyStance.Balanced;
+        private PartyFormation _trainFormation;
 
         private void DrawTraining()
         {
@@ -25,6 +27,12 @@ namespace Aetherward.Game
             Ui.DrawRect(0, 0, Ui.W, Ui.H, new Color(0.04f, 0.05f, 0.12f, 0.85f));
             Ui.Label(0, 30, Ui.W, 70, l.Get("training.title"), 54, Ui.Gold, TextAnchor.MiddleCenter, true);
             Ui.Label(0, 96, Ui.W, 36, l.Get("training.subtitle"), 22, Ui.Muted, TextAnchor.MiddleCenter);
+            if (_trainReport != null)
+            {
+                DrawTrainingReport(60, 150, Ui.W - 120, Ui.H - 270);
+                if (Ui.Button(Ui.W / 2 - 160, Ui.H - 100, 320, 76, l.Get("common.back"), Tone.Ghost, true, 28)) _trainReport = null;
+                return;
+            }
 
             // Hero picker (unlocked heroes; sandbox exposes the rest, clearly marked).
             float gx = 60, gy = 150, cell = 118;
@@ -60,7 +68,13 @@ namespace Aetherward.Game
                 float sec = TrainingChamber.AllowedSeconds[i];
                 if (Ui.Button(ox + i * 150, oy + 40, 140, 58, sec + " s", Mathf.Approximately(_trainSeconds, sec) ? Tone.Secondary : Tone.Ghost, true, 20)) { _trainSeconds = sec; _trainReport = null; }
             }
-            oy += 120;
+            oy += 110;
+            foreach (PartyStance stance in System.Enum.GetValues(typeof(PartyStance)))
+                if (Ui.Button(ox + (int)stance * 214, oy, 206, 48, l.Get("stance." + stance.ToString().ToLowerInvariant()), _trainStance == stance ? Tone.Secondary : Tone.Ghost, true, 17)) { _trainStance = stance; _trainReport = null; }
+            oy += 56;
+            foreach (PartyFormation formation in System.Enum.GetValues(typeof(PartyFormation)))
+                if (Ui.Button(ox + (int)formation * 214, oy, 206, 48, l.Get("formation." + formation.ToString().ToLowerInvariant()), _trainFormation == formation ? Tone.Secondary : Tone.Ghost, true, 17)) { _trainFormation = formation; _trainReport = null; }
+            oy += 56;
             bool sb = Ui.Toggle(ox, oy, 640, 60, l.Get("training.sandbox"), _trainSandbox);
             if (sb != _trainSandbox) { _trainSandbox = sb; _trainReport = null; if (!sb) _trainHeroes.RemoveAll(id => !App.Meta.UnlockedHeroes.Contains(id)); }
             oy += 80;
@@ -69,14 +83,13 @@ namespace Aetherward.Game
             if (Ui.Button(ox + 330, oy, 310, 96, l.Get("common.back"), Tone.Ghost, true, 30)) _page = Page.Main;
             if (_trainError != null) Ui.Label(ox, oy + 104, 640, 40, l.Get("training.error." + _trainError.Split(':')[0]), 20, Ui.Bad);
 
-            if (_trainReport != null) DrawTrainingReport(60, 560, Ui.W - 120, Ui.H - 600);
         }
 
         private void RunTraining()
         {
-            var cfg = new TrainingConfig { Profile = _trainProfile, Seconds = _trainSeconds, Seed = 1, Sandbox = _trainSandbox };
-            // Fixed node layout: inner ring first, then the outer ring (same layout every run -> reproducible).
-            for (int i = 0; i < _trainHeroes.Count; i++) cfg.Heroes.Add(new TrainingHero { HeroId = _trainHeroes[i], Node = i < 4 ? i : 4 + (i - 4) * 4 });
+            var cfg = new TrainingConfig { Profile = _trainProfile, Seconds = _trainSeconds, Seed = 1, Sandbox = _trainSandbox, Stance = _trainStance, Formation = _trainFormation };
+            // The same planner as campaign battles selects posts from formation and stance.
+            for (int i = 0; i < _trainHeroes.Count; i++) cfg.Heroes.Add(new TrainingHero { HeroId = _trainHeroes[i], Node = i });
             if (!TrainingChamber.CanUse(App.Content, cfg, App.Meta.UnlockedHeroes, out _trainError)) { _trainReport = null; return; }
             _trainError = null;
             _trainReport = TrainingChamber.Run(App.Content, cfg);

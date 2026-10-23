@@ -1,0 +1,308 @@
+{
+  "batch": "R02",
+  "checked": 21,
+  "blocking": [],
+  "rows": [
+    {
+      "id": "Vfx/impact_fire",
+      "size": [
+        192,
+        192
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "opaqueCoverage": 0.354,
+      "issues": []
+    },
+    {
+      "id": "Vfx/impact_ice",
+      "size": [
+        192,
+        192
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "opaqueCoverage": 0.3,
+      "issues": []
+    },
+    {
+      "id": "Vfx/impact_lightning",
+      "size": [
+        192,
+        192
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "opaqueCoverage": 0.298,
+      "issues": []
+    },
+    {
+      "id": "Vfx/impact_water",
+      "size": [
+        192,
+        192
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "opaqueCoverage": 0.36,
+      "issues": []
+    },
+    {
+      "id": "Vfx/projectile_fire",
+      "size": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "opaqueCoverage": 0.144,
+      "issues": []
+    },
+    {
+      "id": "Vfx/projectile_ice",
+      "size": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "opaqueCoverage": 0.119,
+      "issues": []
+    },
+    {
+      "id": "Vfx/projectile_lightning",
+      "size": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "opaqueCoverage": 0.071,
+      "issues": []
+    },
+    {
+      "id": "Vfx/projectile_water",
+      "size": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "opaqueCoverage": 0.184,
+      "issues": []
+    },
+    {
+      "id": "Vfx/fireball",
+      "size": [
+        192,
+        192
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "opaqueCoverage": 0.138,
+      "issues": []
+    },
+    {
+      "id": "Vfx/slash",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "opaqueCoverage": 0.234,
+      "issues": []
+    },
+    {
+      "id": "Vfx/ring",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "opaqueCoverage": 0.099,
+      "issues": []
+    },
+    {
+      "id": "Vfx/spark",
+      "size": [
+        48,
+        48
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "opaqueCoverage": 0.053,
+      "issues": []
+    },
+    {
+      "id": "Vfx/telegraph",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "opaqueCoverage": 0.124,
+      "issues": []
+    },
+    {
+      "id": "Vfx/zone_burning_ground",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "opaqueCoverage": 0.182,
+      "issues": []
+    },
+    {
+      "id": "Vfx/zone_thunderstorm",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "opaqueCoverage": 0.127,
+      "issues": []
+    },
+    {
+      "id": "Vfx/zone_healing_rain",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "opaqueCoverage": 0.125,
+      "issues": []
+    },
+    {
+      "id": "Vfx/field_ice_cover",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "opaqueCoverage": 0.137,
+      "issues": []
+    },
+    {
+      "id": "Vfx/burst_fire",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        189
+      ],
+      "opaqueCoverage": 0.347,
+      "issues": []
+    },
+    {
+      "id": "Vfx/burst_ice",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        187
+      ],
+      "opaqueCoverage": 0.296,
+      "issues": []
+    },
+    {
+      "id": "Vfx/burst_lightning",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        187
+      ],
+      "opaqueCoverage": 0.281,
+      "issues": []
+    },
+    {
+      "id": "Vfx/burst_water",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        185
+      ],
+      "opaqueCoverage": 0.291,
+      "issues": []
+    }
+  ],
+  "manualReviewRequired": [
+    "+X direction",
+    "circular ground shape",
+    "hard cel shapes",
+    "hero readability",
+    "Unity blend and animation"
+  ]
+}

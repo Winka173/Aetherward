@@ -1,0 +1,5 @@
+{
+  "prompt": "Dark Mythic Fantasy, painterly stylized 2.5D; orthographic 38.3-degree elevation, three-quarter front body turned 25 degrees toward screen-right. Key upper-left-front #ffe9d0, rim back-right #9fe8ff, ambient #16233a. Controlled broad brush planes, coloured local-hue dark edges without black outlines. Use case: stylized-concept. Asset: Icons/element_fire, a single square game icon. Front-facing dark engraved bronze and slate round medallion, bright spiky flame tongues #ff6a2b filling 65% of the frame. Simple bold silhouette readable at 32 px, crisp deliberate carved material planes, restrained worn bronze rim, no tiny filigree. Transparent outside medallion, generous 6% clear margin, no ground shadow, no text, no letters, no numbers. Generate at 1024x1024 or larger; preserve real transparency.",
+  "mode": "built-in image_gen",
+  "useCase": "stylized-concept"
+}

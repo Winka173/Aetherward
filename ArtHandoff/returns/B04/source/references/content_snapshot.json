@@ -1,0 +1,3644 @@
+{
+  "heroes": {
+    "heroes": [
+      {
+        "id": "ignis",
+        "element": "fire",
+        "role": "mage",
+        "targeting": "cluster",
+        "melee": false,
+        "starter": true,
+        "cost": 6,
+        "silhouette": "tall pointed hood, staff with ember orb",
+        "stats": {
+          "max_hp": 360,
+          "attack": 30,
+          "defense": 8,
+          "attack_interval": 1.15,
+          "range": 4.6,
+          "elemental_mastery": 40,
+          "threat": 0.8,
+          "crit_chance": 0.08
+        },
+        "basic": {
+          "kind": "projectile",
+          "mult": 1.0,
+          "gauge": 1.0,
+          "speed": 10
+        },
+        "skill": {
+          "kind": "fireball",
+          "cooldown": 6.0,
+          "mult": 2.1,
+          "gauge": 1.5,
+          "radius": 1.35,
+          "speed": 9
+        },
+        "passive": {
+          "kind": "kindling",
+          "bonus": 0.2
+        },
+        "evolutions": [
+          "ignis_meteor_archmage",
+          "ignis_ember_weaver"
+        ]
+      },
+      {
+        "id": "cinder",
+        "element": "fire",
+        "role": "bruiser",
+        "targeting": "nearest_to_crystal",
+        "melee": true,
+        "starter": true,
+        "cost": 6,
+        "silhouette": "broad shoulders, flaming greatsword",
+        "stats": {
+          "max_hp": 560,
+          "attack": 28,
+          "defense": 22,
+          "attack_interval": 0.95,
+          "range": 0.75,
+          "leash_radius": 2.1,
+          "threat": 1.6,
+          "crit_chance": 0.08,
+          "move_speed": 2.8
+        },
+        "basic": {
+          "kind": "melee",
+          "mult": 1.0,
+          "gauge": 1.0
+        },
+        "skill": {
+          "kind": "cleave",
+          "cooldown": 5.0,
+          "mult": 1.9,
+          "gauge": 1.0,
+          "radius": 1.7,
+          "arc": 140
+        },
+        "passive": {
+          "kind": "heat_up",
+          "perStack": 0.07,
+          "maxStacks": 5
+        },
+        "evolutions": [
+          "cinder_inferno_duelist",
+          "cinder_ash_guardian"
+        ]
+      },
+      {
+        "id": "marina",
+        "element": "water",
+        "role": "healer",
+        "targeting": "nearest_to_crystal",
+        "melee": false,
+        "starter": true,
+        "cost": 6,
+        "silhouette": "flowing robes, wave-crest staff",
+        "stats": {
+          "max_hp": 340,
+          "attack": 22,
+          "defense": 8,
+          "attack_interval": 1.2,
+          "range": 4.4,
+          "elemental_mastery": 30,
+          "threat": 0.7,
+          "heal_power": 1.0
+        },
+        "basic": {
+          "kind": "projectile",
+          "mult": 1.0,
+          "gauge": 1.0,
+          "speed": 9
+        },
+        "skill": {
+          "kind": "heal_rain",
+          "cooldown": 7.0,
+          "mult": 1.0,
+          "gauge": 0.5,
+          "radius": 2.3,
+          "duration": 3.0,
+          "heal": 0.55,
+          "healBelow": 0.9
+        },
+        "passive": {
+          "kind": "tidecall",
+          "crystalHealPct": 0.006
+        },
+        "evolutions": [
+          "marina_tide_saint",
+          "marina_torrent_caller"
+        ]
+      },
+      {
+        "id": "tidal",
+        "element": "water",
+        "role": "controller",
+        "targeting": "nearest_to_crystal",
+        "melee": false,
+        "starter": false,
+        "cost": 7,
+        "silhouette": "hooded, twin water whips",
+        "stats": {
+          "max_hp": 420,
+          "attack": 24,
+          "defense": 14,
+          "attack_interval": 1.1,
+          "range": 3.8,
+          "elemental_mastery": 30,
+          "threat": 1.0
+        },
+        "basic": {
+          "kind": "projectile",
+          "mult": 1.0,
+          "gauge": 1.0,
+          "speed": 11
+        },
+        "skill": {
+          "kind": "push_wave",
+          "cooldown": 6.5,
+          "mult": 1.4,
+          "gauge": 1.5,
+          "length": 4.2,
+          "width": 0.9,
+          "knock": 1.6
+        },
+        "passive": {
+          "kind": "undertow",
+          "amount": 0.15,
+          "duration": 3.0
+        },
+        "evolutions": [
+          "tidal_floodbreaker",
+          "tidal_healing_spring"
+        ]
+      },
+      {
+        "id": "volt",
+        "element": "lightning",
+        "role": "mage",
+        "targeting": "reaction_opportunity",
+        "melee": false,
+        "starter": true,
+        "cost": 6,
+        "silhouette": "spiky hair, floating conductor rods",
+        "stats": {
+          "max_hp": 330,
+          "attack": 27,
+          "defense": 8,
+          "attack_interval": 1.0,
+          "range": 4.6,
+          "elemental_mastery": 50,
+          "threat": 0.8,
+          "crit_chance": 0.08
+        },
+        "basic": {
+          "kind": "projectile",
+          "mult": 1.0,
+          "gauge": 1.0,
+          "speed": 14
+        },
+        "skill": {
+          "kind": "chain_lightning",
+          "cooldown": 5.5,
+          "mult": 1.5,
+          "gauge": 1.0,
+          "jumps": 4,
+          "falloff": 0.85,
+          "jumpRange": 2.6
+        },
+        "passive": {
+          "kind": "static",
+          "bonus": 0.2
+        },
+        "evolutions": [
+          "volt_tempest_lord",
+          "volt_circuit_conductor"
+        ]
+      },
+      {
+        "id": "raiden",
+        "element": "lightning",
+        "role": "assassin",
+        "targeting": "elite",
+        "melee": true,
+        "starter": false,
+        "cost": 7,
+        "silhouette": "lean, scarf, twin daggers",
+        "stats": {
+          "max_hp": 400,
+          "attack": 34,
+          "defense": 12,
+          "attack_interval": 0.8,
+          "range": 0.8,
+          "leash_radius": 3.0,
+          "threat": 1.0,
+          "crit_chance": 0.2,
+          "crit_multiplier": 1.8,
+          "move_speed": 4.0
+        },
+        "basic": {
+          "kind": "melee",
+          "mult": 1.0,
+          "gauge": 0.8
+        },
+        "skill": {
+          "kind": "dash_strike",
+          "cooldown": 5.0,
+          "mult": 3.0,
+          "gauge": 1.0,
+          "trailPower": 0.5
+        },
+        "passive": {
+          "kind": "momentum",
+          "refund": 0.5
+        },
+        "evolutions": [
+          "raiden_stormblade",
+          "raiden_static_executioner"
+        ]
+      },
+      {
+        "id": "freya",
+        "element": "ice",
+        "role": "controller",
+        "targeting": "cluster",
+        "melee": false,
+        "starter": true,
+        "cost": 6,
+        "silhouette": "crystal crown, long cape",
+        "stats": {
+          "max_hp": 360,
+          "attack": 24,
+          "defense": 10,
+          "attack_interval": 1.15,
+          "range": 4.4,
+          "elemental_mastery": 40,
+          "threat": 0.8,
+          "status_power": 0.1
+        },
+        "basic": {
+          "kind": "projectile",
+          "mult": 1.0,
+          "gauge": 1.0,
+          "speed": 10
+        },
+        "skill": {
+          "kind": "frost_nova",
+          "cooldown": 6.5,
+          "mult": 1.4,
+          "gauge": 1.5,
+          "radius": 1.9,
+          "slow": 0.4,
+          "slowDuration": 2.5,
+          "zonePower": 0.45
+        },
+        "passive": {
+          "kind": "frostbite",
+          "reduction": 0.15
+        },
+        "evolutions": [
+          "freya_blizzard_witch",
+          "freya_crystalbinder"
+        ]
+      },
+      {
+        "id": "glacius",
+        "element": "ice",
+        "role": "guardian",
+        "targeting": "nearest_to_crystal",
+        "melee": true,
+        "starter": false,
+        "cost": 7,
+        "silhouette": "heavy armour, tower shield of ice",
+        "stats": {
+          "max_hp": 720,
+          "attack": 20,
+          "defense": 34,
+          "attack_interval": 1.2,
+          "range": 0.8,
+          "leash_radius": 1.7,
+          "threat": 3.0,
+          "damage_reduction": 0.1,
+          "move_speed": 2.2
+        },
+        "basic": {
+          "kind": "melee",
+          "mult": 1.0,
+          "gauge": 1.0
+        },
+        "skill": {
+          "kind": "ice_shield",
+          "cooldown": 8.0,
+          "mult": 1.0,
+          "gauge": 1.0,
+          "shieldPct": 0.25,
+          "retaliate": 0.6,
+          "duration": 5.0,
+          "taunt": 2.5,
+          "tauntRadius": 2.3,
+          "allyRadius": 3.0
+        },
+        "passive": {
+          "kind": "retaliate",
+          "mult": 0.45,
+          "gauge": 0.5,
+          "cooldown": 0.8
+        },
+        "evolutions": [
+          "glacius_permafrost_sentinel",
+          "glacius_shatter_knight"
+        ]
+      },
+      {
+        "id": "zephyr",
+        "element": "wind",
+        "role": "support",
+        "targeting": "cluster",
+        "melee": false,
+        "starter": false,
+        "cost": 7,
+        "silhouette": "feathered mantle, fan",
+        "stats": {
+          "max_hp": 340,
+          "attack": 22,
+          "defense": 10,
+          "attack_interval": 1.0,
+          "range": 4.4,
+          "elemental_mastery": 60,
+          "threat": 0.7
+        },
+        "basic": {
+          "kind": "projectile",
+          "mult": 1.0,
+          "gauge": 1.0,
+          "speed": 12
+        },
+        "skill": {
+          "kind": "vortex",
+          "cooldown": 7.0,
+          "mult": 0.35,
+          "gauge": 1.0,
+          "radius": 2.2,
+          "duration": 1.6
+        },
+        "passive": {
+          "kind": "tailwind",
+          "haste": 0.12,
+          "radius": 3.4
+        },
+        "evolutions": [
+          "zephyr_cyclone_sage",
+          "zephyr_gale_tactician"
+        ]
+      },
+      {
+        "id": "sylph",
+        "element": "wind",
+        "role": "ranger",
+        "targeting": "nearest_to_crystal",
+        "melee": false,
+        "starter": true,
+        "cost": 6,
+        "silhouette": "light cloak, longbow",
+        "stats": {
+          "max_hp": 330,
+          "attack": 29,
+          "defense": 8,
+          "attack_interval": 0.9,
+          "range": 5.4,
+          "threat": 0.7,
+          "crit_chance": 0.15,
+          "crit_multiplier": 1.7
+        },
+        "basic": {
+          "kind": "projectile",
+          "mult": 1.0,
+          "gauge": 1.0,
+          "speed": 15
+        },
+        "skill": {
+          "kind": "pierce_arrow",
+          "cooldown": 5.5,
+          "mult": 1.8,
+          "gauge": 1.0,
+          "speed": 16,
+          "width": 0.45,
+          "arrows": 1,
+          "spread": 14
+        },
+        "passive": {
+          "kind": "keen_eye",
+          "distance": 3.5,
+          "bonus": 0.25
+        },
+        "evolutions": [
+          "sylph_tempest_archer",
+          "sylph_wind_dancer"
+        ]
+      },
+      {
+        "id": "terra",
+        "element": "earth",
+        "role": "guardian",
+        "targeting": "nearest_to_crystal",
+        "melee": true,
+        "starter": true,
+        "cost": 6,
+        "silhouette": "stone pauldrons, hammer",
+        "stats": {
+          "max_hp": 760,
+          "attack": 19,
+          "defense": 38,
+          "attack_interval": 1.25,
+          "range": 0.8,
+          "leash_radius": 1.7,
+          "threat": 3.2,
+          "damage_reduction": 0.08,
+          "move_speed": 2.2
+        },
+        "basic": {
+          "kind": "melee",
+          "mult": 1.0,
+          "gauge": 1.0
+        },
+        "skill": {
+          "kind": "stone_barrier",
+          "cooldown": 8.0,
+          "mult": 0.8,
+          "gauge": 1.0,
+          "tauntRadius": 2.6,
+          "taunt": 3.0,
+          "armorPct": 0.6,
+          "shieldPct": 0.12,
+          "duration": 4.0
+        },
+        "passive": {
+          "kind": "bulwark",
+          "defensePct": 0.3,
+          "radius": 2.8
+        },
+        "evolutions": [
+          "terra_bedrock_warden",
+          "terra_living_fortress"
+        ]
+      },
+      {
+        "id": "magnus",
+        "element": "earth",
+        "role": "bruiser",
+        "targeting": "cluster",
+        "melee": true,
+        "starter": false,
+        "cost": 7,
+        "silhouette": "huge gauntlets, bare arms, belt",
+        "stats": {
+          "max_hp": 600,
+          "attack": 30,
+          "defense": 24,
+          "attack_interval": 1.1,
+          "range": 0.8,
+          "leash_radius": 2.0,
+          "threat": 1.6,
+          "crit_chance": 0.06,
+          "move_speed": 2.6
+        },
+        "basic": {
+          "kind": "melee",
+          "mult": 1.0,
+          "gauge": 1.0
+        },
+        "skill": {
+          "kind": "ground_slam",
+          "cooldown": 6.0,
+          "mult": 1.7,
+          "gauge": 1.0,
+          "radius": 1.7,
+          "stun": 0.45,
+          "crackDuration": 4.0,
+          "crackStacks": 1,
+          "crackMax": 1
+        },
+        "passive": {
+          "kind": "crushing",
+          "bonus": 0.25
+        },
+        "evolutions": [
+          "magnus_quake_champion",
+          "magnus_shardbreaker"
+        ]
+      },
+      {
+        "id": "seren",
+        "element": "light",
+        "role": "guardian",
+        "targeting": "nearest_to_crystal",
+        "melee": true,
+        "starter": false,
+        "cost": 7,
+        "silhouette": "sun-disc halo helm, kite shield, tabard",
+        "stats": {
+          "max_hp": 700,
+          "attack": 19,
+          "defense": 34,
+          "attack_interval": 1.2,
+          "range": 0.8,
+          "leash_radius": 1.8,
+          "threat": 2.8,
+          "damage_reduction": 0.08,
+          "move_speed": 2.3
+        },
+        "basic": {
+          "kind": "melee",
+          "mult": 1.0,
+          "gauge": 1.0
+        },
+        "skill": {
+          "kind": "dawn_aegis",
+          "cooldown": 7.5,
+          "mult": 0.9,
+          "gauge": 1.0,
+          "radius": 2.6,
+          "shieldPct": 0.22,
+          "allyRange": 4.5,
+          "cleanseRadius": 2.8
+        },
+        "passive": {
+          "kind": "radiant_guard",
+          "reduction": 0.1,
+          "radius": 3.5
+        },
+        "evolutions": [
+          "seren_aegis_of_dawn",
+          "seren_purifier"
+        ]
+      },
+      {
+        "id": "nyxara",
+        "element": "shadow",
+        "role": "assassin",
+        "targeting": "execute",
+        "melee": false,
+        "starter": false,
+        "cost": 7,
+        "silhouette": "crescent hood, floating oath-chains, tall staff",
+        "stats": {
+          "max_hp": 350,
+          "attack": 30,
+          "defense": 9,
+          "attack_interval": 1.05,
+          "range": 4.8,
+          "elemental_mastery": 30,
+          "threat": 0.8,
+          "crit_chance": 0.12
+        },
+        "basic": {
+          "kind": "projectile",
+          "mult": 1.0,
+          "gauge": 1.0,
+          "speed": 11
+        },
+        "skill": {
+          "kind": "oath_of_doom",
+          "cooldown": 6.0,
+          "mult": 1.1,
+          "gauge": 0.5,
+          "marks": 3,
+          "doomStacks": 2
+        },
+        "passive": {
+          "kind": "binding_oath",
+          "refund": 0.25,
+          "bonusPerDoom": 0.04
+        },
+        "evolutions": [
+          "nyxara_final_verdict",
+          "nyxara_covenant"
+        ]
+      },
+      {
+        "id": "ashara",
+        "element": "fire",
+        "role": "bruiser",
+        "targeting": "nearest_to_crystal",
+        "melee": true,
+        "starter": false,
+        "cost": 7,
+        "silhouette": "phoenix-wing pauldrons, flame plume helm, sabre",
+        "stats": {
+          "max_hp": 640,
+          "attack": 26,
+          "defense": 26,
+          "attack_interval": 1.0,
+          "range": 0.8,
+          "leash_radius": 2.0,
+          "threat": 2.0,
+          "move_speed": 2.6,
+          "crit_chance": 0.06
+        },
+        "basic": {
+          "kind": "melee",
+          "mult": 1.0,
+          "gauge": 1.0
+        },
+        "skill": {
+          "kind": "phoenix_slash",
+          "cooldown": 6.0,
+          "mult": 1.4,
+          "gauge": 1.0,
+          "radius": 1.6,
+          "heat": 25
+        },
+        "passive": {
+          "kind": "phoenix_heat",
+          "hitHeat": 3,
+          "damageHeat": 30,
+          "burstMult": 1.5,
+          "burstRadius": 2.2,
+          "rebirth": 0.4
+        },
+        "evolutions": [
+          "ashara_vengeance_flames",
+          "ashara_rebirth_ward"
+        ]
+      },
+      {
+        "id": "nerissa",
+        "element": "water",
+        "role": "support",
+        "targeting": "cluster",
+        "melee": false,
+        "starter": false,
+        "cost": 7,
+        "silhouette": "pearl circlet, oracle veil, conch staff",
+        "stats": {
+          "max_hp": 340,
+          "attack": 21,
+          "defense": 9,
+          "attack_interval": 1.15,
+          "range": 4.5,
+          "elemental_mastery": 50,
+          "threat": 0.7,
+          "heal_power": 1.0
+        },
+        "basic": {
+          "kind": "projectile",
+          "mult": 1.0,
+          "gauge": 1.0,
+          "speed": 9
+        },
+        "skill": {
+          "kind": "tide_blessing",
+          "cooldown": 6.5,
+          "mult": 0.5,
+          "gauge": 1.2,
+          "radius": 2.2,
+          "healPct": 0.08,
+          "healTargets": 2,
+          "healBelow": 0.92
+        },
+        "passive": {
+          "kind": "reaction_tide",
+          "every": 8,
+          "healPct": 0.05,
+          "crystalPct": 0.004
+        },
+        "evolutions": [
+          "nerissa_pure_healer",
+          "nerissa_catalyst_conductor"
+        ]
+      },
+      {
+        "id": "voltrix",
+        "element": "lightning",
+        "role": "mage",
+        "targeting": "cluster",
+        "melee": false,
+        "starter": false,
+        "cost": 7,
+        "silhouette": "goggles, toolbelt, backpack coil, wrench-staff",
+        "stats": {
+          "max_hp": 330,
+          "attack": 25,
+          "defense": 9,
+          "attack_interval": 1.05,
+          "range": 4.4,
+          "elemental_mastery": 40,
+          "threat": 0.7
+        },
+        "basic": {
+          "kind": "projectile",
+          "mult": 1.0,
+          "gauge": 1.0,
+          "speed": 13
+        },
+        "skill": {
+          "kind": "deploy_pylon",
+          "cooldown": 5.5,
+          "mult": 0.9,
+          "gauge": 0.5,
+          "radius": 2.2,
+          "duration": 8.0,
+          "field": "pylon"
+        },
+        "passive": {
+          "kind": "overclock",
+          "perPylon": 0.08
+        },
+        "evolutions": [
+          "voltrix_electric_network",
+          "voltrix_ally_charger"
+        ]
+      },
+      {
+        "id": "eirwen",
+        "element": "ice",
+        "role": "guardian",
+        "targeting": "nearest_to_crystal",
+        "melee": true,
+        "starter": false,
+        "cost": 7,
+        "silhouette": "winged frost helm, crystal greatshield, mace",
+        "stats": {
+          "max_hp": 700,
+          "attack": 18,
+          "defense": 32,
+          "attack_interval": 1.2,
+          "range": 0.8,
+          "leash_radius": 1.7,
+          "threat": 2.6,
+          "damage_reduction": 0.06,
+          "move_speed": 2.2
+        },
+        "basic": {
+          "kind": "melee",
+          "mult": 1.0,
+          "gauge": 1.0
+        },
+        "skill": {
+          "kind": "frost_aegis",
+          "cooldown": 7.0,
+          "mult": 1.0,
+          "gauge": 1.0,
+          "shieldPct": 0.18,
+          "allyShieldPct": 0.2,
+          "allyRange": 3.5,
+          "burstMult": 1.4,
+          "burstRadius": 2.0,
+          "taunt": 1.5,
+          "tauntRadius": 2.0
+        },
+        "passive": {
+          "kind": "glacial_resolve",
+          "slow": 0.2
+        },
+        "evolutions": [
+          "eirwen_ice_bulwark",
+          "eirwen_shatter_counter"
+        ]
+      },
+      {
+        "id": "kael",
+        "element": "wind",
+        "role": "assassin",
+        "targeting": "cluster",
+        "melee": true,
+        "starter": false,
+        "cost": 7,
+        "silhouette": "flowing sash, twin war-fans, bare feet",
+        "stats": {
+          "max_hp": 420,
+          "attack": 31,
+          "defense": 12,
+          "attack_interval": 0.85,
+          "range": 0.8,
+          "leash_radius": 3.2,
+          "threat": 1.0,
+          "crit_chance": 0.15,
+          "crit_multiplier": 1.7,
+          "move_speed": 4.2
+        },
+        "basic": {
+          "kind": "melee",
+          "mult": 1.0,
+          "gauge": 0.8
+        },
+        "skill": {
+          "kind": "gust_step",
+          "cooldown": 5.5,
+          "mult": 1.3,
+          "gauge": 1.0,
+          "pullRadius": 2.0,
+          "pull": 3.0
+        },
+        "passive": {
+          "kind": "slipstream",
+          "hits": 3,
+          "bonus": 0.4
+        },
+        "evolutions": [
+          "kael_precision_assassin",
+          "kael_storm_shepherd"
+        ]
+      },
+      {
+        "id": "borun",
+        "element": "earth",
+        "role": "guardian",
+        "targeting": "nearest_to_crystal",
+        "melee": false,
+        "starter": false,
+        "cost": 7,
+        "silhouette": "stocky, mason apron, square stone gauntlet, plans tube",
+        "stats": {
+          "max_hp": 560,
+          "attack": 26,
+          "defense": 28,
+          "attack_interval": 1.1,
+          "range": 3.4,
+          "threat": 1.6,
+          "move_speed": 2.2
+        },
+        "basic": {
+          "kind": "projectile",
+          "mult": 1.0,
+          "gauge": 1.0,
+          "speed": 9
+        },
+        "skill": {
+          "kind": "raise_wall",
+          "cooldown": 7.0,
+          "mult": 0.5,
+          "gauge": 1.0,
+          "duration": 4.5,
+          "halfLength": 1.2,
+          "width": 0.45,
+          "ahead": 1.2,
+          "field": "stone_wall"
+        },
+        "passive": {
+          "kind": "fortify",
+          "reduction": 0.12
+        },
+        "evolutions": [
+          "borun_fortifier",
+          "borun_spike_mason"
+        ]
+      },
+      {
+        "id": "liora",
+        "element": "nature",
+        "role": "controller",
+        "targeting": "cluster",
+        "melee": false,
+        "starter": false,
+        "cost": 7,
+        "silhouette": "leaf-crowned druid, gnarled staff with blossoms, moss cloak",
+        "stats": {
+          "max_hp": 430,
+          "attack": 27,
+          "defense": 12,
+          "attack_interval": 1.1,
+          "range": 4.2,
+          "threat": 1.0,
+          "move_speed": 2.4
+        },
+        "basic": {
+          "kind": "projectile",
+          "mult": 1.0,
+          "gauge": 1.0,
+          "speed": 9
+        },
+        "skill": {
+          "kind": "root_bloom",
+          "cooldown": 7.0,
+          "mult": 1.3,
+          "gauge": 1.0,
+          "radius": 2.0,
+          "rootDuration": 1.2
+        },
+        "passive": {
+          "kind": "deep_roots",
+          "bonus": 0.3
+        },
+        "evolutions": [
+          "liora_wildwood",
+          "liora_spore_garden"
+        ]
+      },
+      {
+        "id": "thalen",
+        "element": "nature",
+        "role": "guardian",
+        "targeting": "nearest_to_crystal",
+        "melee": true,
+        "starter": false,
+        "cost": 7,
+        "silhouette": "bark-armoured treant knight, thorn shield, antler helm",
+        "stats": {
+          "max_hp": 760,
+          "attack": 22,
+          "defense": 34,
+          "attack_interval": 1.25,
+          "range": 0.8,
+          "leash_radius": 1.7,
+          "threat": 2.8,
+          "move_speed": 2.0
+        },
+        "basic": {
+          "kind": "melee",
+          "mult": 1.0,
+          "gauge": 1.0
+        },
+        "skill": {
+          "kind": "thorn_wall",
+          "cooldown": 8.0,
+          "mult": 0.8,
+          "gauge": 1.0,
+          "shieldPct": 0.15,
+          "duration": 5.0,
+          "reflectMult": 0.6,
+          "taunt": 1.5,
+          "tauntRadius": 2.2
+        },
+        "passive": {
+          "kind": "barkskin",
+          "max": 0.2,
+          "perMissing": 0.4
+        },
+        "evolutions": [
+          "thalen_bramble_fortress",
+          "thalen_overgrowth_charge"
+        ]
+      },
+      {
+        "id": "vesper",
+        "element": "poison",
+        "role": "controller",
+        "targeting": "cluster",
+        "melee": false,
+        "starter": false,
+        "cost": 7,
+        "silhouette": "goggled alchemist, bandolier of glowing flasks, long coat",
+        "stats": {
+          "max_hp": 400,
+          "attack": 28,
+          "defense": 10,
+          "attack_interval": 1.05,
+          "range": 4.0,
+          "threat": 0.9,
+          "move_speed": 2.4
+        },
+        "basic": {
+          "kind": "projectile",
+          "mult": 1.0,
+          "gauge": 1.0,
+          "speed": 8
+        },
+        "skill": {
+          "kind": "catalyst_flask",
+          "cooldown": 6.5,
+          "mult": 1.0,
+          "gauge": 1.2,
+          "radius": 1.8,
+          "stacks": 2,
+          "poisonDuration": 6.0,
+          "field": "toxic_patch",
+          "fieldRadius": 1.6,
+          "fieldDuration": 4.0
+        },
+        "passive": {
+          "kind": "catalysis",
+          "perStack": 0.04,
+          "cap": 0.3
+        },
+        "evolutions": [
+          "vesper_volatile_mixture",
+          "vesper_lingering_miasma"
+        ]
+      },
+      {
+        "id": "sable",
+        "element": "poison",
+        "role": "support",
+        "targeting": "cluster",
+        "melee": false,
+        "starter": false,
+        "cost": 7,
+        "silhouette": "plague doctor mask, raven-feather mantle, censer of green smoke",
+        "stats": {
+          "max_hp": 470,
+          "attack": 22,
+          "defense": 14,
+          "attack_interval": 1.15,
+          "range": 4.0,
+          "threat": 1.1,
+          "heal_power": 1.1,
+          "move_speed": 2.4
+        },
+        "basic": {
+          "kind": "projectile",
+          "mult": 1.0,
+          "gauge": 1.0,
+          "speed": 8
+        },
+        "skill": {
+          "kind": "plague_cure",
+          "cooldown": 7.0,
+          "mult": 0.9,
+          "gauge": 1.0,
+          "radius": 1.8,
+          "stacks": 2,
+          "poisonDuration": 6.0,
+          "healPct": 0.08,
+          "healPerPoisoned": 0.02,
+          "countMax": 6,
+          "fever": 0.15,
+          "feverDuration": 3.0
+        },
+        "passive": {
+          "kind": "plague_doctor",
+          "radius": 5.0,
+          "healPct": 0.03,
+          "cooldown": 1.5
+        },
+        "evolutions": [
+          "sable_pandemic",
+          "sable_remedy"
+        ]
+      },
+      {
+        "id": "caelis",
+        "element": "arcane",
+        "role": "mage",
+        "targeting": "cluster",
+        "melee": false,
+        "starter": false,
+        "cost": 7,
+        "silhouette": "floating rune-book, layered violet robes, mirrored circlet",
+        "stats": {
+          "max_hp": 400,
+          "attack": 30,
+          "defense": 10,
+          "attack_interval": 1.1,
+          "range": 4.4,
+          "threat": 0.9,
+          "move_speed": 2.4
+        },
+        "basic": {
+          "kind": "projectile",
+          "mult": 1.0,
+          "gauge": 1.0,
+          "speed": 10
+        },
+        "skill": {
+          "kind": "arcane_echo",
+          "cooldown": 7.5,
+          "mult": 1.2,
+          "gauge": 1.0,
+          "radius": 1.8,
+          "resonant": 4.0,
+          "echoWindow": 6.0,
+          "echoCharges": 1,
+          "echoPower": 0.5
+        },
+        "passive": {
+          "kind": "spell_memory",
+          "bonus": 0.25
+        },
+        "evolutions": [
+          "caelis_mirror_savant",
+          "caelis_arcane_barrage"
+        ]
+      },
+      {
+        "id": "oriane",
+        "element": "arcane",
+        "role": "support",
+        "targeting": "cluster",
+        "melee": false,
+        "starter": false,
+        "cost": 7,
+        "silhouette": "conductor's baton, orbiting rune rings, tailcoat with glyphs",
+        "stats": {
+          "max_hp": 440,
+          "attack": 24,
+          "defense": 13,
+          "attack_interval": 1.15,
+          "range": 4.2,
+          "threat": 1.0,
+          "elemental_mastery": 40,
+          "move_speed": 2.4
+        },
+        "basic": {
+          "kind": "projectile",
+          "mult": 1.0,
+          "gauge": 1.2,
+          "speed": 9
+        },
+        "skill": {
+          "kind": "rune_circle",
+          "cooldown": 7.0,
+          "mult": 1.2,
+          "gauge": 1.2,
+          "radius": 2.0,
+          "field": "rune_circle",
+          "fieldRadius": 2.2,
+          "fieldDuration": 5.0
+        },
+        "passive": {
+          "kind": "rune_conductor",
+          "every": 4,
+          "refund": 0.8
+        },
+        "evolutions": [
+          "oriane_grand_conductor",
+          "oriane_sigil_warden"
+        ]
+      },
+      {
+        "id": "zerith",
+        "element": "void",
+        "role": "controller",
+        "targeting": "cluster",
+        "melee": false,
+        "starter": false,
+        "cost": 7,
+        "silhouette": "hooded rift-walker, black-star gauntlet, cloak full of stars",
+        "stats": {
+          "max_hp": 420,
+          "attack": 27,
+          "defense": 12,
+          "attack_interval": 1.15,
+          "range": 4.0,
+          "threat": 1.0,
+          "move_speed": 2.4
+        },
+        "basic": {
+          "kind": "projectile",
+          "mult": 1.0,
+          "gauge": 1.0,
+          "speed": 8
+        },
+        "skill": {
+          "kind": "gravity_rift",
+          "cooldown": 8.0,
+          "mult": 1.0,
+          "gauge": 1.0,
+          "radius": 2.4,
+          "pull": 3.0,
+          "unstable": 1,
+          "field": "rift",
+          "fieldRadius": 1.8,
+          "fieldDuration": 2.0
+        },
+        "passive": {
+          "kind": "event_horizon",
+          "perStack": 0.1,
+          "cap": 0.3
+        },
+        "evolutions": [
+          "zerith_singularity_lord",
+          "zerith_rift_walker"
+        ]
+      },
+      {
+        "id": "maelis",
+        "element": "void",
+        "role": "guardian",
+        "targeting": "nearest_to_crystal",
+        "melee": true,
+        "starter": false,
+        "cost": 7,
+        "silhouette": "obsidian full plate, portal-shaped tower shield, void halo",
+        "stats": {
+          "max_hp": 740,
+          "attack": 19,
+          "defense": 32,
+          "attack_interval": 1.25,
+          "range": 0.8,
+          "leash_radius": 1.7,
+          "threat": 2.6,
+          "move_speed": 2.0
+        },
+        "basic": {
+          "kind": "melee",
+          "mult": 1.0,
+          "gauge": 1.0
+        },
+        "skill": {
+          "kind": "void_ward",
+          "cooldown": 8.5,
+          "mult": 0.8,
+          "gauge": 1.0,
+          "sealRadius": 2.4,
+          "seal": 2.0,
+          "taunt": 1.2,
+          "field": "void_ward",
+          "fieldRadius": 2.2,
+          "fieldDuration": 5.0
+        },
+        "passive": {
+          "kind": "backline_ward",
+          "reduction": 0.12,
+          "radius": 3.5
+        },
+        "evolutions": [
+          "maelis_null_bastion",
+          "maelis_portal_keeper"
+        ]
+      },
+      {
+        "id": "solenne",
+        "element": "fire",
+        "role": "mage",
+        "targeting": "cluster",
+        "melee": false,
+        "starter": false,
+        "cost": 7,
+        "silhouette": "scribe with a burning quill, scroll belt, ink-stained sleeves",
+        "stats": {
+          "max_hp": 390,
+          "attack": 29,
+          "defense": 10,
+          "attack_interval": 1.05,
+          "range": 4.2,
+          "threat": 0.9,
+          "move_speed": 2.4
+        },
+        "basic": {
+          "kind": "projectile",
+          "mult": 1.0,
+          "gauge": 1.0,
+          "speed": 10
+        },
+        "skill": {
+          "kind": "ember_script",
+          "cooldown": 7.0,
+          "mult": 1.0,
+          "gauge": 1.0,
+          "radius": 1.8,
+          "marks": 2,
+          "detonateAt": 4,
+          "detonateMult": 0.35,
+          "detonateRadius": 1.6
+        },
+        "passive": {
+          "kind": "scribe_ink",
+          "perMark": 0.05
+        },
+        "evolutions": [
+          "solenne_inferno_script",
+          "solenne_kindling_scribe"
+        ]
+      },
+      {
+        "id": "mirel",
+        "element": "water",
+        "role": "controller",
+        "targeting": "nearest_to_crystal",
+        "melee": false,
+        "starter": false,
+        "cost": 7,
+        "silhouette": "river priestess, shell crown, flowing water ribbons",
+        "stats": {
+          "max_hp": 430,
+          "attack": 28,
+          "defense": 12,
+          "attack_interval": 1.05,
+          "range": 4.0,
+          "threat": 1.0,
+          "move_speed": 2.4
+        },
+        "basic": {
+          "kind": "projectile",
+          "mult": 1.0,
+          "gauge": 1.0,
+          "speed": 9
+        },
+        "skill": {
+          "kind": "river_surge",
+          "cooldown": 7.0,
+          "mult": 1.5,
+          "gauge": 1.2,
+          "radius": 2.0,
+          "push": 1.6,
+          "field": "river_stream",
+          "fieldRadius": 1.8,
+          "fieldDuration": 4.0
+        },
+        "passive": {
+          "kind": "tidecaller",
+          "bonus": 0.25
+        },
+        "evolutions": [
+          "mirel_flood_warden",
+          "mirel_healing_streams"
+        ]
+      },
+      {
+        "id": "veyra",
+        "element": "lightning",
+        "role": "ranger",
+        "targeting": "elite",
+        "melee": false,
+        "starter": false,
+        "cost": 7,
+        "silhouette": "long recurve bow strung with lightning, visor, quiver of copper arrows",
+        "stats": {
+          "max_hp": 380,
+          "attack": 31,
+          "defense": 10,
+          "attack_interval": 0.85,
+          "range": 5.0,
+          "threat": 0.9,
+          "crit_chance": 0.1,
+          "move_speed": 2.6
+        },
+        "basic": {
+          "kind": "projectile",
+          "mult": 1.0,
+          "gauge": 0.8,
+          "speed": 13
+        },
+        "skill": {
+          "kind": "charged_shot",
+          "cooldown": 7.0,
+          "mult": 2.2,
+          "gauge": 1.5,
+          "perRamp": 0.15
+        },
+        "passive": {
+          "kind": "arcshot",
+          "perStack": 0.06,
+          "maxStacks": 6
+        },
+        "evolutions": [
+          "veyra_boss_hunter",
+          "veyra_split_conductor"
+        ]
+      },
+      {
+        "id": "isolde",
+        "element": "ice",
+        "role": "mage",
+        "targeting": "cluster",
+        "melee": false,
+        "starter": false,
+        "cost": 7,
+        "silhouette": "frost lance, crystalline pauldron, braided white hair",
+        "stats": {
+          "max_hp": 400,
+          "attack": 29,
+          "defense": 11,
+          "attack_interval": 1.1,
+          "range": 4.2,
+          "threat": 0.9,
+          "move_speed": 2.4
+        },
+        "basic": {
+          "kind": "projectile",
+          "mult": 1.0,
+          "gauge": 1.0,
+          "speed": 10
+        },
+        "skill": {
+          "kind": "shatter_lance",
+          "cooldown": 5.5,
+          "mult": 2.0,
+          "gauge": 1.0,
+          "chillGauge": 2.0,
+          "frozenBonus": 1.2,
+          "shardRadius": 1.6,
+          "shardMult": 0.6,
+          "brittle": 0.2
+        },
+        "passive": {
+          "kind": "frostbreaker",
+          "bonus": 0.25
+        },
+        "evolutions": [
+          "isolde_shatter_burst",
+          "isolde_glacial_engine"
+        ]
+      },
+      {
+        "id": "aeris",
+        "element": "wind",
+        "role": "support",
+        "targeting": "cluster",
+        "melee": false,
+        "starter": false,
+        "cost": 7,
+        "silhouette": "oracle with wind-chime staff, floating veil, feathered sandals",
+        "stats": {
+          "max_hp": 420,
+          "attack": 24,
+          "defense": 12,
+          "attack_interval": 1.05,
+          "range": 4.2,
+          "threat": 1.0,
+          "move_speed": 2.6
+        },
+        "basic": {
+          "kind": "projectile",
+          "mult": 1.0,
+          "gauge": 1.0,
+          "speed": 10
+        },
+        "skill": {
+          "kind": "zone_drift",
+          "cooldown": 7.5,
+          "mult": 1.0,
+          "gauge": 1.2,
+          "radius": 1.8,
+          "drift": 2.0,
+          "reach": 3.0,
+          "extend": 0.5
+        },
+        "passive": {
+          "kind": "tempest_oracle",
+          "radius": 3.5,
+          "haste": 0.08
+        },
+        "evolutions": [
+          "aeris_zone_weaver",
+          "aeris_gale_curse"
+        ]
+      },
+      {
+        "id": "doran",
+        "element": "earth",
+        "role": "bruiser",
+        "targeting": "nearest_to_crystal",
+        "melee": true,
+        "starter": false,
+        "cost": 7,
+        "silhouette": "huge granite gauntlets, bare stone-skinned arms, rope belt",
+        "stats": {
+          "max_hp": 640,
+          "attack": 26,
+          "defense": 30,
+          "attack_interval": 1.15,
+          "range": 0.8,
+          "leash_radius": 2.2,
+          "threat": 2.0,
+          "move_speed": 2.4
+        },
+        "basic": {
+          "kind": "melee",
+          "mult": 1.0,
+          "gauge": 1.0
+        },
+        "skill": {
+          "kind": "fracture_punch",
+          "cooldown": 6.0,
+          "mult": 2.2,
+          "gauge": 1.5,
+          "cracks": 1,
+          "crackMax": 2,
+          "shockRadius": 1.5,
+          "shockMult": 0.4
+        },
+        "passive": {
+          "kind": "granite_body",
+          "perDefense": 0.005,
+          "cap": 0.4
+        },
+        "evolutions": [
+          "doran_juggernaut",
+          "doran_fracture_striker"
+        ]
+      },
+      {
+        "id": "elowen",
+        "element": "light",
+        "role": "support",
+        "targeting": "cluster",
+        "melee": false,
+        "starter": false,
+        "cost": 7,
+        "silhouette": "cantor in sun-embroidered robes, golden songbook, radiant hair",
+        "stats": {
+          "max_hp": 430,
+          "attack": 24,
+          "defense": 12,
+          "attack_interval": 1.1,
+          "range": 4.4,
+          "threat": 1.0,
+          "heal_power": 1.1,
+          "move_speed": 2.4
+        },
+        "basic": {
+          "kind": "projectile",
+          "mult": 1.0,
+          "gauge": 1.0,
+          "speed": 10
+        },
+        "skill": {
+          "kind": "sun_beam",
+          "cooldown": 7.5,
+          "mult": 1.1,
+          "gauge": 1.0,
+          "width": 0.6,
+          "extra": 2.0,
+          "illuminate": 3.0,
+          "healPct": 0.07,
+          "healTargets": 2
+        },
+        "passive": {
+          "kind": "radiant_hymn",
+          "every": 4,
+          "healPct": 0.03,
+          "radius": 5.0,
+          "bonus": 0.15
+        },
+        "evolutions": [
+          "elowen_dawn_choir",
+          "elowen_solar_lance"
+        ]
+      },
+      {
+        "id": "morven",
+        "element": "shadow",
+        "role": "guardian",
+        "targeting": "nearest_to_crystal",
+        "melee": true,
+        "starter": false,
+        "cost": 7,
+        "silhouette": "hooded sentinel in tattered black mail, chained lantern, crescent glaive",
+        "stats": {
+          "max_hp": 780,
+          "attack": 19,
+          "defense": 30,
+          "attack_interval": 1.2,
+          "range": 0.9,
+          "leash_radius": 1.8,
+          "threat": 2.8,
+          "move_speed": 2.0
+        },
+        "basic": {
+          "kind": "melee",
+          "mult": 1.0,
+          "gauge": 1.0
+        },
+        "skill": {
+          "kind": "curse_mire",
+          "cooldown": 8.0,
+          "mult": 0.8,
+          "gauge": 1.2,
+          "radius": 2.2,
+          "taunt": 1.5,
+          "field": "gloom_mire",
+          "fieldRadius": 2.2,
+          "fieldDuration": 4.0
+        },
+        "passive": {
+          "kind": "gloom_guard",
+          "radius": 3.0,
+          "share": 0.35,
+          "selfReduction": 0.3,
+          "cooldown": 0.5
+        },
+        "evolutions": [
+          "morven_dread_bulwark",
+          "morven_soul_tithe"
+        ]
+      }
+    ],
+    "fields": [
+      {
+        "id": "pylon",
+        "element": "lightning",
+        "tick": 1.0,
+        "zap": 1.0,
+        "maxCount": 3,
+        "params": {
+          "pylon": 1,
+          "linkMult": 0.35,
+          "linkRange": 4.5,
+          "zapGauge": 0.5
+        }
+      },
+      {
+        "id": "pylon_network",
+        "element": "lightning",
+        "tick": 1.0,
+        "zap": 1.0,
+        "maxCount": 4,
+        "params": {
+          "pylon": 1,
+          "linkMult": 0.6,
+          "linkRange": 5.5,
+          "zapGauge": 0.5
+        }
+      },
+      {
+        "id": "pylon_charger",
+        "element": "lightning",
+        "tick": 1.0,
+        "zap": 0.8,
+        "heroHaste": 0.12,
+        "maxCount": 3,
+        "params": {
+          "pylon": 1,
+          "linkMult": 0.2,
+          "linkRange": 4.5,
+          "zapGauge": 0.5,
+          "zapRefund": 0.25,
+          "refundRadius": 2.6
+        }
+      },
+      {
+        "id": "stone_wall",
+        "element": "earth",
+        "shape": "line",
+        "tick": 0.5,
+        "slow": 0.75,
+        "damageMult": 0.2,
+        "maxCount": 2,
+        "params": {
+          "wall": 1
+        },
+        "onTick": [
+          {
+            "op": "status",
+            "status": "armor_crack",
+            "duration": 2,
+            "stacks": 1,
+            "max": 2
+          }
+        ]
+      },
+      {
+        "id": "stone_bastion",
+        "element": "earth",
+        "shape": "line",
+        "tick": 0.5,
+        "slow": 0.75,
+        "damageMult": 0.35,
+        "heroDamageReduction": 0.15,
+        "maxCount": 3,
+        "params": {
+          "wall": 1
+        },
+        "onTick": [
+          {
+            "op": "status",
+            "status": "armor_crack",
+            "duration": 2,
+            "stacks": 1,
+            "max": 2
+          }
+        ]
+      },
+      {
+        "id": "rune_circle",
+        "element": "arcane",
+        "tick": 0.5,
+        "reactionAmp": 0.3,
+        "maxCount": 2
+      },
+      {
+        "id": "grand_rune",
+        "element": "arcane",
+        "tick": 0.5,
+        "reactionAmp": 0.45,
+        "enemyVuln": 0.08,
+        "maxCount": 2
+      },
+      {
+        "id": "sigil_ward",
+        "element": "arcane",
+        "tick": 0.5,
+        "reactionAmp": 0.2,
+        "heroDamageReduction": 0.15,
+        "maxCount": 2
+      },
+      {
+        "id": "rift",
+        "element": "void",
+        "tick": 0.5,
+        "pull": 1.5,
+        "maxCount": 2,
+        "onEnd": [
+          {
+            "op": "collapse",
+            "mult": 0.8,
+            "radius": 2.0
+          }
+        ]
+      },
+      {
+        "id": "deep_rift",
+        "element": "void",
+        "tick": 0.5,
+        "pull": 2.4,
+        "maxCount": 2,
+        "onEnd": [
+          {
+            "op": "collapse",
+            "mult": 1.4,
+            "radius": 2.6
+          }
+        ]
+      },
+      {
+        "id": "void_ward",
+        "element": "void",
+        "tick": 0.5,
+        "blockBolts": true,
+        "heroDamageReduction": 0.12,
+        "maxCount": 1
+      },
+      {
+        "id": "null_bastion",
+        "element": "void",
+        "tick": 0.5,
+        "blockBolts": true,
+        "heroDamageReduction": 0.2,
+        "crystalShieldPct": 0.003,
+        "maxCount": 1
+      },
+      {
+        "id": "portal_ward",
+        "element": "void",
+        "tick": 0.5,
+        "blockBolts": true,
+        "pull": 0.8,
+        "enemyWeaken": 0.15,
+        "maxCount": 1
+      },
+      {
+        "id": "river_stream",
+        "element": "water",
+        "tick": 0.5,
+        "slow": 0.3,
+        "maxCount": 2,
+        "onTick": [
+          {
+            "op": "apply",
+            "element": "water",
+            "gauge": 0.3
+          }
+        ]
+      },
+      {
+        "id": "flood_stream",
+        "element": "water",
+        "tick": 0.5,
+        "slow": 0.45,
+        "maxCount": 2,
+        "onTick": [
+          {
+            "op": "apply",
+            "element": "water",
+            "gauge": 0.4
+          }
+        ]
+      },
+      {
+        "id": "healing_stream",
+        "element": "water",
+        "tick": 0.5,
+        "slow": 0.2,
+        "heroHealPct": 0.01,
+        "maxCount": 2
+      },
+      {
+        "id": "gale_snare",
+        "element": "wind",
+        "tick": 0.5,
+        "slow": 0.35,
+        "enemyWeaken": 0.12,
+        "maxCount": 2
+      },
+      {
+        "id": "gloom_mire",
+        "element": "shadow",
+        "tick": 0.5,
+        "slow": 0.2,
+        "enemyWeaken": 0.15,
+        "maxCount": 1
+      },
+      {
+        "id": "dread_mire",
+        "element": "shadow",
+        "tick": 1.0,
+        "slow": 0.25,
+        "enemyWeaken": 0.2,
+        "maxCount": 1,
+        "onTick": [
+          {
+            "op": "status",
+            "status": "doom",
+            "stacks": 1
+          }
+        ]
+      },
+      {
+        "id": "toxic_patch",
+        "element": "poison",
+        "tick": 0.6,
+        "damageMult": 0.12,
+        "maxCount": 2,
+        "onTick": [
+          {
+            "op": "status",
+            "status": "poison",
+            "stacks": 1,
+            "duration": 4
+          }
+        ]
+      },
+      {
+        "id": "lingering_miasma",
+        "element": "poison",
+        "tick": 0.6,
+        "damageMult": 0.15,
+        "slow": 0.25,
+        "enemyWeaken": 0.15,
+        "maxCount": 2,
+        "onTick": [
+          {
+            "op": "status",
+            "status": "poison",
+            "stacks": 1,
+            "duration": 5
+          }
+        ]
+      },
+      {
+        "id": "spore_garden",
+        "element": "nature",
+        "tick": 0.5,
+        "slow": 0.3,
+        "heroHealPct": 0.006,
+        "maxCount": 2,
+        "onTick": [
+          {
+            "op": "status",
+            "status": "root",
+            "duration": 0.6
+          }
+        ]
+      },
+      {
+        "id": "spike_wall",
+        "element": "earth",
+        "shape": "line",
+        "tick": 0.5,
+        "slow": 0.7,
+        "maxCount": 2,
+        "params": {
+          "wall": 1
+        },
+        "onEnd": [
+          {
+            "op": "damage",
+            "area": true,
+            "element": "earth",
+            "mult": 1.6,
+            "radius": 1.6
+          },
+          {
+            "op": "status",
+            "area": true,
+            "status": "stun",
+            "duration": 0.6,
+            "radius": 1.6
+          }
+        ]
+      }
+    ]
+  },
+  "evolutions": {
+    "evolutions": [
+      {
+        "id": "ignis_meteor_archmage",
+        "hero": "ignis",
+        "skill": {
+          "kind": "meteor",
+          "cooldown": 10.0,
+          "mult": 4.2,
+          "gauge": 2.0,
+          "radius": 2.3,
+          "delay": 0.9,
+          "stun": 0.5,
+          "rangeBonus": 2.0
+        },
+        "effects": [
+          {
+            "op": "stat",
+            "stat": "range",
+            "value": 0.6
+          }
+        ]
+      },
+      {
+        "id": "ignis_ember_weaver",
+        "hero": "ignis",
+        "skill": {
+          "kind": "fireball",
+          "cooldown": 4.5,
+          "mult": 1.2,
+          "gauge": 2.0,
+          "radius": 1.5,
+          "burnSpread": 2.4
+        },
+        "passive": {
+          "kind": "inferno",
+          "bonus": 0.35
+        },
+        "effects": [
+          {
+            "op": "stat",
+            "stat": "reaction_bonus",
+            "value": 0.45
+          },
+          {
+            "op": "stat",
+            "stat": "status_power",
+            "value": 0.5
+          }
+        ]
+      },
+      {
+        "id": "cinder_inferno_duelist",
+        "hero": "cinder",
+        "role": "assassin",
+        "targeting": "elite",
+        "skill": {
+          "kind": "duel_strike",
+          "cooldown": 4.5,
+          "mult": 1.3,
+          "gauge": 1.0,
+          "hits": 3,
+          "haste": 0.45,
+          "hasteDuration": 3.0
+        },
+        "effects": [
+          {
+            "op": "stat",
+            "stat": "attack_interval",
+            "value": 0.35,
+            "pct": true
+          },
+          {
+            "op": "stat",
+            "stat": "crit_chance",
+            "value": 0.2
+          },
+          {
+            "op": "stat",
+            "stat": "threat",
+            "value": -0.8
+          }
+        ]
+      },
+      {
+        "id": "cinder_ash_guardian",
+        "hero": "cinder",
+        "role": "guardian",
+        "skill": {
+          "kind": "cleave",
+          "cooldown": 6.0,
+          "mult": 1.5,
+          "gauge": 1.5,
+          "radius": 1.9,
+          "arc": 220,
+          "taunt": 2.5,
+          "tauntRadius": 2.4,
+          "groundDuration": 3.0,
+          "groundPower": 0.5,
+          "shieldPct": 0.12
+        },
+        "effects": [
+          {
+            "op": "stat",
+            "stat": "max_hp",
+            "value": 0.5,
+            "pct": true
+          },
+          {
+            "op": "stat",
+            "stat": "threat",
+            "value": 1.4
+          },
+          {
+            "op": "stat",
+            "stat": "defense",
+            "value": 14
+          }
+        ]
+      },
+      {
+        "id": "marina_tide_saint",
+        "hero": "marina",
+        "skill": {
+          "kind": "heal_rain",
+          "cooldown": 6.5,
+          "mult": 1.0,
+          "gauge": 0.5,
+          "radius": 2.8,
+          "duration": 3.5,
+          "heal": 0.85,
+          "reviveHp": 0.35,
+          "healBelow": 0.95
+        },
+        "effects": [
+          {
+            "op": "stat",
+            "stat": "heal_power",
+            "value": 0.25,
+            "pct": true
+          }
+        ]
+      },
+      {
+        "id": "marina_torrent_caller",
+        "hero": "marina",
+        "role": "mage",
+        "targeting": "cluster",
+        "skill": {
+          "kind": "heal_rain",
+          "cooldown": 5.5,
+          "mult": 0.55,
+          "gauge": 1.0,
+          "radius": 2.4,
+          "duration": 3.0,
+          "heal": 0.3,
+          "offensive": 1,
+          "healBelow": 0.6
+        },
+        "effects": [
+          {
+            "op": "stat",
+            "stat": "attack",
+            "value": 0.25,
+            "pct": true
+          },
+          {
+            "op": "stat",
+            "stat": "elemental_mastery",
+            "value": 40
+          }
+        ]
+      },
+      {
+        "id": "tidal_floodbreaker",
+        "hero": "tidal",
+        "skill": {
+          "kind": "push_wave",
+          "cooldown": 6.0,
+          "mult": 2.0,
+          "gauge": 2.0,
+          "length": 5.4,
+          "width": 1.3,
+          "knock": 2.6,
+          "wetBonus": 0.6
+        },
+        "effects": [
+          {
+            "op": "stat",
+            "stat": "attack",
+            "value": 0.15,
+            "pct": true
+          }
+        ]
+      },
+      {
+        "id": "tidal_healing_spring",
+        "hero": "tidal",
+        "role": "healer",
+        "skill": {
+          "kind": "push_wave",
+          "cooldown": 6.0,
+          "mult": 1.0,
+          "gauge": 1.5,
+          "length": 4.2,
+          "width": 1.0,
+          "knock": 1.2,
+          "healAllies": 1.1,
+          "crystalShield": 0.025
+        },
+        "effects": [
+          {
+            "op": "stat",
+            "stat": "heal_power",
+            "value": 0.2,
+            "pct": true
+          }
+        ]
+      },
+      {
+        "id": "volt_tempest_lord",
+        "hero": "volt",
+        "skill": {
+          "kind": "chain_lightning",
+          "cooldown": 6.5,
+          "mult": 1.6,
+          "gauge": 1.0,
+          "jumps": 7,
+          "falloff": 0.9,
+          "jumpRange": 3.2,
+          "stormAtEnd": 3.0
+        },
+        "effects": []
+      },
+      {
+        "id": "volt_circuit_conductor",
+        "hero": "volt",
+        "skill": {
+          "kind": "chain_lightning",
+          "cooldown": 4.0,
+          "mult": 1.1,
+          "gauge": 1.5,
+          "jumps": 5,
+          "falloff": 0.95,
+          "jumpRange": 3.0,
+          "preferWet": 1,
+          "refundOnReaction": 0.4
+        },
+        "effects": [
+          {
+            "op": "stat",
+            "stat": "elemental_mastery",
+            "value": 80
+          },
+          {
+            "op": "stat",
+            "stat": "reaction_bonus",
+            "value": 0.25
+          }
+        ]
+      },
+      {
+        "id": "raiden_stormblade",
+        "hero": "raiden",
+        "skill": {
+          "kind": "dash_strike",
+          "cooldown": 4.0,
+          "mult": 2.4,
+          "gauge": 1.0,
+          "trailDuration": 3.0,
+          "trailPower": 0.55
+        },
+        "effects": [
+          {
+            "op": "stat",
+            "stat": "leash_radius",
+            "value": 0.8
+          }
+        ]
+      },
+      {
+        "id": "raiden_static_executioner",
+        "hero": "raiden",
+        "targeting": "execute",
+        "skill": {
+          "kind": "dash_strike",
+          "cooldown": 4.5,
+          "mult": 2.6,
+          "gauge": 1.0,
+          "execute": 1,
+          "executeThreshold": 0.2,
+          "bossBonus": 0.6
+        },
+        "effects": [
+          {
+            "op": "stat",
+            "stat": "crit_multiplier",
+            "value": 0.4
+          }
+        ]
+      },
+      {
+        "id": "freya_blizzard_witch",
+        "hero": "freya",
+        "skill": {
+          "kind": "frost_nova",
+          "cooldown": 7.5,
+          "mult": 1.2,
+          "gauge": 1.5,
+          "radius": 2.3,
+          "slow": 0.45,
+          "slowDuration": 3.0,
+          "zoneDuration": 4.0,
+          "zonePower": 0.55
+        },
+        "effects": []
+      },
+      {
+        "id": "freya_crystalbinder",
+        "hero": "freya",
+        "role": "support",
+        "skill": {
+          "kind": "frost_nova",
+          "cooldown": 6.0,
+          "mult": 1.3,
+          "gauge": 2.0,
+          "radius": 1.9,
+          "slow": 0.35,
+          "slowDuration": 2.0,
+          "crystalShield": 0.035,
+          "frozenBonus": 0.5
+        },
+        "effects": [
+          {
+            "op": "stat",
+            "stat": "status_power",
+            "value": 0.3
+          }
+        ]
+      },
+      {
+        "id": "glacius_permafrost_sentinel",
+        "hero": "glacius",
+        "skill": {
+          "kind": "ice_shield",
+          "cooldown": 8.0,
+          "mult": 1.0,
+          "gauge": 1.0,
+          "shieldPct": 0.3,
+          "retaliate": 0.7,
+          "duration": 5.0,
+          "taunt": 3.0,
+          "tauntRadius": 2.6,
+          "allyShieldPct": 0.15,
+          "allyRadius": 3.2
+        },
+        "effects": [
+          {
+            "op": "stat",
+            "stat": "max_hp",
+            "value": 0.2,
+            "pct": true
+          }
+        ]
+      },
+      {
+        "id": "glacius_shatter_knight",
+        "hero": "glacius",
+        "role": "bruiser",
+        "skill": {
+          "kind": "ice_shield",
+          "cooldown": 6.0,
+          "mult": 1.0,
+          "gauge": 1.0,
+          "shieldPct": 0.18,
+          "retaliate": 0.5,
+          "duration": 4.0,
+          "taunt": 2.0,
+          "tauntRadius": 2.0,
+          "shatterBurst": 2.4
+        },
+        "passive": {
+          "kind": "shatter",
+          "bonus": 1.0
+        },
+        "effects": [
+          {
+            "op": "stat",
+            "stat": "attack",
+            "value": 0.45,
+            "pct": true
+          },
+          {
+            "op": "stat",
+            "stat": "attack_interval",
+            "value": 0.2,
+            "pct": true
+          }
+        ]
+      },
+      {
+        "id": "zephyr_cyclone_sage",
+        "hero": "zephyr",
+        "skill": {
+          "kind": "vortex",
+          "cooldown": 7.0,
+          "mult": 0.6,
+          "gauge": 1.0,
+          "radius": 2.8,
+          "duration": 3.0
+        },
+        "effects": [
+          {
+            "op": "stat",
+            "stat": "elemental_mastery",
+            "value": 60
+          }
+        ]
+      },
+      {
+        "id": "zephyr_gale_tactician",
+        "hero": "zephyr",
+        "skill": {
+          "kind": "vortex",
+          "cooldown": 6.0,
+          "mult": 0.3,
+          "gauge": 1.0,
+          "radius": 1.8,
+          "duration": 1.2,
+          "teamHaste": 0.3,
+          "hasteDuration": 4.0
+        },
+        "effects": []
+      },
+      {
+        "id": "sylph_tempest_archer",
+        "hero": "sylph",
+        "skill": {
+          "kind": "pierce_arrow",
+          "cooldown": 6.0,
+          "mult": 1.5,
+          "gauge": 1.0,
+          "speed": 16,
+          "width": 0.45,
+          "arrows": 3,
+          "spread": 14
+        },
+        "effects": []
+      },
+      {
+        "id": "sylph_wind_dancer",
+        "hero": "sylph",
+        "skill": {
+          "kind": "pierce_arrow",
+          "cooldown": 7.0,
+          "mult": 1.4,
+          "gauge": 1.0,
+          "speed": 18,
+          "width": 0.4,
+          "arrows": 1,
+          "basicPierceEvery": 3
+        },
+        "effects": [
+          {
+            "op": "stat",
+            "stat": "attack_interval",
+            "value": 0.45,
+            "pct": true
+          }
+        ]
+      },
+      {
+        "id": "terra_bedrock_warden",
+        "hero": "terra",
+        "skill": {
+          "kind": "stone_barrier",
+          "cooldown": 8.0,
+          "mult": 0.8,
+          "gauge": 1.5,
+          "tauntRadius": 3.0,
+          "taunt": 3.5,
+          "armorPct": 0.6,
+          "shieldPct": 0.12,
+          "duration": 4.5,
+          "crystalReduction": 0.35
+        },
+        "effects": []
+      },
+      {
+        "id": "terra_living_fortress",
+        "hero": "terra",
+        "skill": {
+          "kind": "stone_barrier",
+          "cooldown": 7.0,
+          "mult": 1.0,
+          "gauge": 1.5,
+          "tauntRadius": 2.6,
+          "taunt": 4.0,
+          "armorPct": 0.9,
+          "shieldPct": 0.2,
+          "duration": 4.0,
+          "retaliate": 0.7
+        },
+        "passive": {
+          "kind": "living_fortress",
+          "regen": 0.012,
+          "mult": 0.6,
+          "gauge": 0.5,
+          "cooldown": 0.6
+        },
+        "effects": [
+          {
+            "op": "stat",
+            "stat": "max_hp",
+            "value": 0.3,
+            "pct": true
+          },
+          {
+            "op": "stat",
+            "stat": "leash_radius",
+            "value": -1.2
+          }
+        ]
+      },
+      {
+        "id": "magnus_quake_champion",
+        "hero": "magnus",
+        "skill": {
+          "kind": "ground_slam",
+          "cooldown": 6.5,
+          "mult": 1.6,
+          "gauge": 1.0,
+          "radius": 2.5,
+          "stun": 0.5,
+          "crackDuration": 4.0,
+          "crackStacks": 1,
+          "crackMax": 1,
+          "aftershock": 0.9
+        },
+        "effects": []
+      },
+      {
+        "id": "magnus_shardbreaker",
+        "hero": "magnus",
+        "targeting": "elite",
+        "skill": {
+          "kind": "ground_slam",
+          "cooldown": 4.0,
+          "mult": 3.2,
+          "gauge": 1.5,
+          "single": 1,
+          "stun": 0.3,
+          "crackDuration": 6.0,
+          "crackStacks": 1,
+          "crackMax": 3
+        },
+        "effects": [
+          {
+            "op": "stat",
+            "stat": "crit_chance",
+            "value": 0.12
+          }
+        ]
+      },
+      {
+        "id": "seren_aegis_of_dawn",
+        "hero": "seren",
+        "skill": {
+          "kind": "dawn_aegis",
+          "cooldown": 8.5,
+          "shieldPct": 0.2,
+          "allShieldPct": 0.14,
+          "allRadius": 3.2,
+          "crystalShield": 0.02
+        },
+        "effects": [
+          {
+            "op": "stat",
+            "stat": "max_hp",
+            "value": 0.2,
+            "pct": true
+          }
+        ]
+      },
+      {
+        "id": "seren_purifier",
+        "hero": "seren",
+        "role": "controller",
+        "skill": {
+          "kind": "dawn_aegis",
+          "cooldown": 6.5,
+          "mult": 1.4,
+          "shieldPct": 0.12,
+          "purgeRadius": 3.5,
+          "illuminatedBonus": 0.6
+        },
+        "passive": {
+          "kind": "purifying_light",
+          "bonus": 0.25
+        },
+        "effects": [
+          {
+            "op": "stat",
+            "stat": "attack",
+            "value": 0.2,
+            "pct": true
+          }
+        ]
+      },
+      {
+        "id": "nyxara_final_verdict",
+        "hero": "nyxara",
+        "skill": {
+          "kind": "oath_of_doom",
+          "cooldown": 6.0,
+          "marks": 4,
+          "doomStacks": 3,
+          "verdictSpread": 2
+        },
+        "effects": [
+          {
+            "op": "stat",
+            "stat": "elemental_mastery",
+            "value": 30
+          }
+        ]
+      },
+      {
+        "id": "nyxara_covenant",
+        "hero": "nyxara",
+        "targeting": "elite",
+        "skill": {
+          "kind": "oath_of_doom",
+          "cooldown": 5.5,
+          "mult": 1.6,
+          "marks": 1,
+          "doomStacks": 4,
+          "elitesOnly": 1,
+          "brittle": 1,
+          "amount": 0.25,
+          "duration": 5.0
+        },
+        "passive": {
+          "kind": "covenant",
+          "bonusPerDoom": 0.06,
+          "refund": 0.25
+        },
+        "effects": [
+          {
+            "op": "stat",
+            "stat": "attack",
+            "value": 0.15,
+            "pct": true
+          }
+        ]
+      },
+      {
+        "id": "ashara_vengeance_flames",
+        "hero": "ashara",
+        "skill": {
+          "kind": "phoenix_slash",
+          "cooldown": 5.0,
+          "mult": 1.9
+        },
+        "passive": {
+          "kind": "phoenix_heat",
+          "hitHeat": 4,
+          "damageHeat": 60,
+          "burstMult": 2.4,
+          "burstRadius": 2.4,
+          "rebirth": 0.4,
+          "rebirthBurst": 2.0
+        },
+        "effects": [
+          {
+            "op": "stat",
+            "stat": "attack",
+            "value": 0.15,
+            "pct": true
+          }
+        ]
+      },
+      {
+        "id": "ashara_rebirth_ward",
+        "hero": "ashara",
+        "role": "guardian",
+        "skill": {
+          "kind": "phoenix_slash",
+          "taunt": 2.0,
+          "tauntRadius": 2.2
+        },
+        "passive": {
+          "kind": "phoenix_heat",
+          "hitHeat": 3,
+          "damageHeat": 60,
+          "burstMult": 1.4,
+          "burstRadius": 2.2,
+          "rebirth": 0.55,
+          "wardShield": 0.15,
+          "wardRadius": 3.0,
+          "rebirthCrystalShield": 0.03
+        },
+        "effects": [
+          {
+            "op": "stat",
+            "stat": "max_hp",
+            "value": 0.25,
+            "pct": true
+          },
+          {
+            "op": "stat",
+            "stat": "threat",
+            "value": 1.2
+          }
+        ]
+      },
+      {
+        "id": "nerissa_pure_healer",
+        "hero": "nerissa",
+        "role": "healer",
+        "skill": {
+          "kind": "tide_blessing",
+          "mult": 0.3,
+          "healPct": 0.14,
+          "healTargets": 3
+        },
+        "passive": {
+          "kind": "reaction_tide",
+          "every": 5,
+          "healPct": 0.08,
+          "crystalPct": 0.006
+        },
+        "effects": [
+          {
+            "op": "stat",
+            "stat": "heal_power",
+            "value": 0.2,
+            "pct": true
+          }
+        ]
+      },
+      {
+        "id": "nerissa_catalyst_conductor",
+        "hero": "nerissa",
+        "role": "controller",
+        "skill": {
+          "kind": "tide_blessing",
+          "gauge": 1.6,
+          "radius": 2.6,
+          "reactionVuln": 0.25,
+          "vulnDuration": 4.0,
+          "healPct": 0.04,
+          "healTargets": 1
+        },
+        "passive": {
+          "kind": "catalyst_tide",
+          "every": 6,
+          "refund": 0.5
+        },
+        "effects": [
+          {
+            "op": "stat",
+            "stat": "elemental_mastery",
+            "value": 60
+          }
+        ]
+      },
+      {
+        "id": "voltrix_electric_network",
+        "hero": "voltrix",
+        "skill": {
+          "kind": "deploy_pylon",
+          "cooldown": 5.0,
+          "duration": 9.0,
+          "field": "pylon_network"
+        },
+        "effects": [
+          {
+            "op": "stat",
+            "stat": "attack",
+            "value": 0.1,
+            "pct": true
+          }
+        ]
+      },
+      {
+        "id": "voltrix_ally_charger",
+        "hero": "voltrix",
+        "role": "support",
+        "skill": {
+          "kind": "deploy_pylon",
+          "field": "pylon_charger"
+        },
+        "effects": [
+          {
+            "op": "stat",
+            "stat": "skill_cooldown",
+            "value": 0.1,
+            "pct": true
+          }
+        ]
+      },
+      {
+        "id": "eirwen_ice_bulwark",
+        "hero": "eirwen",
+        "skill": {
+          "kind": "frost_aegis",
+          "cooldown": 7.5,
+          "shieldPct": 0.3,
+          "allyShieldPct": 0.28,
+          "crystalShield": 0.03,
+          "burstStun": 0.6
+        },
+        "effects": [
+          {
+            "op": "stat",
+            "stat": "defense",
+            "value": 12
+          }
+        ]
+      },
+      {
+        "id": "eirwen_shatter_counter",
+        "hero": "eirwen",
+        "role": "bruiser",
+        "skill": {
+          "kind": "frost_aegis",
+          "cooldown": 6.5,
+          "burstMult": 2.4,
+          "frozenBonus": 1.0,
+          "burstGauge": 2.0
+        },
+        "passive": {
+          "kind": "shatter_rhythm",
+          "every": 3,
+          "radius": 1.4,
+          "mult": 0.8
+        },
+        "effects": [
+          {
+            "op": "stat",
+            "stat": "attack",
+            "value": 0.2,
+            "pct": true
+          }
+        ]
+      },
+      {
+        "id": "kael_precision_assassin",
+        "hero": "kael",
+        "targeting": "elite",
+        "skill": {
+          "kind": "gust_step",
+          "cooldown": 5.0,
+          "mult": 3.2,
+          "single": 1,
+          "executeBelow": 0.3,
+          "executeBonus": 0.6
+        },
+        "effects": [
+          {
+            "op": "stat",
+            "stat": "crit_chance",
+            "value": 0.1
+          }
+        ]
+      },
+      {
+        "id": "kael_storm_shepherd",
+        "hero": "kael",
+        "role": "controller",
+        "skill": {
+          "kind": "gust_step",
+          "cooldown": 6.0,
+          "mult": 1.0,
+          "pullRadius": 3.2,
+          "pull": 3.6,
+          "vortex": 1.5
+        },
+        "effects": [
+          {
+            "op": "stat",
+            "stat": "elemental_mastery",
+            "value": 40
+          }
+        ]
+      },
+      {
+        "id": "borun_fortifier",
+        "hero": "borun",
+        "skill": {
+          "kind": "raise_wall",
+          "duration": 6.5,
+          "halfLength": 1.4,
+          "field": "stone_bastion"
+        },
+        "effects": [
+          {
+            "op": "stat",
+            "stat": "defense",
+            "value": 10
+          }
+        ]
+      },
+      {
+        "id": "borun_spike_mason",
+        "hero": "borun",
+        "role": "controller",
+        "skill": {
+          "kind": "raise_wall",
+          "cooldown": 5.5,
+          "mult": 0.9,
+          "duration": 3.5,
+          "field": "spike_wall"
+        },
+        "effects": [
+          {
+            "op": "stat",
+            "stat": "attack",
+            "value": 0.15,
+            "pct": true
+          }
+        ]
+      },
+      {
+        "id": "liora_wildwood",
+        "hero": "liora",
+        "skill": {
+          "kind": "root_bloom",
+          "radius": 2.7,
+          "rootDuration": 1.8,
+          "mult": 1.5
+        },
+        "effects": [
+          {
+            "op": "stat",
+            "stat": "attack",
+            "value": 0.12,
+            "pct": true
+          }
+        ]
+      },
+      {
+        "id": "liora_spore_garden",
+        "hero": "liora",
+        "role": "support",
+        "skill": {
+          "kind": "root_bloom",
+          "cooldown": 6.5,
+          "mult": 1.0,
+          "field": "spore_garden",
+          "fieldRadius": 2.0,
+          "fieldDuration": 5.0
+        },
+        "effects": [
+          {
+            "op": "stat",
+            "stat": "heal_power",
+            "value": 0.15,
+            "pct": true
+          }
+        ]
+      },
+      {
+        "id": "thalen_bramble_fortress",
+        "hero": "thalen",
+        "skill": {
+          "kind": "thorn_wall",
+          "duration": 7.0,
+          "reflectMult": 0.7,
+          "thornRoot": 0.6,
+          "shieldPct": 0.22
+        },
+        "effects": [
+          {
+            "op": "stat",
+            "stat": "defense",
+            "value": 12
+          }
+        ]
+      },
+      {
+        "id": "thalen_overgrowth_charge",
+        "hero": "thalen",
+        "role": "bruiser",
+        "skill": {
+          "kind": "thorn_wall",
+          "cooldown": 6.5,
+          "mult": 1.6,
+          "lashRadius": 1.8,
+          "lashRange": 2.5,
+          "rootDuration": 1.2,
+          "shieldPct": 0.1
+        },
+        "effects": [
+          {
+            "op": "stat",
+            "stat": "attack",
+            "value": 0.25,
+            "pct": true
+          }
+        ]
+      },
+      {
+        "id": "vesper_volatile_mixture",
+        "hero": "vesper",
+        "skill": {
+          "kind": "catalyst_flask",
+          "detonatePerStack": 0.35,
+          "mult": 1.2,
+          "field": ""
+        },
+        "passive": {
+          "kind": "catalysis",
+          "perStack": 0.05,
+          "cap": 0.35
+        },
+        "effects": [
+          {
+            "op": "stat",
+            "stat": "attack",
+            "value": 0.15,
+            "pct": true
+          }
+        ]
+      },
+      {
+        "id": "vesper_lingering_miasma",
+        "hero": "vesper",
+        "role": "controller",
+        "skill": {
+          "kind": "catalyst_flask",
+          "radius": 2.2,
+          "stacks": 3,
+          "field": "lingering_miasma",
+          "fieldRadius": 2.0,
+          "fieldDuration": 6.0
+        },
+        "effects": [
+          {
+            "op": "stat",
+            "stat": "elemental_mastery",
+            "value": 40
+          }
+        ]
+      },
+      {
+        "id": "sable_pandemic",
+        "hero": "sable",
+        "role": "controller",
+        "skill": {
+          "kind": "plague_cure",
+          "radius": 2.6,
+          "stacks": 4,
+          "mult": 1.0,
+          "healPct": 0.05
+        },
+        "effects": [
+          {
+            "op": "stat",
+            "stat": "status_power",
+            "value": 0.25
+          }
+        ]
+      },
+      {
+        "id": "sable_remedy",
+        "hero": "sable",
+        "skill": {
+          "kind": "plague_cure",
+          "healPct": 0.12,
+          "healPerPoisoned": 0.025,
+          "fever": 0,
+          "cleanse": 1,
+          "hasteBuff": 0.15,
+          "buffDuration": 4.0
+        },
+        "effects": [
+          {
+            "op": "stat",
+            "stat": "heal_power",
+            "value": 0.2,
+            "pct": true
+          }
+        ]
+      },
+      {
+        "id": "caelis_mirror_savant",
+        "hero": "caelis",
+        "role": "support",
+        "skill": {
+          "kind": "arcane_echo",
+          "echoCharges": 2,
+          "echoPower": 0.65,
+          "echoWindow": 7.0,
+          "mult": 0.9
+        },
+        "effects": [
+          {
+            "op": "stat",
+            "stat": "skill_cooldown",
+            "value": 0.1,
+            "pct": true
+          }
+        ]
+      },
+      {
+        "id": "caelis_arcane_barrage",
+        "hero": "caelis",
+        "skill": {
+          "kind": "arcane_echo",
+          "bolts": 3,
+          "mult": 1.5,
+          "cooldown": 6.5
+        },
+        "effects": [
+          {
+            "op": "stat",
+            "stat": "attack",
+            "value": 0.15,
+            "pct": true
+          }
+        ]
+      },
+      {
+        "id": "oriane_grand_conductor",
+        "hero": "oriane",
+        "skill": {
+          "kind": "rune_circle",
+          "field": "grand_rune",
+          "fieldRadius": 2.6,
+          "fieldDuration": 6.0
+        },
+        "effects": [
+          {
+            "op": "stat",
+            "stat": "elemental_mastery",
+            "value": 40
+          }
+        ]
+      },
+      {
+        "id": "oriane_sigil_warden",
+        "hero": "oriane",
+        "role": "guardian",
+        "skill": {
+          "kind": "rune_circle",
+          "field": "sigil_ward",
+          "fieldRadius": 2.4,
+          "cooldown": 7.0
+        },
+        "effects": [
+          {
+            "op": "stat",
+            "stat": "defense",
+            "value": 10
+          }
+        ]
+      },
+      {
+        "id": "zerith_singularity_lord",
+        "hero": "zerith",
+        "skill": {
+          "kind": "gravity_rift",
+          "radius": 2.8,
+          "pull": 3.6,
+          "field": "deep_rift",
+          "fieldRadius": 2.2,
+          "fieldDuration": 2.0
+        },
+        "effects": [
+          {
+            "op": "stat",
+            "stat": "attack",
+            "value": 0.12,
+            "pct": true
+          }
+        ]
+      },
+      {
+        "id": "zerith_rift_walker",
+        "hero": "zerith",
+        "role": "mage",
+        "skill": {
+          "kind": "gravity_rift",
+          "cooldown": 5.5,
+          "unstable": 2,
+          "mult": 1.3,
+          "field": ""
+        },
+        "effects": [
+          {
+            "op": "stat",
+            "stat": "attack",
+            "value": 0.15,
+            "pct": true
+          }
+        ]
+      },
+      {
+        "id": "maelis_null_bastion",
+        "hero": "maelis",
+        "skill": {
+          "kind": "void_ward",
+          "field": "null_bastion",
+          "fieldRadius": 2.6,
+          "crystalShield": 0.03
+        },
+        "effects": [
+          {
+            "op": "stat",
+            "stat": "defense",
+            "value": 12
+          }
+        ]
+      },
+      {
+        "id": "maelis_portal_keeper",
+        "hero": "maelis",
+        "role": "controller",
+        "skill": {
+          "kind": "void_ward",
+          "field": "portal_ward",
+          "seal": 3.0,
+          "mult": 1.2
+        },
+        "effects": [
+          {
+            "op": "stat",
+            "stat": "attack",
+            "value": 0.15,
+            "pct": true
+          }
+        ]
+      },
+      {
+        "id": "solenne_inferno_script",
+        "hero": "solenne",
+        "skill": {
+          "kind": "ember_script",
+          "detonateRadius": 2.2,
+          "detonateMult": 0.45,
+          "detonateBurn": 3.0
+        },
+        "effects": [
+          {
+            "op": "stat",
+            "stat": "attack",
+            "value": 0.12,
+            "pct": true
+          }
+        ]
+      },
+      {
+        "id": "solenne_kindling_scribe",
+        "hero": "solenne",
+        "role": "support",
+        "skill": {
+          "kind": "ember_script",
+          "marks": 3,
+          "detonateAt": 3,
+          "teamBuff": 0.12,
+          "buffDuration": 3.0,
+          "mult": 0.8
+        },
+        "effects": [
+          {
+            "op": "stat",
+            "stat": "skill_cooldown",
+            "value": 0.1,
+            "pct": true
+          }
+        ]
+      },
+      {
+        "id": "mirel_flood_warden",
+        "hero": "mirel",
+        "skill": {
+          "kind": "river_surge",
+          "push": 2.4,
+          "radius": 2.4,
+          "field": "flood_stream",
+          "fieldDuration": 5.0
+        },
+        "effects": [
+          {
+            "op": "stat",
+            "stat": "max_hp",
+            "value": 0.15,
+            "pct": true
+          }
+        ]
+      },
+      {
+        "id": "mirel_healing_streams",
+        "hero": "mirel",
+        "role": "healer",
+        "skill": {
+          "kind": "river_surge",
+          "push": 1.0,
+          "field": "healing_stream",
+          "fieldRadius": 2.2,
+          "fieldDuration": 5.0
+        },
+        "effects": [
+          {
+            "op": "stat",
+            "stat": "heal_power",
+            "value": 0.2,
+            "pct": true
+          }
+        ]
+      },
+      {
+        "id": "veyra_boss_hunter",
+        "hero": "veyra",
+        "role": "assassin",
+        "skill": {
+          "kind": "charged_shot",
+          "mult": 2.8,
+          "eliteBonus": 0.5,
+          "keepRamp": 1
+        },
+        "effects": [
+          {
+            "op": "stat",
+            "stat": "crit_chance",
+            "value": 0.1
+          }
+        ]
+      },
+      {
+        "id": "veyra_split_conductor",
+        "hero": "veyra",
+        "skill": {
+          "kind": "charged_shot",
+          "splits": 3,
+          "splitMult": 0.6,
+          "splitRadius": 3.2,
+          "cooldown": 6.0
+        },
+        "effects": [
+          {
+            "op": "stat",
+            "stat": "elemental_mastery",
+            "value": 40
+          }
+        ]
+      },
+      {
+        "id": "isolde_shatter_burst",
+        "hero": "isolde",
+        "skill": {
+          "kind": "shatter_lance",
+          "frozenBonus": 1.8,
+          "shardRadius": 2.2,
+          "shardMult": 0.9
+        },
+        "effects": [
+          {
+            "op": "stat",
+            "stat": "attack",
+            "value": 0.12,
+            "pct": true
+          }
+        ]
+      },
+      {
+        "id": "isolde_glacial_engine",
+        "hero": "isolde",
+        "role": "controller",
+        "skill": {
+          "kind": "shatter_lance",
+          "freeze": 1.2,
+          "cooldown": 6.0,
+          "brittle": 0.3,
+          "brittleDuration": 4.0
+        },
+        "effects": [
+          {
+            "op": "stat",
+            "stat": "status_power",
+            "value": 0.2
+          }
+        ]
+      },
+      {
+        "id": "aeris_zone_weaver",
+        "hero": "aeris",
+        "skill": {
+          "kind": "zone_drift",
+          "drift": 3.0,
+          "reach": 4.0,
+          "extend": 1.2
+        },
+        "effects": [
+          {
+            "op": "stat",
+            "stat": "skill_cooldown",
+            "value": 0.1,
+            "pct": true
+          }
+        ]
+      },
+      {
+        "id": "aeris_gale_curse",
+        "hero": "aeris",
+        "role": "controller",
+        "skill": {
+          "kind": "zone_drift",
+          "field": "gale_snare",
+          "fieldRadius": 2.0,
+          "fieldDuration": 4.0,
+          "mult": 1.2
+        },
+        "effects": [
+          {
+            "op": "stat",
+            "stat": "attack",
+            "value": 0.1,
+            "pct": true
+          }
+        ]
+      },
+      {
+        "id": "doran_juggernaut",
+        "hero": "doran",
+        "role": "guardian",
+        "skill": {
+          "kind": "fracture_punch",
+          "shieldPct": 0.15,
+          "taunt": 1.5
+        },
+        "effects": [
+          {
+            "op": "stat",
+            "stat": "defense",
+            "value": 15
+          }
+        ]
+      },
+      {
+        "id": "doran_fracture_striker",
+        "hero": "doran",
+        "skill": {
+          "kind": "fracture_punch",
+          "spreadCrack": 1,
+          "crackMax": 3,
+          "cracks": 2,
+          "mult": 2.6
+        },
+        "effects": [
+          {
+            "op": "stat",
+            "stat": "attack",
+            "value": 0.15,
+            "pct": true
+          }
+        ]
+      },
+      {
+        "id": "elowen_dawn_choir",
+        "hero": "elowen",
+        "role": "healer",
+        "skill": {
+          "kind": "sun_beam",
+          "healPct": 0.1,
+          "healTargets": 3,
+          "mult": 0.8
+        },
+        "effects": [
+          {
+            "op": "stat",
+            "stat": "heal_power",
+            "value": 0.2,
+            "pct": true
+          }
+        ]
+      },
+      {
+        "id": "elowen_solar_lance",
+        "hero": "elowen",
+        "role": "mage",
+        "skill": {
+          "kind": "sun_beam",
+          "mult": 1.8,
+          "width": 0.45,
+          "extra": 3.0,
+          "brittle": 0.15,
+          "healTargets": 1,
+          "healPct": 0.04
+        },
+        "effects": [
+          {
+            "op": "stat",
+            "stat": "attack",
+            "value": 0.15,
+            "pct": true
+          }
+        ]
+      },
+      {
+        "id": "morven_dread_bulwark",
+        "hero": "morven",
+        "skill": {
+          "kind": "curse_mire",
+          "radius": 2.8,
+          "taunt": 2.0,
+          "shieldPct": 0.15,
+          "field": "dread_mire"
+        },
+        "effects": [
+          {
+            "op": "stat",
+            "stat": "max_hp",
+            "value": 0.15,
+            "pct": true
+          }
+        ]
+      },
+      {
+        "id": "morven_soul_tithe",
+        "hero": "morven",
+        "role": "bruiser",
+        "skill": {
+          "kind": "curse_mire",
+          "mult": 1.4,
+          "lifesteal": 0.5,
+          "cooldown": 6.5
+        },
+        "passive": {
+          "kind": "gloom_guard",
+          "radius": 3.6,
+          "share": 0.5,
+          "selfReduction": 0.4,
+          "cooldown": 0.4
+        },
+        "effects": [
+          {
+            "op": "stat",
+            "stat": "attack",
+            "value": 0.2,
+            "pct": true
+          }
+        ]
+      }
+    ]
+  },
+  "elements": {
+    "elements": [
+      {
+        "id": "fire",
+        "stage": 0,
+        "color": "#ff6a2b",
+        "status": "burn",
+        "onApply": [
+          {
+            "op": "status",
+            "status": "burn",
+            "duration": 3
+          }
+        ],
+        "onRefresh": [
+          {
+            "op": "status",
+            "status": "burn",
+            "duration": 3
+          }
+        ]
+      },
+      {
+        "id": "water",
+        "stage": 0,
+        "color": "#2f8cff",
+        "status": "wet"
+      },
+      {
+        "id": "lightning",
+        "stage": 0,
+        "color": "#b06cff",
+        "status": "charged"
+      },
+      {
+        "id": "ice",
+        "stage": 0,
+        "color": "#8fe3ff",
+        "status": "chill"
+      },
+      {
+        "id": "wind",
+        "stage": 0,
+        "color": "#5fe8c8",
+        "status": "windmark"
+      },
+      {
+        "id": "earth",
+        "stage": 0,
+        "color": "#c98a3e",
+        "status": "armor_crack",
+        "onApply": [
+          {
+            "op": "status",
+            "status": "armor_crack",
+            "duration": 4,
+            "stacks": 1
+          }
+        ]
+      },
+      {
+        "id": "light",
+        "stage": 1,
+        "color": "#ffe066",
+        "status": "illuminated",
+        "onApply": [
+          {
+            "op": "status",
+            "status": "illuminate",
+            "duration": 4,
+            "weaken": 0.15,
+            "purge": 0.5
+          }
+        ],
+        "onRefresh": [
+          {
+            "op": "status",
+            "status": "illuminate",
+            "duration": 4,
+            "weaken": 0.15,
+            "purge": 0.5
+          }
+        ]
+      },
+      {
+        "id": "shadow",
+        "stage": 1,
+        "color": "#a3306b",
+        "status": "doom",
+        "onApply": [
+          {
+            "op": "status",
+            "status": "doom",
+            "stacks": 1
+          }
+        ],
+        "onRefresh": [
+          {
+            "op": "status",
+            "status": "doom",
+            "stacks": 1
+          }
+        ]
+      },
+      {
+        "id": "nature",
+        "stage": 2,
+        "color": "#3fa34d",
+        "status": "rooted",
+        "onApply": [
+          {
+            "op": "status",
+            "status": "root",
+            "duration": 0.8
+          }
+        ]
+      },
+      {
+        "id": "poison",
+        "stage": 2,
+        "color": "#c8f03a",
+        "status": "poisoned",
+        "onApply": [
+          {
+            "op": "status",
+            "status": "poison",
+            "stacks": 1,
+            "duration": 5
+          }
+        ],
+        "onRefresh": [
+          {
+            "op": "status",
+            "status": "poison",
+            "stacks": 1,
+            "duration": 5
+          }
+        ]
+      },
+      {
+        "id": "arcane",
+        "stage": 3,
+        "color": "#ff5fd2",
+        "status": "resonant",
+        "onApply": [
+          {
+            "op": "status",
+            "status": "resonant",
+            "duration": 5
+          }
+        ],
+        "onRefresh": [
+          {
+            "op": "status",
+            "status": "resonant",
+            "duration": 5
+          }
+        ]
+      },
+      {
+        "id": "void",
+        "stage": 3,
+        "color": "#5146d9",
+        "status": "unstable",
+        "onApply": [
+          {
+            "op": "status",
+            "status": "unstable",
+            "stacks": 1
+          }
+        ],
+        "onRefresh": [
+          {
+            "op": "status",
+            "status": "unstable",
+            "stacks": 1
+          }
+        ]
+      }
+    ]
+  }
+}

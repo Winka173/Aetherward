@@ -1,0 +1,11 @@
+{
+  "name": "glacius_evoB_actions",
+  "refs": [
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B03/source/sheets/glacius_evoB.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Heroes/ignis_cast.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Heroes/sylph_idle.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B02/exports/Art/Heroes/volt_idle.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B02/exports/Art/Heroes/freya_idle.png"
+  ],
+  "prompt": "Dark Mythic Fantasy, painterly stylized 2.5D; orthographic 38.3-degree elevation, three-quarter front body turned 25 degrees toward screen-right. Key upper-left-front #ffe9d0, rim back-right #9fe8ff, ambient #16233a. Controlled broad brush planes, coloured local-hue dark edges without black outlines.\nUse case stylized-concept. Wide landscape 2560x1440 TWO separate full-body sprites of EXACT GLACIUS SHATTER KNIGHT ref1, no shield, same ice-crest closed helm, cracked ice pauldrons, exposed upper arms, blue-white tabard and single massive TWO-HANDED ICE WARHAMMER. LEFT CAST raise hammer close beside shoulders diagonally, brightest ice facets, body slightly lifted. RIGHT ATTACK hammer swing at ENDPOINT toward SCREEN RIGHT, hammer head extended +X at waist-height, BOTH hands gripping short haft, compact forward-leaning bruiser stance. Keep prop CLOSE so total silhouette width<=1.2x head-to-feet height. No long haft extension. Same armour identity. Clear gutter between figures, no overlap full feet visible. No ice burst, no swing trail, no slash, no floor shadow, no particles or letters, transparent alpha. Crisp broad steel/ice planes warm key and cool rim #9fe8ff, contour avg>=0.30 on basalt0.16. Adult anatomy."
+}

@@ -308,7 +308,7 @@ namespace Aetherward.Sim.Meta
                 .Set("sourceCounts", IntMap(s.SourceActivations)).Set("sourceDamage", FloatMap(s.SourceDamage))
                 .Set("dmgKinds", kinds).Set("shieldAbsorbed", s.ShieldAbsorbed).Set("procDepth", s.MaxProcDepth).Set("crystalBy", FloatMap(s.CrystalDamageByEnemy))
                 .Set("elements", elements).Set("seen", StringArray(s.SeenEnemies)).Set("drafts", s.DraftsTaken)
-                .Set("bosses", BossMap(s.BossChoices)).Set("blocked", s.BlockedNode).Set("biome", s.BiomeId)
+                .Set("bosses", BossMap(s.BossChoices)).Set("sealedGate", s.SealedGate).Set("formation", s.Formation.ToString()).Set("blocked", -1).Set("biome", s.BiomeId)
                 .Set("mode", s.Mode.ToString()).Set("daily", s.DailyKey).Set("modeMods", StringArray(s.ModeModifiers))
                 .Set("heroPool", StringArray(s.HeroPool)).Set("relicPool", StringArray(s.RelicPool))
                 .Set("menuSeconds", Math.Round(s.MenuSeconds, 1)).Set("tactic", s.Tactic.ToString()).Set("stance", s.Stance.ToString())
@@ -414,7 +414,9 @@ namespace Aetherward.Sim.Meta
                 s.MaxProcDepth = d.Int("procDepth");
                 ReadFloatMap(d["crystalBy"], s.CrystalDamageByEnemy);
                 s.SeenEnemies.AddRange(d.StringList("seen"));
-                s.BlockedNode = d.Int("blocked", -1);
+                s.BlockedNode = -1;
+                s.SealedGate = d.Int("sealedGate", -1);
+                if (Enum.TryParse(d.Str("formation"), out Aetherward.Sim.Combat.PartyFormation form) && Enum.IsDefined(typeof(Aetherward.Sim.Combat.PartyFormation), form)) s.Formation = form;
                 string biome = d.Str("biome");
                 s.BiomeId = biome != null && db.Biomes.ContainsKey(biome) ? biome : null;
                 s.Mode = Enum.TryParse(d.Str("mode") ?? "Classic", out GameMode mode) ? mode : GameMode.Classic;

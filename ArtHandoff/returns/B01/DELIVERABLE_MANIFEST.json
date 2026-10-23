@@ -1,0 +1,1607 @@
+{
+  "batch": "B01",
+  "producer": "Codex (gpt-6.1-sol)",
+  "date": "2026-10-20",
+  "styleLock": {
+    "palette": [
+      "#2a2c31",
+      "#625c55",
+      "#6b2734",
+      "#ff6a2b",
+      "#8fe3ff",
+      "#2b5cff",
+      "#1d1f24"
+    ],
+    "light": "key upper-left-front #ffe9d0, rim back-right #9fe8ff, ambient #16233a",
+    "edge": "Dark local-hue edge, no uniform black outline; cool 1–3 px rim; controlled broad brush planes.",
+    "promptTemplate": "Dark Mythic Fantasy, painterly stylized 2.5D; orthographic 38.3-degree elevation, three-quarter front body turned 25 degrees toward screen-right. Key upper-left-front #ffe9d0, rim back-right #9fe8ff, ambient #16233a. Controlled broad brush planes, coloured local-hue dark edges without black outlines."
+  },
+  "tools": [
+    {
+      "name": "image_generation (Codex built-in)",
+      "version": "built-in image_gen (version not exposed)"
+    },
+    {
+      "name": "Blender",
+      "version": "4.5.14 LTS",
+      "path": "C:\\Users\\Winka\\Tools\\blender-4.5.14-windows-x64\\blender.exe"
+    },
+    {
+      "name": "Python",
+      "version": "3.11",
+      "packages": [
+        "Pillow",
+        "numpy",
+        "opencv"
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "id": "Heroes/ignis_idle",
+      "status": "delivered",
+      "size": [
+        400,
+        400
+      ],
+      "priority": "P0",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Heroes/ignis_idle.png",
+      "source": "source/sheets/r1v2_heroes_ignis_idle.png",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "prompt": "source/prompts/r1v2_heroes_ignis_idle.json",
+      "cleanup": "source/scripts/revision1.py",
+      "selfAssessment": "Reference-guided lighting regeneration; original identity retained with some fold/contour drift. Walk-pair IoU and foot alignment checked; Unity acceptance pending.",
+      "master": "source/masters/Heroes/ignis_idle@2x.png",
+      "revision": 1,
+      "changeNote": "R1 D2: cool rim and lifted key planes; edge luminance 0.197 -> 0.388. Brighter ash mantle and warm hood rim.",
+      "qa": "qa/r1_metrics.json; qa/r1_d2_before_after.png"
+    },
+    {
+      "id": "Enemies/grunt_a",
+      "status": "delivered",
+      "size": [
+        256,
+        256
+      ],
+      "priority": "P0",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Enemies/grunt_a.png",
+      "source": "source/sheets/r1_enemies_grunt_a.png",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "prompt": "source/prompts/r1_enemies_grunt_a.json",
+      "cleanup": "source/scripts/revision1.py",
+      "selfAssessment": "Reference-guided lighting regeneration; original identity retained with some fold/contour drift. Walk-pair IoU and foot alignment checked; Unity acceptance pending.",
+      "master": "source/masters/Enemies/grunt_a@2x.png",
+      "revision": 1,
+      "changeNote": "R1 D2: cool rim and lifted key planes; edge luminance 0.253 -> 0.346.",
+      "qa": "qa/r1_metrics.json; qa/r1_d2_before_after.png"
+    },
+    {
+      "id": "World/crystal_intact",
+      "status": "delivered",
+      "size": [
+        320,
+        400
+      ],
+      "priority": "P0",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/World/crystal_intact.png",
+      "source": "source/blender/crystal.blend",
+      "generator": "blender:source/blender/crystal.py",
+      "prompt": "source/blender/crystal.py",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Same camera, pedestal and exterior bounds. Damage changes seams/core/glyphs; shards fall inside fixed bounds. Crisp render remains less painterly than character art.",
+      "master": "source/masters/World/crystal_intact@2x.png",
+      "revision": 0,
+      "changeNote": "Retained R0 export; D1/D3 replacement belongs to the lead."
+    },
+    {
+      "id": "Heroes/ignis_cast",
+      "status": "delivered",
+      "size": [
+        400,
+        400
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Heroes/ignis_cast.png",
+      "source": "source/sheets/ignis_base.png",
+      "generator": "image_generation",
+      "prompt": "README.md: Ignis base prompt (verbatim in source/prompts.json)",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/Heroes/ignis_cast@2x.png",
+      "revision": 0,
+      "changeNote": "Retained R0 export; outside R1 icon/D2 scope."
+    },
+    {
+      "id": "Heroes/ignis_downed",
+      "status": "delivered",
+      "size": [
+        400,
+        400
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Heroes/ignis_downed.png",
+      "source": "source/sheets/r1_heroes_ignis_downed.png",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "prompt": "source/prompts/r1_heroes_ignis_downed.json",
+      "cleanup": "source/scripts/revision1.py",
+      "selfAssessment": "Reference-guided lighting regeneration; original identity retained with some fold/contour drift. Walk-pair IoU and foot alignment checked; Unity acceptance pending.",
+      "master": "source/masters/Heroes/ignis_downed@2x.png",
+      "revision": 1,
+      "changeNote": "R1 D2: cool rim and lifted key planes; edge luminance 0.228 -> 0.347. Brighter ash mantle and warm hood rim.",
+      "qa": "qa/r1_metrics.json; qa/r1_d2_before_after.png"
+    },
+    {
+      "id": "Heroes/ignis_evoA",
+      "status": "delivered",
+      "size": [
+        400,
+        400
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Heroes/ignis_evoA.png",
+      "source": "source/sheets/r1_heroes_ignis_evoa.png",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "prompt": "source/prompts/r1_heroes_ignis_evoa.json",
+      "cleanup": "source/scripts/revision1.py",
+      "selfAssessment": "Reference-guided lighting regeneration; original identity retained with some fold/contour drift. Walk-pair IoU and foot alignment checked; Unity acceptance pending.",
+      "master": "source/masters/Heroes/ignis_evoA@2x.png",
+      "revision": 1,
+      "changeNote": "R1 D2: cool rim and lifted key planes; edge luminance 0.242 -> 0.336. Brighter ash mantle and warm hood rim.",
+      "qa": "qa/r1_metrics.json; qa/r1_d2_before_after.png"
+    },
+    {
+      "id": "Heroes/ignis_evoA_cast",
+      "status": "delivered",
+      "size": [
+        400,
+        400
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Heroes/ignis_evoA_cast.png",
+      "source": "source/sheets/ignis_evolutions.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts/ignis_evolutions.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/Heroes/ignis_evoA_cast@2x.png",
+      "revision": 0,
+      "changeNote": "Retained R0 export; outside R1 icon/D2 scope."
+    },
+    {
+      "id": "Heroes/ignis_evoB",
+      "status": "delivered",
+      "size": [
+        400,
+        400
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Heroes/ignis_evoB.png",
+      "source": "source/sheets/ignis_evolutions.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts/ignis_evolutions.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/Heroes/ignis_evoB@2x.png",
+      "revision": 0,
+      "changeNote": "Retained R0 export; outside R1 icon/D2 scope."
+    },
+    {
+      "id": "Heroes/ignis_evoB_cast",
+      "status": "delivered",
+      "size": [
+        400,
+        400
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Heroes/ignis_evoB_cast.png",
+      "source": "source/sheets/ignis_evolutions.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts/ignis_evolutions.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/Heroes/ignis_evoB_cast@2x.png",
+      "revision": 0,
+      "changeNote": "Retained R0 export; outside R1 icon/D2 scope."
+    },
+    {
+      "id": "Heroes/terra_idle",
+      "status": "delivered",
+      "size": [
+        400,
+        400
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Heroes/terra_idle.png",
+      "source": "source/sheets/terra_wide.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts/terra_wide.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/Heroes/terra_idle@2x.png",
+      "revision": 0,
+      "changeNote": "Retained R0 export; outside R1 icon/D2 scope."
+    },
+    {
+      "id": "Heroes/terra_cast",
+      "status": "delivered",
+      "size": [
+        400,
+        400
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Heroes/terra_cast.png",
+      "source": "source/sheets/terra_wide.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts/terra_wide.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/Heroes/terra_cast@2x.png",
+      "revision": 0,
+      "changeNote": "Retained R0 export; outside R1 icon/D2 scope."
+    },
+    {
+      "id": "Heroes/terra_downed",
+      "status": "delivered",
+      "size": [
+        400,
+        400
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Heroes/terra_downed.png",
+      "source": "source/sheets/terra_wide.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts/terra_wide.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/Heroes/terra_downed@2x.png",
+      "revision": 0,
+      "changeNote": "Retained R0 export; outside R1 icon/D2 scope."
+    },
+    {
+      "id": "Heroes/sylph_idle",
+      "status": "delivered",
+      "size": [
+        400,
+        400
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Heroes/sylph_idle.png",
+      "source": "source/sheets/sylph_base.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts/sylph_base.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/Heroes/sylph_idle@2x.png",
+      "revision": 0,
+      "changeNote": "Retained R0 export; outside R1 icon/D2 scope."
+    },
+    {
+      "id": "Heroes/sylph_cast",
+      "status": "delivered",
+      "size": [
+        400,
+        400
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Heroes/sylph_cast.png",
+      "source": "source/sheets/sylph_base.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts/sylph_base.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/Heroes/sylph_cast@2x.png",
+      "revision": 0,
+      "changeNote": "Retained R0 export; outside R1 icon/D2 scope."
+    },
+    {
+      "id": "Heroes/sylph_downed",
+      "status": "delivered",
+      "size": [
+        400,
+        400
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Heroes/sylph_downed.png",
+      "source": "source/sheets/sylph_base.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts/sylph_base.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/Heroes/sylph_downed@2x.png",
+      "revision": 0,
+      "changeNote": "Retained R0 export; outside R1 icon/D2 scope."
+    },
+    {
+      "id": "Heroes/marina_idle",
+      "status": "delivered",
+      "size": [
+        400,
+        400
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Heroes/marina_idle.png",
+      "source": "source/sheets/marina_base.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts/marina_base.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/Heroes/marina_idle@2x.png",
+      "revision": 0,
+      "changeNote": "Retained R0 export; outside R1 icon/D2 scope."
+    },
+    {
+      "id": "Heroes/marina_cast",
+      "status": "delivered",
+      "size": [
+        400,
+        400
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Heroes/marina_cast.png",
+      "source": "source/sheets/marina_base.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts/marina_base.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/Heroes/marina_cast@2x.png",
+      "revision": 0,
+      "changeNote": "Retained R0 export; outside R1 icon/D2 scope."
+    },
+    {
+      "id": "Heroes/marina_downed",
+      "status": "delivered",
+      "size": [
+        400,
+        400
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Heroes/marina_downed.png",
+      "source": "source/sheets/marina_base.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts/marina_base.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/Heroes/marina_downed@2x.png",
+      "revision": 0,
+      "changeNote": "Retained R0 export; outside R1 icon/D2 scope."
+    },
+    {
+      "id": "Portraits/ignis",
+      "status": "delivered",
+      "size": [
+        192,
+        192
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Portraits/ignis.png",
+      "source": "source/sheets/portrait_ignis.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts/portrait_ignis.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/Portraits/ignis@2x.png",
+      "revision": 0,
+      "changeNote": "Retained R0 export; outside R1 icon/D2 scope."
+    },
+    {
+      "id": "Portraits/terra",
+      "status": "delivered",
+      "size": [
+        192,
+        192
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Portraits/terra.png",
+      "source": "source/sheets/portrait_terra.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts/portrait_terra.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/Portraits/terra@2x.png",
+      "revision": 0,
+      "changeNote": "Retained R0 export; outside R1 icon/D2 scope."
+    },
+    {
+      "id": "Portraits/sylph",
+      "status": "delivered",
+      "size": [
+        192,
+        192
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Portraits/sylph.png",
+      "source": "source/sheets/portrait_sylph.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts/portrait_sylph.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/Portraits/sylph@2x.png",
+      "revision": 0,
+      "changeNote": "Retained R0 export; outside R1 icon/D2 scope."
+    },
+    {
+      "id": "Portraits/marina",
+      "status": "delivered",
+      "size": [
+        192,
+        192
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Portraits/marina.png",
+      "source": "source/sheets/portrait_marina.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts/portrait_marina.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/Portraits/marina@2x.png",
+      "revision": 0,
+      "changeNote": "Retained R0 export; outside R1 icon/D2 scope."
+    },
+    {
+      "id": "Enemies/grunt_b",
+      "status": "delivered",
+      "size": [
+        256,
+        256
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Enemies/grunt_b.png",
+      "source": "source/sheets/r1_enemies_grunt_b.png",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "prompt": "source/prompts/r1_enemies_grunt_b.json",
+      "cleanup": "source/scripts/revision1.py",
+      "selfAssessment": "Reference-guided lighting regeneration; original identity retained with some fold/contour drift. Walk-pair IoU and foot alignment checked; Unity acceptance pending.",
+      "master": "source/masters/Enemies/grunt_b@2x.png",
+      "revision": 1,
+      "changeNote": "R1 D2: cool rim and lifted key planes; edge luminance 0.254 -> 0.347.",
+      "qa": "qa/r1_metrics.json; qa/r1_d2_before_after.png"
+    },
+    {
+      "id": "Enemies/juggernaut_a",
+      "status": "delivered",
+      "size": [
+        256,
+        256
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Enemies/juggernaut_a.png",
+      "source": "source/sheets/r1_enemies_juggernaut_a.png",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "prompt": "source/prompts/r1_enemies_juggernaut_a.json",
+      "cleanup": "source/scripts/revision1.py",
+      "selfAssessment": "Reference-guided lighting regeneration; original identity retained with some fold/contour drift. Walk-pair IoU and foot alignment checked; Unity acceptance pending.",
+      "master": "source/masters/Enemies/juggernaut_a@2x.png",
+      "revision": 1,
+      "changeNote": "R1 D2: cool rim and lifted key planes; edge luminance 0.206 -> 0.328.",
+      "qa": "qa/r1_metrics.json; qa/r1_d2_before_after.png"
+    },
+    {
+      "id": "Enemies/juggernaut_b",
+      "status": "delivered",
+      "size": [
+        256,
+        256
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Enemies/juggernaut_b.png",
+      "source": "source/sheets/r1_enemies_juggernaut_b.png",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "prompt": "source/prompts/r1_enemies_juggernaut_b.json",
+      "cleanup": "source/scripts/revision1.py",
+      "selfAssessment": "Reference-guided lighting regeneration; original identity retained with some fold/contour drift. Walk-pair IoU and foot alignment checked; Unity acceptance pending.",
+      "master": "source/masters/Enemies/juggernaut_b@2x.png",
+      "revision": 1,
+      "changeNote": "R1 D2: cool rim and lifted key planes; edge luminance 0.217 -> 0.335.",
+      "qa": "qa/r1_metrics.json; qa/r1_d2_before_after.png"
+    },
+    {
+      "id": "Enemies/hexcaster_a",
+      "status": "delivered",
+      "size": [
+        256,
+        256
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Enemies/hexcaster_a.png",
+      "source": "source/sheets/r1v2_enemies_hexcaster_a.png",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "prompt": "source/prompts/r1v2_enemies_hexcaster_a.json",
+      "cleanup": "source/scripts/revision1.py",
+      "selfAssessment": "Reference-guided lighting regeneration; original identity retained with some fold/contour drift. Walk-pair IoU and foot alignment checked; Unity acceptance pending.",
+      "master": "source/masters/Enemies/hexcaster_a@2x.png",
+      "revision": 1,
+      "changeNote": "R1 D2: cool rim and lifted key planes; edge luminance 0.195 -> 0.365. Pale bone-grey hood lining and brighter sigil.",
+      "qa": "qa/r1_metrics.json; qa/r1_d2_before_after.png"
+    },
+    {
+      "id": "Enemies/hexcaster_b",
+      "status": "delivered",
+      "size": [
+        256,
+        256
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Enemies/hexcaster_b.png",
+      "source": "source/sheets/r1v2_enemies_hexcaster_b.png",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "prompt": "source/prompts/r1v2_enemies_hexcaster_b.json",
+      "cleanup": "source/scripts/revision1.py",
+      "selfAssessment": "Reference-guided lighting regeneration; original identity retained with some fold/contour drift. Walk-pair IoU and foot alignment checked; Unity acceptance pending.",
+      "master": "source/masters/Enemies/hexcaster_b@2x.png",
+      "revision": 1,
+      "changeNote": "R1 D2: cool rim and lifted key planes; edge luminance 0.193 -> 0.441. Pale bone-grey hood lining and brighter sigil.",
+      "qa": "qa/r1_metrics.json; qa/r1_d2_before_after.png"
+    },
+    {
+      "id": "Enemies/storm_harpy_a",
+      "status": "delivered",
+      "size": [
+        256,
+        256
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Enemies/storm_harpy_a.png",
+      "source": "source/sheets/storm_harpy_v3.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts/storm_harpy_v3.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/Enemies/storm_harpy_a@2x.png",
+      "revision": 0,
+      "changeNote": "Retained R0 export; outside R1 icon/D2 scope."
+    },
+    {
+      "id": "Enemies/storm_harpy_b",
+      "status": "delivered",
+      "size": [
+        256,
+        256
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Enemies/storm_harpy_b.png",
+      "source": "source/sheets/storm_harpy_v3.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts/storm_harpy_v3.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/Enemies/storm_harpy_b@2x.png",
+      "revision": 0,
+      "changeNote": "Retained R0 export; outside R1 icon/D2 scope."
+    },
+    {
+      "id": "Enemies/rift_warden_a",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Enemies/rift_warden_a.png",
+      "source": "source/sheets/r1_enemies_rift_warden_a.png",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "prompt": "source/prompts/r1_enemies_rift_warden_a.json",
+      "cleanup": "source/scripts/revision1.py",
+      "selfAssessment": "Reference-guided lighting regeneration; original identity retained with some fold/contour drift. Walk-pair IoU and foot alignment checked; Unity acceptance pending.",
+      "master": "source/masters/Enemies/rift_warden_a@2x.png",
+      "revision": 1,
+      "changeNote": "R1 D2: cool rim and lifted key planes; edge luminance 0.245 -> 0.365.",
+      "qa": "qa/r1_metrics.json; qa/r1_d2_before_after.png"
+    },
+    {
+      "id": "Enemies/rift_warden_b",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Enemies/rift_warden_b.png",
+      "source": "source/sheets/r1v2_enemies_rift_warden_b.png",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "prompt": "source/prompts/r1v2_enemies_rift_warden_b.json",
+      "cleanup": "source/scripts/revision1.py",
+      "selfAssessment": "Reference-guided lighting regeneration; original identity retained with some fold/contour drift. Walk-pair IoU and foot alignment checked; Unity acceptance pending.",
+      "master": "source/masters/Enemies/rift_warden_b@2x.png",
+      "revision": 1,
+      "changeNote": "R1 D2: cool rim and lifted key planes; edge luminance 0.238 -> 0.421.",
+      "qa": "qa/r1_metrics.json; qa/r1_d2_before_after.png"
+    },
+    {
+      "id": "World/crystal_cracked",
+      "status": "delivered",
+      "size": [
+        320,
+        400
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/World/crystal_cracked.png",
+      "source": "source/blender/crystal.blend",
+      "generator": "blender:source/blender/crystal.py",
+      "prompt": "source/blender/crystal.py",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Same camera, pedestal and exterior bounds. Damage changes seams/core/glyphs; shards fall inside fixed bounds. Crisp render remains less painterly than character art.",
+      "master": "source/masters/World/crystal_cracked@2x.png",
+      "revision": 0,
+      "changeNote": "Retained R0 export; D1/D3 replacement belongs to the lead."
+    },
+    {
+      "id": "World/crystal_critical",
+      "status": "delivered",
+      "size": [
+        320,
+        400
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/World/crystal_critical.png",
+      "source": "source/blender/crystal.blend",
+      "generator": "blender:source/blender/crystal.py",
+      "prompt": "source/blender/crystal.py",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Same camera, pedestal and exterior bounds. Damage changes seams/core/glyphs; shards fall inside fixed bounds. Crisp render remains less painterly than character art.",
+      "master": "source/masters/World/crystal_critical@2x.png",
+      "revision": 0,
+      "changeNote": "Retained R0 export; D1/D3 replacement belongs to the lead."
+    },
+    {
+      "id": "World/arena_background",
+      "status": "delivered",
+      "size": [
+        2400,
+        1360
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/World/arena_background.png",
+      "source": "source/blender/battlefield.blend",
+      "generator": "blender:source/blender/battlefield.py + image_generation surface finish",
+      "prompt": "source/blender/battlefield.py; source/prompts/battlefield_paint_finish.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Geometry follows live lane/node coordinates. Eight isolated render layers with geometry-preserving generated brush texture; cross-layer shadows approximated in layer08. Terrain remains more restrained than concept.",
+      "revision": 0,
+      "changeNote": "Retained R0 export; D1/D3 replacement belongs to the lead."
+    },
+    {
+      "id": "World/node_empty",
+      "status": "delivered",
+      "size": [
+        192,
+        128
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/World/node_empty.png",
+      "source": "source/sheets/node_empty.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts/node_empty.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/World/node_empty@2x.png",
+      "revision": 0,
+      "changeNote": "Retained R0 export; outside R1 icon/D2 scope."
+    },
+    {
+      "id": "World/node_highlight",
+      "status": "delivered",
+      "size": [
+        192,
+        128
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/World/node_highlight.png",
+      "source": "source/sheets/node_highlight.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts/node_highlight.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/World/node_highlight@2x.png",
+      "revision": 0,
+      "changeNote": "Retained R0 export; outside R1 icon/D2 scope."
+    },
+    {
+      "id": "World/node_occupied",
+      "status": "delivered",
+      "size": [
+        192,
+        128
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/World/node_occupied.png",
+      "source": "source/sheets/node_occupied.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts/node_occupied.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/World/node_occupied@2x.png",
+      "revision": 0,
+      "changeNote": "Retained R0 export; outside R1 icon/D2 scope."
+    },
+    {
+      "id": "World/lane_arrow",
+      "status": "delivered",
+      "size": [
+        128,
+        128
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/World/lane_arrow.png",
+      "source": "source/sheets/lane_arrow.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts/lane_arrow.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/World/lane_arrow@2x.png",
+      "revision": 0,
+      "changeNote": "Retained R0 export; outside R1 icon/D2 scope."
+    },
+    {
+      "id": "World/shadow",
+      "status": "delivered",
+      "size": [
+        128,
+        48
+      ],
+      "priority": "P1",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/World/shadow.png",
+      "source": "source/sheets/shadow.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts/shadow.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/World/shadow@2x.png",
+      "revision": 0,
+      "changeNote": "Retained R0 export; outside R1 icon/D2 scope."
+    },
+    {
+      "id": "Vfx/impact_fire",
+      "status": "delivered",
+      "size": [
+        192,
+        192
+      ],
+      "priority": "P2",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Vfx/impact_fire.png",
+      "source": "source/sheets/vfx_impact_fire.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts/vfx_impact_fire.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/Vfx/impact_fire@4x.png",
+      "revision": 0,
+      "changeNote": "Retained R0 export; outside R1 icon/D2 scope."
+    },
+    {
+      "id": "Vfx/impact_water",
+      "status": "delivered",
+      "size": [
+        192,
+        192
+      ],
+      "priority": "P2",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Vfx/impact_water.png",
+      "source": "source/sheets/vfx_impact_water.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts/vfx_impact_water.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/Vfx/impact_water@4x.png",
+      "revision": 0,
+      "changeNote": "Retained R0 export; outside R1 icon/D2 scope."
+    },
+    {
+      "id": "Vfx/impact_wind",
+      "status": "delivered",
+      "size": [
+        192,
+        192
+      ],
+      "priority": "P2",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Vfx/impact_wind.png",
+      "source": "source/sheets/vfx_impact_wind.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts/vfx_impact_wind.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/Vfx/impact_wind@4x.png",
+      "revision": 0,
+      "changeNote": "Retained R0 export; outside R1 icon/D2 scope."
+    },
+    {
+      "id": "Vfx/impact_earth",
+      "status": "delivered",
+      "size": [
+        192,
+        192
+      ],
+      "priority": "P2",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Vfx/impact_earth.png",
+      "source": "source/sheets/vfx_impact_earth.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts/vfx_impact_earth.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/Vfx/impact_earth@4x.png",
+      "revision": 0,
+      "changeNote": "Retained R0 export; outside R1 icon/D2 scope."
+    },
+    {
+      "id": "Vfx/projectile_water",
+      "status": "delivered",
+      "size": [
+        128,
+        128
+      ],
+      "priority": "P2",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Vfx/projectile_water.png",
+      "source": "source/sheets/vfx_projectile_water.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts/vfx_projectile_water.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/Vfx/projectile_water@4x.png",
+      "revision": 0,
+      "changeNote": "Retained R0 export; outside R1 icon/D2 scope."
+    },
+    {
+      "id": "Vfx/fireball",
+      "status": "delivered",
+      "size": [
+        192,
+        192
+      ],
+      "priority": "P2",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Vfx/fireball.png",
+      "source": "source/sheets/vfx_fireball.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts/vfx_fireball.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/Vfx/fireball@4x.png",
+      "revision": 0,
+      "changeNote": "Retained R0 export; outside R1 icon/D2 scope."
+    },
+    {
+      "id": "Vfx/arrow",
+      "status": "delivered",
+      "size": [
+        192,
+        96
+      ],
+      "priority": "P2",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Vfx/arrow.png",
+      "source": "source/sheets/vfx_arrow.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts/vfx_arrow.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/Vfx/arrow@4x.png",
+      "revision": 0,
+      "changeNote": "Retained R0 export; outside R1 icon/D2 scope."
+    },
+    {
+      "id": "Vfx/slash",
+      "status": "delivered",
+      "size": [
+        256,
+        256
+      ],
+      "priority": "P2",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Vfx/slash.png",
+      "source": "source/sheets/vfx_slash.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts/vfx_slash.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/Vfx/slash@4x.png",
+      "revision": 0,
+      "changeNote": "Retained R0 export; outside R1 icon/D2 scope."
+    },
+    {
+      "id": "Vfx/glow",
+      "status": "delivered",
+      "size": [
+        128,
+        128
+      ],
+      "priority": "P2",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Vfx/glow.png",
+      "source": "source/sheets/vfx_glow_v2.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts/vfx_glow_v2.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/Vfx/glow@4x.png",
+      "revision": 0,
+      "changeNote": "Retained R0 export; outside R1 icon/D2 scope."
+    },
+    {
+      "id": "Vfx/ring",
+      "status": "delivered",
+      "size": [
+        256,
+        256
+      ],
+      "priority": "P2",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Vfx/ring.png",
+      "source": "source/sheets/vfx_ring.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts/vfx_ring.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/Vfx/ring@4x.png",
+      "revision": 0,
+      "changeNote": "Retained R0 export; outside R1 icon/D2 scope."
+    },
+    {
+      "id": "Vfx/telegraph",
+      "status": "delivered",
+      "size": [
+        256,
+        256
+      ],
+      "priority": "P2",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Vfx/telegraph.png",
+      "source": "source/sheets/vfx_telegraph.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts/vfx_telegraph.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/Vfx/telegraph@4x.png",
+      "revision": 0,
+      "changeNote": "Retained R0 export; outside R1 icon/D2 scope."
+    },
+    {
+      "id": "Vfx/zone_burning_ground",
+      "status": "delivered",
+      "size": [
+        256,
+        256
+      ],
+      "priority": "P2",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/Vfx/zone_burning_ground.png",
+      "source": "source/sheets/vfx_zone_burning_ground_v2.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts/vfx_zone_burning_ground_v2.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/Vfx/zone_burning_ground@4x.png",
+      "revision": 0,
+      "changeNote": "Retained R0 export; outside R1 icon/D2 scope."
+    },
+    {
+      "id": "Icons/element_fire",
+      "status": "delivered",
+      "size": [
+        128,
+        128
+      ],
+      "priority": "P3",
+      "thirdPartyInputs": [],
+      "revision": 1,
+      "changeNote": "R1: produced section 6.7 engraved bronze/slate medallion with specified symbol; reviewed at 32 px.",
+      "export": "exports/Art/Icons/element_fire.png",
+      "source": "source/sheets/r1_icons_element_fire.png",
+      "master": "source/masters/Icons/element_fire@2x.png",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "prompt": "source/prompts/r1_icons_element_fire.json",
+      "cleanup": "source/scripts/revision1.py",
+      "selfAssessment": "R1 generated art; owner acceptance pending."
+    },
+    {
+      "id": "Icons/element_water",
+      "status": "delivered",
+      "size": [
+        128,
+        128
+      ],
+      "priority": "P3",
+      "thirdPartyInputs": [],
+      "revision": 1,
+      "changeNote": "R1: produced section 6.7 engraved bronze/slate medallion with specified symbol; reviewed at 32 px.",
+      "export": "exports/Art/Icons/element_water.png",
+      "source": "source/sheets/r1_icons_element_water.png",
+      "master": "source/masters/Icons/element_water@2x.png",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "prompt": "source/prompts/r1_icons_element_water.json",
+      "cleanup": "source/scripts/revision1.py",
+      "selfAssessment": "R1 generated art; owner acceptance pending."
+    },
+    {
+      "id": "Icons/element_wind",
+      "status": "delivered",
+      "size": [
+        128,
+        128
+      ],
+      "priority": "P3",
+      "thirdPartyInputs": [],
+      "revision": 1,
+      "changeNote": "R1: produced section 6.7 engraved bronze/slate medallion with specified symbol; reviewed at 32 px.",
+      "export": "exports/Art/Icons/element_wind.png",
+      "source": "source/sheets/r1_icons_element_wind.png",
+      "master": "source/masters/Icons/element_wind@2x.png",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "prompt": "source/prompts/r1_icons_element_wind.json",
+      "cleanup": "source/scripts/revision1.py",
+      "selfAssessment": "R1 generated art; owner acceptance pending."
+    },
+    {
+      "id": "Icons/element_earth",
+      "status": "delivered",
+      "size": [
+        128,
+        128
+      ],
+      "priority": "P3",
+      "thirdPartyInputs": [],
+      "revision": 1,
+      "changeNote": "R1: produced section 6.7 engraved bronze/slate medallion with specified symbol; reviewed at 32 px.",
+      "export": "exports/Art/Icons/element_earth.png",
+      "source": "source/sheets/r1_icons_element_earth.png",
+      "master": "source/masters/Icons/element_earth@2x.png",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "prompt": "source/prompts/r1_icons_element_earth.json",
+      "cleanup": "source/scripts/revision1.py",
+      "selfAssessment": "R1 generated art; owner acceptance pending."
+    },
+    {
+      "id": "Icons/role_guardian",
+      "status": "delivered",
+      "size": [
+        96,
+        96
+      ],
+      "priority": "P3",
+      "thirdPartyInputs": [],
+      "revision": 1,
+      "changeNote": "R1: produced section 6.7 engraved bronze/slate medallion with specified symbol; reviewed at 32 px.",
+      "export": "exports/Art/Icons/role_guardian.png",
+      "source": "source/sheets/r1_icons_role_guardian.png",
+      "master": "source/masters/Icons/role_guardian@2x.png",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "prompt": "source/prompts/r1_icons_role_guardian.json",
+      "cleanup": "source/scripts/revision1.py",
+      "selfAssessment": "R1 generated art; owner acceptance pending."
+    },
+    {
+      "id": "Icons/role_mage",
+      "status": "delivered",
+      "size": [
+        96,
+        96
+      ],
+      "priority": "P3",
+      "thirdPartyInputs": [],
+      "revision": 1,
+      "changeNote": "R1: produced section 6.7 engraved bronze/slate medallion with specified symbol; reviewed at 32 px.",
+      "export": "exports/Art/Icons/role_mage.png",
+      "source": "source/sheets/r1_icons_role_mage.png",
+      "master": "source/masters/Icons/role_mage@2x.png",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "prompt": "source/prompts/r1_icons_role_mage.json",
+      "cleanup": "source/scripts/revision1.py",
+      "selfAssessment": "R1 generated art; owner acceptance pending."
+    },
+    {
+      "id": "Icons/role_ranger",
+      "status": "delivered",
+      "size": [
+        96,
+        96
+      ],
+      "priority": "P3",
+      "thirdPartyInputs": [],
+      "revision": 1,
+      "changeNote": "R1: produced section 6.7 engraved bronze/slate medallion with specified symbol; reviewed at 32 px.",
+      "export": "exports/Art/Icons/role_ranger.png",
+      "source": "source/sheets/r1_icons_role_ranger.png",
+      "master": "source/masters/Icons/role_ranger@2x.png",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "prompt": "source/prompts/r1_icons_role_ranger.json",
+      "cleanup": "source/scripts/revision1.py",
+      "selfAssessment": "R1 generated art; owner acceptance pending."
+    },
+    {
+      "id": "Icons/role_healer",
+      "status": "delivered",
+      "size": [
+        96,
+        96
+      ],
+      "priority": "P3",
+      "thirdPartyInputs": [],
+      "revision": 1,
+      "changeNote": "R1: produced section 6.7 engraved bronze/slate medallion with specified symbol; reviewed at 32 px.",
+      "export": "exports/Art/Icons/role_healer.png",
+      "source": "source/sheets/r1_icons_role_healer.png",
+      "master": "source/masters/Icons/role_healer@2x.png",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "prompt": "source/prompts/r1_icons_role_healer.json",
+      "cleanup": "source/scripts/revision1.py",
+      "selfAssessment": "R1 generated art; owner acceptance pending."
+    },
+    {
+      "id": "Icons/status_burn",
+      "status": "delivered",
+      "size": [
+        96,
+        96
+      ],
+      "priority": "P3",
+      "thirdPartyInputs": [],
+      "revision": 1,
+      "changeNote": "R1: produced section 6.7 engraved bronze/slate medallion with specified symbol; reviewed at 32 px.",
+      "export": "exports/Art/Icons/status_burn.png",
+      "source": "source/sheets/r1_icons_status_burn.png",
+      "master": "source/masters/Icons/status_burn@2x.png",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "prompt": "source/prompts/r1_icons_status_burn.json",
+      "cleanup": "source/scripts/revision1.py",
+      "selfAssessment": "R1 generated art; owner acceptance pending."
+    },
+    {
+      "id": "Icons/status_wet",
+      "status": "delivered",
+      "size": [
+        96,
+        96
+      ],
+      "priority": "P3",
+      "thirdPartyInputs": [],
+      "revision": 1,
+      "changeNote": "R1: produced section 6.7 engraved bronze/slate medallion with specified symbol; reviewed at 32 px.",
+      "export": "exports/Art/Icons/status_wet.png",
+      "source": "source/sheets/r1_icons_status_wet.png",
+      "master": "source/masters/Icons/status_wet@2x.png",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "prompt": "source/prompts/r1_icons_status_wet.json",
+      "cleanup": "source/scripts/revision1.py",
+      "selfAssessment": "R1 generated art; owner acceptance pending."
+    },
+    {
+      "id": "Icons/status_stun",
+      "status": "delivered",
+      "size": [
+        96,
+        96
+      ],
+      "priority": "P3",
+      "thirdPartyInputs": [],
+      "revision": 1,
+      "changeNote": "R1: produced section 6.7 engraved bronze/slate medallion with specified symbol; reviewed at 32 px.",
+      "export": "exports/Art/Icons/status_stun.png",
+      "source": "source/sheets/r1_icons_status_stun.png",
+      "master": "source/masters/Icons/status_stun@2x.png",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "prompt": "source/prompts/r1_icons_status_stun.json",
+      "cleanup": "source/scripts/revision1.py",
+      "selfAssessment": "R1 generated art; owner acceptance pending."
+    },
+    {
+      "id": "Icons/status_shield",
+      "status": "delivered",
+      "size": [
+        96,
+        96
+      ],
+      "priority": "P3",
+      "thirdPartyInputs": [],
+      "revision": 1,
+      "changeNote": "R1: produced section 6.7 engraved bronze/slate medallion with specified symbol; reviewed at 32 px.",
+      "export": "exports/Art/Icons/status_shield.png",
+      "source": "source/sheets/r1_icons_status_shield.png",
+      "master": "source/masters/Icons/status_shield@2x.png",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "prompt": "source/prompts/r1_icons_status_shield.json",
+      "cleanup": "source/scripts/revision1.py",
+      "selfAssessment": "R1 generated art; owner acceptance pending."
+    },
+    {
+      "id": "Icons/reaction_vaporize",
+      "status": "delivered",
+      "size": [
+        128,
+        128
+      ],
+      "priority": "P3",
+      "thirdPartyInputs": [],
+      "revision": 1,
+      "changeNote": "R1: produced section 6.7 engraved bronze/slate medallion with specified symbol; reviewed at 32 px.",
+      "export": "exports/Art/Icons/reaction_vaporize.png",
+      "source": "source/sheets/r1_icons_reaction_vaporize.png",
+      "master": "source/masters/Icons/reaction_vaporize@2x.png",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "prompt": "source/prompts/r1_icons_reaction_vaporize.json",
+      "cleanup": "source/scripts/revision1.py",
+      "selfAssessment": "R1 generated art; owner acceptance pending."
+    },
+    {
+      "id": "Icons/reaction_firestorm",
+      "status": "delivered",
+      "size": [
+        128,
+        128
+      ],
+      "priority": "P3",
+      "thirdPartyInputs": [],
+      "revision": 1,
+      "changeNote": "R1: produced section 6.7 engraved bronze/slate medallion with specified symbol; reviewed at 32 px.",
+      "export": "exports/Art/Icons/reaction_firestorm.png",
+      "source": "source/sheets/r1_icons_reaction_firestorm.png",
+      "master": "source/masters/Icons/reaction_firestorm@2x.png",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "prompt": "source/prompts/r1_icons_reaction_firestorm.json",
+      "cleanup": "source/scripts/revision1.py",
+      "selfAssessment": "R1 generated art; owner acceptance pending."
+    },
+    {
+      "id": "Icons/ui_crystal",
+      "status": "delivered",
+      "size": [
+        96,
+        96
+      ],
+      "priority": "P3",
+      "thirdPartyInputs": [],
+      "revision": 1,
+      "changeNote": "R1: produced section 6.7 engraved bronze/slate medallion with specified symbol; reviewed at 32 px.",
+      "export": "exports/Art/Icons/ui_crystal.png",
+      "source": "source/sheets/r1_icons_ui_crystal.png",
+      "master": "source/masters/Icons/ui_crystal@2x.png",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "prompt": "source/prompts/r1_icons_ui_crystal.json",
+      "cleanup": "source/scripts/revision1.py",
+      "selfAssessment": "R1 generated art; owner acceptance pending."
+    },
+    {
+      "id": "Icons/ui_gold",
+      "status": "delivered",
+      "size": [
+        96,
+        96
+      ],
+      "priority": "P3",
+      "thirdPartyInputs": [],
+      "revision": 1,
+      "changeNote": "R1: produced section 6.7 engraved bronze/slate medallion with specified symbol; reviewed at 32 px.",
+      "export": "exports/Art/Icons/ui_gold.png",
+      "source": "source/sheets/r1_icons_ui_gold.png",
+      "master": "source/masters/Icons/ui_gold@2x.png",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "prompt": "source/prompts/r1_icons_ui_gold.json",
+      "cleanup": "source/scripts/revision1.py",
+      "selfAssessment": "R1 generated art; owner acceptance pending."
+    },
+    {
+      "id": "Icons/ui_wave",
+      "status": "delivered",
+      "size": [
+        96,
+        96
+      ],
+      "priority": "P3",
+      "thirdPartyInputs": [],
+      "revision": 1,
+      "changeNote": "R1: produced section 6.7 engraved bronze/slate medallion with specified symbol; reviewed at 32 px.",
+      "export": "exports/Art/Icons/ui_wave.png",
+      "source": "source/sheets/r1_icons_ui_wave.png",
+      "master": "source/masters/Icons/ui_wave@2x.png",
+      "generator": "image_generation (built-in image_gen; version not exposed)",
+      "prompt": "source/prompts/r1_icons_ui_wave.json",
+      "cleanup": "source/scripts/revision1.py",
+      "selfAssessment": "R1 generated art; owner acceptance pending."
+    },
+    {
+      "id": "UI/panel_dark",
+      "status": "delivered",
+      "size": [
+        128,
+        128
+      ],
+      "priority": "P3",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/UI/panel_dark.png",
+      "source": "source/sheets/ui_panel_dark.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts/ui_panel_dark.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/UI/panel_dark@4x.png",
+      "revision": 0,
+      "changeNote": "Retained R0 export; outside R1 icon/D2 scope."
+    },
+    {
+      "id": "UI/tooltip",
+      "status": "delivered",
+      "size": [
+        96,
+        96
+      ],
+      "priority": "P3",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/UI/tooltip.png",
+      "source": "source/sheets/ui_tooltip.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts/ui_tooltip.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/UI/tooltip@4x.png",
+      "revision": 0,
+      "changeNote": "Retained R0 export; outside R1 icon/D2 scope."
+    },
+    {
+      "id": "UI/bar_bg",
+      "status": "delivered",
+      "size": [
+        128,
+        40
+      ],
+      "priority": "P3",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/UI/bar_bg.png",
+      "source": "source/sheets/ui_bar_bg.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts/ui_bar_bg.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/UI/bar_bg@4x.png",
+      "revision": 0,
+      "changeNote": "Retained R0 export; outside R1 icon/D2 scope."
+    },
+    {
+      "id": "UI/bar_fill",
+      "status": "delivered",
+      "size": [
+        128,
+        40
+      ],
+      "priority": "P3",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/UI/bar_fill.png",
+      "source": "source/sheets/ui_bar_fill.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts/ui_bar_fill.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/UI/bar_fill@4x.png",
+      "revision": 0,
+      "changeNote": "Retained R0 export; outside R1 icon/D2 scope."
+    },
+    {
+      "id": "UI/button_primary_disabled",
+      "status": "delivered",
+      "size": [
+        192,
+        96
+      ],
+      "priority": "P3",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/UI/button_primary_disabled.png",
+      "source": "source/sheets/ui_button_primary_disabled.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts/ui_button_primary_disabled.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/UI/button_primary_disabled@4x.png",
+      "revision": 0,
+      "changeNote": "Retained R0 export; outside R1 icon/D2 scope."
+    },
+    {
+      "id": "UI/button_primary_hover",
+      "status": "delivered",
+      "size": [
+        192,
+        96
+      ],
+      "priority": "P3",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/UI/button_primary_hover.png",
+      "source": "source/sheets/ui_button_primary_hover.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts/ui_button_primary_hover.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/UI/button_primary_hover@4x.png",
+      "revision": 0,
+      "changeNote": "Retained R0 export; outside R1 icon/D2 scope."
+    },
+    {
+      "id": "UI/button_primary_normal",
+      "status": "delivered",
+      "size": [
+        192,
+        96
+      ],
+      "priority": "P3",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/UI/button_primary_normal.png",
+      "source": "source/sheets/ui_button_primary_normal.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts/ui_button_primary_normal.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/UI/button_primary_normal@4x.png",
+      "revision": 0,
+      "changeNote": "Retained R0 export; outside R1 icon/D2 scope."
+    },
+    {
+      "id": "UI/button_primary_pressed",
+      "status": "delivered",
+      "size": [
+        192,
+        96
+      ],
+      "priority": "P3",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/UI/button_primary_pressed.png",
+      "source": "source/sheets/ui_button_primary_pressed.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts/ui_button_primary_pressed.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/UI/button_primary_pressed@4x.png",
+      "revision": 0,
+      "changeNote": "Retained R0 export; outside R1 icon/D2 scope."
+    },
+    {
+      "id": "UI/card_rare",
+      "status": "delivered",
+      "size": [
+        256,
+        360
+      ],
+      "priority": "P3",
+      "thirdPartyInputs": [],
+      "export": "exports/Art/UI/card_rare.png",
+      "source": "source/sheets/ui_card_rare.png",
+      "generator": "image_generation",
+      "prompt": "source/prompts/ui_card_rare.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; identity and readability require owner review.",
+      "master": "source/masters/UI/card_rare@4x.png",
+      "revision": 0,
+      "changeNote": "Retained R0 export; outside R1 icon/D2 scope."
+    }
+  ],
+  "extras": [
+    {
+      "path": "previews/style_frame_1080p.png",
+      "kind": "concept painting"
+    },
+    {
+      "path": "source/battlefield/layers/01_base_terrain.png",
+      "kind": "battlefield layer"
+    },
+    {
+      "path": "source/battlefield/layers/02_path_traffic_wear.png",
+      "kind": "battlefield layer"
+    },
+    {
+      "path": "source/battlefield/layers/03_ruins_structure.png",
+      "kind": "battlefield layer"
+    },
+    {
+      "path": "source/battlefield/layers/04_cliffs_height_planes.png",
+      "kind": "battlefield layer"
+    },
+    {
+      "path": "source/battlefield/layers/05_cracks_decals.png",
+      "kind": "battlefield layer"
+    },
+    {
+      "path": "source/battlefield/layers/06_ambient_particles_fog.png",
+      "kind": "battlefield layer"
+    },
+    {
+      "path": "source/battlefield/layers/07_static_props.png",
+      "kind": "battlefield layer"
+    },
+    {
+      "path": "source/battlefield/layers/08_occlusion_shadows.png",
+      "kind": "battlefield layer"
+    }
+  ],
+  "knownIssues": [
+    "D1 battlefield and D3 Crystal remain R0 in this return. The lead supplies replacements; offline previews show retained R0 environment.",
+    "Reference-guided regeneration changes small folds and contours; selective brighter Ignis mantle and hexcaster lining should be checked against unmodified poses in Unity.",
+    "Native built-in generations are 1254x1254 despite requests for 2048. All R1 masters meet 2x without upscaling; real Unity/CVD review remains pending."
+  ],
+  "blockers": [],
+  "checkpoints": [
+    {
+      "tier": "P0",
+      "delivered": 6
+    },
+    {
+      "tier": "P1",
+      "delivered": 39
+    },
+    {
+      "tier": "P1",
+      "delivered": 39
+    },
+    {
+      "tier": "P2",
+      "delivered": 51
+    }
+  ],
+  "revision": 1,
+  "revisionScope": {
+    "newIcons": 17,
+    "revisedUnitFrames": 11,
+    "retainedPriorExports": 49,
+    "leadOwned": [
+      "D1: battlefield and layers",
+      "D3: Crystal states"
+    ],
+    "note": "The 77-export package retains old battlefield/Crystal for continuity; it does not contain the lead replacements."
+  },
+  "revisionSummary": {
+    "delivered": 77,
+    "blocked": 0,
+    "intakeBlocking": 0,
+    "intakeNotes": 7,
+    "D2ValueNotes": [],
+    "minD2EdgeL": 0.32782038792668333,
+    "groundL": 0.22662049209775087
+  },
+  "revisionQA": {
+    "intake": "qa/intake.json",
+    "metrics": "qa/r1_metrics.json",
+    "localChecks": "qa/local_metrics.json",
+    "icons": "qa/r1_icons_32px.png",
+    "beforeAfter": "qa/r1_d2_before_after.png",
+    "offlinePreviews": "previews/scene_b01_r1_1440p.png; previews/scene_b01_r1_1080p.png; previews/scene_b01_r1_720p.png",
+    "promptSet": "source/prompts/r1_*.json; source/prompts/r1v2_*.json",
+    "selectedSources": "source/revision1_records.json",
+    "replay": "source/scripts/revision1.py; source/scripts/rebuild.py"
+  }
+}

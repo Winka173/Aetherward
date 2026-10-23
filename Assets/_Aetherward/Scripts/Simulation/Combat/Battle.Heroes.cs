@@ -111,7 +111,29 @@ namespace Aetherward.Sim.Combat
         {
             Vec2 offset = desired - h.Anchor;
             if (offset.Length > leash) desired = h.Anchor + offset.Normalized * leash;
-            Vec2 next = Vec2.MoveTowards(h.Pos, desired, h.Stat(StatId.MoveSpeed) * dt);
+            Vec2 goal = desired;
+            HavenNavigation nav = Arena.IsHaven ? HavenNavigation.For(Arena) : null;
+            h.RouteTimer -= dt;
+            if (nav != null)
+            {
+                goal = nav.Project(goal, h.Radius);
+                if (!nav.CanTravel(h.Pos, goal, h.Radius))
+                {
+                    if (h.Route.Count == 0 || (h.RouteTimer <= 0f && Vec2.Distance(h.RouteGoal, goal) > 0.8f))
+                    {
+                        lock (nav) nav.FindPath(h.Pos, goal, h.Route);
+                        h.RouteGoal = goal; h.RouteTimer = 0.75f;
+                    }
+                    while (h.Route.Count > 0 && Vec2.Distance(h.Pos, h.Route[0]) < 0.15f) h.Route.RemoveAt(0);
+                    if (h.Route.Count == 0) return;
+                    // Skip grid corners only when the whole segment has clearance.
+                    while (h.Route.Count > 1 && nav.CanTravel(h.Pos, h.Route[1], h.Radius)) h.Route.RemoveAt(0);
+                    goal = h.Route[0];
+                }
+                else h.Route.Clear();
+            }
+            Vec2 next = Vec2.MoveTowards(h.Pos, goal, h.Stat(StatId.MoveSpeed) * dt);
+            Vec2 safeNext = next;
             // Collision-safe: keep out of the crystal and away from other heroes.
             float minC = Crystal.Radius + h.Radius;
             if (Vec2.Distance(next, Crystal.Pos) < minC) next = Crystal.Pos + (next - Crystal.Pos).Normalized * minC;
@@ -124,7 +146,9 @@ namespace Aetherward.Sim.Combat
                 float len = d.Length;
                 if (len < min && len > 1e-4f) next = o.Pos + d / len * min;
             }
-            h.Pos = ClampToWalk(next, h.Radius);
+            if (nav == null) h.Pos = next;
+            else if (nav.CanTravel(h.Pos, next, h.Radius)) h.Pos = next;
+            else if (nav.CanTravel(h.Pos, safeNext, h.Radius)) h.Pos = safeNext;
         }
 
         public float AttackReach(HeroUnit h, EnemyUnit e) => h.Stat(StatId.Range) + e.Radius + h.Radius * 0.5f;
@@ -696,6 +720,19 @@ namespace Aetherward.Sim.Combat
             if (off.Length > leash) desired = h.Anchor + off.Normalized * leash;
             float minC = Crystal.Radius + h.Radius;
             if (Vec2.Distance(desired, Crystal.Pos) < minC) desired = Crystal.Pos + (desired - Crystal.Pos).Normalized * minC;
+            if (Arena.IsHaven)
+            {
+                HavenNavigation nav = HavenNavigation.For(Arena);
+                Vec2 last = h.Pos;
+                int steps = System.Math.Max(1, (int)System.Math.Ceiling(Vec2.Distance(h.Pos, desired) / 0.1f));
+                for (int i = 1; i <= steps; i++)
+                {
+                    Vec2 point = h.Pos + (desired - h.Pos) * ((float)i / steps);
+                    if (!nav.CanStand(point, h.Radius)) break;
+                    last = point;
+                }
+                return last;
+            }
             return desired;
         }
 

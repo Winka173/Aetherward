@@ -1,0 +1,316 @@
+{
+ "batch": "B11",
+ "delivered": 46,
+ "requested": 46,
+ "blocking": [],
+ "notes": [],
+ "rows": [
+  {
+   "id": "Enemies/siegebreaker_golem_a",
+   "group": "bosses",
+   "status": "OK",
+   "footRow": 485
+  },
+  {
+   "id": "Enemies/siegebreaker_golem_b",
+   "group": "bosses",
+   "status": "OK",
+   "footRow": 486
+  },
+  {
+   "id": "Enemies/ignaroth_a",
+   "group": "bosses",
+   "status": "OK",
+   "footRow": 485
+  },
+  {
+   "id": "Enemies/ignaroth_b",
+   "group": "bosses",
+   "status": "OK",
+   "footRow": 485
+  },
+  {
+   "id": "Enemies/vaelith_a",
+   "group": "bosses",
+   "status": "OK",
+   "footRow": 485
+  },
+  {
+   "id": "Enemies/vaelith_b",
+   "group": "bosses",
+   "status": "OK",
+   "footRow": 485
+  },
+  {
+   "id": "Enemies/mirrath_a",
+   "group": "bosses",
+   "status": "OK",
+   "footRow": 485
+  },
+  {
+   "id": "Enemies/mirrath_b",
+   "group": "bosses",
+   "status": "OK",
+   "footRow": 485
+  },
+  {
+   "id": "Enemies/aetherion_a",
+   "group": "bosses",
+   "status": "OK",
+   "footRow": 485
+  },
+  {
+   "id": "Enemies/aetherion_b",
+   "group": "bosses",
+   "status": "OK",
+   "footRow": 486
+  },
+  {
+   "id": "Enemies/thornmother_a",
+   "group": "bosses",
+   "status": "OK",
+   "footRow": 485
+  },
+  {
+   "id": "Enemies/thornmother_b",
+   "group": "bosses",
+   "status": "OK",
+   "footRow": 486
+  },
+  {
+   "id": "Enemies/ironclad_warlord_a",
+   "group": "bosses",
+   "status": "OK",
+   "footRow": 485
+  },
+  {
+   "id": "Enemies/ironclad_warlord_b",
+   "group": "bosses",
+   "status": "OK",
+   "footRow": 486
+  },
+  {
+   "id": "Enemies/ashen_matriarch_a",
+   "group": "bosses",
+   "status": "OK",
+   "footRow": 485
+  },
+  {
+   "id": "Enemies/ashen_matriarch_b",
+   "group": "bosses",
+   "status": "OK",
+   "footRow": 485
+  },
+  {
+   "id": "Enemies/nyxhollow_a",
+   "group": "bosses",
+   "status": "OK",
+   "footRow": 485
+  },
+  {
+   "id": "Enemies/nyxhollow_b",
+   "group": "bosses",
+   "status": "OK",
+   "footRow": 485
+  },
+  {
+   "id": "Enemies/seraphyne_a",
+   "group": "bosses",
+   "status": "OK",
+   "footRow": 486
+  },
+  {
+   "id": "Enemies/seraphyne_b",
+   "group": "bosses",
+   "status": "OK",
+   "footRow": 486
+  },
+  {
+   "id": "Enemies/gravemaw_a",
+   "group": "bosses",
+   "status": "OK",
+   "footRow": 486
+  },
+  {
+   "id": "Enemies/gravemaw_b",
+   "group": "bosses",
+   "status": "OK",
+   "footRow": 485
+  },
+  {
+   "id": "Enemies/siegebreaker_golem_attack",
+   "group": "bosses",
+   "status": "OK",
+   "footRow": 486
+  },
+  {
+   "id": "Enemies/siegebreaker_golem_tell",
+   "group": "bosses",
+   "status": "OK",
+   "footRow": 485
+  },
+  {
+   "id": "Enemies/ignaroth_attack",
+   "group": "bosses",
+   "status": "OK",
+   "footRow": 485
+  },
+  {
+   "id": "Enemies/ignaroth_tell",
+   "group": "bosses",
+   "status": "OK",
+   "footRow": 485
+  },
+  {
+   "id": "Enemies/vaelith_attack",
+   "group": "bosses",
+   "status": "OK",
+   "footRow": 485
+  },
+  {
+   "id": "Enemies/vaelith_tell",
+   "group": "bosses",
+   "status": "OK",
+   "footRow": 485
+  },
+  {
+   "id": "Enemies/mirrath_attack",
+   "group": "bosses",
+   "status": "OK",
+   "footRow": 485
+  },
+  {
+   "id": "Enemies/mirrath_tell",
+   "group": "bosses",
+   "status": "OK",
+   "footRow": 486
+  },
+  {
+   "id": "Enemies/aetherion_attack",
+   "group": "bosses",
+   "status": "OK",
+   "footRow": 485
+  },
+  {
+   "id": "Enemies/aetherion_tell",
+   "group": "bosses",
+   "status": "OK",
+   "footRow": 486
+  },
+  {
+   "id": "Enemies/thornmother_attack",
+   "group": "bosses",
+   "status": "OK",
+   "footRow": 485
+  },
+  {
+   "id": "Enemies/thornmother_tell",
+   "group": "bosses",
+   "status": "OK",
+   "footRow": 485
+  },
+  {
+   "id": "Enemies/ironclad_warlord_attack",
+   "group": "bosses",
+   "status": "OK",
+   "footRow": 485
+  },
+  {
+   "id": "Enemies/ironclad_warlord_tell",
+   "group": "bosses",
+   "status": "OK",
+   "footRow": 486
+  },
+  {
+   "id": "Enemies/ashen_matriarch_attack",
+   "group": "bosses",
+   "status": "OK",
+   "footRow": 485
+  },
+  {
+   "id": "Enemies/ashen_matriarch_tell",
+   "group": "bosses",
+   "status": "OK",
+   "footRow": 485
+  },
+  {
+   "id": "Enemies/nyxhollow_attack",
+   "group": "bosses",
+   "status": "OK",
+   "footRow": 486
+  },
+  {
+   "id": "Enemies/nyxhollow_tell",
+   "group": "bosses",
+   "status": "OK",
+   "footRow": 486
+  },
+  {
+   "id": "Enemies/seraphyne_attack",
+   "group": "bosses",
+   "status": "OK",
+   "footRow": 486
+  },
+  {
+   "id": "Enemies/seraphyne_tell",
+   "group": "bosses",
+   "status": "OK",
+   "footRow": 485
+  },
+  {
+   "id": "Enemies/gravemaw_attack",
+   "group": "bosses",
+   "status": "OK",
+   "footRow": 485
+  },
+  {
+   "id": "Enemies/gravemaw_tell",
+   "group": "bosses",
+   "status": "OK",
+   "footRow": 486
+  },
+  {
+   "id": "Enemies/rift_warden_attack",
+   "group": "warden",
+   "status": "OK",
+   "footRow": 485
+  },
+  {
+   "id": "Enemies/rift_warden_tell",
+   "group": "warden",
+   "status": "OK",
+   "footRow": 485
+  }
+ ],
+ "strayWorkingTreeChanges": [
+  "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.cs",
+  "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs",
+  "Assets/_Aetherward/Scripts/Unity/Core/Services.cs",
+  "Docs/ASSET_MANIFEST.json",
+  "Tools/ArtPipeline/blender/vfx_flipbooks.py",
+  "ArtProduction/generated/Vfx/fb_fire_burst.png",
+  "ArtProduction/generated/Vfx/fb_fire_burst.png.json",
+  "ArtProduction/generated/Vfx/fb_fire_burst_meta.json",
+  "ArtProduction/generated/Vfx/fb_lightning_arc.png",
+  "ArtProduction/generated/Vfx/fb_lightning_arc.png.json",
+  "ArtProduction/generated/Vfx/fb_lightning_arc_meta.json",
+  "ArtProduction/generated/Vfx/fb_rift_mist.png",
+  "ArtProduction/generated/Vfx/fb_rift_mist.png.json",
+  "ArtProduction/generated/Vfx/fb_rift_mist_meta.json",
+  "ArtProduction/generated/Vfx/fb_smoke_puff.png",
+  "ArtProduction/generated/Vfx/fb_smoke_puff.png.json",
+  "ArtProduction/generated/Vfx/fb_smoke_puff_meta.json",
+  "ArtProduction/generated/Vfx/fb_steam_burst.png",
+  "ArtProduction/generated/Vfx/fb_steam_burst.png.json",
+  "ArtProduction/generated/Vfx/fb_steam_burst_meta.json",
+  "ArtProduction/generated/Vfx/fb_water_splash.png",
+  "ArtProduction/generated/Vfx/fb_water_splash.png.json",
+  "ArtProduction/generated/Vfx/fb_water_splash_meta.json",
+  "ArtProduction/reviews/B08/intake.json",
+  "ArtProduction/reviews/B08_DEFECTS_R1.md",
+  "ArtProduction/reviews/B08_a_frames.png",
+  "Tools/ArtPipeline/vfx_sheets.py",
+  "waveletNoiseTile.bin"
+ ],
+ "stage": "ArtHandoff\\returns\\B11\\_work\\stage"
+}

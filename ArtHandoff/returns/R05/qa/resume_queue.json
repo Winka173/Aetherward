@@ -1,0 +1,86 @@
+{
+  "generateMissing": [
+    "Enemies/runner_windup",
+    "Enemies/hexcaster_c",
+    "Enemies/hexcaster_d",
+    "Enemies/hexcaster_windup",
+    "Enemies/juggernaut_c",
+    "Enemies/juggernaut_d",
+    "Enemies/juggernaut_windup",
+    "Enemies/ravager_c",
+    "Enemies/ravager_d",
+    "Enemies/ravager_windup",
+    "Enemies/rift_warden_c",
+    "Enemies/rift_warden_d"
+  ],
+  "regenerateCandidates": [
+    {
+      "id": "Heroes/glacius_walk_c",
+      "reason": "Below bar: does not clearly reverse the leading leg from walk_a."
+    },
+    {
+      "id": "Heroes/glacius_walk_d",
+      "reason": "Below bar: leg distinction from new walk_c is too weak."
+    },
+    {
+      "id": "Heroes/glacius_windup",
+      "reason": "Review:  Body scale reduced to retain props inside icon box; does not meet strict identity-scale continuity."
+    },
+    {
+      "id": "Heroes/glacius_follow",
+      "reason": "Review:  Body scale reduced to retain props inside icon box; does not meet strict identity-scale continuity."
+    },
+    {
+      "id": "Heroes/glacius_idle_b",
+      "reason": "Below bar: generation changes more contours than a 2-3 pixel breath. Requires identity-preserving regeneration."
+    },
+    {
+      "id": "Heroes/ignis_walk_c",
+      "reason": "Below bar: staff moved to opposite hand. Regenerate before integration."
+    },
+    {
+      "id": "Heroes/ignis_windup",
+      "reason": "Review:  Body scale reduced to retain props inside icon box; does not meet strict identity-scale continuity."
+    },
+    {
+      "id": "Heroes/ignis_follow",
+      "reason": "Below bar: raw staff tip touches image edge; icon-box fit reduces body scale. Body scale reduced to retain props inside icon box; does not meet strict identity-scale continuity."
+    },
+    {
+      "id": "Heroes/ignis_idle_b",
+      "reason": "Below bar: generation changes more contours than a 2-3 pixel breath. Requires identity-preserving regeneration."
+    },
+    {
+      "id": "Heroes/veyra_walk_c",
+      "reason": "Below bar: opposite-leg contact is insufficiently distinct; compare all four steps."
+    },
+    {
+      "id": "Heroes/veyra_walk_d",
+      "reason": "Below bar: new walk_c/d leg silhouettes are too similar."
+    },
+    {
+      "id": "Heroes/veyra_windup",
+      "reason": "Review:  Body scale reduced to retain props inside icon box; does not meet strict identity-scale continuity."
+    },
+    {
+      "id": "Heroes/veyra_follow",
+      "reason": "Review:  Body scale reduced to retain props inside icon box; does not meet strict identity-scale continuity."
+    },
+    {
+      "id": "Heroes/veyra_idle_b",
+      "reason": "Below bar: generation changes more contours than a 2-3 pixel breath. Requires identity-preserving regeneration."
+    },
+    {
+      "id": "Heroes/marina_windup",
+      "reason": "Below bar: review staff handedness; raised prop forces body scale compromise. Body scale reduced to retain props inside icon box; does not meet strict identity-scale continuity."
+    },
+    {
+      "id": "Heroes/marina_follow",
+      "reason": "Review:  Body scale reduced to retain props inside icon box; does not meet strict identity-scale continuity."
+    },
+    {
+      "id": "Heroes/marina_idle_b",
+      "reason": "Below bar: generation changes more contours than a 2-3 pixel breath. Requires identity-preserving regeneration."
+    }
+  ]
+}

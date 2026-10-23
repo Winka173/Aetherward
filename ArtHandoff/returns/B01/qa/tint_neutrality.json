@@ -1,0 +1,26 @@
+[
+  {
+    "id": "Vfx/ring",
+    "maxChannelDifference": 0
+  },
+  {
+    "id": "Vfx/telegraph",
+    "maxChannelDifference": 0
+  },
+  {
+    "id": "Vfx/glow",
+    "maxChannelDifference": 0
+  },
+  {
+    "id": "World/node_empty",
+    "maxChannelDifference": 0
+  },
+  {
+    "id": "World/node_occupied",
+    "maxChannelDifference": 0
+  },
+  {
+    "id": "World/node_highlight",
+    "maxChannelDifference": 0
+  }
+]

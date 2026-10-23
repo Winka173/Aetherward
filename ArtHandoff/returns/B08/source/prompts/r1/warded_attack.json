@@ -1,0 +1,20 @@
+{
+  "id": "Enemies/warded_attack",
+  "character": "warded",
+  "height": 180,
+  "width": 220,
+  "bottom": 236,
+  "raw": "C:\\Users\\Winka\\.codex\\generated_images\\01a15a1b-9a40-7c03-81f5-c129d348dd11\\exec-3ca2d309-fe43-4c8b-b193-8f3c94e3bc7f.png",
+  "prompt": "Dark Mythic Fantasy, painterly stylized 2.5D; orthographic 38.3-degree elevation, three-quarter front body turned 25 degrees toward screen-right. Key upper-left-front #ffe9d0, rim back-right #9fe8ff, ambient #16233a. Controlled broad brush planes, coloured local-hue dark edges without black outlines. Use case: precise-object-edit. First reference EDIT TARGET current B08 warded_attack. Other images STYLE ONLY. REVISION 1 PALETTE ONLY: Grey sanctum masonry 60-70%, neutral light-grey ward ring (game tints it), ash cloth. NO RED anywhere, including seams, eyes, cloth or core. Preserve EXACT design, pose, anatomy, silhouette, props, framing and placement. Mean 3px contour luminance >=0.27 via warm lit facets and selective 2-3px cyan rim at native 256. Transparent background; exclude RGB rays in transparent pixels, no background/ground/shadow/text or extra effects. High resolution >=1024 square, same full-canvas framing for 512 master.",
+  "references": [
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B08/source/revision0/exports/Art/Enemies/warded_attack.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Enemies/grunt_a.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Enemies/juggernaut_a.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Enemies/hexcaster_a.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Enemies/storm_harpy_a.png"
+  ],
+  "anchor": 0.58,
+  "sourceName": "r1_warded_attack",
+  "registration": "Original R0 crop-relative torso anchor retained; inspect R1 comparison for residual drift.",
+  "revision": 1
+}

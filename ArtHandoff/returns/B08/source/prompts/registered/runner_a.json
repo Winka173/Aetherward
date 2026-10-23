@@ -1,0 +1,17 @@
+{
+  "id": "Enemies/runner_a",
+  "character": "runner",
+  "height": 145,
+  "width": 230,
+  "anchor": 0.5,
+  "raw": "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\returns\\B08\\source\\sheets\\runner_a.png",
+  "prompt": "Dark Mythic Fantasy, painterly stylized 2.5D; orthographic 38.3-degree elevation, three-quarter front body turned 25 degrees toward screen-right. Key upper-left-front #ffe9d0, rim back-right #9fe8ff, ambient #16233a. Controlled broad brush planes, coloured local-hue dark edges without black outlines. Use case: stylized-concept. Production isolated transparent enemy sprite, one character only, high resolution 1536x1536. References are the approved B01 style family only; do not reproduce their backgrounds. Rift Hound identity walk contact pose: lean skeletal quadruped of grey husk and exposed wine-red rift-glow ribs, long jaw, low to the ground, legs mid-gallop, moving toward +X screen-right. Ash grey flesh, charcoal #2a2c31, ash #625c55, oxblood #6b2734, basalt edge #1d1f24. Distinct broad lit bone planes, cool #9fe8ff directional rim 2–3 pixels at final 256 resolution, mean contour luminance >=0.27 against dark basalt 0.16. Compact small enemy proportion; fit full silhouette with generous transparent margin, torso centred, no shadow, no ground, no text, no projectiles or effects. Final body should fit 120–160 px tall and <=230 px wide on 256 canvas; generate large enough to downsample without upscaling.",
+  "references": [
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Enemies/grunt_a.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Enemies/juggernaut_a.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Enemies/hexcaster_a.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Enemies/storm_harpy_a.png"
+  ],
+  "sourceName": "runner_a",
+  "registration": "Torso centre visually estimated; uncertainty approximately 5–8 native export pixels."
+}

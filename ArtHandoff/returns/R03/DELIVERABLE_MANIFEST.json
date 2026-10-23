@@ -1,0 +1,2133 @@
+{
+  "batch": "R03",
+  "producer": "Codex",
+  "date": "2026-10-21",
+  "styleLock": {
+    "palette": [
+      "#1b1226",
+      "#3b2f6b",
+      "#fff1dc"
+    ],
+    "light": "warm upper-left front",
+    "edge": "black-violet comic ink; old B01/rim rules superseded",
+    "promptTemplate": "Premium dark arcane fantasy comic-ink game UI. Bold tapered black-violet #1b1226 ink contours, 2-3 flat hard-edged cel tones per material, cool violet-blue shadows and warm upper-left key. Forged dark gunmetal, violet-black recesses, worn bronze/gold edge trim, restrained jewel inlays. No soft painterly blending, candy gradients, bubbly shapes or mobile-casual styling. Original design, no letters, numbers, words, watermarks or labels. "
+  },
+  "tools": [
+    {
+      "name": "image_gen built-in",
+      "version": "not reported"
+    },
+    {
+      "name": "Python",
+      "packages": [
+        "Pillow",
+        "numpy",
+        "scipy"
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "id": "UI/bar_bg",
+      "status": "delivered",
+      "export": "exports/Art/UI/bar_bg.png",
+      "size": [
+        128,
+        40
+      ],
+      "source": "source/sheets/UI__bar_bg.png",
+      "nativeSize": [
+        2172,
+        724
+      ],
+      "master": "source/masters/UI/bar_bg@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/UI__bar_bg_actual.txt",
+      "cleanup": "source/scripts/production.py register UI/bar_bg",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Meets size, RGBA, source, master and cleanup checks; reviewed in offline sheets, awaiting lead acceptance.",
+      "ppu": 100,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "border": [
+        18,
+        18,
+        18,
+        18
+      ],
+      "referenceImages": [
+        "source/sheets/UI__panel_dark.png"
+      ],
+      "sha256": "99c5262b70ba3a2e3765f63786124d09980d82545e64e42f9ad3c489efe88bec"
+    },
+    {
+      "id": "UI/bar_fill",
+      "status": "delivered",
+      "export": "exports/Art/UI/bar_fill.png",
+      "size": [
+        128,
+        40
+      ],
+      "source": "source/sheets/UI__bar_fill.png",
+      "nativeSize": [
+        2172,
+        724
+      ],
+      "master": "source/masters/UI/bar_fill@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/UI__bar_fill_actual.txt",
+      "cleanup": "source/scripts/production.py register UI/bar_fill",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Meets size, RGBA, source, master and cleanup checks; reviewed in offline sheets, awaiting lead acceptance.",
+      "ppu": 100,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "border": [
+        18,
+        18,
+        18,
+        18
+      ],
+      "referenceImages": [
+        "source/sheets/UI__panel_dark.png"
+      ],
+      "sha256": "7cb14c48fc880ccf7ec64499b00f133767820a1516c136d08a738d55bd014d3c"
+    },
+    {
+      "id": "UI/button_danger_disabled",
+      "status": "delivered",
+      "export": "exports/Art/UI/button_danger_disabled.png",
+      "size": [
+        192,
+        96
+      ],
+      "source": "source/sheets/UI__button_danger_disabled.png",
+      "nativeSize": [
+        1774,
+        887
+      ],
+      "master": "source/masters/UI/button_danger_disabled@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/UI__button_danger_disabled_actual.txt",
+      "cleanup": "source/scripts/production.py register UI/button_danger_disabled",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Meets size, RGBA, source, master and cleanup checks; reviewed in offline sheets, awaiting lead acceptance.",
+      "ppu": 100,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "border": [
+        36,
+        36,
+        36,
+        36
+      ],
+      "referenceImages": [
+        "source/sheets/UI__button_danger_normal.png"
+      ],
+      "sha256": "9021ddceff49f5994e4eda7b64cc039d6527d6bdd9e265450135a73432ad7210",
+      "nineSliceCleanup": "Generated corner/edge/centre regions downsampled directly from native source into fixed manifest border bands; no region upscaled."
+    },
+    {
+      "id": "UI/button_danger_hover",
+      "status": "delivered",
+      "export": "exports/Art/UI/button_danger_hover.png",
+      "size": [
+        192,
+        96
+      ],
+      "source": "source/sheets/UI__button_danger_hover.png",
+      "nativeSize": [
+        1774,
+        887
+      ],
+      "master": "source/masters/UI/button_danger_hover@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/UI__button_danger_hover_actual.txt",
+      "cleanup": "source/scripts/production.py register UI/button_danger_hover",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Meets size, RGBA, source, master and cleanup checks; reviewed in offline sheets, awaiting lead acceptance.",
+      "ppu": 100,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "border": [
+        36,
+        36,
+        36,
+        36
+      ],
+      "referenceImages": [
+        "source/sheets/UI__button_danger_normal.png"
+      ],
+      "sha256": "1dfa87f85942a130d30fd2891a532c0974a8b369d0ad067282bf35a400454ce6",
+      "nineSliceCleanup": "Generated corner/edge/centre regions downsampled directly from native source into fixed manifest border bands; no region upscaled."
+    },
+    {
+      "id": "UI/button_danger_normal",
+      "status": "delivered",
+      "export": "exports/Art/UI/button_danger_normal.png",
+      "size": [
+        192,
+        96
+      ],
+      "source": "source/sheets/UI__button_danger_normal.png",
+      "nativeSize": [
+        1774,
+        887
+      ],
+      "master": "source/masters/UI/button_danger_normal@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/UI__button_danger_normal_actual.txt",
+      "cleanup": "source/scripts/production.py register UI/button_danger_normal",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Meets size, RGBA, source, master and cleanup checks; reviewed in offline sheets, awaiting lead acceptance.",
+      "ppu": 100,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "border": [
+        36,
+        36,
+        36,
+        36
+      ],
+      "referenceImages": [
+        "source/sheets/UI__button_primary_normal.png"
+      ],
+      "sha256": "e8e3ae415970131c345c014b6c7c4b37f4e6ab0083815d57e4805ef5db1b91f6",
+      "nineSliceCleanup": "Generated corner/edge/centre regions downsampled directly from native source into fixed manifest border bands; no region upscaled."
+    },
+    {
+      "id": "UI/button_danger_pressed",
+      "status": "delivered",
+      "export": "exports/Art/UI/button_danger_pressed.png",
+      "size": [
+        192,
+        96
+      ],
+      "source": "source/sheets/UI__button_danger_pressed.png",
+      "nativeSize": [
+        1774,
+        887
+      ],
+      "master": "source/masters/UI/button_danger_pressed@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/UI__button_danger_pressed_actual.txt",
+      "cleanup": "source/scripts/production.py register UI/button_danger_pressed",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Meets size, RGBA, source, master and cleanup checks; reviewed in offline sheets, awaiting lead acceptance.",
+      "ppu": 100,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "border": [
+        36,
+        36,
+        36,
+        36
+      ],
+      "referenceImages": [
+        "source/sheets/UI__button_danger_normal.png"
+      ],
+      "sha256": "c760009e31a7e131ca6e150d661f4527af4bcc2c03131f5eaf9edc53affbebdd",
+      "nineSliceCleanup": "Generated corner/edge/centre regions downsampled directly from native source into fixed manifest border bands; no region upscaled."
+    },
+    {
+      "id": "UI/button_ghost_disabled",
+      "status": "delivered",
+      "export": "exports/Art/UI/button_ghost_disabled.png",
+      "size": [
+        192,
+        96
+      ],
+      "source": "source/sheets/UI__button_ghost_disabled.png",
+      "nativeSize": [
+        1774,
+        887
+      ],
+      "master": "source/masters/UI/button_ghost_disabled@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/UI__button_ghost_disabled_actual.txt",
+      "cleanup": "source/scripts/production.py register UI/button_ghost_disabled",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Consistent silhouette and readable label centre; ghost hover distinction is restrained and merits Unity review.",
+      "ppu": 100,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "border": [
+        36,
+        36,
+        36,
+        36
+      ],
+      "referenceImages": [
+        "source/sheets/UI__button_ghost_normal.png"
+      ],
+      "sha256": "46616c34d400be5ad52e9f15a2c630210d7339c161f5e5a1a8a7202bf329a4b6",
+      "nineSliceCleanup": "Generated corner/edge/centre regions downsampled directly from native source into fixed manifest border bands; no region upscaled."
+    },
+    {
+      "id": "UI/button_ghost_hover",
+      "status": "delivered",
+      "export": "exports/Art/UI/button_ghost_hover.png",
+      "size": [
+        192,
+        96
+      ],
+      "source": "source/sheets/UI__button_ghost_hover.png",
+      "nativeSize": [
+        1774,
+        887
+      ],
+      "master": "source/masters/UI/button_ghost_hover@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/UI__button_ghost_hover_actual.txt",
+      "cleanup": "source/scripts/production.py register UI/button_ghost_hover",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Consistent silhouette and readable label centre; ghost hover distinction is restrained and merits Unity review.",
+      "ppu": 100,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "border": [
+        36,
+        36,
+        36,
+        36
+      ],
+      "referenceImages": [
+        "source/sheets/UI__button_ghost_normal.png"
+      ],
+      "sha256": "9c6d3c1a5cb826fb556ec5cad73c10c1737cb0ca584ce5f0d04546d81a94a770",
+      "nineSliceCleanup": "Generated corner/edge/centre regions downsampled directly from native source into fixed manifest border bands; no region upscaled."
+    },
+    {
+      "id": "UI/button_ghost_normal",
+      "status": "delivered",
+      "export": "exports/Art/UI/button_ghost_normal.png",
+      "size": [
+        192,
+        96
+      ],
+      "source": "source/sheets/UI__button_ghost_normal.png",
+      "nativeSize": [
+        1774,
+        887
+      ],
+      "master": "source/masters/UI/button_ghost_normal@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/UI__button_ghost_normal_actual.txt",
+      "cleanup": "source/scripts/production.py register UI/button_ghost_normal",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Consistent silhouette and readable label centre; ghost hover distinction is restrained and merits Unity review.",
+      "ppu": 100,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "border": [
+        36,
+        36,
+        36,
+        36
+      ],
+      "referenceImages": [
+        "source/sheets/UI__button_primary_normal.png"
+      ],
+      "sha256": "3c4bd3eb709f805a950a2fe155b6cdc3a03f3845eafeee2c7e3e5a3ed7004c67",
+      "nineSliceCleanup": "Generated corner/edge/centre regions downsampled directly from native source into fixed manifest border bands; no region upscaled."
+    },
+    {
+      "id": "UI/button_ghost_pressed",
+      "status": "delivered",
+      "export": "exports/Art/UI/button_ghost_pressed.png",
+      "size": [
+        192,
+        96
+      ],
+      "source": "source/sheets/UI__button_ghost_pressed.png",
+      "nativeSize": [
+        1774,
+        887
+      ],
+      "master": "source/masters/UI/button_ghost_pressed@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/UI__button_ghost_pressed_actual.txt",
+      "cleanup": "source/scripts/production.py register UI/button_ghost_pressed",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Consistent silhouette and readable label centre; ghost hover distinction is restrained and merits Unity review.",
+      "ppu": 100,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "border": [
+        36,
+        36,
+        36,
+        36
+      ],
+      "referenceImages": [
+        "source/sheets/UI__button_ghost_normal.png"
+      ],
+      "sha256": "3b74051c8519724160844bed22a37962b86d114369638ce75831fa89f3292da6",
+      "nineSliceCleanup": "Generated corner/edge/centre regions downsampled directly from native source into fixed manifest border bands; no region upscaled."
+    },
+    {
+      "id": "UI/button_primary_disabled",
+      "status": "delivered",
+      "export": "exports/Art/UI/button_primary_disabled.png",
+      "size": [
+        192,
+        96
+      ],
+      "source": "source/sheets/UI__button_primary_disabled.png",
+      "nativeSize": [
+        1774,
+        887
+      ],
+      "master": "source/masters/UI/button_primary_disabled@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/UI__button_primary_disabled_actual.txt",
+      "cleanup": "source/scripts/production.py register UI/button_primary_disabled",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Meets size, RGBA, source, master and cleanup checks; reviewed in offline sheets, awaiting lead acceptance.",
+      "ppu": 100,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "border": [
+        36,
+        36,
+        36,
+        36
+      ],
+      "referenceImages": [
+        "source/sheets/UI__button_primary_normal.png"
+      ],
+      "sha256": "aa6fe29b79de28a423b311ea2cdb16b7a36fd90f10377d85416009aeee8bd10b",
+      "nineSliceCleanup": "Generated corner/edge/centre regions downsampled directly from native source into fixed manifest border bands; no region upscaled."
+    },
+    {
+      "id": "UI/button_primary_hover",
+      "status": "delivered",
+      "export": "exports/Art/UI/button_primary_hover.png",
+      "size": [
+        192,
+        96
+      ],
+      "source": "source/sheets/UI__button_primary_hover.png",
+      "nativeSize": [
+        1774,
+        887
+      ],
+      "master": "source/masters/UI/button_primary_hover@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/UI__button_primary_hover_actual.txt",
+      "cleanup": "source/scripts/production.py register UI/button_primary_hover",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Meets size, RGBA, source, master and cleanup checks; reviewed in offline sheets, awaiting lead acceptance.",
+      "ppu": 100,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "border": [
+        36,
+        36,
+        36,
+        36
+      ],
+      "referenceImages": [
+        "source/sheets/UI__button_primary_normal.png"
+      ],
+      "sha256": "8f2b8d92702d1985cfff0f91d939e028f8b73af6068021c497a0fa5b25c68c0f",
+      "nineSliceCleanup": "Generated corner/edge/centre regions downsampled directly from native source into fixed manifest border bands; no region upscaled."
+    },
+    {
+      "id": "UI/button_primary_normal",
+      "status": "delivered",
+      "export": "exports/Art/UI/button_primary_normal.png",
+      "size": [
+        192,
+        96
+      ],
+      "source": "source/sheets/UI__button_primary_normal.png",
+      "nativeSize": [
+        1774,
+        887
+      ],
+      "master": "source/masters/UI/button_primary_normal@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/UI__button_primary_normal_revision.txt",
+      "cleanup": "source/scripts/production.py register UI/button_primary_normal",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Meets size, RGBA, source, master and cleanup checks; reviewed in offline sheets, awaiting lead acceptance.",
+      "ppu": 100,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "border": [
+        36,
+        36,
+        36,
+        36
+      ],
+      "referenceImages": [
+        "_work/button_primary_normal_v1.png"
+      ],
+      "revision": "Palette edit: violet gems replaced with amber.",
+      "sha256": "76b397bc4ef81b1ae7767ac8a351050e9db9e7550cbb8ea81b710b29868219ef",
+      "nineSliceCleanup": "Generated corner/edge/centre regions downsampled directly from native source into fixed manifest border bands; no region upscaled."
+    },
+    {
+      "id": "UI/button_primary_pressed",
+      "status": "delivered",
+      "export": "exports/Art/UI/button_primary_pressed.png",
+      "size": [
+        192,
+        96
+      ],
+      "source": "source/sheets/UI__button_primary_pressed.png",
+      "nativeSize": [
+        1774,
+        887
+      ],
+      "master": "source/masters/UI/button_primary_pressed@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/UI__button_primary_pressed_actual.txt",
+      "cleanup": "source/scripts/production.py register UI/button_primary_pressed",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Meets size, RGBA, source, master and cleanup checks; reviewed in offline sheets, awaiting lead acceptance.",
+      "ppu": 100,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "border": [
+        36,
+        36,
+        36,
+        36
+      ],
+      "referenceImages": [
+        "source/sheets/UI__button_primary_normal.png"
+      ],
+      "sha256": "6f8aee27719ede2f061680e4a2042832120f3edaca2f2b172828bf80a0cd281a",
+      "nineSliceCleanup": "Generated corner/edge/centre regions downsampled directly from native source into fixed manifest border bands; no region upscaled."
+    },
+    {
+      "id": "UI/button_secondary_disabled",
+      "status": "delivered",
+      "export": "exports/Art/UI/button_secondary_disabled.png",
+      "size": [
+        192,
+        96
+      ],
+      "source": "source/sheets/UI__button_secondary_disabled.png",
+      "nativeSize": [
+        1774,
+        887
+      ],
+      "master": "source/masters/UI/button_secondary_disabled@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/UI__button_secondary_disabled_actual.txt",
+      "cleanup": "source/scripts/production.py register UI/button_secondary_disabled",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Meets size, RGBA, source, master and cleanup checks; reviewed in offline sheets, awaiting lead acceptance.",
+      "ppu": 100,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "border": [
+        36,
+        36,
+        36,
+        36
+      ],
+      "referenceImages": [
+        "source/sheets/UI__button_secondary_normal.png"
+      ],
+      "sha256": "4a4301343b7505af1fcdc292703d5596a170cce5637e024d408b0bf079692c79",
+      "nineSliceCleanup": "Generated corner/edge/centre regions downsampled directly from native source into fixed manifest border bands; no region upscaled."
+    },
+    {
+      "id": "UI/button_secondary_hover",
+      "status": "delivered",
+      "export": "exports/Art/UI/button_secondary_hover.png",
+      "size": [
+        192,
+        96
+      ],
+      "source": "source/sheets/UI__button_secondary_hover.png",
+      "nativeSize": [
+        1774,
+        887
+      ],
+      "master": "source/masters/UI/button_secondary_hover@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/UI__button_secondary_hover_actual.txt",
+      "cleanup": "source/scripts/production.py register UI/button_secondary_hover",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Meets size, RGBA, source, master and cleanup checks; reviewed in offline sheets, awaiting lead acceptance.",
+      "ppu": 100,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "border": [
+        36,
+        36,
+        36,
+        36
+      ],
+      "referenceImages": [
+        "source/sheets/UI__button_secondary_normal.png"
+      ],
+      "sha256": "45d158b4155ce0c23e940cb8fa98dbea857e6c56863e2b7f288ff77bdc9210f0",
+      "nineSliceCleanup": "Generated corner/edge/centre regions downsampled directly from native source into fixed manifest border bands; no region upscaled."
+    },
+    {
+      "id": "UI/button_secondary_normal",
+      "status": "delivered",
+      "export": "exports/Art/UI/button_secondary_normal.png",
+      "size": [
+        192,
+        96
+      ],
+      "source": "source/sheets/UI__button_secondary_normal.png",
+      "nativeSize": [
+        1774,
+        887
+      ],
+      "master": "source/masters/UI/button_secondary_normal@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/UI__button_secondary_normal_actual.txt",
+      "cleanup": "source/scripts/production.py register UI/button_secondary_normal",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Meets size, RGBA, source, master and cleanup checks; reviewed in offline sheets, awaiting lead acceptance.",
+      "ppu": 100,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "border": [
+        36,
+        36,
+        36,
+        36
+      ],
+      "referenceImages": [
+        "source/sheets/UI__button_primary_normal.png"
+      ],
+      "sha256": "e12f27a589b3552a5bcc97f3309021907723a12ea38a54b6006dfa6d8a812d31",
+      "nineSliceCleanup": "Generated corner/edge/centre regions downsampled directly from native source into fixed manifest border bands; no region upscaled."
+    },
+    {
+      "id": "UI/button_secondary_pressed",
+      "status": "delivered",
+      "export": "exports/Art/UI/button_secondary_pressed.png",
+      "size": [
+        192,
+        96
+      ],
+      "source": "source/sheets/UI__button_secondary_pressed.png",
+      "nativeSize": [
+        1774,
+        887
+      ],
+      "master": "source/masters/UI/button_secondary_pressed@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/UI__button_secondary_pressed_actual.txt",
+      "cleanup": "source/scripts/production.py register UI/button_secondary_pressed",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Meets size, RGBA, source, master and cleanup checks; reviewed in offline sheets, awaiting lead acceptance.",
+      "ppu": 100,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "border": [
+        36,
+        36,
+        36,
+        36
+      ],
+      "referenceImages": [
+        "source/sheets/UI__button_secondary_normal.png"
+      ],
+      "sha256": "52e2f2bd6cf21b7220509934d373623b9509577a90742e248c9ea9bfd9a1aa1a",
+      "nineSliceCleanup": "Generated corner/edge/centre regions downsampled directly from native source into fixed manifest border bands; no region upscaled."
+    },
+    {
+      "id": "UI/card_common",
+      "status": "delivered",
+      "export": "exports/Art/UI/card_common.png",
+      "size": [
+        256,
+        360
+      ],
+      "source": "source/sheets/UI__card_common.png",
+      "nativeSize": [
+        1058,
+        1487
+      ],
+      "master": "source/masters/UI/card_common@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/UI__card_common_revision.txt",
+      "cleanup": "source/scripts/production.py register UI/card_common",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Meets size, RGBA, source, master and cleanup checks; reviewed in offline sheets, awaiting lead acceptance.",
+      "ppu": 100,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "border": [
+        48,
+        48,
+        48,
+        80
+      ],
+      "referenceImages": [
+        "_work/card_common_v1.png"
+      ],
+      "revision": "Palette edit: gold/bronze replaced with common iron.",
+      "sha256": "79088fd8c80c6d77aa749bf1a62dee2dd9836b2d814e5d95c76016d84df3621a",
+      "nineSliceCleanup": "Generated corner/edge/centre regions downsampled directly from native source into fixed manifest border bands; no region upscaled."
+    },
+    {
+      "id": "UI/card_cursed",
+      "status": "delivered",
+      "export": "exports/Art/UI/card_cursed.png",
+      "size": [
+        256,
+        360
+      ],
+      "source": "source/sheets/UI__card_cursed.png",
+      "nativeSize": [
+        1058,
+        1487
+      ],
+      "master": "source/masters/UI/card_cursed@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/UI__card_cursed_actual.txt",
+      "cleanup": "source/scripts/production.py register UI/card_cursed",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Meets size, RGBA, source, master and cleanup checks; reviewed in offline sheets, awaiting lead acceptance.",
+      "ppu": 100,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "border": [
+        48,
+        48,
+        48,
+        80
+      ],
+      "referenceImages": [
+        "source/sheets/UI__panel_dark.png"
+      ],
+      "sha256": "827b247fb193d04676cca2c36a064720d34b89652ec8cb84676c5625527c4399",
+      "nineSliceCleanup": "Generated corner/edge/centre regions downsampled directly from native source into fixed manifest border bands; no region upscaled."
+    },
+    {
+      "id": "UI/card_epic",
+      "status": "delivered",
+      "export": "exports/Art/UI/card_epic.png",
+      "size": [
+        256,
+        360
+      ],
+      "source": "source/sheets/UI__card_epic.png",
+      "nativeSize": [
+        1060,
+        1484
+      ],
+      "master": "source/masters/UI/card_epic@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/UI__card_epic_revision.txt",
+      "cleanup": "source/scripts/production.py register UI/card_epic",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Meets size, RGBA, source, master and cleanup checks; reviewed in offline sheets, awaiting lead acceptance.",
+      "ppu": 100,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "border": [
+        48,
+        48,
+        48,
+        80
+      ],
+      "referenceImages": [
+        "_work/card_epic_v1.png"
+      ],
+      "sha256": "a7c5c4db104f37710c7e93e947de5d40c2aa54f7d125ea5af583c3d564212b8d",
+      "revision": "Palette edit: dedicated rarity metal and jewel colours.",
+      "nineSliceCleanup": "Generated corner/edge/centre regions downsampled directly from native source into fixed manifest border bands; no region upscaled."
+    },
+    {
+      "id": "UI/card_legendary",
+      "status": "delivered",
+      "export": "exports/Art/UI/card_legendary.png",
+      "size": [
+        256,
+        360
+      ],
+      "source": "source/sheets/UI__card_legendary.png",
+      "nativeSize": [
+        1058,
+        1486
+      ],
+      "master": "source/masters/UI/card_legendary@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/UI__card_legendary_revision.txt",
+      "cleanup": "source/scripts/production.py register UI/card_legendary",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Meets size, RGBA, source, master and cleanup checks; reviewed in offline sheets, awaiting lead acceptance.",
+      "ppu": 100,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "border": [
+        48,
+        48,
+        48,
+        80
+      ],
+      "referenceImages": [
+        "_work/card_legendary_v1.png"
+      ],
+      "sha256": "7395792d88a95d26582b7716a84b8274983f551a2221e5b7f58b8db49ff33338",
+      "revision": "Palette edit: dedicated rarity metal and jewel colours.",
+      "nineSliceCleanup": "Generated corner/edge/centre regions downsampled directly from native source into fixed manifest border bands; no region upscaled."
+    },
+    {
+      "id": "UI/card_rare",
+      "status": "delivered",
+      "export": "exports/Art/UI/card_rare.png",
+      "size": [
+        256,
+        360
+      ],
+      "source": "source/sheets/UI__card_rare.png",
+      "nativeSize": [
+        1058,
+        1487
+      ],
+      "master": "source/masters/UI/card_rare@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/UI__card_rare_actual.txt",
+      "cleanup": "source/scripts/production.py register UI/card_rare",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Meets size, RGBA, source, master and cleanup checks; reviewed in offline sheets, awaiting lead acceptance.",
+      "ppu": 100,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "border": [
+        48,
+        48,
+        48,
+        80
+      ],
+      "referenceImages": [
+        "source/sheets/UI__panel_dark.png"
+      ],
+      "sha256": "506a4b30b6018c72d696907c3d75caef11db293560516f22d7326723da3cdd68",
+      "nineSliceCleanup": "Generated corner/edge/centre regions downsampled directly from native source into fixed manifest border bands; no region upscaled."
+    },
+    {
+      "id": "UI/panel_danger",
+      "status": "delivered",
+      "export": "exports/Art/UI/panel_danger.png",
+      "size": [
+        128,
+        128
+      ],
+      "source": "source/sheets/UI__panel_danger.png",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "master": "source/masters/UI/panel_danger@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/UI__panel_danger_actual.txt",
+      "cleanup": "source/scripts/production.py register UI/panel_danger",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Meets size, RGBA, source, master and cleanup checks; reviewed in offline sheets, awaiting lead acceptance.",
+      "ppu": 100,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "border": [
+        40,
+        40,
+        40,
+        40
+      ],
+      "referenceImages": [
+        "source/sheets/UI__panel_dark.png"
+      ],
+      "sha256": "7396a37fb4217010a84e731675ccf4e8823599e6c3d0cb35a9a52d8b6f06e2ea"
+    },
+    {
+      "id": "UI/panel_dark",
+      "status": "delivered",
+      "export": "exports/Art/UI/panel_dark.png",
+      "size": [
+        128,
+        128
+      ],
+      "source": "source/sheets/UI__panel_dark.png",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "master": "source/masters/UI/panel_dark@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/panel_dark_actual.txt",
+      "cleanup": "source/scripts/production.py register UI/panel_dark",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Meets size, RGBA, source, master and cleanup checks; reviewed in offline sheets, awaiting lead acceptance.",
+      "ppu": 100,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "border": [
+        40,
+        40,
+        40,
+        40
+      ],
+      "referenceImages": [
+        "ArtHandoff/returns/R01/concepts/hud_concept_LOW_RES_DRAFT.png"
+      ],
+      "sha256": "4a05aade5842a8b6490a642036ab12c91c711e591e2fb709daa94f34e7bb6783"
+    },
+    {
+      "id": "UI/panel_glass",
+      "status": "delivered",
+      "export": "exports/Art/UI/panel_glass.png",
+      "size": [
+        128,
+        128
+      ],
+      "source": "source/sheets/UI__panel_glass.png",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "master": "source/masters/UI/panel_glass@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/UI__panel_glass_actual.txt",
+      "cleanup": "source/scripts/production.py register UI/panel_glass",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Meets size, RGBA, source, master and cleanup checks; reviewed in offline sheets, awaiting lead acceptance.",
+      "ppu": 100,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "border": [
+        40,
+        40,
+        40,
+        40
+      ],
+      "referenceImages": [
+        "source/sheets/UI__panel_dark.png"
+      ],
+      "sha256": "8e090b7952147094687b3d0c37ff10f442465376d7cdc8d15386acd331e6a093"
+    },
+    {
+      "id": "UI/panel_light",
+      "status": "delivered",
+      "export": "exports/Art/UI/panel_light.png",
+      "size": [
+        128,
+        128
+      ],
+      "source": "source/sheets/UI__panel_light.png",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "master": "source/masters/UI/panel_light@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/UI__panel_light_actual.txt",
+      "cleanup": "source/scripts/production.py register UI/panel_light",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Meets size, RGBA, source, master and cleanup checks; reviewed in offline sheets, awaiting lead acceptance.",
+      "ppu": 100,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "border": [
+        40,
+        40,
+        40,
+        40
+      ],
+      "referenceImages": [
+        "source/sheets/UI__panel_dark.png"
+      ],
+      "sha256": "537b743aff4986d1745cc3901882d5c2a6c90ecb37a68d2684e4d462c9a84293"
+    },
+    {
+      "id": "UI/title_emblem",
+      "status": "delivered",
+      "export": "exports/Art/UI/title_emblem.png",
+      "size": [
+        1024,
+        320
+      ],
+      "source": "source/sheets/UI__title_emblem.png",
+      "nativeSize": [
+        2172,
+        724
+      ],
+      "master": "source/masters/UI/title_emblem@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/UI__title_emblem_actual.txt",
+      "cleanup": "source/scripts/production.py register UI/title_emblem",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Meets size, RGBA, source, master and cleanup checks; reviewed in offline sheets, awaiting lead acceptance.",
+      "ppu": 100,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "referenceImages": [
+        "source/sheets/UI__panel_dark.png"
+      ],
+      "sha256": "2db701bb4e12443560c4857ff74756fd02474f2e0f70ed0bcc8c717c85d3b807"
+    },
+    {
+      "id": "UI/tooltip",
+      "status": "delivered",
+      "export": "exports/Art/UI/tooltip.png",
+      "size": [
+        96,
+        96
+      ],
+      "source": "source/sheets/UI__tooltip.png",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "master": "source/masters/UI/tooltip@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/UI__tooltip_actual.txt",
+      "cleanup": "source/scripts/production.py register UI/tooltip",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Meets size, RGBA, source, master and cleanup checks; reviewed in offline sheets, awaiting lead acceptance.",
+      "ppu": 100,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "border": [
+        24,
+        24,
+        24,
+        24
+      ],
+      "referenceImages": [
+        "source/sheets/UI__panel_dark.png"
+      ],
+      "sha256": "941fa0858ede45161f84fe14772922637083848b9640304104b0a2d8a798d5d4"
+    },
+    {
+      "id": "UI/vignette",
+      "status": "delivered",
+      "export": "exports/Art/UI/vignette.png",
+      "size": [
+        512,
+        288
+      ],
+      "source": "source/sheets/UI__vignette.png",
+      "nativeSize": [
+        1672,
+        941
+      ],
+      "master": "source/masters/UI/vignette@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/UI__vignette_actual.txt",
+      "cleanup": "source/scripts/production.py register UI/vignette",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Meets size, RGBA, source, master and cleanup checks; reviewed in offline sheets, awaiting lead acceptance.",
+      "ppu": 100,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "referenceImages": [],
+      "sha256": "394a02a494c5571ee400ee1fc761cd66cfc1c87dc3026c27230b86858699ec66"
+    },
+    {
+      "id": "Icons/ui_auto",
+      "status": "delivered",
+      "export": "exports/Art/Icons/ui_auto.png",
+      "size": [
+        96,
+        96
+      ],
+      "source": "source/sheets/Icons__ui_auto.png",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "master": "source/masters/Icons/ui_auto@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/Icons__ui_auto_actual.txt",
+      "cleanup": "source/scripts/production.py register Icons/ui_auto",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Meets size, RGBA, source, master and cleanup checks; reviewed in offline sheets, awaiting lead acceptance.",
+      "ppu": 240,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "referenceImages": [
+        "ArtHandoff/returns/R01/concepts/hud_concept_LOW_RES_DRAFT.png"
+      ],
+      "sha256": "db0d18fdb96d36538016497c2c68e485b575beba6d10e46a5668def75e377df7"
+    },
+    {
+      "id": "Icons/ui_check",
+      "status": "delivered",
+      "export": "exports/Art/Icons/ui_check.png",
+      "size": [
+        96,
+        96
+      ],
+      "source": "source/sheets/Icons__ui_check.png",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "master": "source/masters/Icons/ui_check@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/Icons__ui_check_actual.txt",
+      "cleanup": "source/scripts/production.py register Icons/ui_check",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Meets size, RGBA, source, master and cleanup checks; reviewed in offline sheets, awaiting lead acceptance.",
+      "ppu": 240,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "referenceImages": [
+        "ArtHandoff/returns/R01/concepts/hud_concept_LOW_RES_DRAFT.png"
+      ],
+      "sha256": "82dcd1e5fc3703c1c1e5a9df9672e2a2f9c0806234d43ab485c124c614a76f51"
+    },
+    {
+      "id": "Icons/ui_close",
+      "status": "delivered",
+      "export": "exports/Art/Icons/ui_close.png",
+      "size": [
+        96,
+        96
+      ],
+      "source": "source/sheets/Icons__ui_close.png",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "master": "source/masters/Icons/ui_close@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/Icons__ui_close_actual.txt",
+      "cleanup": "source/scripts/production.py register Icons/ui_close",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Meets size, RGBA, source, master and cleanup checks; reviewed in offline sheets, awaiting lead acceptance.",
+      "ppu": 240,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "referenceImages": [
+        "ArtHandoff/returns/R01/concepts/hud_concept_LOW_RES_DRAFT.png"
+      ],
+      "sha256": "add3a506f6d5309af92f86b5b2a0932e5d608c76da2650c7506e5863e2bb349f"
+    },
+    {
+      "id": "Icons/ui_codex",
+      "status": "delivered",
+      "export": "exports/Art/Icons/ui_codex.png",
+      "size": [
+        96,
+        96
+      ],
+      "source": "source/sheets/Icons__ui_codex.png",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "master": "source/masters/Icons/ui_codex@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/Icons__ui_codex_actual.txt",
+      "cleanup": "source/scripts/production.py register Icons/ui_codex",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Meets size, RGBA, source, master and cleanup checks; reviewed in offline sheets, awaiting lead acceptance.",
+      "ppu": 240,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "referenceImages": [
+        "ArtHandoff/returns/R01/concepts/hud_concept_LOW_RES_DRAFT.png"
+      ],
+      "sha256": "070a13262f0367c563eee11d6335d33a5755b137e70c5c10aa188483dbca812f"
+    },
+    {
+      "id": "Icons/ui_crystal",
+      "status": "delivered",
+      "export": "exports/Art/Icons/ui_crystal.png",
+      "size": [
+        96,
+        96
+      ],
+      "source": "source/sheets/Icons__ui_crystal.png",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "master": "source/masters/Icons/ui_crystal@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/Icons__ui_crystal_actual.txt",
+      "cleanup": "source/scripts/production.py register Icons/ui_crystal",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Meets size, RGBA, source, master and cleanup checks; reviewed in offline sheets, awaiting lead acceptance.",
+      "ppu": 240,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "referenceImages": [
+        "ArtHandoff/returns/R01/concepts/hud_concept_LOW_RES_DRAFT.png"
+      ],
+      "sha256": "0fa9633c62c62281b5e402a4a6cb5454b3cd3b97004a7e843ad7518ec1ca9195"
+    },
+    {
+      "id": "Icons/ui_essence",
+      "status": "delivered",
+      "export": "exports/Art/Icons/ui_essence.png",
+      "size": [
+        96,
+        96
+      ],
+      "source": "source/sheets/Icons__ui_essence.png",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "master": "source/masters/Icons/ui_essence@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/Icons__ui_essence_actual.txt",
+      "cleanup": "source/scripts/production.py register Icons/ui_essence",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Meaning reads at 32 px; internal facets and filigree become dense at small sizes.",
+      "ppu": 240,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "referenceImages": [
+        "ArtHandoff/returns/R01/concepts/hud_concept_LOW_RES_DRAFT.png"
+      ],
+      "sha256": "a4f25490a20d77b7d3e59f32f01482ac9449c1d1238a28581f44b99a957e2b85"
+    },
+    {
+      "id": "Icons/ui_evolve",
+      "status": "delivered",
+      "export": "exports/Art/Icons/ui_evolve.png",
+      "size": [
+        96,
+        96
+      ],
+      "source": "source/sheets/Icons__ui_evolve.png",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "master": "source/masters/Icons/ui_evolve@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/Icons__ui_evolve_actual.txt",
+      "cleanup": "source/scripts/production.py register Icons/ui_evolve",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Meets size, RGBA, source, master and cleanup checks; reviewed in offline sheets, awaiting lead acceptance.",
+      "ppu": 240,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "referenceImages": [
+        "ArtHandoff/returns/R01/concepts/hud_concept_LOW_RES_DRAFT.png"
+      ],
+      "sha256": "9e82f8801c813fcdfca7ec02b06c1b7faa0dd9471c54e3e006535bdfe03bcd34"
+    },
+    {
+      "id": "Icons/ui_gold",
+      "status": "delivered",
+      "export": "exports/Art/Icons/ui_gold.png",
+      "size": [
+        96,
+        96
+      ],
+      "source": "source/sheets/Icons__ui_gold.png",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "master": "source/masters/Icons/ui_gold@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/Icons__ui_gold_actual.txt",
+      "cleanup": "source/scripts/production.py register Icons/ui_gold",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Meets size, RGBA, source, master and cleanup checks; reviewed in offline sheets, awaiting lead acceptance.",
+      "ppu": 240,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "referenceImages": [
+        "ArtHandoff/returns/R01/concepts/hud_concept_LOW_RES_DRAFT.png"
+      ],
+      "sha256": "7530629339dbcf7cdfe0113dd177670fbf2b08a0cc3cd73a8d8f1a799b92b7bd"
+    },
+    {
+      "id": "Icons/ui_heart",
+      "status": "delivered",
+      "export": "exports/Art/Icons/ui_heart.png",
+      "size": [
+        96,
+        96
+      ],
+      "source": "source/sheets/Icons__ui_heart.png",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "master": "source/masters/Icons/ui_heart@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/Icons__ui_heart_actual.txt",
+      "cleanup": "source/scripts/production.py register Icons/ui_heart",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Meaning reads at 32 px; internal facets and filigree become dense at small sizes.",
+      "ppu": 240,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "referenceImages": [
+        "ArtHandoff/returns/R01/concepts/hud_concept_LOW_RES_DRAFT.png"
+      ],
+      "sha256": "b58cb1552e1613de238bee0b4ff6a891b36aecfd651626151dcbb8866008294d"
+    },
+    {
+      "id": "Icons/ui_history",
+      "status": "delivered",
+      "export": "exports/Art/Icons/ui_history.png",
+      "size": [
+        96,
+        96
+      ],
+      "source": "source/sheets/Icons__ui_history.png",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "master": "source/masters/Icons/ui_history@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/Icons__ui_history_actual.txt",
+      "cleanup": "source/scripts/production.py register Icons/ui_history",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Meets size, RGBA, source, master and cleanup checks; reviewed in offline sheets, awaiting lead acceptance.",
+      "ppu": 240,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "referenceImages": [
+        "ArtHandoff/returns/R01/concepts/hud_concept_LOW_RES_DRAFT.png"
+      ],
+      "sha256": "28b2823bec59fc4e8ef548c136f3a54752b44eb8e4673eb1d7c59f1b536e4b59"
+    },
+    {
+      "id": "Icons/ui_leak",
+      "status": "delivered",
+      "export": "exports/Art/Icons/ui_leak.png",
+      "size": [
+        96,
+        96
+      ],
+      "source": "source/sheets/Icons__ui_leak.png",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "master": "source/masters/Icons/ui_leak@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/Icons__ui_leak_actual.txt",
+      "cleanup": "source/scripts/production.py register Icons/ui_leak",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Meaning reads at 32 px; internal facets and filigree become dense at small sizes.",
+      "ppu": 240,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "referenceImages": [
+        "ArtHandoff/returns/R01/concepts/hud_concept_LOW_RES_DRAFT.png"
+      ],
+      "sha256": "5eb77da96ed0c69e252254528944db8373e662e932f3b56238203a6078a854e6"
+    },
+    {
+      "id": "Icons/ui_lock",
+      "status": "delivered",
+      "export": "exports/Art/Icons/ui_lock.png",
+      "size": [
+        96,
+        96
+      ],
+      "source": "source/sheets/Icons__ui_lock.png",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "master": "source/masters/Icons/ui_lock@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/Icons__ui_lock_actual.txt",
+      "cleanup": "source/scripts/production.py register Icons/ui_lock",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Meets size, RGBA, source, master and cleanup checks; reviewed in offline sheets, awaiting lead acceptance.",
+      "ppu": 240,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "referenceImages": [
+        "ArtHandoff/returns/R01/concepts/hud_concept_LOW_RES_DRAFT.png"
+      ],
+      "sha256": "4526c597e5311a53bb3e687abef48040bcb4280c6b0b9a2a73dbdc01821099df"
+    },
+    {
+      "id": "Icons/ui_pause",
+      "status": "delivered",
+      "export": "exports/Art/Icons/ui_pause.png",
+      "size": [
+        96,
+        96
+      ],
+      "source": "source/sheets/Icons__ui_pause.png",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "master": "source/masters/Icons/ui_pause@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/Icons__ui_pause_actual.txt",
+      "cleanup": "source/scripts/production.py register Icons/ui_pause",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Meets size, RGBA, source, master and cleanup checks; reviewed in offline sheets, awaiting lead acceptance.",
+      "ppu": 240,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "referenceImages": [
+        "ArtHandoff/returns/R01/concepts/hud_concept_LOW_RES_DRAFT.png"
+      ],
+      "sha256": "6c320ae5ebbfc0bedcd510345aea6a614af553f590b1f7e825a3bf158da39c2b"
+    },
+    {
+      "id": "Icons/ui_play",
+      "status": "delivered",
+      "export": "exports/Art/Icons/ui_play.png",
+      "size": [
+        96,
+        96
+      ],
+      "source": "source/sheets/Icons__ui_play.png",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "master": "source/masters/Icons/ui_play@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/Icons__ui_play_actual.txt",
+      "cleanup": "source/scripts/production.py register Icons/ui_play",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Meets size, RGBA, source, master and cleanup checks; reviewed in offline sheets, awaiting lead acceptance.",
+      "ppu": 240,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "referenceImages": [
+        "ArtHandoff/returns/R01/concepts/hud_concept_LOW_RES_DRAFT.png"
+      ],
+      "sha256": "84963b63e89ce24e2318b4d22e9350455da86e4963aaf28f1d9b840a44ad17bd"
+    },
+    {
+      "id": "Icons/ui_reroll",
+      "status": "delivered",
+      "export": "exports/Art/Icons/ui_reroll.png",
+      "size": [
+        96,
+        96
+      ],
+      "source": "source/sheets/Icons__ui_reroll.png",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "master": "source/masters/Icons/ui_reroll@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/Icons__ui_reroll_actual.txt",
+      "cleanup": "source/scripts/production.py register Icons/ui_reroll",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Meaning reads at 32 px; internal facets and filigree become dense at small sizes.",
+      "ppu": 240,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "referenceImages": [
+        "ArtHandoff/returns/R01/concepts/hud_concept_LOW_RES_DRAFT.png"
+      ],
+      "sha256": "53972aa6978718fbf16c1ee2c0fe5dd053d8df6820c9c50bc12f4c31c26def66"
+    },
+    {
+      "id": "Icons/ui_settings",
+      "status": "delivered",
+      "export": "exports/Art/Icons/ui_settings.png",
+      "size": [
+        96,
+        96
+      ],
+      "source": "source/sheets/Icons__ui_settings.png",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "master": "source/masters/Icons/ui_settings@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/Icons__ui_settings_actual.txt",
+      "cleanup": "source/scripts/production.py register Icons/ui_settings",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Meets size, RGBA, source, master and cleanup checks; reviewed in offline sheets, awaiting lead acceptance.",
+      "ppu": 240,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "referenceImages": [
+        "ArtHandoff/returns/R01/concepts/hud_concept_LOW_RES_DRAFT.png"
+      ],
+      "sha256": "eb2753e31d17f5888be8ea28becad5e7f8e13f987ca715f75c5c0e55321cb368"
+    },
+    {
+      "id": "Icons/ui_shield",
+      "status": "delivered",
+      "export": "exports/Art/Icons/ui_shield.png",
+      "size": [
+        96,
+        96
+      ],
+      "source": "source/sheets/Icons__ui_shield.png",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "master": "source/masters/Icons/ui_shield@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/Icons__ui_shield_actual.txt",
+      "cleanup": "source/scripts/production.py register Icons/ui_shield",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Meets size, RGBA, source, master and cleanup checks; reviewed in offline sheets, awaiting lead acceptance.",
+      "ppu": 240,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "referenceImages": [
+        "ArtHandoff/returns/R01/concepts/hud_concept_LOW_RES_DRAFT.png"
+      ],
+      "sha256": "d6abec21c75061a5a686401e456fb14d8ad8dc0874a8c51a6b73a791bab4881a"
+    },
+    {
+      "id": "Icons/ui_speed",
+      "status": "delivered",
+      "export": "exports/Art/Icons/ui_speed.png",
+      "size": [
+        96,
+        96
+      ],
+      "source": "source/sheets/Icons__ui_speed.png",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "master": "source/masters/Icons/ui_speed@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/Icons__ui_speed_actual.txt",
+      "cleanup": "source/scripts/production.py register Icons/ui_speed",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Meets size, RGBA, source, master and cleanup checks; reviewed in offline sheets, awaiting lead acceptance.",
+      "ppu": 240,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "referenceImages": [
+        "ArtHandoff/returns/R01/concepts/hud_concept_LOW_RES_DRAFT.png"
+      ],
+      "sha256": "5ff3797bf19195f2e67342a2185ce413f43edd4eb045f3d476ff198afb9dad48"
+    },
+    {
+      "id": "Icons/ui_star",
+      "status": "delivered",
+      "export": "exports/Art/Icons/ui_star.png",
+      "size": [
+        96,
+        96
+      ],
+      "source": "source/sheets/Icons__ui_star.png",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "master": "source/masters/Icons/ui_star@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/Icons__ui_star_actual.txt",
+      "cleanup": "source/scripts/production.py register Icons/ui_star",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Meets size, RGBA, source, master and cleanup checks; reviewed in offline sheets, awaiting lead acceptance.",
+      "ppu": 240,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "referenceImages": [
+        "ArtHandoff/returns/R01/concepts/hud_concept_LOW_RES_DRAFT.png"
+      ],
+      "sha256": "be515486c96483a10c51e1803220dfdd1c387c389af71a4846f9286ba565caf3"
+    },
+    {
+      "id": "Icons/ui_sword",
+      "status": "delivered",
+      "export": "exports/Art/Icons/ui_sword.png",
+      "size": [
+        96,
+        96
+      ],
+      "source": "source/sheets/Icons__ui_sword.png",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "master": "source/masters/Icons/ui_sword@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/Icons__ui_sword_actual.txt",
+      "cleanup": "source/scripts/production.py register Icons/ui_sword",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Meets size, RGBA, source, master and cleanup checks; reviewed in offline sheets, awaiting lead acceptance.",
+      "ppu": 240,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "referenceImages": [
+        "ArtHandoff/returns/R01/concepts/hud_concept_LOW_RES_DRAFT.png"
+      ],
+      "sha256": "c24cb9d2739b0c5950a5ee10006cda2cd3dfab1dfb775bc1a9d09f8e3bb7c375"
+    },
+    {
+      "id": "Icons/ui_trophy",
+      "status": "delivered",
+      "export": "exports/Art/Icons/ui_trophy.png",
+      "size": [
+        96,
+        96
+      ],
+      "source": "source/sheets/Icons__ui_trophy.png",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "master": "source/masters/Icons/ui_trophy@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/Icons__ui_trophy_actual.txt",
+      "cleanup": "source/scripts/production.py register Icons/ui_trophy",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Meets size, RGBA, source, master and cleanup checks; reviewed in offline sheets, awaiting lead acceptance.",
+      "ppu": 240,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "referenceImages": [
+        "ArtHandoff/returns/R01/concepts/hud_concept_LOW_RES_DRAFT.png"
+      ],
+      "sha256": "53268f61c7668edb7a79c5d8c205275ae56756a4253001998435125256033104"
+    },
+    {
+      "id": "Icons/ui_wave",
+      "status": "delivered",
+      "export": "exports/Art/Icons/ui_wave.png",
+      "size": [
+        96,
+        96
+      ],
+      "source": "source/sheets/Icons__ui_wave.png",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "master": "source/masters/Icons/ui_wave@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/Icons__ui_wave_actual.txt",
+      "cleanup": "source/scripts/production.py register Icons/ui_wave",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Meets size, RGBA, source, master and cleanup checks; reviewed in offline sheets, awaiting lead acceptance.",
+      "ppu": 240,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "referenceImages": [
+        "ArtHandoff/returns/R01/concepts/hud_concept_LOW_RES_DRAFT.png"
+      ],
+      "sha256": "5a6cd773da2708156fd09e17d80dedd08382fc2a9655258d4ef183d524445c13"
+    },
+    {
+      "id": "Icons/ui_xp",
+      "status": "delivered",
+      "export": "exports/Art/Icons/ui_xp.png",
+      "size": [
+        96,
+        96
+      ],
+      "source": "source/sheets/Icons__ui_xp.png",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "master": "source/masters/Icons/ui_xp@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/Icons__ui_xp_actual.txt",
+      "cleanup": "source/scripts/production.py register Icons/ui_xp",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Meets size, RGBA, source, master and cleanup checks; reviewed in offline sheets, awaiting lead acceptance.",
+      "ppu": 240,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "referenceImages": [
+        "ArtHandoff/returns/R01/concepts/hud_concept_LOW_RES_DRAFT.png"
+      ],
+      "sha256": "5806821851a1d5f91cc1dbf738b468c2f5156de6ff852c9aba8d3342b02ce365"
+    },
+    {
+      "id": "Icons/ui_stance_defensive",
+      "status": "delivered",
+      "export": "exports/Art/Icons/ui_stance_defensive.png",
+      "size": [
+        96,
+        96
+      ],
+      "source": "source/sheets/Icons__ui_stance_defensive.png",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "master": "source/masters/Icons/ui_stance_defensive@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/Icons__ui_stance_defensive_actual.txt",
+      "cleanup": "source/scripts/production.py register Icons/ui_stance_defensive",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Meets size, RGBA, source, master and cleanup checks; reviewed in offline sheets, awaiting lead acceptance.",
+      "ppu": 240,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "referenceImages": [
+        "ArtHandoff/returns/R01/concepts/hud_concept_LOW_RES_DRAFT.png"
+      ],
+      "sha256": "da8276dc59878aaf5160b9dd5059921424ed8bdec52c29e479410bf2181e0a9b"
+    },
+    {
+      "id": "Icons/ui_stance_balanced",
+      "status": "delivered",
+      "export": "exports/Art/Icons/ui_stance_balanced.png",
+      "size": [
+        96,
+        96
+      ],
+      "source": "source/sheets/Icons__ui_stance_balanced.png",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "master": "source/masters/Icons/ui_stance_balanced@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/Icons__ui_stance_balanced_actual.txt",
+      "cleanup": "source/scripts/production.py register Icons/ui_stance_balanced",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Meets size, RGBA, source, master and cleanup checks; reviewed in offline sheets, awaiting lead acceptance.",
+      "ppu": 240,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "referenceImages": [
+        "ArtHandoff/returns/R01/concepts/hud_concept_LOW_RES_DRAFT.png"
+      ],
+      "sha256": "2da61cf65315191491afe2cf3f43b9ded9a91f3c8ef627c1dd753ae9d6247d93"
+    },
+    {
+      "id": "Icons/ui_stance_aggressive",
+      "status": "delivered",
+      "export": "exports/Art/Icons/ui_stance_aggressive.png",
+      "size": [
+        96,
+        96
+      ],
+      "source": "source/sheets/Icons__ui_stance_aggressive.png",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "master": "source/masters/Icons/ui_stance_aggressive@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/Icons__ui_stance_aggressive_actual.txt",
+      "cleanup": "source/scripts/production.py register Icons/ui_stance_aggressive",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Meets size, RGBA, source, master and cleanup checks; reviewed in offline sheets, awaiting lead acceptance.",
+      "ppu": 240,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "referenceImages": [
+        "ArtHandoff/returns/R01/concepts/hud_concept_LOW_RES_DRAFT.png"
+      ],
+      "sha256": "68451663d9d789d158e24cdbdfd5dc97eed0332f1d1afcdf602799f0052421a5"
+    }
+  ],
+  "extras": [
+    {
+      "path": "previews/button_states_720p.png",
+      "kind": "offline composite / QA; not a Unity screenshot"
+    },
+    {
+      "path": "previews/cards_emblem.png",
+      "kind": "offline composite / QA; not a Unity screenshot"
+    },
+    {
+      "path": "previews/flat_R03.png",
+      "kind": "offline composite / QA; not a Unity screenshot"
+    },
+    {
+      "path": "previews/hud_mock_1080.png",
+      "kind": "offline composite / QA; not a Unity screenshot"
+    },
+    {
+      "path": "previews/hud_mock_1440.png",
+      "kind": "offline composite / QA; not a Unity screenshot"
+    },
+    {
+      "path": "previews/hud_mock_720.png",
+      "kind": "offline composite / QA; not a Unity screenshot"
+    },
+    {
+      "path": "previews/icons_colour_1080p.png",
+      "kind": "offline composite / QA; not a Unity screenshot"
+    },
+    {
+      "path": "previews/icons_colour_720p.png",
+      "kind": "offline composite / QA; not a Unity screenshot"
+    },
+    {
+      "path": "previews/icons_gray_1080p.png",
+      "kind": "offline composite / QA; not a Unity screenshot"
+    },
+    {
+      "path": "previews/icons_gray_720p.png",
+      "kind": "offline composite / QA; not a Unity screenshot"
+    },
+    {
+      "path": "previews/icons_silhouette_1080p.png",
+      "kind": "offline composite / QA; not a Unity screenshot"
+    },
+    {
+      "path": "previews/icons_silhouette_720p.png",
+      "kind": "offline composite / QA; not a Unity screenshot"
+    },
+    {
+      "path": "previews/scene_R03_1080p.png",
+      "kind": "offline composite / QA; not a Unity screenshot"
+    },
+    {
+      "path": "previews/scene_R03_1440p.png",
+      "kind": "offline composite / QA; not a Unity screenshot"
+    },
+    {
+      "path": "previews/scene_R03_720p.png",
+      "kind": "offline composite / QA; not a Unity screenshot"
+    },
+    {
+      "path": "previews/stretch_sheet_01.png",
+      "kind": "offline composite / QA; not a Unity screenshot"
+    },
+    {
+      "path": "previews/stretch_sheet_02.png",
+      "kind": "offline composite / QA; not a Unity screenshot"
+    },
+    {
+      "path": "previews/stretch_sheet_03.png",
+      "kind": "offline composite / QA; not a Unity screenshot"
+    },
+    {
+      "path": "previews/stretch_sheet_04.png",
+      "kind": "offline composite / QA; not a Unity screenshot"
+    },
+    {
+      "path": "previews/stretch_sheet_05.png",
+      "kind": "offline composite / QA; not a Unity screenshot"
+    }
+  ],
+  "knownIssues": [
+    "Dense detail on heart, leak, essence and reroll at 32px.",
+    "Ghost hover is subtle; pressed cue relies mostly on values and generated bevel.",
+    "Glass contrast may fall below 4.5:1 over future backgrounds brighter than supplied battlefield."
+  ],
+  "blockers": [],
+  "summary": {
+    "requested": 56,
+    "delivered": 56,
+    "blocked": 0,
+    "skipped": 0,
+    "placeholders": 0,
+    "intakeBlocking": 0,
+    "intakeNotes": 0
+  },
+  "qa": {
+    "intake": "qa/intake.json",
+    "supplemental": "qa/technical_checks.json",
+    "hudMock": "previews/hud_mock_1440.png",
+    "evidenceType": "offline composite; not Unity gameplay",
+    "strayWorkingTreeChangesReported": [
+      "Docs/ASSET_MANIFEST.json",
+      "Reports/ArtQuality/R02_vfx/capture_info.json",
+      "Reports/ArtQuality/R02_vfx/prep.png",
+      "Reports/ArtQuality/R02_vfx/t04.png",
+      "Reports/ArtQuality/R02_vfx/t08.png",
+      "Reports/ArtQuality/R02_vfx/t12.png",
+      "Reports/ArtQuality/R02_vfx/t17.png",
+      "Reports/ArtQuality/R02_vfx/t23.png"
+    ]
+  },
+  "scopeNotes": [
+    "Literal requests path absent; resolved to requests/R03.",
+    "R03 guides directory empty; used INPUT_MANIFEST dimensions and borders.",
+    "Card border [48,48,48,80] overrides prose shorthand 48.",
+    "Task-authored files stay inside returns/R03; managed generation cache is tool-owned."
+  ]
+}

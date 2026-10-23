@@ -1,0 +1,145 @@
+{
+  "icons": [
+    [
+      "element_fire",
+      "Flame tongues with sharp spikes",
+      "#ff6a2b"
+    ],
+    [
+      "element_water",
+      "Single large droplet containing a wave curl",
+      "#2f8cff"
+    ],
+    [
+      "element_wind",
+      "Triple swirling wind ribbon, three clear curled arms",
+      "#5fe8c8"
+    ],
+    [
+      "element_earth",
+      "Three stacked angular boulders, solid block shapes",
+      "#c98a3e"
+    ],
+    [
+      "role_guardian",
+      "Tall tower shield, large simple shield silhouette",
+      "#c8c3b3"
+    ],
+    [
+      "role_mage",
+      "A single staff topped with caged round orb",
+      "#c8c3b3"
+    ],
+    [
+      "role_ranger",
+      "Drawn longbow and single nocked arrow",
+      "#c8c3b3"
+    ],
+    [
+      "role_healer",
+      "Open palm upright with droplet halo above it",
+      "#c8c3b3"
+    ],
+    [
+      "status_burn",
+      "Small flame rising from a cracked ring",
+      "#ff6a2b"
+    ],
+    [
+      "status_wet",
+      "Three large falling drops",
+      "#2f8cff"
+    ],
+    [
+      "status_stun",
+      "Three orbiting stars above jagged broken ring",
+      "#e1c878"
+    ],
+    [
+      "status_shield",
+      "Faceted crystal-shaped shield",
+      "#8fe3ff"
+    ],
+    [
+      "reaction_vaporize",
+      "Flame and droplet merging upward into a single plume of steam",
+      "#d6c9b7"
+    ],
+    [
+      "reaction_firestorm",
+      "Flame caught within a swirling wind spiral",
+      "#ff6a2b"
+    ],
+    [
+      "ui_crystal",
+      "Tall faceted holy cyan relic crystal with asymmetrical crown of three shards and tiny stone collar",
+      "#8fe3ff"
+    ],
+    [
+      "ui_gold",
+      "Stack of three ancient engraved bronze coins, abstract groove motif, no lettering",
+      "#c9a15d"
+    ],
+    [
+      "ui_wave",
+      "Upright pennant banner with two bold chevrons, no lettering",
+      "#c8c3b3"
+    ]
+  ],
+  "hud": [
+    [
+      "panel_dark",
+      "128x128export square main UI panel with40px9-slice border. Dark basalt/slate flat centre48x48, thin engraved bronze2px rim, one SMALL abstract notch/gem in corners. All decoration inside40px edge band. Frontal rectangle, no perspective. Centre near-flat #252931.",
+      [
+        128,
+        128
+      ],
+      40
+    ],
+    [
+      "tooltip",
+      "96x96export square tooltip with24px9-slice border. Dark slate flat centre48x48 with subtly lighter thinner bronze edges2px, compact corners. All detail inside24px edge band, centre flat #2a2e35. Frontal rectangle no perspective.",
+      [
+        96,
+        96
+      ],
+      24
+    ],
+    [
+      "bar_bg",
+      "128x40export WIDE3.2:1 recessed dark bar track with thin bronze rim2px,18px9-slice border all sides. Centre nearly black flat, compact inset corner construction. Front view rectangle, no perspective. Render at least1024x320, full asset no cropping.",
+      [
+        128,
+        40
+      ],
+      18
+    ],
+    [
+      "bar_fill",
+      "128x40export WIDE3.2:1 glossy painted fill, WHITE and neutral GREYS ONLY (runtime tint), thin top highlight band, darker grey lower band.18px9-slice borders with shallow caps, flat low-frequency centre, no border decoration/gem/colour. Front view rectangle no perspective. Render at least1024x320.",
+      [
+        128,
+        40
+      ],
+      18
+    ],
+    [
+      "button_primary_normal",
+      "192x96export 2:1 rectangular button slab,36px9-slice borders. Compact thin engraved bronze2px frame, worn basalt outer edge, warm amber inner plate NEAR-FLAT. All engraving/corner notches within36px edge band, centre120x24 stretches seamlessly. Two tiny restrained corner rivets. Front facing rectangle no perspective, absolutely no text or central emblem. Render at least1536x768.",
+      [
+        192,
+        96
+      ],
+      36
+    ],
+    [
+      "card_rare",
+      "256x360export portrait card frame, rare tier cool blue-silver metal with ONE small sapphire top-centre gem. Uniform48px9-slice border all4sides. Thin sturdy silver2px inner/outer edges, compact corner notches. All decoration contained48pxedge band including gem; centre160x264 flat dark slate or transparent. Absolutely NO central art/symbols/lettering/text, no intricate filigree. Front-facing rectangle no perspective. Render at least1024x1440.",
+      [
+        256,
+        360
+      ],
+      48
+    ]
+  ]
+}

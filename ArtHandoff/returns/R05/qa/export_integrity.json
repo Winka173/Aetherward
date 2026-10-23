@@ -1,0 +1,382 @@
+{
+  "checked": 25,
+  "blocking": 0,
+  "scope": "File integrity only; does not override intake or visual QA.",
+  "rows": [
+    {
+      "id": "Heroes/glacius_walk_c",
+      "bounds": [
+        93,
+        158,
+        431,
+        477
+      ],
+      "footRow": 476,
+      "masterSize": [
+        1024,
+        1024
+      ],
+      "errors": []
+    },
+    {
+      "id": "Heroes/glacius_walk_d",
+      "bounds": [
+        94,
+        158,
+        436,
+        477
+      ],
+      "footRow": 476,
+      "masterSize": [
+        1024,
+        1024
+      ],
+      "errors": []
+    },
+    {
+      "id": "Heroes/glacius_windup",
+      "bounds": [
+        111,
+        105,
+        442,
+        477
+      ],
+      "footRow": 476,
+      "masterSize": [
+        1024,
+        1024
+      ],
+      "errors": []
+    },
+    {
+      "id": "Heroes/glacius_follow",
+      "bounds": [
+        53,
+        152,
+        452,
+        477
+      ],
+      "footRow": 476,
+      "masterSize": [
+        1024,
+        1024
+      ],
+      "errors": []
+    },
+    {
+      "id": "Heroes/glacius_idle_b",
+      "bounds": [
+        97,
+        159,
+        432,
+        477
+      ],
+      "footRow": 476,
+      "masterSize": [
+        1024,
+        1024
+      ],
+      "errors": []
+    },
+    {
+      "id": "Heroes/ignis_walk_c",
+      "bounds": [
+        89,
+        128,
+        401,
+        477
+      ],
+      "footRow": 476,
+      "masterSize": [
+        1024,
+        1024
+      ],
+      "errors": []
+    },
+    {
+      "id": "Heroes/ignis_walk_d",
+      "bounds": [
+        120,
+        135,
+        398,
+        476
+      ],
+      "footRow": 475,
+      "masterSize": [
+        1024,
+        1024
+      ],
+      "errors": []
+    },
+    {
+      "id": "Heroes/ignis_windup",
+      "bounds": [
+        80,
+        105,
+        411,
+        477
+      ],
+      "footRow": 476,
+      "masterSize": [
+        1024,
+        1024
+      ],
+      "errors": []
+    },
+    {
+      "id": "Heroes/ignis_follow",
+      "bounds": [
+        65,
+        217,
+        459,
+        477
+      ],
+      "footRow": 476,
+      "masterSize": [
+        1024,
+        1024
+      ],
+      "errors": []
+    },
+    {
+      "id": "Heroes/ignis_idle_b",
+      "bounds": [
+        125,
+        131,
+        405,
+        476
+      ],
+      "footRow": 475,
+      "masterSize": [
+        1024,
+        1024
+      ],
+      "errors": []
+    },
+    {
+      "id": "Heroes/veyra_walk_c",
+      "bounds": [
+        140,
+        144,
+        394,
+        476
+      ],
+      "footRow": 475,
+      "masterSize": [
+        1024,
+        1024
+      ],
+      "errors": []
+    },
+    {
+      "id": "Heroes/veyra_walk_d",
+      "bounds": [
+        143,
+        141,
+        409,
+        476
+      ],
+      "footRow": 475,
+      "masterSize": [
+        1024,
+        1024
+      ],
+      "errors": []
+    },
+    {
+      "id": "Heroes/veyra_windup",
+      "bounds": [
+        112,
+        104,
+        453,
+        476
+      ],
+      "footRow": 475,
+      "masterSize": [
+        1024,
+        1024
+      ],
+      "errors": []
+    },
+    {
+      "id": "Heroes/veyra_follow",
+      "bounds": [
+        100,
+        149,
+        459,
+        476
+      ],
+      "footRow": 475,
+      "masterSize": [
+        1024,
+        1024
+      ],
+      "errors": []
+    },
+    {
+      "id": "Heroes/veyra_idle_b",
+      "bounds": [
+        163,
+        140,
+        399,
+        476
+      ],
+      "footRow": 475,
+      "masterSize": [
+        1024,
+        1024
+      ],
+      "errors": []
+    },
+    {
+      "id": "Heroes/marina_walk_c",
+      "bounds": [
+        103,
+        130,
+        399,
+        477
+      ],
+      "footRow": 476,
+      "masterSize": [
+        1024,
+        1024
+      ],
+      "errors": []
+    },
+    {
+      "id": "Heroes/marina_walk_d",
+      "bounds": [
+        109,
+        131,
+        409,
+        477
+      ],
+      "footRow": 476,
+      "masterSize": [
+        1024,
+        1024
+      ],
+      "errors": []
+    },
+    {
+      "id": "Heroes/marina_windup",
+      "bounds": [
+        90,
+        104,
+        399,
+        476
+      ],
+      "footRow": 475,
+      "masterSize": [
+        1024,
+        1024
+      ],
+      "errors": []
+    },
+    {
+      "id": "Heroes/marina_follow",
+      "bounds": [
+        110,
+        190,
+        459,
+        477
+      ],
+      "footRow": 476,
+      "masterSize": [
+        1024,
+        1024
+      ],
+      "errors": []
+    },
+    {
+      "id": "Heroes/marina_idle_b",
+      "bounds": [
+        108,
+        125,
+        392,
+        476
+      ],
+      "footRow": 475,
+      "masterSize": [
+        1024,
+        1024
+      ],
+      "errors": []
+    },
+    {
+      "id": "Enemies/grunt_c",
+      "bounds": [
+        36,
+        87,
+        210,
+        236
+      ],
+      "footRow": 235,
+      "masterSize": [
+        512,
+        512
+      ],
+      "errors": []
+    },
+    {
+      "id": "Enemies/grunt_d",
+      "bounds": [
+        41,
+        89,
+        205,
+        236
+      ],
+      "footRow": 235,
+      "masterSize": [
+        512,
+        512
+      ],
+      "errors": []
+    },
+    {
+      "id": "Enemies/grunt_windup",
+      "bounds": [
+        50,
+        37,
+        213,
+        237
+      ],
+      "footRow": 236,
+      "masterSize": [
+        512,
+        512
+      ],
+      "errors": []
+    },
+    {
+      "id": "Enemies/runner_c",
+      "bounds": [
+        47,
+        84,
+        221,
+        236
+      ],
+      "footRow": 235,
+      "masterSize": [
+        512,
+        512
+      ],
+      "errors": []
+    },
+    {
+      "id": "Enemies/runner_d",
+      "bounds": [
+        71,
+        85,
+        187,
+        236
+      ],
+      "footRow": 235,
+      "masterSize": [
+        512,
+        512
+      ],
+      "errors": []
+    }
+  ]
+}

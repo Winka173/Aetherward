@@ -1,0 +1,19 @@
+{
+  "id": "Enemies/banner_a",
+  "character": "banner",
+  "height": 185,
+  "width": 215,
+  "bottom": 236,
+  "raw": "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\returns\\B08\\source\\sheets\\banner_a_v2.png",
+  "prompt": "Dark Mythic Fantasy, painterly stylized 2.5D; orthographic 38.3-degree elevation, three-quarter front body turned 25 degrees toward screen-right. Key upper-left-front #ffe9d0, rim back-right #9fe8ff, ambient #16233a. Controlled broad brush planes, coloured local-hue dark edges without black outlines. EDIT the first image only. Other images are B01 style references. Lighting correction ONLY, same pose and silhouette. Lighten the broad tattered banner perimeter and cloth folds toward pale ash-red on lit edges, stronger warm key planes and cool selective rim on banner edges. Raise contour mean from 0.263 to >=0.33. Keep oxblood interior, same abstract sigil. Keep exact identity, face, costume, materials, prop design and palette. Full character fits within ample transparent margins; screen-right +X facing, 38.3 degree elevation. Transparent background, no shadow, floor, text, projectiles or detached effects. Native high resolution; no black outline. Bright broad key planes, #9fe8ff cool directional rim 2–3 pixels at final export; contour luminance target >=0.33.",
+  "references": [
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B08/source/sheets/banner_a.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Enemies/grunt_a.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Enemies/juggernaut_a.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Enemies/hexcaster_a.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Enemies/storm_harpy_a.png"
+  ],
+  "anchor": 0.7,
+  "sourceName": "banner_a_v2",
+  "registration": "Torso centre visually estimated; uncertainty approximately 5–8 native export pixels."
+}

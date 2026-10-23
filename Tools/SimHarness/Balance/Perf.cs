@@ -2,6 +2,7 @@ using System;
 using System.Diagnostics;
 using System.IO;
 using System.Text;
+using System.Collections.Generic;
 using Aetherward.Sim.Combat;
 using Aetherward.Sim.Content;
 using Aetherward.Sim.Run;
@@ -47,6 +48,36 @@ namespace Aetherward.Balance
                     ticks++;
                 }
                 sb.AppendLine($"| {wave} | {ticks} | {b.Stats.PeakEnemies} | {total / Math.Max(1, ticks):0.0} | {max:0} | {b.Stats.PeakReactionsPerSecond} |");
+            }
+            sb.AppendLine("\n## Saturated Haven simulation\n");
+            sb.AppendLine("160 durable enemies at the gates, six level-5 heroes, 900 ticks per biome. Includes reactions and combat journals; excludes Unity rendering, audio and VFX. Times may include OS scheduling pauses.\n");
+            sb.AppendLine("| Biome | Peak enemies | Avg µs/tick | p95 µs/tick | Max µs/tick |");
+            sb.AppendLine("|---|---|---|---|---|");
+            foreach (BiomeDef biome in db.BiomeList)
+            {
+                var setup = new BattleSetup { Content = db, Biome = biome, Wave = new WaveDef { Number = 19, TimeLimit = 999f },
+                    Seed = 99, CrystalHp = 1e9f, CrystalMaxHp = 1e9f };
+                for (int i = 0; i < heroes.Length; i++) setup.Heroes.Add(new HeroLoadout { Def = db.Heroes[heroes[i]], RosterIndex = i, Level = 5 });
+                var b = new Battle(setup);
+                for (int i = 0; i < 160; i++)
+                {
+                    int lane = i % biome.Arena.Lanes.Count;
+                    var e = b.SpawnEnemy(db.Enemies[i % 4 == 0 ? "hexcaster" : "grunt"], lane, false, null,
+                        biome.Arena.Lanes[lane].Gate);
+                    e.Hp = e.MaxHp = 1e7f;
+                }
+                var samples = new List<double>(900);
+                var sw = new Stopwatch();
+                double total = 0;
+                for (int tick = 0; tick < 900; tick++)
+                {
+                    sw.Restart(); b.Tick(); sw.Stop();
+                    b.Journal.Clear();
+                    double us = sw.Elapsed.TotalMilliseconds * 1000;
+                    samples.Add(us); total += us;
+                }
+                samples.Sort();
+                sb.AppendLine($"| {biome.Id} | {b.Stats.PeakEnemies} | {total / samples.Count:0.0} | {samples[(int)(samples.Count * 0.95)]:0.0} | {samples[samples.Count - 1]:0.0} |");
             }
             File.WriteAllText(path, sb.ToString());
             Console.WriteLine(sb.ToString());

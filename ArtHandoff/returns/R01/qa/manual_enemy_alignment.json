@@ -1,0 +1,80 @@
+[
+  {
+    "id": "Enemies/grunt_a",
+    "height": 150.0,
+    "offset": -16,
+    "method": "Visual torso alignment from separate overlays; no anatomy redrawn."
+  },
+  {
+    "id": "Enemies/grunt_b",
+    "height": 150.0,
+    "offset": -16,
+    "method": "Visual torso alignment from separate overlays; no anatomy redrawn."
+  },
+  {
+    "id": "Enemies/grunt_attack",
+    "height": 150.0,
+    "offset": 8,
+    "method": "Visual torso alignment from separate overlays; no anatomy redrawn."
+  },
+  {
+    "id": "Enemies/runner_a",
+    "height": 155.0,
+    "offset": -8,
+    "method": "Visual torso alignment from separate overlays; no anatomy redrawn."
+  },
+  {
+    "id": "Enemies/runner_b",
+    "height": 155.0,
+    "offset": -8,
+    "method": "Visual torso alignment from separate overlays; no anatomy redrawn."
+  },
+  {
+    "id": "Enemies/juggernaut_a",
+    "height": 205.0,
+    "offset": 6,
+    "method": "Visual torso alignment from separate overlays; no anatomy redrawn."
+  },
+  {
+    "id": "Enemies/juggernaut_attack",
+    "height": 205.0,
+    "offset": 6,
+    "method": "Visual torso alignment from separate overlays; no anatomy redrawn."
+  },
+  {
+    "id": "Enemies/ravager_b",
+    "height": 210.0,
+    "offset": -8,
+    "method": "Visual torso alignment from separate overlays; no anatomy redrawn."
+  },
+  {
+    "id": "Enemies/ravager_attack",
+    "height": 210.0,
+    "offset": -6,
+    "method": "Visual torso alignment from separate overlays; no anatomy redrawn."
+  },
+  {
+    "id": "Enemies/rift_warden_a",
+    "height": 430.0,
+    "offset": -24,
+    "method": "Visual torso alignment from separate overlays; no anatomy redrawn."
+  },
+  {
+    "id": "Enemies/rift_warden_b",
+    "height": 430.0,
+    "offset": -24,
+    "method": "Visual torso alignment from separate overlays; no anatomy redrawn."
+  },
+  {
+    "id": "Enemies/rift_warden_tell",
+    "height": 450.0,
+    "offset": -16,
+    "method": "Visual torso alignment from separate overlays; no anatomy redrawn."
+  },
+  {
+    "id": "Enemies/rift_warden_attack",
+    "height": 430.0,
+    "offset": -16,
+    "method": "Visual torso alignment from separate overlays; no anatomy redrawn."
+  }
+]

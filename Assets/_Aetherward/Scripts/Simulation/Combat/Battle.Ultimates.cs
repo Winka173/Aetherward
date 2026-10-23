@@ -21,9 +21,12 @@ namespace Aetherward.Sim.Combat
 
         private void TickUltimate(HeroUnit h, float dt)
         {
-            if (h.Target != null && h.Ult < 1f) h.Ult = SimMath.Min(1f, h.Ult + dt / UltSeconds);
+            if (h.Target != null && h.Ult < 1f) h.Ult = SimMath.Min(1f, h.Ult + dt / (h.Def.Ultimate?.Seconds ?? UltSeconds));
             if (h.Ult < 1f || h.CastLock > 0f || h.SilenceTimer > 0f) return;
-            if (!BestCluster(h, out Vec2 at)) return;
+            bool cluster = BestCluster(h, out Vec2 at);
+            bool rescue = h.Def.Ultimate != null && (h.Def.Ultimate.Heal > 0f || h.Def.Ultimate.Shield > 0f)
+                && Heroes.Exists(a => a.Alive && a.HpFraction < 0.5f && Vec2.Distance(a.Pos, h.Pos) <= 6f);
+            if (!cluster && !rescue) return;
             CastUltimate(h, at);
             h.Ult = 0f;
             h.CastLock = 0.6f;
@@ -78,6 +81,11 @@ namespace Aetherward.Sim.Combat
             Element el = h.Def.Element;
             Emit(SimEventType.Strike, at, el, 0f, h.Uid, 0, "ult_cast", false, 0f);
             Stats.Ultimates++;
+            if (h.Def.Ultimate != null)
+            {
+                CastSignature(h, at, h.Def.Ultimate);
+                return;
+            }
             switch (el)
             {
                 case Element.Fire:
@@ -123,6 +131,35 @@ namespace Aetherward.Sim.Combat
                 default:
                     UltStrike(h, at, 0.4f, 3.4f, 2.8f, 0f, el);
                     break;
+            }
+        }
+
+        private void CastSignature(HeroUnit h, Vec2 at, UltimateDef u)
+        {
+            Element el = h.Def.Element;
+            foreach (HeroUnit ally in Heroes)
+            {
+                if (!ally.Alive || Vec2.Distance(ally.Pos, h.Pos) > 6f) continue;
+                if (u.Heal > 0f) HealHero(ally, ally.MaxHp * u.Heal * UltPower, h);
+                if (u.Shield > 0f) AddHeroShield(ally, ally.MaxHp * u.Shield * UltPower, h);
+            }
+            switch (u.Kind)
+            {
+                case "aegis": ShieldCrystal(Crystal.MaxHp * 0.08f * UltPower); break;
+                case "cyclone": PullAround(at, u.Radius + 0.8f); break;
+                case "tide": KnockAround(at, u.Radius, 1.6f); break;
+                case "chain": ChainUltimate(h, at, u.Hits); break;
+                case "execution":
+                    if (h.Target != null && h.Target.Alive) at = h.Target.Pos;
+                    break;
+            }
+            int hits = u.Kind == "chain" ? 1 : u.Hits;
+            for (int i = 0; i < hits; i++)
+            {
+                float angle = i * 2.39996f;
+                float spread = u.Kind == "meteor" && i > 0 ? 1.1f + 0.3f * i : 0f;
+                Vec2 offset = new Vec2(System.MathF.Cos(angle), System.MathF.Sin(angle)) * spread;
+                UltStrike(h, at + offset, 0.35f + i * 0.22f, u.Radius, u.Power, u.Stun, el);
             }
         }
 

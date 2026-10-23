@@ -20,7 +20,6 @@ namespace Aetherward.Game
         private Camera _cam;
         private Transform _world, _unitsRoot, _fxRoot;
         private SpriteRenderer _crystal, _crystalShield, _crystalPath;   // _crystalPath: Crystal Evolution overlay (bastion/pulse/thorn)
-        private readonly List<SpriteRenderer> _nodes = new List<SpriteRenderer>();
         private readonly List<SpriteRenderer> _laneArrows = new List<SpriteRenderer>();
         private readonly Dictionary<int, UnitView> _units = new Dictionary<int, UnitView>();
         private readonly Dictionary<int, UnitView> _prepViews = new Dictionary<int, UnitView>();
@@ -105,9 +104,7 @@ namespace Aetherward.Game
         private float _streakTimer;
 
         // drag & drop
-        private int _dragUid = -1;
         private int _selectedUid = -1;
-        private Vector3 _dragPos;
         private readonly List<Rect> _uiBlockers = new List<Rect>();
         private readonly List<Rect> _uiBlockersNext = new List<Rect>();
 
@@ -168,12 +165,7 @@ namespace Aetherward.Game
             EnvironmentFx.Create(_world, bgPath, _cam);
             AmbientMotes.Create(_world, _rc.Biome.Id, _cam);
             if (_cam.GetComponent<PostFx>() == null) _cam.gameObject.AddComponent<PostFx>();
-            for (int i = 0; i < Arena.Nodes.Count; i++)
-            {
-                SpriteRenderer n = WorldGfx.NewSprite(_world, "Node" + i, Art.Sprite("World/node_empty"), -9000);
-                n.transform.position = WorldGfx.V(Arena.Nodes[i]) + new Vector3(0, -0.05f, 0);
-                _nodes.Add(n);
-            }
+
             _crystal = WorldGfx.NewSprite(_world, "Crystal", Art.Sprite("World/crystal_intact"), WorldGfx.OrderFor(-0.6f));
             _crystal.transform.position = new Vector3(0, -0.55f, 0);
             _crystalPath = WorldGfx.NewSprite(_world, "CrystalPath", null, WorldGfx.OrderFor(-0.6f) + 1);
@@ -211,7 +203,6 @@ namespace Aetherward.Game
                 SyncPrepViews(dt);
                 if (s.Phase == RunPhase.Prepare) HandlePlacementInput();
             }
-            UpdateNodes();
             UpdateLaneArrows();
             UpdateCrystal(dt);
             _fx.Update(_paused ? 0f : dt * (s.Phase == RunPhase.Battle ? _speed : 1));
@@ -634,12 +625,12 @@ namespace Aetherward.Game
                     if (caster != null && _units.TryGetValue(caster.Uid, out UnitView cv))
                     {
                         cv.Cast();
-                        _text.Add(cv.transform.position + new Vector3(0, 2.2f, 0), App.Loc.Get("hud.ultimate"), Color.Lerp(Ui.ElementColor(e.Element), Ui.Gold, 0.4f), 40, 1.1f);
+                        _text.Add(cv.transform.position + new Vector3(0, 2.2f, 0), App.Loc.Get("hero." + caster.Def.Id + ".ultimate.name"), Color.Lerp(Ui.ElementColor(e.Element), Ui.Gold, 0.4f), 40, 1.1f);
                         _fx.Spawn("Vfx/glow", cv.transform.position + new Vector3(0, 0.9f, 0), 0.6f, 4.5f, 0.45f, Ui.ElementColor(e.Element) * new Color(1, 1, 1, 0.7f), 0, 0, default, 33, true, 1f, true);
                     }
                     _hitstop.Trigger(WorldGfx.Feel.HitstopSeconds * 2.5f, _speed, Time.unscaledTime);
                     Shake(0.25f);
-                    App.Audio.Play("react_explosion", 0.8f, 0.03f);
+                    App.Audio.Play("ult_" + ElementUtil.Key(e.Element), 0.8f, 0.03f, priority: Aetherward.Sim.Presentation.AudioMix.Critical);
                     break;
                 }
                 case "ult_fire":
@@ -1049,7 +1040,7 @@ namespace Aetherward.Game
             _seen.Clear();
             foreach (HeroRunState h in _rc.State.Heroes)
             {
-                if (h.Node < 0) continue;
+
                 if (!_prepViews.TryGetValue(h.Uid, out UnitView v))
                 {
                     v = RentUnit();
@@ -1063,7 +1054,9 @@ namespace Aetherward.Game
                 }
                 _prepEvo[h.Uid] = h.EvolutionId;
                 _seen.Add(h.Uid);
-                Vector3 pos = h.Uid == _dragUid ? _dragPos : WorldGfx.V(Arena.Nodes[h.Node]);
+                EnsureFormationPreview();
+                HeroUnit planned = _synergyBattle.Heroes.Find(u => u.RosterIndex == _rc.State.Heroes.IndexOf(h));
+                Vector3 pos = planned != null ? WorldGfx.V(planned.Anchor) : Vector3.zero;
                 v.Sync(pos, pos.x >= 0 ? -1f : 1f, h.Downed ? 0f : h.HpFraction, 0f, !h.Downed, true, false, Element.None, Element.None, dt);
                 if (h.Uid == _selectedUid) v.Body.color = new Color(1f, 1f, 0.75f);
             }
@@ -1082,50 +1075,7 @@ namespace Aetherward.Game
         {
             foreach (UnitView v in _prepViews.Values) ReturnUnit(v);
             _prepViews.Clear();
-            _dragUid = -1;
             _selectedUid = -1;
-        }
-
-        private void UpdateNodes()
-        {
-            bool prep = _rc.State.Phase == RunPhase.Prepare;
-            for (int i = 0; i < _nodes.Count; i++)
-            {
-                // dynamic party: nodes are only the starting formation, so they disappear once the wave starts
-                _nodes[i].enabled = prep;
-                if (!prep) continue;
-                HeroRunState occ = _rc.State.HeroOnNode(i);
-                string sprite = occ != null ? "World/node_occupied" : "World/node_empty";
-                if (prep && (_dragUid >= 0 || _selectedUid >= 0) && NearestNode(_dragUid >= 0 ? _dragPos : Vector3.one * 999f) == i) sprite = "World/node_highlight";
-                else if (prep && _selectedUid >= 0 && occ == null) sprite = "World/node_highlight";
-                if (i == _rc.State.BlockedNode)
-                {
-                    // Ascension blocked node: dark red, no highlight, cannot be used this wave.
-                    _nodes[i].sprite = Art.Sprite("World/node_empty");
-                    _nodes[i].color = new Color(0.9f, 0.2f, 0.25f, prep ? 0.85f : 0.4f);
-                    continue;
-                }
-                _nodes[i].sprite = Art.Sprite(sprite);
-                float pulse = prep && occ == null ? 0.75f + 0.25f * Mathf.Sin(Time.time * 3f + i) : 0.45f;
-                Color tint = NodeTraitTint(i);
-                tint.a = prep ? pulse : 0.35f;
-                _nodes[i].color = tint;
-            }
-        }
-
-        /// <summary>Biome node traits read at a glance: warm for heated bridges, icy for frozen tiles.</summary>
-        private Color NodeTraitTint(int node)
-        {
-            if (!_rc.Biome.NodeTraitIds.TryGetValue(node, out string trait)) return Color.white;
-            switch (trait)
-            {
-                case "heated_bridge": return new Color(1f, 0.62f, 0.35f);
-                case "frozen_tile": return new Color(0.6f, 0.88f, 1f);
-                case "aether_node": return new Color(1f, 0.55f, 0.95f);
-                case "lightning_rod": return new Color(1f, 0.95f, 0.45f);
-                case "archive_tome": return new Color(0.55f, 0.85f, 1f);
-                default: return new Color(1f, 0.95f, 0.6f);
-            }
         }
 
         private void UpdateLaneArrows()
@@ -1203,72 +1153,17 @@ namespace Aetherward.Game
             return false;
         }
 
-        public int NearestNode(Vector3 world, float maxDist = 1.1f)
-        {
-            int best = -1;
-            float bestD = maxDist;
-            for (int i = 0; i < Arena.Nodes.Count; i++)
-            {
-                float d = Vector2.Distance(world, WorldGfx.V(Arena.Nodes[i]));
-                if (d < bestD) { bestD = d; best = i; }
-            }
-            return best;
-        }
-
-        private int HeroAt(Vector3 world)
-        {
-            foreach (HeroRunState h in _rc.State.Heroes)
-            {
-                if (h.Node < 0) continue;
-                Vector3 p = WorldGfx.V(Arena.Nodes[h.Node]) + new Vector3(0, 0.6f, 0);
-                if (Vector2.Distance(world, p) < 0.8f) return h.Uid;
-            }
-            return -1;
-        }
-
         private void HandlePlacementInput()
         {
-            if (_modalOpen || OverlayOpen) return;
-            Vector3 w = PointerWorld();
-            if (Input.GetMouseButtonDown(0) && !PointerOverUi())
-            {
-                int hero = HeroAt(w);
-                if (hero >= 0)
+            if (_modalOpen || OverlayOpen || !Input.GetMouseButtonDown(0) || PointerOverUi()) return;
+            Vector3 at = PointerWorld();
+            foreach (var pair in _prepViews)
+                if (Vector2.Distance(at, pair.Value.Body.transform.position) < 1f)
                 {
-                    _dragUid = hero;
-                    _dragPos = w;
-                    _dragMoved = false;
+                    _heroInfoUid = _heroInfoUid == pair.Key ? -1 : pair.Key;
+                    return;
                 }
-                else if (_selectedUid >= 0)
-                {
-                    int node = NearestNode(w);
-                    if (node >= 0 && _rc.PlaceHero(_selectedUid, node)) App.Audio.Ui("ui_card");
-                    _selectedUid = -1;
-                }
-            }
-            if (_dragUid >= 0 && Input.GetMouseButton(0))
-            {
-                if (Vector2.Distance(_dragPos, w) > 0.15f) _dragMoved = true;
-                _dragPos = w;
-            }
-            if (_dragUid >= 0 && Input.GetMouseButtonUp(0))
-            {
-                if (_dragMoved)
-                {
-                    int node = NearestNode(w);
-                    if (node >= 0 && _rc.PlaceHero(_dragUid, node)) App.Audio.Ui("ui_card");
-                    _selectedUid = -1;
-                }
-                else
-                {
-                    // tap-to-select alternative (accessibility): tap hero, then tap a node
-                    _selectedUid = _selectedUid == _dragUid ? -1 : _dragUid;
-                }
-                _dragUid = -1;
-            }
         }
-
-        private bool _dragMoved;
 
         // ------------------------------------------------------------------ accessors for overlay/UI
 

@@ -1,0 +1,745 @@
+{
+  "batch": "B04",
+  "producer": "Codex",
+  "date": "2026-10-20",
+  "styleLock": {
+    "palette": [
+      "#2a2c31",
+      "#625c55",
+      "#6b2734",
+      "#ff6a2b",
+      "#8fe3ff",
+      "#2b5cff",
+      "#1d1f24"
+    ],
+    "light": "key upper-left-front #ffe9d0, rim back-right #9fe8ff, ambient #16233a",
+    "edge": "Dark local-hue edge, no uniform black outline; cool 1Ã¢â‚¬â€œ3 px rim; controlled broad brush planes.",
+    "promptTemplate": "Dark Mythic Fantasy, painterly stylized 2.5D; orthographic 38.3-degree elevation, three-quarter front body turned 25 degrees toward screen-right. Key upper-left-front #ffe9d0, rim back-right #9fe8ff, ambient #16233a. Controlled broad brush planes, coloured local-hue dark edges without black outlines."
+  },
+  "tools": [
+    {
+      "name": "image_gen (Codex built-in)",
+      "version": "not exposed"
+    },
+    {
+      "name": "Python",
+      "packages": [
+        "Pillow",
+        "numpy",
+        "scipy"
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "id": "Heroes/nyxara_idle",
+      "status": "delivered",
+      "size": [
+        400,
+        400
+      ],
+      "export": "exports/Art/Heroes/nyxara_idle.png",
+      "source": "source/sheets/nyxara_idle.png",
+      "master": "source/masters/Heroes/nyxara_idle@2x.png",
+      "generator": "image_generation (built-in)",
+      "prompt": "source/prompts/nyxara_idle_v2.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; requires owner review for identity, role and pose quality."
+    },
+    {
+      "id": "Heroes/nyxara_cast",
+      "status": "delivered",
+      "size": [
+        400,
+        400
+      ],
+      "export": "exports/Art/Heroes/nyxara_cast.png",
+      "source": "source/sheets/nyxara_cast.png",
+      "master": "source/masters/Heroes/nyxara_cast@2x.png",
+      "generator": "image_generation (built-in)",
+      "prompt": "source/prompts/nyxara_cast.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; requires owner review for identity, role and pose quality."
+    },
+    {
+      "id": "Heroes/nyxara_downed",
+      "status": "delivered",
+      "size": [
+        400,
+        400
+      ],
+      "export": "exports/Art/Heroes/nyxara_downed.png",
+      "source": "source/sheets/nyxara_downed.png",
+      "master": "source/masters/Heroes/nyxara_downed@2x.png",
+      "generator": "image_generation (built-in)",
+      "prompt": "source/prompts/nyxara_downed.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; requires owner review for identity, role and pose quality."
+    },
+    {
+      "id": "Heroes/nyxara_evoA",
+      "status": "delivered",
+      "size": [
+        400,
+        400
+      ],
+      "export": "exports/Art/Heroes/nyxara_evoA.png",
+      "source": "source/sheets/nyxara_evoA.png",
+      "master": "source/masters/Heroes/nyxara_evoA@2x.png",
+      "generator": "image_generation (built-in)",
+      "prompt": "source/prompts/nyxara_evoA.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; requires owner review for identity, role and pose quality."
+    },
+    {
+      "id": "Heroes/nyxara_evoA_cast",
+      "status": "delivered",
+      "size": [
+        400,
+        400
+      ],
+      "export": "exports/Art/Heroes/nyxara_evoA_cast.png",
+      "source": "source/sheets/nyxara_evoA_cast.png",
+      "master": "source/masters/Heroes/nyxara_evoA_cast@2x.png",
+      "generator": "image_generation (built-in)",
+      "prompt": "source/prompts/nyxara_evoA_cast.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; requires owner review for identity, role and pose quality."
+    },
+    {
+      "id": "Heroes/nyxara_evoB",
+      "status": "delivered",
+      "size": [
+        400,
+        400
+      ],
+      "export": "exports/Art/Heroes/nyxara_evoB.png",
+      "source": "source/sheets/nyxara_evoB.png",
+      "master": "source/masters/Heroes/nyxara_evoB@2x.png",
+      "generator": "image_generation (built-in)",
+      "prompt": "source/prompts/nyxara_evoB_v2.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; requires owner review for identity, role and pose quality."
+    },
+    {
+      "id": "Heroes/nyxara_evoB_cast",
+      "status": "delivered",
+      "size": [
+        400,
+        400
+      ],
+      "export": "exports/Art/Heroes/nyxara_evoB_cast.png",
+      "source": "source/sheets/nyxara_evoB_cast.png",
+      "master": "source/masters/Heroes/nyxara_evoB_cast@2x.png",
+      "generator": "image_generation (built-in)",
+      "prompt": "source/prompts/nyxara_evoB_cast_v2.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; requires owner review for identity, role and pose quality."
+    },
+    {
+      "id": "Portraits/nyxara",
+      "status": "delivered",
+      "size": [
+        192,
+        192
+      ],
+      "export": "exports/Art/Portraits/nyxara.png",
+      "source": "source/sheets/nyxara_portrait.png",
+      "master": "source/masters/Portraits/nyxara@2x.png",
+      "generator": "image_generation (built-in)",
+      "prompt": "source/prompts/nyxara_portrait.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; requires owner review for identity, role and pose quality."
+    },
+    {
+      "id": "Heroes/ashara_idle",
+      "status": "delivered",
+      "size": [
+        400,
+        400
+      ],
+      "export": "exports/Art/Heroes/ashara_idle.png",
+      "source": "source/sheets/ashara_idle.png",
+      "master": "source/masters/Heroes/ashara_idle@2x.png",
+      "generator": "image_generation (built-in)",
+      "prompt": "source/prompts/ashara_idle.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; requires owner review for identity, role and pose quality."
+    },
+    {
+      "id": "Heroes/ashara_cast",
+      "status": "delivered",
+      "size": [
+        400,
+        400
+      ],
+      "export": "exports/Art/Heroes/ashara_cast.png",
+      "source": "source/sheets/ashara_cast.png",
+      "master": "source/masters/Heroes/ashara_cast@2x.png",
+      "generator": "image_generation (built-in)",
+      "prompt": "source/prompts/ashara_cast.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; requires owner review for identity, role and pose quality."
+    },
+    {
+      "id": "Heroes/ashara_downed",
+      "status": "delivered",
+      "size": [
+        400,
+        400
+      ],
+      "export": "exports/Art/Heroes/ashara_downed.png",
+      "source": "source/sheets/ashara_downed.png",
+      "master": "source/masters/Heroes/ashara_downed@2x.png",
+      "generator": "image_generation (built-in)",
+      "prompt": "source/prompts/ashara_downed.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; requires owner review for identity, role and pose quality."
+    },
+    {
+      "id": "Heroes/ashara_evoA",
+      "status": "delivered",
+      "size": [
+        400,
+        400
+      ],
+      "export": "exports/Art/Heroes/ashara_evoA.png",
+      "source": "source/sheets/ashara_evoA.png",
+      "master": "source/masters/Heroes/ashara_evoA@2x.png",
+      "generator": "image_generation (built-in)",
+      "prompt": "source/prompts/ashara_evoA.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; requires owner review for identity, role and pose quality."
+    },
+    {
+      "id": "Heroes/ashara_evoA_cast",
+      "status": "delivered",
+      "size": [
+        400,
+        400
+      ],
+      "export": "exports/Art/Heroes/ashara_evoA_cast.png",
+      "source": "source/sheets/ashara_evoA_cast.png",
+      "master": "source/masters/Heroes/ashara_evoA_cast@2x.png",
+      "generator": "image_generation (built-in)",
+      "prompt": "source/prompts/ashara_evoA_cast.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; requires owner review for identity, role and pose quality."
+    },
+    {
+      "id": "Heroes/ashara_evoB",
+      "status": "blocked",
+      "size": [
+        400,
+        400
+      ],
+      "reason": "Production pending; no generated export yet."
+    },
+    {
+      "id": "Heroes/ashara_evoB_cast",
+      "status": "blocked",
+      "size": [
+        400,
+        400
+      ],
+      "reason": "Production pending; no generated export yet."
+    },
+    {
+      "id": "Portraits/ashara",
+      "status": "blocked",
+      "size": [
+        192,
+        192
+      ],
+      "reason": "Production pending; no generated export yet."
+    },
+    {
+      "id": "Heroes/nerissa_idle",
+      "status": "blocked",
+      "size": [
+        400,
+        400
+      ],
+      "reason": "Production pending; no generated export yet."
+    },
+    {
+      "id": "Heroes/nerissa_cast",
+      "status": "blocked",
+      "size": [
+        400,
+        400
+      ],
+      "reason": "Production pending; no generated export yet."
+    },
+    {
+      "id": "Heroes/nerissa_downed",
+      "status": "blocked",
+      "size": [
+        400,
+        400
+      ],
+      "reason": "Production pending; no generated export yet."
+    },
+    {
+      "id": "Heroes/nerissa_evoA",
+      "status": "blocked",
+      "size": [
+        400,
+        400
+      ],
+      "reason": "Production pending; no generated export yet."
+    },
+    {
+      "id": "Heroes/nerissa_evoA_cast",
+      "status": "blocked",
+      "size": [
+        400,
+        400
+      ],
+      "reason": "Production pending; no generated export yet."
+    },
+    {
+      "id": "Heroes/nerissa_evoB",
+      "status": "blocked",
+      "size": [
+        400,
+        400
+      ],
+      "reason": "Production pending; no generated export yet."
+    },
+    {
+      "id": "Heroes/nerissa_evoB_cast",
+      "status": "blocked",
+      "size": [
+        400,
+        400
+      ],
+      "reason": "Production pending; no generated export yet."
+    },
+    {
+      "id": "Portraits/nerissa",
+      "status": "blocked",
+      "size": [
+        192,
+        192
+      ],
+      "reason": "Production pending; no generated export yet."
+    },
+    {
+      "id": "Heroes/voltrix_idle",
+      "status": "blocked",
+      "size": [
+        400,
+        400
+      ],
+      "reason": "Production pending; no generated export yet."
+    },
+    {
+      "id": "Heroes/voltrix_cast",
+      "status": "blocked",
+      "size": [
+        400,
+        400
+      ],
+      "reason": "Production pending; no generated export yet."
+    },
+    {
+      "id": "Heroes/voltrix_downed",
+      "status": "blocked",
+      "size": [
+        400,
+        400
+      ],
+      "reason": "Production pending; no generated export yet."
+    },
+    {
+      "id": "Heroes/voltrix_evoA",
+      "status": "blocked",
+      "size": [
+        400,
+        400
+      ],
+      "reason": "Production pending; no generated export yet."
+    },
+    {
+      "id": "Heroes/voltrix_evoA_cast",
+      "status": "blocked",
+      "size": [
+        400,
+        400
+      ],
+      "reason": "Production pending; no generated export yet."
+    },
+    {
+      "id": "Heroes/voltrix_evoB",
+      "status": "blocked",
+      "size": [
+        400,
+        400
+      ],
+      "reason": "Production pending; no generated export yet."
+    },
+    {
+      "id": "Heroes/voltrix_evoB_cast",
+      "status": "blocked",
+      "size": [
+        400,
+        400
+      ],
+      "reason": "Production pending; no generated export yet."
+    },
+    {
+      "id": "Portraits/voltrix",
+      "status": "blocked",
+      "size": [
+        192,
+        192
+      ],
+      "reason": "Production pending; no generated export yet."
+    },
+    {
+      "id": "Heroes/eirwen_idle",
+      "status": "blocked",
+      "size": [
+        400,
+        400
+      ],
+      "reason": "Production pending; no generated export yet."
+    },
+    {
+      "id": "Heroes/eirwen_cast",
+      "status": "blocked",
+      "size": [
+        400,
+        400
+      ],
+      "reason": "Production pending; no generated export yet."
+    },
+    {
+      "id": "Heroes/eirwen_downed",
+      "status": "blocked",
+      "size": [
+        400,
+        400
+      ],
+      "reason": "Production pending; no generated export yet."
+    },
+    {
+      "id": "Heroes/eirwen_evoA",
+      "status": "blocked",
+      "size": [
+        400,
+        400
+      ],
+      "reason": "Production pending; no generated export yet."
+    },
+    {
+      "id": "Heroes/eirwen_evoA_cast",
+      "status": "blocked",
+      "size": [
+        400,
+        400
+      ],
+      "reason": "Production pending; no generated export yet."
+    },
+    {
+      "id": "Heroes/eirwen_evoB",
+      "status": "blocked",
+      "size": [
+        400,
+        400
+      ],
+      "reason": "Production pending; no generated export yet."
+    },
+    {
+      "id": "Heroes/eirwen_evoB_cast",
+      "status": "blocked",
+      "size": [
+        400,
+        400
+      ],
+      "reason": "Production pending; no generated export yet."
+    },
+    {
+      "id": "Portraits/eirwen",
+      "status": "blocked",
+      "size": [
+        192,
+        192
+      ],
+      "reason": "Production pending; no generated export yet."
+    },
+    {
+      "id": "Heroes/kael_idle",
+      "status": "blocked",
+      "size": [
+        400,
+        400
+      ],
+      "reason": "Production pending; no generated export yet."
+    },
+    {
+      "id": "Heroes/kael_cast",
+      "status": "blocked",
+      "size": [
+        400,
+        400
+      ],
+      "reason": "Production pending; no generated export yet."
+    },
+    {
+      "id": "Heroes/kael_downed",
+      "status": "blocked",
+      "size": [
+        400,
+        400
+      ],
+      "reason": "Production pending; no generated export yet."
+    },
+    {
+      "id": "Heroes/kael_evoA",
+      "status": "blocked",
+      "size": [
+        400,
+        400
+      ],
+      "reason": "Production pending; no generated export yet."
+    },
+    {
+      "id": "Heroes/kael_evoA_cast",
+      "status": "blocked",
+      "size": [
+        400,
+        400
+      ],
+      "reason": "Production pending; no generated export yet."
+    },
+    {
+      "id": "Heroes/kael_evoB",
+      "status": "blocked",
+      "size": [
+        400,
+        400
+      ],
+      "reason": "Production pending; no generated export yet."
+    },
+    {
+      "id": "Heroes/kael_evoB_cast",
+      "status": "blocked",
+      "size": [
+        400,
+        400
+      ],
+      "reason": "Production pending; no generated export yet."
+    },
+    {
+      "id": "Portraits/kael",
+      "status": "blocked",
+      "size": [
+        192,
+        192
+      ],
+      "reason": "Production pending; no generated export yet."
+    },
+    {
+      "id": "Heroes/nyxara_attack",
+      "status": "delivered",
+      "size": [
+        400,
+        400
+      ],
+      "export": "exports/Art/Heroes/nyxara_attack.png",
+      "source": "source/sheets/nyxara_attack.png",
+      "master": "source/masters/Heroes/nyxara_attack@2x.png",
+      "generator": "image_generation (built-in)",
+      "prompt": "source/prompts/nyxara_attack.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; requires owner review for identity, role and pose quality."
+    },
+    {
+      "id": "Heroes/nyxara_evoA_attack",
+      "status": "delivered",
+      "size": [
+        400,
+        400
+      ],
+      "export": "exports/Art/Heroes/nyxara_evoA_attack.png",
+      "source": "source/sheets/nyxara_evoA_attack.png",
+      "master": "source/masters/Heroes/nyxara_evoA_attack@2x.png",
+      "generator": "image_generation (built-in)",
+      "prompt": "source/prompts/nyxara_evoA_attack.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; requires owner review for identity, role and pose quality."
+    },
+    {
+      "id": "Heroes/nyxara_evoB_attack",
+      "status": "delivered",
+      "size": [
+        400,
+        400
+      ],
+      "export": "exports/Art/Heroes/nyxara_evoB_attack.png",
+      "source": "source/sheets/nyxara_evoB_attack.png",
+      "master": "source/masters/Heroes/nyxara_evoB_attack@2x.png",
+      "generator": "image_generation (built-in)",
+      "prompt": "source/prompts/nyxara_evoB_attack.json",
+      "cleanup": "source/scripts/pipeline.py; source/scripts/jobs.json",
+      "selfAssessment": "Generated painterly art; requires owner review for identity, role and pose quality."
+    },
+    {
+      "id": "Heroes/ashara_attack",
+      "status": "blocked",
+      "size": [
+        400,
+        400
+      ],
+      "reason": "Production pending; no generated export yet."
+    },
+    {
+      "id": "Heroes/ashara_evoA_attack",
+      "status": "blocked",
+      "size": [
+        400,
+        400
+      ],
+      "reason": "Production pending; no generated export yet."
+    },
+    {
+      "id": "Heroes/ashara_evoB_attack",
+      "status": "blocked",
+      "size": [
+        400,
+        400
+      ],
+      "reason": "Production pending; no generated export yet."
+    },
+    {
+      "id": "Heroes/nerissa_attack",
+      "status": "blocked",
+      "size": [
+        400,
+        400
+      ],
+      "reason": "Production pending; no generated export yet."
+    },
+    {
+      "id": "Heroes/nerissa_evoA_attack",
+      "status": "blocked",
+      "size": [
+        400,
+        400
+      ],
+      "reason": "Production pending; no generated export yet."
+    },
+    {
+      "id": "Heroes/nerissa_evoB_attack",
+      "status": "blocked",
+      "size": [
+        400,
+        400
+      ],
+      "reason": "Production pending; no generated export yet."
+    },
+    {
+      "id": "Heroes/voltrix_attack",
+      "status": "blocked",
+      "size": [
+        400,
+        400
+      ],
+      "reason": "Production pending; no generated export yet."
+    },
+    {
+      "id": "Heroes/voltrix_evoA_attack",
+      "status": "blocked",
+      "size": [
+        400,
+        400
+      ],
+      "reason": "Production pending; no generated export yet."
+    },
+    {
+      "id": "Heroes/voltrix_evoB_attack",
+      "status": "blocked",
+      "size": [
+        400,
+        400
+      ],
+      "reason": "Production pending; no generated export yet."
+    },
+    {
+      "id": "Heroes/eirwen_attack",
+      "status": "blocked",
+      "size": [
+        400,
+        400
+      ],
+      "reason": "Production pending; no generated export yet."
+    },
+    {
+      "id": "Heroes/eirwen_evoA_attack",
+      "status": "blocked",
+      "size": [
+        400,
+        400
+      ],
+      "reason": "Production pending; no generated export yet."
+    },
+    {
+      "id": "Heroes/eirwen_evoB_attack",
+      "status": "blocked",
+      "size": [
+        400,
+        400
+      ],
+      "reason": "Production pending; no generated export yet."
+    },
+    {
+      "id": "Heroes/kael_attack",
+      "status": "blocked",
+      "size": [
+        400,
+        400
+      ],
+      "reason": "Production pending; no generated export yet."
+    },
+    {
+      "id": "Heroes/kael_evoA_attack",
+      "status": "blocked",
+      "size": [
+        400,
+        400
+      ],
+      "reason": "Production pending; no generated export yet."
+    },
+    {
+      "id": "Heroes/kael_evoB_attack",
+      "status": "blocked",
+      "size": [
+        400,
+        400
+      ],
+      "reason": "Production pending; no generated export yet."
+    }
+  ],
+  "extras": [
+    {
+      "path": "source/references/approved_style_atlas.png",
+      "kind": "repository-owned approved B01/B02 style references, composited over neutral ground"
+    }
+  ],
+  "knownIssues": [
+    "Nyxara current assassin silhouette retains a broad trailing cloak and staff; assess role readability in final review.",
+    "B04 requests attack frames, overriding the older bible.",
+    "Native built-in output observed at1254 square; requested1600 is not guaranteed. No source is upscaled."
+  ],
+  "blockers": [],
+  "characterCheckpoints": {
+    "nyxara": {
+      "delivered": 11,
+      "blocked": 0,
+      "minUnitEdgeLuminance": 0.271101787880583,
+      "review": "Broad trailing cloak weakens compact assassin read; small crescent/staff tips meet source frame edge in action poses. No approval claimed."
+    }
+  }
+}

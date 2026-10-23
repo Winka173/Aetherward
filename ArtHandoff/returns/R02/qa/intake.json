@@ -1,0 +1,116 @@
+{
+ "batch": "R02",
+ "delivered": 21,
+ "requested": 21,
+ "blocking": [],
+ "notes": [],
+ "rows": [
+  {
+   "id": "Vfx/impact_fire",
+   "group": "vfx",
+   "status": "OK"
+  },
+  {
+   "id": "Vfx/impact_ice",
+   "group": "vfx",
+   "status": "OK"
+  },
+  {
+   "id": "Vfx/impact_lightning",
+   "group": "vfx",
+   "status": "OK"
+  },
+  {
+   "id": "Vfx/impact_water",
+   "group": "vfx",
+   "status": "OK"
+  },
+  {
+   "id": "Vfx/projectile_fire",
+   "group": "vfx",
+   "status": "OK"
+  },
+  {
+   "id": "Vfx/projectile_ice",
+   "group": "vfx",
+   "status": "OK"
+  },
+  {
+   "id": "Vfx/projectile_lightning",
+   "group": "vfx",
+   "status": "OK"
+  },
+  {
+   "id": "Vfx/projectile_water",
+   "group": "vfx",
+   "status": "OK"
+  },
+  {
+   "id": "Vfx/fireball",
+   "group": "vfx",
+   "status": "OK"
+  },
+  {
+   "id": "Vfx/slash",
+   "group": "vfx",
+   "status": "OK"
+  },
+  {
+   "id": "Vfx/ring",
+   "group": "vfx",
+   "status": "OK"
+  },
+  {
+   "id": "Vfx/spark",
+   "group": "vfx",
+   "status": "OK"
+  },
+  {
+   "id": "Vfx/telegraph",
+   "group": "vfx",
+   "status": "OK"
+  },
+  {
+   "id": "Vfx/zone_burning_ground",
+   "group": "vfx",
+   "status": "OK"
+  },
+  {
+   "id": "Vfx/zone_thunderstorm",
+   "group": "vfx",
+   "status": "OK"
+  },
+  {
+   "id": "Vfx/zone_healing_rain",
+   "group": "vfx",
+   "status": "OK"
+  },
+  {
+   "id": "Vfx/field_ice_cover",
+   "group": "vfx",
+   "status": "OK"
+  },
+  {
+   "id": "Vfx/burst_fire",
+   "group": "vfx",
+   "status": "OK"
+  },
+  {
+   "id": "Vfx/burst_ice",
+   "group": "vfx",
+   "status": "OK"
+  },
+  {
+   "id": "Vfx/burst_lightning",
+   "group": "vfx",
+   "status": "OK"
+  },
+  {
+   "id": "Vfx/burst_water",
+   "group": "vfx",
+   "status": "OK"
+  }
+ ],
+ "strayWorkingTreeChanges": [],
+ "stage": "ArtHandoff\\returns\\R02\\_work\\stage"
+}

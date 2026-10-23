@@ -83,7 +83,7 @@ namespace Aetherward.Balance
             }
 
             Strategy[] strategies = strategyName == "all" ? Strategy.Archetypes : new[] { Strategy.Find(strategyName) };
-            var runCsv = new StringBuilder("strategy,seed,victory,wave,active_seconds,crystal_hp_pct,heroes,hero_downs,reactions,peak_enemies,peak_rps,gold_earned,gold_spent,relics,top_reaction,defeat_source,stuck_recoveries,ms,team\n");
+            var runCsv = new StringBuilder("strategy,seed,biome,stance,victory,wave,active_seconds,crystal_hp_pct,heroes,hero_downs,reactions,peak_enemies,peak_rps,gold_earned,gold_spent,relics,top_reaction,defeat_source,stuck_recoveries,ms,team\n");
             var waveCsv = new StringBuilder("strategy,seed,wave,duration,crystal_damage,crystal_hp_after,kills,leaks,reactions,hero_downs,gold,peak_enemies,peak_rps\n");
             var summary = new List<(string name, int wins, int n, double avgWave, double avgMinutes, double avgReactions, int peakEnemies, int peakRps, double avgMs, Dictionary<int, int> deaths)>();
 
@@ -98,7 +98,7 @@ namespace Aetherward.Balance
                 {
                     ulong seed = 1000UL + (ulong)r * 7919UL;
                     var sw = Stopwatch.StartNew();
-                    RunController rc = RunController.NewModeRun(db, mode, seed, st.Starters, ascension, Unlocks(db, args), biome, "20261019");
+                    RunController rc = RunController.NewModeRun(db, mode, seed, st.Starters, ascension, Unlocks(db, args), biome == "all" ? db.BiomeList[r % db.BiomeList.Count].Id : biome, "20261019");
                     int fst = Array.IndexOf(args, "--stance");
                     if (fst >= 0) rc.State.Stance = (Aetherward.Sim.Combat.PartyStance)Enum.Parse(typeof(Aetherward.Sim.Combat.PartyStance), args[fst + 1], true);
                     var pilot = new AutoPilot(rc, st);
@@ -122,7 +122,7 @@ namespace Aetherward.Balance
                     int pr = s.WaveLog.Count > 0 ? s.WaveLog.Max(w => w.PeakReactionsPerSecond) : 0;
                     peakEnemies = Math.Max(peakEnemies, pe);
                     peakRps = Math.Max(peakRps, pr);
-                    runCsv.AppendLine(string.Join(",", st.Name, seed, res.Victory ? 1 : 0, wave, F(s.ActiveSeconds), F(res.CrystalHpFraction * 100),
+                    runCsv.AppendLine(string.Join(",", st.Name, seed, rc.Biome.Id, s.Stance, res.Victory ? 1 : 0, wave, F(s.ActiveSeconds), F(res.CrystalHpFraction * 100),
                         s.Heroes.Count, s.Heroes.Sum(h => h.TimesDowned), res.TotalReactions, pe, pr, F(s.GoldEarnedTotal), F(s.GoldSpentTotal),
                         "\"" + string.Join(" ", s.Relics) + "\"", res.StrongestReaction ?? "", res.DefeatSource ?? "", 0, F(sw.Elapsed.TotalMilliseconds),
                         "\"" + string.Join(" ", s.Heroes.Select(h => h.DefId + ":" + h.Level)) + "\""));

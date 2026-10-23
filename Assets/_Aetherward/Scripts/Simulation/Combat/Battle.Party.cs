@@ -8,6 +8,8 @@ namespace Aetherward.Sim.Combat
     /// Party stance chosen before a wave: how far from the Crystal the party fights.
     /// Defensive holds the inner ring, Balanced the intercept ring, Aggressive pushes out onto the approach lanes.
     /// </summary>
+    public enum PartyFormation { Split, BossFocus, Swarm }
+
     public enum PartyStance
     {
         Defensive,
@@ -69,6 +71,7 @@ namespace Aetherward.Sim.Combat
 
         private void UpdatePartyPosts(float dt)
         {
+            UpdateAreaTraits();
             if (!Setup.DynamicParty) return;
             _postTimer -= dt;
             if (_postTimer <= 0f)
@@ -83,6 +86,24 @@ namespace Aetherward.Sim.Combat
             }
         }
 
+        public static int GateLane(ArenaDef arena, int lane)
+        {
+            if (lane < 0 || lane >= arena.Lanes.Count || !arena.Lanes[lane].Gate.HasValue) return lane;
+            Vec2 g = arena.Lanes[lane].Gate.Value;
+            for (int i = 0; i < lane; i++)
+                if (arena.Lanes[i].Gate.HasValue && Vec2.Distance(g, arena.Lanes[i].Gate.Value) < 2f) return i;
+            return lane;
+        }
+
+        public int EffectiveLane(int lane)
+        {
+            lane = Biome.MapLane(lane, Wave.Number);
+            if (Setup.SealedGate < 0 || GateLane(Arena, lane) != Setup.SealedGate) return lane;
+            for (int i = 0; i < Arena.Lanes.Count; i++)
+                if (Biome.MapLane(i, Wave.Number) == i && GateLane(Arena, i) != Setup.SealedGate) return i;
+            return lane;
+        }
+
         private void MeasureLaneThreat()
         {
             int n = Arena.Lanes.Count;
@@ -94,17 +115,17 @@ namespace Aetherward.Sim.Combat
                 if (!e.Alive || e.Lane < 0 || e.Lane >= n) continue;
                 float d = Vec2.Distance(e.Pos, Crystal.Pos);
                 float weight = (e.Def.Threat + (e.Elite ? 3f : 0f) + (e.IsBoss ? 8f : 0f)) * (1f + 8f / (1f + d));
-                _laneThreat[e.Lane] += weight;
+                _laneThreat[GateLane(Arena, e.Lane)] += weight;
             }
             // nothing on the field yet: read the lanes still to spawn in the next few seconds
             bool any = false;
             for (int i = 0; i < n; i++) any |= _laneThreat[i] > 0f;
             if (!any)
             {
-                for (int k = _spawnCursor; k < _schedule.Count && _schedule[k].Time <= Time + 6f; k++)
+                for (int k = _spawnCursor; k < _schedule.Count && (_schedule[k].Time <= Time + 6f || TickCount == 0); k++)
                 {
                     ScheduledSpawn s = _schedule[k];
-                    if (s.Lane >= 0 && s.Lane < n) _laneThreat[s.Lane] += s.Def.Threat + (s.Elite ? 3f : 0f);
+                    if (s.Lane >= 0 && s.Lane < n) _laneThreat[GateLane(Arena, s.Lane)] += s.Def.Threat + (s.Elite ? 3f : 0f);
                 }
             }
             _hotLanes.Clear();
@@ -214,7 +235,7 @@ namespace Aetherward.Sim.Combat
                     {
                         Vec2 toward = hurt != null && hurt != h ? hurt.Pos : c + dir * R;
                         Vec2 d = toward - c;
-                        float r = System.Math.Min(d.Length, R * 0.55f);
+                        float r = System.Math.Min(d.Length, System.Math.Max(Crystal.Radius + 0.8f, R - 2f));
                         h.Post = c + (d.SqrLength > 1e-4f ? d.Normalized : dir) * System.Math.Max(r, Crystal.Radius + 0.8f);
                         break;
                     }
@@ -222,7 +243,7 @@ namespace Aetherward.Sim.Combat
                     {
                         float depth = h.Role == HeroRole.Ranger ? 0.7f : 0.62f;
                         float spread = ((back & 1) == 0 ? 1f : -1f) * (0.9f + 0.5f * (back / 2));
-                        h.Post = c + dir * (R * depth) + side * spread;
+                        h.Post = c + dir * (Arena.IsHaven ? System.Math.Max(2f, R - (h.Role == HeroRole.Ranger ? 1.4f : 1.8f)) : R * depth) + side * spread;
                         back++;
                         break;
                     }
@@ -271,6 +292,7 @@ namespace Aetherward.Sim.Combat
         private int PickSynergyLane(HeroUnit h, int k)
         {
             if (_hotLanes.Count == 0) return h.PostLane;
+            if (Setup.Formation != PartyFormation.Split) return PickLane(h, k);
             int best = -1;
             float bestScore = 0f;
             for (int li = 0; li < _hotLanes.Count; li++)
@@ -302,8 +324,12 @@ namespace Aetherward.Sim.Combat
         {
             if (_hotLanes.Count == 0) return h.PostLane;
             int want = _hotLanes[k % _hotLanes.Count];
+            if (Setup.Formation == PartyFormation.Swarm) want = _hotLanes[0];
+            if (Setup.Formation == PartyFormation.BossFocus)
+                foreach (EnemyUnit e in Enemies)
+                    if (e.Alive && e.IsBoss) { want = GateLane(Arena, e.Lane); break; }
             int cur = h.PostLane;
-            if (cur >= 0 && cur < _laneThreat.Length && cur != want && _laneThreat[cur] > 0f
+            if (!IsFrontline(h.Role) && Setup.Formation == PartyFormation.Split && cur >= 0 && cur < _laneThreat.Length && cur != want && _laneThreat[cur] > 0f
                 && _laneThreat[want] < _laneThreat[cur] * LaneSwitchMargin)
                 want = cur;
             h.PostLane = want;
@@ -350,23 +376,33 @@ namespace Aetherward.Sim.Combat
         /// </summary>
         public const float PillageRate = 0.03f;
         private float _pillage;
+        private readonly Dictionary<(string enemy, int lane), float> _pillageSources = new Dictionary<(string, int), float>();
+        public int Pillagers { get; private set; }
 
         private void UpdatePillage(float dt)
         {
             if (!Setup.DynamicParty || !Arena.IsHaven) return;
             float sum = 0f;
+            Pillagers = 0;
             for (int i = 0; i < Enemies.Count; i++)
             {
                 EnemyUnit e = Enemies[i];
                 if (!e.Alive || e.Lane < 0 || e.Lane >= Arena.Lanes.Count || IsFlying(e)) continue;
                 Vec2? g = Arena.Lanes[e.Lane].Gate;
                 if (g == null) continue;
-                if (Vec2.Distance(e.Pos, Crystal.Pos) < Vec2.Distance(g.Value, Crystal.Pos) - 0.8f) sum += e.CrystalDamage * PillageRate;
+                if (Vec2.Distance(e.Pos, Crystal.Pos) < Vec2.Distance(g.Value, Crystal.Pos) - 0.8f) {
+                    float damage = e.CrystalDamage * PillageRate * e.OutgoingDamageMult;
+                    sum += damage; Pillagers++;
+                    var key = (e.Def.Id, e.Lane);
+                    _pillageSources.TryGetValue(key, out float previous);
+                    _pillageSources[key] = previous + damage * dt;
+                }
             }
             _pillage += sum * dt;
             if (_pillage >= 5f)   // applied in chunks so the Crystal flashes a readable hit, not a constant drizzle
             {
-                DamageCrystal(_pillage, null);
+                foreach (var source in _pillageSources) DamageCrystal(source.Value, null, source.Key.enemy, source.Key.lane);
+                _pillageSources.Clear();
                 _pillage = 0f;
             }
         }
@@ -402,23 +438,7 @@ namespace Aetherward.Sim.Combat
         /// <summary>Haven arenas: keep a point inside the walkable rectangles (keep, gate passages, aprons) so heroes never cross walls.</summary>
         public Vec2 ClampToWalk(Vec2 p, float r)
         {
-            if (!Arena.IsHaven) return p;
-            float best = float.MaxValue;
-            Vec2 bestP = p;
-            for (int i = 0; i < Arena.Walk.Count; i++)
-            {
-                float[] w = Arena.Walk[i];
-                float x = System.Math.Max(w[0] + r, System.Math.Min(w[2] - r, p.X));
-                float y = System.Math.Max(w[1] + r, System.Math.Min(w[3] - r, p.Y));
-                float d = (x - p.X) * (x - p.X) + (y - p.Y) * (y - p.Y);
-                if (d < best)
-                {
-                    best = d;
-                    bestP = new Vec2(x, y);
-                    if (d <= 0f) break;
-                }
-            }
-            return bestP;
+            return Arena.IsHaven ? HavenNavigation.For(Arena).Project(p, r) : p;
         }
 
         private Vec2 ClampToArena(Vec2 p, float r)

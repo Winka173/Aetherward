@@ -1,0 +1,7 @@
+{
+  "name": "magnus_base_alpha",
+  "refs": [
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B03/source/sheets/magnus_base.png"
+  ],
+  "prompt": "Dark Mythic Fantasy, painterly stylized 2.5D; orthographic 38.3-degree elevation, three-quarter front body turned 25 degrees toward screen-right. Key upper-left-front #ffe9d0, rim back-right #9fe8ff, ambient #16233a. Controlled broad brush planes, coloured local-hue dark edges without black outlines.\nEDIT image1 BACKGROUND EXTRACTION ONLY. Preserve EXACT 2x2 panel arrangement and all FOUR existing Magnus figures, face, anatomy, poses, costumes, gauntlets, lighting, scale, colours and portrait framing. REMOVE ALL dark scenery/background/floor/ground shadows from the THREE FULL-BODY panels (top left top right bottom left), replace with genuine transparent alpha. No floor beneath feet. Remove no anatomy. Preserve bottom-right portrait's dark vignette background, and all portrait detail. Do not invent anything, change only backgrounds. Sharp anti-aliased clean cutout edges and natural original cool/warm rim. Return same square image dimensions and panel arrangement, no labels."
+}

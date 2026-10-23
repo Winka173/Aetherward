@@ -4,7 +4,7 @@
   // skill.kind selects behaviour in Battle.Heroes.cs; all other skill keys are tunable params.
   "heroes": [
     {
-      "id": "ignis", "element": "fire", "role": "mage", "targeting": "cluster", "melee": false, "starter": true, "cost": 6,
+      "id": "ignis", "ultimate": {"kind": "meteor", "seconds": 32, "radius": 1.9, "power": 2.4, "hits": 5, "stun": 0, "heal": 0, "shield": 0}, "element": "fire", "role": "mage", "targeting": "cluster", "melee": false, "starter": true, "cost": 6,
       "silhouette": "tall pointed hood, staff with ember orb",
       "stats": { "max_hp": 360, "attack": 30, "defense": 8, "attack_interval": 1.15, "range": 4.6, "elemental_mastery": 40, "threat": 0.8, "crit_chance": 0.08 },
       "basic": { "kind": "projectile", "mult": 1.0, "gauge": 1.0, "speed": 10 },
@@ -13,7 +13,7 @@
       "evolutions": ["ignis_meteor_archmage", "ignis_ember_weaver"]
     },
     {
-      "id": "cinder", "element": "fire", "role": "bruiser", "targeting": "nearest_to_crystal", "melee": true, "starter": true, "cost": 6,
+      "id": "cinder", "ultimate": {"kind": "nova", "seconds": 29, "radius": 2.6, "power": 2.2, "hits": 3, "stun": 0.4, "heal": 0, "shield": 0}, "element": "fire", "role": "bruiser", "targeting": "nearest_to_crystal", "melee": true, "starter": true, "cost": 6,
       "silhouette": "broad shoulders, flaming greatsword",
       "stats": { "max_hp": 560, "attack": 28, "defense": 22, "attack_interval": 0.95, "range": 0.75, "leash_radius": 2.1, "threat": 1.6, "crit_chance": 0.08, "move_speed": 2.8 },
       "basic": { "kind": "melee", "mult": 1.0, "gauge": 1.0 },
@@ -22,7 +22,7 @@
       "evolutions": ["cinder_inferno_duelist", "cinder_ash_guardian"]
     },
     {
-      "id": "marina", "element": "water", "role": "healer", "targeting": "nearest_to_crystal", "melee": false, "starter": true, "cost": 6,
+      "id": "marina", "ultimate": {"kind": "tide", "seconds": 34, "radius": 3.4, "power": 1.3, "hits": 1, "stun": 0, "heal": 0.3, "shield": 0.15}, "element": "water", "role": "healer", "targeting": "nearest_to_crystal", "melee": false, "starter": true, "cost": 6,
       "silhouette": "flowing robes, wave-crest staff",
       "stats": { "max_hp": 340, "attack": 22, "defense": 8, "attack_interval": 1.2, "range": 4.4, "elemental_mastery": 30, "threat": 0.7, "heal_power": 1.0 },
       "basic": { "kind": "projectile", "mult": 1.0, "gauge": 1.0, "speed": 9 },
@@ -31,7 +31,7 @@
       "evolutions": ["marina_tide_saint", "marina_torrent_caller"]
     },
     {
-      "id": "tidal", "element": "water", "role": "controller", "targeting": "nearest_to_crystal", "melee": false, "starter": false, "cost": 7,
+      "id": "tidal", "ultimate": {"kind": "tide", "seconds": 30, "radius": 4.2, "power": 1.6, "hits": 2, "stun": 0.3, "heal": 0, "shield": 0}, "element": "water", "role": "controller", "targeting": "nearest_to_crystal", "melee": false, "starter": false, "cost": 7,
       "silhouette": "hooded, twin water whips",
       "stats": { "max_hp": 420, "attack": 24, "defense": 14, "attack_interval": 1.1, "range": 3.8, "elemental_mastery": 30, "threat": 1.0 },
       "basic": { "kind": "projectile", "mult": 1.0, "gauge": 1.0, "speed": 11 },
@@ -40,7 +40,7 @@
       "evolutions": ["tidal_floodbreaker", "tidal_healing_spring"]
     },
     {
-      "id": "volt", "element": "lightning", "role": "mage", "targeting": "reaction_opportunity", "melee": false, "starter": true, "cost": 6,
+      "id": "volt", "ultimate": {"kind": "chain", "seconds": 32, "radius": 3.8, "power": 2.6, "hits": 4, "stun": 0.6, "heal": 0, "shield": 0}, "element": "lightning", "role": "mage", "targeting": "reaction_opportunity", "melee": false, "starter": true, "cost": 6,
       "silhouette": "spiky hair, floating conductor rods",
       "stats": { "max_hp": 330, "attack": 27, "defense": 8, "attack_interval": 1.0, "range": 4.6, "elemental_mastery": 50, "threat": 0.8, "crit_chance": 0.08 },
       "basic": { "kind": "projectile", "mult": 1.0, "gauge": 1.0, "speed": 14 },
@@ -49,7 +49,7 @@
       "evolutions": ["volt_tempest_lord", "volt_circuit_conductor"]
     },
     {
-      "id": "raiden", "element": "lightning", "role": "assassin", "targeting": "elite", "melee": true, "starter": false, "cost": 7,
+      "id": "raiden", "ultimate": {"kind": "execution", "seconds": 28, "radius": 1.4, "power": 3.2, "hits": 3, "stun": 0.2, "heal": 0, "shield": 0}, "element": "lightning", "role": "assassin", "targeting": "elite", "melee": true, "starter": false, "cost": 7,
       "silhouette": "lean, scarf, twin daggers",
       "stats": { "max_hp": 400, "attack": 34, "defense": 12, "attack_interval": 0.8, "range": 0.8, "leash_radius": 3.0, "threat": 1.0, "crit_chance": 0.2, "crit_multiplier": 1.8, "move_speed": 4.0 },
       "basic": { "kind": "melee", "mult": 1.0, "gauge": 0.8 },
@@ -58,7 +58,7 @@
       "evolutions": ["raiden_stormblade", "raiden_static_executioner"]
     },
     {
-      "id": "freya", "element": "ice", "role": "controller", "targeting": "cluster", "melee": false, "starter": true, "cost": 6,
+      "id": "freya", "ultimate": {"kind": "nova", "seconds": 32, "radius": 3.6, "power": 2.2, "hits": 1, "stun": 1.6, "heal": 0, "shield": 0}, "element": "ice", "role": "controller", "targeting": "cluster", "melee": false, "starter": true, "cost": 6,
       "silhouette": "crystal crown, long cape",
       "stats": { "max_hp": 360, "attack": 24, "defense": 10, "attack_interval": 1.15, "range": 4.4, "elemental_mastery": 40, "threat": 0.8, "status_power": 0.1 },
       "basic": { "kind": "projectile", "mult": 1.0, "gauge": 1.0, "speed": 10 },
@@ -67,7 +67,7 @@
       "evolutions": ["freya_blizzard_witch", "freya_crystalbinder"]
     },
     {
-      "id": "glacius", "element": "ice", "role": "guardian", "targeting": "nearest_to_crystal", "melee": true, "starter": false, "cost": 7,
+      "id": "glacius", "ultimate": {"kind": "aegis", "seconds": 34, "radius": 3, "power": 1.5, "hits": 1, "stun": 1.2, "heal": 0, "shield": 0.3}, "element": "ice", "role": "guardian", "targeting": "nearest_to_crystal", "melee": true, "starter": false, "cost": 7,
       "silhouette": "heavy armour, tower shield of ice",
       "stats": { "max_hp": 720, "attack": 20, "defense": 34, "attack_interval": 1.2, "range": 0.8, "leash_radius": 1.7, "threat": 3.0, "damage_reduction": 0.1, "move_speed": 2.2 },
       "basic": { "kind": "melee", "mult": 1.0, "gauge": 1.0 },
@@ -76,7 +76,7 @@
       "evolutions": ["glacius_permafrost_sentinel", "glacius_shatter_knight"]
     },
     {
-      "id": "zephyr", "element": "wind", "role": "support", "targeting": "cluster", "melee": false, "starter": false, "cost": 7,
+      "id": "zephyr", "ultimate": {"kind": "cyclone", "seconds": 30, "radius": 3.6, "power": 1.9, "hits": 1, "stun": 0, "heal": 0, "shield": 0.15}, "element": "wind", "role": "support", "targeting": "cluster", "melee": false, "starter": false, "cost": 7,
       "silhouette": "feathered mantle, fan",
       "stats": { "max_hp": 340, "attack": 22, "defense": 10, "attack_interval": 1.0, "range": 4.4, "elemental_mastery": 60, "threat": 0.7 },
       "basic": { "kind": "projectile", "mult": 1.0, "gauge": 1.0, "speed": 12 },
@@ -85,7 +85,7 @@
       "evolutions": ["zephyr_cyclone_sage", "zephyr_gale_tactician"]
     },
     {
-      "id": "sylph", "element": "wind", "role": "ranger", "targeting": "nearest_to_crystal", "melee": false, "starter": true, "cost": 6,
+      "id": "sylph", "ultimate": {"kind": "execution", "seconds": 28, "radius": 1.7, "power": 2, "hits": 4, "stun": 0, "heal": 0, "shield": 0}, "element": "wind", "role": "ranger", "targeting": "nearest_to_crystal", "melee": false, "starter": true, "cost": 6,
       "silhouette": "light cloak, longbow",
       "stats": { "max_hp": 330, "attack": 29, "defense": 8, "attack_interval": 0.9, "range": 5.4, "threat": 0.7, "crit_chance": 0.15, "crit_multiplier": 1.7 },
       "basic": { "kind": "projectile", "mult": 1.0, "gauge": 1.0, "speed": 15 },
@@ -94,7 +94,7 @@
       "evolutions": ["sylph_tempest_archer", "sylph_wind_dancer"]
     },
     {
-      "id": "terra", "element": "earth", "role": "guardian", "targeting": "nearest_to_crystal", "melee": true, "starter": true, "cost": 6,
+      "id": "terra", "ultimate": {"kind": "aegis", "seconds": 35, "radius": 4, "power": 2.4, "hits": 1, "stun": 0.8, "heal": 0, "shield": 0.25}, "element": "earth", "role": "guardian", "targeting": "nearest_to_crystal", "melee": true, "starter": true, "cost": 6,
       "silhouette": "stone pauldrons, hammer",
       "stats": { "max_hp": 760, "attack": 19, "defense": 38, "attack_interval": 1.25, "range": 0.8, "leash_radius": 1.7, "threat": 3.2, "damage_reduction": 0.08, "move_speed": 2.2 },
       "basic": { "kind": "melee", "mult": 1.0, "gauge": 1.0 },
@@ -103,7 +103,7 @@
       "evolutions": ["terra_bedrock_warden", "terra_living_fortress"]
     },
     {
-      "id": "magnus", "element": "earth", "role": "bruiser", "targeting": "cluster", "melee": true, "starter": false, "cost": 7,
+      "id": "magnus", "ultimate": {"kind": "nova", "seconds": 30, "radius": 3.2, "power": 2.8, "hits": 2, "stun": 0.8, "heal": 0, "shield": 0}, "element": "earth", "role": "bruiser", "targeting": "cluster", "melee": true, "starter": false, "cost": 7,
       "silhouette": "huge gauntlets, bare arms, belt",
       "stats": { "max_hp": 600, "attack": 30, "defense": 24, "attack_interval": 1.1, "range": 0.8, "leash_radius": 2.0, "threat": 1.6, "crit_chance": 0.06, "move_speed": 2.6 },
       "basic": { "kind": "melee", "mult": 1.0, "gauge": 1.0 },
@@ -114,7 +114,7 @@
 
     // ---------------------------------------------------------------- Expansion Phase 1: Heroes Unbound
     {
-      "id": "seren", "element": "light", "role": "guardian", "targeting": "nearest_to_crystal", "melee": true, "starter": false, "cost": 7,
+      "id": "seren", "ultimate": {"kind": "aegis", "seconds": 34, "radius": 3, "power": 1.6, "hits": 1, "stun": 0, "heal": 0.08, "shield": 0.25}, "element": "light", "role": "guardian", "targeting": "nearest_to_crystal", "melee": true, "starter": false, "cost": 7,
       "silhouette": "sun-disc halo helm, kite shield, tabard",
       "stats": { "max_hp": 700, "attack": 19, "defense": 34, "attack_interval": 1.2, "range": 0.8, "leash_radius": 1.8, "threat": 2.8, "damage_reduction": 0.08, "move_speed": 2.3 },
       "basic": { "kind": "melee", "mult": 1.0, "gauge": 1.0 },
@@ -123,7 +123,7 @@
       "evolutions": ["seren_aegis_of_dawn", "seren_purifier"]
     },
     {
-      "id": "nyxara", "element": "shadow", "role": "assassin", "targeting": "execute", "melee": false, "starter": false, "cost": 7,
+      "id": "nyxara", "ultimate": {"kind": "execution", "seconds": 30, "radius": 1.5, "power": 4, "hits": 2, "stun": 0.3, "heal": 0, "shield": 0}, "element": "shadow", "role": "assassin", "targeting": "execute", "melee": false, "starter": false, "cost": 7,
       "silhouette": "crescent hood, floating oath-chains, tall staff",
       "stats": { "max_hp": 350, "attack": 30, "defense": 9, "attack_interval": 1.05, "range": 4.8, "elemental_mastery": 30, "threat": 0.8, "crit_chance": 0.12 },
       "basic": { "kind": "projectile", "mult": 1.0, "gauge": 1.0, "speed": 11 },
@@ -132,7 +132,7 @@
       "evolutions": ["nyxara_final_verdict", "nyxara_covenant"]
     },
     {
-      "id": "ashara", "element": "fire", "role": "bruiser", "targeting": "nearest_to_crystal", "melee": true, "starter": false, "cost": 7,
+      "id": "ashara", "ultimate": {"kind": "nova", "seconds": 31, "radius": 2.5, "power": 2.5, "hits": 3, "stun": 0, "heal": 0.12, "shield": 0}, "element": "fire", "role": "bruiser", "targeting": "nearest_to_crystal", "melee": true, "starter": false, "cost": 7,
       "silhouette": "phoenix-wing pauldrons, flame plume helm, sabre",
       "stats": { "max_hp": 640, "attack": 26, "defense": 26, "attack_interval": 1.0, "range": 0.8, "leash_radius": 2.0, "threat": 2.0, "move_speed": 2.6, "crit_chance": 0.06 },
       "basic": { "kind": "melee", "mult": 1.0, "gauge": 1.0 },
@@ -141,7 +141,7 @@
       "evolutions": ["ashara_vengeance_flames", "ashara_rebirth_ward"]
     },
     {
-      "id": "nerissa", "element": "water", "role": "support", "targeting": "cluster", "melee": false, "starter": false, "cost": 7,
+      "id": "nerissa", "ultimate": {"kind": "tide", "seconds": 33, "radius": 3.8, "power": 1.1, "hits": 1, "stun": 0, "heal": 0.4, "shield": 0.1}, "element": "water", "role": "support", "targeting": "cluster", "melee": false, "starter": false, "cost": 7,
       "silhouette": "pearl circlet, oracle veil, conch staff",
       "stats": { "max_hp": 340, "attack": 21, "defense": 9, "attack_interval": 1.15, "range": 4.5, "elemental_mastery": 50, "threat": 0.7, "heal_power": 1.0 },
       "basic": { "kind": "projectile", "mult": 1.0, "gauge": 1.0, "speed": 9 },
@@ -150,7 +150,7 @@
       "evolutions": ["nerissa_pure_healer", "nerissa_catalyst_conductor"]
     },
     {
-      "id": "voltrix", "element": "lightning", "role": "mage", "targeting": "cluster", "melee": false, "starter": false, "cost": 7,
+      "id": "voltrix", "ultimate": {"kind": "chain", "seconds": 34, "radius": 4.2, "power": 2, "hits": 6, "stun": 0.4, "heal": 0, "shield": 0}, "element": "lightning", "role": "mage", "targeting": "cluster", "melee": false, "starter": false, "cost": 7,
       "silhouette": "goggles, toolbelt, backpack coil, wrench-staff",
       "stats": { "max_hp": 330, "attack": 25, "defense": 9, "attack_interval": 1.05, "range": 4.4, "elemental_mastery": 40, "threat": 0.7 },
       "basic": { "kind": "projectile", "mult": 1.0, "gauge": 1.0, "speed": 13 },
@@ -159,7 +159,7 @@
       "evolutions": ["voltrix_electric_network", "voltrix_ally_charger"]
     },
     {
-      "id": "eirwen", "element": "ice", "role": "guardian", "targeting": "nearest_to_crystal", "melee": true, "starter": false, "cost": 7,
+      "id": "eirwen", "ultimate": {"kind": "aegis", "seconds": 33, "radius": 3.4, "power": 1.8, "hits": 1, "stun": 1, "heal": 0, "shield": 0.32}, "element": "ice", "role": "guardian", "targeting": "nearest_to_crystal", "melee": true, "starter": false, "cost": 7,
       "silhouette": "winged frost helm, crystal greatshield, mace",
       "stats": { "max_hp": 700, "attack": 18, "defense": 32, "attack_interval": 1.2, "range": 0.8, "leash_radius": 1.7, "threat": 2.6, "damage_reduction": 0.06, "move_speed": 2.2 },
       "basic": { "kind": "melee", "mult": 1.0, "gauge": 1.0 },
@@ -168,7 +168,7 @@
       "evolutions": ["eirwen_ice_bulwark", "eirwen_shatter_counter"]
     },
     {
-      "id": "kael", "element": "wind", "role": "assassin", "targeting": "cluster", "melee": true, "starter": false, "cost": 7,
+      "id": "kael", "ultimate": {"kind": "execution", "seconds": 27, "radius": 1.8, "power": 2.8, "hits": 3, "stun": 0, "heal": 0, "shield": 0}, "element": "wind", "role": "assassin", "targeting": "cluster", "melee": true, "starter": false, "cost": 7,
       "silhouette": "flowing sash, twin war-fans, bare feet",
       "stats": { "max_hp": 420, "attack": 31, "defense": 12, "attack_interval": 0.85, "range": 0.8, "leash_radius": 3.2, "threat": 1.0, "crit_chance": 0.15, "crit_multiplier": 1.7, "move_speed": 4.2 },
       "basic": { "kind": "melee", "mult": 1.0, "gauge": 0.8 },
@@ -177,7 +177,7 @@
       "evolutions": ["kael_precision_assassin", "kael_storm_shepherd"]
     },
     {
-      "id": "borun", "element": "earth", "role": "guardian", "targeting": "nearest_to_crystal", "melee": false, "starter": false, "cost": 7,
+      "id": "borun", "ultimate": {"kind": "aegis", "seconds": 35, "radius": 3.8, "power": 2, "hits": 2, "stun": 0.6, "heal": 0, "shield": 0.2}, "element": "earth", "role": "guardian", "targeting": "nearest_to_crystal", "melee": false, "starter": false, "cost": 7,
       "silhouette": "stocky, mason apron, square stone gauntlet, plans tube",
       "stats": { "max_hp": 560, "attack": 26, "defense": 28, "attack_interval": 1.1, "range": 3.4, "threat": 1.6, "move_speed": 2.2 },
       "basic": { "kind": "projectile", "mult": 1.0, "gauge": 1.0, "speed": 9 },
@@ -186,7 +186,7 @@
       "evolutions": ["borun_fortifier", "borun_spike_mason"]
     },
     {
-      "id": "liora", "element": "nature", "role": "controller", "targeting": "cluster", "melee": false, "starter": false, "cost": 7,
+      "id": "liora", "ultimate": {"kind": "cyclone", "seconds": 32, "radius": 3.8, "power": 1.6, "hits": 2, "stun": 0.5, "heal": 0.08, "shield": 0}, "element": "nature", "role": "controller", "targeting": "cluster", "melee": false, "starter": false, "cost": 7,
       "silhouette": "leaf-crowned druid, gnarled staff with blossoms, moss cloak",
       "stats": { "max_hp": 430, "attack": 27, "defense": 12, "attack_interval": 1.1, "range": 4.2, "threat": 1.0, "move_speed": 2.4 },
       "basic": { "kind": "projectile", "mult": 1.0, "gauge": 1.0, "speed": 9 },
@@ -195,7 +195,7 @@
       "evolutions": ["liora_wildwood", "liora_spore_garden"]
     },
     {
-      "id": "thalen", "element": "nature", "role": "guardian", "targeting": "nearest_to_crystal", "melee": true, "starter": false, "cost": 7,
+      "id": "thalen", "ultimate": {"kind": "aegis", "seconds": 34, "radius": 3.2, "power": 1.8, "hits": 2, "stun": 0.7, "heal": 0, "shield": 0.25}, "element": "nature", "role": "guardian", "targeting": "nearest_to_crystal", "melee": true, "starter": false, "cost": 7,
       "silhouette": "bark-armoured treant knight, thorn shield, antler helm",
       "stats": { "max_hp": 760, "attack": 22, "defense": 34, "attack_interval": 1.25, "range": 0.8, "leash_radius": 1.7, "threat": 2.8, "move_speed": 2.0 },
       "basic": { "kind": "melee", "mult": 1.0, "gauge": 1.0 },
@@ -204,7 +204,7 @@
       "evolutions": ["thalen_bramble_fortress", "thalen_overgrowth_charge"]
     },
     {
-      "id": "vesper", "element": "poison", "role": "controller", "targeting": "cluster", "melee": false, "starter": false, "cost": 7,
+      "id": "vesper", "ultimate": {"kind": "nova", "seconds": 30, "radius": 3.5, "power": 1.4, "hits": 4, "stun": 0, "heal": 0, "shield": 0}, "element": "poison", "role": "controller", "targeting": "cluster", "melee": false, "starter": false, "cost": 7,
       "silhouette": "goggled alchemist, bandolier of glowing flasks, long coat",
       "stats": { "max_hp": 400, "attack": 28, "defense": 10, "attack_interval": 1.05, "range": 4.0, "threat": 0.9, "move_speed": 2.4 },
       "basic": { "kind": "projectile", "mult": 1.0, "gauge": 1.0, "speed": 8 },
@@ -214,7 +214,7 @@
       "evolutions": ["vesper_volatile_mixture", "vesper_lingering_miasma"]
     },
     {
-      "id": "sable", "element": "poison", "role": "support", "targeting": "cluster", "melee": false, "starter": false, "cost": 7,
+      "id": "sable", "ultimate": {"kind": "nova", "seconds": 34, "radius": 3, "power": 1.4, "hits": 1, "stun": 0, "heal": 0.3, "shield": 0.12}, "element": "poison", "role": "support", "targeting": "cluster", "melee": false, "starter": false, "cost": 7,
       "silhouette": "plague doctor mask, raven-feather mantle, censer of green smoke",
       "stats": { "max_hp": 470, "attack": 22, "defense": 14, "attack_interval": 1.15, "range": 4.0, "threat": 1.1, "heal_power": 1.1, "move_speed": 2.4 },
       "basic": { "kind": "projectile", "mult": 1.0, "gauge": 1.0, "speed": 8 },
@@ -224,7 +224,7 @@
       "evolutions": ["sable_pandemic", "sable_remedy"]
     },
     {
-      "id": "caelis", "element": "arcane", "role": "mage", "targeting": "cluster", "melee": false, "starter": false, "cost": 7,
+      "id": "caelis", "ultimate": {"kind": "meteor", "seconds": 32, "radius": 2, "power": 1.8, "hits": 5, "stun": 0, "heal": 0, "shield": 0}, "element": "arcane", "role": "mage", "targeting": "cluster", "melee": false, "starter": false, "cost": 7,
       "silhouette": "floating rune-book, layered violet robes, mirrored circlet",
       "stats": { "max_hp": 400, "attack": 30, "defense": 10, "attack_interval": 1.1, "range": 4.4, "threat": 0.9, "move_speed": 2.4 },
       "basic": { "kind": "projectile", "mult": 1.0, "gauge": 1.0, "speed": 10 },
@@ -233,7 +233,7 @@
       "evolutions": ["caelis_mirror_savant", "caelis_arcane_barrage"]
     },
     {
-      "id": "oriane", "element": "arcane", "role": "support", "targeting": "cluster", "melee": false, "starter": false, "cost": 7,
+      "id": "oriane", "ultimate": {"kind": "nova", "seconds": 31, "radius": 4, "power": 1.5, "hits": 2, "stun": 0, "heal": 0, "shield": 0.2}, "element": "arcane", "role": "support", "targeting": "cluster", "melee": false, "starter": false, "cost": 7,
       "silhouette": "conductor's baton, orbiting rune rings, tailcoat with glyphs",
       "stats": { "max_hp": 440, "attack": 24, "defense": 13, "attack_interval": 1.15, "range": 4.2, "threat": 1.0, "elemental_mastery": 40, "move_speed": 2.4 },
       "basic": { "kind": "projectile", "mult": 1.0, "gauge": 1.2, "speed": 9 },
@@ -242,7 +242,7 @@
       "evolutions": ["oriane_grand_conductor", "oriane_sigil_warden"]
     },
     {
-      "id": "zerith", "element": "void", "role": "controller", "targeting": "cluster", "melee": false, "starter": false, "cost": 7,
+      "id": "zerith", "ultimate": {"kind": "cyclone", "seconds": 35, "radius": 4.2, "power": 2.8, "hits": 1, "stun": 0.6, "heal": 0, "shield": 0}, "element": "void", "role": "controller", "targeting": "cluster", "melee": false, "starter": false, "cost": 7,
       "silhouette": "hooded rift-walker, black-star gauntlet, cloak full of stars",
       "stats": { "max_hp": 420, "attack": 27, "defense": 12, "attack_interval": 1.15, "range": 4.0, "threat": 1.0, "move_speed": 2.4 },
       "basic": { "kind": "projectile", "mult": 1.0, "gauge": 1.0, "speed": 8 },
@@ -252,7 +252,7 @@
       "evolutions": ["zerith_singularity_lord", "zerith_rift_walker"]
     },
     {
-      "id": "maelis", "element": "void", "role": "guardian", "targeting": "nearest_to_crystal", "melee": true, "starter": false, "cost": 7,
+      "id": "maelis", "ultimate": {"kind": "aegis", "seconds": 34, "radius": 3.4, "power": 2, "hits": 1, "stun": 0.5, "heal": 0, "shield": 0.3}, "element": "void", "role": "guardian", "targeting": "nearest_to_crystal", "melee": true, "starter": false, "cost": 7,
       "silhouette": "obsidian full plate, portal-shaped tower shield, void halo",
       "stats": { "max_hp": 740, "attack": 19, "defense": 32, "attack_interval": 1.25, "range": 0.8, "leash_radius": 1.7, "threat": 2.6, "move_speed": 2.0 },
       "basic": { "kind": "melee", "mult": 1.0, "gauge": 1.0 },
@@ -262,7 +262,7 @@
       "evolutions": ["maelis_null_bastion", "maelis_portal_keeper"]
     },
     {
-      "id": "solenne", "element": "fire", "role": "mage", "targeting": "cluster", "melee": false, "starter": false, "cost": 7,
+      "id": "solenne", "ultimate": {"kind": "meteor", "seconds": 34, "radius": 2.2, "power": 2, "hits": 4, "stun": 0, "heal": 0, "shield": 0}, "element": "fire", "role": "mage", "targeting": "cluster", "melee": false, "starter": false, "cost": 7,
       "silhouette": "scribe with a burning quill, scroll belt, ink-stained sleeves",
       "stats": { "max_hp": 390, "attack": 29, "defense": 10, "attack_interval": 1.05, "range": 4.2, "threat": 0.9, "move_speed": 2.4 },
       "basic": { "kind": "projectile", "mult": 1.0, "gauge": 1.0, "speed": 10 },
@@ -271,7 +271,7 @@
       "evolutions": ["solenne_inferno_script", "solenne_kindling_scribe"]
     },
     {
-      "id": "mirel", "element": "water", "role": "controller", "targeting": "nearest_to_crystal", "melee": false, "starter": false, "cost": 7,
+      "id": "mirel", "ultimate": {"kind": "tide", "seconds": 31, "radius": 3.8, "power": 1.5, "hits": 3, "stun": 0, "heal": 0, "shield": 0}, "element": "water", "role": "controller", "targeting": "nearest_to_crystal", "melee": false, "starter": false, "cost": 7,
       "silhouette": "river priestess, shell crown, flowing water ribbons",
       "stats": { "max_hp": 430, "attack": 28, "defense": 12, "attack_interval": 1.05, "range": 4.0, "threat": 1.0, "move_speed": 2.4 },
       "basic": { "kind": "projectile", "mult": 1.0, "gauge": 1.0, "speed": 9 },
@@ -281,7 +281,7 @@
       "evolutions": ["mirel_flood_warden", "mirel_healing_streams"]
     },
     {
-      "id": "veyra", "element": "lightning", "role": "ranger", "targeting": "elite", "melee": false, "starter": false, "cost": 7,
+      "id": "veyra", "ultimate": {"kind": "execution", "seconds": 30, "radius": 1.3, "power": 3.8, "hits": 2, "stun": 0.4, "heal": 0, "shield": 0}, "element": "lightning", "role": "ranger", "targeting": "elite", "melee": false, "starter": false, "cost": 7,
       "silhouette": "long recurve bow strung with lightning, visor, quiver of copper arrows",
       "stats": { "max_hp": 380, "attack": 31, "defense": 10, "attack_interval": 0.85, "range": 5.0, "threat": 0.9, "crit_chance": 0.1, "move_speed": 2.6 },
       "basic": { "kind": "projectile", "mult": 1.0, "gauge": 0.8, "speed": 13 },
@@ -290,7 +290,7 @@
       "evolutions": ["veyra_boss_hunter", "veyra_split_conductor"]
     },
     {
-      "id": "isolde", "element": "ice", "role": "mage", "targeting": "cluster", "melee": false, "starter": false, "cost": 7,
+      "id": "isolde", "ultimate": {"kind": "nova", "seconds": 33, "radius": 3.2, "power": 2, "hits": 3, "stun": 0.8, "heal": 0, "shield": 0}, "element": "ice", "role": "mage", "targeting": "cluster", "melee": false, "starter": false, "cost": 7,
       "silhouette": "frost lance, crystalline pauldron, braided white hair",
       "stats": { "max_hp": 400, "attack": 29, "defense": 11, "attack_interval": 1.1, "range": 4.2, "threat": 0.9, "move_speed": 2.4 },
       "basic": { "kind": "projectile", "mult": 1.0, "gauge": 1.0, "speed": 10 },
@@ -299,7 +299,7 @@
       "evolutions": ["isolde_shatter_burst", "isolde_glacial_engine"]
     },
     {
-      "id": "aeris", "element": "wind", "role": "support", "targeting": "cluster", "melee": false, "starter": false, "cost": 7,
+      "id": "aeris", "ultimate": {"kind": "cyclone", "seconds": 29, "radius": 3.4, "power": 1.4, "hits": 2, "stun": 0, "heal": 0.1, "shield": 0.15}, "element": "wind", "role": "support", "targeting": "cluster", "melee": false, "starter": false, "cost": 7,
       "silhouette": "oracle with wind-chime staff, floating veil, feathered sandals",
       "stats": { "max_hp": 420, "attack": 24, "defense": 12, "attack_interval": 1.05, "range": 4.2, "threat": 1.0, "move_speed": 2.6 },
       "basic": { "kind": "projectile", "mult": 1.0, "gauge": 1.0, "speed": 10 },
@@ -308,7 +308,7 @@
       "evolutions": ["aeris_zone_weaver", "aeris_gale_curse"]
     },
     {
-      "id": "doran", "element": "earth", "role": "bruiser", "targeting": "nearest_to_crystal", "melee": true, "starter": false, "cost": 7,
+      "id": "doran", "ultimate": {"kind": "nova", "seconds": 31, "radius": 3.5, "power": 3, "hits": 2, "stun": 1, "heal": 0, "shield": 0}, "element": "earth", "role": "bruiser", "targeting": "nearest_to_crystal", "melee": true, "starter": false, "cost": 7,
       "silhouette": "huge granite gauntlets, bare stone-skinned arms, rope belt",
       "stats": { "max_hp": 640, "attack": 26, "defense": 30, "attack_interval": 1.15, "range": 0.8, "leash_radius": 2.2, "threat": 2.0, "move_speed": 2.4 },
       "basic": { "kind": "melee", "mult": 1.0, "gauge": 1.0 },
@@ -317,7 +317,7 @@
       "evolutions": ["doran_juggernaut", "doran_fracture_striker"]
     },
     {
-      "id": "elowen", "element": "light", "role": "support", "targeting": "cluster", "melee": false, "starter": false, "cost": 7,
+      "id": "elowen", "ultimate": {"kind": "aegis", "seconds": 35, "radius": 3.5, "power": 1.2, "hits": 1, "stun": 0, "heal": 0.2, "shield": 0.25}, "element": "light", "role": "support", "targeting": "cluster", "melee": false, "starter": false, "cost": 7,
       "silhouette": "cantor in sun-embroidered robes, golden songbook, radiant hair",
       "stats": { "max_hp": 430, "attack": 24, "defense": 12, "attack_interval": 1.1, "range": 4.4, "threat": 1.0, "heal_power": 1.1, "move_speed": 2.4 },
       "basic": { "kind": "projectile", "mult": 1.0, "gauge": 1.0, "speed": 10 },
@@ -326,7 +326,7 @@
       "evolutions": ["elowen_dawn_choir", "elowen_solar_lance"]
     },
     {
-      "id": "morven", "element": "shadow", "role": "guardian", "targeting": "nearest_to_crystal", "melee": true, "starter": false, "cost": 7,
+      "id": "morven", "ultimate": {"kind": "aegis", "seconds": 33, "radius": 3, "power": 2.4, "hits": 2, "stun": 0.6, "heal": 0, "shield": 0.2}, "element": "shadow", "role": "guardian", "targeting": "nearest_to_crystal", "melee": true, "starter": false, "cost": 7,
       "silhouette": "hooded sentinel in tattered black mail, chained lantern, crescent glaive",
       "stats": { "max_hp": 780, "attack": 19, "defense": 30, "attack_interval": 1.2, "range": 0.9, "leash_radius": 1.8, "threat": 2.8, "move_speed": 2.0 },
       "basic": { "kind": "melee", "mult": 1.0, "gauge": 1.0 },

@@ -1,0 +1,4 @@
+{
+  "name": "shadow",
+  "prompt": "Use case: stylized-concept. Dark Mythic Fantasy, painterly stylized 2.5D; orthographic 38.3-degree elevation, three-quarter front body turned 25 degrees toward screen-right. Key upper-left-front #ffe9d0, rim back-right #9fe8ff, ambient #16233a. Controlled broad brush planes, coloured local-hue dark edges without black outlines. Production transparent sprite, soft contact shadow ellipse pure BLACK RGB with alpha75%centre falling smoothly tozero edges. Ellipse ratio width:height=128:48, no solid ring or object, no colour, no text no surface. Centre horizontally and vertically. Entire fading ellipse inside wide transparent image, no clipping. Designed for ground shadow under separate character.1024x384."
+}

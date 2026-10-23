@@ -1,0 +1,181 @@
+[
+  {
+    "id": "Enemies/grunt_a",
+    "source": "source/sheets/r1_enemies_grunt_a.png",
+    "reference": "source/revision0/Enemies/grunt_a.png",
+    "promptFile": "source/prompts/r1_enemies_grunt_a.json",
+    "changeNote": "R1 D2: strengthened back-right rim and lifted key planes using original frame as reference."
+  },
+  {
+    "id": "Enemies/grunt_b",
+    "source": "source/sheets/r1_enemies_grunt_b.png",
+    "reference": "source/revision0/Enemies/grunt_b.png",
+    "promptFile": "source/prompts/r1_enemies_grunt_b.json",
+    "changeNote": "R1 D2: strengthened back-right rim and lifted key planes using original frame as reference."
+  },
+  {
+    "id": "Enemies/hexcaster_a",
+    "source": "source/sheets/r1v2_enemies_hexcaster_a.png",
+    "reference": "source/revision0/Enemies/hexcaster_a.png",
+    "promptFile": "source/prompts/r1v2_enemies_hexcaster_a.json",
+    "changeNote": "R1 D2: strengthened back-right rim and lifted key planes using original frame as reference."
+  },
+  {
+    "id": "Enemies/hexcaster_b",
+    "source": "source/sheets/r1v2_enemies_hexcaster_b.png",
+    "reference": "source/revision0/Enemies/hexcaster_b.png",
+    "promptFile": "source/prompts/r1v2_enemies_hexcaster_b.json",
+    "changeNote": "R1 D2: strengthened back-right rim and lifted key planes using original frame as reference."
+  },
+  {
+    "id": "Enemies/juggernaut_a",
+    "source": "source/sheets/r1_enemies_juggernaut_a.png",
+    "reference": "source/revision0/Enemies/juggernaut_a.png",
+    "promptFile": "source/prompts/r1_enemies_juggernaut_a.json",
+    "changeNote": "R1 D2: strengthened back-right rim and lifted key planes using original frame as reference."
+  },
+  {
+    "id": "Enemies/juggernaut_b",
+    "source": "source/sheets/r1_enemies_juggernaut_b.png",
+    "reference": "source/revision0/Enemies/juggernaut_b.png",
+    "promptFile": "source/prompts/r1_enemies_juggernaut_b.json",
+    "changeNote": "R1 D2: strengthened back-right rim and lifted key planes using original frame as reference."
+  },
+  {
+    "id": "Enemies/rift_warden_a",
+    "source": "source/sheets/r1_enemies_rift_warden_a.png",
+    "reference": "source/revision0/Enemies/rift_warden_a.png",
+    "promptFile": "source/prompts/r1_enemies_rift_warden_a.json",
+    "changeNote": "R1 D2: strengthened back-right rim and lifted key planes using original frame as reference."
+  },
+  {
+    "id": "Enemies/rift_warden_b",
+    "source": "source/sheets/r1v2_enemies_rift_warden_b.png",
+    "reference": "source/revision0/Enemies/rift_warden_b.png",
+    "promptFile": "source/prompts/r1v2_enemies_rift_warden_b.json",
+    "changeNote": "R1 D2: strengthened back-right rim and lifted key planes using original frame as reference."
+  },
+  {
+    "id": "Heroes/ignis_downed",
+    "source": "source/sheets/r1_heroes_ignis_downed.png",
+    "reference": "source/revision0/Heroes/ignis_downed.png",
+    "promptFile": "source/prompts/r1_heroes_ignis_downed.json",
+    "changeNote": "R1 D2: strengthened back-right rim and lifted key planes using original frame as reference."
+  },
+  {
+    "id": "Heroes/ignis_evoA",
+    "source": "source/sheets/r1_heroes_ignis_evoa.png",
+    "reference": "source/revision0/Heroes/ignis_evoA.png",
+    "promptFile": "source/prompts/r1_heroes_ignis_evoa.json",
+    "changeNote": "R1 D2: strengthened back-right rim and lifted key planes using original frame as reference."
+  },
+  {
+    "id": "Heroes/ignis_idle",
+    "source": "source/sheets/r1v2_heroes_ignis_idle.png",
+    "reference": "source/revision0/Heroes/ignis_idle.png",
+    "promptFile": "source/prompts/r1v2_heroes_ignis_idle.json",
+    "changeNote": "R1 D2: strengthened back-right rim and lifted key planes using original frame as reference."
+  },
+  {
+    "id": "Icons/element_earth",
+    "source": "source/sheets/r1_icons_element_earth.png",
+    "promptFile": "source/prompts/r1_icons_element_earth.json",
+    "changeNote": "R1: generated engraved medallion with the specified symbol."
+  },
+  {
+    "id": "Icons/element_fire",
+    "source": "source/sheets/r1_icons_element_fire.png",
+    "promptFile": "source/prompts/r1_icons_element_fire.json",
+    "changeNote": "R1: generated engraved medallion with the specified symbol."
+  },
+  {
+    "id": "Icons/element_water",
+    "source": "source/sheets/r1_icons_element_water.png",
+    "promptFile": "source/prompts/r1_icons_element_water.json",
+    "changeNote": "R1: generated engraved medallion with the specified symbol."
+  },
+  {
+    "id": "Icons/element_wind",
+    "source": "source/sheets/r1_icons_element_wind.png",
+    "promptFile": "source/prompts/r1_icons_element_wind.json",
+    "changeNote": "R1: generated engraved medallion with the specified symbol."
+  },
+  {
+    "id": "Icons/reaction_firestorm",
+    "source": "source/sheets/r1_icons_reaction_firestorm.png",
+    "promptFile": "source/prompts/r1_icons_reaction_firestorm.json",
+    "changeNote": "R1: generated engraved medallion with the specified symbol."
+  },
+  {
+    "id": "Icons/reaction_vaporize",
+    "source": "source/sheets/r1_icons_reaction_vaporize.png",
+    "promptFile": "source/prompts/r1_icons_reaction_vaporize.json",
+    "changeNote": "R1: generated engraved medallion with the specified symbol."
+  },
+  {
+    "id": "Icons/role_guardian",
+    "source": "source/sheets/r1_icons_role_guardian.png",
+    "promptFile": "source/prompts/r1_icons_role_guardian.json",
+    "changeNote": "R1: generated engraved medallion with the specified symbol."
+  },
+  {
+    "id": "Icons/role_healer",
+    "source": "source/sheets/r1_icons_role_healer.png",
+    "promptFile": "source/prompts/r1_icons_role_healer.json",
+    "changeNote": "R1: generated engraved medallion with the specified symbol."
+  },
+  {
+    "id": "Icons/role_mage",
+    "source": "source/sheets/r1_icons_role_mage.png",
+    "promptFile": "source/prompts/r1_icons_role_mage.json",
+    "changeNote": "R1: generated engraved medallion with the specified symbol."
+  },
+  {
+    "id": "Icons/role_ranger",
+    "source": "source/sheets/r1_icons_role_ranger.png",
+    "promptFile": "source/prompts/r1_icons_role_ranger.json",
+    "changeNote": "R1: generated engraved medallion with the specified symbol."
+  },
+  {
+    "id": "Icons/status_burn",
+    "source": "source/sheets/r1_icons_status_burn.png",
+    "promptFile": "source/prompts/r1_icons_status_burn.json",
+    "changeNote": "R1: generated engraved medallion with the specified symbol."
+  },
+  {
+    "id": "Icons/status_shield",
+    "source": "source/sheets/r1_icons_status_shield.png",
+    "promptFile": "source/prompts/r1_icons_status_shield.json",
+    "changeNote": "R1: generated engraved medallion with the specified symbol."
+  },
+  {
+    "id": "Icons/status_stun",
+    "source": "source/sheets/r1_icons_status_stun.png",
+    "promptFile": "source/prompts/r1_icons_status_stun.json",
+    "changeNote": "R1: generated engraved medallion with the specified symbol."
+  },
+  {
+    "id": "Icons/status_wet",
+    "source": "source/sheets/r1_icons_status_wet.png",
+    "promptFile": "source/prompts/r1_icons_status_wet.json",
+    "changeNote": "R1: generated engraved medallion with the specified symbol."
+  },
+  {
+    "id": "Icons/ui_crystal",
+    "source": "source/sheets/r1_icons_ui_crystal.png",
+    "promptFile": "source/prompts/r1_icons_ui_crystal.json",
+    "changeNote": "R1: generated engraved medallion with the specified symbol."
+  },
+  {
+    "id": "Icons/ui_gold",
+    "source": "source/sheets/r1_icons_ui_gold.png",
+    "promptFile": "source/prompts/r1_icons_ui_gold.json",
+    "changeNote": "R1: generated engraved medallion with the specified symbol."
+  },
+  {
+    "id": "Icons/ui_wave",
+    "source": "source/sheets/r1_icons_ui_wave.png",
+    "promptFile": "source/prompts/r1_icons_ui_wave.json",
+    "changeNote": "R1: generated engraved medallion with the specified symbol."
+  }
+]

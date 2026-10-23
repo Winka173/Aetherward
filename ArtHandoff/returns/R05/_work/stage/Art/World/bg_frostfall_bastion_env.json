@@ -1,0 +1,27 @@
+{
+ "shadowDirScreen": [
+  0.8197,
+  0.5729
+ ],
+ "shadowLengthPerHeight": 0.8947,
+ "braziersFlat": [
+  11.385,
+  6.089,
+  -4.269,
+  4.785,
+  8.538,
+  -5.608,
+  4.269,
+  -4.347
+ ],
+ "aetherCrystalsFlat": [],
+ "edgeColor": [
+  0.3844,
+  0.4311,
+  0.5064
+ ],
+ "source": "ArtCache/EnvToon/frostfall_bastion",
+ "gamma": 1.4031,
+ "viewMeanBefore": 0.5126,
+ "viewMean": 0.4
+}

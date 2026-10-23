@@ -1,0 +1,621 @@
+{
+  "revision": 1,
+  "frames": [
+    {
+      "id": "Enemies/runner_a",
+      "revision": 1,
+      "edgeLuminance": 0.35957901013270377,
+      "footRow": 236,
+      "size": [
+        256,
+        256
+      ],
+      "hasSRGB": true,
+      "masterSize": [
+        512,
+        512
+      ],
+      "redPixelFractionDiagnostic": 0.08212718580129674,
+      "r0SilhouetteIoU": 0.8956879118011613,
+      "nearestOpaqueDefringe": true
+    },
+    {
+      "id": "Enemies/runner_b",
+      "revision": 1,
+      "edgeLuminance": 0.399928326309333,
+      "footRow": 236,
+      "size": [
+        256,
+        256
+      ],
+      "hasSRGB": true,
+      "masterSize": [
+        512,
+        512
+      ],
+      "redPixelFractionDiagnostic": 0.03600900225056264,
+      "r0SilhouetteIoU": 0.9003501521152631,
+      "nearestOpaqueDefringe": true
+    },
+    {
+      "id": "Enemies/swarmling_a",
+      "revision": 1,
+      "edgeLuminance": 0.34314730409576766,
+      "footRow": 236,
+      "size": [
+        256,
+        256
+      ],
+      "hasSRGB": true,
+      "masterSize": [
+        512,
+        512
+      ],
+      "redPixelFractionDiagnostic": 0.08517260894170911,
+      "r0SilhouetteIoU": 0.8324178381901126,
+      "nearestOpaqueDefringe": true
+    },
+    {
+      "id": "Enemies/swarmling_b",
+      "revision": 0,
+      "edgeLuminance": 0.3339059765510012,
+      "footRow": 235,
+      "size": [
+        256,
+        256
+      ],
+      "hasSRGB": true,
+      "masterSize": [
+        512,
+        512
+      ],
+      "redPixelFractionDiagnostic": 0.37326169405815424,
+      "r0SilhouetteIoU": 1.0,
+      "nearestOpaqueDefringe": true
+    },
+    {
+      "id": "Enemies/shieldbearer_a",
+      "revision": 0,
+      "edgeLuminance": 0.27805899391881106,
+      "footRow": 236,
+      "size": [
+        256,
+        256
+      ],
+      "hasSRGB": true,
+      "masterSize": [
+        512,
+        512
+      ],
+      "redPixelFractionDiagnostic": 0.3078746378720042,
+      "r0SilhouetteIoU": 1.0,
+      "nearestOpaqueDefringe": true
+    },
+    {
+      "id": "Enemies/shieldbearer_b",
+      "revision": 0,
+      "edgeLuminance": 0.3203068795474762,
+      "footRow": 236,
+      "size": [
+        256,
+        256
+      ],
+      "hasSRGB": true,
+      "masterSize": [
+        512,
+        512
+      ],
+      "redPixelFractionDiagnostic": 0.30488044546347853,
+      "r0SilhouetteIoU": 1.0,
+      "nearestOpaqueDefringe": true
+    },
+    {
+      "id": "Enemies/sapper_a",
+      "revision": 0,
+      "edgeLuminance": 0.4284550738247106,
+      "footRow": 236,
+      "size": [
+        256,
+        256
+      ],
+      "hasSRGB": true,
+      "masterSize": [
+        512,
+        512
+      ],
+      "redPixelFractionDiagnostic": 0.4157430213464696,
+      "r0SilhouetteIoU": 1.0,
+      "nearestOpaqueDefringe": true
+    },
+    {
+      "id": "Enemies/sapper_b",
+      "revision": 0,
+      "edgeLuminance": 0.3069386134827264,
+      "footRow": 236,
+      "size": [
+        256,
+        256
+      ],
+      "hasSRGB": true,
+      "masterSize": [
+        512,
+        512
+      ],
+      "redPixelFractionDiagnostic": 0.45099453777182313,
+      "r0SilhouetteIoU": 1.0,
+      "nearestOpaqueDefringe": true
+    },
+    {
+      "id": "Enemies/warded_a",
+      "revision": 0,
+      "edgeLuminance": 0.33690075512881823,
+      "footRow": 236,
+      "size": [
+        256,
+        256
+      ],
+      "hasSRGB": true,
+      "masterSize": [
+        512,
+        512
+      ],
+      "redPixelFractionDiagnostic": 0.2756867267771021,
+      "r0SilhouetteIoU": 1.0,
+      "nearestOpaqueDefringe": true
+    },
+    {
+      "id": "Enemies/warded_b",
+      "revision": 0,
+      "edgeLuminance": 0.33334569349284676,
+      "footRow": 236,
+      "size": [
+        256,
+        256
+      ],
+      "hasSRGB": true,
+      "masterSize": [
+        512,
+        512
+      ],
+      "redPixelFractionDiagnostic": 0.28703560968090025,
+      "r0SilhouetteIoU": 1.0,
+      "nearestOpaqueDefringe": true
+    },
+    {
+      "id": "Enemies/summoner_a",
+      "revision": 0,
+      "edgeLuminance": 0.39967972132873125,
+      "footRow": 236,
+      "size": [
+        256,
+        256
+      ],
+      "hasSRGB": true,
+      "masterSize": [
+        512,
+        512
+      ],
+      "redPixelFractionDiagnostic": 0.35516858528603984,
+      "r0SilhouetteIoU": 1.0,
+      "nearestOpaqueDefringe": true
+    },
+    {
+      "id": "Enemies/summoner_b",
+      "revision": 0,
+      "edgeLuminance": 0.28768850739704305,
+      "footRow": 236,
+      "size": [
+        256,
+        256
+      ],
+      "hasSRGB": true,
+      "masterSize": [
+        512,
+        512
+      ],
+      "redPixelFractionDiagnostic": 0.36249029097209773,
+      "r0SilhouetteIoU": 1.0,
+      "nearestOpaqueDefringe": true
+    },
+    {
+      "id": "Enemies/banner_a",
+      "revision": 0,
+      "edgeLuminance": 0.3757897010108391,
+      "footRow": 236,
+      "size": [
+        256,
+        256
+      ],
+      "hasSRGB": true,
+      "masterSize": [
+        512,
+        512
+      ],
+      "redPixelFractionDiagnostic": 0.5824278174479975,
+      "r0SilhouetteIoU": 1.0,
+      "nearestOpaqueDefringe": true
+    },
+    {
+      "id": "Enemies/banner_b",
+      "revision": 0,
+      "edgeLuminance": 0.2787529589626634,
+      "footRow": 236,
+      "size": [
+        256,
+        256
+      ],
+      "hasSRGB": true,
+      "masterSize": [
+        512,
+        512
+      ],
+      "redPixelFractionDiagnostic": 0.6049445518364025,
+      "r0SilhouetteIoU": 1.0,
+      "nearestOpaqueDefringe": true
+    },
+    {
+      "id": "Enemies/mimic_a",
+      "revision": 0,
+      "edgeLuminance": 0.40782743826792656,
+      "footRow": 236,
+      "size": [
+        256,
+        256
+      ],
+      "hasSRGB": true,
+      "masterSize": [
+        512,
+        512
+      ],
+      "redPixelFractionDiagnostic": 0.39208737161868945,
+      "r0SilhouetteIoU": 1.0,
+      "nearestOpaqueDefringe": true
+    },
+    {
+      "id": "Enemies/mimic_b",
+      "revision": 0,
+      "edgeLuminance": 0.3954358065237203,
+      "footRow": 236,
+      "size": [
+        256,
+        256
+      ],
+      "hasSRGB": true,
+      "masterSize": [
+        512,
+        512
+      ],
+      "redPixelFractionDiagnostic": 0.38620595837301047,
+      "r0SilhouetteIoU": 1.0,
+      "nearestOpaqueDefringe": true
+    },
+    {
+      "id": "Enemies/riftling_a",
+      "revision": 0,
+      "edgeLuminance": 0.29518578657965494,
+      "footRow": 236,
+      "size": [
+        256,
+        256
+      ],
+      "hasSRGB": true,
+      "masterSize": [
+        512,
+        512
+      ],
+      "redPixelFractionDiagnostic": 0.5142895659207334,
+      "r0SilhouetteIoU": 1.0,
+      "nearestOpaqueDefringe": true
+    },
+    {
+      "id": "Enemies/riftling_b",
+      "revision": 0,
+      "edgeLuminance": 0.31145670996638863,
+      "footRow": 236,
+      "size": [
+        256,
+        256
+      ],
+      "hasSRGB": true,
+      "masterSize": [
+        512,
+        512
+      ],
+      "redPixelFractionDiagnostic": 0.4916286149162861,
+      "r0SilhouetteIoU": 1.0,
+      "nearestOpaqueDefringe": true
+    },
+    {
+      "id": "Enemies/ravager_a",
+      "revision": 0,
+      "edgeLuminance": 0.2790132519582466,
+      "footRow": 236,
+      "size": [
+        256,
+        256
+      ],
+      "hasSRGB": true,
+      "masterSize": [
+        512,
+        512
+      ],
+      "redPixelFractionDiagnostic": 0.4452257586972613,
+      "r0SilhouetteIoU": 1.0,
+      "nearestOpaqueDefringe": true
+    },
+    {
+      "id": "Enemies/ravager_b",
+      "revision": 0,
+      "edgeLuminance": 0.3025359664386685,
+      "footRow": 236,
+      "size": [
+        256,
+        256
+      ],
+      "hasSRGB": true,
+      "masterSize": [
+        512,
+        512
+      ],
+      "redPixelFractionDiagnostic": 0.43180688033994846,
+      "r0SilhouetteIoU": 1.0,
+      "nearestOpaqueDefringe": true
+    },
+    {
+      "id": "Enemies/runner_attack",
+      "revision": 1,
+      "edgeLuminance": 0.4217233823903702,
+      "footRow": 236,
+      "size": [
+        256,
+        256
+      ],
+      "hasSRGB": true,
+      "masterSize": [
+        512,
+        512
+      ],
+      "redPixelFractionDiagnostic": 0.040697357668210296,
+      "r0SilhouetteIoU": 0.9151329243353783,
+      "nearestOpaqueDefringe": true
+    },
+    {
+      "id": "Enemies/swarmling_attack",
+      "revision": 0,
+      "edgeLuminance": 0.39802759044616,
+      "footRow": 235,
+      "size": [
+        256,
+        256
+      ],
+      "hasSRGB": true,
+      "masterSize": [
+        512,
+        512
+      ],
+      "redPixelFractionDiagnostic": 0.42910929432013767,
+      "r0SilhouetteIoU": 1.0,
+      "nearestOpaqueDefringe": true
+    },
+    {
+      "id": "Enemies/shieldbearer_attack",
+      "revision": 0,
+      "edgeLuminance": 0.29815517452557433,
+      "footRow": 236,
+      "size": [
+        256,
+        256
+      ],
+      "hasSRGB": true,
+      "masterSize": [
+        512,
+        512
+      ],
+      "redPixelFractionDiagnostic": 0.35836939829680303,
+      "r0SilhouetteIoU": 1.0,
+      "nearestOpaqueDefringe": true
+    },
+    {
+      "id": "Enemies/sapper_attack",
+      "revision": 0,
+      "edgeLuminance": 0.28134571645712547,
+      "footRow": 236,
+      "size": [
+        256,
+        256
+      ],
+      "hasSRGB": true,
+      "masterSize": [
+        512,
+        512
+      ],
+      "redPixelFractionDiagnostic": 0.5312537206810335,
+      "r0SilhouetteIoU": 1.0,
+      "nearestOpaqueDefringe": true
+    },
+    {
+      "id": "Enemies/warded_attack",
+      "revision": 0,
+      "edgeLuminance": 0.36138645739502295,
+      "footRow": 236,
+      "size": [
+        256,
+        256
+      ],
+      "hasSRGB": true,
+      "masterSize": [
+        512,
+        512
+      ],
+      "redPixelFractionDiagnostic": 0.2785112000681373,
+      "r0SilhouetteIoU": 1.0,
+      "nearestOpaqueDefringe": true
+    },
+    {
+      "id": "Enemies/summoner_attack",
+      "revision": 0,
+      "edgeLuminance": 0.3442771634083542,
+      "footRow": 236,
+      "size": [
+        256,
+        256
+      ],
+      "hasSRGB": true,
+      "masterSize": [
+        512,
+        512
+      ],
+      "redPixelFractionDiagnostic": 0.39051802829758103,
+      "r0SilhouetteIoU": 1.0,
+      "nearestOpaqueDefringe": true
+    },
+    {
+      "id": "Enemies/banner_attack",
+      "revision": 0,
+      "edgeLuminance": 0.3221536969579068,
+      "footRow": 236,
+      "size": [
+        256,
+        256
+      ],
+      "hasSRGB": true,
+      "masterSize": [
+        512,
+        512
+      ],
+      "redPixelFractionDiagnostic": 0.5412735112166469,
+      "r0SilhouetteIoU": 1.0,
+      "nearestOpaqueDefringe": true
+    },
+    {
+      "id": "Enemies/mimic_attack",
+      "revision": 0,
+      "edgeLuminance": 0.44039197579554884,
+      "footRow": 236,
+      "size": [
+        256,
+        256
+      ],
+      "hasSRGB": true,
+      "masterSize": [
+        512,
+        512
+      ],
+      "redPixelFractionDiagnostic": 0.41979195951644643,
+      "r0SilhouetteIoU": 1.0,
+      "nearestOpaqueDefringe": true
+    },
+    {
+      "id": "Enemies/riftling_attack",
+      "revision": 0,
+      "edgeLuminance": 0.2837166195792659,
+      "footRow": 236,
+      "size": [
+        256,
+        256
+      ],
+      "hasSRGB": true,
+      "masterSize": [
+        512,
+        512
+      ],
+      "redPixelFractionDiagnostic": 0.5347115087935822,
+      "r0SilhouetteIoU": 1.0,
+      "nearestOpaqueDefringe": true
+    },
+    {
+      "id": "Enemies/ravager_attack",
+      "revision": 0,
+      "edgeLuminance": 0.2794653360004152,
+      "footRow": 236,
+      "size": [
+        256,
+        256
+      ],
+      "hasSRGB": true,
+      "masterSize": [
+        512,
+        512
+      ],
+      "redPixelFractionDiagnostic": 0.5102517898017825,
+      "r0SilhouetteIoU": 1.0,
+      "nearestOpaqueDefringe": true
+    },
+    {
+      "id": "Enemies/grunt_attack",
+      "revision": 0,
+      "edgeLuminance": 0.2845014176419922,
+      "footRow": 236,
+      "size": [
+        256,
+        256
+      ],
+      "hasSRGB": true,
+      "masterSize": [
+        512,
+        512
+      ],
+      "redPixelFractionDiagnostic": 0.45991114872011846,
+      "r0SilhouetteIoU": 1.0,
+      "nearestOpaqueDefringe": true
+    },
+    {
+      "id": "Enemies/juggernaut_attack",
+      "revision": 0,
+      "edgeLuminance": 0.32249172484482663,
+      "footRow": 236,
+      "size": [
+        256,
+        256
+      ],
+      "hasSRGB": true,
+      "masterSize": [
+        512,
+        512
+      ],
+      "redPixelFractionDiagnostic": 0.5622879758763664,
+      "r0SilhouetteIoU": 1.0,
+      "nearestOpaqueDefringe": true
+    },
+    {
+      "id": "Enemies/hexcaster_attack",
+      "revision": 0,
+      "edgeLuminance": 0.3485767551236669,
+      "footRow": 236,
+      "size": [
+        256,
+        256
+      ],
+      "hasSRGB": true,
+      "masterSize": [
+        512,
+        512
+      ],
+      "redPixelFractionDiagnostic": 0.3707945597709377,
+      "r0SilhouetteIoU": 1.0,
+      "nearestOpaqueDefringe": true
+    },
+    {
+      "id": "Enemies/storm_harpy_attack",
+      "revision": 0,
+      "edgeLuminance": 0.3721415610531996,
+      "footRow": 208,
+      "size": [
+        256,
+        256
+      ],
+      "hasSRGB": true,
+      "masterSize": [
+        512,
+        512
+      ],
+      "redPixelFractionDiagnostic": 0.19127211238293446,
+      "r0SilhouetteIoU": 1.0,
+      "nearestOpaqueDefringe": true
+    }
+  ],
+  "redDiagnostic": "HSV colour count is a diagnostic, not a material-area or semantic palette measurement; warm reflected light can be included. Palette placement is visually assessed.",
+  "minEdge": 0.27805899391881106,
+  "allRevised": false,
+  "minR0SilhouetteIoU": 0.8324178381901126
+}

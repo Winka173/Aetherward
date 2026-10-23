@@ -1,0 +1,17 @@
+{
+  "id": "Enemies/swarmling_attack",
+  "character": "swarmling",
+  "height": 145,
+  "width": 215,
+  "bottom": 236,
+  "raw": "C:\\Users\\Winka\\.codex\\generated_images\\01a159d8-948e-7791-af53-743787b45395\\exec-2f998d6c-7ab4-40f4-b4fe-0965ef7a4804.png",
+  "prompt": "Dark Mythic Fantasy, painterly stylized 2.5D; orthographic 38.3-degree elevation, three-quarter front body turned 25 degrees toward screen-right. Key upper-left-front #ffe9d0, rim back-right #9fe8ff, ambient #16233a. Controlled broad brush planes, coloured local-hue dark edges without black outlines. EDIT the first image only. Other images are B01 style references. Major pose correction: unmistakable forward LEAP attack, small cracked insect shell lifted, BOTH main front claws reach upward-forward toward screen-right +X at face height, rear legs fold backward beneath shell, one lowest rear claw reaches contact baseline. Keep EXACT insect head with two pin eyes, cracked spiny shell, many legs. Must not reproduce walking spider stance. Torso centred, compact silhouette, strong diagonal action, no detached effects. Keep exact identity, face, costume, materials, prop design and palette. Full character fits within ample transparent margins; screen-right +X facing, 38.3 degree elevation. Transparent background, no shadow, floor, text, projectiles or detached effects. Native high resolution; no black outline. Bright broad key planes, #9fe8ff cool directional rim 2–3 pixels at final export; contour luminance target >=0.33.",
+  "references": [
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B08/source/sheets/swarmling_attack.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Enemies/grunt_a.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Enemies/juggernaut_a.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Enemies/hexcaster_a.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Enemies/storm_harpy_a.png"
+  ],
+  "sourceName": "swarmling_attack_v2"
+}

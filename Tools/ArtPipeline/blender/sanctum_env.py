@@ -57,7 +57,7 @@ if isinstance(BIOME.get("arena"), dict):     # biome arenas are inline in biomes
     arena = BIOME["arena"]
 
 # Same widening as the simulation (ContentDatabase.WorldScale): lanes, spawns, start nodes, hazards and covers.
-WORLD_SCALE = float(arg("--world-scale", "1.3"))
+WORLD_SCALE = float(arg("--world-scale", str(arena.get("scale", 1.3))))
 
 
 def _scale_pts(pts):

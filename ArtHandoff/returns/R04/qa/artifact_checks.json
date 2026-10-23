@@ -1,0 +1,23 @@
+{
+  "batch": "R04",
+  "kind": "standalone artifact checks; not standard intake or approval",
+  "size": [
+    1672,
+    941
+  ],
+  "mode": "RGB",
+  "nativeExportUntouched": true,
+  "meanGammaLuminance": 0.44259310217206793,
+  "previewOnlyResampling": true,
+  "guideOverlay": "Source guide annotations isolated by source-layout difference >5; annotation pixels composited at alpha 128/255. Includes cyan socket. No terrain copied.",
+  "silhouette": "No unit sprites requested; dark-mass threshold sheet is a composition aid, not unit silhouette QA.",
+  "standardIntake": {
+    "status": "blocked",
+    "error": "FileNotFoundError: [Errno 2] No such file or directory: requests/R04/INPUT_MANIFEST.json",
+    "log": "qa/standard_intake.log"
+  },
+  "standardPreview": {
+    "status": "blocked",
+    "log": "qa/standard_preview.log"
+  }
+}

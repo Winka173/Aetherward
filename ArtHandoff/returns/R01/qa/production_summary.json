@@ -1,0 +1,29 @@
+{
+  "counts": {
+    "requestedGameAssets": 47,
+    "deliveredGameAssets": 47,
+    "blockedGameAssets": 0,
+    "requestedConcepts": 2,
+    "deliveredConcepts": 0,
+    "blockedConcepts": 2,
+    "totalRequested": 49,
+    "totalDelivered": 47,
+    "totalBlocked": 2
+  },
+  "intake": {
+    "intake": "qa/intake.json",
+    "blocking": 0,
+    "notes": 0,
+    "strayWorkingTreeChanges": 178,
+    "measurements": "qa/measurements.json",
+    "conceptResolution": "qa/concept_resolution.json",
+    "manualAnchors": [
+      "qa/manual_alignment.json",
+      "qa/manual_enemy_alignment.json",
+      "qa/manual_cast_alignment.json"
+    ]
+  },
+  "maxUnitInk": 0.21827782206547777,
+  "heroWalkMinIoU": 0.5822179513579061,
+  "enemyWalkMinIoU": 0.6341499794906216
+}

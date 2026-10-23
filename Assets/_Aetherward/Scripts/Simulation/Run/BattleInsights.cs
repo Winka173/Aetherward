@@ -37,14 +37,21 @@ namespace Aetherward.Sim.Run
             // 2) Which lane was breached, and whether it was covered at the start of the wave.
             int lane = -1;
             float laneDmg = 0f;
+            var gateDamage = new Dictionary<int, float>();
             foreach (var kv in st.CrystalDamageByLane)
+            {
+                int gate = Battle.GateLane(b.Arena, kv.Key);
+                gateDamage.TryGetValue(gate, out float damage);
+                gateDamage[gate] = damage + kv.Value;
+            }
+            foreach (var kv in gateDamage)
                 if (kv.Value > laneDmg || (Math.Abs(kv.Value - laneDmg) < 1e-3f && kv.Key < lane)) { lane = kv.Key; laneDmg = kv.Value; }
             if (lane >= 0 && total > 0f && laneDmg / total >= 0.5f)
             {
-                SynergyReport cov = SynergyReport.Analyze(b, null, includeDowned: true);
-                int covPct = cov.LaneCoverage.TryGetValue(lane, out float c) ? Pct(c, 1f) : -1;
+                SynergyReport cov = SynergyReport.Analyze(new Battle(b.Setup), null, includeDowned: true);
+                int covPct = (b.Arena.IsHaven ? cov.GateCoverage : cov.LaneCoverage).TryGetValue(lane, out float c) ? Pct(c, 1f) : -1;
                 // Low coverage is direct evidence of a positional gap; high coverage points elsewhere (damage, CC).
-                codes.Add(Join("lane", I(lane), I(Pct(laneDmg, total)), I(covPct), covPct >= 0 && covPct < 35 ? "high" : "low"));
+                codes.Add(Join(b.Arena.IsHaven ? "gate" : "lane", I(lane), I(Pct(laneDmg, total)), I(covPct), covPct >= 0 && covPct < 35 ? "high" : "low"));
             }
 
             // 3) Did the defensive line collapse first?

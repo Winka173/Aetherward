@@ -90,9 +90,19 @@ def main():
     for hz in biome.get("hazards", []):
         for x, y in hz.get("points", []):
             hx, hy = px(x * sc, y * sc)
-            r = hz.get("radius", 1.3) * ppu
+            r = hz.get("radius", 1.3) * sc * ppu
             d.ellipse([hx - r, hy - r * 0.62, hx + r, hy + r * 0.62], outline=(255, 140, 0, 255), width=4)
             d.text((hx + r + 4, hy - 6), "hazard " + hz.get("kind", ""), fill=(255, 160, 40, 255))
+    for cover in biome.get("covers", []):
+        cx_, cy_ = px(cover["pos"][0] * sc, cover["pos"][1] * sc)
+        radius = cover.get("radius", 1.0) * sc * ppu
+        d.ellipse([cx_ - radius, cy_ - radius, cx_ + radius, cy_ + radius], outline=(80, 220, 255, 255), width=4)
+        d.text((cx_ + radius + 4, cy_), "cover", fill=(80, 220, 255, 255))
+    for trait in biome.get("areaTraits", []):
+        tx, ty = px(trait["pos"][0] * sc, trait["pos"][1] * sc)
+        radius = trait.get("radius", 1.5) * sc * ppu
+        d.ellipse([tx - radius, ty - radius, tx + radius, ty + radius], outline=(210, 120, 255, 220), width=3)
+        d.text((tx + radius + 4, ty), trait["trait"], fill=(210, 120, 255, 255))
     g.save(a.out + "_guide.png")
     m.save(a.out + "_lanes_mask.png")
     print("guide:", a.out + "_guide.png", img.size)

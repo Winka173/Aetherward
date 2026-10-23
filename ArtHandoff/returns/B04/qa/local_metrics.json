@@ -1,0 +1,167 @@
+[
+  {
+    "id": "Heroes/ashara_idle",
+    "edgeLuminance": 0.33980252979029446,
+    "bbox": [
+      94,
+      94,
+      337,
+      372
+    ],
+    "footRow": 371,
+    "size": [
+      400,
+      400
+    ]
+  },
+  {
+    "id": "Heroes/nyxara_attack",
+    "edgeLuminance": 0.3308800309293818,
+    "bbox": [
+      55,
+      113,
+      353,
+      373
+    ],
+    "footRow": 372,
+    "size": [
+      400,
+      400
+    ]
+  },
+  {
+    "id": "Heroes/nyxara_cast",
+    "edgeLuminance": 0.3015121740793879,
+    "bbox": [
+      52,
+      93,
+      326,
+      372
+    ],
+    "footRow": 371,
+    "size": [
+      400,
+      400
+    ]
+  },
+  {
+    "id": "Heroes/nyxara_downed",
+    "edgeLuminance": 0.35008677919742864,
+    "bbox": [
+      61,
+      148,
+      301,
+      372
+    ],
+    "footRow": 371,
+    "size": [
+      400,
+      400
+    ]
+  },
+  {
+    "id": "Heroes/nyxara_evoA",
+    "edgeLuminance": 0.2809351806557552,
+    "bbox": [
+      62,
+      104,
+      322,
+      372
+    ],
+    "footRow": 371,
+    "size": [
+      400,
+      400
+    ]
+  },
+  {
+    "id": "Heroes/nyxara_evoA_attack",
+    "edgeLuminance": 0.2811372911603986,
+    "bbox": [
+      47,
+      119,
+      357,
+      372
+    ],
+    "footRow": 371,
+    "size": [
+      400,
+      400
+    ]
+  },
+  {
+    "id": "Heroes/nyxara_evoA_cast",
+    "edgeLuminance": 0.271101787880583,
+    "bbox": [
+      59,
+      98,
+      327,
+      372
+    ],
+    "footRow": 371,
+    "size": [
+      400,
+      400
+    ]
+  },
+  {
+    "id": "Heroes/nyxara_evoB",
+    "edgeLuminance": 0.3645775976326014,
+    "bbox": [
+      63,
+      109,
+      318,
+      372
+    ],
+    "footRow": 371,
+    "size": [
+      400,
+      400
+    ]
+  },
+  {
+    "id": "Heroes/nyxara_evoB_attack",
+    "edgeLuminance": 0.2804699876389629,
+    "bbox": [
+      50,
+      93,
+      357,
+      372
+    ],
+    "footRow": 371,
+    "size": [
+      400,
+      400
+    ]
+  },
+  {
+    "id": "Heroes/nyxara_evoB_cast",
+    "edgeLuminance": 0.3417188865783809,
+    "bbox": [
+      59,
+      106,
+      319,
+      372
+    ],
+    "footRow": 371,
+    "size": [
+      400,
+      400
+    ]
+  },
+  {
+    "id": "Heroes/nyxara_idle",
+    "edgeLuminance": 0.3223235514777597,
+    "bbox": [
+      59,
+      98,
+      320,
+      372
+    ],
+    "footRow": 371,
+    "size": [
+      400,
+      400
+    ]
+  }
+]

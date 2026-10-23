@@ -1,0 +1,13 @@
+{
+  "prompt": "Dark Mythic Fantasy, painterly stylized 2.5D; orthographic 38.3-degree elevation, three-quarter front body turned 25 degrees toward screen-right. Key upper-left-front #ffe9d0, rim back-right #9fe8ff, ambient #16233a. Controlled broad brush planes, coloured local-hue dark edges without black outlines.\nUse case: stylized-concept. Production hero identity sprite, Nyxara the Oathbinder, full adult figure, 5.5–6 heads tall. A compact low assassin ready stance, crescent hood, slim black-and-wine coat, floating dark-silver oath-chains orbiting the body, slim crescent-headed staff, shadow magenta #a3306b accents below 20% area. References 1–7 are approved palette/material/brushwork style only; their transparent hidden RGB fringes are NOT background artwork. Reference 8 clay mannequin controls orthographic camera, facing, body position and scale; adapt limbs for compact assassin stance. Genuine transparent background, character only, no ground, no shadow, no text, no projectile, beam or slash. Light coat planes and directional cool silver/cyan rim 2–3px at 400 export must separate ALL dark silhouette from basalt mean luminance .16; contour mean luminance >=.27. Square native generation >= 1600x1600 if available, no upscaling. On proportional 400 square canvas torso x200, lowest foot row372, head top117–137, all props within x40–360/y82–372. Crisp deliberate painterly materials visible at 1440p game resolution.",
+  "refs": [
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Heroes/ignis_idle.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Heroes/ignis_cast.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Heroes/ignis_evoA.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Heroes/terra_idle.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Heroes/sylph_idle.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Heroes/marina_idle.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B02/exports/Art/Heroes/cinder_idle.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/requests/pose_refs/slim_staff_idle.png"
+  ]
+}

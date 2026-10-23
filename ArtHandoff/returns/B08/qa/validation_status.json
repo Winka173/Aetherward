@@ -1,0 +1,18 @@
+{
+  "intake": {
+    "delivered": 34,
+    "blocking": 0,
+    "notes": 0
+  },
+  "extendedValidator": {
+    "exitCode": 1,
+    "assetsScanned": 833,
+    "blocking": 42,
+    "checks": [
+      "import_settings_missing",
+      "manifest_missing",
+      "meta_missing"
+    ],
+    "reason": "14 new attack sprites have no live Unity metadata, import settings or lead-owned asset manifest entries. Intake does not synthesize these. No .meta or live code/data changes are authorized for this art batch. See source/import_plan.json for lead integration facts."
+  }
+}

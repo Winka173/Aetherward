@@ -1,0 +1,12 @@
+{
+  "batch": "R06",
+  "status": "blocked",
+  "exitCode": 1,
+  "standardIntakePassed": false,
+  "error": "FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R06\\INPUT_MANIFEST.json'",
+  "log": "qa/intake.log",
+  "deliveredAssets": 3,
+  "blockedAssets": 0,
+  "customValidation": "qa/reference_validation.json",
+  "note": "Standard intake could not inspect assets. Custom image checks are not a substitute for intake or lead approval."
+}

@@ -1,0 +1,22 @@
+{
+  "rawSize": [
+    1254,
+    1254
+  ],
+  "masterSize": [
+    512,
+    512
+  ],
+  "bounds": [
+    51,
+    88,
+    183,
+    236
+  ],
+  "height": 149,
+  "width": 133,
+  "footRow": 236,
+  "edgeLuminance": 0.5053193188357942,
+  "torsoX": 128.1,
+  "anchorFraction": 0.58
+}

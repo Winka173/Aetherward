@@ -1,0 +1,2669 @@
+{
+  "batch": "B11",
+  "producer": "Codex",
+  "date": "2026-10-20",
+  "styleLock": {
+    "palette": [
+      "#2a2c31",
+      "#625c55",
+      "#6b2734",
+      "#ff6a2b",
+      "#8fe3ff",
+      "#2b5cff",
+      "#1d1f24"
+    ],
+    "light": "key upper-left-front #ffe9d0, rim back-right #9fe8ff, ambient #16233a",
+    "edge": "Dark local-hue edge, no uniform black outline; cool 1–3 px rim; controlled broad brush planes.",
+    "promptTemplate": "Dark Mythic Fantasy, painterly stylized 2.5D; orthographic 38.3-degree elevation, three-quarter front body turned 25 degrees toward screen-right. Key upper-left-front #ffe9d0, rim back-right #9fe8ff, ambient #16233a. Controlled broad brush planes, coloured local-hue dark edges without black outlines."
+  },
+  "tools": [
+    {
+      "name": "image_gen built-in",
+      "version": "not exposed"
+    },
+    {
+      "name": "Python",
+      "version": "3.11.5 (tags/v3.11.5:cce6ba9, Aug 24 2023, 14:38:34) [MSC v.1936 64 bit (AMD64)]",
+      "packages": [
+        "Pillow",
+        "numpy",
+        "scipy"
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "id": "Enemies/siegebreaker_golem_a",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "export": "exports/Art/Enemies/siegebreaker_golem_a.png",
+      "source": "source/sheets/siegebreaker_golem_a.png",
+      "master": "source/masters/Enemies/siegebreaker_golem_a@2x.png",
+      "generator": "image_gen built-in; version not exposed",
+      "prompt": "source/prompts/siegebreaker_golem_a.json",
+      "cleanup": "python source/scripts/production.py process Enemies/siegebreaker_golem_a source/sheets/siegebreaker_golem_a.png source/prompts/siegebreaker_golem_a.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Stone/iron ram-arm silhouette reads clearly; revised impact has stronger follow-through. Fine cracks compress at 720p.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "rawOpaqueBounds": [
+          32,
+          66,
+          1241,
+          1197
+        ],
+        "scale": 0.7427055702917772,
+        "footRow": 485,
+        "height": 419,
+        "edgeLuminance": 0.3789493347993403,
+        "torsoAnchorTarget": 256,
+        "registeredTorsoX": 256.18,
+        "rawTorsoAnchorX": 630,
+        "registration": "authored torso anchor"
+      },
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.05078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 486,
+      "sha256": {
+        "source": "b70426657fa1c3a11031fb45afc258c1aaa36d455749bbc320ba41ff760f5713",
+        "master": "e446c6a12cc6f6cf74c405cba63e5e8c755806312e5cf966cd46a2e8911002c7",
+        "export": "774e53ef14cbab80b31538f45295eddae6f8b3c45761342a73a2843e7558d0e5",
+        "prompt": "29978cec0dbf320a026d751db88ce47cfbf9f34d0eb370c579e094ba37cedd3a"
+      }
+    },
+    {
+      "id": "Enemies/siegebreaker_golem_b",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "export": "exports/Art/Enemies/siegebreaker_golem_b.png",
+      "source": "source/sheets/siegebreaker_golem_b.png",
+      "master": "source/masters/Enemies/siegebreaker_golem_b@2x.png",
+      "generator": "image_gen built-in; version not exposed",
+      "prompt": "source/prompts/siegebreaker_golem_b.json",
+      "cleanup": "python source/scripts/production.py process Enemies/siegebreaker_golem_b source/sheets/siegebreaker_golem_b.png source/prompts/siegebreaker_golem_b.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Stone/iron ram-arm silhouette reads clearly; revised impact has stronger follow-through. Fine cracks compress at 720p.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "rawOpaqueBounds": [
+          45,
+          63,
+          1253,
+          1207
+        ],
+        "scale": 0.7427055702917772,
+        "footRow": 486,
+        "height": 425,
+        "edgeLuminance": 0.36282804257751106,
+        "torsoAnchorTarget": 256,
+        "registeredTorsoX": 256.07,
+        "rawTorsoAnchorX": 640,
+        "registration": "authored torso anchor"
+      },
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.05078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 486,
+      "sha256": {
+        "source": "26540f16b87ee6adbc9fbecc486892c2331401e702e04664c0fe9b5b974c5667",
+        "master": "625af9c1d0e054070f5eff273e472ee387421caac7d6711601e6fadf02b25d08",
+        "export": "1cbc4ef87365d733a74f659cc9d1571dc5b8a3108982b84e39063cf9ee97e228",
+        "prompt": "4d29bd36912e24100f34d414aaece16c641592e320ab236dd4694cb9b46ec571"
+      }
+    },
+    {
+      "id": "Enemies/ignaroth_a",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "export": "exports/Art/Enemies/ignaroth_a.png",
+      "source": "source/sheets/ignaroth_a.png",
+      "master": "source/masters/Enemies/ignaroth_a@2x.png",
+      "generator": "image_gen built-in; version not exposed",
+      "prompt": "source/prompts/ignaroth_a.json",
+      "cleanup": "python source/scripts/production.py process Enemies/ignaroth_a source/sheets/ignaroth_a.png source/prompts/ignaroth_a.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Magma seams and heavy fists read clearly against basalt. Vent and crust detail is dense at 720p.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "rawOpaqueBounds": [
+          96,
+          41,
+          1204,
+          1205
+        ],
+        "scale": 0.7216494845360825,
+        "footRow": 485,
+        "height": 419,
+        "edgeLuminance": 0.3081368115224837,
+        "torsoAnchorTarget": 256,
+        "registeredTorsoX": 255.76,
+        "rawTorsoAnchorX": 745,
+        "registration": "authored torso anchor"
+      },
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.05078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 486,
+      "sha256": {
+        "source": "23561651be9849f3cd1f22fbdd8e346c32324f7ba34f4c538693f5f7399962ce",
+        "master": "b570738b15c0726d65c3d817629d74972d4db85338c7de20b02f4c13396d3cd1",
+        "export": "0f0d7e702173b64aaba71f5273f442bffb86606ba927014a6b063adb1648190e",
+        "prompt": "c02f9459d0c7b14bb55cce46896bdb90b8229bb557c2c00300d381fa22dfc57d"
+      }
+    },
+    {
+      "id": "Enemies/ignaroth_b",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "export": "exports/Art/Enemies/ignaroth_b.png",
+      "source": "source/sheets/ignaroth_b.png",
+      "master": "source/masters/Enemies/ignaroth_b@2x.png",
+      "generator": "image_gen built-in; version not exposed",
+      "prompt": "source/prompts/ignaroth_b.json",
+      "cleanup": "python source/scripts/production.py process Enemies/ignaroth_b source/sheets/ignaroth_b.png source/prompts/ignaroth_b.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Magma seams and heavy fists read clearly against basalt. Vent and crust detail is dense at 720p.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "rawOpaqueBounds": [
+          59,
+          28,
+          1236,
+          1202
+        ],
+        "scale": 0.7132667617689016,
+        "footRow": 485,
+        "height": 418,
+        "edgeLuminance": 0.3173406204259065,
+        "torsoAnchorTarget": 256,
+        "registeredTorsoX": 258.07,
+        "rawTorsoAnchorX": 760,
+        "registration": "authored torso anchor"
+      },
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.05078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 486,
+      "sha256": {
+        "source": "d17fa86be64efd48e559bd5b1cc78b97f2d53893c80796224ddef70c92386536",
+        "master": "6b9819b96155a9768dd9b256173aea15a2cd9a6aa2d9e7d3042e9806eab5faa3",
+        "export": "65f8ef5135342928292ae5af215e79b151073fec20bb99b73e31d86b324dde6c",
+        "prompt": "d856a189482e8a1de9c37520cdcdf22d716987f09610682ce97d52395fef7946"
+      }
+    },
+    {
+      "id": "Enemies/vaelith_a",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "export": "exports/Art/Enemies/vaelith_a.png",
+      "source": "source/sheets/vaelith_a.png",
+      "master": "source/masters/Enemies/vaelith_a@2x.png",
+      "generator": "image_gen built-in; version not exposed",
+      "prompt": "source/prompts/vaelith_a.json",
+      "cleanup": "python source/scripts/production.py process Enemies/vaelith_a source/sheets/vaelith_a.png source/prompts/vaelith_a.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Copper wings and violet spear distinguish her silhouette. Feather contour and cloth folds vary slightly across poses.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "rawOpaqueBounds": [
+          47,
+          40,
+          1235,
+          1224
+        ],
+        "scale": 0.7094594594594594,
+        "footRow": 485,
+        "height": 419,
+        "edgeLuminance": 0.390181966967951,
+        "torsoAnchorTarget": 256,
+        "registeredTorsoX": 255.84,
+        "rawTorsoAnchorX": 730,
+        "registration": "authored torso anchor"
+      },
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.05078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 486,
+      "sha256": {
+        "source": "60deca300244984860949acf72dade1e3c95969b9b26b50227e8395e53e3047b",
+        "master": "e314a1a126edec055de1bc7f1b6ccf5098d4d944fde01eff2559501310d03f8a",
+        "export": "604ca777fc128753a3ff165398a80c2352ef0c49f7d2970fcc6fb7886bc81021",
+        "prompt": "c751b7e0306cdce134f564d25ee3bf0d63d547e3d8d92f954137bb9087939aaf"
+      }
+    },
+    {
+      "id": "Enemies/vaelith_b",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "export": "exports/Art/Enemies/vaelith_b.png",
+      "source": "source/sheets/vaelith_b.png",
+      "master": "source/masters/Enemies/vaelith_b@2x.png",
+      "generator": "image_gen built-in; version not exposed",
+      "prompt": "source/prompts/vaelith_b.json",
+      "cleanup": "python source/scripts/production.py process Enemies/vaelith_b source/sheets/vaelith_b.png source/prompts/vaelith_b.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Copper wings and violet spear distinguish her silhouette. Feather contour and cloth folds vary slightly across poses.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "rawOpaqueBounds": [
+          36,
+          32,
+          1229,
+          1240
+        ],
+        "scale": 0.6906077348066298,
+        "footRow": 485,
+        "height": 416,
+        "edgeLuminance": 0.38170748959905837,
+        "torsoAnchorTarget": 256,
+        "registeredTorsoX": 258.04,
+        "rawTorsoAnchorX": 760,
+        "registration": "authored torso anchor"
+      },
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.05078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 486,
+      "sha256": {
+        "source": "061acedce151cbfe958937a0f5ff26ef047c2c80b8e075734b0c91a356b4023c",
+        "master": "d84d7e3ee70c262a514782d2c2cb1c820658f06d7eb7bf76d4176c9f65d969f6",
+        "export": "4255c92ae9f4ea562bd23951e085d951bdf6836f65c18d9db9c38f650aef930c",
+        "prompt": "d1df05d7929c1b4b96401cee4076d96b4babb515720fd388fb5a71beeed7ecb9"
+      }
+    },
+    {
+      "id": "Enemies/mirrath_a",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "export": "exports/Art/Enemies/mirrath_a.png",
+      "source": "source/sheets/mirrath_a.png",
+      "master": "source/masters/Enemies/mirrath_a@2x.png",
+      "generator": "image_gen built-in; version not exposed",
+      "prompt": "source/prompts/mirrath_a.json",
+      "cleanup": "python source/scripts/production.py process Enemies/mirrath_a source/sheets/mirrath_a.png source/prompts/mirrath_a.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Mirror halo and asymmetric silver facets remain recognizable; revised attack includes the whole glass focus. Focus contours vary with grip and foreshortening.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "rawOpaqueBounds": [
+          54,
+          21,
+          1157,
+          1224
+        ],
+        "scale": 0.6934812760055479,
+        "footRow": 485,
+        "height": 416,
+        "edgeLuminance": 0.4315204593222534,
+        "torsoAnchorTarget": 256,
+        "registeredTorsoX": 258.04,
+        "rawTorsoAnchorX": 775,
+        "registration": "authored torso anchor"
+      },
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.05078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 486,
+      "sha256": {
+        "source": "148f29d80866712348594a71dd6dd35404d2cecdf781b487743fb5364c10dfde",
+        "master": "71decf6bf9f7264840504df8d901ebdd30afeba3fa06e70a41e11f5547961809",
+        "export": "dce5bb9b179b22ea55581a139468e49cbb26d6de30cb9c2dc5a7547dd02ad82c",
+        "prompt": "308021971acc0e23202237928f429ec9e2783611ee0692e159ca1aaa838c5721"
+      }
+    },
+    {
+      "id": "Enemies/mirrath_b",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "export": "exports/Art/Enemies/mirrath_b.png",
+      "source": "source/sheets/mirrath_b.png",
+      "master": "source/masters/Enemies/mirrath_b@2x.png",
+      "generator": "image_gen built-in; version not exposed",
+      "prompt": "source/prompts/mirrath_b.json",
+      "cleanup": "python source/scripts/production.py process Enemies/mirrath_b source/sheets/mirrath_b.png source/prompts/mirrath_b.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Mirror halo and asymmetric silver facets remain recognizable; revised attack includes the whole glass focus. Focus contours vary with grip and foreshortening.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "rawOpaqueBounds": [
+          40,
+          27,
+          1184,
+          1223
+        ],
+        "scale": 0.6802721088435374,
+        "footRow": 485,
+        "height": 406,
+        "edgeLuminance": 0.4311705574313179,
+        "torsoAnchorTarget": 256,
+        "registeredTorsoX": 258.02,
+        "rawTorsoAnchorX": 775,
+        "registration": "authored torso anchor"
+      },
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.05078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 486,
+      "sha256": {
+        "source": "556049bae4f7379f0ccb7e368013943478ded795b4d2fcdc348095cb192289d5",
+        "master": "79873f1f545f3b67a38798c406fc9f1d114e464d1c40b0003d13e294b36d4e0b",
+        "export": "2921d2514224dd7d519b67d6c41fb93bb5c92c54050cc635f03c0576073187a0",
+        "prompt": "9a996ab3bc15c4af6b9f6b909248965e609f823a22c13e7a7807fb079037324f"
+      }
+    },
+    {
+      "id": "Enemies/aetherion_a",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "export": "exports/Art/Enemies/aetherion_a.png",
+      "source": "source/sheets/aetherion_a_v2.png",
+      "master": "source/masters/Enemies/aetherion_a@2x.png",
+      "generator": "image_gen built-in; version not exposed",
+      "prompt": "source/prompts/aetherion_a_v2.json",
+      "cleanup": "python source/scripts/production.py process Enemies/aetherion_a source/sheets/aetherion_a_v2.png source/prompts/aetherion_a_v2.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Corrected weapon-free crystal identity is maintained in all four poses. Small floating-facet contours vary between key poses.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "rawOpaqueBounds": [
+          74,
+          22,
+          1127,
+          1239
+        ],
+        "scale": 0.6947890818858561,
+        "footRow": 485,
+        "height": 422,
+        "edgeLuminance": 0.3484966332308981,
+        "torsoAnchorTarget": 256,
+        "registeredTorsoX": 256.09,
+        "rawTorsoAnchorX": 670,
+        "registration": "authored torso anchor"
+      },
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.05078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 486,
+      "sha256": {
+        "source": "25032b1c66b86e177db0117e1bbaeb3927faf28d4957c806b3459d6ae854ded9",
+        "master": "913b0dc41da8943354d73a3b6b85455717bcba52957404ca6572ad36cd0773b5",
+        "export": "fed4726b8ffe69e3654c7d1103a394c8a58fd6ce674aa85bdd1084063fb294a4",
+        "prompt": "0899e6c402d0e06754cad8640dbd8ec640e9baded62fb23a74df30ca2032c601"
+      }
+    },
+    {
+      "id": "Enemies/aetherion_b",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "export": "exports/Art/Enemies/aetherion_b.png",
+      "source": "source/sheets/aetherion_b.png",
+      "master": "source/masters/Enemies/aetherion_b@2x.png",
+      "generator": "image_gen built-in; version not exposed",
+      "prompt": "source/prompts/aetherion_b.json",
+      "cleanup": "python source/scripts/production.py process Enemies/aetherion_b source/sheets/aetherion_b.png source/prompts/aetherion_b.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Corrected weapon-free crystal identity is maintained in all four poses. Small floating-facet contours vary between key poses.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "rawOpaqueBounds": [
+          144,
+          52,
+          1144,
+          1213
+        ],
+        "scale": 0.6947890818858561,
+        "footRow": 486,
+        "height": 404,
+        "edgeLuminance": 0.35535684869747514,
+        "torsoAnchorTarget": 256,
+        "registeredTorsoX": 256.17,
+        "rawTorsoAnchorX": 710,
+        "registration": "authored torso anchor"
+      },
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.05078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 486,
+      "sha256": {
+        "source": "75c29b753b3331b4b0ec28d2c6502a628945cd1bee184f2d37663a547af9741b",
+        "master": "c777ee290eb016fc396bac4fd1be2287c5d4a2d71d1f8bef6e034b5c0d55450d",
+        "export": "50cb1a952aff3afdcf21813999e8cd5263d3e6c13fbcbb39ca9fa81b17e3b49a",
+        "prompt": "72e88c93dc16a879ca58d88024dc0a9892b354baca6b7bd7181094dbf6c07edb"
+      }
+    },
+    {
+      "id": "Enemies/thornmother_a",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "export": "exports/Art/Enemies/thornmother_a.png",
+      "source": "source/sheets/thornmother_a.png",
+      "master": "source/masters/Enemies/thornmother_a@2x.png",
+      "generator": "image_gen built-in; version not exposed",
+      "prompt": "source/prompts/thornmother_a.json",
+      "cleanup": "python source/scripts/production.py process Enemies/thornmother_a source/sheets/thornmother_a.png source/prompts/thornmother_a.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Rooted trunk, thorn arms and pale bark separate well from basalt. Blossoms and fine branches soften at 720p.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "rawOpaqueBounds": [
+          10,
+          31,
+          1241,
+          1230
+        ],
+        "scale": 0.684931506849315,
+        "footRow": 485,
+        "height": 410,
+        "edgeLuminance": 0.33319088862735347,
+        "torsoAnchorTarget": 256,
+        "registeredTorsoX": 258.03,
+        "rawTorsoAnchorX": 740,
+        "registration": "authored torso anchor"
+      },
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.05078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 486,
+      "sha256": {
+        "source": "50cd9d25c7270cd18c1ab0340cd37f1e3e5af75ff7de4cbc0fee0b9e265830dd",
+        "master": "8a516a5fa3b863bc7aa12f6a23b2468e801f1a0d7e2c22b330aef032815c7446",
+        "export": "2bb30a28c49fc85f4841dbbde4a5d2c6ea0cf25f935bb4715a3afbd81e7dd0a8",
+        "prompt": "5dae3dea95b95ad4249e114a35dc98db8e5f42ca8a0abe19e989a4da15b584ae"
+      }
+    },
+    {
+      "id": "Enemies/thornmother_b",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "export": "exports/Art/Enemies/thornmother_b.png",
+      "source": "source/sheets/thornmother_b.png",
+      "master": "source/masters/Enemies/thornmother_b@2x.png",
+      "generator": "image_gen built-in; version not exposed",
+      "prompt": "source/prompts/thornmother_b.json",
+      "cleanup": "python source/scripts/production.py process Enemies/thornmother_b source/sheets/thornmother_b.png source/prompts/thornmother_b.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Rooted trunk, thorn arms and pale bark separate well from basalt. Blossoms and fine branches soften at 720p.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "rawOpaqueBounds": [
+          57,
+          29,
+          1247,
+          1239
+        ],
+        "scale": 0.684931506849315,
+        "footRow": 486,
+        "height": 415,
+        "edgeLuminance": 0.349912475738856,
+        "torsoAnchorTarget": 256,
+        "registeredTorsoX": 255.78,
+        "rawTorsoAnchorX": 760,
+        "registration": "authored torso anchor"
+      },
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.05078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 486,
+      "sha256": {
+        "source": "196902d4486f79aa937cadfb7b1801f6c54f2a565520c9a3d83077507d1e4a13",
+        "master": "ac2ad573425ae885d4c1e9bbd434879160c58910b13fdb071e9ed210339d72d2",
+        "export": "823611728729ffc05fc7559be69eb4576d5fa09aba92feaac1dbbc8d3b83af26",
+        "prompt": "6ce72072f084ff2bcbd62c050a4f27142bf359c84d43b5193b2bf66c01bcb089"
+      }
+    },
+    {
+      "id": "Enemies/ironclad_warlord_a",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "export": "exports/Art/Enemies/ironclad_warlord_a.png",
+      "source": "source/sheets/ironclad_warlord_a_v2.png",
+      "master": "source/masters/Enemies/ironclad_warlord_a@2x.png",
+      "generator": "image_gen built-in; version not exposed",
+      "prompt": "source/prompts/ironclad_warlord_a_v2.json",
+      "cleanup": "python source/scripts/production.py process Enemies/ironclad_warlord_a source/sheets/ironclad_warlord_a_v2.png source/prompts/ironclad_warlord_a_v2.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Block siege hammer, riveted bulk and back banner read as a faction apex. Banner folds and rivets vary slightly between poses.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "rawOpaqueBounds": [
+          68,
+          53,
+          1191,
+          1204
+        ],
+        "scale": 0.6967854039965248,
+        "footRow": 485,
+        "height": 400,
+        "edgeLuminance": 0.3399501047867711,
+        "torsoAnchorTarget": 256,
+        "registeredTorsoX": 256.23,
+        "rawTorsoAnchorX": 700,
+        "registration": "authored torso anchor"
+      },
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.05078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 486,
+      "sha256": {
+        "source": "00623bc9b49852635ef110c51080d964898a8c5f09c207862f612f1e03e6b7ea",
+        "master": "30ed19690c178f912345ccb2c9aa602fc783ab9689bfdf845268204343690d65",
+        "export": "e22fbdac6a747d29b379bf048b7d92f2c27b45d64006ed622db57ee7815bef11",
+        "prompt": "da039988a80291580a3725d79e7528a59573860696b1b86c1ed1ecacc53033c8"
+      }
+    },
+    {
+      "id": "Enemies/ironclad_warlord_b",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "export": "exports/Art/Enemies/ironclad_warlord_b.png",
+      "source": "source/sheets/ironclad_warlord_b.png",
+      "master": "source/masters/Enemies/ironclad_warlord_b@2x.png",
+      "generator": "image_gen built-in; version not exposed",
+      "prompt": "source/prompts/ironclad_warlord_b.json",
+      "cleanup": "python source/scripts/production.py process Enemies/ironclad_warlord_b source/sheets/ironclad_warlord_b.png source/prompts/ironclad_warlord_b.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Block siege hammer, riveted bulk and back banner read as a faction apex. Banner folds and rivets vary slightly between poses.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "rawOpaqueBounds": [
+          56,
+          43,
+          1223,
+          1212
+        ],
+        "scale": 0.6967854039965248,
+        "footRow": 486,
+        "height": 408,
+        "edgeLuminance": 0.3298760144751379,
+        "torsoAnchorTarget": 256,
+        "registeredTorsoX": 256.12,
+        "rawTorsoAnchorX": 725,
+        "registration": "authored torso anchor"
+      },
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.05078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 486,
+      "sha256": {
+        "source": "e1abe7b100b9f5368e5e852bafe656e9f8009e07ac251c5e50b6ee419a6b2973",
+        "master": "d2560b271e8a050c30ca7cba9fb3dc6ad11bbbf49172c6639f45a381fc4c0014",
+        "export": "b0f27122e1e8ffd9e7fa069346e6b5d9d24c758d3ec34e994aedb171b38d8f42",
+        "prompt": "e54f6bc41aa6f7041880f10a91f2cf220c3665cc3e269cf425a21c6219333365"
+      }
+    },
+    {
+      "id": "Enemies/ashen_matriarch_a",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "export": "exports/Art/Enemies/ashen_matriarch_a.png",
+      "source": "source/sheets/ashen_matriarch_a.png",
+      "master": "source/masters/Enemies/ashen_matriarch_a@2x.png",
+      "generator": "image_gen built-in; version not exposed",
+      "prompt": "source/prompts/ashen_matriarch_a.json",
+      "cleanup": "python source/scripts/production.py process Enemies/ashen_matriarch_a source/sheets/ashen_matriarch_a.png source/prompts/ashen_matriarch_a.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Cocoon abdomen, long claws and clinging imps give a distinct hunched silhouette. Tiny imps are secondary detail at 720p.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "rawOpaqueBounds": [
+          62,
+          63,
+          1235,
+          1197
+        ],
+        "scale": 0.7407407407407407,
+        "footRow": 485,
+        "height": 419,
+        "edgeLuminance": 0.338708285591948,
+        "torsoAnchorTarget": 256,
+        "registeredTorsoX": 256.11,
+        "rawTorsoAnchorX": 710,
+        "registration": "authored torso anchor"
+      },
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.05078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 486,
+      "sha256": {
+        "source": "2dd89f373fbe9ca8f72266a3d1774c61f0de8384737f1055da472aaa6094cd79",
+        "master": "7b327288bc102b5de40346ded6188a4dabb376d2514d8748df2cd65852626c2a",
+        "export": "891af0a4ca27bab213a5ffcef77809fc26d5aef4fb91176a1b4f731e26b50548",
+        "prompt": "dc6ccf2dc6eaebd86ae62abee9054b646e3d6f4bda4b3ca9b1512b8beae7e723"
+      }
+    },
+    {
+      "id": "Enemies/ashen_matriarch_b",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "export": "exports/Art/Enemies/ashen_matriarch_b.png",
+      "source": "source/sheets/ashen_matriarch_b.png",
+      "master": "source/masters/Enemies/ashen_matriarch_b@2x.png",
+      "generator": "image_gen built-in; version not exposed",
+      "prompt": "source/prompts/ashen_matriarch_b.json",
+      "cleanup": "python source/scripts/production.py process Enemies/ashen_matriarch_b source/sheets/ashen_matriarch_b.png source/prompts/ashen_matriarch_b.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Cocoon abdomen, long claws and clinging imps give a distinct hunched silhouette. Tiny imps are secondary detail at 720p.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "rawOpaqueBounds": [
+          36,
+          76,
+          1253,
+          1199
+        ],
+        "scale": 0.7309941520467836,
+        "footRow": 485,
+        "height": 410,
+        "edgeLuminance": 0.3628333486668163,
+        "torsoAnchorTarget": 256,
+        "registeredTorsoX": 258.1,
+        "rawTorsoAnchorX": 720,
+        "registration": "authored torso anchor"
+      },
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.05078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 486,
+      "sha256": {
+        "source": "8fe1985d9635a05187f0672107f15153d7ad12baeb9137a94a9593c18d2612b5",
+        "master": "4dfb997b657da6d01997e913df0b930f82f2e003f176a2a32927d7e785de0a4c",
+        "export": "8f2335ac4858556b5f48f86f4535c72c310bc594d167423e04a794d61f4e66eb",
+        "prompt": "2d23698bcfde41dfa02fa22ac6c8005fcfcd9a436d0338f4ec0451c10e3186df"
+      }
+    },
+    {
+      "id": "Enemies/nyxhollow_a",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "export": "exports/Art/Enemies/nyxhollow_a.png",
+      "source": "source/sheets/nyxhollow_a.png",
+      "master": "source/masters/Enemies/nyxhollow_a@2x.png",
+      "generator": "image_gen built-in; version not exposed",
+      "prompt": "source/prompts/nyxhollow_a.json",
+      "cleanup": "python source/scripts/production.py process Enemies/nyxhollow_a source/sheets/nyxhollow_a.png source/prompts/nyxhollow_a.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Central maw, eye ring and jointed limbs break the armored-human rhythm. Small star-holes are secondary detail at 720p.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "rawOpaqueBounds": [
+          50,
+          93,
+          1221,
+          1207
+        ],
+        "scale": 0.7407407407407407,
+        "footRow": 485,
+        "height": 412,
+        "edgeLuminance": 0.3574821558364679,
+        "torsoAnchorTarget": 256,
+        "registeredTorsoX": 257.61,
+        "rawTorsoAnchorX": 725,
+        "registration": "authored torso anchor"
+      },
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.05078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 486,
+      "sha256": {
+        "source": "6f28e6c36125853b803095849354e22b84c67d169d0f83d7ddb211a7f241918f",
+        "master": "fbaf2b64f23cbd6dcf66bd4febdfe8ac8797e8c02ca4a17e4eb3eb0beb18c8fc",
+        "export": "9f206c90a266000030f36602a7813c90349dce9a4e75afc2e63c12e5aeb7b05b",
+        "prompt": "6c65d371b8cd478d684e64ec7ea8e62ebad45b6cf0f12a5b96bd11d44d36d433"
+      }
+    },
+    {
+      "id": "Enemies/nyxhollow_b",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "export": "exports/Art/Enemies/nyxhollow_b.png",
+      "source": "source/sheets/nyxhollow_b.png",
+      "master": "source/masters/Enemies/nyxhollow_b@2x.png",
+      "generator": "image_gen built-in; version not exposed",
+      "prompt": "source/prompts/nyxhollow_b.json",
+      "cleanup": "python source/scripts/production.py process Enemies/nyxhollow_b source/sheets/nyxhollow_b.png source/prompts/nyxhollow_b.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Central maw, eye ring and jointed limbs break the armored-human rhythm. Small star-holes are secondary detail at 720p.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "rawOpaqueBounds": [
+          35,
+          90,
+          1246,
+          1211
+        ],
+        "scale": 0.7246376811594203,
+        "footRow": 485,
+        "height": 406,
+        "edgeLuminance": 0.41384987153036745,
+        "torsoAnchorTarget": 256,
+        "registeredTorsoX": 258.09,
+        "rawTorsoAnchorX": 725,
+        "registration": "authored torso anchor"
+      },
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.05078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 486,
+      "sha256": {
+        "source": "466a221789b78445c05fd82a5f2478c296093958491ca6130f063e84fd0e461d",
+        "master": "e99071390adbbbea636301e6c666cc54254284fb32a141fcb3ecf23be772799d",
+        "export": "3ff8bebaae7ca1260ca01e77bb6b47b540ad014a2fb948fc59acd86b8d166538",
+        "prompt": "164ddf7adf07d95b9710f9d3433070ab38d91b5c1c54655b026b581a43d93c38"
+      }
+    },
+    {
+      "id": "Enemies/seraphyne_a",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "export": "exports/Art/Enemies/seraphyne_a.png",
+      "source": "source/sheets/seraphyne_a.png",
+      "master": "source/masters/Enemies/seraphyne_a@2x.png",
+      "generator": "image_gen built-in; version not exposed",
+      "prompt": "source/prompts/seraphyne_a.json",
+      "cleanup": "python source/scripts/production.py process Enemies/seraphyne_a source/sheets/seraphyne_a.png source/prompts/seraphyne_a.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Ice-spire crown, glacier hem and frost sceptre form a regal silhouette. Fine ice cuts soften at 720p.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "rawOpaqueBounds": [
+          51,
+          47,
+          1205,
+          1204
+        ],
+        "scale": 0.7260155574762316,
+        "footRow": 486,
+        "height": 419,
+        "edgeLuminance": 0.6459416795502282,
+        "torsoAnchorTarget": 256,
+        "registeredTorsoX": 256.07,
+        "rawTorsoAnchorX": 730,
+        "registration": "authored torso anchor"
+      },
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.05078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 486,
+      "sha256": {
+        "source": "fe00334952de59aaab5d371a630c2c86d00a5f522300ab797f083f9b906592ec",
+        "master": "16dd0aef953fe9f226933e3796ce37b860446063795e4050f59a3b4d1f20ba07",
+        "export": "9352e5f87f9b361f2d31adfbaf1e1974aa3c0511e93d3b22c164d3bd18f16be6",
+        "prompt": "49b4cff1478bf890dd75d0234f41bd91ad63f03fd6f2087218717a617b90ce3a"
+      }
+    },
+    {
+      "id": "Enemies/seraphyne_b",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "export": "exports/Art/Enemies/seraphyne_b.png",
+      "source": "source/sheets/seraphyne_b.png",
+      "master": "source/masters/Enemies/seraphyne_b@2x.png",
+      "generator": "image_gen built-in; version not exposed",
+      "prompt": "source/prompts/seraphyne_b.json",
+      "cleanup": "python source/scripts/production.py process Enemies/seraphyne_b source/sheets/seraphyne_b.png source/prompts/seraphyne_b.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Ice-spire crown, glacier hem and frost sceptre form a regal silhouette. Fine ice cuts soften at 720p.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "rawOpaqueBounds": [
+          40,
+          41,
+          1235,
+          1221
+        ],
+        "scale": 0.7142857142857143,
+        "footRow": 486,
+        "height": 422,
+        "edgeLuminance": 0.6420839168641769,
+        "torsoAnchorTarget": 256,
+        "registeredTorsoX": 258.07,
+        "rawTorsoAnchorX": 740,
+        "registration": "authored torso anchor"
+      },
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.05078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 486,
+      "sha256": {
+        "source": "659b3421668860a1b779aaec70653e3c98d32eb1f23d062ebc126c8d5769557a",
+        "master": "4061ec3721daa4da3cc34b32d2ebcd21dbd1e9ed9bf95adb8aab5622da661dd0",
+        "export": "0b01059ebe763a2a8e9d2c77456b5a6cabff0d693bf924e346187bd3f3903859",
+        "prompt": "f3c8e885bd1d030a8bb103848061a2e63576c0388cd3fc0a8f4f0f4395c5fa67"
+      }
+    },
+    {
+      "id": "Enemies/gravemaw_a",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "export": "exports/Art/Enemies/gravemaw_a.png",
+      "source": "source/sheets/gravemaw_a.png",
+      "master": "source/masters/Enemies/gravemaw_a@2x.png",
+      "generator": "image_gen built-in; version not exposed",
+      "prompt": "source/prompts/gravemaw_a.json",
+      "cleanup": "python source/scripts/production.py process Enemies/gravemaw_a source/sheets/gravemaw_a.png source/prompts/gravemaw_a.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Chest maw vent and shoulder mortars distinguish the siege titan. Fine plate/rust detail is dense at 720p.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "rawOpaqueBounds": [
+          128,
+          71,
+          1186,
+          1203
+        ],
+        "scale": 0.7420494699646644,
+        "footRow": 486,
+        "height": 420,
+        "edgeLuminance": 0.34572954871691386,
+        "torsoAnchorTarget": 256,
+        "registeredTorsoX": 255.84,
+        "rawTorsoAnchorX": 700,
+        "registration": "authored torso anchor"
+      },
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.05078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 486,
+      "sha256": {
+        "source": "5da99560cc5012125c3836e7ae2b420a3e8505681d632ef1c3ac1223e41da4e8",
+        "master": "5806e6df22de930bb1938f73f7f9172da3660ff93a3325bfde6624ca3cb28597",
+        "export": "5473edae4b87834a77fd4fee0ac7a50aaa632dc8ad00fb37749a91c574e44dba",
+        "prompt": "3471b58b3829beb247587bb699973fe2bc6e3f645b9c48b5d967f25cd5e92cf2"
+      }
+    },
+    {
+      "id": "Enemies/gravemaw_b",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "export": "exports/Art/Enemies/gravemaw_b.png",
+      "source": "source/sheets/gravemaw_b.png",
+      "master": "source/masters/Enemies/gravemaw_b@2x.png",
+      "generator": "image_gen built-in; version not exposed",
+      "prompt": "source/prompts/gravemaw_b.json",
+      "cleanup": "python source/scripts/production.py process Enemies/gravemaw_b source/sheets/gravemaw_b.png source/prompts/gravemaw_b.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Chest maw vent and shoulder mortars distinguish the siege titan. Fine plate/rust detail is dense at 720p.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "rawOpaqueBounds": [
+          156,
+          47,
+          1198,
+          1193
+        ],
+        "scale": 0.7420494699646644,
+        "footRow": 485,
+        "height": 425,
+        "edgeLuminance": 0.4000717836744532,
+        "torsoAnchorTarget": 256,
+        "registeredTorsoX": 256.23,
+        "rawTorsoAnchorX": 725,
+        "registration": "authored torso anchor"
+      },
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.05078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 486,
+      "sha256": {
+        "source": "02d15ba561f2fd2e3b046ecae7b969adb2b2a61cab446e4a31dab9c63a96a103",
+        "master": "3ec35addbfed82ca8ea569f407200f5f88fb156d179b2588c41b48e9d9808205",
+        "export": "0680251ba866b87a827bb33653e493696a637cd476af27ccc10ed145c079b977",
+        "prompt": "323aa28e636dcd3df8911ae13571e5ae8782b4852d073ab30ef13d36f400c4df"
+      }
+    },
+    {
+      "id": "Enemies/siegebreaker_golem_attack",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "export": "exports/Art/Enemies/siegebreaker_golem_attack.png",
+      "source": "source/sheets/siegebreaker_golem_attack_v2.png",
+      "master": "source/masters/Enemies/siegebreaker_golem_attack@2x.png",
+      "generator": "image_gen built-in; version not exposed",
+      "prompt": "source/prompts/siegebreaker_golem_attack_v2.json",
+      "cleanup": "python source/scripts/production.py process Enemies/siegebreaker_golem_attack source/sheets/siegebreaker_golem_attack_v2.png source/prompts/siegebreaker_golem_attack_v2.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Stone/iron ram-arm silhouette reads clearly; revised impact has stronger follow-through. Fine cracks compress at 720p.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "rawOpaqueBounds": [
+          36,
+          125,
+          1253,
+          1165
+        ],
+        "scale": 0.7711538461538462,
+        "footRow": 486,
+        "height": 401,
+        "edgeLuminance": 0.34771531345828405,
+        "torsoAnchorTarget": 256,
+        "registeredTorsoX": 255.76,
+        "rawTorsoAnchorX": 625,
+        "registration": "authored torso anchor"
+      },
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.05078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 486,
+      "sha256": {
+        "source": "fc55a67b8f1680c16c6303aef35c376e4d333cada4df27f3836aba52c6cda669",
+        "master": "9cac9d11c47e38caf0b34dd52d23af91960e62044d71be7f446054979d43e615",
+        "export": "64c77dffa922d14b88e5ec1a84406e0e94a3bf34dfbed4b2b0767c892d0cfc0f",
+        "prompt": "d7a4eee3e4fa328b62c4cdbb7cc5606c5385146f5b048ac77a7821f09d8ee1c0"
+      }
+    },
+    {
+      "id": "Enemies/siegebreaker_golem_tell",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "export": "exports/Art/Enemies/siegebreaker_golem_tell.png",
+      "source": "source/sheets/siegebreaker_golem_tell.png",
+      "master": "source/masters/Enemies/siegebreaker_golem_tell@2x.png",
+      "generator": "image_gen built-in; version not exposed",
+      "prompt": "source/prompts/siegebreaker_golem_tell.json",
+      "cleanup": "python source/scripts/production.py process Enemies/siegebreaker_golem_tell source/sheets/siegebreaker_golem_tell.png source/prompts/siegebreaker_golem_tell.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Stone/iron ram-arm silhouette reads clearly; revised impact has stronger follow-through. Fine cracks compress at 720p.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "rawOpaqueBounds": [
+          35,
+          56,
+          1240,
+          1197
+        ],
+        "scale": 0.7092198581560284,
+        "footRow": 485,
+        "height": 404,
+        "edgeLuminance": 0.3411614247895955,
+        "torsoAnchorTarget": 256,
+        "registeredTorsoX": 258.06,
+        "rawTorsoAnchorX": 740,
+        "registration": "authored torso anchor"
+      },
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.05078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 486,
+      "sha256": {
+        "source": "e58ee8676389891003cf2b829f1a40975d1c4dd63ef2ace798001357f20aa8fc",
+        "master": "bf65fd44a8f025a9b3a0af986d310a38a38f55b50bb6cd67700ce96b39fca587",
+        "export": "3876aa03569a2f66440cab0389ddf9b3a01ea2ef0675cce847c49050781f6647",
+        "prompt": "c2ade8e7d3d187113497c8a94b39596e8349908f640bd6b277ad2f9a5335af2c"
+      }
+    },
+    {
+      "id": "Enemies/ignaroth_attack",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "export": "exports/Art/Enemies/ignaroth_attack.png",
+      "source": "source/sheets/ignaroth_attack.png",
+      "master": "source/masters/Enemies/ignaroth_attack@2x.png",
+      "generator": "image_gen built-in; version not exposed",
+      "prompt": "source/prompts/ignaroth_attack.json",
+      "cleanup": "python source/scripts/production.py process Enemies/ignaroth_attack source/sheets/ignaroth_attack.png source/prompts/ignaroth_attack.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Magma seams and heavy fists read clearly against basalt. Vent and crust detail is dense at 720p.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "rawOpaqueBounds": [
+          15,
+          66,
+          1253,
+          1186
+        ],
+        "scale": 0.7194244604316546,
+        "footRow": 485,
+        "height": 402,
+        "edgeLuminance": 0.35436868213747635,
+        "torsoAnchorTarget": 256,
+        "registeredTorsoX": 258.08,
+        "rawTorsoAnchorX": 710,
+        "registration": "authored torso anchor"
+      },
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.05078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 486,
+      "sha256": {
+        "source": "51528ba14d3a5c47a87bc6be40f33b2845ff15d664d1e1c0fce49f67eeafe879",
+        "master": "dcae615f28942978bd8e270ad4abc61062dc6d3b1cfa4bd029e9ae08c4608f39",
+        "export": "33beb2664162c25c72f69bd4b92795fb8f697e1ccf43931194e4c41c2870719b",
+        "prompt": "cd817e1c47d57edea3b13502cd550d53cf9bda4fe15f01abe7945134bbd8aef1"
+      }
+    },
+    {
+      "id": "Enemies/ignaroth_tell",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "export": "exports/Art/Enemies/ignaroth_tell.png",
+      "source": "source/sheets/ignaroth_tell.png",
+      "master": "source/masters/Enemies/ignaroth_tell@2x.png",
+      "generator": "image_gen built-in; version not exposed",
+      "prompt": "source/prompts/ignaroth_tell.json",
+      "cleanup": "python source/scripts/production.py process Enemies/ignaroth_tell source/sheets/ignaroth_tell.png source/prompts/ignaroth_tell.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Magma seams and heavy fists read clearly against basalt. Vent and crust detail is dense at 720p.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "rawOpaqueBounds": [
+          183,
+          15,
+          1194,
+          1216
+        ],
+        "scale": 0.7216494845360825,
+        "footRow": 485,
+        "height": 433,
+        "edgeLuminance": 0.3375140113209745,
+        "torsoAnchorTarget": 256,
+        "registeredTorsoX": 256.06,
+        "rawTorsoAnchorX": 740,
+        "registration": "authored torso anchor"
+      },
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.05078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 486,
+      "sha256": {
+        "source": "d092d3288ac871d5a152133f4077590e48557a8dc203028add80722209052031",
+        "master": "b2462777878be2475f762120168addfc1d9cd7aadb700be3c0fffe80ccf930ae",
+        "export": "eb7bac77f4972834ceebcfc3b9d184a0c0867bbca2b463f0e808f60087080318",
+        "prompt": "9743f71764c2d2ba82ddfe6e15babbe7ac9af3bdf9dc845ce9c0939665088374"
+      }
+    },
+    {
+      "id": "Enemies/vaelith_attack",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "export": "exports/Art/Enemies/vaelith_attack.png",
+      "source": "source/sheets/vaelith_attack.png",
+      "master": "source/masters/Enemies/vaelith_attack@2x.png",
+      "generator": "image_gen built-in; version not exposed",
+      "prompt": "source/prompts/vaelith_attack.json",
+      "cleanup": "python source/scripts/production.py process Enemies/vaelith_attack source/sheets/vaelith_attack.png source/prompts/vaelith_attack.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Copper wings and violet spear distinguish her silhouette. Feather contour and cloth folds vary slightly across poses.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "rawOpaqueBounds": [
+          25,
+          46,
+          1240,
+          1230
+        ],
+        "scale": 0.7094594594594594,
+        "footRow": 485,
+        "height": 419,
+        "edgeLuminance": 0.4000189620297336,
+        "torsoAnchorTarget": 256,
+        "registeredTorsoX": 256.01,
+        "rawTorsoAnchorX": 700,
+        "registration": "authored torso anchor"
+      },
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.05078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 486,
+      "sha256": {
+        "source": "c2257523eb2c0fb4121f95cae7024584f23e188253078d5c9876884f9a770e30",
+        "master": "de434832b9e135aa8a17ebe14b29760d666abbd8824ec1c8461a0fd92434f370",
+        "export": "8e49d20387b1effc9331721408dc1f93c1796e15f730f3dd3175a90b518acbaf",
+        "prompt": "07856780baf1d4b8d548decb5604326303f1b38914b922ce3a29baf8c59a623b"
+      }
+    },
+    {
+      "id": "Enemies/vaelith_tell",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "export": "exports/Art/Enemies/vaelith_tell.png",
+      "source": "source/sheets/vaelith_tell.png",
+      "master": "source/masters/Enemies/vaelith_tell@2x.png",
+      "generator": "image_gen built-in; version not exposed",
+      "prompt": "source/prompts/vaelith_tell.json",
+      "cleanup": "python source/scripts/production.py process Enemies/vaelith_tell source/sheets/vaelith_tell.png source/prompts/vaelith_tell.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Copper wings and violet spear distinguish her silhouette. Feather contour and cloth folds vary slightly across poses.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "rawOpaqueBounds": [
+          50,
+          44,
+          1231,
+          1222
+        ],
+        "scale": 0.7094594594594594,
+        "footRow": 485,
+        "height": 417,
+        "edgeLuminance": 0.41976069660298176,
+        "torsoAnchorTarget": 256,
+        "registeredTorsoX": 256.05,
+        "rawTorsoAnchorX": 735,
+        "registration": "authored torso anchor"
+      },
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.05078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 486,
+      "sha256": {
+        "source": "9bfb6c5b28124e71142d2fd6c96c46dc7270999bb1753a114ce707304445e37b",
+        "master": "6ba113d96e7a56bc2c73c2867d4c40245f4c3e1eb2675539ac8ee06e2c160c54",
+        "export": "35f28fc822b7c2303614801bef05d5d59221581ad1681ad1abf8895392d52744",
+        "prompt": "685720bd9a6aad368547618d2674aaf0b133944ed08f1a12344a06aed0aec7b3"
+      }
+    },
+    {
+      "id": "Enemies/mirrath_attack",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "export": "exports/Art/Enemies/mirrath_attack.png",
+      "source": "source/sheets/mirrath_attack_v2.png",
+      "master": "source/masters/Enemies/mirrath_attack@2x.png",
+      "generator": "image_gen built-in; version not exposed",
+      "prompt": "source/prompts/mirrath_attack_v2.json",
+      "cleanup": "python source/scripts/production.py process Enemies/mirrath_attack source/sheets/mirrath_attack_v2.png source/prompts/mirrath_attack_v2.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Mirror halo and asymmetric silver facets remain recognizable; revised attack includes the whole glass focus. Focus contours vary with grip and foreshortening.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "rawOpaqueBounds": [
+          21,
+          70,
+          1248,
+          1191
+        ],
+        "scale": 0.7154326494201606,
+        "footRow": 485,
+        "height": 400,
+        "edgeLuminance": 0.4027682337847976,
+        "torsoAnchorTarget": 256,
+        "registeredTorsoX": 254.81,
+        "rawTorsoAnchorX": 550,
+        "registration": "authored torso anchor"
+      },
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.05078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 486,
+      "sha256": {
+        "source": "562276ac7f51658547bda65a52c45ef0a7b2ab42a96edb5b5c0d72bf661d1059",
+        "master": "3bda1e7fee63c22240adbafdabc91f432ca66b33906ab48e5c36dd604f85a0c3",
+        "export": "dfcc337d5af297d9614c617147ed00c0d6dde5b0aef11ddc02f9a95d0567b510",
+        "prompt": "f6c01cf56c2f32d85edf73c33c4de10e0e24466e2cf0a2971932c77d4d2b40cb"
+      }
+    },
+    {
+      "id": "Enemies/mirrath_tell",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "export": "exports/Art/Enemies/mirrath_tell.png",
+      "source": "source/sheets/mirrath_tell.png",
+      "master": "source/masters/Enemies/mirrath_tell@2x.png",
+      "generator": "image_gen built-in; version not exposed",
+      "prompt": "source/prompts/mirrath_tell.json",
+      "cleanup": "python source/scripts/production.py process Enemies/mirrath_tell source/sheets/mirrath_tell.png source/prompts/mirrath_tell.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Mirror halo and asymmetric silver facets remain recognizable; revised attack includes the whole glass focus. Focus contours vary with grip and foreshortening.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "rawOpaqueBounds": [
+          22,
+          26,
+          1233,
+          1229
+        ],
+        "scale": 0.6934812760055479,
+        "footRow": 486,
+        "height": 417,
+        "edgeLuminance": 0.40781356016626524,
+        "torsoAnchorTarget": 256,
+        "registeredTorsoX": 257.0,
+        "rawTorsoAnchorX": 740,
+        "registration": "authored torso anchor"
+      },
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.05078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 486,
+      "sha256": {
+        "source": "3a3ba84103d95a5173c6ca675524e346331e33c5f4a0975d8b115ee65285309e",
+        "master": "12cae6e783ec17883cce813ef1b0aa19333ec268ca45eea54e93ad6d3f6fcd9f",
+        "export": "dab50507488e3d88ed3cb3e1bb2098df1d4ff2c3fb36e205851fed86e90482c8",
+        "prompt": "5992167f5226177f31fe41ced2739ccbdbb7b840eed78a60b9b52fb08a6ca1be"
+      }
+    },
+    {
+      "id": "Enemies/aetherion_attack",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "export": "exports/Art/Enemies/aetherion_attack.png",
+      "source": "source/sheets/aetherion_attack.png",
+      "master": "source/masters/Enemies/aetherion_attack@2x.png",
+      "generator": "image_gen built-in; version not exposed",
+      "prompt": "source/prompts/aetherion_attack.json",
+      "cleanup": "python source/scripts/production.py process Enemies/aetherion_attack source/sheets/aetherion_attack.png source/prompts/aetherion_attack.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Corrected weapon-free crystal identity is maintained in all four poses. Small floating-facet contours vary between key poses.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "rawOpaqueBounds": [
+          30,
+          95,
+          1245,
+          1218
+        ],
+        "scale": 0.7141585040071238,
+        "footRow": 485,
+        "height": 400,
+        "edgeLuminance": 0.35872040618972545,
+        "torsoAnchorTarget": 256,
+        "registeredTorsoX": 255.89,
+        "rawTorsoAnchorX": 640,
+        "registration": "authored torso anchor"
+      },
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.05078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 486,
+      "sha256": {
+        "source": "bccf00d20fb6b6fa628d81c3cf3aaab3204e2bb8cf20bd7f8022734a38dec4d9",
+        "master": "bfb02b62c81a52f98e480c6398b60c994a6ffa2e0f92065b10c713f5f1c8d805",
+        "export": "869a9554046421f8dd4203518724b89f940bfa61a5022fbb78d048ec6fcb7d97",
+        "prompt": "c2fca6d4a4c46e85c813dfec1553ccb0035fd30e026564d61d20a3e0c1d64b78"
+      }
+    },
+    {
+      "id": "Enemies/aetherion_tell",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "export": "exports/Art/Enemies/aetherion_tell.png",
+      "source": "source/sheets/aetherion_tell.png",
+      "master": "source/masters/Enemies/aetherion_tell@2x.png",
+      "generator": "image_gen built-in; version not exposed",
+      "prompt": "source/prompts/aetherion_tell.json",
+      "cleanup": "python source/scripts/production.py process Enemies/aetherion_tell source/sheets/aetherion_tell.png source/prompts/aetherion_tell.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Corrected weapon-free crystal identity is maintained in all four poses. Small floating-facet contours vary between key poses.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "rawOpaqueBounds": [
+          132,
+          17,
+          1113,
+          1214
+        ],
+        "scale": 0.6947890818858561,
+        "footRow": 486,
+        "height": 416,
+        "edgeLuminance": 0.3505090199100253,
+        "torsoAnchorTarget": 256,
+        "registeredTorsoX": 255.89,
+        "rawTorsoAnchorX": 690,
+        "registration": "authored torso anchor"
+      },
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.05078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 486,
+      "sha256": {
+        "source": "b2c0ef433c25470140121c92174fd24698f980d44481c466088fe02cbdcd6789",
+        "master": "71597c64d563c64f44aefdcb82afb2490c626a373f7f955b7eb67942099b2f2f",
+        "export": "6f3423653573cb0f6b9be62b1291c3d199aa1250a563decb4e727261d1371157",
+        "prompt": "c99f809c8fa2aeaa2e621fa4befc1723fa3e6f6877661a3cf4b51100cdba6fdf"
+      }
+    },
+    {
+      "id": "Enemies/thornmother_attack",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "export": "exports/Art/Enemies/thornmother_attack.png",
+      "source": "source/sheets/thornmother_attack.png",
+      "master": "source/masters/Enemies/thornmother_attack@2x.png",
+      "generator": "image_gen built-in; version not exposed",
+      "prompt": "source/prompts/thornmother_attack.json",
+      "cleanup": "python source/scripts/production.py process Enemies/thornmother_attack source/sheets/thornmother_attack.png source/prompts/thornmother_attack.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Rooted trunk, thorn arms and pale bark separate well from basalt. Blossoms and fine branches soften at 720p.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "rawOpaqueBounds": [
+          16,
+          66,
+          1241,
+          1220
+        ],
+        "scale": 0.6949740034662045,
+        "footRow": 485,
+        "height": 400,
+        "edgeLuminance": 0.3744920186822771,
+        "torsoAnchorTarget": 256,
+        "registeredTorsoX": 255.95,
+        "rawTorsoAnchorX": 610,
+        "registration": "authored torso anchor"
+      },
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.05078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 486,
+      "sha256": {
+        "source": "0b0543cea249d63af2ff67dcba3eb6a0241b679b1518cd63d6daadb0d9b327b4",
+        "master": "8c567a51bba19548deba601c1f17e3ef715f54bc6035a608611eb02bbf406bf4",
+        "export": "dafc542060c3df0f29b87cb90e104542bb00316190511519be48907eab8c333c",
+        "prompt": "005ad9ad7ce23d44d2fb4f9fadd481a7ab9e1133861471b180539f61ba437af3"
+      }
+    },
+    {
+      "id": "Enemies/thornmother_tell",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "export": "exports/Art/Enemies/thornmother_tell.png",
+      "source": "source/sheets/thornmother_tell.png",
+      "master": "source/masters/Enemies/thornmother_tell@2x.png",
+      "generator": "image_gen built-in; version not exposed",
+      "prompt": "source/prompts/thornmother_tell.json",
+      "cleanup": "python source/scripts/production.py process Enemies/thornmother_tell source/sheets/thornmother_tell.png source/prompts/thornmother_tell.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Rooted trunk, thorn arms and pale bark separate well from basalt. Blossoms and fine branches soften at 720p.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "rawOpaqueBounds": [
+          14,
+          32,
+          1247,
+          1228
+        ],
+        "scale": 0.684931506849315,
+        "footRow": 485,
+        "height": 408,
+        "edgeLuminance": 0.36021482435697755,
+        "torsoAnchorTarget": 256,
+        "registeredTorsoX": 256.66,
+        "rawTorsoAnchorX": 740,
+        "registration": "authored torso anchor"
+      },
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.05078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 486,
+      "sha256": {
+        "source": "7402dab60f2273cdf93385f24b968cf913188a814bb517419139722fd5db70a6",
+        "master": "a313ea49fb3913e288bd7bd571d1611cf2b8c91e3d109bc911421c0b550f058e",
+        "export": "7f62d3eeb6c146e98d4baeaf8c61c426e041c645e5ffc2cc387aa032a15aef7f",
+        "prompt": "75632d4e65781ad4f3bef98d2ab346acb99ece5c3b795db999353c5997fe444c"
+      }
+    },
+    {
+      "id": "Enemies/ironclad_warlord_attack",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "export": "exports/Art/Enemies/ironclad_warlord_attack.png",
+      "source": "source/sheets/ironclad_warlord_attack.png",
+      "master": "source/masters/Enemies/ironclad_warlord_attack@2x.png",
+      "generator": "image_gen built-in; version not exposed",
+      "prompt": "source/prompts/ironclad_warlord_attack.json",
+      "cleanup": "python source/scripts/production.py process Enemies/ironclad_warlord_attack source/sheets/ironclad_warlord_attack.png source/prompts/ironclad_warlord_attack.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Block siege hammer, riveted bulk and back banner read as a faction apex. Banner folds and rivets vary slightly between poses.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "rawOpaqueBounds": [
+          50,
+          28,
+          1249,
+          1208
+        ],
+        "scale": 0.684931506849315,
+        "footRow": 485,
+        "height": 403,
+        "edgeLuminance": 0.3292029963535169,
+        "torsoAnchorTarget": 256,
+        "registeredTorsoX": 258.03,
+        "rawTorsoAnchorX": 780,
+        "registration": "authored torso anchor"
+      },
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.05078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 486,
+      "sha256": {
+        "source": "d06d2b66e634d1484afa739a90865206efeae4199cdc1b049f68435a2e8801d3",
+        "master": "bd43c3c1634daff2f94de4d8b73cbd01b0fff33c6a32876c8bbdb35669b89190",
+        "export": "af42e4f15aef6a28e621cfe0dd6c37ce19f559f62a20785d75fa65c8a103866c",
+        "prompt": "1ffa07231533a412a2b8bfd1b4a825cb3ac38eb316ba346a4f87bb5e762c8e5e"
+      }
+    },
+    {
+      "id": "Enemies/ironclad_warlord_tell",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "export": "exports/Art/Enemies/ironclad_warlord_tell.png",
+      "source": "source/sheets/ironclad_warlord_tell.png",
+      "master": "source/masters/Enemies/ironclad_warlord_tell@2x.png",
+      "generator": "image_gen built-in; version not exposed",
+      "prompt": "source/prompts/ironclad_warlord_tell.json",
+      "cleanup": "python source/scripts/production.py process Enemies/ironclad_warlord_tell source/sheets/ironclad_warlord_tell.png source/prompts/ironclad_warlord_tell.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Block siege hammer, riveted bulk and back banner read as a faction apex. Banner folds and rivets vary slightly between poses.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "rawOpaqueBounds": [
+          42,
+          26,
+          1210,
+          1228
+        ],
+        "scale": 0.6963788300835655,
+        "footRow": 486,
+        "height": 419,
+        "edgeLuminance": 0.31970867814919995,
+        "torsoAnchorTarget": 256,
+        "registeredTorsoX": 258.04,
+        "rawTorsoAnchorX": 760,
+        "registration": "authored torso anchor"
+      },
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.05078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 486,
+      "sha256": {
+        "source": "706269860d288b866db7b29a7d6a4110a89ea6aeb5402db66a89825a19f3834c",
+        "master": "45400b9def78794f9479b1a34090604fdb98eecc5dab9cff5a3987e985b54ec7",
+        "export": "8f82f39a6b60d4b0c22976f4cd1371f9e88f355e11aad4b8d75ac75e614fd217",
+        "prompt": "4ac16fec28500709060256f12587eac70d7eb8f9e0d4e7b4db6f9369397029c3"
+      }
+    },
+    {
+      "id": "Enemies/ashen_matriarch_attack",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "export": "exports/Art/Enemies/ashen_matriarch_attack.png",
+      "source": "source/sheets/ashen_matriarch_attack.png",
+      "master": "source/masters/Enemies/ashen_matriarch_attack@2x.png",
+      "generator": "image_gen built-in; version not exposed",
+      "prompt": "source/prompts/ashen_matriarch_attack.json",
+      "cleanup": "python source/scripts/production.py process Enemies/ashen_matriarch_attack source/sheets/ashen_matriarch_attack.png source/prompts/ashen_matriarch_attack.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Cocoon abdomen, long claws and clinging imps give a distinct hunched silhouette. Tiny imps are secondary detail at 720p.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "rawOpaqueBounds": [
+          2,
+          113,
+          1253,
+          1167
+        ],
+        "scale": 0.7609108159392789,
+        "footRow": 485,
+        "height": 401,
+        "edgeLuminance": 0.3698045860577427,
+        "torsoAnchorTarget": 256,
+        "registeredTorsoX": 255.99,
+        "rawTorsoAnchorX": 640,
+        "registration": "authored torso anchor"
+      },
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.05078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 486,
+      "sha256": {
+        "source": "65957684c0917365df6cc29c9f3dfc307c3204c1793a00b5ee2724c37a9698de",
+        "master": "64fd9c41dfca8ddbc561d5db0239f428422d036effeb76c2b197b6af3eec635e",
+        "export": "aa10f355070c5db7eae399be22c35dca509965d2ff14965b3eb3c38b7aed71e1",
+        "prompt": "d5d8fbd9056106a8e2cad8f1ae1ef2a77d53877cad843af06a0572e365cf3bfd"
+      }
+    },
+    {
+      "id": "Enemies/ashen_matriarch_tell",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "export": "exports/Art/Enemies/ashen_matriarch_tell.png",
+      "source": "source/sheets/ashen_matriarch_tell.png",
+      "master": "source/masters/Enemies/ashen_matriarch_tell@2x.png",
+      "generator": "image_gen built-in; version not exposed",
+      "prompt": "source/prompts/ashen_matriarch_tell.json",
+      "cleanup": "python source/scripts/production.py process Enemies/ashen_matriarch_tell source/sheets/ashen_matriarch_tell.png source/prompts/ashen_matriarch_tell.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Cocoon abdomen, long claws and clinging imps give a distinct hunched silhouette. Tiny imps are secondary detail at 720p.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "rawOpaqueBounds": [
+          31,
+          74,
+          1241,
+          1197
+        ],
+        "scale": 0.7363770250368189,
+        "footRow": 485,
+        "height": 413,
+        "edgeLuminance": 0.4086646141572636,
+        "torsoAnchorTarget": 256,
+        "registeredTorsoX": 258.1,
+        "rawTorsoAnchorX": 710,
+        "registration": "authored torso anchor"
+      },
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.05078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 486,
+      "sha256": {
+        "source": "c526520a4a67280cdfb2e736dd59622a0f783f5cfd0df6f870e9399d2dd29713",
+        "master": "ca88b20360cf1d8361ed86501a6c157ff19d02fd3cacdef63604cc2d2534de02",
+        "export": "5a5b924031c40783810bdc2a46dc26658ded09dc47b5565fb9a4f8daf562765c",
+        "prompt": "3ef24ad22859410dd61c8375b5f7a9d2463fd1e9474ddc5893ab0b2da04fb270"
+      }
+    },
+    {
+      "id": "Enemies/nyxhollow_attack",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "export": "exports/Art/Enemies/nyxhollow_attack.png",
+      "source": "source/sheets/nyxhollow_attack.png",
+      "master": "source/masters/Enemies/nyxhollow_attack@2x.png",
+      "generator": "image_gen built-in; version not exposed",
+      "prompt": "source/prompts/nyxhollow_attack.json",
+      "cleanup": "python source/scripts/production.py process Enemies/nyxhollow_attack source/sheets/nyxhollow_attack.png source/prompts/nyxhollow_attack.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Central maw, eye ring and jointed limbs break the armored-human rhythm. Small star-holes are secondary detail at 720p.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "rawOpaqueBounds": [
+          19,
+          106,
+          1253,
+          1177
+        ],
+        "scale": 0.7488328664799253,
+        "footRow": 486,
+        "height": 401,
+        "edgeLuminance": 0.3690009680167752,
+        "torsoAnchorTarget": 256,
+        "registeredTorsoX": 256.11,
+        "rawTorsoAnchorX": 680,
+        "registration": "authored torso anchor"
+      },
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.05078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 486,
+      "sha256": {
+        "source": "62bd4e00718c6423344279e61cc5cd5d8483baaf391d7c7f9d5e167b281804fd",
+        "master": "f0748a32460d5674316c1f5115e35e74b690d84800613fc4583a5d5f787d473f",
+        "export": "0313ee6d038486f16a11db7fbeb93df3df87012bf58db61e8db5016b2d668536",
+        "prompt": "d79c8421cca0183b61836190751b3352723a56a194422336c7da6061c23bd8fe"
+      }
+    },
+    {
+      "id": "Enemies/nyxhollow_tell",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "export": "exports/Art/Enemies/nyxhollow_tell.png",
+      "source": "source/sheets/nyxhollow_tell.png",
+      "master": "source/masters/Enemies/nyxhollow_tell@2x.png",
+      "generator": "image_gen built-in; version not exposed",
+      "prompt": "source/prompts/nyxhollow_tell.json",
+      "cleanup": "python source/scripts/production.py process Enemies/nyxhollow_tell source/sheets/nyxhollow_tell.png source/prompts/nyxhollow_tell.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Central maw, eye ring and jointed limbs break the armored-human rhythm. Small star-holes are secondary detail at 720p.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "rawOpaqueBounds": [
+          21,
+          60,
+          1247,
+          1220
+        ],
+        "scale": 0.7363770250368189,
+        "footRow": 486,
+        "height": 427,
+        "edgeLuminance": 0.37060904996946875,
+        "torsoAnchorTarget": 256,
+        "registeredTorsoX": 258.1,
+        "rawTorsoAnchorX": 700,
+        "registration": "authored torso anchor"
+      },
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.05078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 486,
+      "sha256": {
+        "source": "dfee8a29d24a9b2c4c8e3a57aba13fa52bc6d5da51b5eb6530dcd2baac14f385",
+        "master": "d345518673bc6903526490b4e61051c65186ddd9b072ea0d57172227aefd5fb0",
+        "export": "665d16d9e9a6f2fc3010f16036ee396be96b9123da377aa2c7ed28090ebfdc96",
+        "prompt": "db61983d74a0227b69b0ebde8a298cd06acbe1b928bc171d87bdb355e23e1ef2"
+      }
+    },
+    {
+      "id": "Enemies/seraphyne_attack",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "export": "exports/Art/Enemies/seraphyne_attack.png",
+      "source": "source/sheets/seraphyne_attack.png",
+      "master": "source/masters/Enemies/seraphyne_attack@2x.png",
+      "generator": "image_gen built-in; version not exposed",
+      "prompt": "source/prompts/seraphyne_attack.json",
+      "cleanup": "python source/scripts/production.py process Enemies/seraphyne_attack source/sheets/seraphyne_attack.png source/prompts/seraphyne_attack.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Ice-spire crown, glacier hem and frost sceptre form a regal silhouette. Fine ice cuts soften at 720p.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "rawOpaqueBounds": [
+          32,
+          44,
+          1238,
+          1230
+        ],
+        "scale": 0.6963788300835655,
+        "footRow": 486,
+        "height": 413,
+        "edgeLuminance": 0.6495854305556387,
+        "torsoAnchorTarget": 256,
+        "registeredTorsoX": 258.04,
+        "rawTorsoAnchorX": 750,
+        "registration": "authored torso anchor"
+      },
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.05078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 486,
+      "sha256": {
+        "source": "0f23f542755b42b5a2a62aa634105cab1a1b472026523ad3db2db1c1abb328e8",
+        "master": "7b4623c9e25ebddd0199e2f65f9ff969ba810469c288e009d3b168e6aa34c9d2",
+        "export": "689bf90079aeccc55e44908c256c347fc8835cac6af8f1c9342762d0ca8da59a",
+        "prompt": "c08eff2951d52be474540d901d3310329f9acadb406fc90d013a7abcfd1686d7"
+      }
+    },
+    {
+      "id": "Enemies/seraphyne_tell",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "export": "exports/Art/Enemies/seraphyne_tell.png",
+      "source": "source/sheets/seraphyne_tell.png",
+      "master": "source/masters/Enemies/seraphyne_tell@2x.png",
+      "generator": "image_gen built-in; version not exposed",
+      "prompt": "source/prompts/seraphyne_tell.json",
+      "cleanup": "python source/scripts/production.py process Enemies/seraphyne_tell source/sheets/seraphyne_tell.png source/prompts/seraphyne_tell.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Ice-spire crown, glacier hem and frost sceptre form a regal silhouette. Fine ice cuts soften at 720p.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "rawOpaqueBounds": [
+          35,
+          25,
+          1217,
+          1225
+        ],
+        "scale": 0.6993006993006993,
+        "footRow": 485,
+        "height": 418,
+        "edgeLuminance": 0.6993506461917942,
+        "torsoAnchorTarget": 256,
+        "registeredTorsoX": 258.05,
+        "rawTorsoAnchorX": 750,
+        "registration": "authored torso anchor"
+      },
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.05078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 486,
+      "sha256": {
+        "source": "9858658976af64c1444c766c0068fd7cc3ade3723b50562053be80ea9f131b81",
+        "master": "153535c6076d54c90e2ffa79ead8ca72e394de976dff99e673ecb7d67bf02996",
+        "export": "4a1f75f2080980b62624f4a902d4b4d9e5f05a1d9d1901c633daa5a36edbc245",
+        "prompt": "cae7af162b842a285b6373672866e1efc0492143907a2e1ee84bf0e1fc723f01"
+      }
+    },
+    {
+      "id": "Enemies/gravemaw_attack",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "export": "exports/Art/Enemies/gravemaw_attack.png",
+      "source": "source/sheets/gravemaw_attack.png",
+      "master": "source/masters/Enemies/gravemaw_attack@2x.png",
+      "generator": "image_gen built-in; version not exposed",
+      "prompt": "source/prompts/gravemaw_attack.json",
+      "cleanup": "python source/scripts/production.py process Enemies/gravemaw_attack source/sheets/gravemaw_attack.png source/prompts/gravemaw_attack.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Chest maw vent and shoulder mortars distinguish the siege titan. Fine plate/rust detail is dense at 720p.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "rawOpaqueBounds": [
+          96,
+          73,
+          1232,
+          1210
+        ],
+        "scale": 0.7420494699646644,
+        "footRow": 485,
+        "height": 421,
+        "edgeLuminance": 0.4025498900047824,
+        "torsoAnchorTarget": 256,
+        "registeredTorsoX": 256.05,
+        "rawTorsoAnchorX": 740,
+        "registration": "authored torso anchor"
+      },
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.05078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 486,
+      "sha256": {
+        "source": "ae5d4f654eb47f479d80e444f6846b8d105b64683dd261970d4d25c155e7122d",
+        "master": "de185db7babc9ae8302ac9fff9b876a36677807a6fe24712cd198b06f609b1d1",
+        "export": "1bac24a14b0e08552fbb902140732d2629c84b58edf5c53908467954674dea62",
+        "prompt": "a29df2fe92811816c2c4dd2c7c99ba43a7ac36fa28803f11c8d70ad9a8e896c0"
+      }
+    },
+    {
+      "id": "Enemies/gravemaw_tell",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "export": "exports/Art/Enemies/gravemaw_tell.png",
+      "source": "source/sheets/gravemaw_tell.png",
+      "master": "source/masters/Enemies/gravemaw_tell@2x.png",
+      "generator": "image_gen built-in; version not exposed",
+      "prompt": "source/prompts/gravemaw_tell.json",
+      "cleanup": "python source/scripts/production.py process Enemies/gravemaw_tell source/sheets/gravemaw_tell.png source/prompts/gravemaw_tell.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Chest maw vent and shoulder mortars distinguish the siege titan. Fine plate/rust detail is dense at 720p.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "rawOpaqueBounds": [
+          88,
+          75,
+          1234,
+          1198
+        ],
+        "scale": 0.7420494699646644,
+        "footRow": 486,
+        "height": 417,
+        "edgeLuminance": 0.3628067032640805,
+        "torsoAnchorTarget": 256,
+        "registeredTorsoX": 256.02,
+        "rawTorsoAnchorX": 740,
+        "registration": "authored torso anchor"
+      },
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.05078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 486,
+      "sha256": {
+        "source": "3a6096295c68486ca48c96267a3155c7f0b266a4e8d2ec26ff6ea8b81fafbd9b",
+        "master": "ea5b4e45ddc9f7cfc5f52244933ece85142533e04fc79c04a56717f50719c776",
+        "export": "c1125496e8276aefb23fad6ce43b094dad1bfe4af48691f58a7bc499356da10b",
+        "prompt": "9e030725307190b0ae444ba71ec03cc23e5a3e44b91bc2c72f9dad803920ecf0"
+      }
+    },
+    {
+      "id": "Enemies/rift_warden_attack",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "export": "exports/Art/Enemies/rift_warden_attack.png",
+      "source": "source/sheets/rift_warden_attack.png",
+      "master": "source/masters/Enemies/rift_warden_attack@2x.png",
+      "generator": "image_gen built-in; version not exposed",
+      "prompt": "source/prompts/rift_warden_attack.json",
+      "cleanup": "python source/scripts/production.py process Enemies/rift_warden_attack source/sheets/rift_warden_attack.png source/prompts/rift_warden_attack.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "B01 identity references anchor the new raised-glaive tell and downward impact. Small halo/cloak/weapon contours vary with the changed pose.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "rawOpaqueBounds": [
+          18,
+          118,
+          1252,
+          1165
+        ],
+        "scale": 0.7779578606158833,
+        "footRow": 485,
+        "height": 407,
+        "edgeLuminance": 0.3919723943763466,
+        "torsoAnchorTarget": 256,
+        "registeredTorsoX": 255.83,
+        "rawTorsoAnchorX": 620,
+        "registration": "authored torso anchor"
+      },
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.05078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 486,
+      "sha256": {
+        "source": "7731373d2c3215be9eab026aad0268ab6f32c89be4842a247a4bfa00e0578bdf",
+        "master": "c288ea9765699f6150b0b6377bf9be52215d1fb9572e70b24fa4e86e417ac75b",
+        "export": "6cdc450de3e7501f905bc23e63e39200b9dbf24322044af268cbdbe1274ca550",
+        "prompt": "7fe53a5ba1b32adfef957ee87ca5747951a51c195ec6c1d4ff8c4f41838d7bef"
+      }
+    },
+    {
+      "id": "Enemies/rift_warden_tell",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "export": "exports/Art/Enemies/rift_warden_tell.png",
+      "source": "source/sheets/rift_warden_tell.png",
+      "master": "source/masters/Enemies/rift_warden_tell@2x.png",
+      "generator": "image_gen built-in; version not exposed",
+      "prompt": "source/prompts/rift_warden_tell.json",
+      "cleanup": "python source/scripts/production.py process Enemies/rift_warden_tell source/sheets/rift_warden_tell.png source/prompts/rift_warden_tell.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "B01 identity references anchor the new raised-glaive tell and downward impact. Small halo/cloak/weapon contours vary with the changed pose.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "rawOpaqueBounds": [
+          67,
+          56,
+          1220,
+          1197
+        ],
+        "scale": 0.7361963190184049,
+        "footRow": 485,
+        "height": 419,
+        "edgeLuminance": 0.34864453960763786,
+        "torsoAnchorTarget": 256,
+        "registeredTorsoX": 255.9,
+        "rawTorsoAnchorX": 550,
+        "registration": "authored torso anchor"
+      },
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.05078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 486,
+      "sha256": {
+        "source": "10b3322c0b9ee30a4109808e519f1db44d2a14e2365c738e1d440ddc315e6d26",
+        "master": "85711e3b02d869f8df50953968a29047107f60fb34bc4fe497380113ff5236b8",
+        "export": "4fb556675df9881d1885e865c5de2beace77a0cf774e4e0764488cb836a52995",
+        "prompt": "068a1446d6c08a67b385cec11fac52177a2192167ccb63c42260bc4184574a3b"
+      }
+    }
+  ],
+  "extras": [
+    {
+      "path": "previews/b11_basalt_page1_1080p.png",
+      "kind": "offline QA composite/sheet; not gameplay or approval"
+    },
+    {
+      "path": "previews/b11_basalt_page1_1440p.png",
+      "kind": "offline QA composite/sheet; not gameplay or approval"
+    },
+    {
+      "path": "previews/b11_basalt_page1_720p.png",
+      "kind": "offline QA composite/sheet; not gameplay or approval"
+    },
+    {
+      "path": "previews/b11_basalt_page2_1080p.png",
+      "kind": "offline QA composite/sheet; not gameplay or approval"
+    },
+    {
+      "path": "previews/b11_basalt_page2_1440p.png",
+      "kind": "offline QA composite/sheet; not gameplay or approval"
+    },
+    {
+      "path": "previews/b11_basalt_page2_720p.png",
+      "kind": "offline QA composite/sheet; not gameplay or approval"
+    },
+    {
+      "path": "previews/b11_basalt_page3_1080p.png",
+      "kind": "offline QA composite/sheet; not gameplay or approval"
+    },
+    {
+      "path": "previews/b11_basalt_page3_1440p.png",
+      "kind": "offline QA composite/sheet; not gameplay or approval"
+    },
+    {
+      "path": "previews/b11_basalt_page3_720p.png",
+      "kind": "offline QA composite/sheet; not gameplay or approval"
+    },
+    {
+      "path": "previews/b11_basalt_page4_1080p.png",
+      "kind": "offline QA composite/sheet; not gameplay or approval"
+    },
+    {
+      "path": "previews/b11_basalt_page4_1440p.png",
+      "kind": "offline QA composite/sheet; not gameplay or approval"
+    },
+    {
+      "path": "previews/b11_basalt_page4_720p.png",
+      "kind": "offline QA composite/sheet; not gameplay or approval"
+    },
+    {
+      "path": "previews/b11_color_720p_1.png",
+      "kind": "offline QA composite/sheet; not gameplay or approval"
+    },
+    {
+      "path": "previews/b11_color_720p_2.png",
+      "kind": "offline QA composite/sheet; not gameplay or approval"
+    },
+    {
+      "path": "previews/b11_color_720p_3.png",
+      "kind": "offline QA composite/sheet; not gameplay or approval"
+    },
+    {
+      "path": "previews/b11_color_720p_4.png",
+      "kind": "offline QA composite/sheet; not gameplay or approval"
+    },
+    {
+      "path": "previews/b11_color_sheet.png",
+      "kind": "offline QA composite/sheet; not gameplay or approval"
+    },
+    {
+      "path": "previews/b11_grayscale_720p_1.png",
+      "kind": "offline QA composite/sheet; not gameplay or approval"
+    },
+    {
+      "path": "previews/b11_grayscale_720p_2.png",
+      "kind": "offline QA composite/sheet; not gameplay or approval"
+    },
+    {
+      "path": "previews/b11_grayscale_720p_3.png",
+      "kind": "offline QA composite/sheet; not gameplay or approval"
+    },
+    {
+      "path": "previews/b11_grayscale_720p_4.png",
+      "kind": "offline QA composite/sheet; not gameplay or approval"
+    },
+    {
+      "path": "previews/b11_grayscale_sheet.png",
+      "kind": "offline QA composite/sheet; not gameplay or approval"
+    },
+    {
+      "path": "previews/b11_silhouette_720p_1.png",
+      "kind": "offline QA composite/sheet; not gameplay or approval"
+    },
+    {
+      "path": "previews/b11_silhouette_720p_2.png",
+      "kind": "offline QA composite/sheet; not gameplay or approval"
+    },
+    {
+      "path": "previews/b11_silhouette_720p_3.png",
+      "kind": "offline QA composite/sheet; not gameplay or approval"
+    },
+    {
+      "path": "previews/b11_silhouette_720p_4.png",
+      "kind": "offline QA composite/sheet; not gameplay or approval"
+    },
+    {
+      "path": "previews/b11_silhouette_sheet.png",
+      "kind": "offline QA composite/sheet; not gameplay or approval"
+    },
+    {
+      "path": "previews/scene_b11_1080p.png",
+      "kind": "offline QA composite/sheet; not gameplay or approval"
+    },
+    {
+      "path": "previews/scene_b11_1440p.png",
+      "kind": "offline QA composite/sheet; not gameplay or approval"
+    },
+    {
+      "path": "previews/scene_b11_720p.png",
+      "kind": "offline QA composite/sheet; not gameplay or approval"
+    },
+    {
+      "path": "previews/units_b11_colour.png",
+      "kind": "offline QA composite/sheet; not gameplay or approval"
+    },
+    {
+      "path": "previews/units_b11_gray.png",
+      "kind": "offline QA composite/sheet; not gameplay or approval"
+    },
+    {
+      "path": "previews/units_b11_silhouette.png",
+      "kind": "offline QA composite/sheet; not gameplay or approval"
+    }
+  ],
+  "knownIssues": [
+    "Small facet, branch, feather, rivet and imp details soften at 720p.",
+    "Minor generated contour/cloth/prop variation remains across pose changes.",
+    "Offline review only; Unity runtime blending, sorting and owner acceptance are not performed."
+  ],
+  "blockers": [],
+  "summary": {
+    "requested": 46,
+    "delivered": 46,
+    "blocked": 0,
+    "intakeBlocking": 0,
+    "intakeNotes": 0,
+    "minimumEdgeLuminance": 0.3081368115224837,
+    "minimumWalkIoU": 0.6919939355406661
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "prompt": "Dark Mythic Fantasy, painterly stylized 2.5D; orthographic 38.3-degree elevation, three-quarter front body turned 25 degrees toward screen-right. Key upper-left-front #ffe9d0, rim back-right #9fe8ff, ambient #16233a. Controlled broad brush planes, coloured local-hue dark edges without black outlines.\nUse case: stylized-concept. Production single boss sprite Siegebreaker Golem, frame tell. Character design: Mini-boss: a towering siege golem of sanctum stone bound with iron bands, a battering-ram arm, glowing armour seams that close at 50% (armour phase). Tell: ram arm drawn back, seams flaring. Attack: charge slam impact.\nAnticipation TELL pose: draw the enormous ram arm BACK and UP near shoulder, coil torso before forward charge, seam light and ram focus building. Feet planted, pose clearly different from walking.\nImage 1 is the exact identity to preserve: same head, armor, ram arm, cloth and palette. Other images are B01 style references. Keep torso centered, unchanged scale and foot baseline. Transparent background. Complete character, all limbs/props inside margins; no crop, floor, shadows, ground glow, telegraph, beams, projectiles, text or scene. Warm lit key planes and strong directional cyan back-right rim give edge-band luminance >=0.27 against basalt 0.16; no uniform outline. Native raster at least 1536 square, full character occupies 84% height, for >=1024 master and 512 export. Do not imitate hidden RGB colors in transparent references.",
+  "referenced_image_paths": [
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B11/source/sheets/siegebreaker_golem_a.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Enemies/rift_warden_a.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Enemies/rift_warden_b.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Enemies/grunt_a.png"
+  ],
+  "transparent_background": true
+}

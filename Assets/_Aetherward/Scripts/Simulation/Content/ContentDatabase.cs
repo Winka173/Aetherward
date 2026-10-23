@@ -41,7 +41,15 @@ namespace Aetherward.Sim.Content
         public int Use;
     }
 
-    /// <summary>A functional battlefield: board layout, hazards, node traits, covers, lane evolution, enemy pool.</summary>
+    public sealed class AreaTraitDef
+    {
+        public string Id;
+        public Vec2 Pos;
+        public float Radius;
+        public List<EffectOp> Effects = new List<EffectOp>();
+    }
+
+    /// <summary>A functional battlefield: geometry, hazards, area traits, covers and enemy pool.</summary>
     public sealed class BiomeDef
     {
         public string Id;
@@ -52,6 +60,7 @@ namespace Aetherward.Sim.Content
         public string Music = "battle_loop";
         public bool Default;
         public readonly List<HazardDef> Hazards = new List<HazardDef>();
+        public readonly List<AreaTraitDef> AreaTraits = new List<AreaTraitDef>();
         public readonly Dictionary<int, string> NodeTraitIds = new Dictionary<int, string>();
         public readonly Dictionary<int, List<EffectOp>> NodeTraitOps = new Dictionary<int, List<EffectOp>>();
         public readonly List<CoverDef> Covers = new List<CoverDef>();
@@ -203,6 +212,13 @@ namespace Aetherward.Sim.Content
                     Params = ParamBag.FromJson(n["basic"], "kind", "mult", "gauge", "speed")
                 };
                 h.Skill = ParseSkill(n["skill"], h.Id);
+                if (n["ultimate"].Kind == JsonKind.Object)
+                {
+                    JsonNode u = n["ultimate"];
+                    h.Ultimate = new UltimateDef { Kind = u.Str("kind"), Seconds = u.Float("seconds", 32f),
+                        Radius = u.Float("radius", 3f), Power = u.Float("power", 2.8f), Hits = u.Int("hits", 1),
+                        Stun = u.Float("stun"), Heal = u.Float("heal"), Shield = u.Float("shield") };
+                }
                 h.PassiveKind = n["passive"].Str("kind");
                 h.PassiveParams = ParamBag.FromJson(n["passive"], "kind");
                 h.PassiveNameKey = "hero." + h.Id + ".passive.name";
@@ -757,6 +773,7 @@ namespace Aetherward.Sim.Content
                     Music = n.Str("music", "battle_loop"),
                     Default = n.Bool("default")
                 };
+                _arenaScale = b.Arena.Scale;
                 foreach (JsonNode h in n["hazards"].Items)
                 {
                     var hz = new HazardDef
@@ -773,6 +790,9 @@ namespace Aetherward.Sim.Content
                     b.NodeTraitIds[node] = t.Str("trait");
                     b.NodeTraitOps[node] = ParseEffects(t["effects"]);
                 }
+                foreach (JsonNode t in n["areaTraits"].Items)
+                    b.AreaTraits.Add(new AreaTraitDef { Id = t.Str("trait"), Pos = W(t["pos"]),
+                        Radius = t.Float("radius", 1.5f) * b.Arena.Scale, Effects = ParseEffects(t["effects"]) });
                 foreach (JsonNode c in n["covers"].Items)
                     b.Covers.Add(new CoverDef { Pos = W(c["pos"]), Radius = c.Float("radius", 1f), Hits = c.Int("hits", 8), Field = c.Str("field", "ice_cover") });
                 foreach (JsonNode r in n["laneSchedule"].Items)
@@ -787,6 +807,7 @@ namespace Aetherward.Sim.Content
                 Add(Biomes, id, b, "biome");
                 BiomeList.Add(b);
                 if (b.Default) DefaultBiome = b;
+                _arenaScale = WorldScale;
             }
             if (DefaultBiome == null) throw new FormatException("biomes.json needs one default biome");
         }
@@ -829,7 +850,7 @@ namespace Aetherward.Sim.Content
 
         public static readonly string[] KnownDifficultyModules =
         {
-            "frenzy", "enemy_speed", "enemy_damage", "enemy_hp", "crystal_max", "shop_prices", "blocked_node", "elite_affix", "boss_enrage",
+            "frenzy", "enemy_speed", "enemy_damage", "enemy_hp", "crystal_max", "shop_prices", "sealed_gate", "elite_affix", "boss_enrage",
             "hazard_shift", "split_lanes", "rarity_shift", "double_elite", "reroll_cost"
         };
 

@@ -1,0 +1,29 @@
+{
+ "shadowDirScreen": [
+  0.8197,
+  0.5729
+ ],
+ "shadowLengthPerHeight": 0.8947,
+ "braziersFlat": [
+  2.846,
+  7.368,
+  -12.808,
+  3.474,
+  7.115,
+  8.68,
+  -9.962,
+  11.053,
+  12.808,
+  6.091
+ ],
+ "aetherCrystalsFlat": [],
+ "edgeColor": [
+  0.3131,
+  0.3527,
+  0.4099
+ ],
+ "source": "ArtCache/EnvToon/stormspire_citadel",
+ "gamma": 1.3087,
+ "viewMeanBefore": 0.4861,
+ "viewMean": 0.4
+}

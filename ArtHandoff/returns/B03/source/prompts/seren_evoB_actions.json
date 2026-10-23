@@ -1,0 +1,11 @@
+{
+  "name": "seren_evoB_actions",
+  "refs": [
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B03/source/sheets/seren_evoB.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Heroes/ignis_cast.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Heroes/sylph_idle.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B02/exports/Art/Heroes/volt_idle.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B02/exports/Art/Heroes/freya_idle.png"
+  ],
+  "prompt": "Dark Mythic Fantasy, painterly stylized 2.5D; orthographic 38.3-degree elevation, three-quarter front body turned 25 degrees toward screen-right. Key upper-left-front #ffe9d0, rim back-right #9fe8ff, ambient #16233a. Controlled broad brush planes, coloured local-hue dark edges without black outlines.\nUse case stylized-concept. WIDE2560x1440 TWO separate FULL-BODY sprites exact SEREN PURIFIER ref1 same female face dark blonde hair open GOLD CIRCLET lighter ivory gold fitted plate white sash long gold LANTERN-SPEAR and three small abstract sunburst medallions orbiting close upper body. No shield sword or halo. LEFT CAST: lantern spear raised diagonally CLOSE beside shoulder at 70degree steep angle, free hand raised, contained brightest lantern glow, body lifted. RIGHT ATTACK: ranged RELEASE pose right hand extended SCREEN RIGHT +X while holding spear at STEEP DIAGONAL with tip beside shoulder (not horizontal), free palm release to +X. Keep long spear close to body and tip no more than 15% above head, compact narrow controller silhouette, all props full feet inside own half, large central gutter no overlap. Absolutely NO beam projectile wave slash trail or ground effect/shadow, no text. Transparent actual alpha. Same weapon cage design costume face in both. Bright warm key ivory planes cool #9fe8ff rim, edge mean>=.30 against basalt0.16."
+}

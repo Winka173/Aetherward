@@ -1,0 +1,1424 @@
+{
+  "batch": "B08",
+  "producer": "Codex",
+  "date": "2026-10-20",
+  "styleLock": {
+    "palette": [
+      "#2a2c31",
+      "#625c55",
+      "#6b2734",
+      "#ff6a2b",
+      "#8fe3ff",
+      "#2b5cff",
+      "#1d1f24"
+    ],
+    "light": "key upper-left-front #ffe9d0, rim back-right #9fe8ff, ambient #16233a",
+    "edge": "Dark local-hue edge, no uniform black outline; cool 1–3 px rim; controlled broad brush planes.",
+    "promptTemplate": "Dark Mythic Fantasy, painterly stylized 2.5D; orthographic 38.3-degree elevation, three-quarter front body turned 25 degrees toward screen-right. Key upper-left-front #ffe9d0, rim back-right #9fe8ff, ambient #16233a. Controlled broad brush planes, coloured local-hue dark edges without black outlines."
+  },
+  "tools": [
+    {
+      "name": "image_gen (Codex built-in)",
+      "version": "not exposed"
+    },
+    {
+      "name": "Python",
+      "packages": [
+        "Pillow",
+        "numpy",
+        "scipy"
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "id": "Enemies/runner_a",
+      "status": "delivered",
+      "export": "exports/Art/Enemies/runner_a.png",
+      "size": [
+        256,
+        256
+      ],
+      "source": "source/sheets/r1_runner_a.png",
+      "master": "source/masters/Enemies/runner_a@2x.png",
+      "generator": "image_gen (Codex built-in), version not exposed",
+      "prompt": "source/prompts/r1/runner_a.json",
+      "cleanup": "python source/scripts/produce.py source/prompts/r1/runner_a.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "R1 palette edit of original pose; utility-only alignment. See R1 QA for final technical and visual assessment.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "masterSize": [
+          512,
+          512
+        ],
+        "bounds": [
+          19,
+          92,
+          236,
+          236
+        ],
+        "height": 145,
+        "width": 218,
+        "footRow": 236,
+        "edgeLuminance": 0.35957901013270377,
+        "torsoX": 128.2,
+        "anchorFraction": 0.5
+      },
+      "revision": 1,
+      "revisionReference": "source/revision0/exports/Art/Enemies/runner_a.png"
+    },
+    {
+      "id": "Enemies/runner_b",
+      "status": "delivered",
+      "export": "exports/Art/Enemies/runner_b.png",
+      "size": [
+        256,
+        256
+      ],
+      "source": "source/sheets/r1_runner_b.png",
+      "master": "source/masters/Enemies/runner_b@2x.png",
+      "generator": "image_gen (Codex built-in), version not exposed",
+      "prompt": "source/prompts/r1/runner_b.json",
+      "cleanup": "python source/scripts/produce.py source/prompts/r1/runner_b.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "R1 palette edit of original pose; utility-only alignment. See R1 QA for final technical and visual assessment.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "masterSize": [
+          512,
+          512
+        ],
+        "bounds": [
+          15,
+          92,
+          240,
+          236
+        ],
+        "height": 145,
+        "width": 226,
+        "footRow": 236,
+        "edgeLuminance": 0.399928326309333,
+        "torsoX": 128.2,
+        "anchorFraction": 0.5
+      },
+      "revision": 1,
+      "revisionReference": "source/revision0/exports/Art/Enemies/runner_b.png"
+    },
+    {
+      "id": "Enemies/swarmling_a",
+      "status": "delivered",
+      "export": "exports/Art/Enemies/swarmling_a.png",
+      "size": [
+        256,
+        256
+      ],
+      "source": "source/sheets/r1_swarmling_a.png",
+      "master": "source/masters/Enemies/swarmling_a@2x.png",
+      "generator": "image_gen (Codex built-in), version not exposed",
+      "prompt": "source/prompts/r1/swarmling_a.json",
+      "cleanup": "python source/scripts/produce.py source/prompts/r1/swarmling_a.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "R1 palette edit of original pose; utility-only alignment. See R1 QA for final technical and visual assessment.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "masterSize": [
+          512,
+          512
+        ],
+        "bounds": [
+          39,
+          107,
+          216,
+          236
+        ],
+        "height": 130,
+        "width": 178,
+        "footRow": 236,
+        "edgeLuminance": 0.34314730409576766,
+        "torsoX": 127.8,
+        "anchorFraction": 0.5
+      },
+      "revision": 1,
+      "revisionReference": "source/revision0/exports/Art/Enemies/swarmling_a.png"
+    },
+    {
+      "id": "Enemies/swarmling_b",
+      "status": "delivered",
+      "export": "exports/Art/Enemies/swarmling_b.png",
+      "size": [
+        256,
+        256
+      ],
+      "source": "source/sheets/r1_swarmling_b.png",
+      "master": "source/masters/Enemies/swarmling_b@2x.png",
+      "generator": "image_gen (Codex built-in), version not exposed",
+      "prompt": "source/prompts/r1/swarmling_b.json",
+      "cleanup": "python source/scripts/produce.py source/prompts/r1/swarmling_b.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "R1 palette edit of original pose; utility-only alignment. See R1 QA for final technical and visual assessment.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "masterSize": [
+          512,
+          512
+        ],
+        "bounds": [
+          41,
+          107,
+          214,
+          236
+        ],
+        "height": 130,
+        "width": 174,
+        "footRow": 236,
+        "edgeLuminance": 0.36765052552424726,
+        "torsoX": 127.9,
+        "anchorFraction": 0.5
+      },
+      "revision": 1,
+      "revisionReference": "source/revision0/exports/Art/Enemies/swarmling_b.png"
+    },
+    {
+      "id": "Enemies/shieldbearer_a",
+      "status": "delivered",
+      "export": "exports/Art/Enemies/shieldbearer_a.png",
+      "size": [
+        256,
+        256
+      ],
+      "source": "source/sheets/r1_shieldbearer_a.png",
+      "master": "source/masters/Enemies/shieldbearer_a@2x.png",
+      "generator": "image_gen (Codex built-in), version not exposed",
+      "prompt": "source/prompts/r1/shieldbearer_a.json",
+      "cleanup": "python source/scripts/produce.py source/prompts/r1/shieldbearer_a.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "R1 palette edit of original pose; utility-only alignment. See R1 QA for final technical and visual assessment.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "masterSize": [
+          512,
+          512
+        ],
+        "bounds": [
+          45,
+          59,
+          201,
+          236
+        ],
+        "height": 178,
+        "width": 157,
+        "footRow": 236,
+        "edgeLuminance": 0.411646572612785,
+        "torsoX": 128.1,
+        "anchorFraction": 0.53
+      },
+      "revision": 1,
+      "revisionReference": "source/revision0/exports/Art/Enemies/shieldbearer_a.png"
+    },
+    {
+      "id": "Enemies/shieldbearer_b",
+      "status": "delivered",
+      "export": "exports/Art/Enemies/shieldbearer_b.png",
+      "size": [
+        256,
+        256
+      ],
+      "source": "source/sheets/r1_shieldbearer_b.png",
+      "master": "source/masters/Enemies/shieldbearer_b@2x.png",
+      "generator": "image_gen (Codex built-in), version not exposed",
+      "prompt": "source/prompts/r1/shieldbearer_b.json",
+      "cleanup": "python source/scripts/produce.py source/prompts/r1/shieldbearer_b.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "R1 palette edit of original pose; utility-only alignment. See R1 QA for final technical and visual assessment.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "masterSize": [
+          512,
+          512
+        ],
+        "bounds": [
+          45,
+          59,
+          201,
+          236
+        ],
+        "height": 178,
+        "width": 157,
+        "footRow": 236,
+        "edgeLuminance": 0.39670183997236746,
+        "torsoX": 128.1,
+        "anchorFraction": 0.53
+      },
+      "revision": 1,
+      "revisionReference": "source/revision0/exports/Art/Enemies/shieldbearer_b.png"
+    },
+    {
+      "id": "Enemies/sapper_a",
+      "status": "delivered",
+      "export": "exports/Art/Enemies/sapper_a.png",
+      "size": [
+        256,
+        256
+      ],
+      "source": "source/sheets/r1_sapper_a.png",
+      "master": "source/masters/Enemies/sapper_a@2x.png",
+      "generator": "image_gen (Codex built-in), version not exposed",
+      "prompt": "source/prompts/r1/sapper_a.json",
+      "cleanup": "python source/scripts/produce.py source/prompts/r1/sapper_a.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "R1 palette edit of original pose; utility-only alignment. See R1 QA for final technical and visual assessment.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "masterSize": [
+          512,
+          512
+        ],
+        "bounds": [
+          51,
+          88,
+          183,
+          236
+        ],
+        "height": 149,
+        "width": 133,
+        "footRow": 236,
+        "edgeLuminance": 0.5053193188357942,
+        "torsoX": 128.1,
+        "anchorFraction": 0.58
+      },
+      "revision": 1,
+      "revisionReference": "source/revision0/exports/Art/Enemies/sapper_a.png"
+    },
+    {
+      "id": "Enemies/sapper_b",
+      "status": "delivered",
+      "export": "exports/Art/Enemies/sapper_b.png",
+      "size": [
+        256,
+        256
+      ],
+      "source": "source/sheets/r1_sapper_b.png",
+      "master": "source/masters/Enemies/sapper_b@2x.png",
+      "generator": "image_gen (Codex built-in), version not exposed",
+      "prompt": "source/prompts/r1/sapper_b.json",
+      "cleanup": "python source/scripts/produce.py source/prompts/r1/sapper_b.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "R1 palette edit of original pose; utility-only alignment. See R1 QA for final technical and visual assessment.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "masterSize": [
+          512,
+          512
+        ],
+        "bounds": [
+          48,
+          88,
+          185,
+          236
+        ],
+        "height": 149,
+        "width": 138,
+        "footRow": 236,
+        "edgeLuminance": 0.3650621449142156,
+        "torsoX": 127.8,
+        "anchorFraction": 0.58
+      },
+      "revision": 1,
+      "revisionReference": "source/revision0/exports/Art/Enemies/sapper_b.png"
+    },
+    {
+      "id": "Enemies/warded_a",
+      "status": "delivered",
+      "export": "exports/Art/Enemies/warded_a.png",
+      "size": [
+        256,
+        256
+      ],
+      "source": "source/sheets/r1_warded_a.png",
+      "master": "source/masters/Enemies/warded_a@2x.png",
+      "generator": "image_gen (Codex built-in), version not exposed",
+      "prompt": "source/prompts/r1/warded_a.json",
+      "cleanup": "python source/scripts/produce.py source/prompts/r1/warded_a.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "R1 palette edit of original pose; utility-only alignment. See R1 QA for final technical and visual assessment.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "masterSize": [
+          512,
+          512
+        ],
+        "bounds": [
+          23,
+          57,
+          206,
+          236
+        ],
+        "height": 180,
+        "width": 184,
+        "footRow": 236,
+        "edgeLuminance": 0.5011558311036566,
+        "torsoX": 127.8,
+        "anchorFraction": 0.57
+      },
+      "revision": 1,
+      "revisionReference": "source/revision0/exports/Art/Enemies/warded_a.png"
+    },
+    {
+      "id": "Enemies/warded_b",
+      "status": "delivered",
+      "export": "exports/Art/Enemies/warded_b.png",
+      "size": [
+        256,
+        256
+      ],
+      "source": "source/sheets/r1_warded_b.png",
+      "master": "source/masters/Enemies/warded_b@2x.png",
+      "generator": "image_gen (Codex built-in), version not exposed",
+      "prompt": "source/prompts/r1/warded_b.json",
+      "cleanup": "python source/scripts/produce.py source/prompts/r1/warded_b.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "R1 palette edit of original pose; utility-only alignment. See R1 QA for final technical and visual assessment.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "masterSize": [
+          512,
+          512
+        ],
+        "bounds": [
+          17,
+          57,
+          210,
+          236
+        ],
+        "height": 180,
+        "width": 194,
+        "footRow": 236,
+        "edgeLuminance": 0.4329432138224589,
+        "torsoX": 127.8,
+        "anchorFraction": 0.57
+      },
+      "revision": 1,
+      "revisionReference": "source/revision0/exports/Art/Enemies/warded_b.png"
+    },
+    {
+      "id": "Enemies/summoner_a",
+      "status": "delivered",
+      "export": "exports/Art/Enemies/summoner_a.png",
+      "size": [
+        256,
+        256
+      ],
+      "source": "source/sheets/summoner_a_v2.png",
+      "master": "source/masters/Enemies/summoner_a@2x.png",
+      "generator": "image_gen (Codex built-in), version not exposed",
+      "prompt": "source/prompts/registered/summoner_a.json",
+      "cleanup": "python source/scripts/produce.py source/prompts/registered/summoner_a.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Distinctive staff/bomb identity retained; revised lighting can produce value variation during pose swaps.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "masterSize": [
+          512,
+          512
+        ],
+        "bounds": [
+          5,
+          57,
+          199,
+          236
+        ],
+        "height": 180,
+        "width": 195,
+        "footRow": 236,
+        "edgeLuminance": 0.39967972132873125,
+        "torsoX": 128.2,
+        "anchorFraction": 0.63
+      }
+    },
+    {
+      "id": "Enemies/summoner_b",
+      "status": "delivered",
+      "export": "exports/Art/Enemies/summoner_b.png",
+      "size": [
+        256,
+        256
+      ],
+      "source": "source/sheets/summoner_b.png",
+      "master": "source/masters/Enemies/summoner_b@2x.png",
+      "generator": "image_gen (Codex built-in), version not exposed",
+      "prompt": "source/prompts/registered/summoner_b.json",
+      "cleanup": "python source/scripts/produce.py source/prompts/registered/summoner_b.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Distinctive staff/bomb identity retained; revised lighting can produce value variation during pose swaps.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "masterSize": [
+          512,
+          512
+        ],
+        "bounds": [
+          5,
+          58,
+          199,
+          236
+        ],
+        "height": 179,
+        "width": 195,
+        "footRow": 236,
+        "edgeLuminance": 0.28768850739704305,
+        "torsoX": 127.8,
+        "anchorFraction": 0.63
+      }
+    },
+    {
+      "id": "Enemies/banner_a",
+      "status": "delivered",
+      "export": "exports/Art/Enemies/banner_a.png",
+      "size": [
+        256,
+        256
+      ],
+      "source": "source/sheets/banner_a_v2.png",
+      "master": "source/masters/Enemies/banner_a@2x.png",
+      "generator": "image_gen (Codex built-in), version not exposed",
+      "prompt": "source/prompts/registered/banner_a.json",
+      "cleanup": "python source/scripts/produce.py source/prompts/registered/banner_a.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Clear banner role; brightened identity cloth differs in value from passing frame, and compact attack approaches the canvas margin.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "masterSize": [
+          512,
+          512
+        ],
+        "bounds": [
+          42,
+          53,
+          164,
+          236
+        ],
+        "height": 184,
+        "width": 123,
+        "footRow": 236,
+        "edgeLuminance": 0.3757897010108391,
+        "torsoX": 128.0,
+        "anchorFraction": 0.7
+      }
+    },
+    {
+      "id": "Enemies/banner_b",
+      "status": "delivered",
+      "export": "exports/Art/Enemies/banner_b.png",
+      "size": [
+        256,
+        256
+      ],
+      "source": "source/sheets/banner_b.png",
+      "master": "source/masters/Enemies/banner_b@2x.png",
+      "generator": "image_gen (Codex built-in), version not exposed",
+      "prompt": "source/prompts/registered/banner_b.json",
+      "cleanup": "python source/scripts/produce.py source/prompts/registered/banner_b.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Clear banner role; brightened identity cloth differs in value from passing frame, and compact attack approaches the canvas margin.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "masterSize": [
+          512,
+          512
+        ],
+        "bounds": [
+          38,
+          52,
+          165,
+          236
+        ],
+        "height": 185,
+        "width": 128,
+        "footRow": 236,
+        "edgeLuminance": 0.2787529589626634,
+        "torsoX": 127.8,
+        "anchorFraction": 0.7
+      }
+    },
+    {
+      "id": "Enemies/mimic_a",
+      "status": "delivered",
+      "export": "exports/Art/Enemies/mimic_a.png",
+      "size": [
+        256,
+        256
+      ],
+      "source": "source/sheets/mimic_a.png",
+      "master": "source/masters/Enemies/mimic_a@2x.png",
+      "generator": "image_gen (Codex built-in), version not exposed",
+      "prompt": "source/prompts/registered/mimic_a.json",
+      "cleanup": "python source/scripts/produce.py source/prompts/registered/mimic_a.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Readable role silhouette and passing native size/value checks; minor etched and cloth detail changes remain between poses.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "masterSize": [
+          512,
+          512
+        ],
+        "bounds": [
+          49,
+          62,
+          206,
+          236
+        ],
+        "height": 175,
+        "width": 158,
+        "footRow": 236,
+        "edgeLuminance": 0.40782743826792656,
+        "torsoX": 128.2,
+        "anchorFraction": 0.5
+      }
+    },
+    {
+      "id": "Enemies/mimic_b",
+      "status": "delivered",
+      "export": "exports/Art/Enemies/mimic_b.png",
+      "size": [
+        256,
+        256
+      ],
+      "source": "source/sheets/mimic_b.png",
+      "master": "source/masters/Enemies/mimic_b@2x.png",
+      "generator": "image_gen (Codex built-in), version not exposed",
+      "prompt": "source/prompts/registered/mimic_b.json",
+      "cleanup": "python source/scripts/produce.py source/prompts/registered/mimic_b.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Readable role silhouette and passing native size/value checks; minor etched and cloth detail changes remain between poses.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "masterSize": [
+          512,
+          512
+        ],
+        "bounds": [
+          43,
+          63,
+          212,
+          236
+        ],
+        "height": 174,
+        "width": 170,
+        "footRow": 236,
+        "edgeLuminance": 0.3954358065237203,
+        "torsoX": 128.0,
+        "anchorFraction": 0.5
+      }
+    },
+    {
+      "id": "Enemies/riftling_a",
+      "status": "delivered",
+      "export": "exports/Art/Enemies/riftling_a.png",
+      "size": [
+        256,
+        256
+      ],
+      "source": "source/sheets/riftling_a.png",
+      "master": "source/masters/Enemies/riftling_a@2x.png",
+      "generator": "image_gen (Codex built-in), version not exposed",
+      "prompt": "source/prompts/registered/riftling_a.json",
+      "cleanup": "python source/scripts/produce.py source/prompts/registered/riftling_a.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Readable role silhouette and passing native size/value checks; minor etched and cloth detail changes remain between poses.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "masterSize": [
+          512,
+          512
+        ],
+        "bounds": [
+          69,
+          92,
+          186,
+          236
+        ],
+        "height": 145,
+        "width": 118,
+        "footRow": 236,
+        "edgeLuminance": 0.29518578657965494,
+        "torsoX": 127.8,
+        "anchorFraction": 0.5
+      }
+    },
+    {
+      "id": "Enemies/riftling_b",
+      "status": "delivered",
+      "export": "exports/Art/Enemies/riftling_b.png",
+      "size": [
+        256,
+        256
+      ],
+      "source": "source/sheets/riftling_b.png",
+      "master": "source/masters/Enemies/riftling_b@2x.png",
+      "generator": "image_gen (Codex built-in), version not exposed",
+      "prompt": "source/prompts/registered/riftling_b.json",
+      "cleanup": "python source/scripts/produce.py source/prompts/registered/riftling_b.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Readable role silhouette and passing native size/value checks; minor etched and cloth detail changes remain between poses.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "masterSize": [
+          512,
+          512
+        ],
+        "bounds": [
+          69,
+          92,
+          186,
+          236
+        ],
+        "height": 145,
+        "width": 118,
+        "footRow": 236,
+        "edgeLuminance": 0.31145670996638863,
+        "torsoX": 128.0,
+        "anchorFraction": 0.5
+      }
+    },
+    {
+      "id": "Enemies/ravager_a",
+      "status": "delivered",
+      "export": "exports/Art/Enemies/ravager_a.png",
+      "size": [
+        256,
+        256
+      ],
+      "source": "source/sheets/ravager_a.png",
+      "master": "source/masters/Enemies/ravager_a@2x.png",
+      "generator": "image_gen (Codex built-in), version not exposed",
+      "prompt": "source/prompts/registered/ravager_a.json",
+      "cleanup": "python source/scripts/produce.py source/prompts/registered/ravager_a.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Readable role silhouette and passing native size/value checks; minor etched and cloth detail changes remain between poses.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "masterSize": [
+          512,
+          512
+        ],
+        "bounds": [
+          20,
+          32,
+          235,
+          236
+        ],
+        "height": 205,
+        "width": 216,
+        "footRow": 236,
+        "edgeLuminance": 0.2790132519582466,
+        "torsoX": 128.2,
+        "anchorFraction": 0.5
+      }
+    },
+    {
+      "id": "Enemies/ravager_b",
+      "status": "delivered",
+      "export": "exports/Art/Enemies/ravager_b.png",
+      "size": [
+        256,
+        256
+      ],
+      "source": "source/sheets/ravager_b.png",
+      "master": "source/masters/Enemies/ravager_b@2x.png",
+      "generator": "image_gen (Codex built-in), version not exposed",
+      "prompt": "source/prompts/registered/ravager_b.json",
+      "cleanup": "python source/scripts/produce.py source/prompts/registered/ravager_b.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Readable role silhouette and passing native size/value checks; minor etched and cloth detail changes remain between poses.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "masterSize": [
+          512,
+          512
+        ],
+        "bounds": [
+          19,
+          32,
+          236,
+          236
+        ],
+        "height": 205,
+        "width": 218,
+        "footRow": 236,
+        "edgeLuminance": 0.3025359664386685,
+        "torsoX": 127.9,
+        "anchorFraction": 0.5
+      }
+    },
+    {
+      "id": "Enemies/runner_attack",
+      "status": "delivered",
+      "export": "exports/Art/Enemies/runner_attack.png",
+      "size": [
+        256,
+        256
+      ],
+      "source": "source/sheets/r1_runner_attack.png",
+      "master": "source/masters/Enemies/runner_attack@2x.png",
+      "generator": "image_gen (Codex built-in), version not exposed",
+      "prompt": "source/prompts/r1/runner_attack.json",
+      "cleanup": "python source/scripts/produce.py source/prompts/r1/runner_attack.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "R1 palette edit of original pose; utility-only alignment. See R1 QA for final technical and visual assessment.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "masterSize": [
+          512,
+          512
+        ],
+        "bounds": [
+          22,
+          92,
+          233,
+          236
+        ],
+        "height": 145,
+        "width": 212,
+        "footRow": 236,
+        "edgeLuminance": 0.4217233823903702,
+        "torsoX": 128.0,
+        "anchorFraction": 0.5
+      },
+      "revision": 1,
+      "revisionReference": "source/revision0/exports/Art/Enemies/runner_attack.png"
+    },
+    {
+      "id": "Enemies/swarmling_attack",
+      "status": "delivered",
+      "export": "exports/Art/Enemies/swarmling_attack.png",
+      "size": [
+        256,
+        256
+      ],
+      "source": "source/sheets/r1_swarmling_attack.png",
+      "master": "source/masters/Enemies/swarmling_attack@2x.png",
+      "generator": "image_gen (Codex built-in), version not exposed",
+      "prompt": "source/prompts/r1/swarmling_attack.json",
+      "cleanup": "python source/scripts/produce.py source/prompts/r1/swarmling_attack.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "R1 palette edit of original pose; utility-only alignment. See R1 QA for final technical and visual assessment.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "masterSize": [
+          512,
+          512
+        ],
+        "bounds": [
+          45,
+          92,
+          210,
+          236
+        ],
+        "height": 145,
+        "width": 166,
+        "footRow": 236,
+        "edgeLuminance": 0.40832362201252315,
+        "torsoX": 127.9,
+        "anchorFraction": 0.5
+      },
+      "revision": 1,
+      "revisionReference": "source/revision0/exports/Art/Enemies/swarmling_attack.png"
+    },
+    {
+      "id": "Enemies/shieldbearer_attack",
+      "status": "delivered",
+      "export": "exports/Art/Enemies/shieldbearer_attack.png",
+      "size": [
+        256,
+        256
+      ],
+      "source": "source/sheets/r1_shieldbearer_attack.png",
+      "master": "source/masters/Enemies/shieldbearer_attack@2x.png",
+      "generator": "image_gen (Codex built-in), version not exposed",
+      "prompt": "source/prompts/r1/shieldbearer_attack.json",
+      "cleanup": "python source/scripts/produce.py source/prompts/r1/shieldbearer_attack.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "R1 palette edit of original pose; utility-only alignment. See R1 QA for final technical and visual assessment.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "masterSize": [
+          512,
+          512
+        ],
+        "bounds": [
+          27,
+          59,
+          246,
+          236
+        ],
+        "height": 178,
+        "width": 220,
+        "footRow": 236,
+        "edgeLuminance": 0.42612684947862767,
+        "torsoX": 128.2,
+        "anchorFraction": 0.46
+      },
+      "revision": 1,
+      "revisionReference": "source/revision0/exports/Art/Enemies/shieldbearer_attack.png"
+    },
+    {
+      "id": "Enemies/sapper_attack",
+      "status": "delivered",
+      "export": "exports/Art/Enemies/sapper_attack.png",
+      "size": [
+        256,
+        256
+      ],
+      "source": "source/sheets/r1_sapper_attack.png",
+      "master": "source/masters/Enemies/sapper_attack@2x.png",
+      "generator": "image_gen (Codex built-in), version not exposed",
+      "prompt": "source/prompts/r1/sapper_attack.json",
+      "cleanup": "python source/scripts/produce.py source/prompts/r1/sapper_attack.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "R1 palette edit of original pose; utility-only alignment. See R1 QA for final technical and visual assessment.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "masterSize": [
+          512,
+          512
+        ],
+        "bounds": [
+          52,
+          87,
+          178,
+          236
+        ],
+        "height": 150,
+        "width": 127,
+        "footRow": 236,
+        "edgeLuminance": 0.38610232756276625,
+        "torsoX": 128.0,
+        "anchorFraction": 0.6
+      },
+      "revision": 1,
+      "revisionReference": "source/revision0/exports/Art/Enemies/sapper_attack.png"
+    },
+    {
+      "id": "Enemies/warded_attack",
+      "status": "delivered",
+      "export": "exports/Art/Enemies/warded_attack.png",
+      "size": [
+        256,
+        256
+      ],
+      "source": "source/sheets/r1_warded_attack.png",
+      "master": "source/masters/Enemies/warded_attack@2x.png",
+      "generator": "image_gen (Codex built-in), version not exposed",
+      "prompt": "source/prompts/r1/warded_attack.json",
+      "cleanup": "python source/scripts/produce.py source/prompts/r1/warded_attack.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "R1 palette edit of original pose; utility-only alignment. See R1 QA for final technical and visual assessment.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "masterSize": [
+          512,
+          512
+        ],
+        "bounds": [
+          3,
+          57,
+          218,
+          236
+        ],
+        "height": 180,
+        "width": 216,
+        "footRow": 236,
+        "edgeLuminance": 0.46750720552589464,
+        "torsoX": 128.3,
+        "anchorFraction": 0.58
+      },
+      "revision": 1,
+      "revisionReference": "source/revision0/exports/Art/Enemies/warded_attack.png"
+    },
+    {
+      "id": "Enemies/summoner_attack",
+      "status": "delivered",
+      "export": "exports/Art/Enemies/summoner_attack.png",
+      "size": [
+        256,
+        256
+      ],
+      "source": "source/sheets/summoner_attack_v2.png",
+      "master": "source/masters/Enemies/summoner_attack@2x.png",
+      "generator": "image_gen (Codex built-in), version not exposed",
+      "prompt": "source/prompts/registered/summoner_attack.json",
+      "cleanup": "python source/scripts/produce.py source/prompts/registered/summoner_attack.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Distinctive staff/bomb identity retained; revised lighting can produce value variation during pose swaps.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "masterSize": [
+          512,
+          512
+        ],
+        "bounds": [
+          16,
+          57,
+          215,
+          236
+        ],
+        "height": 180,
+        "width": 200,
+        "footRow": 236,
+        "edgeLuminance": 0.3442771634083542,
+        "torsoX": 127.9,
+        "anchorFraction": 0.56
+      }
+    },
+    {
+      "id": "Enemies/banner_attack",
+      "status": "delivered",
+      "export": "exports/Art/Enemies/banner_attack.png",
+      "size": [
+        256,
+        256
+      ],
+      "source": "source/sheets/banner_attack_v2.png",
+      "master": "source/masters/Enemies/banner_attack@2x.png",
+      "generator": "image_gen (Codex built-in), version not exposed",
+      "prompt": "source/prompts/registered/banner_attack.json",
+      "cleanup": "python source/scripts/produce.py source/prompts/registered/banner_attack.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Clear banner role; brightened identity cloth differs in value from passing frame, and compact attack approaches the canvas margin.",
+      "metrics": {
+        "rawSize": [
+          1390,
+          1132
+        ],
+        "masterSize": [
+          512,
+          512
+        ],
+        "bounds": [
+          44,
+          76,
+          252,
+          236
+        ],
+        "height": 161,
+        "width": 209,
+        "footRow": 236,
+        "edgeLuminance": 0.3221536969579068,
+        "torsoX": 127.0,
+        "anchorFraction": 0.4
+      }
+    },
+    {
+      "id": "Enemies/mimic_attack",
+      "status": "delivered",
+      "export": "exports/Art/Enemies/mimic_attack.png",
+      "size": [
+        256,
+        256
+      ],
+      "source": "source/sheets/mimic_attack.png",
+      "master": "source/masters/Enemies/mimic_attack@2x.png",
+      "generator": "image_gen (Codex built-in), version not exposed",
+      "prompt": "source/prompts/registered/mimic_attack.json",
+      "cleanup": "python source/scripts/produce.py source/prompts/registered/mimic_attack.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Readable role silhouette and passing native size/value checks; minor etched and cloth detail changes remain between poses.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "masterSize": [
+          512,
+          512
+        ],
+        "bounds": [
+          25,
+          62,
+          230,
+          236
+        ],
+        "height": 175,
+        "width": 206,
+        "footRow": 236,
+        "edgeLuminance": 0.44039197579554884,
+        "torsoX": 127.9,
+        "anchorFraction": 0.5
+      }
+    },
+    {
+      "id": "Enemies/riftling_attack",
+      "status": "delivered",
+      "export": "exports/Art/Enemies/riftling_attack.png",
+      "size": [
+        256,
+        256
+      ],
+      "source": "source/sheets/riftling_attack.png",
+      "master": "source/masters/Enemies/riftling_attack@2x.png",
+      "generator": "image_gen (Codex built-in), version not exposed",
+      "prompt": "source/prompts/registered/riftling_attack.json",
+      "cleanup": "python source/scripts/produce.py source/prompts/registered/riftling_attack.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Readable role silhouette and passing native size/value checks; minor etched and cloth detail changes remain between poses.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "masterSize": [
+          512,
+          512
+        ],
+        "bounds": [
+          52,
+          92,
+          203,
+          236
+        ],
+        "height": 145,
+        "width": 152,
+        "footRow": 236,
+        "edgeLuminance": 0.2837166195792659,
+        "torsoX": 128.0,
+        "anchorFraction": 0.5
+      }
+    },
+    {
+      "id": "Enemies/ravager_attack",
+      "status": "delivered",
+      "export": "exports/Art/Enemies/ravager_attack.png",
+      "size": [
+        256,
+        256
+      ],
+      "source": "source/sheets/ravager_attack.png",
+      "master": "source/masters/Enemies/ravager_attack@2x.png",
+      "generator": "image_gen (Codex built-in), version not exposed",
+      "prompt": "source/prompts/registered/ravager_attack.json",
+      "cleanup": "python source/scripts/produce.py source/prompts/registered/ravager_attack.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Readable role silhouette and passing native size/value checks; minor etched and cloth detail changes remain between poses.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "masterSize": [
+          512,
+          512
+        ],
+        "bounds": [
+          3,
+          33,
+          206,
+          236
+        ],
+        "height": 204,
+        "width": 204,
+        "footRow": 236,
+        "edgeLuminance": 0.2794653360004152,
+        "torsoX": 131.4,
+        "anchorFraction": 0.63
+      }
+    },
+    {
+      "id": "Enemies/grunt_attack",
+      "status": "delivered",
+      "export": "exports/Art/Enemies/grunt_attack.png",
+      "size": [
+        256,
+        256
+      ],
+      "source": "source/sheets/grunt_attack.png",
+      "master": "source/masters/Enemies/grunt_attack@2x.png",
+      "generator": "image_gen (Codex built-in), version not exposed",
+      "prompt": "source/prompts/registered/grunt_attack.json",
+      "cleanup": "python source/scripts/produce.py source/prompts/registered/grunt_attack.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Readable role silhouette and passing native size/value checks; minor etched and cloth detail changes remain between poses.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "masterSize": [
+          512,
+          512
+        ],
+        "bounds": [
+          52,
+          113,
+          245,
+          236
+        ],
+        "height": 124,
+        "width": 194,
+        "footRow": 236,
+        "edgeLuminance": 0.2845014176419922,
+        "torsoX": 128.1,
+        "anchorFraction": 0.39
+      }
+    },
+    {
+      "id": "Enemies/juggernaut_attack",
+      "status": "delivered",
+      "export": "exports/Art/Enemies/juggernaut_attack.png",
+      "size": [
+        256,
+        256
+      ],
+      "source": "source/sheets/juggernaut_attack.png",
+      "master": "source/masters/Enemies/juggernaut_attack@2x.png",
+      "generator": "image_gen (Codex built-in), version not exposed",
+      "prompt": "source/prompts/registered/juggernaut_attack.json",
+      "cleanup": "python source/scripts/produce.py source/prompts/registered/juggernaut_attack.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Readable role silhouette and passing native size/value checks; minor etched and cloth detail changes remain between poses.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "masterSize": [
+          512,
+          512
+        ],
+        "bounds": [
+          3,
+          32,
+          206,
+          236
+        ],
+        "height": 205,
+        "width": 204,
+        "footRow": 236,
+        "edgeLuminance": 0.32249172484482663,
+        "torsoX": 134.0,
+        "anchorFraction": 0.64
+      }
+    },
+    {
+      "id": "Enemies/hexcaster_attack",
+      "status": "delivered",
+      "export": "exports/Art/Enemies/hexcaster_attack.png",
+      "size": [
+        256,
+        256
+      ],
+      "source": "source/sheets/hexcaster_attack.png",
+      "master": "source/masters/Enemies/hexcaster_attack@2x.png",
+      "generator": "image_gen (Codex built-in), version not exposed",
+      "prompt": "source/prompts/registered/hexcaster_attack.json",
+      "cleanup": "python source/scripts/produce.py source/prompts/registered/hexcaster_attack.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Readable role silhouette and passing native size/value checks; minor etched and cloth detail changes remain between poses.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "masterSize": [
+          512,
+          512
+        ],
+        "bounds": [
+          3,
+          57,
+          223,
+          236
+        ],
+        "height": 180,
+        "width": 221,
+        "footRow": 236,
+        "edgeLuminance": 0.3485767551236669,
+        "torsoX": 135.6,
+        "anchorFraction": 0.6
+      }
+    },
+    {
+      "id": "Enemies/storm_harpy_attack",
+      "status": "delivered",
+      "export": "exports/Art/Enemies/storm_harpy_attack.png",
+      "size": [
+        256,
+        256
+      ],
+      "source": "source/sheets/storm_harpy_attack.png",
+      "master": "source/masters/Enemies/storm_harpy_attack@2x.png",
+      "generator": "image_gen (Codex built-in), version not exposed",
+      "prompt": "source/prompts/registered/storm_harpy_attack.json",
+      "cleanup": "python source/scripts/produce.py source/prompts/registered/storm_harpy_attack.json",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Readable role silhouette and passing native size/value checks; minor etched and cloth detail changes remain between poses.",
+      "metrics": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "masterSize": [
+          512,
+          512
+        ],
+        "bounds": [
+          5,
+          35,
+          209,
+          208
+        ],
+        "height": 174,
+        "width": 205,
+        "footRow": 208,
+        "edgeLuminance": 0.3721415610531996,
+        "torsoX": 128.0,
+        "anchorFraction": 0.6
+      }
+    }
+  ],
+  "extras": [
+    {
+      "path": "previews/b08_all_frames_basalt_1080p.png",
+      "kind": "offline review composite, not a Unity screenshot"
+    },
+    {
+      "path": "previews/b08_all_frames_basalt_1440p.png",
+      "kind": "offline review composite, not a Unity screenshot"
+    },
+    {
+      "path": "previews/b08_all_frames_basalt_720p.png",
+      "kind": "offline review composite, not a Unity screenshot"
+    },
+    {
+      "path": "previews/b08_colour_720p.png",
+      "kind": "offline sprite review sheet"
+    },
+    {
+      "path": "previews/b08_grayscale_720p.png",
+      "kind": "offline sprite review sheet"
+    },
+    {
+      "path": "previews/b08_silhouette_720p.png",
+      "kind": "offline sprite review sheet"
+    },
+    {
+      "path": "previews/scene_b08_1080p.png",
+      "kind": "offline review composite, not a Unity screenshot"
+    },
+    {
+      "path": "previews/scene_b08_1440p.png",
+      "kind": "offline review composite, not a Unity screenshot"
+    },
+    {
+      "path": "previews/scene_b08_720p.png",
+      "kind": "offline review composite, not a Unity screenshot"
+    },
+    {
+      "path": "previews/units_b08_colour.png",
+      "kind": "offline sprite review sheet"
+    },
+    {
+      "path": "previews/units_b08_gray.png",
+      "kind": "offline sprite review sheet"
+    },
+    {
+      "path": "previews/units_b08_silhouette.png",
+      "kind": "offline sprite review sheet"
+    }
+  ],
+  "knownIssues": [
+    "Lighting variation across corrected Sapper, Summoner and Banner poses may flicker during swaps.",
+    "Torso anchors are visual estimates; fine-detail drift and compact Grunt/Banner attack framing require animation review.",
+    "Extended validator has 42 integration-metadata blockers on 14 new attack sprites; lead must create live .meta/import settings and provenance entries. No Unity acceptance performed."
+  ],
+  "blockers": [],
+  "integrationRequirements": [
+    "14 new attack sprites need lead-owned Unity metadata, import settings and asset manifest entries; source/import_plan.json records exact contract facts."
+  ],
+  "qa": {
+    "intake": "qa/intake.json",
+    "local": "qa/local_metrics.json",
+    "extended": "qa/validation_status.json",
+    "hashes": "qa/artifact_hashes.json",
+    "generationCalls": 43
+  },
+  "revision": 1
+}

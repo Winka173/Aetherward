@@ -1,0 +1,1060 @@
+{
+  "Enemies/siegebreaker_golem_a": {
+    "source": "source/sheets/siegebreaker_golem_a.png",
+    "master": "source/masters/Enemies/siegebreaker_golem_a@2x.png",
+    "prompt": "source/prompts/siegebreaker_golem_a.json",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "rawOpaqueBounds": [
+      32,
+      66,
+      1241,
+      1197
+    ],
+    "scale": 0.7427055702917772,
+    "footRow": 485,
+    "height": 419,
+    "edgeLuminance": 0.3789493347993403,
+    "torsoAnchorTarget": 256,
+    "registeredTorsoX": 256.18,
+    "rawTorsoAnchorX": 630,
+    "registration": "authored torso anchor"
+  },
+  "Enemies/siegebreaker_golem_b": {
+    "source": "source/sheets/siegebreaker_golem_b.png",
+    "master": "source/masters/Enemies/siegebreaker_golem_b@2x.png",
+    "prompt": "source/prompts/siegebreaker_golem_b.json",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "rawOpaqueBounds": [
+      45,
+      63,
+      1253,
+      1207
+    ],
+    "scale": 0.7427055702917772,
+    "footRow": 486,
+    "height": 425,
+    "edgeLuminance": 0.36282804257751106,
+    "torsoAnchorTarget": 256,
+    "registeredTorsoX": 256.07,
+    "rawTorsoAnchorX": 640,
+    "registration": "authored torso anchor"
+  },
+  "Enemies/siegebreaker_golem_tell": {
+    "source": "source/sheets/siegebreaker_golem_tell.png",
+    "master": "source/masters/Enemies/siegebreaker_golem_tell@2x.png",
+    "prompt": "source/prompts/siegebreaker_golem_tell.json",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "rawOpaqueBounds": [
+      35,
+      56,
+      1240,
+      1197
+    ],
+    "scale": 0.7092198581560284,
+    "footRow": 485,
+    "height": 404,
+    "edgeLuminance": 0.3411614247895955,
+    "torsoAnchorTarget": 256,
+    "registeredTorsoX": 258.06,
+    "rawTorsoAnchorX": 740,
+    "registration": "authored torso anchor"
+  },
+  "Enemies/siegebreaker_golem_attack": {
+    "source": "source/sheets/siegebreaker_golem_attack_v2.png",
+    "master": "source/masters/Enemies/siegebreaker_golem_attack@2x.png",
+    "prompt": "source/prompts/siegebreaker_golem_attack_v2.json",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "rawOpaqueBounds": [
+      36,
+      125,
+      1253,
+      1165
+    ],
+    "scale": 0.7711538461538462,
+    "footRow": 486,
+    "height": 401,
+    "edgeLuminance": 0.34771531345828405,
+    "torsoAnchorTarget": 256,
+    "registeredTorsoX": 255.76,
+    "rawTorsoAnchorX": 625,
+    "registration": "authored torso anchor"
+  },
+  "Enemies/ignaroth_a": {
+    "source": "source/sheets/ignaroth_a.png",
+    "master": "source/masters/Enemies/ignaroth_a@2x.png",
+    "prompt": "source/prompts/ignaroth_a.json",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "rawOpaqueBounds": [
+      96,
+      41,
+      1204,
+      1205
+    ],
+    "scale": 0.7216494845360825,
+    "footRow": 485,
+    "height": 419,
+    "edgeLuminance": 0.3081368115224837,
+    "torsoAnchorTarget": 256,
+    "registeredTorsoX": 255.76,
+    "rawTorsoAnchorX": 745,
+    "registration": "authored torso anchor"
+  },
+  "Enemies/ignaroth_b": {
+    "source": "source/sheets/ignaroth_b.png",
+    "master": "source/masters/Enemies/ignaroth_b@2x.png",
+    "prompt": "source/prompts/ignaroth_b.json",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "rawOpaqueBounds": [
+      59,
+      28,
+      1236,
+      1202
+    ],
+    "scale": 0.7132667617689016,
+    "footRow": 485,
+    "height": 418,
+    "edgeLuminance": 0.3173406204259065,
+    "torsoAnchorTarget": 256,
+    "registeredTorsoX": 258.07,
+    "rawTorsoAnchorX": 760,
+    "registration": "authored torso anchor"
+  },
+  "Enemies/ignaroth_tell": {
+    "source": "source/sheets/ignaroth_tell.png",
+    "master": "source/masters/Enemies/ignaroth_tell@2x.png",
+    "prompt": "source/prompts/ignaroth_tell.json",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "rawOpaqueBounds": [
+      183,
+      15,
+      1194,
+      1216
+    ],
+    "scale": 0.7216494845360825,
+    "footRow": 485,
+    "height": 433,
+    "edgeLuminance": 0.3375140113209745,
+    "torsoAnchorTarget": 256,
+    "registeredTorsoX": 256.06,
+    "rawTorsoAnchorX": 740,
+    "registration": "authored torso anchor"
+  },
+  "Enemies/ignaroth_attack": {
+    "source": "source/sheets/ignaroth_attack.png",
+    "master": "source/masters/Enemies/ignaroth_attack@2x.png",
+    "prompt": "source/prompts/ignaroth_attack.json",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "rawOpaqueBounds": [
+      15,
+      66,
+      1253,
+      1186
+    ],
+    "scale": 0.7194244604316546,
+    "footRow": 485,
+    "height": 402,
+    "edgeLuminance": 0.35436868213747635,
+    "torsoAnchorTarget": 256,
+    "registeredTorsoX": 258.08,
+    "rawTorsoAnchorX": 710,
+    "registration": "authored torso anchor"
+  },
+  "Enemies/vaelith_a": {
+    "source": "source/sheets/vaelith_a.png",
+    "master": "source/masters/Enemies/vaelith_a@2x.png",
+    "prompt": "source/prompts/vaelith_a.json",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "rawOpaqueBounds": [
+      47,
+      40,
+      1235,
+      1224
+    ],
+    "scale": 0.7094594594594594,
+    "footRow": 485,
+    "height": 419,
+    "edgeLuminance": 0.390181966967951,
+    "torsoAnchorTarget": 256,
+    "registeredTorsoX": 255.84,
+    "rawTorsoAnchorX": 730,
+    "registration": "authored torso anchor"
+  },
+  "Enemies/vaelith_b": {
+    "source": "source/sheets/vaelith_b.png",
+    "master": "source/masters/Enemies/vaelith_b@2x.png",
+    "prompt": "source/prompts/vaelith_b.json",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "rawOpaqueBounds": [
+      36,
+      32,
+      1229,
+      1240
+    ],
+    "scale": 0.6906077348066298,
+    "footRow": 485,
+    "height": 416,
+    "edgeLuminance": 0.38170748959905837,
+    "torsoAnchorTarget": 256,
+    "registeredTorsoX": 258.04,
+    "rawTorsoAnchorX": 760,
+    "registration": "authored torso anchor"
+  },
+  "Enemies/vaelith_tell": {
+    "source": "source/sheets/vaelith_tell.png",
+    "master": "source/masters/Enemies/vaelith_tell@2x.png",
+    "prompt": "source/prompts/vaelith_tell.json",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "rawOpaqueBounds": [
+      50,
+      44,
+      1231,
+      1222
+    ],
+    "scale": 0.7094594594594594,
+    "footRow": 485,
+    "height": 417,
+    "edgeLuminance": 0.41976069660298176,
+    "torsoAnchorTarget": 256,
+    "registeredTorsoX": 256.05,
+    "rawTorsoAnchorX": 735,
+    "registration": "authored torso anchor"
+  },
+  "Enemies/vaelith_attack": {
+    "source": "source/sheets/vaelith_attack.png",
+    "master": "source/masters/Enemies/vaelith_attack@2x.png",
+    "prompt": "source/prompts/vaelith_attack.json",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "rawOpaqueBounds": [
+      25,
+      46,
+      1240,
+      1230
+    ],
+    "scale": 0.7094594594594594,
+    "footRow": 485,
+    "height": 419,
+    "edgeLuminance": 0.4000189620297336,
+    "torsoAnchorTarget": 256,
+    "registeredTorsoX": 256.01,
+    "rawTorsoAnchorX": 700,
+    "registration": "authored torso anchor"
+  },
+  "Enemies/mirrath_a": {
+    "source": "source/sheets/mirrath_a.png",
+    "master": "source/masters/Enemies/mirrath_a@2x.png",
+    "prompt": "source/prompts/mirrath_a.json",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "rawOpaqueBounds": [
+      54,
+      21,
+      1157,
+      1224
+    ],
+    "scale": 0.6934812760055479,
+    "footRow": 485,
+    "height": 416,
+    "edgeLuminance": 0.4315204593222534,
+    "torsoAnchorTarget": 256,
+    "registeredTorsoX": 258.04,
+    "rawTorsoAnchorX": 775,
+    "registration": "authored torso anchor"
+  },
+  "Enemies/mirrath_b": {
+    "source": "source/sheets/mirrath_b.png",
+    "master": "source/masters/Enemies/mirrath_b@2x.png",
+    "prompt": "source/prompts/mirrath_b.json",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "rawOpaqueBounds": [
+      40,
+      27,
+      1184,
+      1223
+    ],
+    "scale": 0.6802721088435374,
+    "footRow": 485,
+    "height": 406,
+    "edgeLuminance": 0.4311705574313179,
+    "torsoAnchorTarget": 256,
+    "registeredTorsoX": 258.02,
+    "rawTorsoAnchorX": 775,
+    "registration": "authored torso anchor"
+  },
+  "Enemies/mirrath_tell": {
+    "source": "source/sheets/mirrath_tell.png",
+    "master": "source/masters/Enemies/mirrath_tell@2x.png",
+    "prompt": "source/prompts/mirrath_tell.json",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "rawOpaqueBounds": [
+      22,
+      26,
+      1233,
+      1229
+    ],
+    "scale": 0.6934812760055479,
+    "footRow": 486,
+    "height": 417,
+    "edgeLuminance": 0.40781356016626524,
+    "torsoAnchorTarget": 256,
+    "registeredTorsoX": 257.0,
+    "rawTorsoAnchorX": 740,
+    "registration": "authored torso anchor"
+  },
+  "Enemies/mirrath_attack": {
+    "source": "source/sheets/mirrath_attack_v2.png",
+    "master": "source/masters/Enemies/mirrath_attack@2x.png",
+    "prompt": "source/prompts/mirrath_attack_v2.json",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "rawOpaqueBounds": [
+      21,
+      70,
+      1248,
+      1191
+    ],
+    "scale": 0.7154326494201606,
+    "footRow": 485,
+    "height": 400,
+    "edgeLuminance": 0.4027682337847976,
+    "torsoAnchorTarget": 256,
+    "registeredTorsoX": 254.81,
+    "rawTorsoAnchorX": 550,
+    "registration": "authored torso anchor"
+  },
+  "Enemies/aetherion_a": {
+    "source": "source/sheets/aetherion_a_v2.png",
+    "master": "source/masters/Enemies/aetherion_a@2x.png",
+    "prompt": "source/prompts/aetherion_a_v2.json",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "rawOpaqueBounds": [
+      74,
+      22,
+      1127,
+      1239
+    ],
+    "scale": 0.6947890818858561,
+    "footRow": 485,
+    "height": 422,
+    "edgeLuminance": 0.3484966332308981,
+    "torsoAnchorTarget": 256,
+    "registeredTorsoX": 256.09,
+    "rawTorsoAnchorX": 670,
+    "registration": "authored torso anchor"
+  },
+  "Enemies/aetherion_b": {
+    "source": "source/sheets/aetherion_b.png",
+    "master": "source/masters/Enemies/aetherion_b@2x.png",
+    "prompt": "source/prompts/aetherion_b.json",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "rawOpaqueBounds": [
+      144,
+      52,
+      1144,
+      1213
+    ],
+    "scale": 0.6947890818858561,
+    "footRow": 486,
+    "height": 404,
+    "edgeLuminance": 0.35535684869747514,
+    "torsoAnchorTarget": 256,
+    "registeredTorsoX": 256.17,
+    "rawTorsoAnchorX": 710,
+    "registration": "authored torso anchor"
+  },
+  "Enemies/aetherion_tell": {
+    "source": "source/sheets/aetherion_tell.png",
+    "master": "source/masters/Enemies/aetherion_tell@2x.png",
+    "prompt": "source/prompts/aetherion_tell.json",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "rawOpaqueBounds": [
+      132,
+      17,
+      1113,
+      1214
+    ],
+    "scale": 0.6947890818858561,
+    "footRow": 486,
+    "height": 416,
+    "edgeLuminance": 0.3505090199100253,
+    "torsoAnchorTarget": 256,
+    "registeredTorsoX": 255.89,
+    "rawTorsoAnchorX": 690,
+    "registration": "authored torso anchor"
+  },
+  "Enemies/aetherion_attack": {
+    "source": "source/sheets/aetherion_attack.png",
+    "master": "source/masters/Enemies/aetherion_attack@2x.png",
+    "prompt": "source/prompts/aetherion_attack.json",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "rawOpaqueBounds": [
+      30,
+      95,
+      1245,
+      1218
+    ],
+    "scale": 0.7141585040071238,
+    "footRow": 485,
+    "height": 400,
+    "edgeLuminance": 0.35872040618972545,
+    "torsoAnchorTarget": 256,
+    "registeredTorsoX": 255.89,
+    "rawTorsoAnchorX": 640,
+    "registration": "authored torso anchor"
+  },
+  "Enemies/thornmother_a": {
+    "source": "source/sheets/thornmother_a.png",
+    "master": "source/masters/Enemies/thornmother_a@2x.png",
+    "prompt": "source/prompts/thornmother_a.json",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "rawOpaqueBounds": [
+      10,
+      31,
+      1241,
+      1230
+    ],
+    "scale": 0.684931506849315,
+    "footRow": 485,
+    "height": 410,
+    "edgeLuminance": 0.33319088862735347,
+    "torsoAnchorTarget": 256,
+    "registeredTorsoX": 258.03,
+    "rawTorsoAnchorX": 740,
+    "registration": "authored torso anchor"
+  },
+  "Enemies/ironclad_warlord_a": {
+    "source": "source/sheets/ironclad_warlord_a_v2.png",
+    "master": "source/masters/Enemies/ironclad_warlord_a@2x.png",
+    "prompt": "source/prompts/ironclad_warlord_a_v2.json",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "rawOpaqueBounds": [
+      68,
+      53,
+      1191,
+      1204
+    ],
+    "scale": 0.6967854039965248,
+    "footRow": 485,
+    "height": 400,
+    "edgeLuminance": 0.3399501047867711,
+    "torsoAnchorTarget": 256,
+    "registeredTorsoX": 256.23,
+    "rawTorsoAnchorX": 700,
+    "registration": "authored torso anchor"
+  },
+  "Enemies/ashen_matriarch_a": {
+    "source": "source/sheets/ashen_matriarch_a.png",
+    "master": "source/masters/Enemies/ashen_matriarch_a@2x.png",
+    "prompt": "source/prompts/ashen_matriarch_a.json",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "rawOpaqueBounds": [
+      62,
+      63,
+      1235,
+      1197
+    ],
+    "scale": 0.7407407407407407,
+    "footRow": 485,
+    "height": 419,
+    "edgeLuminance": 0.338708285591948,
+    "torsoAnchorTarget": 256,
+    "registeredTorsoX": 256.11,
+    "rawTorsoAnchorX": 710,
+    "registration": "authored torso anchor"
+  },
+  "Enemies/thornmother_b": {
+    "source": "source/sheets/thornmother_b.png",
+    "master": "source/masters/Enemies/thornmother_b@2x.png",
+    "prompt": "source/prompts/thornmother_b.json",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "rawOpaqueBounds": [
+      57,
+      29,
+      1247,
+      1239
+    ],
+    "scale": 0.684931506849315,
+    "footRow": 486,
+    "height": 415,
+    "edgeLuminance": 0.349912475738856,
+    "torsoAnchorTarget": 256,
+    "registeredTorsoX": 255.78,
+    "rawTorsoAnchorX": 760,
+    "registration": "authored torso anchor"
+  },
+  "Enemies/thornmother_tell": {
+    "source": "source/sheets/thornmother_tell.png",
+    "master": "source/masters/Enemies/thornmother_tell@2x.png",
+    "prompt": "source/prompts/thornmother_tell.json",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "rawOpaqueBounds": [
+      14,
+      32,
+      1247,
+      1228
+    ],
+    "scale": 0.684931506849315,
+    "footRow": 485,
+    "height": 408,
+    "edgeLuminance": 0.36021482435697755,
+    "torsoAnchorTarget": 256,
+    "registeredTorsoX": 256.66,
+    "rawTorsoAnchorX": 740,
+    "registration": "authored torso anchor"
+  },
+  "Enemies/thornmother_attack": {
+    "source": "source/sheets/thornmother_attack.png",
+    "master": "source/masters/Enemies/thornmother_attack@2x.png",
+    "prompt": "source/prompts/thornmother_attack.json",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "rawOpaqueBounds": [
+      16,
+      66,
+      1241,
+      1220
+    ],
+    "scale": 0.6949740034662045,
+    "footRow": 485,
+    "height": 400,
+    "edgeLuminance": 0.3744920186822771,
+    "torsoAnchorTarget": 256,
+    "registeredTorsoX": 255.95,
+    "rawTorsoAnchorX": 610,
+    "registration": "authored torso anchor"
+  },
+  "Enemies/ironclad_warlord_b": {
+    "source": "source/sheets/ironclad_warlord_b.png",
+    "master": "source/masters/Enemies/ironclad_warlord_b@2x.png",
+    "prompt": "source/prompts/ironclad_warlord_b.json",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "rawOpaqueBounds": [
+      56,
+      43,
+      1223,
+      1212
+    ],
+    "scale": 0.6967854039965248,
+    "footRow": 486,
+    "height": 408,
+    "edgeLuminance": 0.3298760144751379,
+    "torsoAnchorTarget": 256,
+    "registeredTorsoX": 256.12,
+    "rawTorsoAnchorX": 725,
+    "registration": "authored torso anchor"
+  },
+  "Enemies/ironclad_warlord_tell": {
+    "source": "source/sheets/ironclad_warlord_tell.png",
+    "master": "source/masters/Enemies/ironclad_warlord_tell@2x.png",
+    "prompt": "source/prompts/ironclad_warlord_tell.json",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "rawOpaqueBounds": [
+      42,
+      26,
+      1210,
+      1228
+    ],
+    "scale": 0.6963788300835655,
+    "footRow": 486,
+    "height": 419,
+    "edgeLuminance": 0.31970867814919995,
+    "torsoAnchorTarget": 256,
+    "registeredTorsoX": 258.04,
+    "rawTorsoAnchorX": 760,
+    "registration": "authored torso anchor"
+  },
+  "Enemies/ironclad_warlord_attack": {
+    "source": "source/sheets/ironclad_warlord_attack.png",
+    "master": "source/masters/Enemies/ironclad_warlord_attack@2x.png",
+    "prompt": "source/prompts/ironclad_warlord_attack.json",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "rawOpaqueBounds": [
+      50,
+      28,
+      1249,
+      1208
+    ],
+    "scale": 0.684931506849315,
+    "footRow": 485,
+    "height": 403,
+    "edgeLuminance": 0.3292029963535169,
+    "torsoAnchorTarget": 256,
+    "registeredTorsoX": 258.03,
+    "rawTorsoAnchorX": 780,
+    "registration": "authored torso anchor"
+  },
+  "Enemies/ashen_matriarch_b": {
+    "source": "source/sheets/ashen_matriarch_b.png",
+    "master": "source/masters/Enemies/ashen_matriarch_b@2x.png",
+    "prompt": "source/prompts/ashen_matriarch_b.json",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "rawOpaqueBounds": [
+      36,
+      76,
+      1253,
+      1199
+    ],
+    "scale": 0.7309941520467836,
+    "footRow": 485,
+    "height": 410,
+    "edgeLuminance": 0.3628333486668163,
+    "torsoAnchorTarget": 256,
+    "registeredTorsoX": 258.1,
+    "rawTorsoAnchorX": 720,
+    "registration": "authored torso anchor"
+  },
+  "Enemies/nyxhollow_a": {
+    "source": "source/sheets/nyxhollow_a.png",
+    "master": "source/masters/Enemies/nyxhollow_a@2x.png",
+    "prompt": "source/prompts/nyxhollow_a.json",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "rawOpaqueBounds": [
+      50,
+      93,
+      1221,
+      1207
+    ],
+    "scale": 0.7407407407407407,
+    "footRow": 485,
+    "height": 412,
+    "edgeLuminance": 0.3574821558364679,
+    "torsoAnchorTarget": 256,
+    "registeredTorsoX": 257.61,
+    "rawTorsoAnchorX": 725,
+    "registration": "authored torso anchor"
+  },
+  "Enemies/ashen_matriarch_tell": {
+    "source": "source/sheets/ashen_matriarch_tell.png",
+    "master": "source/masters/Enemies/ashen_matriarch_tell@2x.png",
+    "prompt": "source/prompts/ashen_matriarch_tell.json",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "rawOpaqueBounds": [
+      31,
+      74,
+      1241,
+      1197
+    ],
+    "scale": 0.7363770250368189,
+    "footRow": 485,
+    "height": 413,
+    "edgeLuminance": 0.4086646141572636,
+    "torsoAnchorTarget": 256,
+    "registeredTorsoX": 258.1,
+    "rawTorsoAnchorX": 710,
+    "registration": "authored torso anchor"
+  },
+  "Enemies/seraphyne_a": {
+    "source": "source/sheets/seraphyne_a.png",
+    "master": "source/masters/Enemies/seraphyne_a@2x.png",
+    "prompt": "source/prompts/seraphyne_a.json",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "rawOpaqueBounds": [
+      51,
+      47,
+      1205,
+      1204
+    ],
+    "scale": 0.7260155574762316,
+    "footRow": 486,
+    "height": 419,
+    "edgeLuminance": 0.6459416795502282,
+    "torsoAnchorTarget": 256,
+    "registeredTorsoX": 256.07,
+    "rawTorsoAnchorX": 730,
+    "registration": "authored torso anchor"
+  },
+  "Enemies/ashen_matriarch_attack": {
+    "source": "source/sheets/ashen_matriarch_attack.png",
+    "master": "source/masters/Enemies/ashen_matriarch_attack@2x.png",
+    "prompt": "source/prompts/ashen_matriarch_attack.json",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "rawOpaqueBounds": [
+      2,
+      113,
+      1253,
+      1167
+    ],
+    "scale": 0.7609108159392789,
+    "footRow": 485,
+    "height": 401,
+    "edgeLuminance": 0.3698045860577427,
+    "torsoAnchorTarget": 256,
+    "registeredTorsoX": 255.99,
+    "rawTorsoAnchorX": 640,
+    "registration": "authored torso anchor"
+  },
+  "Enemies/gravemaw_a": {
+    "source": "source/sheets/gravemaw_a.png",
+    "master": "source/masters/Enemies/gravemaw_a@2x.png",
+    "prompt": "source/prompts/gravemaw_a.json",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "rawOpaqueBounds": [
+      128,
+      71,
+      1186,
+      1203
+    ],
+    "scale": 0.7420494699646644,
+    "footRow": 486,
+    "height": 420,
+    "edgeLuminance": 0.34572954871691386,
+    "torsoAnchorTarget": 256,
+    "registeredTorsoX": 255.84,
+    "rawTorsoAnchorX": 700,
+    "registration": "authored torso anchor"
+  },
+  "Enemies/nyxhollow_b": {
+    "source": "source/sheets/nyxhollow_b.png",
+    "master": "source/masters/Enemies/nyxhollow_b@2x.png",
+    "prompt": "source/prompts/nyxhollow_b.json",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "rawOpaqueBounds": [
+      35,
+      90,
+      1246,
+      1211
+    ],
+    "scale": 0.7246376811594203,
+    "footRow": 485,
+    "height": 406,
+    "edgeLuminance": 0.41384987153036745,
+    "torsoAnchorTarget": 256,
+    "registeredTorsoX": 258.09,
+    "rawTorsoAnchorX": 725,
+    "registration": "authored torso anchor"
+  },
+  "Enemies/rift_warden_tell": {
+    "source": "source/sheets/rift_warden_tell.png",
+    "master": "source/masters/Enemies/rift_warden_tell@2x.png",
+    "prompt": "source/prompts/rift_warden_tell.json",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "rawOpaqueBounds": [
+      67,
+      56,
+      1220,
+      1197
+    ],
+    "scale": 0.7361963190184049,
+    "footRow": 485,
+    "height": 419,
+    "edgeLuminance": 0.34864453960763786,
+    "torsoAnchorTarget": 256,
+    "registeredTorsoX": 255.9,
+    "rawTorsoAnchorX": 550,
+    "registration": "authored torso anchor"
+  },
+  "Enemies/nyxhollow_tell": {
+    "source": "source/sheets/nyxhollow_tell.png",
+    "master": "source/masters/Enemies/nyxhollow_tell@2x.png",
+    "prompt": "source/prompts/nyxhollow_tell.json",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "rawOpaqueBounds": [
+      21,
+      60,
+      1247,
+      1220
+    ],
+    "scale": 0.7363770250368189,
+    "footRow": 486,
+    "height": 427,
+    "edgeLuminance": 0.37060904996946875,
+    "torsoAnchorTarget": 256,
+    "registeredTorsoX": 258.1,
+    "rawTorsoAnchorX": 700,
+    "registration": "authored torso anchor"
+  },
+  "Enemies/rift_warden_attack": {
+    "source": "source/sheets/rift_warden_attack.png",
+    "master": "source/masters/Enemies/rift_warden_attack@2x.png",
+    "prompt": "source/prompts/rift_warden_attack.json",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "rawOpaqueBounds": [
+      18,
+      118,
+      1252,
+      1165
+    ],
+    "scale": 0.7779578606158833,
+    "footRow": 485,
+    "height": 407,
+    "edgeLuminance": 0.3919723943763466,
+    "torsoAnchorTarget": 256,
+    "registeredTorsoX": 255.83,
+    "rawTorsoAnchorX": 620,
+    "registration": "authored torso anchor"
+  },
+  "Enemies/nyxhollow_attack": {
+    "source": "source/sheets/nyxhollow_attack.png",
+    "master": "source/masters/Enemies/nyxhollow_attack@2x.png",
+    "prompt": "source/prompts/nyxhollow_attack.json",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "rawOpaqueBounds": [
+      19,
+      106,
+      1253,
+      1177
+    ],
+    "scale": 0.7488328664799253,
+    "footRow": 486,
+    "height": 401,
+    "edgeLuminance": 0.3690009680167752,
+    "torsoAnchorTarget": 256,
+    "registeredTorsoX": 256.11,
+    "rawTorsoAnchorX": 680,
+    "registration": "authored torso anchor"
+  },
+  "Enemies/seraphyne_b": {
+    "source": "source/sheets/seraphyne_b.png",
+    "master": "source/masters/Enemies/seraphyne_b@2x.png",
+    "prompt": "source/prompts/seraphyne_b.json",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "rawOpaqueBounds": [
+      40,
+      41,
+      1235,
+      1221
+    ],
+    "scale": 0.7142857142857143,
+    "footRow": 486,
+    "height": 422,
+    "edgeLuminance": 0.6420839168641769,
+    "torsoAnchorTarget": 256,
+    "registeredTorsoX": 258.07,
+    "rawTorsoAnchorX": 740,
+    "registration": "authored torso anchor"
+  },
+  "Enemies/seraphyne_tell": {
+    "source": "source/sheets/seraphyne_tell.png",
+    "master": "source/masters/Enemies/seraphyne_tell@2x.png",
+    "prompt": "source/prompts/seraphyne_tell.json",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "rawOpaqueBounds": [
+      35,
+      25,
+      1217,
+      1225
+    ],
+    "scale": 0.6993006993006993,
+    "footRow": 485,
+    "height": 418,
+    "edgeLuminance": 0.6993506461917942,
+    "torsoAnchorTarget": 256,
+    "registeredTorsoX": 258.05,
+    "rawTorsoAnchorX": 750,
+    "registration": "authored torso anchor"
+  },
+  "Enemies/seraphyne_attack": {
+    "source": "source/sheets/seraphyne_attack.png",
+    "master": "source/masters/Enemies/seraphyne_attack@2x.png",
+    "prompt": "source/prompts/seraphyne_attack.json",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "rawOpaqueBounds": [
+      32,
+      44,
+      1238,
+      1230
+    ],
+    "scale": 0.6963788300835655,
+    "footRow": 486,
+    "height": 413,
+    "edgeLuminance": 0.6495854305556387,
+    "torsoAnchorTarget": 256,
+    "registeredTorsoX": 258.04,
+    "rawTorsoAnchorX": 750,
+    "registration": "authored torso anchor"
+  },
+  "Enemies/gravemaw_b": {
+    "source": "source/sheets/gravemaw_b.png",
+    "master": "source/masters/Enemies/gravemaw_b@2x.png",
+    "prompt": "source/prompts/gravemaw_b.json",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "rawOpaqueBounds": [
+      156,
+      47,
+      1198,
+      1193
+    ],
+    "scale": 0.7420494699646644,
+    "footRow": 485,
+    "height": 425,
+    "edgeLuminance": 0.4000717836744532,
+    "torsoAnchorTarget": 256,
+    "registeredTorsoX": 256.23,
+    "rawTorsoAnchorX": 725,
+    "registration": "authored torso anchor"
+  },
+  "Enemies/gravemaw_tell": {
+    "source": "source/sheets/gravemaw_tell.png",
+    "master": "source/masters/Enemies/gravemaw_tell@2x.png",
+    "prompt": "source/prompts/gravemaw_tell.json",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "rawOpaqueBounds": [
+      88,
+      75,
+      1234,
+      1198
+    ],
+    "scale": 0.7420494699646644,
+    "footRow": 486,
+    "height": 417,
+    "edgeLuminance": 0.3628067032640805,
+    "torsoAnchorTarget": 256,
+    "registeredTorsoX": 256.02,
+    "rawTorsoAnchorX": 740,
+    "registration": "authored torso anchor"
+  },
+  "Enemies/gravemaw_attack": {
+    "source": "source/sheets/gravemaw_attack.png",
+    "master": "source/masters/Enemies/gravemaw_attack@2x.png",
+    "prompt": "source/prompts/gravemaw_attack.json",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "rawOpaqueBounds": [
+      96,
+      73,
+      1232,
+      1210
+    ],
+    "scale": 0.7420494699646644,
+    "footRow": 485,
+    "height": 421,
+    "edgeLuminance": 0.4025498900047824,
+    "torsoAnchorTarget": 256,
+    "registeredTorsoX": 256.05,
+    "rawTorsoAnchorX": 740,
+    "registration": "authored torso anchor"
+  }
+}

@@ -1,0 +1,270 @@
+{
+  "groundL": 0.22662049209775087,
+  "units": [
+    {
+      "id": "Enemies/grunt_a",
+      "edgeL": 0.3456267137636033,
+      "beforeEdgeL": 0.2533585516810602,
+      "groundL": 0.22662049209775087,
+      "passesContract": true,
+      "passesCurrentIntake": true,
+      "footRow": 235,
+      "bounds": [
+        48,
+        82,
+        207,
+        235
+      ],
+      "silhouetteIoU": 0.8467534936781063,
+      "rawSize": [
+        1254,
+        1254
+      ],
+      "masterSize": [
+        512,
+        512
+      ]
+    },
+    {
+      "id": "Enemies/grunt_b",
+      "edgeL": 0.34718060263576367,
+      "beforeEdgeL": 0.25384490333967624,
+      "groundL": 0.22662049209775087,
+      "passesContract": true,
+      "passesCurrentIntake": true,
+      "footRow": 235,
+      "bounds": [
+        50,
+        82,
+        205,
+        235
+      ],
+      "silhouetteIoU": 0.8349089461637974,
+      "rawSize": [
+        1254,
+        1254
+      ],
+      "masterSize": [
+        512,
+        512
+      ]
+    },
+    {
+      "id": "Enemies/hexcaster_a",
+      "edgeL": 0.36488952024835836,
+      "beforeEdgeL": 0.1954327015763168,
+      "groundL": 0.22662049209775087,
+      "passesContract": true,
+      "passesCurrentIntake": true,
+      "footRow": 235,
+      "bounds": [
+        41,
+        55,
+        213,
+        235
+      ],
+      "silhouetteIoU": 0.8030969658876635,
+      "rawSize": [
+        1254,
+        1254
+      ],
+      "masterSize": [
+        512,
+        512
+      ]
+    },
+    {
+      "id": "Enemies/hexcaster_b",
+      "edgeL": 0.44083563313213425,
+      "beforeEdgeL": 0.19330772361300538,
+      "groundL": 0.22662049209775087,
+      "passesContract": true,
+      "passesCurrentIntake": true,
+      "footRow": 235,
+      "bounds": [
+        39,
+        57,
+        216,
+        235
+      ],
+      "silhouetteIoU": 0.8524781017851203,
+      "rawSize": [
+        1254,
+        1254
+      ],
+      "masterSize": [
+        512,
+        512
+      ]
+    },
+    {
+      "id": "Enemies/juggernaut_a",
+      "edgeL": 0.32782038792668333,
+      "beforeEdgeL": 0.20594546682873052,
+      "groundL": 0.22662049209775087,
+      "passesContract": true,
+      "passesCurrentIntake": true,
+      "footRow": 235,
+      "bounds": [
+        22,
+        31,
+        233,
+        235
+      ],
+      "silhouetteIoU": 0.913946587537092,
+      "rawSize": [
+        1254,
+        1254
+      ],
+      "masterSize": [
+        512,
+        512
+      ]
+    },
+    {
+      "id": "Enemies/juggernaut_b",
+      "edgeL": 0.33467057644576814,
+      "beforeEdgeL": 0.2169888978150694,
+      "groundL": 0.22662049209775087,
+      "passesContract": true,
+      "passesCurrentIntake": true,
+      "footRow": 235,
+      "bounds": [
+        28,
+        34,
+        227,
+        235
+      ],
+      "silhouetteIoU": 0.8667348061954556,
+      "rawSize": [
+        1254,
+        1254
+      ],
+      "masterSize": [
+        512,
+        512
+      ]
+    },
+    {
+      "id": "Enemies/rift_warden_a",
+      "edgeL": 0.36476639807547956,
+      "beforeEdgeL": 0.2446512826809146,
+      "groundL": 0.22662049209775087,
+      "passesContract": true,
+      "passesCurrentIntake": true,
+      "footRow": 485,
+      "bounds": [
+        49,
+        52,
+        462,
+        485
+      ],
+      "silhouetteIoU": 0.7741084994190723,
+      "rawSize": [
+        1254,
+        1254
+      ],
+      "masterSize": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "id": "Enemies/rift_warden_b",
+      "edgeL": 0.4207608314147448,
+      "beforeEdgeL": 0.23814864932323074,
+      "groundL": 0.22662049209775087,
+      "passesContract": true,
+      "passesCurrentIntake": true,
+      "footRow": 485,
+      "bounds": [
+        46,
+        53,
+        467,
+        485
+      ],
+      "silhouetteIoU": 0.7456522496776217,
+      "rawSize": [
+        1254,
+        1254
+      ],
+      "masterSize": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "id": "Heroes/ignis_downed",
+      "edgeL": 0.34650713826910073,
+      "beforeEdgeL": 0.2278842807005084,
+      "groundL": 0.22662049209775087,
+      "passesContract": true,
+      "passesCurrentIntake": true,
+      "footRow": 371,
+      "bounds": [
+        100,
+        159,
+        301,
+        371
+      ],
+      "silhouetteIoU": 0.8150780081213934,
+      "rawSize": [
+        1254,
+        1254
+      ],
+      "masterSize": [
+        800,
+        800
+      ]
+    },
+    {
+      "id": "Heroes/ignis_evoA",
+      "edgeL": 0.33602660344871893,
+      "beforeEdgeL": 0.24209556418869108,
+      "groundL": 0.22662049209775087,
+      "passesContract": true,
+      "passesCurrentIntake": true,
+      "footRow": 371,
+      "bounds": [
+        108,
+        111,
+        290,
+        371
+      ],
+      "silhouetteIoU": 0.7606517435663165,
+      "rawSize": [
+        1254,
+        1254
+      ],
+      "masterSize": [
+        800,
+        800
+      ]
+    },
+    {
+      "id": "Heroes/ignis_idle",
+      "edgeL": 0.38844852353025805,
+      "beforeEdgeL": 0.19741083090662007,
+      "groundL": 0.22662049209775087,
+      "passesContract": true,
+      "passesCurrentIntake": true,
+      "footRow": 371,
+      "bounds": [
+        87,
+        98,
+        313,
+        371
+      ],
+      "silhouetteIoU": 0.8889358108108109,
+      "rawSize": [
+        1254,
+        1254
+      ],
+      "masterSize": [
+        800,
+        800
+      ]
+    }
+  ],
+  "iconCount": 17
+}

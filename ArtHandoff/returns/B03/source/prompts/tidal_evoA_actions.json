@@ -1,0 +1,11 @@
+{
+  "name": "tidal_evoA_actions",
+  "refs": [
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B03/source/sheets/tidal_evoA.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Heroes/ignis_cast.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Heroes/sylph_idle.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B02/exports/Art/Heroes/volt_idle.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B02/exports/Art/Heroes/freya_idle.png"
+  ],
+  "prompt": "Dark Mythic Fantasy, painterly stylized 2.5D; orthographic 38.3-degree elevation, three-quarter front body turned 25 degrees toward screen-right. Key upper-left-front #ffe9d0, rim back-right #9fe8ff, ambient #16233a. Controlled broad brush planes, coloured local-hue dark edges without black outlines.\nUse case stylized-concept. WIDE LANDSCAPE 2560x1440 TWO separate full body sprites of exact FLOODBREAKER in reference1. LEFT CAST: raise the single heavy bronze water wave-flail diagonally to shoulder height, stormglass chest bright, upright lift. RIGHT ATTACK: extend the single crest-shaped wave-flail horizontally toward screen-RIGHT with both hands, weight forward while torso stays central. Preserve EXACT hood face wrap heavier teal coat stormglass breastplate bronze compass belt and single weapon from ref1; no twin weapons. Weapon stays close, no prop far above head. Each adult full figure occupies own HALF with large transparent middle gutter and margins, feet visible and separated, no overlap. Genuine alpha, no text, no ground or shadow, no projectiles/beam/slash trail or emitted waves. Held water weapon only. Painted crisp lit blue-grey cloth planes, warm key, cool bright #9fe8ff directional rim, edge average luminance >=0.30. Full body 6 heads tall."
+}

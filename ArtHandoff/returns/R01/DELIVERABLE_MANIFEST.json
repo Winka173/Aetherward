@@ -1,0 +1,2095 @@
+{
+  "batch": "R01",
+  "producer": "Codex",
+  "date": "2026-10-21",
+  "styleLock": {
+    "palette": [
+      "#1b1226",
+      "#3b2f6b",
+      "#7fe3ff",
+      "#c0281a",
+      "#ff7a1a",
+      "#a98bff",
+      "#fff36a",
+      "#2fb8b0",
+      "#5fe0ff",
+      "#ff3d8b",
+      "#8a2be2"
+    ],
+    "light": "Warm key upper-left front; cool violet-blue cel shadows; no rim light.",
+    "edge": "Tapered black-violet brush-pen ink; outer 3px band mean luminance <= 0.22.",
+    "promptTemplate": "Original dark arcane fantasy, premium hand-inked comic 2.5D. Bold tapered black-violet contours. 2-3 hard flat cel tones per material. Warm upper-left-front key, cool violet-blue shadows. No airbrush, gradients, chibi, vector, rim light, copied characters or artist/game imitation."
+  },
+  "tools": [
+    {
+      "name": "image_gen (built-in)",
+      "version": "as provided"
+    },
+    {
+      "name": "Python",
+      "version": "3.11.5",
+      "packages": [
+        "Pillow",
+        "numpy",
+        "scipy"
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "id": "Heroes/glacius_idle",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "generator": "image_gen (built-in)",
+      "export": "exports/Art/Heroes/glacius_idle.png",
+      "source": "source/generations/Heroes/glacius_idle.png",
+      "master": "source/masters/Heroes/glacius_idle@2x.png",
+      "prompt": "Use case: stylized-concept. Asset type: production transparent game sprite, glacius_idle, single character. Original dark arcane fantasy premium hand-inked comic 2.5D. Bold tapered black-violet #1b1226 brush-pen contours, outer lines 6px at 1024 square, thinner internal lines; hard-edged 2-3 flat cel tones per material, cool violet-blue #3b2f6b shadows, warm upper-left front key light. NO rim light, gradients, airbrush, painterly blending, chibi or vector. Character: adult 6.5-head-tall guardian, widest trapezoid silhouette, heavy frost-steel full plate, closed helm with sharp ice crest, enormous glacier-ice tower shield on LEFT arm taller than half body, short frost mace in right hand. Steel blue with saturated ice cyan #7fe3ff on 30% silhouette, white-blue geometric non-letter sigils in shield. Ready stance, facing screen-right, body turned 25 degrees right, elevated camera 38 degrees, seen from three-quarter front. Reference 1 clay mannequin controls camera and stance only; reference 2 battlefield is readability context only; reference 3 guide sets layout only. Render on true transparent background, no floor, shadows, text, labels, borders, projectiles or environmental effects. 1024x1024 canvas, torso centered x512, lowest opaque foot row y952, head top y325, all contents x103..921 and y205..952. Oversized readable shield and hands, broad not taller. Leave transparent margins. Crisp dark continuous ink boundary on every silhouette edge.\n",
+      "cleanup": "python source/scripts/production.py process --id Heroes/glacius_idle --source source/generations/Heroes/glacius_idle.png --prompt source/prompts/final__Heroes__glacius_idle.txt --height 320.0 --offset 0",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Broad ice shield and frost plate read guardian; metal and ice scuffs are dense at720p.",
+      "contractExport": "source/contracts/Heroes/glacius_idle.png",
+      "contractMaster": "source/masters/Heroes/glacius_idle@800.png",
+      "contractSize": [
+        400,
+        400
+      ],
+      "contractPPU": 200,
+      "ppu": 256,
+      "pivot": [
+        0.5,
+        0.07
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 476,
+      "edgeBandLuminance": 0.18154647855147382,
+      "promptFile": "source/prompts/final__Heroes__glacius_idle.txt",
+      "sha256": {
+        "export": "a850c96449561dfc60449f5fdcde0afe3acc4cb36ffbd7a97b334f51fba3a481",
+        "source": "a43a2ef5a3798a2774f66ed54a811c3fd8aa4d70eef21f1dc1b44745f4a3dff4",
+        "master": "57cc1e2fc7635348d0d83f40f5e183b7792c823957dbe3d568ef0238d1f3254a",
+        "contractExport": "52d0369104e9eb5ad66ad72346e5f7c6606906b3c708709a320cb94024091a84",
+        "contractMaster": "b2ed4f3455d6f47eb7ab2164428ca84861114891c46412f8325c635e0fa11355"
+      }
+    },
+    {
+      "id": "Heroes/glacius_attack",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "generator": "image_gen (built-in)",
+      "export": "exports/Art/Heroes/glacius_attack.png",
+      "source": "source/generations/Heroes/glacius_attack.png",
+      "master": "source/masters/Heroes/glacius_attack@2x.png",
+      "prompt": "Use case: stylized-concept. Create ONE Heroes/glacius_attack production image. Reference 1 is the exact Glacius identity AND shared comic-ink style; preserve identical helm, shield design, geometric sigils, armor, mace, colors, proportions. Shield bash strike moment: LEFT shield driven fully forward toward +X, right hand still gripping the same short mace, braced legs. Premium dark arcane hand-inked comic 2.5D, tapered black-violet brush-pen outer contours 8px on 1280 canvas and fine inner lines, 2-3 hard flat cel tones, warm upper-left-front key, cool violet-blue shadows, ice cyan 30% silhouette. Simplify scuff texture, favor bold flat shapes. Adult heroic 6.5 heads tall. Facing screen-right, body 25deg right, elevated camera 38deg. Reference 2 is pose/camera only. True transparent background, no floor or shadow. Square 1280x1280 canvas, centered torso x640, feet y1190, head about y400, contents within x128..1152 y256..1190. Keep camera and scale consistent with identity. No projectile or detached magic. No letters/numbers, watermark, rim light, airbrush, gradients, soft rendering or chibi.\n",
+      "cleanup": "python source/scripts/production.py process --id Heroes/glacius_attack --source source/generations/Heroes/glacius_attack.png --prompt source/prompts/final__Heroes__glacius_attack.txt --height 320.0 --offset 6.0",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Broad ice shield and frost plate read guardian; metal and ice scuffs are dense at720p.",
+      "contractExport": "source/contracts/Heroes/glacius_attack.png",
+      "contractMaster": "source/masters/Heroes/glacius_attack@800.png",
+      "contractSize": [
+        400,
+        400
+      ],
+      "contractPPU": 200,
+      "ppu": 256,
+      "pivot": [
+        0.5,
+        0.07
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 476,
+      "edgeBandLuminance": 0.08043529350432697,
+      "promptFile": "source/prompts/final__Heroes__glacius_attack.txt",
+      "sha256": {
+        "export": "363a02c46212ffd2f9be76c8e9e647763a9bccdab756d5ba77e871c582cc4cfa",
+        "source": "69a46c70e2ab07142f6e8670027093fd3447f485b09df32149980cb7ec93b95a",
+        "master": "cb84fb63538c432d2e7b42e3039a99e9144a81d190250978362e27313c24a510",
+        "contractExport": "d34b302f52b7ce330ed44232170381acfbc6e54d22fd42bf7e6fe6d991b8f964",
+        "contractMaster": "1b3b9a564da0c8cb752ba6289a6a3e437d4516ba09134fa34409a6e83505ba3b"
+      }
+    },
+    {
+      "id": "Heroes/glacius_cast",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "generator": "image_gen (built-in)",
+      "export": "exports/Art/Heroes/glacius_cast.png",
+      "source": "source/generations/Heroes/glacius_cast.png",
+      "master": "source/masters/Heroes/glacius_cast@2x.png",
+      "prompt": "Use case: identity-preserve. Create ONE production CAST frame. Reference1 is EXACT character identity and BODY SCALE; reference2 comic ink style. Exact Glacius frost-steel guardian and left-arm ice tower shield, short frost mace. Protective cast: raise the SHIELD moderately up and FORWARD toward +X, crest only a little above helmet; mace stays near chest rather than overhead. Shield sigils brightest. Do not shrink torso or helm. CRITICAL: character BODY AND HEAD remain as large as in identity. Head/hood/crown top at about310-330px above feet on512 export; highest prop at most371px above feet. This is a COMPACT raised-focus pose, NOT an overhead reach. Keep body nearly upright, knees straightened for ~6% torso lift while feet remain planted. Upper head-to-feet height must NOT shrink to fit raised props. Fit by tilting prop diagonally instead. Same armor/costume, face, palette, material shapes and prop design as identity. Heroic adult6.5-head proportions, camera38deg elevated three-quarter front, facing screen-right25deg. Bold tapered dark black-violet #1b1226 outer contours24px at1280 square, especially on bright white/ice/gold edges, thinner internal ink; hard2-3 flat cel tones, cool violet-blue shadows and warm upper-left key. No rim light, external glow fringe, airbrush, gradients or soft painterly blending. True transparent1280x1280. Torso centered x640, feet around1190, HEAD TOP around400, highest prop y260 or lower; all content x128..1152 and y256..1190. No text, floor, shadow, projectile, beam or ground effect.\n",
+      "cleanup": "python source/scripts/production.py process --id Heroes/glacius_cast --source source/generations/Heroes/glacius_cast.png --prompt source/prompts/final__Heroes__glacius_cast.txt --height 371.0 --offset 36.0",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Broad ice shield and frost plate read guardian; metal and ice scuffs are dense at720p.",
+      "contractExport": "source/contracts/Heroes/glacius_cast.png",
+      "contractMaster": "source/masters/Heroes/glacius_cast@800.png",
+      "contractSize": [
+        400,
+        400
+      ],
+      "contractPPU": 200,
+      "ppu": 256,
+      "pivot": [
+        0.5,
+        0.07
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 476,
+      "edgeBandLuminance": 0.0677126354783524,
+      "promptFile": "source/prompts/final__Heroes__glacius_cast.txt",
+      "sha256": {
+        "export": "94cd1999adcedd70af3d03a5a9862c598a67bcfb9e9296eca0010ec2c68ff849",
+        "source": "cf6e6326e7eb7d411213ffddfb2171e0d9a320a1ed5d84dd4426b7a12ee82cf5",
+        "master": "24a4ea6352103de4198023e65c4d5a0d5c6e20753604078fb506a4ed81608c0f",
+        "contractExport": "730b0c68fe5aed6baa0fc0ed74c2287aa926c16b73ddc58c28c5f98af844f6ba",
+        "contractMaster": "5154f11af747564f6864763bc6900b599da66ddd8283a91f6afb408914b5b68b"
+      }
+    },
+    {
+      "id": "Heroes/glacius_downed",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "generator": "image_gen (built-in)",
+      "export": "exports/Art/Heroes/glacius_downed.png",
+      "source": "source/generations/Heroes/glacius_downed.png",
+      "master": "source/masters/Heroes/glacius_downed@2x.png",
+      "prompt": "Use case: stylized-concept. Create ONE Heroes/glacius_downed production image. Reference 1 is the exact Glacius identity AND shared comic-ink style; preserve identical helm, shield design, geometric sigils, armor, mace, colors, proportions. Collapsed kneeling defeated pose, helm bowed, one knee grounded, same shield propped beside him and mace held low. 40% desaturated costume; body compressed to a low kneel. Premium dark arcane hand-inked comic 2.5D, tapered black-violet brush-pen outer contours 8px on 1280 canvas and fine inner lines, 2-3 hard flat cel tones, warm upper-left-front key, cool violet-blue shadows, ice cyan 30% silhouette. Simplify scuff texture, favor bold flat shapes. Adult heroic 6.5 heads tall. Facing screen-right, body 25deg right, elevated camera 38deg. Reference 2 is pose/camera only. True transparent background, no floor or shadow. Square 1280x1280 canvas, centered torso x640, feet y1190, head about y400, contents within x128..1152 y256..1190. Keep camera and scale consistent with identity. No projectile or detached magic. No letters/numbers, watermark, rim light, airbrush, gradients, soft rendering or chibi.\n",
+      "cleanup": "python source/scripts/production.py process --id Heroes/glacius_downed --source source/generations/Heroes/glacius_downed.png --prompt source/prompts/final__Heroes__glacius_downed.txt --height 215.0 --offset 6.0",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Broad ice shield and frost plate read guardian; metal and ice scuffs are dense at720p.",
+      "contractExport": "source/contracts/Heroes/glacius_downed.png",
+      "contractMaster": "source/masters/Heroes/glacius_downed@800.png",
+      "contractSize": [
+        400,
+        400
+      ],
+      "contractPPU": 200,
+      "ppu": 256,
+      "pivot": [
+        0.5,
+        0.07
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 476,
+      "edgeBandLuminance": 0.17578451425809571,
+      "promptFile": "source/prompts/final__Heroes__glacius_downed.txt",
+      "sha256": {
+        "export": "14771a266240ba987b8dcfb14b3071237e15f8cd12c78aad7f54c1b97dd4027f",
+        "source": "051dc47728450335c0a36ec1ac2f780ca0fae7aabbe11a4bed91c772ff85556e",
+        "master": "84b80b05c2765ae44065a86a5ae70484c86f3a3654fb6818c053c620ca9e09ae",
+        "contractExport": "2a240caf72759b8653a1a604f280a04326f295729da206ea5893eee5c77a3854",
+        "contractMaster": "ee3e50878c0663415d2f0314c28cb21505f64a5128ce6a5854dfbdbe8a8e0b85"
+      }
+    },
+    {
+      "id": "Portraits/glacius",
+      "status": "delivered",
+      "size": [
+        192,
+        192
+      ],
+      "generator": "image_gen (built-in)",
+      "export": "exports/Art/Portraits/glacius.png",
+      "source": "source/generations/Portraits/glacius.png",
+      "master": "source/masters/Portraits/glacius@2x.png",
+      "prompt": "Use case: identity-preserve. Create ONE Portraits/glacius production image. Reference 1 is the exact Glacius identity AND shared comic-ink style; preserve identical helm, shield design, geometric sigils, armor, mace, colors, proportions. HEAD AND SHOULDERS PORTRAIT of the exact same closed ice-crested helm, armor and shield edge, cropped at upper chest. Flat dark violet #1b1226 background with cyan element accent. Fill square, no frame or typography. Premium dark arcane hand-inked comic 2.5D, tapered black-violet brush-pen outer contours 8px on 1280 canvas and fine inner lines, 2-3 hard flat cel tones, warm upper-left-front key, cool violet-blue shadows, ice cyan 30% silhouette. Simplify scuff texture, favor bold flat shapes. Adult heroic 6.5 heads tall. Facing screen-right, body 25deg right, elevated camera 38deg. Opaque flat dark violet backdrop. No letters/numbers, watermark, rim light, airbrush, gradients, soft rendering or chibi.\n",
+      "cleanup": "python source/scripts/production.py process --id Portraits/glacius --source source/generations/Portraits/glacius.png --prompt source/prompts/final__Portraits__glacius.txt --height 0.0 --offset 0",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Head-and-shoulders identity matches the sprite; flat violet background has a one-pixel transparent perimeter for the RGBA intake gate.",
+      "ppu": 100,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "promptFile": "source/prompts/final__Portraits__glacius.txt",
+      "sha256": {
+        "export": "a44eea1f0f945b6baddb1337299fde46a02f53dc0152f17ba08bdbc39165d17e",
+        "source": "afb222955aa3cc63f2ad80e1ac90d4310ecae920adfbdd9522ef7783e86770af",
+        "master": "2f7896b1ec5891419ba9dc00c14442bc2e4a657f8265387a08b7e9e173216bad"
+      }
+    },
+    {
+      "id": "Heroes/ignis_idle",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "generator": "image_gen (built-in)",
+      "export": "exports/Art/Heroes/ignis_idle.png",
+      "source": "source/generations/Heroes/ignis_idle.png",
+      "master": "source/masters/Heroes/ignis_idle@2x.png",
+      "prompt": "Original dark arcane fantasy, premium hand-inked comic 2.5D. Bold confident tapered black-violet #1b1226 brush-pen outer contours 8px on 1280 canvas, thinner internal ink. Hard-edged 2-3 flat cel tones per material, sparse hatching only in deep shadows. Warm upper-left-front key; cool violet-blue #3b2f6b shadows. Saturated jewel lit planes, no rim light. No airbrush, gradients, soft painterly blending, chibi, flat vector, text, watermark or copied characters. Heroic adult 6.5 heads tall, oversized props and hands by 15%. Three-quarter front camera elevated 38deg, body turned 25deg toward SCREEN-RIGHT. Character only, true transparent background, no floor, ground shadows, projectiles, beams, explosions or detached effects. Square 1280x1280, torso centered x640, feet around y1190, head around y400; all contents within x128..1152 y256..1190. Match identity scale and framing. Element color on 25-35% silhouette. Crisp dark continuous contour around all shapes. Subject: Lean adult male fire battle-mage with layered crimson #c0281a and orange #ff7a1a ember robes, burnt torn hems, gold trim, charcoal undercloth, ash-grey mantle, tall pointed hood with stiff peak bending back, angular half-shadowed face, tall blackened-iron staff with caged flame focus held in claw prongs above hood. Flowing cloth, narrow mage silhouette. Fire-orange/carmine 30% area. No detached embers. Neutral ready identity stance. Reference 1 is shared ink style ONLY, NOT the guardian costume or body build. Reference 2 controls slim staff pose/camera only. Staff focus should rise only a little above hood; do not make staff excessively tall. Head top 310px above feet on 512 export, focus at most 370px above feet. Simplify cloth into strong large angular cel planes, lit fire colors clear on the bright green battlefield. No floating effects, decorative frame or scenery.\n",
+      "cleanup": "python source/scripts/production.py process --id Heroes/ignis_idle --source source/generations/Heroes/ignis_idle.png --prompt source/prompts/final__Heroes__ignis_idle.txt --height 346.0 --offset 0",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Pointed hood, caged focus and ember robes read fire mage; gold and hem ornament is busier than ideal.",
+      "contractExport": "source/contracts/Heroes/ignis_idle.png",
+      "contractMaster": "source/masters/Heroes/ignis_idle@800.png",
+      "contractSize": [
+        400,
+        400
+      ],
+      "contractPPU": 200,
+      "ppu": 256,
+      "pivot": [
+        0.5,
+        0.07
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 476,
+      "edgeBandLuminance": 0.12448418798808922,
+      "promptFile": "source/prompts/final__Heroes__ignis_idle.txt",
+      "sha256": {
+        "export": "015df8a19252d447db1b3eff07c6d1552377b5547be349cadf13d676ec698810",
+        "source": "303422e14107386fc730bd1865341e2285d94a30ff290059e281bc73673df9b1",
+        "master": "909e6953ff817960744de16909ce2143a887f33df99bc17e783fd4fe2efff4f7",
+        "contractExport": "99d8b49287e75491dde2f20e103566f79da0308d1f4d92e9c2fc5217bc5aa480",
+        "contractMaster": "1ccf69d55de2a5f76019b792ff434a3daa472e223ce4591eea9fab4f9865a5a8"
+      }
+    },
+    {
+      "id": "Heroes/ignis_attack",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "generator": "image_gen (built-in)",
+      "export": "exports/Art/Heroes/ignis_attack.png",
+      "source": "source/generations/Heroes/ignis_attack.png",
+      "master": "source/masters/Heroes/ignis_attack@2x.png",
+      "prompt": "Original dark arcane fantasy, premium hand-inked comic 2.5D. Bold confident tapered black-violet #1b1226 brush-pen outer contours 8px on 1280 canvas, thinner internal ink. Hard-edged 2-3 flat cel tones per material, sparse hatching only in deep shadows. Warm upper-left-front key; cool violet-blue #3b2f6b shadows. Saturated jewel lit planes, no rim light. No airbrush, gradients, soft painterly blending, chibi, flat vector, text, watermark or copied characters. Heroic adult 6.5 heads tall, oversized props and hands by 15%. Three-quarter front camera elevated 38deg, body turned 25deg toward SCREEN-RIGHT. Character only, true transparent background, no floor, ground shadows, projectiles, beams, explosions or detached effects. Square 1280x1280, torso centered x640, feet around y1190, head around y400; all contents within x128..1152 y256..1190. Match identity scale and framing. Element color on 25-35% silhouette. Crisp dark continuous contour around all shapes. Reference 1 is shared INK STYLE; reference 2 is the EXACT character identity, preserve face, costume, colors, build, and every prop. Reference 3 controls camera and approximate pose ONLY; override its weapon with this character's real prop. Basic attack RELEASE moment: staff driven forward toward +X, caged focus flaring on the prop, arm fully extended. Subject identity: Lean adult male fire battle-mage with layered crimson #c0281a and orange #ff7a1a ember robes, burnt torn hems, gold trim, charcoal undercloth, ash-grey mantle, tall pointed hood with stiff peak bending back, angular half-shadowed face, tall blackened-iron staff with caged flame focus held in claw prongs above hood. Flowing cloth, narrow mage silhouette. Fire-orange/carmine 30% area. No detached embers.\n",
+      "cleanup": "python source/scripts/production.py process --id Heroes/ignis_attack --source source/generations/Heroes/ignis_attack.png --prompt source/prompts/final__Heroes__ignis_attack.txt --height 322.0 --offset 16.0",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Pointed hood, caged focus and ember robes read fire mage; gold and hem ornament is busier than ideal.",
+      "contractExport": "source/contracts/Heroes/ignis_attack.png",
+      "contractMaster": "source/masters/Heroes/ignis_attack@800.png",
+      "contractSize": [
+        400,
+        400
+      ],
+      "contractPPU": 200,
+      "ppu": 256,
+      "pivot": [
+        0.5,
+        0.07
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 476,
+      "edgeBandLuminance": 0.14167512457472115,
+      "promptFile": "source/prompts/final__Heroes__ignis_attack.txt",
+      "sha256": {
+        "export": "ae681753b57eab24220bf1a3b3d38ad99d75e0f5fac394c3cd379155a9c21b1f",
+        "source": "9bde393e7ed38e155f643358b8745821beee396ce11779915dc72562778bf2c7",
+        "master": "214430a0a61ac63c0fb9f3eec2d526da7af14285ac7e8fee49d91a1ecab8d05a",
+        "contractExport": "e86326a01b9cf88f5bdd31f2d275206513e6a6c89290f8064182a53e74117871",
+        "contractMaster": "0e176237ffc65396000a34f47697eda087157403814c2f8ce01e326ce70c9236"
+      }
+    },
+    {
+      "id": "Heroes/ignis_cast",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "generator": "image_gen (built-in)",
+      "export": "exports/Art/Heroes/ignis_cast.png",
+      "source": "source/generations/Heroes/ignis_cast.png",
+      "master": "source/masters/Heroes/ignis_cast@2x.png",
+      "prompt": "Use case: identity-preserve. Create ONE production CAST frame. Reference1 is EXACT character identity and BODY SCALE; reference2 comic ink style. Exact Ignis pointed-hood crimson/orange battle-mage, ash mantle, gold trim, caged flame staff. Casting: free hand open forward at chest height; staff lifted and tilted DIAGONALLY toward upper-right, focus only a little above hood. Keep staff from extending far overhead. Hood and body stay same size. CRITICAL: character BODY AND HEAD remain as large as in identity. Head/hood/crown top at about310-330px above feet on512 export; highest prop at most371px above feet. This is a COMPACT raised-focus pose, NOT an overhead reach. Keep body nearly upright, knees straightened for ~6% torso lift while feet remain planted. Upper head-to-feet height must NOT shrink to fit raised props. Fit by tilting prop diagonally instead. Same armor/costume, face, palette, material shapes and prop design as identity. Heroic adult6.5-head proportions, camera38deg elevated three-quarter front, facing screen-right25deg. Bold tapered dark black-violet #1b1226 outer contours24px at1280 square, especially on bright white/ice/gold edges, thinner internal ink; hard2-3 flat cel tones, cool violet-blue shadows and warm upper-left key. No rim light, external glow fringe, airbrush, gradients or soft painterly blending. True transparent1280x1280. Torso centered x640, feet around1190, HEAD TOP around400, highest prop y260 or lower; all content x128..1152 and y256..1190. No text, floor, shadow, projectile, beam or ground effect.\n",
+      "cleanup": "python source/scripts/production.py process --id Heroes/ignis_cast --source source/generations/Heroes/ignis_cast.png --prompt source/prompts/final__Heroes__ignis_cast.txt --height 371.0 --offset -20.0",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Pointed hood, caged focus and ember robes read fire mage; gold and hem ornament is busier than ideal.",
+      "contractExport": "source/contracts/Heroes/ignis_cast.png",
+      "contractMaster": "source/masters/Heroes/ignis_cast@800.png",
+      "contractSize": [
+        400,
+        400
+      ],
+      "contractPPU": 200,
+      "ppu": 256,
+      "pivot": [
+        0.5,
+        0.07
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 476,
+      "edgeBandLuminance": 0.09644958465537948,
+      "promptFile": "source/prompts/final__Heroes__ignis_cast.txt",
+      "sha256": {
+        "export": "593f5a934ed9901a375b36e847a46544db2e1f3d4a151a7c9ae824d245202f0a",
+        "source": "dc7ba939f52143c476c7848d79e76883e80a94d3f6077e32f7830d3ad1e4e1e1",
+        "master": "5ae98a0a29ff63ff1ae05e5fda32615300588454c2d00c49849e02e55974cada",
+        "contractExport": "524bee7d39ce1c65d545a6b05400eb943a893143bdedf4a7a713fdc641a60706",
+        "contractMaster": "ca948d19eaaf1ac953e556935832b2578531b04cbb213fa171f1cc3394204e3f"
+      }
+    },
+    {
+      "id": "Heroes/ignis_downed",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "generator": "image_gen (built-in)",
+      "export": "exports/Art/Heroes/ignis_downed.png",
+      "source": "source/generations/Heroes/ignis_downed.png",
+      "master": "source/masters/Heroes/ignis_downed@2x.png",
+      "prompt": "Original dark arcane fantasy, premium hand-inked comic 2.5D. Bold confident tapered black-violet #1b1226 brush-pen outer contours 8px on 1280 canvas, thinner internal ink. Hard-edged 2-3 flat cel tones per material, sparse hatching only in deep shadows. Warm upper-left-front key; cool violet-blue #3b2f6b shadows. Saturated jewel lit planes, no rim light. No airbrush, gradients, soft painterly blending, chibi, flat vector, text, watermark or copied characters. Heroic adult 6.5 heads tall, oversized props and hands by 15%. Three-quarter front camera elevated 38deg, body turned 25deg toward SCREEN-RIGHT. Character only, true transparent background, no floor, ground shadows, projectiles, beams, explosions or detached effects. Square 1280x1280, torso centered x640, feet around y1190, head around y400; all contents within x128..1152 y256..1190. Match identity scale and framing. Element color on 25-35% silhouette. Crisp dark continuous contour around all shapes. Reference 1 is shared INK STYLE; reference 2 is the EXACT character identity, preserve face, costume, colors, build, and every prop. Reference 3 controls camera and approximate pose ONLY; override its weapon with this character's real prop. Collapsed kneeling defeat, bowed head, prop held low, robes pooled within character silhouette. Desaturate costume 40%. Retain all identifying costume and facial details. Subject identity: Lean adult male fire battle-mage with layered crimson #c0281a and orange #ff7a1a ember robes, burnt torn hems, gold trim, charcoal undercloth, ash-grey mantle, tall pointed hood with stiff peak bending back, angular half-shadowed face, tall blackened-iron staff with caged flame focus held in claw prongs above hood. Flowing cloth, narrow mage silhouette. Fire-orange/carmine 30% area. No detached embers.\n",
+      "cleanup": "python source/scripts/production.py process --id Heroes/ignis_downed --source source/generations/Heroes/ignis_downed.png --prompt source/prompts/final__Heroes__ignis_downed.txt --height 225.0 --offset -16.0",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Pointed hood, caged focus and ember robes read fire mage; gold and hem ornament is busier than ideal.",
+      "contractExport": "source/contracts/Heroes/ignis_downed.png",
+      "contractMaster": "source/masters/Heroes/ignis_downed@800.png",
+      "contractSize": [
+        400,
+        400
+      ],
+      "contractPPU": 200,
+      "ppu": 256,
+      "pivot": [
+        0.5,
+        0.07
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 476,
+      "edgeBandLuminance": 0.17202157553290084,
+      "promptFile": "source/prompts/final__Heroes__ignis_downed.txt",
+      "sha256": {
+        "export": "82b4ff26f6d07b385bfc46e84105da7a28a513579999f951a26f3c266adce210",
+        "source": "f813367f1b9e859cdc0842a3403a495a5caaae5d99f1fd0e4e8d59de496a6232",
+        "master": "b7367b5ec33d1e23b8b344358506828edfe3a6e421a50428a1e66492e3bb4fd7",
+        "contractExport": "799141232b7f3d61e3bb224a07c82205ebc6bb1a51bc5800d42c3c65b0215cd8",
+        "contractMaster": "f60ad28c777907eb58ebff3c54a1985f44c8148941499c9a8495cd27530ea47d"
+      }
+    },
+    {
+      "id": "Portraits/ignis",
+      "status": "delivered",
+      "size": [
+        192,
+        192
+      ],
+      "generator": "image_gen (built-in)",
+      "export": "exports/Art/Portraits/ignis.png",
+      "source": "source/generations/Portraits/ignis.png",
+      "master": "source/masters/Portraits/ignis@2x.png",
+      "prompt": "Original dark arcane fantasy, premium hand-inked comic 2.5D. Bold confident tapered black-violet #1b1226 brush-pen outer contours 8px on 1280 canvas, thinner internal ink. Hard-edged 2-3 flat cel tones per material, sparse hatching only in deep shadows. Warm upper-left-front key; cool violet-blue #3b2f6b shadows. Saturated jewel lit planes, no rim light. No airbrush, gradients, soft painterly blending, chibi, flat vector, text, watermark or copied characters. Heroic adult 6.5 heads tall, oversized props and hands by 15%. Three-quarter front camera elevated 38deg, body turned 25deg toward SCREEN-RIGHT. Character only, opaque flat dark violet background, no floor, ground shadows, projectiles, beams, explosions or detached effects. Square 1280x1280 portrait, close crop..1152 y256..1190. Match identity scale and framing. Element color on 25-35% silhouette. Crisp dark continuous contour around all shapes. Reference 1 is shared INK STYLE; reference 2 is the EXACT character identity, preserve face, costume, colors, build, and every prop. Head-and-shoulders portrait of this EXACT identity: same face, hood/veil, costume, colors and signature prop edge. Flat dark violet background with element-color accent. Fill square, no frame or typography. Subject identity: Lean adult male fire battle-mage with layered crimson #c0281a and orange #ff7a1a ember robes, burnt torn hems, gold trim, charcoal undercloth, ash-grey mantle, tall pointed hood with stiff peak bending back, angular half-shadowed face, tall blackened-iron staff with caged flame focus held in claw prongs above hood. Flowing cloth, narrow mage silhouette. Fire-orange/carmine 30% area. No detached embers.\n",
+      "cleanup": "python source/scripts/production.py process --id Portraits/ignis --source source/generations/Portraits/ignis.png --prompt source/prompts/final__Portraits__ignis.txt --height 0.0 --offset 0.0",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Head-and-shoulders identity matches the sprite; flat violet background has a one-pixel transparent perimeter for the RGBA intake gate.",
+      "ppu": 100,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "promptFile": "source/prompts/final__Portraits__ignis.txt",
+      "sha256": {
+        "export": "58a07cdaa544d672a3e56546e8b0f237ab0b5abb302c79f149955d07ee91e59e",
+        "source": "16542ca71de1d9047287c8720872988fe2b84569a4f2f933936e9588ba630d9a",
+        "master": "bd2f35faa109f1f83af88119d6dc2bcef7cc755231999c9fff250b3e1bc28e46"
+      }
+    },
+    {
+      "id": "Heroes/veyra_idle",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "generator": "image_gen (built-in)",
+      "export": "exports/Art/Heroes/veyra_idle.png",
+      "source": "source/generations/Heroes/veyra_idle.png",
+      "master": "source/masters/Heroes/veyra_idle@2x.png",
+      "prompt": "Use case: precise-object-edit. Edit target reference 1: EXACT Veyra identity idle sprite. Keep EXACT same adult woman, face, hood, visor, fitted leather, violet costume, copper quiver, large recurve bow, posture, camera and proportions. CHANGE ONLY INK EDGE AND BOW LIGHT: make outer silhouette contours bold dark black-violet #1b1226 brush-pen ink, visibly 14 pixels thick on 1280px image with tapered edges, including ALL bow limbs and string. Lightning string must be a THIN yellow interior line enclosed inside a thick dark violet contour; remove exterior yellow haze and ALL luminous fringes. Edge band must be dark, not bright. Preserve same three hard cel tones, warm upper-left key and cool violet shadows. Flat jewel violet panels, no soft blending. Re-render sharply at 1280x1280 transparent background, no floor, shadow, words or detached effects. Do not alter the pose or shorten the bow. Same full body scale and margins. Reference 2 is ink treatment style reference ONLY.\n",
+      "cleanup": "python source/scripts/production.py process --id Heroes/veyra_idle --source source/generations/Heroes/veyra_idle.png --prompt source/prompts/final__Heroes__veyra_idle.txt --height 340.0 --offset 32.0",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Long bow and narrow violet silhouette read ranger; torso was aligned independently of the bow bounds.",
+      "contractExport": "source/contracts/Heroes/veyra_idle.png",
+      "contractMaster": "source/masters/Heroes/veyra_idle@800.png",
+      "contractSize": [
+        400,
+        400
+      ],
+      "contractPPU": 200,
+      "ppu": 256,
+      "pivot": [
+        0.5,
+        0.07
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 476,
+      "edgeBandLuminance": 0.040727726791136565,
+      "promptFile": "source/prompts/final__Heroes__veyra_idle.txt",
+      "sha256": {
+        "export": "cb4b9d8ddf4459792406686626bf542973400801094392f6a20c6417c4c962d7",
+        "source": "703000ef98c0cf7cc44d374b37f7b363e8133cf7439aa7b3446af0ac5f95e834",
+        "master": "fce04a43b068969ec8a7d5889cdd00aed4a2547f3efcdcad52c5de49af263ac8",
+        "contractExport": "279af93265fff963d0628fec5a3491fc4545cb71f0e472e79635ba19b97c1bb5",
+        "contractMaster": "6352d1dd04cdad75274526acfc7e7a89cf01f92cde6357edbebd018adee6ee7c"
+      }
+    },
+    {
+      "id": "Heroes/veyra_cast",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "generator": "image_gen (built-in)",
+      "export": "exports/Art/Heroes/veyra_cast.png",
+      "source": "source/generations/Heroes/veyra_cast.png",
+      "master": "source/masters/Heroes/veyra_cast@2x.png",
+      "prompt": "Use case: identity-preserve. Create ONE production CAST frame. Reference1 is EXACT character identity and BODY SCALE; reference2 comic ink style. Exact Veyra violet/indigo hooded lightning ranger with visor, copper quiver and same long recurve bow. Charged skill cast: bow held DIAGONALLY about45deg toward upper-right, bow arm at shoulder height, drawing hand beside cheek, lightning string brighter as a THIN interior yellow line with dark ink border. Do not raise bow arm overhead or change body scale. No arrow/projectile. CRITICAL: character BODY AND HEAD remain as large as in identity. Head/hood/crown top at about310-330px above feet on512 export; highest prop at most371px above feet. This is a COMPACT raised-focus pose, NOT an overhead reach. Keep body nearly upright, knees straightened for ~6% torso lift while feet remain planted. Upper head-to-feet height must NOT shrink to fit raised props. Fit by tilting prop diagonally instead. Same armor/costume, face, palette, material shapes and prop design as identity. Heroic adult6.5-head proportions, camera38deg elevated three-quarter front, facing screen-right25deg. Bold tapered dark black-violet #1b1226 outer contours24px at1280 square, especially on bright white/ice/gold edges, thinner internal ink; hard2-3 flat cel tones, cool violet-blue shadows and warm upper-left key. No rim light, external glow fringe, airbrush, gradients or soft painterly blending. True transparent1280x1280. Torso centered x640, feet around1190, HEAD TOP around400, highest prop y260 or lower; all content x128..1152 and y256..1190. No text, floor, shadow, projectile, beam or ground effect.\n",
+      "cleanup": "python source/scripts/production.py process --id Heroes/veyra_cast --source source/generations/Heroes/veyra_cast.png --prompt source/prompts/final__Heroes__veyra_cast.txt --height 371.0 --offset 32.0",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Long bow and narrow violet silhouette read ranger; torso was aligned independently of the bow bounds.",
+      "contractExport": "source/contracts/Heroes/veyra_cast.png",
+      "contractMaster": "source/masters/Heroes/veyra_cast@800.png",
+      "contractSize": [
+        400,
+        400
+      ],
+      "contractPPU": 200,
+      "ppu": 256,
+      "pivot": [
+        0.5,
+        0.07
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 476,
+      "edgeBandLuminance": 0.07202504009676985,
+      "promptFile": "source/prompts/final__Heroes__veyra_cast.txt",
+      "sha256": {
+        "export": "fb0a83adf4732d2b66aed18a1b78b77a9e88ed9dd47547ec4a3484f80859b7a8",
+        "source": "f6ef6fb98ec9d9727a636c4268b90922d5070efb540a39cb938e00179e51882c",
+        "master": "1d2562fa5774b4d712fe3af2fcec0c021841a6a1eebdf4bd0119fda1c1f92448",
+        "contractExport": "644fb0376c523aace8ecf503545fa91fe0027c6d27ccb12553bae4012d574453",
+        "contractMaster": "de2ddcd7eaaab15f1ba46d928361c3c42fbee19a1159f08d4e9be07e5885b284"
+      }
+    },
+    {
+      "id": "Heroes/veyra_downed",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "generator": "image_gen (built-in)",
+      "export": "exports/Art/Heroes/veyra_downed.png",
+      "source": "source/generations/Heroes/veyra_downed.png",
+      "master": "source/masters/Heroes/veyra_downed@2x.png",
+      "prompt": "Use case: precise-object-edit. Reference1 is edit target downed pose. Reference2 is corrected Veyra identity/INK TREATMENT; reference3 is shared dark comic ink style. Preserve EXACT same Veyra adult face, hood, visor, violet/indigo leather and cape, copper quiver and long recurve bow. Preserve EXACT pose from reference1, camera, proportions and all prop placement. Strengthen ALL silhouette outlines to bold dark black-violet #1b1226 brush-pen ink, 18px thick at1280 square, tapering. Especially ink the whole bow and bowstring: yellow lightning is a THIN interior line enclosed by solid dark outline, no exterior yellow haze or emissive fringe. The 3px export edge band must be dark (<0.22 luminance). Hard flat 2-3 cel tones per material, cool violet shadows, upper-left warm key. No airbrush, rim light, gradients, text, floor, shadows, missiles or detached magic. True transparent 1280x1280 canvas; centered full body and props with generous transparent margins.\n",
+      "cleanup": "python source/scripts/production.py process --id Heroes/veyra_downed --source source/generations/Heroes/veyra_downed.png --prompt source/prompts/final__Heroes__veyra_downed.txt --height 225.0 --offset 8.0",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Long bow and narrow violet silhouette read ranger; torso was aligned independently of the bow bounds.",
+      "contractExport": "source/contracts/Heroes/veyra_downed.png",
+      "contractMaster": "source/masters/Heroes/veyra_downed@800.png",
+      "contractSize": [
+        400,
+        400
+      ],
+      "contractPPU": 200,
+      "ppu": 256,
+      "pivot": [
+        0.5,
+        0.07
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 476,
+      "edgeBandLuminance": 0.1483005130589785,
+      "promptFile": "source/prompts/final__Heroes__veyra_downed.txt",
+      "sha256": {
+        "export": "57f32e46eb68871ad8a3beba39ad9a042f27aacb8a240407dd34a811561cf0ed",
+        "source": "365c9680f3eb79158ae32f4cdf1f5cb0652a5ff3222a4e9d1af2bd5b91312778",
+        "master": "54195039791d03df36d424f684ee0328c243e92bc0b4b21ea663c0002e08e187",
+        "contractExport": "af2c6ddcf8a93aeaddc80df90c72aa4b7570313d780bc3551eec0f05a33fc90b",
+        "contractMaster": "6320e115feaf9203839fc6089118ccc199a4bfb12eaa1c478b273171348ddb74"
+      }
+    },
+    {
+      "id": "Portraits/veyra",
+      "status": "delivered",
+      "size": [
+        192,
+        192
+      ],
+      "generator": "image_gen (built-in)",
+      "export": "exports/Art/Portraits/veyra.png",
+      "source": "source/generations/Portraits/veyra.png",
+      "master": "source/masters/Portraits/veyra@2x.png",
+      "prompt": "Original dark arcane fantasy, premium hand-inked comic 2.5D. Bold confident tapered black-violet #1b1226 brush-pen outer contours 8px on 1280 canvas, thinner internal ink. Hard-edged 2-3 flat cel tones per material, sparse hatching only in deep shadows. Warm upper-left-front key; cool violet-blue #3b2f6b shadows. Saturated jewel lit planes, no rim light. No airbrush, gradients, soft painterly blending, chibi, flat vector, text, watermark or copied characters. Heroic adult 6.5 heads tall, oversized props and hands by 15%. Three-quarter front camera elevated 38deg, body turned 25deg toward SCREEN-RIGHT. Character only, opaque flat dark violet background, no floor, ground shadows, projectiles, beams, explosions or detached effects. Square 1280x1280 portrait, close crop..1152 y256..1190. Match identity scale and framing. Element color on 25-35% silhouette. Crisp dark continuous contour around all shapes. Reference 1 is shared INK STYLE; reference 2 is the EXACT character identity, preserve face, costume, colors, build, and every prop. Head-and-shoulders portrait of this EXACT identity: same face, hood/veil, costume, colors and signature prop edge. Flat dark violet background with element-color accent. Fill square, no frame or typography. Subject identity: Adult woman lightning ranger, slim precise hooded storm-scout with angular visor, light fitted leather in deep indigo and electric violet #a98bff, copper quiver and bracers. Very large long recurve bow of copper and dark wood strung with crackling light, tiny white-yellow #fff36a sparks only ON bowstring. Narrow silhouette with long diagonal bow. Violet cloak/panels 30% area.\n",
+      "cleanup": "python source/scripts/production.py process --id Portraits/veyra --source source/generations/Portraits/veyra.png --prompt source/prompts/final__Portraits__veyra.txt --height 0.0 --offset 0.0",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Head-and-shoulders identity matches the sprite; flat violet background has a one-pixel transparent perimeter for the RGBA intake gate.",
+      "ppu": 100,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "promptFile": "source/prompts/final__Portraits__veyra.txt",
+      "sha256": {
+        "export": "f36e9bc08b6364983c0ae8296fb19f968afd975a471f50055e7e4c7d2deff1b1",
+        "source": "fb1bdda5185f20c3a37a5302eb10e6dc51eddc99deafe4e7df7f38e8640bb140",
+        "master": "63f523f403f9c6022403975274eb346cd6fa1c5efed02aaff38a875f9e4eb493"
+      }
+    },
+    {
+      "id": "Heroes/marina_idle",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "generator": "image_gen (built-in)",
+      "export": "exports/Art/Heroes/marina_idle.png",
+      "source": "source/generations/Heroes/marina_idle.png",
+      "master": "source/masters/Heroes/marina_idle@2x.png",
+      "prompt": "Use case: precise-object-edit. Edit reference1 original Marina identity. Keep EXACT same adult tide-priestess face, veil, robes, shell-coral wave crozier, pose, proportions, camera, teal/aqua and pearl colors. Reference2 is comic ink STYLE ONLY. Correct the silhouette ink: add a BOLD THICK DARK BLACK-VIOLET #1b1226 brush-pen contour 18px thick at1280 resolution around EVERY outside boundary including ALL white hems, veil, feet, fingers, hanging gems, coral and staff head. Inner contours thinner. The 3px export edge band must read dark (<0.22 luminance), not white. No bright fringe. Shading must be strictly 2-3 hard flat cel tones per material, cool violet-blue shadows, warm upper-left key, no sculptural soft gradients or airbrush. Keep teal/aqua saturated and grim, not pastel. Preserve original pose and costume completely; change only ink and harden shading. 1280x1280 true transparent canvas, character only, no floor/shadows/text/letters.\n",
+      "cleanup": "python source/scripts/production.py process --id Heroes/marina_idle --source source/generations/Heroes/marina_idle.png --prompt source/prompts/final__Heroes__marina_idle.txt --height 350.0 --offset 0.0",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Wave crozier and veil read tide healer; pearl jewelry remains dense at small sizes.",
+      "contractExport": "source/contracts/Heroes/marina_idle.png",
+      "contractMaster": "source/masters/Heroes/marina_idle@800.png",
+      "contractSize": [
+        400,
+        400
+      ],
+      "contractPPU": 200,
+      "ppu": 256,
+      "pivot": [
+        0.5,
+        0.07
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 476,
+      "edgeBandLuminance": 0.058038641826805536,
+      "promptFile": "source/prompts/final__Heroes__marina_idle.txt",
+      "sha256": {
+        "export": "f2907c21604cc96dd22cc07cef785dae9658530d00525c9849170979535e5bbb",
+        "source": "a06e995e681f7bf636bb56d86b108add0520dafd76edf0871146fe266b738554",
+        "master": "dd1aeaa3b7f736123cfb7d8966fdea61e13d6c8bce8022da36f393df5f9f3124",
+        "contractExport": "f6704a762914570fb028a36acacc43777954b2bcf32a9b624b58c96e59677aa4",
+        "contractMaster": "cdd7432b124a28875469d9842cc911efdd533d06721f1daebd50ee3348942e93"
+      }
+    },
+    {
+      "id": "Heroes/marina_attack",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "generator": "image_gen (built-in)",
+      "export": "exports/Art/Heroes/marina_attack.png",
+      "source": "source/generations/Heroes/marina_attack.png",
+      "master": "source/masters/Heroes/marina_attack@2x.png",
+      "prompt": "Original dark arcane fantasy, premium hand-inked comic 2.5D. Bold confident tapered black-violet #1b1226 brush-pen outer contours 16px on 1280 canvas, with a solid continuous dark ink silhouette band, not thin hairline edges, thinner internal ink. Hard-edged 2-3 flat cel tones per material, sparse hatching only in deep shadows. Warm upper-left-front key; cool violet-blue #3b2f6b shadows. Saturated jewel lit planes, no rim light. No airbrush, gradients, soft painterly blending, chibi, flat vector, text, watermark or copied characters. Heroic adult 6.5 heads tall, oversized props and hands by 15%. Three-quarter front camera elevated 38deg, body turned 25deg toward SCREEN-RIGHT. Character only, true transparent background, no floor, ground shadows, projectiles, beams, explosions or detached effects. Square 1280x1280, torso centered x640, feet around y1190, head around y400; all contents within x128..1152 y256..1190. Match identity scale and framing. Element color on 25-35% silhouette. Crisp dark continuous contour around ALL shapes, including white cloth, jewelry, and glowing props; no bright outline or emissive haze at the outer alpha boundary. Reference 1 is shared INK STYLE; reference 2 is the EXACT character identity, preserve face, costume, colors, build, and every prop. Reference 3 controls camera and approximate pose ONLY; override its weapon with this character's real prop. Basic attack RELEASE: shell-coral crozier and leading arm extended toward +X, wave crest bright, no projectile. Subject identity: Adult woman water healer, calm protective tide-priestess, layered sea teal #2fb8b0 and aqua #5fe0ff robes, pearl-white trim and flowing veil, tiny coral accents, pale shell-and-coral crozier with curling wave crest, restrained droplet halo close behind shoulders. Calm vertical silhouette, teal/aqua 30% area. No detached spells.\n",
+      "cleanup": "python source/scripts/production.py process --id Heroes/marina_attack --source source/generations/Heroes/marina_attack.png --prompt source/prompts/final__Heroes__marina_attack.txt --height 350.0 --offset 16.0",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Wave crozier and veil read tide healer; pearl jewelry remains dense at small sizes.",
+      "contractExport": "source/contracts/Heroes/marina_attack.png",
+      "contractMaster": "source/masters/Heroes/marina_attack@800.png",
+      "contractSize": [
+        400,
+        400
+      ],
+      "contractPPU": 200,
+      "ppu": 256,
+      "pivot": [
+        0.5,
+        0.07
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 476,
+      "edgeBandLuminance": 0.11069052567190427,
+      "promptFile": "source/prompts/final__Heroes__marina_attack.txt",
+      "sha256": {
+        "export": "262ab8014cce414eed6ca73aea93945a00f3bbf66957db2189cc86a62ceaddb0",
+        "source": "cb43b9928901b82634ba059cc406b1f2dabab32f6e99e332cab513c34bbcb6ad",
+        "master": "63d8eb574fbd0def61a5fe97a522c095ab69bcd9286fce6f9567e780cd2c020c",
+        "contractExport": "8d0d3576af9e9cebd22c002e3ad42a48917b3f5e6c6fe13cfd1794f6b56710b6",
+        "contractMaster": "52101f74c5f527f2835d5ac95d3438499022cecfbf6103ace3e9df492381f624"
+      }
+    },
+    {
+      "id": "Heroes/marina_cast",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "generator": "image_gen (built-in)",
+      "export": "exports/Art/Heroes/marina_cast.png",
+      "source": "source/generations/Heroes/marina_cast.png",
+      "master": "source/masters/Heroes/marina_cast@2x.png",
+      "prompt": "Use case: identity-preserve. Create ONE production CAST frame. Reference1 is EXACT character identity and BODY SCALE; reference2 comic ink style. Exact Marina pearl-white/teal tide-priestess with shell crown, veil and shell-coral wave crozier. Blessing cast: free hand open forward at chest height, crozier moderately lifted and TILTED toward upper-right so wave crest only a little above crown. Aqua focus brightest, no external spell. Keep face, torso and robe scale identical. CRITICAL: character BODY AND HEAD remain as large as in identity. Head/hood/crown top at about310-330px above feet on512 export; highest prop at most371px above feet. This is a COMPACT raised-focus pose, NOT an overhead reach. Keep body nearly upright, knees straightened for ~6% torso lift while feet remain planted. Upper head-to-feet height must NOT shrink to fit raised props. Fit by tilting prop diagonally instead. Same armor/costume, face, palette, material shapes and prop design as identity. Heroic adult6.5-head proportions, camera38deg elevated three-quarter front, facing screen-right25deg. Bold tapered dark black-violet #1b1226 outer contours24px at1280 square, especially on bright white/ice/gold edges, thinner internal ink; hard2-3 flat cel tones, cool violet-blue shadows and warm upper-left key. No rim light, external glow fringe, airbrush, gradients or soft painterly blending. True transparent1280x1280. Torso centered x640, feet around1190, HEAD TOP around400, highest prop y260 or lower; all content x128..1152 and y256..1190. No text, floor, shadow, projectile, beam or ground effect.\n",
+      "cleanup": "python source/scripts/production.py process --id Heroes/marina_cast --source source/generations/Heroes/marina_cast.png --prompt source/prompts/final__Heroes__marina_cast.txt --height 371.0 --offset 0.0",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Wave crozier and veil read tide healer; pearl jewelry remains dense at small sizes.",
+      "contractExport": "source/contracts/Heroes/marina_cast.png",
+      "contractMaster": "source/masters/Heroes/marina_cast@800.png",
+      "contractSize": [
+        400,
+        400
+      ],
+      "contractPPU": 200,
+      "ppu": 256,
+      "pivot": [
+        0.5,
+        0.07
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 476,
+      "edgeBandLuminance": 0.06671651045786792,
+      "promptFile": "source/prompts/final__Heroes__marina_cast.txt",
+      "sha256": {
+        "export": "8db3bfc2a211246bd7a7cbfce5aa9c3aff68ceb7892d518cdf7e74730e42af17",
+        "source": "16402c16804a38a0d35472d064472978cf240309790ca57b89822a4ac7da1c6a",
+        "master": "53b0b84f1ce7ab7c739432cde37cbacb8dc5c974fe5c78a2c2881401a266dc22",
+        "contractExport": "ac6e97a3edea9872b022888bcb428a9a72fdec6ea5ebc5fd5980f3c2737d746d",
+        "contractMaster": "c4d6f4302ed51f00f0ca4ef0f0c4062f7eb78939ee352f18d921ebd7697f3ce4"
+      }
+    },
+    {
+      "id": "Heroes/marina_downed",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "generator": "image_gen (built-in)",
+      "export": "exports/Art/Heroes/marina_downed.png",
+      "source": "source/generations/Heroes/marina_downed.png",
+      "master": "source/masters/Heroes/marina_downed@2x.png",
+      "prompt": "Use case: precise-object-edit. Reference1 is Marina DOWNED sprite edit target. Keep EXACT kneeling pose, closed eyes bowed head, same shell crown, veil, sea-priestess costume and shell-coral crozier. Reference2 identity, reference3 comic ink style. CHANGE ONLY: 1) strong continuous BLACK-VIOLET #1b1226 outer silhouette outline 32px thick at1280 square, including ALL pearl-white hems, hair, fingers, beads, droplet jewelry, staff and entire wave head; no pale fringe anywhere; smaller inner line weight. 2) Desaturate all costume and element colors about40%, as a defeated state. Keep 2-3 hard flat cel tones, cool violet shadows, warm upper-left key, no soft gradients or airbrush. Same full body composition, true transparent1280x1280, no floor or shadows, no words or detached effects. Preserve character identity and pose.\n",
+      "cleanup": "python source/scripts/production.py process --id Heroes/marina_downed --source source/generations/Heroes/marina_downed.png --prompt source/prompts/final__Heroes__marina_downed.txt --height 225.0 --offset 0.0",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Wave crozier and veil read tide healer; pearl jewelry remains dense at small sizes.",
+      "contractExport": "source/contracts/Heroes/marina_downed.png",
+      "contractMaster": "source/masters/Heroes/marina_downed@800.png",
+      "contractSize": [
+        400,
+        400
+      ],
+      "contractPPU": 200,
+      "ppu": 256,
+      "pivot": [
+        0.5,
+        0.07
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 476,
+      "edgeBandLuminance": 0.17176422005956535,
+      "promptFile": "source/prompts/final__Heroes__marina_downed.txt",
+      "sha256": {
+        "export": "a22a1b40afec976443b748745d1b26db1a3421d329ade7d1edd5b7cfc1d47d87",
+        "source": "462c5081377aad0a21e14da5b04441fbf276ca4ec343dc92290ca27bd64f913a",
+        "master": "38e743b1f98046a8489eaa0081b7b4619fb7d0f060c2b7842e5b98bc10b1a83c",
+        "contractExport": "c50800a875691af6770b3403e73bf70adec4e38e0da7c9306d7ce92d461a879d",
+        "contractMaster": "b9973e5bd5d8a62e49fda8c0e7c6ea00abb6030b5d5e7f3070427d81534bc027"
+      }
+    },
+    {
+      "id": "Portraits/marina",
+      "status": "delivered",
+      "size": [
+        192,
+        192
+      ],
+      "generator": "image_gen (built-in)",
+      "export": "exports/Art/Portraits/marina.png",
+      "source": "source/generations/Portraits/marina.png",
+      "master": "source/masters/Portraits/marina@2x.png",
+      "prompt": "Original dark arcane fantasy, premium hand-inked comic 2.5D. Bold confident tapered black-violet #1b1226 brush-pen outer contours 16px on 1280 canvas, with a solid continuous dark ink silhouette band, not thin hairline edges, thinner internal ink. Hard-edged 2-3 flat cel tones per material, sparse hatching only in deep shadows. Warm upper-left-front key; cool violet-blue #3b2f6b shadows. Saturated jewel lit planes, no rim light. No airbrush, gradients, soft painterly blending, chibi, flat vector, text, watermark or copied characters. Heroic adult 6.5 heads tall, oversized props and hands by 15%. Three-quarter front camera elevated 38deg, body turned 25deg toward SCREEN-RIGHT. Character only, opaque flat dark violet background, no floor, ground shadows, projectiles, beams, explosions or detached effects. Square 1280x1280 portrait, close crop..1152 y256..1190. Match identity scale and framing. Element color on 25-35% silhouette. Crisp dark continuous contour around ALL shapes, including white cloth, jewelry, and glowing props; no bright outline or emissive haze at the outer alpha boundary. Reference 1 is shared INK STYLE; reference 2 is the EXACT character identity, preserve face, costume, colors, build, and every prop. Head-and-shoulders portrait of this EXACT identity: same face, hood/veil, costume, colors and signature prop edge. Flat dark violet background with element-color accent. Fill square, no frame or typography. Subject identity: Adult woman water healer, calm protective tide-priestess, layered sea teal #2fb8b0 and aqua #5fe0ff robes, pearl-white trim and flowing veil, tiny coral accents, pale shell-and-coral crozier with curling wave crest, restrained droplet halo close behind shoulders. Calm vertical silhouette, teal/aqua 30% area. No detached spells.\n",
+      "cleanup": "python source/scripts/production.py process --id Portraits/marina --source source/generations/Portraits/marina.png --prompt source/prompts/final__Portraits__marina.txt --height 0.0 --offset 0.0",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Head-and-shoulders identity matches the sprite; flat violet background has a one-pixel transparent perimeter for the RGBA intake gate.",
+      "ppu": 100,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "promptFile": "source/prompts/final__Portraits__marina.txt",
+      "sha256": {
+        "export": "29a3422dac7187b982bdf9dbe42cfa24d718b1d6a1ba11ffc0fdbe378f859778",
+        "source": "41dba6c8f71bd8c590d3b2859cb94db651d3a206c5fdac7d4073d3c405393ec7",
+        "master": "50d6651415a5ecd219ed90b80c288e16059180a5098037438923b7dc71958746"
+      }
+    },
+    {
+      "id": "Heroes/glacius_walk_a",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "generator": "image_gen (built-in)",
+      "export": "exports/Art/Heroes/glacius_walk_a.png",
+      "source": "source/generations/Heroes/glacius_walk_a.png",
+      "master": "source/masters/Heroes/glacius_walk_a@2x.png",
+      "prompt": "Use case: stylized-concept. Create ONE Heroes/glacius_walk_a production image. Reference 1 is the exact Glacius identity AND shared comic-ink style; preserve identical helm, shield design, geometric sigils, armor, mace, colors, proportions. Walking CONTACT pose toward +X: leading foot forward right, rear foot back, arms counter-swing slightly while retaining shield and mace. Torso and armor scale identical to idle. Premium dark arcane hand-inked comic 2.5D, tapered black-violet brush-pen outer contours 8px on 1280 canvas and fine inner lines, 2-3 hard flat cel tones, warm upper-left-front key, cool violet-blue shadows, ice cyan 30% silhouette. Simplify scuff texture, favor bold flat shapes. Adult heroic 6.5 heads tall. Facing screen-right, body 25deg right, elevated camera 38deg. Reference 2 is pose/camera only. True transparent background, no floor or shadow. Square 1280x1280 canvas, centered torso x640, feet y1190, head about y400, contents within x128..1152 y256..1190. Keep camera and scale consistent with identity. No projectile or detached magic. No letters/numbers, watermark, rim light, airbrush, gradients, soft rendering or chibi.\n",
+      "cleanup": "python source/scripts/production.py process --id Heroes/glacius_walk_a --source source/generations/Heroes/glacius_walk_a.png --prompt source/prompts/final__Heroes__glacius_walk_a.txt --height 320.0 --offset 0",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Broad ice shield and frost plate read guardian; metal and ice scuffs are dense at720p.",
+      "contractExport": "source/contracts/Heroes/glacius_walk_a.png",
+      "contractMaster": "source/masters/Heroes/glacius_walk_a@800.png",
+      "contractSize": [
+        400,
+        400
+      ],
+      "contractPPU": 200,
+      "ppu": 256,
+      "pivot": [
+        0.5,
+        0.07
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 476,
+      "new": true,
+      "like": "Heroes/glacius_idle",
+      "silhouetteIoU": 0.5965867702660516,
+      "edgeBandLuminance": 0.11527397694619677,
+      "promptFile": "source/prompts/final__Heroes__glacius_walk_a.txt",
+      "sha256": {
+        "export": "015399fe4cc4d7102a944aaeac12f5bedddb328fac2c09cdf90d82a375b15524",
+        "source": "269727b0dd2fbc77df5a26a3624e0bd0cd9ed9fc505c3651bd4559a620240929",
+        "master": "9be900b5a96befa1f10109600f74ceb5e9cc3a5e6c6eee42265d36b4bd6412ad",
+        "contractExport": "355f2db1ebfcdc5f832b22ea0a0ef3d1d7c8230acb896a378bd5b0ca66b690bd",
+        "contractMaster": "9f8cb7952c32fc55cd47a213e3cd0d836110bfb7a524ec9f2027395c2423d5e0"
+      }
+    },
+    {
+      "id": "Heroes/glacius_walk_b",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "generator": "image_gen (built-in)",
+      "export": "exports/Art/Heroes/glacius_walk_b.png",
+      "source": "source/generations/Heroes/glacius_walk_b.png",
+      "master": "source/masters/Heroes/glacius_walk_b@2x.png",
+      "prompt": "Original dark arcane fantasy, premium hand-inked comic 2.5D. Bold confident tapered black-violet #1b1226 brush-pen outer contours 8px on 1280 canvas, thinner internal ink. Hard-edged 2-3 flat cel tones per material, sparse hatching only in deep shadows. Warm upper-left-front key; cool violet-blue #3b2f6b shadows. Saturated jewel lit planes, no rim light. No airbrush, gradients, soft painterly blending, chibi, flat vector, text, watermark or copied characters. Heroic adult 6.5 heads tall, oversized props and hands by 15%. Three-quarter front camera elevated 38deg, body turned 25deg toward SCREEN-RIGHT. Character only, true transparent background, no floor, ground shadows, projectiles, beams, explosions or detached effects. Square 1280x1280, torso centered x640, feet around y1190, head around y400; all contents within x128..1152 y256..1190. Match identity scale and framing. Element color on 25-35% silhouette. Crisp dark continuous contour around all shapes. EXACT character identity from reference 1. Create a walking PASSING pose: legs crossing underneath, one heel lifted. Preserve IDLE UPPER BODY silhouette almost EXACTLY: same wide broad pauldrons, shield at same right-side location, mace extending same left distance, SAME chest and helm size and proportions. Keep torso centered, do not lean or turn body more. Modify legs only with slight counter-swing wrists. Idle silhouette overlap must exceed 0.65. Retain broad armored guardian silhouette, do NOT narrow shoulders or shrink shield. Reference 2 is the rejected previous pose: its upper body was too narrow; restore the much wider identity upper body from reference 1. No extra details or ground effects.\n",
+      "cleanup": "python source/scripts/production.py process --id Heroes/glacius_walk_b --source source/generations/Heroes/glacius_walk_b.png --prompt source/prompts/final__Heroes__glacius_walk_b.txt --height 320.0 --offset 0.0",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Broad ice shield and frost plate read guardian; metal and ice scuffs are dense at720p.",
+      "contractExport": "source/contracts/Heroes/glacius_walk_b.png",
+      "contractMaster": "source/masters/Heroes/glacius_walk_b@800.png",
+      "contractSize": [
+        400,
+        400
+      ],
+      "contractPPU": 200,
+      "ppu": 256,
+      "pivot": [
+        0.5,
+        0.07
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 476,
+      "new": true,
+      "like": "Heroes/glacius_idle",
+      "silhouetteIoU": 0.6577715355805244,
+      "edgeBandLuminance": 0.09356379384781437,
+      "promptFile": "source/prompts/final__Heroes__glacius_walk_b.txt",
+      "sha256": {
+        "export": "161729300ed3d43c1586edbc1bd644c929eb63e3ed19d9d89f156b59504b5129",
+        "source": "b728788fdc73cfae5f43a6662090d4f427f8ddc26d05ea85fbeb028cfe8cec69",
+        "master": "a67b3d8e5f28e2c9b1c4d5b8526485ff8795255c81c4d1a9ddb38b091f8329cc",
+        "contractExport": "7f04a3b89811fb8395825a6d6f458563f77f4c5e4ab058d4eb8b06dee4c3f5a6",
+        "contractMaster": "c52afe1d504335b008ced59a74eae5ffda39891193e3e932e088c72658e958aa"
+      }
+    },
+    {
+      "id": "Heroes/ignis_walk_a",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "generator": "image_gen (built-in)",
+      "export": "exports/Art/Heroes/ignis_walk_a.png",
+      "source": "source/generations/Heroes/ignis_walk_a.png",
+      "master": "source/masters/Heroes/ignis_walk_a@2x.png",
+      "prompt": "Original dark arcane fantasy, premium hand-inked comic 2.5D. Bold confident tapered black-violet #1b1226 brush-pen outer contours 8px on 1280 canvas, thinner internal ink. Hard-edged 2-3 flat cel tones per material, sparse hatching only in deep shadows. Warm upper-left-front key; cool violet-blue #3b2f6b shadows. Saturated jewel lit planes, no rim light. No airbrush, gradients, soft painterly blending, chibi, flat vector, text, watermark or copied characters. Heroic adult 6.5 heads tall, oversized props and hands by 15%. Three-quarter front camera elevated 38deg, body turned 25deg toward SCREEN-RIGHT. Character only, true transparent background, no floor, ground shadows, projectiles, beams, explosions or detached effects. Square 1280x1280, torso centered x640, feet around y1190, head around y400; all contents within x128..1152 y256..1190. Match identity scale and framing. Element color on 25-35% silhouette. Crisp dark continuous contour around all shapes. EXACT Ignis identity from reference 2, style from reference1. Walking CONTACT pose: leading foot stepped toward screen-right, rear foot back, showing two visibly separated feet. CHANGE ONLY LEGS AND VERY SLIGHT WRIST MOTION. Preserve the ENTIRE IDLE UPPER BODY silhouette from reference2 almost exactly, including broad flaring ROBE TAILS to the RIGHT, free hand extended right, staff projecting LEFT, tall pointed hood, ash mantle. Do not fold robe tails behind torso, do not narrow the costume, do not turn him side-on. Same torso, head, camera, costume sizes. Silhouette overlap with identity >=0.7. No extra magic, scenery or ground shadow.\n",
+      "cleanup": "python source/scripts/production.py process --id Heroes/ignis_walk_a --source source/generations/Heroes/ignis_walk_a.png --prompt source/prompts/final__Heroes__ignis_walk_a.txt --height 346.0 --offset 0",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Pointed hood, caged focus and ember robes read fire mage; gold and hem ornament is busier than ideal.",
+      "contractExport": "source/contracts/Heroes/ignis_walk_a.png",
+      "contractMaster": "source/masters/Heroes/ignis_walk_a@800.png",
+      "contractSize": [
+        400,
+        400
+      ],
+      "contractPPU": 200,
+      "ppu": 256,
+      "pivot": [
+        0.5,
+        0.07
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 476,
+      "new": true,
+      "like": "Heroes/ignis_idle",
+      "silhouetteIoU": 0.7608177401943145,
+      "edgeBandLuminance": 0.09173086945571082,
+      "promptFile": "source/prompts/final__Heroes__ignis_walk_a.txt",
+      "sha256": {
+        "export": "a64ec708fe42e50ca580a0b4fe64392784dd2244b3f278891a46094ee5370595",
+        "source": "27f92478612eb98bf49eb7c10dc6004d150ba331ebeaeeeb3dc85c0319469f4b",
+        "master": "606f4677932b21eb96452b320e1abbee5426d16621480c027d3754f8ca59926b",
+        "contractExport": "b9eaf23927dfd95b87cbd2f4c2ad2e06408329320dfe78dd6c0038a8041b3315",
+        "contractMaster": "04ebf4e426591a4ded9b740162adba4f5743eee8212fa8a9a3b47cf3d5a8e963"
+      }
+    },
+    {
+      "id": "Heroes/ignis_walk_b",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "generator": "image_gen (built-in)",
+      "export": "exports/Art/Heroes/ignis_walk_b.png",
+      "source": "source/generations/Heroes/ignis_walk_b.png",
+      "master": "source/masters/Heroes/ignis_walk_b@2x.png",
+      "prompt": "Original dark arcane fantasy, premium hand-inked comic 2.5D. Bold confident tapered black-violet #1b1226 brush-pen outer contours 8px on 1280 canvas, thinner internal ink. Hard-edged 2-3 flat cel tones per material, sparse hatching only in deep shadows. Warm upper-left-front key; cool violet-blue #3b2f6b shadows. Saturated jewel lit planes, no rim light. No airbrush, gradients, soft painterly blending, chibi, flat vector, text, watermark or copied characters. Heroic adult 6.5 heads tall, oversized props and hands by 15%. Three-quarter front camera elevated 38deg, body turned 25deg toward SCREEN-RIGHT. Character only, true transparent background, no floor, ground shadows, projectiles, beams, explosions or detached effects. Square 1280x1280, torso centered x640, feet around y1190, head around y400; all contents within x128..1152 y256..1190. Match identity scale and framing. Element color on 25-35% silhouette. Crisp dark continuous contour around all shapes. Reference 1 is shared INK STYLE; reference 2 is the EXACT character identity, preserve face, costume, colors, build, and every prop. Reference 3 controls camera and approximate pose ONLY; override its weapon with this character's real prop. Walk PASSING pose: legs crossing beneath torso, one heel lifted, body a little higher. Keep UPPER BODY OUTLINE almost identical to idle, including prop position and shoulder width. Do not lean or narrow torso; silhouette IoU >=0.65. Subject identity: Lean adult male fire battle-mage with layered crimson #c0281a and orange #ff7a1a ember robes, burnt torn hems, gold trim, charcoal undercloth, ash-grey mantle, tall pointed hood with stiff peak bending back, angular half-shadowed face, tall blackened-iron staff with caged flame focus held in claw prongs above hood. Flowing cloth, narrow mage silhouette. Fire-orange/carmine 30% area. No detached embers.\n",
+      "cleanup": "python source/scripts/production.py process --id Heroes/ignis_walk_b --source source/generations/Heroes/ignis_walk_b.png --prompt source/prompts/final__Heroes__ignis_walk_b.txt --height 346.0 --offset 0",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Pointed hood, caged focus and ember robes read fire mage; gold and hem ornament is busier than ideal.",
+      "contractExport": "source/contracts/Heroes/ignis_walk_b.png",
+      "contractMaster": "source/masters/Heroes/ignis_walk_b@800.png",
+      "contractSize": [
+        400,
+        400
+      ],
+      "contractPPU": 200,
+      "ppu": 256,
+      "pivot": [
+        0.5,
+        0.07
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 476,
+      "new": true,
+      "like": "Heroes/ignis_idle",
+      "silhouetteIoU": 0.7125986047147873,
+      "edgeBandLuminance": 0.0948132002636864,
+      "promptFile": "source/prompts/final__Heroes__ignis_walk_b.txt",
+      "sha256": {
+        "export": "c5de1ac2417f21d6357597dce91746b26c30ffadbe7c4b2b4fa389beacce30e2",
+        "source": "00c129520a0853bf7bc7fcf87f398fd8015ba34cbd2fdd627595f08a35b3311b",
+        "master": "cba0273269890c11bf4a96790157a313d791faa16a2d7373627e35004a102ba7",
+        "contractExport": "232b2d493a8eac911176673207a052b54acc06b9d54c9da5bed57d02e3599e8a",
+        "contractMaster": "4deb3ae518a4f3279f73882fcc5fa83df076507aea7f8f00be87ffb295f34373"
+      }
+    },
+    {
+      "id": "Heroes/veyra_walk_a",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "generator": "image_gen (built-in)",
+      "export": "exports/Art/Heroes/veyra_walk_a.png",
+      "source": "source/generations/Heroes/veyra_walk_a.png",
+      "master": "source/masters/Heroes/veyra_walk_a@2x.png",
+      "prompt": "Use case: precise-object-edit. Reference1 is edit target walk_a pose. Reference2 is corrected Veyra identity/INK TREATMENT; reference3 is shared dark comic ink style. Preserve EXACT same Veyra adult face, hood, visor, violet/indigo leather and cape, copper quiver and long recurve bow. Walking CONTACT: two feet separated front/back, but restore the WIDE UPPER BODY OUTLINE and cloak tails from reference2. Staff/bow, torso and shoulders near identical positions to identity, silhouette overlap >=0.7. Strengthen ALL silhouette outlines to bold dark black-violet #1b1226 brush-pen ink, 18px thick at1280 square, tapering. Especially ink the whole bow and bowstring: yellow lightning is a THIN interior line enclosed by solid dark outline, no exterior yellow haze or emissive fringe. The 3px export edge band must be dark (<0.22 luminance). Hard flat 2-3 cel tones per material, cool violet shadows, upper-left warm key. No airbrush, rim light, gradients, text, floor, shadows, missiles or detached magic. True transparent 1280x1280 canvas; centered full body and props with generous transparent margins.\n",
+      "cleanup": "python source/scripts/production.py process --id Heroes/veyra_walk_a --source source/generations/Heroes/veyra_walk_a.png --prompt source/prompts/final__Heroes__veyra_walk_a.txt --height 340.0 --offset 8.0",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Long bow and narrow violet silhouette read ranger; torso was aligned independently of the bow bounds.",
+      "contractExport": "source/contracts/Heroes/veyra_walk_a.png",
+      "contractMaster": "source/masters/Heroes/veyra_walk_a@800.png",
+      "contractSize": [
+        400,
+        400
+      ],
+      "contractPPU": 200,
+      "ppu": 256,
+      "pivot": [
+        0.5,
+        0.07
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 476,
+      "new": true,
+      "like": "Heroes/veyra_idle",
+      "silhouetteIoU": 0.5822179513579061,
+      "edgeBandLuminance": 0.08019006310729347,
+      "promptFile": "source/prompts/final__Heroes__veyra_walk_a.txt",
+      "sha256": {
+        "export": "53c7cd5663e5b5b68c31d4bf9ebc7d70ee766a00d605d7f9ed013514526aac18",
+        "source": "ef0f5a50f651435e2848a53f872d769f97d6320e7880d10b25c05564b17d2f22",
+        "master": "d7218f8a021dfe3103b014a1ffc38366ea5524deb07b199de8867d3b22bb235c",
+        "contractExport": "dbb57813296a74de4a3c31888be8d2436866c389f548a417b18160db336c3374",
+        "contractMaster": "a6805a3972a749b7005b7de1feb373b81c8843a457014789f8dd6873df52c176"
+      }
+    },
+    {
+      "id": "Heroes/veyra_walk_b",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "generator": "image_gen (built-in)",
+      "export": "exports/Art/Heroes/veyra_walk_b.png",
+      "source": "source/generations/Heroes/veyra_walk_b.png",
+      "master": "source/masters/Heroes/veyra_walk_b@2x.png",
+      "prompt": "Use case: precise-object-edit. Reference1 is edit target walk_b pose. Reference2 is corrected Veyra identity/INK TREATMENT; reference3 is shared dark comic ink style. Preserve EXACT same Veyra adult face, hood, visor, violet/indigo leather and cape, copper quiver and long recurve bow. Walking PASSING pose: legs crossing underneath, preserve UPPER BODY outline including cloak width and bow location nearly identical to reference2, silhouette overlap>=0.7. Strengthen ALL silhouette outlines to bold dark black-violet #1b1226 brush-pen ink, 18px thick at1280 square, tapering. Especially ink the whole bow and bowstring: yellow lightning is a THIN interior line enclosed by solid dark outline, no exterior yellow haze or emissive fringe. The 3px export edge band must be dark (<0.22 luminance). Hard flat 2-3 cel tones per material, cool violet shadows, upper-left warm key. No airbrush, rim light, gradients, text, floor, shadows, missiles or detached magic. True transparent 1280x1280 canvas; centered full body and props with generous transparent margins.\n",
+      "cleanup": "python source/scripts/production.py process --id Heroes/veyra_walk_b --source source/generations/Heroes/veyra_walk_b.png --prompt source/prompts/final__Heroes__veyra_walk_b.txt --height 340.0 --offset 17.0",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Long bow and narrow violet silhouette read ranger; torso was aligned independently of the bow bounds.",
+      "contractExport": "source/contracts/Heroes/veyra_walk_b.png",
+      "contractMaster": "source/masters/Heroes/veyra_walk_b@800.png",
+      "contractSize": [
+        400,
+        400
+      ],
+      "contractPPU": 200,
+      "ppu": 256,
+      "pivot": [
+        0.5,
+        0.07
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 476,
+      "new": true,
+      "like": "Heroes/veyra_idle",
+      "silhouetteIoU": 0.6462996050404364,
+      "edgeBandLuminance": 0.08365703191434866,
+      "promptFile": "source/prompts/final__Heroes__veyra_walk_b.txt",
+      "sha256": {
+        "export": "d968f1a98e3a538060d48d6616423b1e786dd547204b6dd7278f9769cd8c1c41",
+        "source": "4d3c9f8a32fcd6a716a2b3f0d22b5c90e5011b6604075a3c445d8c426ef05322",
+        "master": "0df9ac2fb1834a3da93aec5a204fccca201273750ac165ee1d298bb76c4a1182",
+        "contractExport": "0c1a48ae545cd06d630b926ba0e9736cdf59c1d53f72b9da30f6376563db3278",
+        "contractMaster": "5c5bb3a9472e73b2d72dc1170104cd8baf3c04c6bcd951b9e836cd07a40e8e2e"
+      }
+    },
+    {
+      "id": "Heroes/veyra_attack",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "generator": "image_gen (built-in)",
+      "export": "exports/Art/Heroes/veyra_attack.png",
+      "source": "source/generations/Heroes/veyra_attack.png",
+      "master": "source/masters/Heroes/veyra_attack@2x.png",
+      "prompt": "Original dark arcane fantasy, premium hand-inked comic 2.5D. Bold confident tapered black-violet #1b1226 brush-pen outer contours 8px on 1280 canvas, thinner internal ink. Hard-edged 2-3 flat cel tones per material, sparse hatching only in deep shadows. Warm upper-left-front key; cool violet-blue #3b2f6b shadows. Saturated jewel lit planes, no rim light. No airbrush, gradients, soft painterly blending, chibi, flat vector, text, watermark or copied characters. Heroic adult 6.5 heads tall, oversized props and hands by 15%. Three-quarter front camera elevated 38deg, body turned 25deg toward SCREEN-RIGHT. Character only, true transparent background, no floor, ground shadows, projectiles, beams, explosions or detached effects. Square 1280x1280, torso centered x640, feet around y1190, head around y400; all contents within x128..1152 y256..1190. Match identity scale and framing. Element color on 25-35% silhouette. Crisp dark continuous contour around all shapes. Reference 1 is shared INK STYLE; reference 2 is the EXACT character identity, preserve face, costume, colors, build, and every prop. Reference 3 controls camera and approximate pose ONLY; override its weapon with this character's real prop. Bow release strike moment: bow arm fully extended toward +X, bowstring just released, drawing hand beside cheek, NO arrow in flight. Subject identity: Adult woman lightning ranger, slim precise hooded storm-scout with angular visor, light fitted leather in deep indigo and electric violet #a98bff, copper quiver and bracers. Very large long recurve bow of copper and dark wood strung with crackling light, tiny white-yellow #fff36a sparks only ON bowstring. Narrow silhouette with long diagonal bow. Violet cloak/panels 30% area.\n",
+      "cleanup": "python source/scripts/production.py process --id Heroes/veyra_attack --source source/generations/Heroes/veyra_attack.png --prompt source/prompts/final__Heroes__veyra_attack.txt --height 340.0 --offset 17.0",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Long bow and narrow violet silhouette read ranger; torso was aligned independently of the bow bounds.",
+      "contractExport": "source/contracts/Heroes/veyra_attack.png",
+      "contractMaster": "source/masters/Heroes/veyra_attack@800.png",
+      "contractSize": [
+        400,
+        400
+      ],
+      "contractPPU": 200,
+      "ppu": 256,
+      "pivot": [
+        0.5,
+        0.07
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 476,
+      "new": true,
+      "like": "Heroes/veyra_idle",
+      "edgeBandLuminance": 0.08922040816793327,
+      "promptFile": "source/prompts/final__Heroes__veyra_attack.txt",
+      "sha256": {
+        "export": "4214e290b9671dffc64d54cf1e9e9bc12b676a79df707cbed92c53d0cd9bca6f",
+        "source": "3f8a98bd3d32d2f4f5453f9ea269e210d6d1585de111acc3ff70704c472a70a5",
+        "master": "654fb3411481d3fc6cfc4519ad79149616b9f18d9dd90909b387d666f3c294ac",
+        "contractExport": "31ef1c6b4054d430d7aa10d92f28d80ea8307ff395379811e81e31679965b294",
+        "contractMaster": "f150dd7dd00ff53babc4b6ec319f6ecaeb25166adabb1197785c297f7d4168b7"
+      }
+    },
+    {
+      "id": "Heroes/marina_walk_a",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "generator": "image_gen (built-in)",
+      "export": "exports/Art/Heroes/marina_walk_a.png",
+      "source": "source/generations/Heroes/marina_walk_a.png",
+      "master": "source/masters/Heroes/marina_walk_a@2x.png",
+      "prompt": "Original dark arcane fantasy, premium hand-inked comic 2.5D. Bold confident tapered black-violet #1b1226 brush-pen outer contours 16px on 1280 canvas, with a solid continuous dark ink silhouette band, not thin hairline edges, thinner internal ink. Hard-edged 2-3 flat cel tones per material, sparse hatching only in deep shadows. Warm upper-left-front key; cool violet-blue #3b2f6b shadows. Saturated jewel lit planes, no rim light. No airbrush, gradients, soft painterly blending, chibi, flat vector, text, watermark or copied characters. Heroic adult 6.5 heads tall, oversized props and hands by 15%. Three-quarter front camera elevated 38deg, body turned 25deg toward SCREEN-RIGHT. Character only, true transparent background, no floor, ground shadows, projectiles, beams, explosions or detached effects. Square 1280x1280, torso centered x640, feet around y1190, head around y400; all contents within x128..1152 y256..1190. Match identity scale and framing. Element color on 25-35% silhouette. Crisp dark continuous contour around ALL shapes, including white cloth, jewelry, and glowing props; no bright outline or emissive haze at the outer alpha boundary. Reference 1 is shared INK STYLE; reference 2 is the EXACT character identity, preserve face, costume, colors, build, and every prop. Reference 3 controls camera and approximate pose ONLY; override its weapon with this character's real prop. Walk CONTACT pose: leading foot forward toward +X, rear foot back, arms subtly counter-swinging, same UPPER BODY SILHOUETTE, camera and scale as idle. Do not lean. Keep props near idle positions for silhouette IoU >=0.65. Subject identity: Adult woman water healer, calm protective tide-priestess, layered sea teal #2fb8b0 and aqua #5fe0ff robes, pearl-white trim and flowing veil, tiny coral accents, pale shell-and-coral crozier with curling wave crest, restrained droplet halo close behind shoulders. Calm vertical silhouette, teal/aqua 30% area. No detached spells.\n",
+      "cleanup": "python source/scripts/production.py process --id Heroes/marina_walk_a --source source/generations/Heroes/marina_walk_a.png --prompt source/prompts/final__Heroes__marina_walk_a.txt --height 350.0 --offset 0.0",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Wave crozier and veil read tide healer; pearl jewelry remains dense at small sizes.",
+      "contractExport": "source/contracts/Heroes/marina_walk_a.png",
+      "contractMaster": "source/masters/Heroes/marina_walk_a@800.png",
+      "contractSize": [
+        400,
+        400
+      ],
+      "contractPPU": 200,
+      "ppu": 256,
+      "pivot": [
+        0.5,
+        0.07
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 476,
+      "new": true,
+      "like": "Heroes/marina_idle",
+      "silhouetteIoU": 0.8134748548646569,
+      "edgeBandLuminance": 0.1463271625783062,
+      "promptFile": "source/prompts/final__Heroes__marina_walk_a.txt",
+      "sha256": {
+        "export": "611a134ada9b75cdf15692fc1ec6aa8ba798146bedcd94ec33ff74ba5b8fdd88",
+        "source": "6f7becf13187e1aeef88d31324dc7afa28cf5a08179d8f8f0d2fb52972be34e1",
+        "master": "23a7cf4c214255233fef35d50462ad535ad794627f68270ef38269e773aa8f8e",
+        "contractExport": "1f37351a7f269417200f0aefe3a1d5d6e54cfaa78b745dcc769650db95b78c80",
+        "contractMaster": "9c5bbf6a04d7a5cbc93d13e3263dc5fda22836ec59c1aa5df2923f722b769501"
+      }
+    },
+    {
+      "id": "Heroes/marina_walk_b",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "generator": "image_gen (built-in)",
+      "export": "exports/Art/Heroes/marina_walk_b.png",
+      "source": "source/generations/Heroes/marina_walk_b.png",
+      "master": "source/masters/Heroes/marina_walk_b@2x.png",
+      "prompt": "Original dark arcane fantasy, premium hand-inked comic 2.5D. Bold confident tapered black-violet #1b1226 brush-pen outer contours 16px on 1280 canvas, with a solid continuous dark ink silhouette band, not thin hairline edges, thinner internal ink. Hard-edged 2-3 flat cel tones per material, sparse hatching only in deep shadows. Warm upper-left-front key; cool violet-blue #3b2f6b shadows. Saturated jewel lit planes, no rim light. No airbrush, gradients, soft painterly blending, chibi, flat vector, text, watermark or copied characters. Heroic adult 6.5 heads tall, oversized props and hands by 15%. Three-quarter front camera elevated 38deg, body turned 25deg toward SCREEN-RIGHT. Character only, true transparent background, no floor, ground shadows, projectiles, beams, explosions or detached effects. Square 1280x1280, torso centered x640, feet around y1190, head around y400; all contents within x128..1152 y256..1190. Match identity scale and framing. Element color on 25-35% silhouette. Crisp dark continuous contour around ALL shapes, including white cloth, jewelry, and glowing props; no bright outline or emissive haze at the outer alpha boundary. Reference 1 is shared INK STYLE; reference 2 is the EXACT character identity, preserve face, costume, colors, build, and every prop. Reference 3 controls camera and approximate pose ONLY; override its weapon with this character's real prop. Walk PASSING pose: legs crossing beneath torso, one heel lifted, body a little higher. Keep UPPER BODY OUTLINE almost identical to idle, including prop position and shoulder width. Do not lean or narrow torso; silhouette IoU >=0.65. Subject identity: Adult woman water healer, calm protective tide-priestess, layered sea teal #2fb8b0 and aqua #5fe0ff robes, pearl-white trim and flowing veil, tiny coral accents, pale shell-and-coral crozier with curling wave crest, restrained droplet halo close behind shoulders. Calm vertical silhouette, teal/aqua 30% area. No detached spells.\n",
+      "cleanup": "python source/scripts/production.py process --id Heroes/marina_walk_b --source source/generations/Heroes/marina_walk_b.png --prompt source/prompts/final__Heroes__marina_walk_b.txt --height 350.0 --offset 0.0",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Wave crozier and veil read tide healer; pearl jewelry remains dense at small sizes.",
+      "contractExport": "source/contracts/Heroes/marina_walk_b.png",
+      "contractMaster": "source/masters/Heroes/marina_walk_b@800.png",
+      "contractSize": [
+        400,
+        400
+      ],
+      "contractPPU": 200,
+      "ppu": 256,
+      "pivot": [
+        0.5,
+        0.07
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 476,
+      "new": true,
+      "like": "Heroes/marina_idle",
+      "silhouetteIoU": 0.8064744759643496,
+      "edgeBandLuminance": 0.17618517728245986,
+      "promptFile": "source/prompts/final__Heroes__marina_walk_b.txt",
+      "sha256": {
+        "export": "4ff4cc442d3b7791b832d1cf6ec7605a6b96fdb40ca407c614ada722e9a1c6d7",
+        "source": "db8464e85785f92b72a1c33c3578970c200357f75983228ecf47f1a34c4255cc",
+        "master": "52ba88763107e85c2c9a9233cbe640f9dbe9bd48daf3df93e0510693220ac1c1",
+        "contractExport": "b98adb3007fb04adc7b8e22999286a9f4411e9cc60cf9509553d48a14f13c7a2",
+        "contractMaster": "93ebf2e2fec9ab3a85a8c1bcd64db12238ed204884552b4dbdfcec20fceae009"
+      }
+    },
+    {
+      "id": "Enemies/grunt_a",
+      "status": "delivered",
+      "size": [
+        256,
+        256
+      ],
+      "generator": "image_gen (built-in)",
+      "export": "exports/Art/Enemies/grunt_a.png",
+      "source": "source/generations/Enemies/grunt_a.png",
+      "master": "source/masters/Enemies/grunt_a@2x.png",
+      "prompt": "Use case: stylized-concept. R01 GRUNT contact walk identity, original dark arcane hand-inked comic enemy. Reference1 is initial husk identity: retain jagged notched blade, hot magenta eyes/cracks, fused broken guard helm, torn tabard, hunched adult monster anatomy and screen-right38degree elevated camera. Simplify it to weak MELEE FODDER: helm has SHORT BROKEN jagged rim, no tall crest/horn/crown. Less armor, one simple broken shoulder plate, exposed gaunt charcoal bone-grey husk arms and torso, rust scraps, torn bone tabard. Small compact angular threatening husk, not elite, no ornate full plate. Lead foot forward +X rear foot back contact pose. Reference2 comic INK STYLE ONLY, never hero costume. Bold black-violet #1b1226 tapered brush-pen outside contour36px on1280 image, to retain a DARK3px outline after downscale to256 with character150px tall. Muted desaturated bone/rust/charcoal; magenta #ff3d8b violet #8a2be2 eyes/cracks at most15% area. Hard2-3 flat cel tones, cool violet shadows, warm upper-left key, no airbrush/gradients/rim light. True transparent1280 square full body centered with margins, feet near1190, no ground/shadow/words/projectile/detached effects.\n",
+      "cleanup": "python source/scripts/production.py process --id Enemies/grunt_a --source source/generations/Enemies/grunt_a.png --prompt source/prompts/final__Enemies__grunt_a.txt --height 150.0 --offset -16.0",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Hunched fused helm and notched blade read fodder; remaining armor is more elaborate than a minimal mob.",
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 236,
+      "edgeBandLuminance": 0.1913474108492134,
+      "promptFile": "source/prompts/final__Enemies__grunt_a.txt",
+      "sha256": {
+        "export": "865577dc210ebd15979793193a8b02471b99168810c26c39ef6386f6d2a6525e",
+        "source": "db9c86235f4eff459a8ff4d23c462f732635bc29131e60d75563e84269527c11",
+        "master": "49aab514f58951752ac65bbbc5c25c344f22fe48a5680ea09279b9b8c20e9364"
+      }
+    },
+    {
+      "id": "Enemies/grunt_b",
+      "status": "delivered",
+      "size": [
+        256,
+        256
+      ],
+      "generator": "image_gen (built-in)",
+      "export": "exports/Art/Enemies/grunt_b.png",
+      "source": "source/generations/Enemies/grunt_b.png",
+      "master": "source/masters/Enemies/grunt_b@2x.png",
+      "prompt": "Use case: identity-preserve. Derive GRUNT walk PASSING key pose from reference1. KEEP ENTIRE UPPER BODY AND WEAPON ALMOST PIXEL-IDENTICAL: same short broken fused helm, gaunt husk face/eyes, one broken shoulder armor, chest, torn tabard outline, left-side notched blade pointing diagonally down-left and claw hand on right in same locations. Change ONLY LEGS to a SUBTLE passing step: one knee crosses under body, one heel lifted, feet still slightly apart. Do NOT rotate or lean torso, do not alter blade or arm positions, do not narrow shoulders or cloak, do not redesign armor, keep upper-body scale and position exact. Silhouette overlap with reference1 >=0.75. Reference2 comic INK STYLE ONLY. Same muted bone/rust/charcoal, magenta/violet cracks under15%. Bold dark #1b1226 tapered outer contour40px at1280square, hard2-3 flat cel tones, warm upper-left key cool violet shadows. True transparent1280 square full character centered with transparent margins. No floor, shadows, text or detached effects.\n",
+      "cleanup": "python source/scripts/production.py process --id Enemies/grunt_b --source source/generations/Enemies/grunt_b.png --prompt source/prompts/final__Enemies__grunt_b.txt --height 150.0 --offset -16.0",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Hunched fused helm and notched blade read fodder; remaining armor is more elaborate than a minimal mob.",
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 236,
+      "silhouetteIoU": 0.6437661220980223,
+      "edgeBandLuminance": 0.18534275678294573,
+      "promptFile": "source/prompts/final__Enemies__grunt_b.txt",
+      "sha256": {
+        "export": "afd1e94337167acc34c56576a32dd72eb5391e180103cc1403fba437f41e04dd",
+        "source": "7c6ed06f314ace1b8c19fa68f52d25aa9c4db3b9c304d476df24a50775b11b25",
+        "master": "33d33c82bf9260edab4f5c2f408ebdaa615b36d5ed98ba9dbfda45c5ce7b0616"
+      }
+    },
+    {
+      "id": "Enemies/runner_a",
+      "status": "delivered",
+      "size": [
+        256,
+        256
+      ],
+      "generator": "image_gen (built-in)",
+      "export": "exports/Art/Enemies/runner_a.png",
+      "source": "source/generations/Enemies/runner_a.png",
+      "master": "source/masters/Enemies/runner_a@2x.png",
+      "prompt": "Original dark arcane fantasy, premium hand-inked comic 2.5D. Bold confident tapered black-violet #1b1226 brush-pen outer contours 36px on 1280 canvas, with a solid continuous dark ink silhouette band, not thin hairline edges, thinner internal ink. Hard-edged 2-3 flat cel tones per material, sparse hatching only in deep shadows. Warm upper-left-front key; cool violet-blue #3b2f6b shadows. Saturated jewel lit planes, no rim light. No airbrush, gradients, soft painterly blending, chibi, flat vector, text, watermark or copied characters. Threatening adult monster anatomy, not chibi. Three-quarter front camera elevated 38deg, body turned 25deg toward SCREEN-RIGHT. Character only, true transparent background, no floor, ground shadows, projectiles, beams, explosions or detached effects. Square 1280x1280, torso centered x640, feet around y1190, head scaled for this monster; all contents within x128..1152 y256..1190. Match identity scale and framing. Enemy faction: desaturated bone, rust and charcoal body, hot rift magenta #ff3d8b and violet #8a2be2 eyes/cracks AT MOST15% silhouette; no hero jewel costume. Crisp dark continuous contour around ALL shapes, including white cloth, jewelry, and glowing props; no bright outline or emissive haze at the outer alpha boundary. Subject: Small lanky low sprinting rift hound-MAN, skeletal hound jaw, long digitigrade legs, hunched torso, claws forward, exposed rift-cracked ribs, ragged loincloth. A biped hound-man, unmistakable speed silhouette. CONTACT walk identity pose, leading foot forward +X, rear foot back. Keep torso at exact canvas center. Reference1 is comic ink STYLE ONLY, no hero armor identity. Reference2 camera and approximate build/prop posture only. Keep a LOW forward-reaching sprint silhouette with long claws, lanky digitigrade legs and hound skull; biped hound-man, no armor or sword. Dark continuous thick ink silhouette must survive downscale to256, including weapon and bright bone edges; no bright outer fringe. No decorative frame or environment.\n",
+      "cleanup": "python source/scripts/production.py process --id Enemies/runner_a --source source/generations/Enemies/runner_a.png --prompt source/prompts/final__Enemies__runner_a.txt --height 155.0 --offset -8.0",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Low hound-man outline and claws read speed; passing-step motion is restrained to preserve overlap.",
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 236,
+      "edgeBandLuminance": 0.21827782206547777,
+      "promptFile": "source/prompts/final__Enemies__runner_a.txt",
+      "sha256": {
+        "export": "64c8716e24f28c90d065680442cf8fea8ccfc2f37c492bd6fea36e913de140a3",
+        "source": "cc2fa7373e0f7c69ea0bde08d8dd21d4fed81ceec420c8158fe069725b62ea05",
+        "master": "a845b22c0ceb0288183aad4759a5285fd3bb0db9616fda2f5c95b244998fe8ca"
+      }
+    },
+    {
+      "id": "Enemies/runner_b",
+      "status": "delivered",
+      "size": [
+        256,
+        256
+      ],
+      "generator": "image_gen (built-in)",
+      "export": "exports/Art/Enemies/runner_b.png",
+      "source": "source/generations/Enemies/runner_b.png",
+      "master": "source/masters/Enemies/runner_b@2x.png",
+      "prompt": "Use case: identity-preserve. Create RUNNER walk PASSING frame derived from reference1 EXACT rift hound-man. Preserve ENTIRE UPPER BODY almost pixel-identically: hunched spine outline, every bone crest, shoulder, head and jaw, eyes, ribcage, waist, both arms, and EACH CLAW at the SAME location and SAME WIDTH and SCALE as reference1. Change ONLY LEGS below pelvis to a VERY SUBTLE passing step: one knee crossing under body, rear heel lifted, feet still a little apart. Do NOT narrow shoulders, pull arms inward, shrink head, rotate body or change posture. Same body height and torso position, same 38degree elevated three-quarter front facing screen-right. Upper-body silhouette should overlap reference1 >=0.85 and full silhouette >=0.70. Reference2 shared comic ink STYLE ONLY. Same muted bone/rust/charcoal, magenta-violet cracks/eyes under15% area. Bold DARK black-violet #1b1226 brush-pen outer contours44px at1280 square, thinner inside, 2-3 hard cel tones, warm upper-left key cool violet shadows. No pale exterior fringe. Character only true transparent1280 square, full body with margins, no ground, shadows, text, weapons or detached effects.\n",
+      "cleanup": "python source/scripts/production.py process --id Enemies/runner_b --source source/generations/Enemies/runner_b.png --prompt source/prompts/final__Enemies__runner_b.txt --height 155.0 --offset -8.0",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Low hound-man outline and claws read speed; passing-step motion is restrained to preserve overlap.",
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 236,
+      "silhouetteIoU": 0.7001636097476965,
+      "edgeBandLuminance": 0.21083513642003224,
+      "promptFile": "source/prompts/final__Enemies__runner_b.txt",
+      "sha256": {
+        "export": "7f08da54286edc7c620b067371695aad5ab8a7be9fe1b7df24aa2b3163bb4323",
+        "source": "b430c0af275186f0cacd2fa1b77e1a2a7a6ccc8f4786ddf67b4904a2f7f37ddb",
+        "master": "5debbbb2d9f635c5cd0e6c8bf4b1f6c4041a82fce759a262b879edb5d85faa35"
+      }
+    },
+    {
+      "id": "Enemies/hexcaster_a",
+      "status": "delivered",
+      "size": [
+        256,
+        256
+      ],
+      "generator": "image_gen (built-in)",
+      "export": "exports/Art/Enemies/hexcaster_a.png",
+      "source": "source/generations/Enemies/hexcaster_a.png",
+      "master": "source/masters/Enemies/hexcaster_a@2x.png",
+      "prompt": "Original dark arcane fantasy, premium hand-inked comic 2.5D. Bold confident tapered black-violet #1b1226 brush-pen outer contours 26px on 1280 canvas, with a solid continuous dark ink silhouette band, not thin hairline edges, thinner internal ink. Hard-edged 2-3 flat cel tones per material, sparse hatching only in deep shadows. Warm upper-left-front key; cool violet-blue #3b2f6b shadows. Saturated jewel lit planes, no rim light. No airbrush, gradients, soft painterly blending, chibi, flat vector, text, watermark or copied characters. Threatening adult monster anatomy, not chibi. Three-quarter front camera elevated 38deg, body turned 25deg toward SCREEN-RIGHT. Character only, true transparent background, no floor, ground shadows, projectiles, beams, explosions or detached effects. Square 1280x1280, torso centered x640, feet around y1190, head scaled for this monster; all contents within x128..1152 y256..1190. Match identity scale and framing. Enemy faction: desaturated bone, rust and charcoal body, hot rift magenta #ff3d8b and violet #8a2be2 eyes/cracks AT MOST15% silhouette; no hero jewel costume. Crisp dark continuous contour around ALL shapes, including white cloth, jewelry, and glowing props; no bright outline or emissive haze at the outer alpha boundary. Subject: Tall thin hooded rift cultist, elongated tattered charcoal robes, tall horned hood, emaciated bone-grey arms, hex lantern made from bone and blackened metal held in hand, small magenta core inside lantern. Narrow vertical distant caster silhouette. CONTACT walk identity pose, leading foot forward +X, rear foot back. Keep torso at exact canvas center. Reference1 is comic ink STYLE ONLY, no hero armor identity. Reference2 camera and approximate build/prop posture only.  Dark continuous thick ink silhouette must survive downscale to256, including weapon and bright bone edges; no bright outer fringe. No decorative frame or environment.\n",
+      "cleanup": "python source/scripts/production.py process --id Enemies/hexcaster_a --source source/generations/Enemies/hexcaster_a.png --prompt source/prompts/final__Enemies__hexcaster_a.txt --height 180.0 --offset 0.0",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Tall thin hood and lantern read caster; chains and torn hems merge at low resolution.",
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 236,
+      "edgeBandLuminance": 0.18537028364351582,
+      "promptFile": "source/prompts/final__Enemies__hexcaster_a.txt",
+      "sha256": {
+        "export": "705d8de045b9ff1523acbaab1f5cb329fb4b0cc2e84452f30b90fe77514cd850",
+        "source": "bd989874c016a15cc30bd1d5c73a02f87e27eeef0bec3c40ad905574657f2952",
+        "master": "b564b1dc6e0b93011915c3027bce655299b6b777827defbfd0d3f9d19091edcb"
+      }
+    },
+    {
+      "id": "Enemies/hexcaster_b",
+      "status": "delivered",
+      "size": [
+        256,
+        256
+      ],
+      "generator": "image_gen (built-in)",
+      "export": "exports/Art/Enemies/hexcaster_b.png",
+      "source": "source/generations/Enemies/hexcaster_b.png",
+      "master": "source/masters/Enemies/hexcaster_b@2x.png",
+      "prompt": "Original dark arcane fantasy, premium hand-inked comic 2.5D. Bold confident tapered black-violet #1b1226 brush-pen outer contours 26px on 1280 canvas, with a solid continuous dark ink silhouette band, not thin hairline edges, thinner internal ink. Hard-edged 2-3 flat cel tones per material, sparse hatching only in deep shadows. Warm upper-left-front key; cool violet-blue #3b2f6b shadows. Saturated jewel lit planes, no rim light. No airbrush, gradients, soft painterly blending, chibi, flat vector, text, watermark or copied characters.  Three-quarter front camera elevated 38deg, body turned 25deg toward SCREEN-RIGHT. Character only, true transparent background, no floor, ground shadows, projectiles, beams, explosions or detached effects. Square 1280x1280, torso centered x640, feet around y1190, head positioned to match identity; all contents within x128..1152 y256..1190. Match identity scale and framing. Enemy faction: muted desaturated bone, rust, charcoal; magenta #ff3d8b and violet #8a2be2 cracks and eyes at most 15% area, no hero jewel costume. Crisp dark continuous contour around ALL shapes, including white cloth, jewelry, and glowing props; no bright outline or emissive haze at the outer alpha boundary. Reference 1 is shared INK STYLE; reference 2 is the EXACT character identity, preserve face, costume, colors, build, and every prop. Reference 3 controls camera and approximate pose ONLY; override its weapon with this character's real prop. Walk PASSING pose toward +X, legs crossing underneath body, heel lifted. Keep UPPER BODY outline and weapon position almost IDENTICAL to identity/contact pose. Same torso x, foot row, head size and scale. Silhouette IoU >=0.70. Subject identity: Tall thin hooded rift cultist, elongated tattered charcoal robes, tall horned hood, emaciated bone-grey arms, hex lantern made from bone and blackened metal held in hand, small magenta core inside lantern. Narrow vertical distant caster silhouette.\n",
+      "cleanup": "python source/scripts/production.py process --id Enemies/hexcaster_b --source source/generations/Enemies/hexcaster_b.png --prompt source/prompts/final__Enemies__hexcaster_b.txt --height 180.0 --offset 0.0",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Tall thin hood and lantern read caster; chains and torn hems merge at low resolution.",
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 236,
+      "silhouetteIoU": 0.7842526228316195,
+      "edgeBandLuminance": 0.18008863616870194,
+      "promptFile": "source/prompts/final__Enemies__hexcaster_b.txt",
+      "sha256": {
+        "export": "8e112e6e1f8568e10c7122aa8cfb17639ab2d92be5a0640659a6e741e43af0c3",
+        "source": "0d0fa81cc08b7db953db873d2d5512eeed0b79176d5240637de54d8bf35b7092",
+        "master": "a751905a313bc068d3f0e45ca1e8567e6221f435ba280ac844ab60a3e6e716e8"
+      }
+    },
+    {
+      "id": "Enemies/juggernaut_a",
+      "status": "delivered",
+      "size": [
+        256,
+        256
+      ],
+      "generator": "image_gen (built-in)",
+      "export": "exports/Art/Enemies/juggernaut_a.png",
+      "source": "source/generations/Enemies/juggernaut_a.png",
+      "master": "source/masters/Enemies/juggernaut_a@2x.png",
+      "prompt": "Original dark arcane fantasy, premium hand-inked comic 2.5D. Bold confident tapered black-violet #1b1226 brush-pen outer contours 26px on 1280 canvas, with a solid continuous dark ink silhouette band, not thin hairline edges, thinner internal ink. Hard-edged 2-3 flat cel tones per material, sparse hatching only in deep shadows. Warm upper-left-front key; cool violet-blue #3b2f6b shadows. Saturated jewel lit planes, no rim light. No airbrush, gradients, soft painterly blending, chibi, flat vector, text, watermark or copied characters. Threatening adult monster anatomy, not chibi. Three-quarter front camera elevated 38deg, body turned 25deg toward SCREEN-RIGHT. Character only, true transparent background, no floor, ground shadows, projectiles, beams, explosions or detached effects. Square 1280x1280, torso centered x640, feet around y1190, head scaled for this monster; all contents within x128..1152 y256..1190. Match identity scale and framing. Enemy faction: desaturated bone, rust and charcoal body, hot rift magenta #ff3d8b and violet #8a2be2 eyes/cracks AT MOST15% silhouette; no hero jewel costume. Crisp dark continuous contour around ALL shapes, including white cloth, jewelry, and glowing props; no bright outline or emissive haze at the outer alpha boundary. Subject: Massive rift-fused stone-and-iron armored brute, enormously broad shoulders, tiny sunk head, plate slabs, slab hammer held in both hands. Ultra-wide body and hammer composition at least as wide as tall, broad brute silhouette. Heavy worn stone and iron, no smooth blob. CONTACT walk identity pose, leading foot forward +X, rear foot back. Keep torso at exact canvas center. Reference1 is comic ink STYLE ONLY, no hero armor identity. Reference2 camera and approximate build/prop posture only. CRITICAL BRUTE PROPORTIONS: a squat extremely WIDE silhouette, width at least EQUAL TO HEIGHT, at least200px wide and205px tall on256 export. Arms/weapon mass extend left and right evenly to balance torso center. Short legs, enormous shoulders, 2-3head-width chest. Fit every prop inside canvas, no clipping. Dark continuous thick ink silhouette must survive downscale to256, including weapon and bright bone edges; no bright outer fringe. No decorative frame or environment.\n",
+      "cleanup": "python source/scripts/production.py process --id Enemies/juggernaut_a --source source/generations/Enemies/juggernaut_a.png --prompt source/prompts/final__Enemies__juggernaut_a.txt --height 205.0 --offset 6.0",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Massive shoulders and slab hammer read brute; weapon uses much of the canvas width.",
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 236,
+      "edgeBandLuminance": 0.18427347835738067,
+      "promptFile": "source/prompts/final__Enemies__juggernaut_a.txt",
+      "sha256": {
+        "export": "c3cd7267260d4ff89ecc2e9d4477822e8dbcc930b7df5b562dcad4211d9c584c",
+        "source": "66cf1e098f2a6c0c8df6fdca7fb1208d93737634e1663ced9cd2303a21bd1550",
+        "master": "2116afc6277b1f7d71bcc11ae5bc25b47e187ad74495b6b1b63980a908957b23"
+      }
+    },
+    {
+      "id": "Enemies/juggernaut_b",
+      "status": "delivered",
+      "size": [
+        256,
+        256
+      ],
+      "generator": "image_gen (built-in)",
+      "export": "exports/Art/Enemies/juggernaut_b.png",
+      "source": "source/generations/Enemies/juggernaut_b.png",
+      "master": "source/masters/Enemies/juggernaut_b@2x.png",
+      "prompt": "Original dark arcane fantasy, premium hand-inked comic 2.5D. Bold confident tapered black-violet #1b1226 brush-pen outer contours 26px on 1280 canvas, with a solid continuous dark ink silhouette band, not thin hairline edges, thinner internal ink. Hard-edged 2-3 flat cel tones per material, sparse hatching only in deep shadows. Warm upper-left-front key; cool violet-blue #3b2f6b shadows. Saturated jewel lit planes, no rim light. No airbrush, gradients, soft painterly blending, chibi, flat vector, text, watermark or copied characters.  Three-quarter front camera elevated 38deg, body turned 25deg toward SCREEN-RIGHT. Character only, true transparent background, no floor, ground shadows, projectiles, beams, explosions or detached effects. Square 1280x1280, torso centered x640, feet around y1190, head positioned to match identity; all contents within x128..1152 y256..1190. Match identity scale and framing. Enemy faction: muted desaturated bone, rust, charcoal; magenta #ff3d8b and violet #8a2be2 cracks and eyes at most 15% area, no hero jewel costume. Crisp dark continuous contour around ALL shapes, including white cloth, jewelry, and glowing props; no bright outline or emissive haze at the outer alpha boundary. Reference 1 is shared INK STYLE; reference 2 is the EXACT character identity, preserve face, costume, colors, build, and every prop. Reference 3 controls camera and approximate pose ONLY; override its weapon with this character's real prop. Walk PASSING pose toward +X, legs crossing underneath body, heel lifted. Keep UPPER BODY outline and weapon position almost IDENTICAL to identity/contact pose. Same torso x, foot row, head size and scale. Silhouette IoU >=0.70. Subject identity: Massive rift-fused stone-and-iron armored brute, enormously broad shoulders, tiny sunk head, plate slabs, slab hammer held in both hands. Ultra-wide body and hammer composition at least as wide as tall, broad brute silhouette. Heavy worn stone and iron, no smooth blob.\n",
+      "cleanup": "python source/scripts/production.py process --id Enemies/juggernaut_b --source source/generations/Enemies/juggernaut_b.png --prompt source/prompts/final__Enemies__juggernaut_b.txt --height 205.0 --offset 0.0",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Massive shoulders and slab hammer read brute; weapon uses much of the canvas width.",
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 236,
+      "silhouetteIoU": 0.6463703003074013,
+      "edgeBandLuminance": 0.20015187832376086,
+      "promptFile": "source/prompts/final__Enemies__juggernaut_b.txt",
+      "sha256": {
+        "export": "31c9f2b767bd3006371b638ee05e3bf0627e01c73caabd559ee15cc3683b82b8",
+        "source": "ebe40d27fd30929f1a0fe390213ed3305b4f8a2916053cf3b887ac807095ab5a",
+        "master": "6fc8217e2f9b62045766fd2038532b7a6dc22e54732ab0366aa07a7e7c499acf"
+      }
+    },
+    {
+      "id": "Enemies/ravager_a",
+      "status": "delivered",
+      "size": [
+        256,
+        256
+      ],
+      "generator": "image_gen (built-in)",
+      "export": "exports/Art/Enemies/ravager_a.png",
+      "source": "source/generations/Enemies/ravager_a.png",
+      "master": "source/masters/Enemies/ravager_a@2x.png",
+      "prompt": "Original dark arcane fantasy, premium hand-inked comic 2.5D. Bold confident tapered black-violet #1b1226 brush-pen outer contours 26px on 1280 canvas, with a solid continuous dark ink silhouette band, not thin hairline edges, thinner internal ink. Hard-edged 2-3 flat cel tones per material, sparse hatching only in deep shadows. Warm upper-left-front key; cool violet-blue #3b2f6b shadows. Saturated jewel lit planes, no rim light. No airbrush, gradients, soft painterly blending, chibi, flat vector, text, watermark or copied characters. Threatening adult monster anatomy, not chibi. Three-quarter front camera elevated 38deg, body turned 25deg toward SCREEN-RIGHT. Character only, true transparent background, no floor, ground shadows, projectiles, beams, explosions or detached effects. Square 1280x1280, torso centered x640, feet around y1190, head scaled for this monster; all contents within x128..1152 y256..1190. Match identity scale and framing. Enemy faction: desaturated bone, rust and charcoal body, hot rift magenta #ff3d8b and violet #8a2be2 eyes/cracks AT MOST15% silhouette; no hero jewel costume. Crisp dark continuous contour around ALL shapes, including white cloth, jewelry, and glowing props; no bright outline or emissive haze at the outer alpha boundary. Subject: Elite superior rift warrior, twin large serrated blades (one per hand), heavy spiked pauldrons, crown of pointed rift-crystal horns, torn warcloak, dangerous disciplined warrior stance, clearly more threatening than fodder, wide armored silhouette. CONTACT walk identity pose, leading foot forward +X, rear foot back. Keep torso at exact canvas center. Reference1 is comic ink STYLE ONLY, no hero armor identity. Reference2 camera and approximate build/prop posture only. CRITICAL BRUTE PROPORTIONS: a squat extremely WIDE silhouette, width at least EQUAL TO HEIGHT, at least200px wide and205px tall on256 export. Arms/weapon mass extend left and right evenly to balance torso center. Short legs, enormous shoulders, 2-3head-width chest. Fit every prop inside canvas, no clipping. Dark continuous thick ink silhouette must survive downscale to256, including weapon and bright bone edges; no bright outer fringe. No decorative frame or environment.\n",
+      "cleanup": "python source/scripts/production.py process --id Enemies/ravager_a --source source/generations/Enemies/ravager_a.png --prompt source/prompts/final__Enemies__ravager_a.txt --height 210.0 --offset 0.0",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Crown, spikes and twin blades read elite; magenta blade accents are conspicuous.",
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 236,
+      "edgeBandLuminance": 0.17051857345951033,
+      "promptFile": "source/prompts/final__Enemies__ravager_a.txt",
+      "sha256": {
+        "export": "78a16ee1d741dad08c3d2de3298e6d993220612848a973826fd8a88fbcc2bfae",
+        "source": "e643664c31c8bfc934f47314d6c5e4167e8288935dad80d8fae2528aab271c3b",
+        "master": "75f8e29fb6becd49b28ead1f3d144ac04b018e45c1894454aa15aa60d77df8f5"
+      }
+    },
+    {
+      "id": "Enemies/ravager_b",
+      "status": "delivered",
+      "size": [
+        256,
+        256
+      ],
+      "generator": "image_gen (built-in)",
+      "export": "exports/Art/Enemies/ravager_b.png",
+      "source": "source/generations/Enemies/ravager_b.png",
+      "master": "source/masters/Enemies/ravager_b@2x.png",
+      "prompt": "Original dark arcane fantasy, premium hand-inked comic 2.5D. Bold confident tapered black-violet #1b1226 brush-pen outer contours 26px on 1280 canvas, with a solid continuous dark ink silhouette band, not thin hairline edges, thinner internal ink. Hard-edged 2-3 flat cel tones per material, sparse hatching only in deep shadows. Warm upper-left-front key; cool violet-blue #3b2f6b shadows. Saturated jewel lit planes, no rim light. No airbrush, gradients, soft painterly blending, chibi, flat vector, text, watermark or copied characters.  Three-quarter front camera elevated 38deg, body turned 25deg toward SCREEN-RIGHT. Character only, true transparent background, no floor, ground shadows, projectiles, beams, explosions or detached effects. Square 1280x1280, torso centered x640, feet around y1190, head positioned to match identity; all contents within x128..1152 y256..1190. Match identity scale and framing. Enemy faction: muted desaturated bone, rust, charcoal; magenta #ff3d8b and violet #8a2be2 cracks and eyes at most 15% area, no hero jewel costume. Crisp dark continuous contour around ALL shapes, including white cloth, jewelry, and glowing props; no bright outline or emissive haze at the outer alpha boundary. Reference 1 is shared INK STYLE; reference 2 is the EXACT character identity, preserve face, costume, colors, build, and every prop. Reference 3 controls camera and approximate pose ONLY; override its weapon with this character's real prop. Walk PASSING pose toward +X, legs crossing underneath body, heel lifted. Keep UPPER BODY outline and weapon position almost IDENTICAL to identity/contact pose. Same torso x, foot row, head size and scale. Silhouette IoU >=0.70. Subject identity: Elite superior rift warrior, twin large serrated blades (one per hand), heavy spiked pauldrons, crown of pointed rift-crystal horns, torn warcloak, dangerous disciplined warrior stance, clearly more threatening than fodder, wide armored silhouette.\n",
+      "cleanup": "python source/scripts/production.py process --id Enemies/ravager_b --source source/generations/Enemies/ravager_b.png --prompt source/prompts/final__Enemies__ravager_b.txt --height 210.0 --offset -8.0",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Crown, spikes and twin blades read elite; magenta blade accents are conspicuous.",
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 236,
+      "silhouetteIoU": 0.6341499794906216,
+      "edgeBandLuminance": 0.1754245687795885,
+      "promptFile": "source/prompts/final__Enemies__ravager_b.txt",
+      "sha256": {
+        "export": "99657c3089b1d44af0a3403743f019e31b0c62ebcd15bab73ccaac7fab963af8",
+        "source": "b2f87e1454e5cc78fda9d3d00c5737b8fe364bd88f5b48dde5c2d189f2a675a6",
+        "master": "04c7564a59ddd0cb2081721ac8d4f33a14beb97779542cb75430a886059041e0"
+      }
+    },
+    {
+      "id": "Enemies/rift_warden_a",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "generator": "image_gen (built-in)",
+      "export": "exports/Art/Enemies/rift_warden_a.png",
+      "source": "source/generations/Enemies/rift_warden_a.png",
+      "master": "source/masters/Enemies/rift_warden_a@2x.png",
+      "prompt": "Original dark arcane fantasy, premium hand-inked comic 2.5D. Bold confident tapered black-violet #1b1226 brush-pen outer contours 20px on 1280 canvas, with a solid continuous dark ink silhouette band, not thin hairline edges, thinner internal ink. Hard-edged 2-3 flat cel tones per material, sparse hatching only in deep shadows. Warm upper-left-front key; cool violet-blue #3b2f6b shadows. Saturated jewel lit planes, no rim light. No airbrush, gradients, soft painterly blending, chibi, flat vector, text, watermark or copied characters. Towering adult corrupted guardian statue, grand boss anatomy. Three-quarter front camera elevated 38deg, body turned 25deg toward SCREEN-RIGHT. Character only, true transparent background, no floor, ground shadows, projectiles, beams, explosions or detached effects. Square 1280x1280, torso centered x640, feet around y1215, halo top around y140; all contents within x80..1200 y80..1215. Match identity scale and framing. Enemy faction: muted bone, rust, charcoal and basalt/obsidian bodies, magenta #ff3d8b violet #8a2be2 cracks/eyes at most15% area. No saturated hero costume. Crisp dark continuous contour around ALL shapes, including white cloth, jewelry, and glowing props; no bright outline or emissive haze at the outer alpha boundary. Subject: Towering ancient sanctum guardian statue corrupted into a rift knight; basalt obsidian full plate, cracked broken halo of floating angular rift crystals close above head, immense glaive held diagonally, violet-magenta chest core behind cracked plates, tattered stone-grey cloak. Grand threatening armored boss silhouette. Walking CONTACT identity: lead foot forward +X, rear foot back, huge glaive held diagonally ACROSS torso, facing screen-right. Long glaive remains inside the square, balance weapon and cloak mass to left/right of torso. Broken halo is a cracked ring of rift crystal close above helm, framed within canvas, black ink outlines around every shard including glow. Highest prop within450px above feet at512 export, totalbossheight430px, not squat. Clear tall ancient knight silhouette twice common enemy threat. Reference1 shared ink style ONLY, never ice/cyan guardian costume. Reference2 enemy faction materials/palette ONLY. Reference3 camera/build only, replace hammer with glaive. No scenery, words, ground effects, external magical cloud or floor shadow.\n",
+      "cleanup": "python source/scripts/production.py process --id Enemies/rift_warden_a --source source/generations/Enemies/rift_warden_a.png --prompt source/prompts/final__Enemies__rift_warden_a.txt --height 430.0 --offset -24.0",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Cracked halo and glaive read boss; tell and impact need Unity swapping/timing review.",
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.05078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 486,
+      "edgeBandLuminance": 0.06992775183411677,
+      "promptFile": "source/prompts/final__Enemies__rift_warden_a.txt",
+      "sha256": {
+        "export": "1cf54d66fea6e228565c9946c023ae6c5ea53507c238cd4ec2854fc212ba91a8",
+        "source": "2f5c5beb0a5ccddfd5ef09857eac6468bd4be98e082fd0dad85cb3a69a0f070a",
+        "master": "3a0f5c233bf774c8107ccb5f4845de600521a56c9914b8f89674e16c74fc878b"
+      }
+    },
+    {
+      "id": "Enemies/rift_warden_b",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "generator": "image_gen (built-in)",
+      "export": "exports/Art/Enemies/rift_warden_b.png",
+      "source": "source/generations/Enemies/rift_warden_b.png",
+      "master": "source/masters/Enemies/rift_warden_b@2x.png",
+      "prompt": "Original dark arcane fantasy, premium hand-inked comic 2.5D. Bold confident tapered black-violet #1b1226 brush-pen outer contours 16px on 1280 canvas, with a solid continuous dark ink silhouette band, not thin hairline edges, thinner internal ink. Hard-edged 2-3 flat cel tones per material, sparse hatching only in deep shadows. Warm upper-left-front key; cool violet-blue #3b2f6b shadows. Saturated jewel lit planes, no rim light. No airbrush, gradients, soft painterly blending, chibi, flat vector, text, watermark or copied characters.  Three-quarter front camera elevated 38deg, body turned 25deg toward SCREEN-RIGHT. Character only, true transparent background, no floor, ground shadows, projectiles, beams, explosions or detached effects. Square 1280x1280, torso centered x640, feet around y1215, halo/head placed to match identity; all contents within x80..1200 y80..1215. Match identity scale and framing. Enemy faction: muted desaturated bone, rust, charcoal; magenta #ff3d8b and violet #8a2be2 cracks and eyes at most 15% area, no hero jewel costume. Crisp dark continuous contour around ALL shapes, including white cloth, jewelry, and glowing props; no bright outline or emissive haze at the outer alpha boundary. Reference 1 is shared INK STYLE; reference 2 is the EXACT character identity, preserve face, costume, colors, build, and every prop. Reference 3 controls camera and approximate pose ONLY; override its weapon with this character's real prop. Walk PASSING pose toward +X, legs crossing underneath body, heel lifted. Keep UPPER BODY outline and weapon position almost IDENTICAL to identity/contact pose. Same torso x, foot row, head size and scale. Silhouette IoU >=0.70. Subject identity: Towering ancient sanctum guardian statue corrupted into a rift knight; basalt obsidian full plate, cracked broken halo of floating angular rift crystals close above head, immense glaive held diagonally, violet-magenta chest core behind cracked plates, tattered stone-grey cloak. Grand threatening armored boss silhouette.\n",
+      "cleanup": "python source/scripts/production.py process --id Enemies/rift_warden_b --source source/generations/Enemies/rift_warden_b.png --prompt source/prompts/final__Enemies__rift_warden_b.txt --height 430.0 --offset -24.0",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Cracked halo and glaive read boss; tell and impact need Unity swapping/timing review.",
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.05078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 486,
+      "silhouetteIoU": 0.7121454840820378,
+      "edgeBandLuminance": 0.03818443448123118,
+      "promptFile": "source/prompts/final__Enemies__rift_warden_b.txt",
+      "sha256": {
+        "export": "2b7ba5692b7628d22a72446b410b9f0676a25c4fa18f0cb5a03d741e64a359e8",
+        "source": "e6fee38667b81652559b60e2cfbafe5591cc7f8d0f45d9bfe80e91e31513eac9",
+        "master": "bcf9e9e9c7788ea79a2c35ab84cb89724f999be7f5edb24e98b9123cde400903"
+      }
+    },
+    {
+      "id": "Enemies/rift_warden_tell",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "generator": "image_gen (built-in)",
+      "export": "exports/Art/Enemies/rift_warden_tell.png",
+      "source": "source/generations/Enemies/rift_warden_tell.png",
+      "master": "source/masters/Enemies/rift_warden_tell@2x.png",
+      "prompt": "Original dark arcane fantasy, premium hand-inked comic 2.5D. Bold confident tapered black-violet #1b1226 brush-pen outer contours 16px on 1280 canvas, with a solid continuous dark ink silhouette band, not thin hairline edges, thinner internal ink. Hard-edged 2-3 flat cel tones per material, sparse hatching only in deep shadows. Warm upper-left-front key; cool violet-blue #3b2f6b shadows. Saturated jewel lit planes, no rim light. No airbrush, gradients, soft painterly blending, chibi, flat vector, text, watermark or copied characters.  Three-quarter front camera elevated 38deg, body turned 25deg toward SCREEN-RIGHT. Character only, true transparent background, no floor, ground shadows, projectiles, beams, explosions or detached effects. Square 1280x1280, torso centered x640, feet around y1215, halo/head placed to match identity; all contents within x80..1200 y80..1215. Match identity scale and framing. Enemy faction: muted desaturated bone, rust, charcoal; magenta #ff3d8b and violet #8a2be2 cracks and eyes at most 15% area, no hero jewel costume. Crisp dark continuous contour around ALL shapes, including white cloth, jewelry, and glowing props; no bright outline or emissive haze at the outer alpha boundary. Reference 1 is shared INK STYLE; reference 2 is the EXACT character identity, preserve face, costume, colors, build, and every prop. Reference 3 controls camera and approximate pose ONLY; override its weapon with this character's real prop. Anticipation pose: glaive raised high, body coiled, small magenta glow building ON glaive and halo shards, readable threat. No detached magic, ground telegraph or scenery. Subject identity: Towering ancient sanctum guardian statue corrupted into a rift knight; basalt obsidian full plate, cracked broken halo of floating angular rift crystals close above head, immense glaive held diagonally, violet-magenta chest core behind cracked plates, tattered stone-grey cloak. Grand threatening armored boss silhouette.\n",
+      "cleanup": "python source/scripts/production.py process --id Enemies/rift_warden_tell --source source/generations/Enemies/rift_warden_tell.png --prompt source/prompts/final__Enemies__rift_warden_tell.txt --height 450.0 --offset -16.0",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Cracked halo and glaive read boss; tell and impact need Unity swapping/timing review.",
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.05078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 486,
+      "edgeBandLuminance": 0.07799148666666668,
+      "promptFile": "source/prompts/final__Enemies__rift_warden_tell.txt",
+      "sha256": {
+        "export": "191c85c7aaeaa4042a4f7e498abfe87b93330032321416189c25dac61d27aef3",
+        "source": "37d205e8177dc6a64f8afddc19ad32eb43b92d75f0a8105cfc431af147085e9a",
+        "master": "c2dc586f407a61ed8c1aff42170a6c543fbab6d5f219ecb06817a401486693b2"
+      }
+    },
+    {
+      "id": "Enemies/rift_warden_attack",
+      "status": "delivered",
+      "size": [
+        512,
+        512
+      ],
+      "generator": "image_gen (built-in)",
+      "export": "exports/Art/Enemies/rift_warden_attack.png",
+      "source": "source/generations/Enemies/rift_warden_attack.png",
+      "master": "source/masters/Enemies/rift_warden_attack@2x.png",
+      "prompt": "Original dark arcane fantasy, premium hand-inked comic 2.5D. Bold confident tapered black-violet #1b1226 brush-pen outer contours 16px on 1280 canvas, with a solid continuous dark ink silhouette band, not thin hairline edges, thinner internal ink. Hard-edged 2-3 flat cel tones per material, sparse hatching only in deep shadows. Warm upper-left-front key; cool violet-blue #3b2f6b shadows. Saturated jewel lit planes, no rim light. No airbrush, gradients, soft painterly blending, chibi, flat vector, text, watermark or copied characters.  Three-quarter front camera elevated 38deg, body turned 25deg toward SCREEN-RIGHT. Character only, true transparent background, no floor, ground shadows, projectiles, beams, explosions or detached effects. Square 1280x1280, torso centered x640, feet around y1215, halo/head placed to match identity; all contents within x80..1200 y80..1215. Match identity scale and framing. Enemy faction: muted desaturated bone, rust, charcoal; magenta #ff3d8b and violet #8a2be2 cracks and eyes at most 15% area, no hero jewel costume. Crisp dark continuous contour around ALL shapes, including white cloth, jewelry, and glowing props; no bright outline or emissive haze at the outer alpha boundary. Reference 1 is shared INK STYLE; reference 2 is the EXACT character identity, preserve face, costume, colors, build, and every prop. Reference 3 controls camera and approximate pose ONLY; override its weapon with this character's real prop. Glaive slam IMPACT: glaive extended down and toward +X, body following through, braced legs, exact same glaive and halo. NO ground impact effect. Subject identity: Towering ancient sanctum guardian statue corrupted into a rift knight; basalt obsidian full plate, cracked broken halo of floating angular rift crystals close above head, immense glaive held diagonally, violet-magenta chest core behind cracked plates, tattered stone-grey cloak. Grand threatening armored boss silhouette.\n",
+      "cleanup": "python source/scripts/production.py process --id Enemies/rift_warden_attack --source source/generations/Enemies/rift_warden_attack.png --prompt source/prompts/final__Enemies__rift_warden_attack.txt --height 430.0 --offset -16.0",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Cracked halo and glaive read boss; tell and impact need Unity swapping/timing review.",
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.05078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 486,
+      "edgeBandLuminance": 0.055146192880308975,
+      "promptFile": "source/prompts/final__Enemies__rift_warden_attack.txt",
+      "sha256": {
+        "export": "8ba46bdf8a450cd4ae858a62dae07dc9eb338f4fd441115d265ddd0482ee59ed",
+        "source": "45da899a9c1fe5ddbe4f1aef9e0e24cec60f8e7e45df20ff8264cbdc1956218d",
+        "master": "7026935241093f916aeca9619bd8f8c2b14a8c2840b4771d88d9c3d2506de5ac"
+      }
+    },
+    {
+      "id": "Enemies/grunt_attack",
+      "status": "delivered",
+      "size": [
+        256,
+        256
+      ],
+      "generator": "image_gen (built-in)",
+      "export": "exports/Art/Enemies/grunt_attack.png",
+      "source": "source/generations/Enemies/grunt_attack.png",
+      "master": "source/masters/Enemies/grunt_attack@2x.png",
+      "prompt": "Original dark arcane fantasy, premium hand-inked comic 2.5D. Bold confident tapered black-violet #1b1226 brush-pen outer contours 40px on 1280 canvas, with a solid continuous dark ink silhouette band, not thin hairline edges, thinner internal ink. Hard-edged 2-3 flat cel tones per material, sparse hatching only in deep shadows. Warm upper-left-front key; cool violet-blue #3b2f6b shadows. Saturated jewel lit planes, no rim light. No airbrush, gradients, soft painterly blending, chibi, flat vector, text, watermark or copied characters.  Three-quarter front camera elevated 38deg, body turned 25deg toward SCREEN-RIGHT. Character only, true transparent background, no floor, ground shadows, projectiles, beams, explosions or detached effects. Square 1280x1280, torso centered x640, feet around y1190, head positioned to match identity; all contents within x128..1152 y256..1190. Match identity scale and framing. Enemy faction: muted desaturated bone, rust, charcoal; magenta #ff3d8b and violet #8a2be2 cracks and eyes at most 15% area, no hero jewel costume. Crisp dark continuous contour around ALL shapes, including white cloth, jewelry, and glowing props; no bright outline or emissive haze at the outer alpha boundary. Reference 1 is shared INK STYLE; reference 2 is the EXACT character identity, preserve face, costume, colors, build, and every prop. Reference 3 controls camera and approximate pose ONLY; override its weapon with this character's real prop. Notched blade CHOP strike moment, blade extended toward +X, hunched body. Subject identity: Small hunched rift-born husk with broken guard helm fused into skull, jagged notched blade in hand, torn tabard, chest/forearm cracks and hot eyes. Melee fodder compact threatening silhouette.\n",
+      "cleanup": "python source/scripts/production.py process --id Enemies/grunt_attack --source source/generations/Enemies/grunt_attack.png --prompt source/prompts/final__Enemies__grunt_attack.txt --height 150.0 --offset 8.0",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Hunched fused helm and notched blade read fodder; remaining armor is more elaborate than a minimal mob.",
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 236,
+      "new": true,
+      "like": "Enemies/grunt_a",
+      "edgeBandLuminance": 0.2113145861459338,
+      "promptFile": "source/prompts/final__Enemies__grunt_attack.txt",
+      "sha256": {
+        "export": "0d25359a1314d407a3a6c14a93cb94838edc237fcb5047e18b39ad591b8802a6",
+        "source": "ccb695dd172e2870bb1d8561ecb612acce7eadd9d6338d16968e377cf0fcfb96",
+        "master": "a4d9c2ff08af05a5a9ad1957ded5fbbaf60ed2236208b3b0f4b30d20a115a2df"
+      }
+    },
+    {
+      "id": "Enemies/runner_attack",
+      "status": "delivered",
+      "size": [
+        256,
+        256
+      ],
+      "generator": "image_gen (built-in)",
+      "export": "exports/Art/Enemies/runner_attack.png",
+      "source": "source/generations/Enemies/runner_attack.png",
+      "master": "source/masters/Enemies/runner_attack@2x.png",
+      "prompt": "Original dark arcane fantasy, premium hand-inked comic 2.5D. Bold confident tapered black-violet #1b1226 brush-pen outer contours 16px on 1280 canvas, with a solid continuous dark ink silhouette band, not thin hairline edges, thinner internal ink. Hard-edged 2-3 flat cel tones per material, sparse hatching only in deep shadows. Warm upper-left-front key; cool violet-blue #3b2f6b shadows. Saturated jewel lit planes, no rim light. No airbrush, gradients, soft painterly blending, chibi, flat vector, text, watermark or copied characters.  Three-quarter front camera elevated 38deg, body turned 25deg toward SCREEN-RIGHT. Character only, true transparent background, no floor, ground shadows, projectiles, beams, explosions or detached effects. Square 1280x1280, torso centered x640, feet around y1190, head positioned to match identity; all contents within x128..1152 y256..1190. Match identity scale and framing. Enemy faction: muted desaturated bone, rust, charcoal; magenta #ff3d8b and violet #8a2be2 cracks and eyes at most 15% area, no hero jewel costume. Crisp dark continuous contour around ALL shapes, including white cloth, jewelry, and glowing props; no bright outline or emissive haze at the outer alpha boundary. Reference 1 is shared INK STYLE; reference 2 is the EXACT character identity, preserve face, costume, colors, build, and every prop. Reference 3 controls camera and approximate pose ONLY; override its weapon with this character's real prop. Claw swipe strike moment, long claws fully extended forward toward +X, low lunging body. Subject identity: Small lanky low sprinting rift hound-MAN, skeletal hound jaw, long digitigrade legs, hunched torso, claws forward, exposed rift-cracked ribs, ragged loincloth. A biped hound-man, unmistakable speed silhouette.\n",
+      "cleanup": "python source/scripts/production.py process --id Enemies/runner_attack --source source/generations/Enemies/runner_attack.png --prompt source/prompts/final__Enemies__runner_attack.txt --height 155.0 --offset 0.0",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Low hound-man outline and claws read speed; passing-step motion is restrained to preserve overlap.",
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 236,
+      "new": true,
+      "like": "Enemies/runner_a",
+      "edgeBandLuminance": 0.21629755915815124,
+      "promptFile": "source/prompts/final__Enemies__runner_attack.txt",
+      "sha256": {
+        "export": "5ca6875e56c03ab4fd01e9ed2a6b4a91c3fa19c17843c2e27a57d50476d5f4b1",
+        "source": "22dbd66ef3c080522c71d5d7590caa265f649132e28f56ad0dea024d85aa2094",
+        "master": "ed9c5cb6422d9ecc78b68da6d575ec2dd280a3507bfa5a6b8ad7114f79ffc85a"
+      }
+    },
+    {
+      "id": "Enemies/hexcaster_attack",
+      "status": "delivered",
+      "size": [
+        256,
+        256
+      ],
+      "generator": "image_gen (built-in)",
+      "export": "exports/Art/Enemies/hexcaster_attack.png",
+      "source": "source/generations/Enemies/hexcaster_attack.png",
+      "master": "source/masters/Enemies/hexcaster_attack@2x.png",
+      "prompt": "Original dark arcane fantasy, premium hand-inked comic 2.5D. Bold confident tapered black-violet #1b1226 brush-pen outer contours 26px on 1280 canvas, with a solid continuous dark ink silhouette band, not thin hairline edges, thinner internal ink. Hard-edged 2-3 flat cel tones per material, sparse hatching only in deep shadows. Warm upper-left-front key; cool violet-blue #3b2f6b shadows. Saturated jewel lit planes, no rim light. No airbrush, gradients, soft painterly blending, chibi, flat vector, text, watermark or copied characters.  Three-quarter front camera elevated 38deg, body turned 25deg toward SCREEN-RIGHT. Character only, true transparent background, no floor, ground shadows, projectiles, beams, explosions or detached effects. Square 1280x1280, torso centered x640, feet around y1190, head positioned to match identity; all contents within x128..1152 y256..1190. Match identity scale and framing. Enemy faction: muted desaturated bone, rust, charcoal; magenta #ff3d8b and violet #8a2be2 cracks and eyes at most 15% area, no hero jewel costume. Crisp dark continuous contour around ALL shapes, including white cloth, jewelry, and glowing props; no bright outline or emissive haze at the outer alpha boundary. Reference 1 is shared INK STYLE; reference 2 is the EXACT character identity, preserve face, costume, colors, build, and every prop. Reference 3 controls camera and approximate pose ONLY; override its weapon with this character's real prop. Casting release strike moment, lantern and bony free hand extended toward +X, small magenta focus ON lantern only. Subject identity: Tall thin hooded rift cultist, elongated tattered charcoal robes, tall horned hood, emaciated bone-grey arms, hex lantern made from bone and blackened metal held in hand, small magenta core inside lantern. Narrow vertical distant caster silhouette.\n",
+      "cleanup": "python source/scripts/production.py process --id Enemies/hexcaster_attack --source source/generations/Enemies/hexcaster_attack.png --prompt source/prompts/final__Enemies__hexcaster_attack.txt --height 180.0 --offset 0.0",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Tall thin hood and lantern read caster; chains and torn hems merge at low resolution.",
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 236,
+      "new": true,
+      "like": "Enemies/hexcaster_a",
+      "edgeBandLuminance": 0.17072209980871741,
+      "promptFile": "source/prompts/final__Enemies__hexcaster_attack.txt",
+      "sha256": {
+        "export": "cf6a2499b9127a5c0cc729aab744f3d9df1b86e13f904d7177d00b170de3a45f",
+        "source": "a8381ac266212d5a4c6233104b9aeda3f53ad5678f37280cdc02ada122814c05",
+        "master": "fd152c5229339eb31a75831a49303764b4e44aec0d4f579b24a08cde71c57d8c"
+      }
+    },
+    {
+      "id": "Enemies/juggernaut_attack",
+      "status": "delivered",
+      "size": [
+        256,
+        256
+      ],
+      "generator": "image_gen (built-in)",
+      "export": "exports/Art/Enemies/juggernaut_attack.png",
+      "source": "source/generations/Enemies/juggernaut_attack.png",
+      "master": "source/masters/Enemies/juggernaut_attack@2x.png",
+      "prompt": "Original dark arcane fantasy, premium hand-inked comic 2.5D. Bold confident tapered black-violet #1b1226 brush-pen outer contours 26px on 1280 canvas, with a solid continuous dark ink silhouette band, not thin hairline edges, thinner internal ink. Hard-edged 2-3 flat cel tones per material, sparse hatching only in deep shadows. Warm upper-left-front key; cool violet-blue #3b2f6b shadows. Saturated jewel lit planes, no rim light. No airbrush, gradients, soft painterly blending, chibi, flat vector, text, watermark or copied characters.  Three-quarter front camera elevated 38deg, body turned 25deg toward SCREEN-RIGHT. Character only, true transparent background, no floor, ground shadows, projectiles, beams, explosions or detached effects. Square 1280x1280, torso centered x640, feet around y1190, head positioned to match identity; all contents within x128..1152 y256..1190. Match identity scale and framing. Enemy faction: muted desaturated bone, rust, charcoal; magenta #ff3d8b and violet #8a2be2 cracks and eyes at most 15% area, no hero jewel costume. Crisp dark continuous contour around ALL shapes, including white cloth, jewelry, and glowing props; no bright outline or emissive haze at the outer alpha boundary. Reference 1 is shared INK STYLE; reference 2 is the EXACT character identity, preserve face, costume, colors, build, and every prop. Reference 3 controls camera and approximate pose ONLY; override its weapon with this character's real prop. Slab hammer SMASH strike moment toward +X, hammer head extended low, huge armored shoulders and braced legs. Subject identity: Massive rift-fused stone-and-iron armored brute, enormously broad shoulders, tiny sunk head, plate slabs, slab hammer held in both hands. Ultra-wide body and hammer composition at least as wide as tall, broad brute silhouette. Heavy worn stone and iron, no smooth blob.\n",
+      "cleanup": "python source/scripts/production.py process --id Enemies/juggernaut_attack --source source/generations/Enemies/juggernaut_attack.png --prompt source/prompts/final__Enemies__juggernaut_attack.txt --height 205.0 --offset 6.0",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Massive shoulders and slab hammer read brute; weapon uses much of the canvas width.",
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 236,
+      "new": true,
+      "like": "Enemies/juggernaut_a",
+      "edgeBandLuminance": 0.1747922031516611,
+      "promptFile": "source/prompts/final__Enemies__juggernaut_attack.txt",
+      "sha256": {
+        "export": "2af601801798fca4c181d06435eb2972ab392ccb0dcf3bb1603cce27448ba643",
+        "source": "224c2223dd4ef1dd8b0e34b57fee33a6f1ec18018965897d73794b9961e7193c",
+        "master": "26a4564855b437e493068d858bb4eba9050cc8bf2793449aaf524bb8fdd558f8"
+      }
+    },
+    {
+      "id": "Enemies/ravager_attack",
+      "status": "delivered",
+      "size": [
+        256,
+        256
+      ],
+      "generator": "image_gen (built-in)",
+      "export": "exports/Art/Enemies/ravager_attack.png",
+      "source": "source/generations/Enemies/ravager_attack.png",
+      "master": "source/masters/Enemies/ravager_attack@2x.png",
+      "prompt": "Original dark arcane fantasy, premium hand-inked comic 2.5D. Bold confident tapered black-violet #1b1226 brush-pen outer contours 26px on 1280 canvas, with a solid continuous dark ink silhouette band, not thin hairline edges, thinner internal ink. Hard-edged 2-3 flat cel tones per material, sparse hatching only in deep shadows. Warm upper-left-front key; cool violet-blue #3b2f6b shadows. Saturated jewel lit planes, no rim light. No airbrush, gradients, soft painterly blending, chibi, flat vector, text, watermark or copied characters.  Three-quarter front camera elevated 38deg, body turned 25deg toward SCREEN-RIGHT. Character only, true transparent background, no floor, ground shadows, projectiles, beams, explosions or detached effects. Square 1280x1280, torso centered x640, feet around y1190, head positioned to match identity; all contents within x128..1152 y256..1190. Match identity scale and framing. Enemy faction: muted desaturated bone, rust, charcoal; magenta #ff3d8b and violet #8a2be2 cracks and eyes at most 15% area, no hero jewel costume. Crisp dark continuous contour around ALL shapes, including white cloth, jewelry, and glowing props; no bright outline or emissive haze at the outer alpha boundary. Reference 1 is shared INK STYLE; reference 2 is the EXACT character identity, preserve face, costume, colors, build, and every prop. Reference 3 controls camera and approximate pose ONLY; override its weapon with this character's real prop. Twin-blade slash strike moment toward +X, both serrated swords extended, threatening crown and spiked pauldrons. Subject identity: Elite superior rift warrior, twin large serrated blades (one per hand), heavy spiked pauldrons, crown of pointed rift-crystal horns, torn warcloak, dangerous disciplined warrior stance, clearly more threatening than fodder, wide armored silhouette.\n",
+      "cleanup": "python source/scripts/production.py process --id Enemies/ravager_attack --source source/generations/Enemies/ravager_attack.png --prompt source/prompts/final__Enemies__ravager_attack.txt --height 210.0 --offset -6.0",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Crown, spikes and twin blades read elite; magenta blade accents are conspicuous.",
+      "ppu": 160,
+      "pivot": [
+        0.5,
+        0.078125
+      ],
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "footRowFromTop": 236,
+      "new": true,
+      "like": "Enemies/ravager_a",
+      "edgeBandLuminance": 0.16352428816438266,
+      "promptFile": "source/prompts/final__Enemies__ravager_attack.txt",
+      "sha256": {
+        "export": "feea43435ad40923863f5a64190483dd1f4519b19196f6b42803bc44b75c22e1",
+        "source": "270b92aff55ffb7bbde22b6a20b12ed82c6b7386b09034ed127010136e4c4229",
+        "master": "c208e585cbab0d702f847df15bc7ce874da07df9253706f6e760f019db63adda"
+      }
+    }
+  ],
+  "extras": [
+    {
+      "id": "concepts/hud_concept",
+      "kind": "MOCKUP / concept — not a game asset or screenshot",
+      "generator": "image_gen (built-in)",
+      "source": "source/generations/concepts/hud_concept.png",
+      "nativeSize": [
+        1672,
+        941
+      ],
+      "prompt": "Use case: ui-mockup. Create an ORIGINAL battle HUD concept at NATIVE EXACT 3840x2160 pixels, landscape16:9 PNG. This is a premium dark arcane fantasy party-defense game MOCKUP, not a screenshot. Reference1: supplied bright green/sand ruined-sanctum battlefield, retain its broad circular ritual dais, paths, stones and camera about38deg elevation. Reference2: four approved-in-this-batch portrait IDENTITIES left-to-right ice guardian Glacius, pointed-hood fire mage Ignis, violet hooded lightning ranger Veyra, shell-crowned tide-priestess Marina. Reference3 their exact full-body identities and shared comic ink STYLE. Place a luminous white-cyan faceted Crystal on the central ritual dais and four small matching heroes near it as battlefield context. Build a polished HUD over the battlefield: TOP centered forged-metal wave banner with geometric wave emblem and blank text area; distinct Crystal HP and shield bars with crystal emblem, gold coin counter at upper-right using coin icon and blank counter area; a long magenta boss bar with horned boss emblem below the top HUD; a conspicuous crimson cracked-crystal ALERT panel near upper-left with danger chevrons, conveying Crystal under attack. BOTTOM: exactly SIX large hero portrait CARDS in one clear row, first four portraits matching reference2 exactly, two additional dim masked reserve-bust cards demonstrating six party slots. Each card has a clear HP strip, one small skill ring and one larger ultimate ring, elemental gem accents. Above bottom row at right a stance switcher with exactly THREE icons: defensive shield, balanced scales, aggressive crossed swords; balanced visibly selected. Premium dark fantasy frames of forged charcoal metal, worn bronze edges, geometric rune inlays, tapered BLACK-VIOLET ink contours, crisp hard2-3 flat cel tones, saturated jewel accents, cool violet shadow shapes, warm upper-left-front key. Keep center playfield open and readable. Grim mythic elegance, purposeful spacing, large usable bars and rings, no mobile-casual rounded toy UI. NO letters, numbers, words, logos or watermarks anywhere; use symbols and blank text slots, since production paints no text into assets. No soft airbrush or painterly gradients. Output native3840x2160, sharp4K rendering. Native4K raster output at3840x2160 pixels is essential; this will be downsampled to2560x1440 by production. Make a visibly SEPARATE small wave banner at absolute top-center, ABOVE the Crystal HP/shield widget; all previous HUD elements still required.\n",
+      "cleanup": "source/scripts/save_concept.py: native PNG retained; Lanczos downscale/crop only; no upscale; sRGB RGBA8.",
+      "status": "blocked",
+      "reason": "Both native2560x1440 and native3840x2160 requests returned1672x941. Required2560x1440 delivery is blocked; no generation was upscaled.",
+      "draftPath": "concepts/hud_concept_LOW_RES_DRAFT.png",
+      "draftSource": "source/generations/concepts/hud_concept.png",
+      "draftSize": [
+        1672,
+        941
+      ],
+      "attempts": [
+        {
+          "requestedSize": [
+            2560,
+            1440
+          ],
+          "returnedSize": [
+            1672,
+            941
+          ],
+          "source": "source/generations/concepts/hud_concept_native_v1.png",
+          "promptFile": "source/prompts/concepts__hud_concept_v1.txt"
+        },
+        {
+          "requestedSize": [
+            3840,
+            2160
+          ],
+          "returnedSize": [
+            1672,
+            941
+          ],
+          "source": "source/generations/concepts/hud_concept.png",
+          "promptFile": "source/prompts/concepts__hud_concept.txt"
+        }
+      ],
+      "requestedSize": [
+        2560,
+        1440
+      ],
+      "selfAssessment": "MOCKUP / concept, low-resolution draft only. HUD widgets are present; the small Marina field figure has duplicated crozier tips. The two dim portrait cards are reserve slots, not extra delivered heroes."
+    },
+    {
+      "id": "concepts/combat_scene_concept",
+      "kind": "MOCKUP / concept — not a game asset or screenshot",
+      "generator": "image_gen (built-in)",
+      "source": "source/generations/concepts/combat_scene_concept.png",
+      "nativeSize": [
+        1672,
+        941
+      ],
+      "prompt": "Use case: illustration-story. ORIGINAL dark arcane fantasy combat direction concept, NATIVE EXACT 3840x2160 pixels landscape16:9 PNG. No HUD, labels, letters, numbers, logo or watermark. Reference1 supplies battlefield layout and38deg elevated game camera: bright-ish green and sand ruined sanctum with central circular ritual dais. Reference2 EXACT four HERO identities left-to-right: Glacius broad frost-steel closed-helm guardian, enormous cyan ice tower shield and short mace; Ignis lean crimson/orange pointed-hood mage with caged flame staff; Veyra slim violet/indigo hooded woman ranger, copper recurve bow with lightning string; Marina pearl-white/sea-teal veiled woman healer, shell crown and shell-coral wave crozier. Reference3 enemy identities: top row grunt husk/blade, runner hound-man/claws, hexcaster hood/lantern; bottom juggernaut slab-hammer brute, ravager crowned elite with twin blades, rift warden towering glaive knight with cracked crystal halo. Preserve these faces/costumes/palettes/props; do not replace them with generic heroes. Show all FOUR heroes in ACTIVE combat around a glowing white-cyan faceted Crystal on its ritual dais, defending it from a rift wave including the twin-blade RAVAGER and towering haloed RIFT WARDEN. Crystal is central highest-value focal point, hero bodies read at roughly190px tall, common enemies150px, boss384px. Stage boss upper-right, heroes spaced around dais, enemy wave entering outer lanes. Huge exaggerated COMIC-STYLED MAGIC: (1) a colossal crimson-orange METEOR BURST with angular inked flame tongues striking a wave cluster far-left, (2) a wide branching white-yellow/electric-violet CHAIN-LIGHTNING WEB from Veyra through enemies at upper-right, (3) an enormous ICE BLOOM of cyan crystalline petal-shards erupting just ahead of Glacius at lower-left, (4) a sweeping translucent sea-teal WATER HEAL DOME from Marina curving around the Crystal and allies, clear interior so silhouettes remain visible. Effects BIGGER and louder than typical action-RPG effects, occupying large readable shapes; keep every hero, Crystal and boss recognizable and leave clean negative space around heads and key props. Hard-edged flat-color flames and shards, crisp black-violet ink accents, graphic magic bands and flat translucent dome planes; no soft fog or bloom cloud. Premium hand-inked comic2.5D, bold tapered #1b1226 brush-pen outer contours and thinner inner lines,2-3 hard flat cel tones per material, sparse deep-shadow hatching, warm upper-left key and cool violet-blue shadows. Heroes saturated jewel tones; enemies muted bone/rust/charcoal with hot magenta/violet cracks under15% area. Grim mythic mood, heroic adult proportions, worn materials, NOT chibi, flat vector, photorealistic, soft painterly or airbrushed. This is a VFX TARGET / concept, not a screenshot. Native3840x2160 sharp4K image. Native4K raster output at3840x2160 pixels is essential; this will be downsampled to2560x1440 by production. \n",
+      "cleanup": "source/scripts/save_concept.py: native PNG retained; Lanczos downscale/crop only; no upscale; sRGB RGBA8.",
+      "status": "blocked",
+      "reason": "Both native2560x1440 and native3840x2160 requests returned1672x941. Required2560x1440 delivery is blocked; no generation was upscaled.",
+      "draftPath": "concepts/combat_scene_concept_LOW_RES_DRAFT.png",
+      "draftSource": "source/generations/concepts/combat_scene_concept_native_v1.png",
+      "draftSize": [
+        1672,
+        941
+      ],
+      "attempts": [
+        {
+          "requestedSize": [
+            2560,
+            1440
+          ],
+          "returnedSize": [
+            1672,
+            941
+          ],
+          "source": "source/generations/concepts/combat_scene_concept_native_v1.png",
+          "promptFile": "source/prompts/concepts__combat_scene_concept_v1.txt"
+        },
+        {
+          "requestedSize": [
+            3840,
+            2160
+          ],
+          "returnedSize": [
+            1672,
+            941
+          ],
+          "source": "source/generations/concepts/combat_scene_concept.png",
+          "promptFile": "source/prompts/concepts__combat_scene_concept.txt"
+        }
+      ],
+      "requestedSize": [
+        2560,
+        1440
+      ],
+      "selfAssessment": "MOCKUP / concept, low-resolution draft only. All four heroes, elite, boss and oversized magic read; VFX may obscure targets under heavier density."
+    }
+  ],
+  "knownIssues": [
+    "R01 prose requests400/800 hero pairs while INPUT_MANIFEST/intake require512. Both are supplied:512 exports with1024 masters, plus400 contract copies and800 masters.",
+    "Both concept size requests failed at1672x941, including fresh4K attempts. Only labelled LOW_RES_DRAFT copies are in concepts/.",
+    "Cast/tell poses and manually aligned torsos require lead review while swapping frames in Unity; a numeric intake pass is not animation or beauty approval.",
+    "Fine metal scuffs, cloth motifs, pearls and enemy fragments merge at720p. High-density VFX readability remains a concept target.",
+    "Portraits retain a flat dark-violet background with a one-export-pixel clear perimeter to satisfy the input RGBA transparency gate.",
+    "Intake lists178 out-of-scope working-tree changes. This run made workspace writes only inside R01 and left those paths alone."
+  ],
+  "blockers": [
+    "concepts/hud_concept: Both native2560x1440 and native3840x2160 requests returned1672x941. Required2560x1440 delivery is blocked; no generation was upscaled.",
+    "concepts/combat_scene_concept: Both native2560x1440 and native3840x2160 requests returned1672x941. Required2560x1440 delivery is blocked; no generation was upscaled."
+  ],
+  "finalCleanup": "source/scripts/finalize.py: for alpha<32, RGB from nearest alpha>=128 neighbor; 8-bit straight RGBA PNG and sRGB ICC profile.",
+  "counts": {
+    "requestedGameAssets": 47,
+    "deliveredGameAssets": 47,
+    "blockedGameAssets": 0,
+    "requestedConcepts": 2,
+    "deliveredConcepts": 0,
+    "blockedConcepts": 2,
+    "totalRequested": 49,
+    "totalDelivered": 47,
+    "totalBlocked": 2
+  },
+  "returnStatus": "47 contract sprite/portrait exports delivered; two native2K concepts blocked with labelled low-resolution drafts.",
+  "approvalStatus": "Self-QA only; no lead or owner approval claimed.",
+  "postCleanup": [
+    "python source/scripts/contract_masters.py",
+    "python source/scripts/finalize.py"
+  ],
+  "qa": {
+    "intake": "qa/intake.json",
+    "blocking": 0,
+    "notes": 0,
+    "strayWorkingTreeChanges": 178,
+    "measurements": "qa/measurements.json",
+    "conceptResolution": "qa/concept_resolution.json",
+    "manualAnchors": [
+      "qa/manual_alignment.json",
+      "qa/manual_enemy_alignment.json",
+      "qa/manual_cast_alignment.json"
+    ]
+  },
+  "inputs": [
+    "ArtHandoff/requests/R01/CODEX_ART_REQUEST.md",
+    "ArtHandoff/requests/COMMON_CONTRACT.md",
+    "ArtHandoff/requests/R01/INPUT_MANIFEST.json",
+    "ArtProduction/ART_BIBLE.md (superseded style rules not applied)",
+    "ArtProduction/designs/heroes.json",
+    "ArtProduction/designs/enemies.json",
+    "Assets/_Aetherward/Resources/Content/heroes.json",
+    "Assets/_Aetherward/Resources/Content/enemies.json",
+    "Assets/_Aetherward/Resources/Content/elements.json",
+    "ArtHandoff/requests/R01/references/",
+    "ArtHandoff/requests/pose_refs/"
+  ]
+}

@@ -1,0 +1,1590 @@
+{
+  "batch": "R05",
+  "producer": "Codex",
+  "date": "2026-10-21",
+  "styleLock": {
+    "direction": "Art Bible v3; R01 sections 1-2 replace B01 and old rim/value rules",
+    "promptTemplate": "Dark arcane fantasy, premium hand-inked comic 2.5D; tapered bold black-violet #1b1226 outer contours, thinner internal ink; 2-3 flat cel tones per material; hard cool violet-blue #3b2f6b shadows; warm upper-left-front key; saturated jewel hero colours and muted bone/rust/charcoal enemies with magenta/violet rift accents under 15%. No rim light, no airbrush gradients."
+  },
+  "tools": [
+    {
+      "name": "image_gen built-in",
+      "version": "not exposed"
+    },
+    {
+      "name": "Python",
+      "packages": [
+        "Pillow",
+        "numpy",
+        "scipy"
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "id": "Heroes/glacius_walk_c",
+      "status": "delivered",
+      "reviewStatus": "needs regeneration",
+      "export": "exports/Art/Heroes/glacius_walk_c.png",
+      "size": [
+        512,
+        512
+      ],
+      "source": "source/raw/Heroes/glacius_walk_c.png",
+      "master": "source/masters/Heroes/glacius_walk_c@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/Heroes/glacius_walk_c.txt",
+      "references": [
+        "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\glacius_idle.png",
+        "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\glacius_walk_a.png",
+        "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R05\\references\\guides\\unit__Heroes__glacius_walk_c.png"
+      ],
+      "cleanup": "source/scripts/produce.py process --id Heroes/glacius_walk_c --source <generated PNG>",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Below bar: does not clearly reverse the leading leg from walk_a.",
+      "cleanupFacts": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "uniformScale": 0.6708727655099895,
+        "requestedBodyScale": 0.6708727655099895,
+        "scaleConstrainedByCanvas": false,
+        "translation": [
+          86,
+          180
+        ],
+        "exportOpaqueBounds": [
+          93,
+          158,
+          431,
+          477
+        ],
+        "landmark": {
+          "headTop": 201,
+          "torsoX": 635,
+          "identityHeadTop": 157
+        }
+      },
+      "promptAddendum": null,
+      "exportSha256": "75c14c6ccf5f6666f930916ab1a1c8a0f138295f928da11d15e7dad3a34cca9b"
+    },
+    {
+      "id": "Heroes/glacius_walk_d",
+      "status": "delivered",
+      "reviewStatus": "needs regeneration",
+      "export": "exports/Art/Heroes/glacius_walk_d.png",
+      "size": [
+        512,
+        512
+      ],
+      "source": "source/raw/Heroes/glacius_walk_d.png",
+      "master": "source/masters/Heroes/glacius_walk_d@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/Heroes/glacius_walk_d.txt",
+      "references": [
+        "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\glacius_idle.png",
+        "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\glacius_walk_b.png",
+        "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R05\\references\\guides\\unit__Heroes__glacius_walk_d.png"
+      ],
+      "cleanup": "source/scripts/produce.py process --id Heroes/glacius_walk_d --source <generated PNG>",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Below bar: leg distinction from new walk_c is too weak.",
+      "cleanupFacts": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "uniformScale": 0.7595238095238095,
+        "requestedBodyScale": 0.7595238095238095,
+        "scaleConstrainedByCanvas": false,
+        "translation": [
+          30,
+          60
+        ],
+        "exportOpaqueBounds": [
+          94,
+          158,
+          436,
+          477
+        ],
+        "landmark": {
+          "headTop": 335,
+          "torsoX": 635,
+          "identityHeadTop": 157
+        }
+      },
+      "promptAddendum": null,
+      "exportSha256": "31c09bd9f3af961660bfc08400cf398791bf4df3ce8cff4cd5fb4f5527428e1c"
+    },
+    {
+      "id": "Heroes/glacius_windup",
+      "status": "delivered",
+      "reviewStatus": "needs regeneration",
+      "export": "exports/Art/Heroes/glacius_windup.png",
+      "size": [
+        512,
+        512
+      ],
+      "source": "source/raw/Heroes/glacius_windup.png",
+      "master": "source/masters/Heroes/glacius_windup@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/Heroes/glacius_windup.txt",
+      "references": [
+        "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\glacius_idle.png",
+        "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\glacius_attack.png",
+        "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R05\\references\\guides\\unit__Heroes__glacius_windup.png"
+      ],
+      "cleanup": "source/scripts/produce.py process --id Heroes/glacius_windup --source <generated PNG>",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Review:  Body scale reduced to retain props inside icon box; does not meet strict identity-scale continuity.",
+      "cleanupFacts": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "uniformScale": 0.7719917012448133,
+        "requestedBodyScale": 0.8158567774936062,
+        "scaleConstrainedByCanvas": true,
+        "translation": [
+          14,
+          48
+        ],
+        "exportOpaqueBounds": [
+          111,
+          105,
+          442,
+          477
+        ],
+        "landmark": {
+          "headTop": 390,
+          "torsoX": 645,
+          "identityHeadTop": 157
+        }
+      },
+      "promptAddendum": null,
+      "exportSha256": "d27ae45e19ca038314df007407eca7226c9464c316caeee1237a1dc2e494aaaa"
+    },
+    {
+      "id": "Heroes/glacius_follow",
+      "status": "delivered",
+      "reviewStatus": "needs regeneration",
+      "export": "exports/Art/Heroes/glacius_follow.png",
+      "size": [
+        512,
+        512
+      ],
+      "source": "source/raw/Heroes/glacius_follow.png",
+      "master": "source/masters/Heroes/glacius_follow@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/Heroes/glacius_follow.txt",
+      "references": [
+        "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\glacius_idle.png",
+        "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\glacius_attack.png",
+        "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R05\\references\\guides\\unit__Heroes__glacius_follow.png"
+      ],
+      "cleanup": "source/scripts/produce.py process --id Heroes/glacius_follow --source <generated PNG>",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Review:  Body scale reduced to retain props inside icon box; does not meet strict identity-scale continuity.",
+      "cleanupFacts": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "uniformScale": 0.8366255144032922,
+        "requestedBodyScale": 0.9437869822485208,
+        "scaleConstrainedByCanvas": true,
+        "translation": [
+          -103,
+          -19
+        ],
+        "exportOpaqueBounds": [
+          53,
+          152,
+          452,
+          477
+        ],
+        "landmark": {
+          "headTop": 485,
+          "torsoX": 735,
+          "identityHeadTop": 157
+        }
+      },
+      "promptAddendum": null,
+      "exportSha256": "6f6237c591969b8b8083181cf7b568ff4f9017991a3a00b42c4eaa878491f36b"
+    },
+    {
+      "id": "Heroes/glacius_idle_b",
+      "status": "delivered",
+      "reviewStatus": "needs regeneration",
+      "export": "exports/Art/Heroes/glacius_idle_b.png",
+      "size": [
+        512,
+        512
+      ],
+      "source": "source/raw/Heroes/glacius_idle_b.png",
+      "master": "source/masters/Heroes/glacius_idle_b@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/Heroes/glacius_idle_b.txt",
+      "references": [
+        "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\glacius_idle.png",
+        "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\glacius_walk_b.png",
+        "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R05\\references\\guides\\unit__Heroes__glacius_idle_b.png"
+      ],
+      "cleanup": "source/scripts/produce.py process --id Heroes/glacius_idle_b --source <generated PNG>",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Below bar: generation changes more contours than a 2-3 pixel breath. Requires identity-preserving regeneration.",
+      "cleanupFacts": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "uniformScale": 0.8025157232704403,
+        "requestedBodyScale": 0.8025157232704403,
+        "scaleConstrainedByCanvas": false,
+        "translation": [
+          26,
+          18
+        ],
+        "exportOpaqueBounds": [
+          97,
+          159,
+          432,
+          477
+        ],
+        "landmark": {
+          "headTop": 370,
+          "torsoX": 605,
+          "identityHeadTop": 157
+        }
+      },
+      "promptAddendum": null,
+      "exportSha256": "5b38c39dc5877101a212f2cd5125207e926f566dd51757c7fe53aaf2f81e8f50"
+    },
+    {
+      "id": "Heroes/ignis_walk_c",
+      "status": "delivered",
+      "reviewStatus": "needs regeneration",
+      "export": "exports/Art/Heroes/ignis_walk_c.png",
+      "size": [
+        512,
+        512
+      ],
+      "source": "source/raw/Heroes/ignis_walk_c.png",
+      "master": "source/masters/Heroes/ignis_walk_c@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/Heroes/ignis_walk_c.txt",
+      "references": [
+        "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\ignis_idle.png",
+        "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\ignis_walk_a.png",
+        "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R05\\references\\guides\\unit__Heroes__ignis_walk_c.png"
+      ],
+      "cleanup": "source/scripts/produce.py process --id Heroes/ignis_walk_c --source <generated PNG>",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Below bar: staff moved to opposite hand. Regenerate before integration.",
+      "cleanupFacts": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "uniformScale": 0.74364896073903,
+        "requestedBodyScale": 0.74364896073903,
+        "scaleConstrainedByCanvas": false,
+        "translation": [
+          -9,
+          85
+        ],
+        "exportOpaqueBounds": [
+          89,
+          128,
+          401,
+          477
+        ],
+        "landmark": {
+          "headTop": 300,
+          "torsoX": 700,
+          "identityHeadTop": 154
+        }
+      },
+      "promptAddendum": null,
+      "exportSha256": "8cb20d375c99053eb8cf5f320da6d3bf51ea19e70e0e775addcf1903c7fd3328"
+    },
+    {
+      "id": "Heroes/ignis_walk_d",
+      "status": "delivered",
+      "reviewStatus": "unapproved candidate",
+      "export": "exports/Art/Heroes/ignis_walk_d.png",
+      "size": [
+        512,
+        512
+      ],
+      "source": "source/raw/Heroes/ignis_walk_d.png",
+      "master": "source/masters/Heroes/ignis_walk_d@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/Heroes/ignis_walk_d.txt",
+      "references": [
+        "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\ignis_idle.png",
+        "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\ignis_walk_b.png",
+        "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R05\\references\\guides\\unit__Heroes__ignis_walk_d.png"
+      ],
+      "cleanup": "source/scripts/produce.py process --id Heroes/ignis_walk_d --source <generated PNG>",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Generated key pose; utility-aligned to a manually estimated torso/head landmark and exact foot row. See README for pose and continuity defects; delivery does not mean approval.",
+      "cleanupFacts": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "uniformScale": 0.7648456057007126,
+        "requestedBodyScale": 0.7648456057007126,
+        "scaleConstrainedByCanvas": false,
+        "translation": [
+          19,
+          71
+        ],
+        "exportOpaqueBounds": [
+          120,
+          135,
+          398,
+          476
+        ],
+        "landmark": {
+          "headTop": 310,
+          "torsoX": 645,
+          "identityHeadTop": 154
+        }
+      },
+      "promptAddendum": "source/prompts/addenda.json",
+      "exportSha256": "024e4ee7c251a855b57884dd1b0d1dc6ebe3e608c09b97ce4de11286d3deb288"
+    },
+    {
+      "id": "Heroes/ignis_windup",
+      "status": "delivered",
+      "reviewStatus": "needs regeneration",
+      "export": "exports/Art/Heroes/ignis_windup.png",
+      "size": [
+        512,
+        512
+      ],
+      "source": "source/raw/Heroes/ignis_windup.png",
+      "master": "source/masters/Heroes/ignis_windup@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/Heroes/ignis_windup.txt",
+      "references": [
+        "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\ignis_idle.png",
+        "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\ignis_attack.png",
+        "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R05\\references\\guides\\unit__Heroes__ignis_windup.png"
+      ],
+      "cleanup": "source/scripts/produce.py process --id Heroes/ignis_windup --source <generated PNG>",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Review:  Body scale reduced to retain props inside icon box; does not meet strict identity-scale continuity.",
+      "cleanupFacts": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "uniformScale": 0.6680430879712748,
+        "requestedBodyScale": 0.7427912341407151,
+        "scaleConstrainedByCanvas": true,
+        "translation": [
+          54,
+          153
+        ],
+        "exportOpaqueBounds": [
+          80,
+          105,
+          411,
+          477
+        ],
+        "landmark": {
+          "headTop": 330,
+          "torsoX": 685,
+          "identityHeadTop": 154
+        }
+      },
+      "promptAddendum": "source/prompts/addenda.json",
+      "exportSha256": "8daa7d52519df8b0cca1543c88778f20eaa62a9c6dc73331b931b4458b4d606f"
+    },
+    {
+      "id": "Heroes/ignis_follow",
+      "status": "delivered",
+      "reviewStatus": "needs regeneration",
+      "export": "exports/Art/Heroes/ignis_follow.png",
+      "size": [
+        512,
+        512
+      ],
+      "source": "source/raw/Heroes/ignis_follow.png",
+      "master": "source/masters/Heroes/ignis_follow@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/Heroes/ignis_follow.txt",
+      "references": [
+        "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\ignis_idle.png",
+        "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\ignis_attack.png",
+        "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R05\\references\\guides\\unit__Heroes__ignis_follow.png"
+      ],
+      "cleanup": "source/scripts/produce.py process --id Heroes/ignis_follow --source <generated PNG>",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Below bar: raw staff tip touches image edge; icon-box fit reduces body scale. Body scale reduced to retain props inside icon box; does not meet strict identity-scale continuity.",
+      "cleanupFacts": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "uniformScale": 0.6879864636209815,
+        "requestedBodyScale": 0.8598130841121495,
+        "scaleConstrainedByCanvas": true,
+        "translation": [
+          58,
+          162
+        ],
+        "exportOpaqueBounds": [
+          65,
+          217,
+          459,
+          477
+        ],
+        "landmark": {
+          "headTop": 400,
+          "torsoX": 660,
+          "identityHeadTop": 154
+        }
+      },
+      "promptAddendum": "source/prompts/addenda.json",
+      "exportSha256": "855218f03a1593fb9abb74a4a989ff1a60def3c51a667a9708225503b91237cd"
+    },
+    {
+      "id": "Heroes/ignis_idle_b",
+      "status": "delivered",
+      "reviewStatus": "needs regeneration",
+      "export": "exports/Art/Heroes/ignis_idle_b.png",
+      "size": [
+        512,
+        512
+      ],
+      "source": "source/raw/Heroes/ignis_idle_b.png",
+      "master": "source/masters/Heroes/ignis_idle_b@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/Heroes/ignis_idle_b.txt",
+      "references": [
+        "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\ignis_idle.png",
+        "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\ignis_walk_b.png",
+        "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R05\\references\\guides\\unit__Heroes__ignis_idle_b.png"
+      ],
+      "cleanup": "source/scripts/produce.py process --id Heroes/ignis_idle_b --source <generated PNG>",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Below bar: generation changes more contours than a 2-3 pixel breath. Requires identity-preserving regeneration.",
+      "cleanupFacts": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "uniformScale": 0.7684964200477327,
+        "requestedBodyScale": 0.7684964200477327,
+        "scaleConstrainedByCanvas": false,
+        "translation": [
+          39,
+          77
+        ],
+        "exportOpaqueBounds": [
+          125,
+          131,
+          405,
+          476
+        ],
+        "landmark": {
+          "headTop": 300,
+          "torsoX": 615,
+          "identityHeadTop": 154
+        }
+      },
+      "promptAddendum": "source/prompts/addenda.json",
+      "exportSha256": "c3a65f296bb310c50632956de57f5e4d97be93e52ada01ebf3bb8bf059754cad"
+    },
+    {
+      "id": "Heroes/veyra_walk_c",
+      "status": "delivered",
+      "reviewStatus": "needs regeneration",
+      "export": "exports/Art/Heroes/veyra_walk_c.png",
+      "size": [
+        512,
+        512
+      ],
+      "source": "source/raw/Heroes/veyra_walk_c.png",
+      "master": "source/masters/Heroes/veyra_walk_c@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/Heroes/veyra_walk_c.txt",
+      "references": [
+        "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\veyra_idle.png",
+        "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\veyra_walk_a.png",
+        "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R05\\references\\guides\\unit__Heroes__veyra_walk_c.png"
+      ],
+      "cleanup": "source/scripts/produce.py process --id Heroes/veyra_walk_c --source <generated PNG>",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Below bar: opposite-leg contact is insufficiently distinct; compare all four steps.",
+      "cleanupFacts": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "uniformScale": 0.795,
+        "requestedBodyScale": 0.795,
+        "scaleConstrainedByCanvas": false,
+        "translation": [
+          3,
+          18
+        ],
+        "exportOpaqueBounds": [
+          140,
+          144,
+          394,
+          476
+        ],
+        "landmark": {
+          "headTop": 375,
+          "torsoX": 640,
+          "identityHeadTop": 158
+        }
+      },
+      "promptAddendum": "source/prompts/addenda.json",
+      "exportSha256": "61ee67b7d5cb3821fc05a0a34453b8ff95b5d20bb446f1477e54e239b0474c94"
+    },
+    {
+      "id": "Heroes/veyra_walk_d",
+      "status": "delivered",
+      "reviewStatus": "needs regeneration",
+      "export": "exports/Art/Heroes/veyra_walk_d.png",
+      "size": [
+        512,
+        512
+      ],
+      "source": "source/raw/Heroes/veyra_walk_d.png",
+      "master": "source/masters/Heroes/veyra_walk_d@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/Heroes/veyra_walk_d.txt",
+      "references": [
+        "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\veyra_idle.png",
+        "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\veyra_walk_b.png",
+        "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R05\\references\\guides\\unit__Heroes__veyra_walk_d.png"
+      ],
+      "cleanup": "source/scripts/produce.py process --id Heroes/veyra_walk_d --source <generated PNG>",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Below bar: new walk_c/d leg silhouettes are too similar.",
+      "cleanupFacts": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "uniformScale": 0.7066666666666667,
+        "requestedBodyScale": 0.7066666666666667,
+        "scaleConstrainedByCanvas": false,
+        "translation": [
+          67,
+          140
+        ],
+        "exportOpaqueBounds": [
+          143,
+          141,
+          409,
+          476
+        ],
+        "landmark": {
+          "headTop": 250,
+          "torsoX": 630,
+          "identityHeadTop": 158
+        }
+      },
+      "promptAddendum": "source/prompts/addenda.json",
+      "exportSha256": "4d59bc1a54460a0cc06c0a60048a6c2fda64baa3f216d5b7070f534f51f2e01d"
+    },
+    {
+      "id": "Heroes/veyra_windup",
+      "status": "delivered",
+      "reviewStatus": "needs regeneration",
+      "export": "exports/Art/Heroes/veyra_windup.png",
+      "size": [
+        512,
+        512
+      ],
+      "source": "source/raw/Heroes/veyra_windup.png",
+      "master": "source/masters/Heroes/veyra_windup@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/Heroes/veyra_windup.txt",
+      "references": [
+        "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\veyra_idle.png",
+        "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\veyra_attack.png",
+        "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R05\\references\\guides\\unit__Heroes__veyra_windup.png"
+      ],
+      "cleanup": "source/scripts/produce.py process --id Heroes/veyra_windup --source <generated PNG>",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Review:  Body scale reduced to retain props inside icon box; does not meet strict identity-scale continuity.",
+      "cleanupFacts": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "uniformScale": 0.6722673893405601,
+        "requestedBodyScale": 0.7571428571428571,
+        "scaleConstrainedByCanvas": true,
+        "translation": [
+          95,
+          152
+        ],
+        "exportOpaqueBounds": [
+          112,
+          104,
+          453,
+          476
+        ],
+        "landmark": {
+          "headTop": 350,
+          "torsoX": 620,
+          "identityHeadTop": 158
+        }
+      },
+      "promptAddendum": "source/prompts/addenda.json",
+      "exportSha256": "97ee0559bfc6759b07974054894aa82375a69ab61b5c1009dbdf7b4633b13a9e"
+    },
+    {
+      "id": "Heroes/veyra_follow",
+      "status": "delivered",
+      "reviewStatus": "needs regeneration",
+      "export": "exports/Art/Heroes/veyra_follow.png",
+      "size": [
+        512,
+        512
+      ],
+      "source": "source/raw/Heroes/veyra_follow.png",
+      "master": "source/masters/Heroes/veyra_follow@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/Heroes/veyra_follow.txt",
+      "references": [
+        "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\veyra_idle.png",
+        "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\veyra_attack.png",
+        "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R05\\references\\guides\\unit__Heroes__veyra_follow.png"
+      ],
+      "cleanup": "source/scripts/produce.py process --id Heroes/veyra_follow --source <generated PNG>",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Review:  Body scale reduced to retain props inside icon box; does not meet strict identity-scale continuity.",
+      "cleanupFacts": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "uniformScale": 0.7642857142857143,
+        "requestedBodyScale": 0.8808864265927978,
+        "scaleConstrainedByCanvas": true,
+        "translation": [
+          8,
+          34
+        ],
+        "exportOpaqueBounds": [
+          100,
+          149,
+          459,
+          476
+        ],
+        "landmark": {
+          "headTop": 480,
+          "torsoX": 660,
+          "identityHeadTop": 158
+        }
+      },
+      "promptAddendum": "source/prompts/addenda.json",
+      "exportSha256": "ee69c3639adec05aafd9d5ab86832fc408d9298b8f8c78d995e9bef7535e79ec"
+    },
+    {
+      "id": "Heroes/veyra_idle_b",
+      "status": "delivered",
+      "reviewStatus": "needs regeneration",
+      "export": "exports/Art/Heroes/veyra_idle_b.png",
+      "size": [
+        512,
+        512
+      ],
+      "source": "source/raw/Heroes/veyra_idle_b.png",
+      "master": "source/masters/Heroes/veyra_idle_b@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/Heroes/veyra_idle_b.txt",
+      "references": [
+        "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\veyra_idle.png",
+        "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\veyra_walk_b.png",
+        "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R05\\references\\guides\\unit__Heroes__veyra_idle_b.png"
+      ],
+      "cleanup": "source/scripts/produce.py process --id Heroes/veyra_idle_b --source <generated PNG>",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Below bar: generation changes more contours than a 2-3 pixel breath. Requires identity-preserving regeneration.",
+      "cleanupFacts": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "uniformScale": 0.801007556675063,
+        "requestedBodyScale": 0.801007556675063,
+        "scaleConstrainedByCanvas": false,
+        "translation": [
+          -1,
+          16
+        ],
+        "exportOpaqueBounds": [
+          163,
+          140,
+          399,
+          476
+        ],
+        "landmark": {
+          "headTop": 375,
+          "torsoX": 640,
+          "identityHeadTop": 158
+        }
+      },
+      "promptAddendum": "source/prompts/addenda.json",
+      "exportSha256": "dd5a0ca0d0f7aeba980a87e81cffca47aa58d0af83d494a5a2041e13bf742e38"
+    },
+    {
+      "id": "Heroes/marina_walk_c",
+      "status": "delivered",
+      "reviewStatus": "unapproved candidate",
+      "export": "exports/Art/Heroes/marina_walk_c.png",
+      "size": [
+        512,
+        512
+      ],
+      "source": "source/raw/Heroes/marina_walk_c.png",
+      "master": "source/masters/Heroes/marina_walk_c@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/Heroes/marina_walk_c.txt",
+      "references": [
+        "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\marina_idle.png",
+        "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\marina_walk_a.png",
+        "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R05\\references\\guides\\unit__Heroes__marina_walk_c.png"
+      ],
+      "cleanup": "source/scripts/produce.py process --id Heroes/marina_walk_c --source <generated PNG>",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Generated key pose; utility-aligned to a manually estimated torso/head landmark and exact foot row. See README for pose and continuity defects; delivery does not mean approval.",
+      "cleanupFacts": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "uniformScale": 0.6542443064182195,
+        "requestedBodyScale": 0.6542443064182195,
+        "scaleConstrainedByCanvas": false,
+        "translation": [
+          74,
+          180
+        ],
+        "exportOpaqueBounds": [
+          103,
+          130,
+          399,
+          477
+        ],
+        "landmark": {
+          "headTop": 215,
+          "torsoX": 670,
+          "identityHeadTop": 160
+        }
+      },
+      "promptAddendum": "source/prompts/addenda.json",
+      "exportSha256": "91927be4a530b3c7a70c27304a4b79b7305f768a7a3efdd074199bba34ddc0ed"
+    },
+    {
+      "id": "Heroes/marina_walk_d",
+      "status": "delivered",
+      "reviewStatus": "unapproved candidate",
+      "export": "exports/Art/Heroes/marina_walk_d.png",
+      "size": [
+        512,
+        512
+      ],
+      "source": "source/raw/Heroes/marina_walk_d.png",
+      "master": "source/masters/Heroes/marina_walk_d@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/Heroes/marina_walk_d.txt",
+      "references": [
+        "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\marina_idle.png",
+        "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\marina_walk_b.png",
+        "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R05\\references\\guides\\unit__Heroes__marina_walk_d.png"
+      ],
+      "cleanup": "source/scripts/produce.py process --id Heroes/marina_walk_d --source <generated PNG>",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Generated key pose; utility-aligned to a manually estimated torso/head landmark and exact foot row. See README for pose and continuity defects; delivery does not mean approval.",
+      "cleanupFacts": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "uniformScale": 0.7030033370411568,
+        "requestedBodyScale": 0.7030033370411568,
+        "scaleConstrainedByCanvas": false,
+        "translation": [
+          48,
+          148
+        ],
+        "exportOpaqueBounds": [
+          109,
+          131,
+          409,
+          477
+        ],
+        "landmark": {
+          "headTop": 245,
+          "torsoX": 660,
+          "identityHeadTop": 160
+        }
+      },
+      "promptAddendum": "source/prompts/addenda.json",
+      "exportSha256": "4697c4a4e463d3c64fb4a9ab69b1a2f72f70bc83ed1791f8c21a6a8c10947441"
+    },
+    {
+      "id": "Heroes/marina_windup",
+      "status": "delivered",
+      "reviewStatus": "needs regeneration",
+      "export": "exports/Art/Heroes/marina_windup.png",
+      "size": [
+        512,
+        512
+      ],
+      "source": "source/raw/Heroes/marina_windup.png",
+      "master": "source/masters/Heroes/marina_windup@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/Heroes/marina_windup.txt",
+      "references": [
+        "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\marina_idle.png",
+        "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\marina_attack.png",
+        "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R05\\references\\guides\\unit__Heroes__marina_windup.png"
+      ],
+      "cleanup": "source/scripts/produce.py process --id Heroes/marina_windup --source <generated PNG>",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Below bar: review staff handedness; raised prop forces body scale compromise. Body scale reduced to retain props inside icon box; does not meet strict identity-scale continuity.",
+      "cleanupFacts": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "uniformScale": 0.6301439458086368,
+        "requestedBodyScale": 0.6803013993541442,
+        "scaleConstrainedByCanvas": true,
+        "translation": [
+          58,
+          184
+        ],
+        "exportOpaqueBounds": [
+          90,
+          104,
+          399,
+          476
+        ],
+        "landmark": {
+          "headTop": 290,
+          "torsoX": 720,
+          "identityHeadTop": 160
+        }
+      },
+      "promptAddendum": "source/prompts/addenda.json",
+      "exportSha256": "0d92dbaff9ae25f4f7db593202e8b3af76a10902b1fba40c03513460a31425fa"
+    },
+    {
+      "id": "Heroes/marina_follow",
+      "status": "delivered",
+      "reviewStatus": "needs regeneration",
+      "export": "exports/Art/Heroes/marina_follow.png",
+      "size": [
+        512,
+        512
+      ],
+      "source": "source/raw/Heroes/marina_follow.png",
+      "master": "source/masters/Heroes/marina_follow@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/Heroes/marina_follow.txt",
+      "references": [
+        "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\marina_idle.png",
+        "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\marina_attack.png",
+        "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R05\\references\\guides\\unit__Heroes__marina_follow.png"
+      ],
+      "cleanup": "source/scripts/produce.py process --id Heroes/marina_follow --source <generated PNG>",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Review:  Body scale reduced to retain props inside icon box; does not meet strict identity-scale continuity.",
+      "cleanupFacts": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "uniformScale": 0.6516025641025641,
+        "requestedBodyScale": 0.7181818181818181,
+        "scaleConstrainedByCanvas": true,
+        "translation": [
+          128,
+          181
+        ],
+        "exportOpaqueBounds": [
+          110,
+          190,
+          459,
+          477
+        ],
+        "landmark": {
+          "headTop": 305,
+          "torsoX": 590,
+          "identityHeadTop": 160
+        }
+      },
+      "promptAddendum": "source/prompts/addenda.json",
+      "exportSha256": "5e83a39f83ebd1a83e57f016bbd4eebf462dceee388f55d2bed9e3fa667476d0"
+    },
+    {
+      "id": "Heroes/marina_idle_b",
+      "status": "delivered",
+      "reviewStatus": "needs regeneration",
+      "export": "exports/Art/Heroes/marina_idle_b.png",
+      "size": [
+        512,
+        512
+      ],
+      "source": "source/raw/Heroes/marina_idle_b.png",
+      "master": "source/masters/Heroes/marina_idle_b@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/Heroes/marina_idle_b.txt",
+      "references": [
+        "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\marina_idle.png",
+        "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Heroes\\marina_walk_b.png",
+        "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R05\\references\\guides\\unit__Heroes__marina_idle_b.png"
+      ],
+      "cleanup": "source/scripts/produce.py process --id Heroes/marina_idle_b --source <generated PNG>",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Below bar: generation changes more contours than a 2-3 pixel breath. Requires identity-preserving regeneration.",
+      "cleanupFacts": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "uniformScale": 0.7222857142857143,
+        "requestedBodyScale": 0.7222857142857143,
+        "scaleConstrainedByCanvas": false,
+        "translation": [
+          43,
+          103
+        ],
+        "exportOpaqueBounds": [
+          108,
+          125,
+          392,
+          476
+        ],
+        "landmark": {
+          "headTop": 300,
+          "torsoX": 650,
+          "identityHeadTop": 160
+        }
+      },
+      "promptAddendum": "source/prompts/addenda.json",
+      "exportSha256": "7518abb68da56c5830a6e39d4704af22bdcfff45a69358b9bedb46da7930d275"
+    },
+    {
+      "id": "Enemies/grunt_c",
+      "status": "delivered",
+      "reviewStatus": "unapproved candidate",
+      "export": "exports/Art/Enemies/grunt_c.png",
+      "size": [
+        256,
+        256
+      ],
+      "source": "source/raw/Enemies/grunt_c.png",
+      "master": "source/masters/Enemies/grunt_c@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/Enemies/grunt_c.txt",
+      "references": [
+        "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Enemies\\grunt_a.png",
+        "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Enemies\\grunt_a.png",
+        "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R05\\references\\guides\\unit__Enemies__grunt_c.png"
+      ],
+      "cleanup": "source/scripts/produce.py process --id Enemies/grunt_c --source <generated PNG>",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Generated key pose; utility-aligned to a manually estimated torso/head landmark and exact foot row. See README for pose and continuity defects; delivery does not mean approval.",
+      "cleanupFacts": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "uniformScale": 0.3962516733601071,
+        "requestedBodyScale": 0.3962516733601071,
+        "scaleConstrainedByCanvas": false,
+        "translation": [
+          4,
+          18
+        ],
+        "exportOpaqueBounds": [
+          36,
+          87,
+          210,
+          236
+        ],
+        "landmark": {
+          "headTop": 400,
+          "torsoX": 635,
+          "identityHeadTop": 88
+        }
+      },
+      "promptAddendum": "source/prompts/addenda.json",
+      "exportSha256": "3a19ff43acf79fe4c2ce2fffebd39d0fdcca513e2d5bc80c807ba441bee5e341"
+    },
+    {
+      "id": "Enemies/grunt_d",
+      "status": "delivered",
+      "reviewStatus": "unapproved candidate",
+      "export": "exports/Art/Enemies/grunt_d.png",
+      "size": [
+        256,
+        256
+      ],
+      "source": "source/raw/Enemies/grunt_d.png",
+      "master": "source/masters/Enemies/grunt_d@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/Enemies/grunt_d.txt",
+      "references": [
+        "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Enemies\\grunt_a.png",
+        "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Enemies\\grunt_b.png",
+        "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R05\\references\\guides\\unit__Enemies__grunt_d.png"
+      ],
+      "cleanup": "source/scripts/produce.py process --id Enemies/grunt_d --source <generated PNG>",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Generated key pose; utility-aligned to a manually estimated torso/head landmark and exact foot row. See README for pose and continuity defects; delivery does not mean approval.",
+      "cleanupFacts": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "uniformScale": 0.36319018404907977,
+        "requestedBodyScale": 0.36319018404907977,
+        "scaleConstrainedByCanvas": false,
+        "translation": [
+          24,
+          57
+        ],
+        "exportOpaqueBounds": [
+          41,
+          89,
+          205,
+          236
+        ],
+        "landmark": {
+          "headTop": 330,
+          "torsoX": 640,
+          "identityHeadTop": 88
+        }
+      },
+      "promptAddendum": "source/prompts/addenda.json",
+      "exportSha256": "3d5599592405f1d93fcb38cc5a49325614529d6f776a29f586934cd92389d014"
+    },
+    {
+      "id": "Enemies/grunt_windup",
+      "status": "delivered",
+      "reviewStatus": "unapproved candidate",
+      "export": "exports/Art/Enemies/grunt_windup.png",
+      "size": [
+        256,
+        256
+      ],
+      "source": "source/raw/Enemies/grunt_windup.png",
+      "master": "source/masters/Enemies/grunt_windup@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/Enemies/grunt_windup.txt",
+      "references": [
+        "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Enemies\\grunt_a.png",
+        "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Enemies\\grunt_attack.png",
+        "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R05\\references\\guides\\unit__Enemies__grunt_windup.png"
+      ],
+      "cleanup": "source/scripts/produce.py process --id Enemies/grunt_windup --source <generated PNG>",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Generated key pose; utility-aligned to a manually estimated torso/head landmark and exact foot row. See README for pose and continuity defects; delivery does not mean approval.",
+      "cleanupFacts": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "uniformScale": 0.3649815043156597,
+        "requestedBodyScale": 0.3649815043156597,
+        "scaleConstrainedByCanvas": false,
+        "translation": [
+          19,
+          38
+        ],
+        "exportOpaqueBounds": [
+          50,
+          37,
+          213,
+          237
+        ],
+        "landmark": {
+          "headTop": 380,
+          "torsoX": 650,
+          "identityHeadTop": 88
+        }
+      },
+      "promptAddendum": "source/prompts/addenda.json",
+      "exportSha256": "c4c8b3b84e53ba3c7cb317298390d6e40884e95fe50c94ea4c85bc81d9c43c6c"
+    },
+    {
+      "id": "Enemies/runner_c",
+      "status": "delivered",
+      "reviewStatus": "unapproved candidate",
+      "export": "exports/Art/Enemies/runner_c.png",
+      "size": [
+        256,
+        256
+      ],
+      "source": "source/raw/Enemies/runner_c.png",
+      "master": "source/masters/Enemies/runner_c@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/Enemies/runner_c.txt",
+      "references": [
+        "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Enemies\\runner_a.png",
+        "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Enemies\\runner_a.png",
+        "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R05\\references\\guides\\unit__Enemies__runner_c.png"
+      ],
+      "cleanup": "source/scripts/produce.py process --id Enemies/runner_c --source <generated PNG>",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Generated key pose; utility-aligned to a manually estimated torso/head landmark and exact foot row. See README for pose and continuity defects; delivery does not mean approval.",
+      "cleanupFacts": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "uniformScale": 0.3533487297921478,
+        "requestedBodyScale": 0.3533487297921478,
+        "scaleConstrainedByCanvas": false,
+        "translation": [
+          26,
+          75
+        ],
+        "exportOpaqueBounds": [
+          47,
+          84,
+          221,
+          236
+        ],
+        "landmark": {
+          "headTop": 260,
+          "torsoX": 650,
+          "identityHeadTop": 83
+        }
+      },
+      "promptAddendum": "source/prompts/addenda.json",
+      "exportSha256": "298278813ed84de85506122a2a591ce9f061f9c00cc097f0f37bc138e1e783a4"
+    },
+    {
+      "id": "Enemies/runner_d",
+      "status": "delivered",
+      "reviewStatus": "unapproved candidate",
+      "export": "exports/Art/Enemies/runner_d.png",
+      "size": [
+        256,
+        256
+      ],
+      "source": "source/raw/Enemies/runner_d.png",
+      "master": "source/masters/Enemies/runner_d@2x.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/Enemies/runner_d.txt",
+      "references": [
+        "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Enemies\\runner_a.png",
+        "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Enemies\\runner_b.png",
+        "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R05\\references\\guides\\unit__Enemies__runner_d.png"
+      ],
+      "cleanup": "source/scripts/produce.py process --id Enemies/runner_d --source <generated PNG>",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Generated key pose; utility-aligned to a manually estimated torso/head landmark and exact foot row. See README for pose and continuity defects; delivery does not mean approval.",
+      "cleanupFacts": {
+        "rawSize": [
+          1254,
+          1254
+        ],
+        "uniformScale": 0.3695652173913043,
+        "requestedBodyScale": 0.3695652173913043,
+        "scaleConstrainedByCanvas": false,
+        "translation": [
+          19,
+          64
+        ],
+        "exportOpaqueBounds": [
+          71,
+          85,
+          187,
+          236
+        ],
+        "landmark": {
+          "headTop": 280,
+          "torsoX": 640,
+          "identityHeadTop": 83
+        }
+      },
+      "promptAddendum": "source/prompts/addenda.json",
+      "exportSha256": "7276bb9f402ce53fef54cc21afaa168f68f2e9594a40031d4a26f37b5c69b846"
+    },
+    {
+      "id": "Enemies/runner_windup",
+      "status": "blocked",
+      "reason": "image generation failed: http 429 Too Many Requests: Some(\"{\\\"error\\\":{\\\"type\\\":\\\"usage_limit_reached\\\",\\\"message\\\":\\\"The usage limit has been reached\\\",\\\"plan_type\\\":\\\"plus\\\",\\\"resets_at\\\":1792611366,\\\"eligible_promo\\\":null,\\\"limit_window_minutes\\\":1440,\\\"resets_in_seconds\\\":62669}}\")",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/Enemies/runner_windup.txt",
+      "references": [
+        "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Enemies\\runner_a.png",
+        "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Enemies\\runner_attack.png",
+        "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R05\\references\\guides\\unit__Enemies__runner_windup.png"
+      ]
+    },
+    {
+      "id": "Enemies/hexcaster_c",
+      "status": "blocked",
+      "reason": "image generation failed: http 429 Too Many Requests: Some(\"{\\\"error\\\":{\\\"type\\\":\\\"usage_limit_reached\\\",\\\"message\\\":\\\"The usage limit has been reached\\\",\\\"plan_type\\\":\\\"plus\\\",\\\"resets_at\\\":1792611365,\\\"eligible_promo\\\":null,\\\"limit_window_minutes\\\":1440,\\\"resets_in_seconds\\\":62652}}\")",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/Enemies/hexcaster_c.txt",
+      "references": [
+        "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Enemies\\hexcaster_a.png",
+        "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Enemies\\hexcaster_a.png",
+        "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R05\\references\\guides\\unit__Enemies__hexcaster_c.png"
+      ]
+    },
+    {
+      "id": "Enemies/hexcaster_d",
+      "status": "blocked",
+      "reason": "image generation failed: http 429 Too Many Requests: Some(\"{\\\"error\\\":{\\\"type\\\":\\\"usage_limit_reached\\\",\\\"message\\\":\\\"The usage limit has been reached\\\",\\\"plan_type\\\":\\\"plus\\\",\\\"resets_at\\\":1792611365,\\\"eligible_promo\\\":null,\\\"limit_window_minutes\\\":1440,\\\"resets_in_seconds\\\":62538}}\")",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/Enemies/hexcaster_d.txt",
+      "references": [
+        "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Enemies\\hexcaster_a.png",
+        "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Enemies\\hexcaster_b.png",
+        "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R05\\references\\guides\\unit__Enemies__hexcaster_d.png"
+      ]
+    },
+    {
+      "id": "Enemies/hexcaster_windup",
+      "status": "blocked",
+      "reason": "image generation failed: http 429 Too Many Requests: Some(\"{\\\"error\\\":{\\\"type\\\":\\\"usage_limit_reached\\\",\\\"message\\\":\\\"The usage limit has been reached\\\",\\\"plan_type\\\":\\\"plus\\\",\\\"resets_at\\\":1792611366,\\\"eligible_promo\\\":null,\\\"limit_window_minutes\\\":1440,\\\"resets_in_seconds\\\":62538}}\")",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/Enemies/hexcaster_windup.txt",
+      "references": [
+        "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Enemies\\hexcaster_a.png",
+        "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Enemies\\hexcaster_attack.png",
+        "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R05\\references\\guides\\unit__Enemies__hexcaster_windup.png"
+      ]
+    },
+    {
+      "id": "Enemies/juggernaut_c",
+      "status": "blocked",
+      "reason": "image generation failed: http 429 Too Many Requests: Some(\"{\\\"error\\\":{\\\"type\\\":\\\"usage_limit_reached\\\",\\\"message\\\":\\\"The usage limit has been reached\\\",\\\"plan_type\\\":\\\"plus\\\",\\\"resets_at\\\":1792611365,\\\"eligible_promo\\\":null,\\\"limit_window_minutes\\\":1440,\\\"resets_in_seconds\\\":62651}}\")",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/Enemies/juggernaut_c.txt",
+      "references": [
+        "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Enemies\\juggernaut_a.png",
+        "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Enemies\\juggernaut_a.png",
+        "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R05\\references\\guides\\unit__Enemies__juggernaut_c.png"
+      ]
+    },
+    {
+      "id": "Enemies/juggernaut_d",
+      "status": "blocked",
+      "reason": "image generation failed: http 429 Too Many Requests: Some(\"{\\\"error\\\":{\\\"type\\\":\\\"usage_limit_reached\\\",\\\"message\\\":\\\"The usage limit has been reached\\\",\\\"plan_type\\\":\\\"plus\\\",\\\"resets_at\\\":1792611366,\\\"eligible_promo\\\":null,\\\"limit_window_minutes\\\":1440,\\\"resets_in_seconds\\\":62537}}\")",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/Enemies/juggernaut_d.txt",
+      "references": [
+        "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Enemies\\juggernaut_a.png",
+        "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Enemies\\juggernaut_b.png",
+        "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R05\\references\\guides\\unit__Enemies__juggernaut_d.png"
+      ]
+    },
+    {
+      "id": "Enemies/juggernaut_windup",
+      "status": "blocked",
+      "reason": "image generation failed: http 429 Too Many Requests: Some(\"{\\\"error\\\":{\\\"type\\\":\\\"usage_limit_reached\\\",\\\"message\\\":\\\"The usage limit has been reached\\\",\\\"plan_type\\\":\\\"plus\\\",\\\"resets_at\\\":1792611365,\\\"eligible_promo\\\":null,\\\"limit_window_minutes\\\":1440,\\\"resets_in_seconds\\\":62536}}\")",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/Enemies/juggernaut_windup.txt",
+      "references": [
+        "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Enemies\\juggernaut_a.png",
+        "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Enemies\\juggernaut_attack.png",
+        "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R05\\references\\guides\\unit__Enemies__juggernaut_windup.png"
+      ]
+    },
+    {
+      "id": "Enemies/ravager_c",
+      "status": "blocked",
+      "reason": "image generation failed: http 429 Too Many Requests: Some(\"{\\\"error\\\":{\\\"type\\\":\\\"usage_limit_reached\\\",\\\"message\\\":\\\"The usage limit has been reached\\\",\\\"plan_type\\\":\\\"plus\\\",\\\"resets_at\\\":1792611365,\\\"eligible_promo\\\":null,\\\"limit_window_minutes\\\":1440,\\\"resets_in_seconds\\\":62650}}\")",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/Enemies/ravager_c.txt",
+      "references": [
+        "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Enemies\\ravager_a.png",
+        "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Enemies\\ravager_a.png",
+        "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R05\\references\\guides\\unit__Enemies__ravager_c.png"
+      ]
+    },
+    {
+      "id": "Enemies/ravager_d",
+      "status": "blocked",
+      "reason": "image generation failed: http 429 Too Many Requests: Some(\"{\\\"error\\\":{\\\"type\\\":\\\"usage_limit_reached\\\",\\\"message\\\":\\\"The usage limit has been reached\\\",\\\"plan_type\\\":\\\"plus\\\",\\\"resets_at\\\":1792611365,\\\"eligible_promo\\\":null,\\\"limit_window_minutes\\\":1440,\\\"resets_in_seconds\\\":62535}}\")",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/Enemies/ravager_d.txt",
+      "references": [
+        "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Enemies\\ravager_a.png",
+        "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Enemies\\ravager_b.png",
+        "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R05\\references\\guides\\unit__Enemies__ravager_d.png"
+      ]
+    },
+    {
+      "id": "Enemies/ravager_windup",
+      "status": "blocked",
+      "reason": "image generation failed: http 429 Too Many Requests: Some(\"{\\\"error\\\":{\\\"type\\\":\\\"usage_limit_reached\\\",\\\"message\\\":\\\"The usage limit has been reached\\\",\\\"plan_type\\\":\\\"plus\\\",\\\"resets_at\\\":1792611365,\\\"eligible_promo\\\":null,\\\"limit_window_minutes\\\":1440,\\\"resets_in_seconds\\\":62534}}\")",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/Enemies/ravager_windup.txt",
+      "references": [
+        "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Enemies\\ravager_a.png",
+        "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Enemies\\ravager_attack.png",
+        "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R05\\references\\guides\\unit__Enemies__ravager_windup.png"
+      ]
+    },
+    {
+      "id": "Enemies/rift_warden_c",
+      "status": "blocked",
+      "reason": "image generation failed: http 429 Too Many Requests: Some(\"{\\\"error\\\":{\\\"type\\\":\\\"usage_limit_reached\\\",\\\"message\\\":\\\"The usage limit has been reached\\\",\\\"plan_type\\\":\\\"plus\\\",\\\"resets_at\\\":1792611365,\\\"eligible_promo\\\":null,\\\"limit_window_minutes\\\":1440,\\\"resets_in_seconds\\\":62649}}\")",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/Enemies/rift_warden_c.txt",
+      "references": [
+        "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Enemies\\rift_warden_a.png",
+        "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Enemies\\rift_warden_a.png",
+        "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R05\\references\\guides\\unit__Enemies__rift_warden_c.png"
+      ]
+    },
+    {
+      "id": "Enemies/rift_warden_d",
+      "status": "blocked",
+      "reason": "image generation failed: http 429 Too Many Requests: Some(\"{\\\"error\\\":{\\\"type\\\":\\\"usage_limit_reached\\\",\\\"message\\\":\\\"The usage limit has been reached\\\",\\\"plan_type\\\":\\\"plus\\\",\\\"resets_at\\\":1792611365,\\\"eligible_promo\\\":null,\\\"limit_window_minutes\\\":1440,\\\"resets_in_seconds\\\":62533}}\")",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts/Enemies/rift_warden_d.txt",
+      "references": [
+        "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Enemies\\rift_warden_a.png",
+        "C:\\Users\\Winka\\Projects\\Aetherward\\Assets\\_Aetherward\\Resources\\Art\\Enemies\\rift_warden_b.png",
+        "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\requests\\R05\\references\\guides\\unit__Enemies__rift_warden_d.png"
+      ]
+    }
+  ],
+  "extras": [
+    {
+      "path": "previews/cycles_1080.png",
+      "kind": "offline preview; not gameplay"
+    },
+    {
+      "path": "previews/cycles_1440.png",
+      "kind": "offline preview; not gameplay"
+    },
+    {
+      "path": "previews/cycles_720.png",
+      "kind": "offline preview; not gameplay"
+    },
+    {
+      "path": "previews/cycles_game_scale.png",
+      "kind": "offline preview; not gameplay"
+    },
+    {
+      "path": "previews/cycles_page_1_1440.png",
+      "kind": "offline preview; not gameplay"
+    },
+    {
+      "path": "previews/cycles_page_2_1440.png",
+      "kind": "offline preview; not gameplay"
+    },
+    {
+      "path": "previews/cycles_page_3_1440.png",
+      "kind": "offline preview; not gameplay"
+    },
+    {
+      "path": "previews/cycles_page_4_1440.png",
+      "kind": "offline preview; not gameplay"
+    },
+    {
+      "path": "previews/glacius.gif",
+      "kind": "offline preview; not gameplay"
+    },
+    {
+      "path": "previews/glacius_attack.gif",
+      "kind": "offline preview; not gameplay"
+    },
+    {
+      "path": "previews/glacius_walk.gif",
+      "kind": "offline preview; not gameplay"
+    },
+    {
+      "path": "previews/grunt.gif",
+      "kind": "offline preview; not gameplay"
+    },
+    {
+      "path": "previews/grunt_attack.gif",
+      "kind": "offline preview; not gameplay"
+    },
+    {
+      "path": "previews/grunt_walk.gif",
+      "kind": "offline preview; not gameplay"
+    },
+    {
+      "path": "previews/hexcaster.gif",
+      "kind": "offline preview; not gameplay"
+    },
+    {
+      "path": "previews/hexcaster_attack.gif",
+      "kind": "offline preview; not gameplay"
+    },
+    {
+      "path": "previews/hexcaster_walk.gif",
+      "kind": "offline preview; not gameplay"
+    },
+    {
+      "path": "previews/ignis.gif",
+      "kind": "offline preview; not gameplay"
+    },
+    {
+      "path": "previews/ignis_attack.gif",
+      "kind": "offline preview; not gameplay"
+    },
+    {
+      "path": "previews/ignis_walk.gif",
+      "kind": "offline preview; not gameplay"
+    },
+    {
+      "path": "previews/juggernaut.gif",
+      "kind": "offline preview; not gameplay"
+    },
+    {
+      "path": "previews/juggernaut_attack.gif",
+      "kind": "offline preview; not gameplay"
+    },
+    {
+      "path": "previews/juggernaut_walk.gif",
+      "kind": "offline preview; not gameplay"
+    },
+    {
+      "path": "previews/marina.gif",
+      "kind": "offline preview; not gameplay"
+    },
+    {
+      "path": "previews/marina_attack.gif",
+      "kind": "offline preview; not gameplay"
+    },
+    {
+      "path": "previews/marina_walk.gif",
+      "kind": "offline preview; not gameplay"
+    },
+    {
+      "path": "previews/ravager.gif",
+      "kind": "offline preview; not gameplay"
+    },
+    {
+      "path": "previews/ravager_attack.gif",
+      "kind": "offline preview; not gameplay"
+    },
+    {
+      "path": "previews/ravager_walk.gif",
+      "kind": "offline preview; not gameplay"
+    },
+    {
+      "path": "previews/review_colour.png",
+      "kind": "offline preview; not gameplay"
+    },
+    {
+      "path": "previews/review_grayscale.png",
+      "kind": "offline preview; not gameplay"
+    },
+    {
+      "path": "previews/review_silhouette.png",
+      "kind": "offline preview; not gameplay"
+    },
+    {
+      "path": "previews/rift_warden.gif",
+      "kind": "offline preview; not gameplay"
+    },
+    {
+      "path": "previews/rift_warden_attack.gif",
+      "kind": "offline preview; not gameplay"
+    },
+    {
+      "path": "previews/rift_warden_walk.gif",
+      "kind": "offline preview; not gameplay"
+    },
+    {
+      "path": "previews/runner.gif",
+      "kind": "offline preview; not gameplay"
+    },
+    {
+      "path": "previews/runner_attack.gif",
+      "kind": "offline preview; not gameplay"
+    },
+    {
+      "path": "previews/runner_walk.gif",
+      "kind": "offline preview; not gameplay"
+    },
+    {
+      "path": "previews/scene_R05_1080p.png",
+      "kind": "offline preview; not gameplay"
+    },
+    {
+      "path": "previews/scene_R05_1440p.png",
+      "kind": "offline preview; not gameplay"
+    },
+    {
+      "path": "previews/scene_R05_720p.png",
+      "kind": "offline preview; not gameplay"
+    },
+    {
+      "path": "previews/units_R05_colour.png",
+      "kind": "offline preview; not gameplay"
+    },
+    {
+      "path": "previews/units_R05_gray.png",
+      "kind": "offline preview; not gameplay"
+    },
+    {
+      "path": "previews/units_R05_silhouette.png",
+      "kind": "offline preview; not gameplay"
+    },
+    {
+      "path": "previews/veyra.gif",
+      "kind": "offline preview; not gameplay"
+    },
+    {
+      "path": "previews/veyra_attack.gif",
+      "kind": "offline preview; not gameplay"
+    },
+    {
+      "path": "previews/veyra_walk.gif",
+      "kind": "offline preview; not gameplay"
+    }
+  ],
+  "knownIssues": [
+    "Below bar: staff moved to opposite hand. Regenerate before integration.",
+    "Below bar: does not clearly reverse the leading leg from walk_a.",
+    "Below bar: leg distinction from new walk_c is too weak.",
+    "Below bar: opposite-leg contact is insufficiently distinct; compare all four steps.",
+    "Below bar: new walk_c/d leg silhouettes are too similar.",
+    "Below bar: raw staff tip touches image edge; icon-box fit reduces body scale. Body scale reduced to retain props inside icon box; does not meet strict identity-scale continuity.",
+    "Below bar: review staff handedness; raised prop forces body scale compromise. Body scale reduced to retain props inside icon box; does not meet strict identity-scale continuity.",
+    "Review:  Body scale reduced to retain props inside icon box; does not meet strict identity-scale continuity.",
+    "Below bar: generation changes more contours than a 2-3 pixel breath. Requires identity-preserving regeneration.",
+    "Marina windup/follow outer edge luminance 0.25/0.26 exceeds the v3 maximum 0.22.",
+    "Intake delivered=37 counts manifest entries including blocked; only 25 PNGs exist."
+  ],
+  "blockers": [
+    "Built-in image generation daily usage limit: 12 required assets cannot be generated this run. Exact per-asset errors in qa/generation_errors.json.",
+    "Quota also prevents regenerating the below-bar candidates identified in selfAssessment."
+  ],
+  "counts": {
+    "requested": 37,
+    "generatedAndExported": 25,
+    "blocked": 12,
+    "needsRegeneration": 17
+  },
+  "qa": {
+    "intake": "qa/intake.json",
+    "blocking": 12,
+    "notes": 2,
+    "physicalExports": 25,
+    "visualCandidatesNeedingRegeneration": 17,
+    "accepted": false
+  }
+}

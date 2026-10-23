@@ -140,6 +140,14 @@ namespace Aetherward.Sim.Content
                     if (!db.Evolutions.ContainsKey(e)) Err("hero " + h.Id + ": missing evolution " + e);
                 if (h.BaseStats[(int)StatId.MaxHp] <= 0 || h.BaseStats[(int)StatId.Attack] <= 0) Err("hero " + h.Id + ": non-positive base stats");
                 if (h.Skill.Cooldown < 1f) Err("hero " + h.Id + ": skill cooldown too low");
+                UltimateDef u = h.Ultimate;
+                if (u == null) Err("hero " + h.Id + ": missing ultimate");
+                else
+                {
+                    if (!new HashSet<string> { "meteor", "nova", "chain", "aegis", "cyclone", "tide", "execution" }.Contains(u.Kind)) Err("hero " + h.Id + ": unknown ultimate kind " + u.Kind);
+                    if (u.Seconds <= 0f || u.Radius <= 0f || u.Power < 0f || u.Hits < 1 || u.Hits > 12 || u.Heal < 0f || u.Shield < 0f || u.Stun < 0f)
+                        Err("hero " + h.Id + ": invalid ultimate values");
+                }
             }
             foreach (EvolutionDef e in db.Evolutions.Values)
             {
@@ -196,7 +204,7 @@ namespace Aetherward.Sim.Content
             foreach (EventDef ev in db.Events.Values)
                 foreach (EventOption o in ev.Options)
                     if (!string.IsNullOrEmpty(o.GrantRelic) && !db.Relics.ContainsKey(o.GrantRelic)) Err("event " + ev.Id + ": unknown relic " + o.GrantRelic);
-            if (db.Arena.Nodes.Count != 12) Err("arena must have 12 nodes");
+            // Starting slots are optional compatibility data; party posts drive deployment.
             foreach (TraitDef t in db.TraitList)
             {
                 CheckOps(db, "trait " + t.Id, t.Effects, errors);
@@ -253,7 +261,7 @@ namespace Aetherward.Sim.Content
                 string owner = "biome " + b.Id;
                 if (b.Default) defaults++;
                 ArenaDef a = b.Arena;
-                if (a.Nodes.Count != 12) errors.Add(owner + ": needs exactly 12 defense nodes");
+                // No fixed node count: dynamic parties use role posts.
                 if (a.Lanes.Count != db.Arena.Lanes.Count) errors.Add(owner + ": needs " + db.Arena.Lanes.Count + " lane slots (waves reference them)");
                 foreach (LaneDef l in a.Lanes)
                 {
@@ -269,6 +277,12 @@ namespace Aetherward.Sim.Content
                     if (h.HeroDamagePct > 0.25f) errors.Add(owner + ": hazard " + h.Kind + " hits heroes for more than 25% max HP");
                     foreach (Vec2 p in h.Points)
                         if (p.Length < a.CrystalRadius + h.Radius) errors.Add(owner + ": hazard point overlaps the crystal");
+                }
+                foreach (AreaTraitDef area in b.AreaTraits)
+                {
+                    if (area.Radius <= 0f) errors.Add(owner + ": invalid area radius");
+                    CheckOps(db, owner + " area trait", area.Effects, errors);
+                    foreach (EffectOp op in area.Effects) if (op.Op != "stat") errors.Add(owner + ": areas allow only stat ops");
                 }
                 foreach (var kv in b.NodeTraitOps)
                 {
@@ -326,6 +340,11 @@ namespace Aetherward.Sim.Content
             {
                 yield return h.NameKey;
                 yield return h.TitleKey;
+                if (h.Ultimate != null)
+                {
+                    yield return "hero." + h.Id + ".ultimate.name";
+                    yield return "hero." + h.Id + ".ultimate.desc";
+                }
                 yield return h.Skill.NameKey;
                 yield return h.Skill.DescKey;
                 yield return h.PassiveNameKey;
@@ -376,7 +395,7 @@ namespace Aetherward.Sim.Content
             {
                 yield return b.NameKey;
                 yield return b.DescKey;
-                foreach (string t in b.NodeTraitIds.Values) yield return "nodetrait." + t;
+                foreach (AreaTraitDef t in b.AreaTraits) yield return "nodetrait." + t.Id;
             }
             foreach (RelicDef r in db.RelicList)
             {

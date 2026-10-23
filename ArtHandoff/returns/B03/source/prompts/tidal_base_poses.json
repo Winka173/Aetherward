@@ -1,0 +1,11 @@
+{
+  "name": "tidal_base_poses",
+  "prompt": "Dark Mythic Fantasy, painterly stylized 2.5D; orthographic 38.3-degree elevation, three-quarter front body turned 25 degrees toward screen-right. Key upper-left-front #ffe9d0, rim back-right #9fe8ff, ambient #16233a. Controlled broad brush planes, coloured local-hue dark edges without black outlines.\nUse case: stylized-concept. Production key-pose sheet of TIDAL, identical adult hooded teal wavebinder from reference 1. Genuine transparent background. A 2 by 2 grid with FOUR separated square panels, no lines/text. Native 2560x2560 requested. Each figure must fill 90% of its own panel height (minimal padding), never overlap panels. TOP LEFT: skill CAST, same bronze twin water-whip grips raised overhead, upright energetic lift, own whips only, NO discharged effect. TOP RIGHT: DOWNED kneeling collapsed, same outfit and grips, desaturated 40%. BOTTOM LEFT: ATTACK release toward screen RIGHT, one held water whip lashing +X, no emitted projectile/beam/slash trail, center torso. BOTTOM RIGHT: head-and-shoulders PORTRAIT same face wrap, hood, bronze clasp, dark charcoal vignette square. All faces and anatomy same as identity reference 1; other references style only. Crisp deliberate broad material planes, cool #9fe8ff back-right rim and warm key, lit teal folds, contour luminance >=0.30 against dark basalt. No ground, shadows, floating droplets or scene background; transparent except portrait dark vignette. Distinct readable poses.",
+  "refs": [
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B03/source/sheets/tidal_idle.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Heroes/ignis_cast.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Heroes/sylph_idle.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B02/exports/Art/Heroes/volt_idle.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B02/exports/Art/Heroes/freya_idle.png"
+  ]
+}

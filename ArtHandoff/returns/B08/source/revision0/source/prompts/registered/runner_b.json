@@ -1,0 +1,17 @@
+{
+  "id": "Enemies/runner_b",
+  "character": "runner",
+  "height": 145,
+  "width": 230,
+  "raw": "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\returns\\B08\\source\\sheets\\runner_b.png",
+  "prompt": "Dark Mythic Fantasy, painterly stylized 2.5D; orthographic 38.3-degree elevation, three-quarter front body turned 25 degrees toward screen-right. Key upper-left-front #ffe9d0, rim back-right #9fe8ff, ambient #16233a. Controlled broad brush planes, coloured local-hue dark edges without black outlines. Production transparent single enemy sprite, requested 1536 square. Image 1 is the identity: preserve exact anatomy, face, bone plates, rib shape, tail, costume and palette; remaining images style only. Lean skeletal Rift Hound quadruped, grey husk and exposed wine-crimson rift-glow ribs, long jaw, low galloping silhouette, bone armour shards. Walk passing gallop phase: make a modest leg-cycle change from identity contact pose, foreleg bends backward and rear leg forward, SAME torso silhouette and position, same head and back; silhouette IoU must stay >=0.6. Face +X screen-right. Keep broad lit planes and #9fe8ff rim, 2–3 px at final export, contour mean >=0.27. Full character, transparent margin, torso centred, no ground/shadow/text/projectiles.",
+  "references": [
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B08/source/sheets/runner_a.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Enemies/grunt_a.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Enemies/juggernaut_a.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Enemies/hexcaster_a.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Enemies/storm_harpy_a.png"
+  ],
+  "sourceName": "runner_b",
+  "registration": "Torso centre visually estimated; uncertainty approximately 5–8 native export pixels."
+}

@@ -1,7 +1,7 @@
 {
   // Ascension tiers. Level N applies every module of levels 1..N (cumulative). Modules are authored
   // rules, not only HP inflation. hpPerLevel: +1% enemy HP/damage per level (was 8%; Reports/Balance/lab_ascension_retune.md).
-  // Module ids: frenzy | enemy_speed | enemy_damage | enemy_hp | crystal_max | shop_prices | blocked_node | elite_affix | boss_enrage
+  // Module ids: frenzy | enemy_speed | enemy_damage | enemy_hp | crystal_max | shop_prices | sealed_gate | elite_affix | boss_enrage
   //             | reroll_cost | double_elite (every Nth spawn elite) | rarity_shift | hazard_shift
   "hpPerLevel": 0.01,
   // Early ramp (balance lab, Reports/Balance/lab_ascension_ramp.md): the per-level bonus starts at 35% on wave 1
@@ -11,7 +11,7 @@
   "levels": [
     { "level": 1, "modules": [ { "id": "frenzy" } ] },
     { "level": 2, "modules": [ { "id": "enemy_speed", "value": 0.04 }, { "id": "shop_prices", "value": 0.15 } ] },
-    { "level": 3, "modules": [ { "id": "crystal_max", "value": -0.08 }, { "id": "blocked_node", "value": 1 } ] },
+    { "level": 3, "modules": [ { "id": "crystal_max", "value": -0.08 }, { "id": "sealed_gate", "value": 1 } ] },
     { "level": 4, "modules": [ { "id": "enemy_damage", "value": 0.05 }, { "id": "elite_affix", "value": 1 } ] },
     { "level": 5, "modules": [ { "id": "boss_enrage", "value": 0.25 } ] },
     { "level": 6, "modules": [ { "id": "enemy_hp", "value": 0.05 }, { "id": "reroll_cost", "value": 1 } ] },

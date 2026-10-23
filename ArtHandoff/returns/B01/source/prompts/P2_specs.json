@@ -1,0 +1,50 @@
+[
+  [
+    "impact_fire",
+    "Small painterly flame impact burst with a few ember sparks, orange #ff6a2b hot gold tips, open transparent centre, alpha over centre <=60%, irregular energetic broad flame shapes, no solid fire sphere."
+  ],
+  [
+    "impact_water",
+    "Small painterly water splash crown and separated droplets, blue #2f8cff cyan tips, open transparent centre alpha<=60%, broad curled splash planes."
+  ],
+  [
+    "impact_wind",
+    "Small painterly teal #5fe8c8 crescent gust slashes in an open spiral, open transparent centre alpha<=60%, airy tapered brush strokes."
+  ],
+  [
+    "impact_earth",
+    "Small painterly impact/death puff: angular muted ochre stone chips and dusty ash puff, open centre alpha<=60%, rough chipped broad shapes."
+  ],
+  [
+    "projectile_water",
+    "Water bolt flying horizontally +X RIGHT, hot pale blue rounded leading head at right, spiral water tail trailing LEFT, water blue #2f8cff cyan, entire projectile centred horizontally, dynamic painterly energy. No diagonal."
+  ],
+  [
+    "fireball",
+    "Painterly fireball flying horizontally +X RIGHT, hot white-gold core at right, trailing flame tongue LEFT, orange #ff6a2b ember sparks, centred projectile, no diagonal."
+  ],
+  [
+    "arrow",
+    "Wind-fletched physical arrow pointing horizontally +X RIGHT, pointed metal arrowhead at RIGHT, long wood shaft and pale fletch LEFT, faint teal wind streak trailing left. Wide landscape2:1 canvas, centred, no diagonal."
+  ],
+  [
+    "slash",
+    "Crescent melee slash arc, broad painterly pale blade stroke with element-neutral warm edge, transparent empty centre, tapered broken brush tips, entire arc centred."
+  ],
+  [
+    "glow",
+    "WHITE/neutral greys only no colour at all. Soft radial painted glow with faint FOUR-point flare, alpha-only additive-looking falloff and no opaque shape, centred."
+  ],
+  [
+    "ring",
+    "WHITE/neutral greys only no colour. TOP-DOWN perfect CIRCLE, thin ancient carved rune ring, rough etched notches abstract geometrical glyphs no letters, soft painted glow edge and entirely TRANSPARENT CENTRE. Ground decal, no perspective/squash, no stone pedestal."
+  ],
+  [
+    "telegraph",
+    "WHITE/neutral greys only no colour. TOP-DOWN perfect CIRCLE etched arcane WARNING RING, thick bright outer rim with notched abstract rune segments, thin inner ring, faint radial hatch fill <=35%alpha. Strongest edge contrast of VFX, centre see-through. Ground decal no perspective/squash, no pedestal."
+  ],
+  [
+    "zone_burning_ground",
+    "TOP-DOWN CIRCLE of burning ground: charcoal broken crust ember cracks #ff6a2b low licking flames only at circular rim, soft edgefade, painterly energetic irregular circle. No perspective/squash; no large elevated fire or big opaque centre. Transparent exterior."
+  ]
+]

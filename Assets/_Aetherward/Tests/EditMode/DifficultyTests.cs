@@ -33,19 +33,24 @@ namespace Aetherward.Tests
         }
 
         [Test]
-        public void BlockedNodeIsTelegraphedRespectedAndSaved()
+        public void SealedGateIsTelegraphedRedirectedAndSaved()
         {
-            Assert.AreEqual(-1, Run(2).State.BlockedNode);
+            Assert.AreEqual(-1, Run(2).State.SealedGate);
             RunController rc = Run(3);
-            int blocked = rc.State.BlockedNode;
-            Assert.That(blocked, Is.InRange(0, 11));
-            foreach (HeroRunState h in rc.State.Heroes) Assert.AreNotEqual(blocked, h.Node);
-            Assert.IsFalse(rc.PlaceHero(rc.State.Heroes[0].Uid, blocked));
-            Formation.AutoArrange(rc);
-            foreach (HeroRunState h in rc.State.Heroes) Assert.AreNotEqual(blocked, h.Node);
+            rc.State.Wave = 8;
+            rc.RollSealedGate();
+            int gate = rc.State.SealedGate;
+            Assert.That(gate, Is.InRange(0, rc.Arena.Lanes.Count - 1));
+            var battle = new Battle(rc.BuildBattleSetup());
+            foreach (int lane in Battle.LanesForWave(rc.CurrentWave, rc.Biome))
+                Assert.AreNotEqual(gate, Battle.GateLane(rc.Arena, battle.EffectiveLane(lane)));
+            rc.State.Formation = PartyFormation.BossFocus;
             var saves = new SaveService(new MemoryStorage());
             saves.SaveRun(rc.State);
-            Assert.AreEqual(blocked, saves.LoadRun(TestContent.Db).BlockedNode);
+            RunState loaded = saves.LoadRun(TestContent.Db);
+            Assert.AreEqual(gate, loaded.SealedGate);
+            Assert.AreEqual(PartyFormation.BossFocus, loaded.Formation);
+            Assert.AreEqual(-1, loaded.BlockedNode);
         }
 
         [Test]

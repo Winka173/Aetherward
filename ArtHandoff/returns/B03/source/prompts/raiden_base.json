@@ -1,0 +1,11 @@
+{
+  "name": "raiden_base",
+  "refs": [
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B03/source/sheets/raiden_idle.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Heroes/ignis_cast.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Heroes/sylph_idle.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B02/exports/Art/Heroes/volt_idle.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B02/exports/Art/Heroes/freya_idle.png"
+  ],
+  "prompt": "Dark Mythic Fantasy, painterly stylized 2.5D; orthographic 38.3-degree elevation, three-quarter front body turned 25 degrees toward screen-right. Key upper-left-front #ffe9d0, rim back-right #9fe8ff, ambient #16233a. Controlled broad brush planes, coloured local-hue dark edges without black outlines.\nUse case stylized-concept. 2560x2560 production 2x2 grid, FOUR separated square panels no lines no labels. Exact RAIDEN silver-haired masked male violet scarf twin forked daggers dark fitted leather from reference1. Preserve identical face and outfit. TOP LEFT CAST: crouched body lifted, daggers crossed raised just at shoulder height, small violet glow on blades only. TOP RIGHT DOWNED: kneeling exhausted, head bowed, daggers low, desaturate40%. BOTTOM LEFT ATTACK: compact crouched lunge toward SCREEN RIGHT, BOTH twin daggers extended +X together at strike endpoint. Keep legs tight and scarf close so width<=1.2x head-to-feet height. No painted slash, lightning trail, projectile or effect. BOTTOM RIGHT PORTRAIT: head and shoulders, same half-mask silver hair violet scarf and bronze clasp, dark charcoal vignette. Full-body figures fill 90% their panel height with 5% padding; keep all anatomy and props INSIDE own quarter and NO overlap, clear transparent cross gutter. Character only no shadow no ground; genuine alpha exterior. Bright lit leather planes, cool #9fe8ff 2-3px export rim, contour mean luminance>=0.30. Broad painterly planes, no tiny filigree. Same 38degree elevated view screen-right."
+}

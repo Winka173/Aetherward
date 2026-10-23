@@ -1,0 +1,11 @@
+{
+  "name": "glacius_evoA_actions",
+  "refs": [
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B03/source/sheets/glacius_evoA.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Heroes/ignis_cast.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Heroes/sylph_idle.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B02/exports/Art/Heroes/volt_idle.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B02/exports/Art/Heroes/freya_idle.png"
+  ],
+  "prompt": "Dark Mythic Fantasy, painterly stylized 2.5D; orthographic 38.3-degree elevation, three-quarter front body turned 25 degrees toward screen-right. Key upper-left-front #ffe9d0, rim back-right #9fe8ff, ambient #16233a. Controlled broad brush planes, coloured local-hue dark edges without black outlines.\nUse case stylized-concept. Wide landscape2560x1440 TWO separate full-body poses of exact PERMAFROST SENTINEL ref1, closed ice crest helm, thick ice plate, spike-crowned massive tower shield left arm, short mace right. LEFT CAST shield slightly lifted close chest, mace raised beside shoulder, shield ice core slightly brighter, lifted upright stance. RIGHT ATTACK shield BASH toward SCREEN RIGHT: shield extended +X close ahead, mace tucked, body braces behind. Same costume and detailed shield shape. Narrow enough each width<=1.2x head-to-feet height, feet compact, complete boots and props, large blank central gutter no overlap. No frost projectiles burst ground aura or ground shadow, character only transparent alpha. Warm key and #9fe8ff cool rim, crisp broad steel ice planes, edge mean>=.30. Adult guardian wide not tall. No text."
+}

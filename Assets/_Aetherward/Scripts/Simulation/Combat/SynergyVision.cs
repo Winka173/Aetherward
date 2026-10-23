@@ -34,6 +34,8 @@ namespace Aetherward.Sim.Combat
         public readonly List<SynergyLink> Links = new List<SynergyLink>();
         public readonly List<string> Missing = new List<string>();     // "isolated_element:fire", "lane_uncovered:2"
         public readonly Dictionary<int, float> LaneCoverage = new Dictionary<int, float>();
+        public readonly Dictionary<int, float> GateCoverage = new Dictionary<int, float>();
+        public PartyStance Stance;
         public float CrystalCoverage;                                   // share of the approach ring (r=3) in reach
 
         public static readonly HashSet<string> SupportPassives = new HashSet<string>
@@ -43,7 +45,7 @@ namespace Aetherward.Sim.Combat
 
         public static SynergyReport Analyze(Battle b, IList<BondDef> activeBonds = null, bool includeDowned = false)
         {
-            var r = new SynergyReport();
+            var r = new SynergyReport { Stance = b.Setup.Stance };
             List<HeroUnit> hs = b.Heroes;
             ContentDatabase db = b.Content;
             for (int i = 0; i < hs.Count; i++)
@@ -94,21 +96,34 @@ namespace Aetherward.Sim.Combat
                 if (!partner && hs.Count > 1 && !r.Missing.Contains(tag)) r.Missing.Add(tag);
             }
             // Coverage: share of each active lane's last 10 world units (approach to the Crystal) inside some hero's reach.
-            foreach (int lane in Battle.LanesForWave(b.Wave, b.Biome))
+            foreach (int originalLane in Battle.LanesForWave(b.Wave, b.Biome))
             {
+                int lane = b.EffectiveLane(originalLane);
                 if (lane < 0 || lane >= b.Arena.Lanes.Count) continue;
                 List<Vec2> pts = Sample(b.Arena.Lanes[lane].Points, 0.5f, 10f);
                 int hit = 0;
-                foreach (Vec2 p in pts) if (Covers(hs, p, includeDowned)) hit++;
+                foreach (Vec2 p in pts) if (Covers(b, p, includeDowned)) hit++;
                 float cov = pts.Count > 0 ? (float)hit / pts.Count : 0f;
                 r.LaneCoverage[lane] = cov;
-                if (cov < 0.35f) r.Missing.Add("lane_uncovered:" + lane);
+                int gate = Battle.GateLane(b.Arena, lane);
+                if (!r.GateCoverage.ContainsKey(gate) && b.Arena.Lanes[gate].Gate.HasValue)
+                {
+                    Vec2 at = b.Arena.Lanes[gate].Gate.Value;
+                    Vec2 dir = at.Normalized, side = new Vec2(-dir.Y, dir.X);
+                    int covered = 0;
+                    for (int k = -2; k <= 2; k++)
+                        if (Covers(b, at + side * (k * 0.4f) - dir * 0.6f, includeDowned)) covered++;
+                    float gc = covered / 5f;
+                    r.GateCoverage[gate] = gc;
+                    if (gc < 0.35f) r.Missing.Add("gate_uncovered:" + gate);
+                }
+                if (!b.Arena.IsHaven && cov < 0.35f) r.Missing.Add("lane_uncovered:" + lane);
             }
             int ring = 0;
             for (int k = 0; k < 36; k++)
             {
                 double a = k * 2.0 * System.Math.PI / 36.0;   // analysis only (never feeds the simulation)
-                if (Covers(hs, b.Crystal.Pos + new Vec2((float)System.Math.Cos(a), (float)System.Math.Sin(a)) * 3f, includeDowned)) ring++;
+                if (Covers(b, b.Crystal.Pos + new Vec2((float)System.Math.Cos(a), (float)System.Math.Sin(a)) * 3f, includeDowned)) ring++;
             }
             r.CrystalCoverage = ring / 36f;
             return r;
@@ -122,9 +137,13 @@ namespace Aetherward.Sim.Combat
             if (h.SecondaryElement != Element.None && h.SecondaryElement != h.Def.Element) yield return h.SecondaryElement;
         }
 
-        private static bool Covers(List<HeroUnit> hs, Vec2 p, bool includeDowned)
+        private static bool Covers(Battle battle, Vec2 p, bool includeDowned)
         {
-            foreach (HeroUnit h in hs) if ((includeDowned || !h.Downed) && Vec2.Distance(h.Anchor, p) <= Reach(h)) return true;
+            foreach (HeroUnit h in battle.Heroes)
+            {
+                float reach = h.Stat(StatId.Range) + (battle.Setup.DynamicParty ? System.Math.Max(h.Stat(StatId.LeashRadius), Battle.StanceLeash(battle.Setup.Stance)) : h.Stat(StatId.LeashRadius));
+                if ((includeDowned || !h.Downed) && Vec2.Distance(h.Anchor, p) <= reach) return true;
+            }
             return false;
         }
 

@@ -1,0 +1,721 @@
+[
+  {
+    "id": "Heroes/glacius_idle",
+    "size": [
+      512,
+      512
+    ],
+    "bounds": [
+      88,
+      157,
+      422,
+      475
+    ],
+    "edgeLuminance": 0.18154647855147382,
+    "transparentPixels": 206884
+  },
+  {
+    "id": "Heroes/glacius_attack",
+    "size": [
+      512,
+      512
+    ],
+    "bounds": [
+      69,
+      157,
+      454,
+      475
+    ],
+    "edgeLuminance": 0.08043529350432697,
+    "transparentPixels": 202657
+  },
+  {
+    "id": "Heroes/glacius_cast",
+    "size": [
+      512,
+      512
+    ],
+    "bounds": [
+      134,
+      106,
+      449,
+      475
+    ],
+    "edgeLuminance": 0.0677126354783524,
+    "transparentPixels": 194052
+  },
+  {
+    "id": "Heroes/glacius_downed",
+    "size": [
+      512,
+      512
+    ],
+    "bounds": [
+      128,
+      262,
+      395,
+      475
+    ],
+    "edgeLuminance": 0.17578451425809571,
+    "transparentPixels": 227094
+  },
+  {
+    "id": "Portraits/glacius",
+    "size": [
+      192,
+      192
+    ],
+    "bounds": [
+      1,
+      1,
+      190,
+      190
+    ],
+    "edgeLuminance": 0.2429381203033798,
+    "transparentPixels": 0
+  },
+  {
+    "id": "Heroes/ignis_idle",
+    "size": [
+      512,
+      512
+    ],
+    "bounds": [
+      120,
+      131,
+      391,
+      475
+    ],
+    "edgeLuminance": 0.12448418798808922,
+    "transparentPixels": 219109
+  },
+  {
+    "id": "Heroes/ignis_attack",
+    "size": [
+      512,
+      512
+    ],
+    "bounds": [
+      80,
+      155,
+      463,
+      475
+    ],
+    "edgeLuminance": 0.14167512457472115,
+    "transparentPixels": 210793
+  },
+  {
+    "id": "Heroes/ignis_cast",
+    "size": [
+      512,
+      512
+    ],
+    "bounds": [
+      108,
+      106,
+      363,
+      475
+    ],
+    "edgeLuminance": 0.09644958465537948,
+    "transparentPixels": 217635
+  },
+  {
+    "id": "Heroes/ignis_downed",
+    "size": [
+      512,
+      512
+    ],
+    "bounds": [
+      138,
+      252,
+      341,
+      475
+    ],
+    "edgeLuminance": 0.17202157553290084,
+    "transparentPixels": 240055
+  },
+  {
+    "id": "Portraits/ignis",
+    "size": [
+      192,
+      192
+    ],
+    "bounds": [
+      1,
+      1,
+      190,
+      190
+    ],
+    "edgeLuminance": 0.15010085351787775,
+    "transparentPixels": 0
+  },
+  {
+    "id": "Heroes/veyra_idle",
+    "size": [
+      512,
+      512
+    ],
+    "bounds": [
+      168,
+      137,
+      406,
+      475
+    ],
+    "edgeLuminance": 0.040727726791136565,
+    "transparentPixels": 222543
+  },
+  {
+    "id": "Heroes/veyra_cast",
+    "size": [
+      512,
+      512
+    ],
+    "bounds": [
+      161,
+      106,
+      414,
+      475
+    ],
+    "edgeLuminance": 0.07202504009676985,
+    "transparentPixels": 223288
+  },
+  {
+    "id": "Heroes/veyra_downed",
+    "size": [
+      512,
+      512
+    ],
+    "bounds": [
+      150,
+      252,
+      377,
+      475
+    ],
+    "edgeLuminance": 0.1483005130589785,
+    "transparentPixels": 235833
+  },
+  {
+    "id": "Portraits/veyra",
+    "size": [
+      192,
+      192
+    ],
+    "bounds": [
+      1,
+      1,
+      190,
+      190
+    ],
+    "edgeLuminance": 0.133066436685191,
+    "transparentPixels": 0
+  },
+  {
+    "id": "Heroes/marina_idle",
+    "size": [
+      512,
+      512
+    ],
+    "bounds": [
+      116,
+      127,
+      395,
+      475
+    ],
+    "edgeLuminance": 0.058038641826805536,
+    "transparentPixels": 206742
+  },
+  {
+    "id": "Heroes/marina_attack",
+    "size": [
+      512,
+      512
+    ],
+    "bounds": [
+      87,
+      127,
+      457,
+      475
+    ],
+    "edgeLuminance": 0.11069052567190427,
+    "transparentPixels": 197772
+  },
+  {
+    "id": "Heroes/marina_cast",
+    "size": [
+      512,
+      512
+    ],
+    "bounds": [
+      96,
+      106,
+      415,
+      475
+    ],
+    "edgeLuminance": 0.06671651045786792,
+    "transparentPixels": 197432
+  },
+  {
+    "id": "Heroes/marina_downed",
+    "size": [
+      512,
+      512
+    ],
+    "bounds": [
+      131,
+      252,
+      380,
+      475
+    ],
+    "edgeLuminance": 0.17176422005956535,
+    "transparentPixels": 228551
+  },
+  {
+    "id": "Portraits/marina",
+    "size": [
+      192,
+      192
+    ],
+    "bounds": [
+      1,
+      1,
+      190,
+      190
+    ],
+    "edgeLuminance": 0.26591099542134145,
+    "transparentPixels": 0
+  },
+  {
+    "id": "Heroes/glacius_walk_a",
+    "size": [
+      512,
+      512
+    ],
+    "bounds": [
+      98,
+      157,
+      412,
+      475
+    ],
+    "edgeLuminance": 0.11527397694619677,
+    "transparentPixels": 218386,
+    "silhouetteIoU": 0.5965867702660516
+  },
+  {
+    "id": "Heroes/glacius_walk_b",
+    "size": [
+      512,
+      512
+    ],
+    "bounds": [
+      85,
+      157,
+      426,
+      475
+    ],
+    "edgeLuminance": 0.09356379384781437,
+    "transparentPixels": 211055,
+    "silhouetteIoU": 0.6577715355805244
+  },
+  {
+    "id": "Heroes/ignis_walk_a",
+    "size": [
+      512,
+      512
+    ],
+    "bounds": [
+      114,
+      131,
+      396,
+      475
+    ],
+    "edgeLuminance": 0.09173086945571082,
+    "transparentPixels": 218267,
+    "silhouetteIoU": 0.7608177401943145
+  },
+  {
+    "id": "Heroes/ignis_walk_b",
+    "size": [
+      512,
+      512
+    ],
+    "bounds": [
+      121,
+      131,
+      389,
+      475
+    ],
+    "edgeLuminance": 0.0948132002636864,
+    "transparentPixels": 221597,
+    "silhouetteIoU": 0.7125986047147873
+  },
+  {
+    "id": "Heroes/veyra_walk_a",
+    "size": [
+      512,
+      512
+    ],
+    "bounds": [
+      144,
+      137,
+      383,
+      475
+    ],
+    "edgeLuminance": 0.08019006310729347,
+    "transparentPixels": 224108,
+    "silhouetteIoU": 0.5822179513579061
+  },
+  {
+    "id": "Heroes/veyra_walk_b",
+    "size": [
+      512,
+      512
+    ],
+    "bounds": [
+      144,
+      137,
+      401,
+      475
+    ],
+    "edgeLuminance": 0.08365703191434866,
+    "transparentPixels": 223430,
+    "silhouetteIoU": 0.6462996050404364
+  },
+  {
+    "id": "Heroes/veyra_attack",
+    "size": [
+      512,
+      512
+    ],
+    "bounds": [
+      131,
+      137,
+      414,
+      475
+    ],
+    "edgeLuminance": 0.08922040816793327,
+    "transparentPixels": 226196
+  },
+  {
+    "id": "Heroes/marina_walk_a",
+    "size": [
+      512,
+      512
+    ],
+    "bounds": [
+      110,
+      127,
+      401,
+      475
+    ],
+    "edgeLuminance": 0.1463271625783062,
+    "transparentPixels": 206570,
+    "silhouetteIoU": 0.8134748548646569
+  },
+  {
+    "id": "Heroes/marina_walk_b",
+    "size": [
+      512,
+      512
+    ],
+    "bounds": [
+      113,
+      127,
+      397,
+      475
+    ],
+    "edgeLuminance": 0.17618517728245986,
+    "transparentPixels": 208259,
+    "silhouetteIoU": 0.8064744759643496
+  },
+  {
+    "id": "Enemies/grunt_a",
+    "size": [
+      256,
+      256
+    ],
+    "bounds": [
+      30,
+      87,
+      192,
+      235
+    ],
+    "edgeLuminance": 0.1913474108492134,
+    "transparentPixels": 53488
+  },
+  {
+    "id": "Enemies/grunt_b",
+    "size": [
+      256,
+      256
+    ],
+    "bounds": [
+      31,
+      87,
+      191,
+      235
+    ],
+    "edgeLuminance": 0.18534275678294573,
+    "transparentPixels": 54749,
+    "silhouetteIoU": 0.6437661220980223
+  },
+  {
+    "id": "Enemies/runner_a",
+    "size": [
+      256,
+      256
+    ],
+    "bounds": [
+      42,
+      82,
+      197,
+      235
+    ],
+    "edgeLuminance": 0.21827782206547777,
+    "transparentPixels": 53233
+  },
+  {
+    "id": "Enemies/runner_b",
+    "size": [
+      256,
+      256
+    ],
+    "bounds": [
+      42,
+      82,
+      196,
+      235
+    ],
+    "edgeLuminance": 0.21083513642003224,
+    "transparentPixels": 53745,
+    "silhouetteIoU": 0.7001636097476965
+  },
+  {
+    "id": "Enemies/hexcaster_a",
+    "size": [
+      256,
+      256
+    ],
+    "bounds": [
+      75,
+      57,
+      179,
+      235
+    ],
+    "edgeLuminance": 0.18537028364351582,
+    "transparentPixels": 54915
+  },
+  {
+    "id": "Enemies/hexcaster_b",
+    "size": [
+      256,
+      256
+    ],
+    "bounds": [
+      80,
+      57,
+      175,
+      235
+    ],
+    "edgeLuminance": 0.18008863616870194,
+    "transparentPixels": 55583,
+    "silhouetteIoU": 0.7842526228316195
+  },
+  {
+    "id": "Enemies/juggernaut_a",
+    "size": [
+      256,
+      256
+    ],
+    "bounds": [
+      14,
+      37,
+      253,
+      235
+    ],
+    "edgeLuminance": 0.18427347835738067,
+    "transparentPixels": 32531
+  },
+  {
+    "id": "Enemies/juggernaut_b",
+    "size": [
+      256,
+      256
+    ],
+    "bounds": [
+      22,
+      32,
+      233,
+      235
+    ],
+    "edgeLuminance": 0.20015187832376086,
+    "transparentPixels": 39207,
+    "silhouetteIoU": 0.6463703003074013
+  },
+  {
+    "id": "Enemies/ravager_a",
+    "size": [
+      256,
+      256
+    ],
+    "bounds": [
+      10,
+      27,
+      244,
+      235
+    ],
+    "edgeLuminance": 0.17051857345951033,
+    "transparentPixels": 38229
+  },
+  {
+    "id": "Enemies/ravager_b",
+    "size": [
+      256,
+      256
+    ],
+    "bounds": [
+      18,
+      27,
+      221,
+      235
+    ],
+    "edgeLuminance": 0.1754245687795885,
+    "transparentPixels": 43271,
+    "silhouetteIoU": 0.6341499794906216
+  },
+  {
+    "id": "Enemies/rift_warden_a",
+    "size": [
+      512,
+      512
+    ],
+    "bounds": [
+      27,
+      57,
+      436,
+      485
+    ],
+    "edgeLuminance": 0.06992775183411677,
+    "transparentPixels": 177899
+  },
+  {
+    "id": "Enemies/rift_warden_b",
+    "size": [
+      512,
+      512
+    ],
+    "bounds": [
+      30,
+      57,
+      433,
+      485
+    ],
+    "edgeLuminance": 0.03818443448123118,
+    "transparentPixels": 181736,
+    "silhouetteIoU": 0.7121454840820378
+  },
+  {
+    "id": "Enemies/rift_warden_tell",
+    "size": [
+      512,
+      512
+    ],
+    "bounds": [
+      37,
+      37,
+      442,
+      485
+    ],
+    "edgeLuminance": 0.07799148666666668,
+    "transparentPixels": 187877
+  },
+  {
+    "id": "Enemies/rift_warden_attack",
+    "size": [
+      512,
+      512
+    ],
+    "bounds": [
+      37,
+      57,
+      442,
+      485
+    ],
+    "edgeLuminance": 0.055146192880308975,
+    "transparentPixels": 183134
+  },
+  {
+    "id": "Enemies/grunt_attack",
+    "size": [
+      256,
+      256
+    ],
+    "bounds": [
+      51,
+      87,
+      219,
+      235
+    ],
+    "edgeLuminance": 0.2113145861459338,
+    "transparentPixels": 53608
+  },
+  {
+    "id": "Enemies/runner_attack",
+    "size": [
+      256,
+      256
+    ],
+    "bounds": [
+      32,
+      82,
+      223,
+      235
+    ],
+    "edgeLuminance": 0.21629755915815124,
+    "transparentPixels": 50201
+  },
+  {
+    "id": "Enemies/hexcaster_attack",
+    "size": [
+      256,
+      256
+    ],
+    "bounds": [
+      51,
+      57,
+      203,
+      235
+    ],
+    "edgeLuminance": 0.17072209980871741,
+    "transparentPixels": 52996
+  },
+  {
+    "id": "Enemies/juggernaut_attack",
+    "size": [
+      256,
+      256
+    ],
+    "bounds": [
+      14,
+      37,
+      253,
+      235
+    ],
+    "edgeLuminance": 0.1747922031516611,
+    "transparentPixels": 36375
+  },
+  {
+    "id": "Enemies/ravager_attack",
+    "size": [
+      256,
+      256
+    ],
+    "bounds": [
+      2,
+      29,
+      241,
+      235
+    ],
+    "edgeLuminance": 0.16352428816438266,
+    "transparentPixels": 42791
+  }
+]

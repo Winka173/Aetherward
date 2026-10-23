@@ -1,0 +1,13 @@
+{
+  "kind": "Unity player screenshot (real Battle scene, scripted roster and wave)",
+  "label": "R01 gameplay benchmark: dynamic party (6 roles) on the wide toon sanctum",
+  "commit": "8f49db9",
+  "unity": "6000.4.8f1",
+  "platform": "WindowsPlayer",
+  "screen": [2560, 1440],
+  "artOverride": "",
+  "overridesLoaded": 0,
+  "wave": 12,
+  "phaseAtEnd": "Battle",
+  "shots": ["prep.png", "t04.png", "t08.png", "t12.png", "t17.png", "t23.png"]
+}

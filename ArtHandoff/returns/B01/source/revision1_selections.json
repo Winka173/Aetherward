@@ -1,0 +1,18 @@
+{
+  "Heroes/ignis_idle": {
+    "source": "source/sheets/r1v2_heroes_ignis_idle.png",
+    "promptFile": "source/prompts/r1v2_heroes_ignis_idle.json"
+  },
+  "Enemies/hexcaster_a": {
+    "source": "source/sheets/r1v2_enemies_hexcaster_a.png",
+    "promptFile": "source/prompts/r1v2_enemies_hexcaster_a.json"
+  },
+  "Enemies/hexcaster_b": {
+    "source": "source/sheets/r1v2_enemies_hexcaster_b.png",
+    "promptFile": "source/prompts/r1v2_enemies_hexcaster_b.json"
+  },
+  "Enemies/rift_warden_b": {
+    "source": "source/sheets/r1v2_enemies_rift_warden_b.png",
+    "promptFile": "source/prompts/r1v2_enemies_rift_warden_b.json"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "prompt": "Dark Mythic Fantasy, painterly stylized 2.5D; orthographic 38.3-degree elevation, three-quarter front body turned 25 degrees toward screen-right. Key upper-left-front #ffe9d0, rim back-right #9fe8ff, ambient #16233a. Controlled broad brush planes, coloured local-hue dark edges without black outlines.\nUse case: precise-object-edit. Image1 is the identity/edit reference; remaining images are B01 style/light references. Preserve this exact Mirrath identity, broken mirror halo, half-mirror body, oxblood cloth and magenta-glass sceptre. Generate ATTACK release pose: arms and sceptre firmly extended to screen-right at chest height, body braced, small glow on focus only. Hold the sceptre a little closer, slightly foreshorten the shaft: the ENTIRE glass focus including its far-right tip must be complete with at least 6% clear margin. No clipped weapon. Keep torso centered, feet level. No spell beam or flash outside focus.\nSingle full boss character facing screen-right. Actual transparent background. Warm upper-left-front lit key planes, strong directional cyan back-right rim2–3px at512export; edge luminance>=0.27 on dark basalt0.16. Controlled painterly broad planes, same material colors as identity. Native at least1536square intended for1024master then512export. Complete character height80–84%, no cropping, floor, shadow, ground glow, text, scene, projectile, beam, trail or detached VFX.",
+  "referenced_image_paths": [
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B11/source/sheets/mirrath_a.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Enemies/rift_warden_a.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Enemies/rift_warden_b.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Enemies/grunt_a.png"
+  ],
+  "transparent_background": true
+}

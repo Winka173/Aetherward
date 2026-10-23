@@ -1,0 +1,11 @@
+{
+  "name": "tidal_evolutions",
+  "refs": [
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B03/source/sheets/tidal_idle.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Heroes/ignis_evoA.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Heroes/terra_idle.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B02/exports/Art/Heroes/volt_idle.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B02/exports/Art/Heroes/freya_idle.png"
+  ],
+  "prompt": "Dark Mythic Fantasy, painterly stylized 2.5D; orthographic 38.3-degree elevation, three-quarter front body turned 25 degrees toward screen-right. Key upper-left-front #ffe9d0, rim back-right #9fe8ff, ambient #16233a. Controlled broad brush planes, coloured local-hue dark edges without black outlines.\nUse case stylized-concept. WIDE LANDSCAPE 2560x1440, TWO full-body adult sprites side by side, transparent background, NO text/panel lines/ground/shadows. Both are identity evolutions of Tidal from reference1, same face and skin. Each figure fill 85% canvas HEIGHT, clear 8% gutter, feet fully visible. LEFT: evoA FLOODBREAKER heavier teal oilcloth coat, stormglass breastplate, barnacle-bronze edged hood, BOTH hands holding one massive living blue-water WAVE-FLAIL with a curled crest, resting neutral stance, clearly thicker than original whips. RIGHT: evoB HEALING SPRING hood DOWN calm face visible, coat changes to sea-foam and white, clear water ribbons circle body vertically and small water-ring behind shoulders; healer calm narrow vertical stance. Same bone structure bronze anchor ornaments. Head height equal both, adults 6 heads tall, torso centered within each half, face screen-right. Painted crisp cloth, glass, bronze planes, cool rim #9fe8ff 2-3px at export, directional lit edges average >=0.30 against basalt mean0.16. Water hue #2f8cff <=20% area. Held water weapons/body ribbons allowed; no projectile/beam/ground effect."
+}

@@ -42,6 +42,8 @@ namespace Aetherward.Sim.Combat
         public int EliteEvery;
         public string CrystalPath;                // Crystal Evolution path id (null = none)
         public TeamTactic Tactic;                 // soft targeting weights chosen before the wave
+        public PartyFormation Formation;
+        public int SealedGate = -1;
         public PartyStance Stance = PartyStance.Balanced;   // how far from the Crystal the party fights
         /// <summary>Dynamic party (posts re-planned from threat, role and stance). False = legacy fixed node anchors.</summary>
         public bool DynamicParty = true;
@@ -138,6 +140,15 @@ namespace Aetherward.Sim.Combat
             SetupCrystal();
             SetupHeroes();
             BuildSchedule();
+            if (Setup.DynamicParty)
+            {
+                PlanPosts();
+                foreach (HeroUnit h in Heroes) h.Pos = h.Anchor = h.Post = ClampToArena(h.Post, h.Radius);
+            }
+            foreach (HeroUnit h in Heroes) ApplyBattleStartPassive(h);
+            foreach (HeroUnit h in Heroes) ApplyBattleStartTrait(h);
+            ApplyStanceBonus();
+            UpdateAreaTraits();
             SetupBiome();
             foreach (SourcedOp t in Mods.Triggers) Triggers.Add(new TriggerInstance { Source = t });
             FireTrigger("wave_start", null, null, Crystal.Pos, null);
@@ -163,9 +174,6 @@ namespace Aetherward.Sim.Combat
                 Heroes.Add(h);
             }
             // Team auras (e.g. Zephyr's tailwind) are applied as permanent buffs at battle start.
-            foreach (HeroUnit h in Heroes) ApplyBattleStartPassive(h);
-            foreach (HeroUnit h in Heroes) ApplyBattleStartTrait(h);
-            ApplyStanceBonus();
         }
 
         private int _eliteCounter;
@@ -189,7 +197,7 @@ namespace Aetherward.Sim.Combat
                 if (swarmMod && !def.Boss) count += count / 4;
                 for (int i = 0; i < count; i++)
                 {
-                    int lane = Biome.MapLane(g.Lane >= 0 ? g.Lane : lanes[(rotate + i) % lanes.Count], Wave.Number);
+                    int lane = EffectiveLane(g.Lane >= 0 ? g.Lane : lanes[(rotate + i) % lanes.Count]);
                     float jitter = g.Interval * rng.Range(-0.15f, 0.15f);
                     _schedule.Add(new ScheduledSpawn
                     {

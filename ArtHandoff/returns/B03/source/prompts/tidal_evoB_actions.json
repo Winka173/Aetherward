@@ -1,0 +1,11 @@
+{
+  "name": "tidal_evoB_actions",
+  "refs": [
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B03/source/sheets/tidal_evoB.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Heroes/ignis_cast.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Heroes/sylph_idle.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B02/exports/Art/Heroes/volt_idle.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B02/exports/Art/Heroes/freya_idle.png"
+  ],
+  "prompt": "Dark Mythic Fantasy, painterly stylized 2.5D; orthographic 38.3-degree elevation, three-quarter front body turned 25 degrees toward screen-right. Key upper-left-front #ffe9d0, rim back-right #9fe8ff, ambient #16233a. Controlled broad brush planes, coloured local-hue dark edges without black outlines.\nUse case stylized-concept. Wide landscape 2560x1440 TWO separate full-body sprites of exact male HEALING SPRING from reference1. LEFT CAST both empty hands raised to shoulder level, brighter clear-water ring behind shoulders, straight vertical coat. RIGHT ATTACK right empty hand extended toward screen-right, palm release pose, water ribbons stay wrapped close to forearms and torso. SAME masculine face short dark hair lowered hood seafoam WHITE coat bronze compass belt and shoulder clasps in both frames. No staff, no weapons, no emitted projectile, beam, splash, ground or shadow. Transparent background and wide blank central gutter. Each character fits its half, NARROW straight coat and narrow cape, height much greater than width, head at same level, full feet visible. Keep contour luminous #9fe8ff rim and warm bright key cloth planes, edge mean >=0.30 on dark basalt0.16. No text or detached droplets."
+}

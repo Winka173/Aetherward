@@ -1,0 +1,130 @@
+{
+  "batch": "R04",
+  "producer": "Codex",
+  "date": "2026-10-21",
+  "status": "delivered_with_validation_blocker",
+  "styleLock": {
+    "version": "Art Bible v3 / R04",
+    "palette": [
+      "#1b1226",
+      "#3b2f6b",
+      "#fff1dc"
+    ],
+    "edge": "bold black-violet comic contours, 2\u20133 cel tones; supersedes B01 rim rules"
+  },
+  "tools": [
+    {
+      "name": "image_gen.imagegen (built-in)",
+      "version": "not exposed"
+    },
+    {
+      "name": "Python",
+      "version": "3.11.5",
+      "packages": [
+        "Pillow",
+        "numpy"
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "id": "World/verdant_paint",
+      "status": "delivered",
+      "export": "exports/World/verdant_paint.png",
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "source": "source/masters/verdant_v3.png",
+      "master": "source/masters/verdant_v3.png",
+      "generator": "image_gen.imagegen (built-in)",
+      "prompt": "source/prompts/verdant_v3.txt",
+      "promptHistory": [
+        "source/prompts/verdant_v1.txt",
+        "source/prompts/verdant_v2.txt",
+        "source/prompts/verdant_v3.txt"
+      ],
+      "cleanup": "None. Byte-identical copy of native output; source/scripts/qa_return.py v3 --final",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Clear six-lane composition and comic ink; repeated foliage/masonry still busy. Layout assessed visually, awaiting lead review.",
+      "sha256": "912e6ad49de3459323ec5b69a392c2f4835baa58b0956a9fc7acb1cc05f1514e"
+    },
+    {
+      "id": "World/verdant_paint_on_guide",
+      "status": "delivered",
+      "export": "exports/World/verdant_paint_on_guide.png",
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "source": "source/masters/verdant_v3.png",
+      "generator": "Python Pillow/numpy: source/scripts/qa_return.py",
+      "prompt": "Derived QA overlay; painting prompt source/prompts/verdant_v3.txt",
+      "cleanup": "source/scripts/qa_return.py v3 --final; annotation-only overlay at 50% opacity",
+      "thirdPartyInputs": [],
+      "selfAssessment": "Source guide annotation overlay enables direct visual inspection; not automated layout certification.",
+      "sha256": "0234d781c8a45606fdc64de2283e3948066614e23bb413d13375ff76367c7b7b"
+    }
+  ],
+  "blockers": [
+    "Standard intake and preview fail because requests/R04/INPUT_MANIFEST.json is absent."
+  ],
+  "generationReferences": {
+    "v1": [
+      "../../requests/R04/references/verdant_layout.png",
+      "../../requests/R04/references/verdant_guide.png",
+      "../../requests/R04/references/style_ref_hud_concept.png",
+      "../../requests/R04/references/style_ref_combat_concept.png"
+    ],
+    "v2": [
+      "source/masters/verdant_v1.png",
+      "../../requests/R04/references/verdant_guide.png",
+      "../../requests/R04/references/verdant_layout.png"
+    ],
+    "v3": [
+      "source/masters/verdant_v2.png",
+      "../../requests/R04/references/verdant_guide.png"
+    ]
+  },
+  "extras": [
+    {
+      "path": "previews/verdant_dark_mass_720p.png",
+      "kind": "offline inspection image, not gameplay"
+    },
+    {
+      "path": "previews/verdant_grayscale_1080p.png",
+      "kind": "offline inspection image, not gameplay"
+    },
+    {
+      "path": "previews/verdant_grayscale_720p.png",
+      "kind": "offline inspection image, not gameplay"
+    },
+    {
+      "path": "previews/verdant_offline_1080p.png",
+      "kind": "offline inspection image, not gameplay"
+    },
+    {
+      "path": "previews/verdant_offline_720p.png",
+      "kind": "offline inspection image, not gameplay"
+    }
+  ],
+  "knownIssues": [
+    "Native output 1672x941 despite requested 3840x2160; untouched approximate 16:9 aspect retained.",
+    "Generative layout visually assessed, not pixel-exact certified.",
+    "Repeated foliage and masonry may gain excess contrast during planned lead upscale.",
+    "RGB output has no explicit ICC profile; interpret as sRGB."
+  ],
+  "counts": {
+    "deliveredImages": 2,
+    "blockedImages": 0,
+    "blockedWorkflowChecks": 2
+  },
+  "validation": {
+    "standardIntake": "blocked: missing requests/R04/INPUT_MANIFEST.json",
+    "standardPreview": "blocked: missing requests/R04/INPUT_MANIFEST.json",
+    "artifactChecks": "qa/artifact_checks.json",
+    "layoutReview": "Visual overlay assessed within approximate quarter-lane-width tolerance; no approval claim."
+  }
+}

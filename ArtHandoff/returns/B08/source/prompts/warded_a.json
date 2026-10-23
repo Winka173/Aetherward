@@ -1,0 +1,15 @@
+{
+  "id": "Enemies/warded_a",
+  "character": "warded",
+  "height": 180,
+  "width": 220,
+  "bottom": 236,
+  "raw": "C:\\Users\\Winka\\.codex\\generated_images\\01a159d8-948e-7791-af53-743787b45395\\exec-9983e4d5-2d44-4fbf-865e-71851aa16473.png",
+  "prompt": "Dark Mythic Fantasy, painterly stylized 2.5D; orthographic 38.3-degree elevation, three-quarter front body turned 25 degrees toward screen-right. Key upper-left-front #ffe9d0, rim back-right #9fe8ff, ambient #16233a. Controlled broad brush planes, coloured local-hue dark edges without black outlines. Use case: stylized-concept. Production isolated transparent enemy sprite. Requested 1536x1536 high resolution, one character only. Attached B01 images are style-family references only.Squat stone golem built from chipped sanctum masonry, broad heavy stone fists, small inset ash face. A narrow rune ward-ring floats tightly around torso, ring strictly NEUTRAL light grey with no coloured glow. POSE: Identity walk CONTACT pose. Weight centred, feet in readable walking contact. Palette charcoal #2a2c31, ash #625c55, oxblood #6b2734, basalt edge #1d1f24. Broad deliberate brush planes with clear material separation. Strong lit key planes and cool #9fe8ff back-right rim 2–3 px at final 256 export, mean contour luminance >=0.30 so unit separates from dark basalt 0.16. Entire character visible with generous transparent margins; torso centred at x50%, facing screen-right +X. Final silhouette 180 pixels high on 256 canvas. Feet contact same ground baseline. Transparent background, no floor, no shadow, no backdrop, no text or numbers. No detached projectile, beam, explosion, ground effect or excess glow. Small focus/weapon glow contained close to body only. Keep all props within canvas. Do not copy reference transparency RGB rays.",
+  "references": [
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Enemies/grunt_a.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Enemies/juggernaut_a.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Enemies/hexcaster_a.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Enemies/storm_harpy_a.png"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "id": "Enemies/banner_attack",
+  "character": "banner",
+  "height": 175,
+  "width": 210,
+  "bottom": 236,
+  "raw": "C:\\Users\\Winka\\Projects\\Aetherward\\ArtHandoff\\returns\\B08\\source\\sheets\\banner_attack_v2.png",
+  "prompt": "Dark Mythic Fantasy, painterly stylized 2.5D; orthographic 38.3-degree elevation, three-quarter front body turned 25 degrees toward screen-right. Key upper-left-front #ffe9d0, rim back-right #9fe8ff, ambient #16233a. Controlled broad brush planes, coloured local-hue dark edges without black outlines. EDIT the first image only. Other images are B01 style references. Recompose the SAME banner thrust: shorter foreshortened shaft pointing diagonally 35 degrees upward toward +X. Torso must be EXACTLY at canvas centre x50%, NOT left of centre. Bring the rightmost spear tip in closer, banner cloth folded and fluttering behind pole close to shoulders, not huge spread. Entire silhouette at final export should be 175px tall and <=215px wide. Same imp, same banner sigil. Compact strong spear thrust, dynamic leg brace. Lighten broad tattered cloth edges toward pale ash-red with warm key and cool selective rim, contour >=0.33. Keep exact identity, face, costume, materials, prop design and palette. Full character fits within ample transparent margins; screen-right +X facing, 38.3 degree elevation. Transparent background, no shadow, floor, text, projectiles or detached effects. Native high resolution; no black outline. Bright broad key planes, #9fe8ff cool directional rim 2–3 pixels at final export; contour luminance target >=0.33.",
+  "references": [
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B08/source/sheets/banner_attack.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Enemies/grunt_a.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Enemies/juggernaut_a.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Enemies/hexcaster_a.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Enemies/storm_harpy_a.png"
+  ],
+  "sourceName": "banner_attack_v2",
+  "anchor": 0.4,
+  "registration": "Torso centre visually estimated; uncertainty approximately 5–8 native export pixels."
+}

@@ -1,0 +1,72 @@
+{
+  "batch": "R07",
+  "date": "2026-10-21",
+  "producer": "Codex",
+  "status": "blocked",
+  "styleLock": {
+    "direction": "Comic-ink Art Bible v3 and R07/R04 supersede B01",
+    "palette": [
+      "#1b1226",
+      "#3b2f6b",
+      "#fff1dc"
+    ],
+    "promptTemplate": "source/prompts.json: v1"
+  },
+  "tools": [
+    {
+      "name": "image_gen built-in",
+      "result": "HTTP 429 usage_limit_reached"
+    }
+  ],
+  "assets": [
+    {
+      "id": "World/haven_paint",
+      "status": "blocked",
+      "export": "exports/World/haven_paint.png",
+      "generator": "image_gen built-in",
+      "prompt": "source/prompts.json: v1",
+      "source": null,
+      "size": null,
+      "requestedSize": "native 16:9 untouched; guide 3344x1882",
+      "reason": "image generation failed: http 429 Too Many Requests: Some(\"{\\\"error\\\":{\\\"type\\\":\\\"usage_limit_reached\\\",\\\"message\\\":\\\"The usage limit has been reached\\\",\\\"plan_type\\\":\\\"plus\\\",\\\"resets_at\\\":1792611366,\\\"eligible_promo\\\":null,\\\"limit_window_minutes\\\":1440,\\\"resets_in_seconds\\\":59722}}\")",
+      "referenceImages": [
+        "ArtHandoff/requests/R07/references/haven_guide.png",
+        "ArtHandoff/requests/R07/references/style_ref_r04_verdant_paint.png"
+      ],
+      "selfAssessment": "No output; style and geometry unverified."
+    },
+    {
+      "id": "World/haven_paint_on_guide",
+      "status": "blocked",
+      "export": "exports/World/haven_paint_on_guide.png",
+      "source": null,
+      "generator": "planned 50% guide overlay",
+      "reason": "Painting unavailable due to image generation usage limit."
+    }
+  ],
+  "counts": {
+    "delivered": 0,
+    "blocked": 2
+  },
+  "qa": {
+    "intake": "blocked; missing requests/R07/INPUT_MANIFEST.json",
+    "blockingProblemCount": null,
+    "report": "qa/intake_attempt.json"
+  },
+  "knownIssues": [
+    "No earlier README or manifest was present.",
+    "Literal requests$B path absent; used requests/R07 for R07 batch.",
+    "R07 native 16:9 and exports/World supersede common battlefield dimensions and export path.",
+    "No character assets in R07; per-character updates inapplicable.",
+    "No art or previews produced."
+  ],
+  "blockers": [
+    "image generation failed: http 429 Too Many Requests: Some(\"{\\\"error\\\":{\\\"type\\\":\\\"usage_limit_reached\\\",\\\"message\\\":\\\"The usage limit has been reached\\\",\\\"plan_type\\\":\\\"plus\\\",\\\"resets_at\\\":1792611366,\\\"eligible_promo\\\":null,\\\"limit_window_minutes\\\":1440,\\\"resets_in_seconds\\\":59722}}\")",
+    "Missing requests/R07/INPUT_MANIFEST.json prevents standard intake and preview."
+  ],
+  "topThreeRisks": [
+    "No production battlefield delivered.",
+    "Wall, gate and road alignment unverified.",
+    "Standard intake cannot certify zero blocking problems."
+  ]
+}

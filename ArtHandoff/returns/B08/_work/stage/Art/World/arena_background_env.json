@@ -1,0 +1,32 @@
+{
+ "shadowDirScreen": [
+  0.8197,
+  0.5729
+ ],
+ "shadowLengthPerHeight": 0.8947,
+ "braziersFlat": [
+  4.227,
+  -8.636,
+  7.045,
+  -1.991
+ ],
+ "aetherCrystalsFlat": [
+  -12.682,
+  6.125,
+  -7.045,
+  -2.478,
+  -12.682,
+  3.265,
+  -5.636,
+  10.901
+ ],
+ "edgeColor": [
+  0.1287,
+  0.1353,
+  0.1521
+ ],
+ "source": "ArtCache/Env/pot_verdant_sanctuary",
+ "gamma": 1.2276,
+ "viewMeanBefore": 0.2165,
+ "viewMean": 0.16
+}

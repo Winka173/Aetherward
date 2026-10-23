@@ -1,0 +1,68 @@
+[
+  {
+    "id": "Heroes/veyra_idle",
+    "height": 340.0,
+    "offset": 32,
+    "method": "Visual torso alignment from separate overlays; no anatomy redrawn."
+  },
+  {
+    "id": "Heroes/veyra_walk_a",
+    "height": 340.0,
+    "offset": 8,
+    "method": "Visual torso alignment from separate overlays; no anatomy redrawn."
+  },
+  {
+    "id": "Heroes/veyra_walk_b",
+    "height": 340.0,
+    "offset": 17,
+    "method": "Visual torso alignment from separate overlays; no anatomy redrawn."
+  },
+  {
+    "id": "Heroes/veyra_attack",
+    "height": 340.0,
+    "offset": 17,
+    "method": "Visual torso alignment from separate overlays; no anatomy redrawn."
+  },
+  {
+    "id": "Heroes/veyra_cast",
+    "height": 352.0,
+    "offset": 24,
+    "method": "Visual torso alignment from separate overlays; no anatomy redrawn."
+  },
+  {
+    "id": "Heroes/veyra_downed",
+    "height": 225.0,
+    "offset": 8,
+    "method": "Visual torso alignment from separate overlays; no anatomy redrawn."
+  },
+  {
+    "id": "Heroes/glacius_attack",
+    "height": 320.0,
+    "offset": 6,
+    "method": "Visual torso alignment from separate overlays; no anatomy redrawn."
+  },
+  {
+    "id": "Heroes/glacius_downed",
+    "height": 215.0,
+    "offset": 6,
+    "method": "Visual torso alignment from separate overlays; no anatomy redrawn."
+  },
+  {
+    "id": "Heroes/ignis_attack",
+    "height": 322,
+    "offset": 16,
+    "method": "Visual torso alignment from separate overlays; no anatomy redrawn."
+  },
+  {
+    "id": "Heroes/ignis_downed",
+    "height": 225.0,
+    "offset": -16,
+    "method": "Visual torso alignment from separate overlays; no anatomy redrawn."
+  },
+  {
+    "id": "Heroes/marina_attack",
+    "height": 350.0,
+    "offset": 16,
+    "method": "Visual torso alignment from separate overlays; no anatomy redrawn."
+  }
+]

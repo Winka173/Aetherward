@@ -1,0 +1,38 @@
+{
+  "layers": [
+    {
+      "layer": "01_base_terrain.png",
+      "alphaUnchanged": true
+    },
+    {
+      "layer": "02_path_traffic_wear.png",
+      "alphaUnchanged": true
+    },
+    {
+      "layer": "03_ruins_structure.png",
+      "alphaUnchanged": true
+    },
+    {
+      "layer": "04_cliffs_height_planes.png",
+      "alphaUnchanged": true
+    },
+    {
+      "layer": "05_cracks_decals.png",
+      "alphaUnchanged": true
+    },
+    {
+      "layer": "06_ambient_particles_fog.png",
+      "alphaUnchanged": true
+    },
+    {
+      "layer": "07_static_props.png",
+      "alphaUnchanged": true
+    },
+    {
+      "layer": "08_occlusion_shadows.png",
+      "alphaUnchanged": true
+    }
+  ],
+  "allAlphaUnchanged": true,
+  "projection": "Ground coordinates from arena.json mapped to(x,y/0.62,0); camera horizontal scale30, elevation asin(0.62); controlled surface texture never changes layer alpha."
+}

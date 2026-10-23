@@ -1,0 +1,414 @@
+[
+  {
+    "id": "Heroes/terra_evoA",
+    "source": "source/sheets/terra_evoA.png",
+    "prompt": "source/prompts/terra_evoA.json",
+    "height": 255,
+    "dx": -20,
+    "torsoXRatio": 0.575
+  },
+  {
+    "id": "Heroes/terra_evoA_cast",
+    "source": "source/sheets/terra_evoA_cast.png",
+    "prompt": "source/prompts/terra_evoA_cast.json",
+    "height": 270,
+    "torsoXRatio": 0.54
+  },
+  {
+    "id": "Heroes/terra_evoB",
+    "source": "source/sheets/terra_evoB.png",
+    "prompt": "source/prompts/terra_evoB.json",
+    "height": 245,
+    "dx": -28,
+    "torsoXRatio": 0.61
+  },
+  {
+    "id": "Heroes/terra_evoB_cast",
+    "source": "source/sheets/terra_evoB_cast.png",
+    "prompt": "source/prompts/terra_evoB_cast.json",
+    "height": 270,
+    "torsoXRatio": 0.575
+  },
+  {
+    "id": "Heroes/sylph_evoA",
+    "source": "source/sheets/sylph_evoA.png",
+    "prompt": "source/prompts/sylph_evoA.json",
+    "height": 270,
+    "torsoXRatio": 0.6
+  },
+  {
+    "id": "Heroes/sylph_evoB",
+    "source": "source/sheets/sylph_evoB.png",
+    "prompt": "source/prompts/sylph_evoB.json",
+    "height": 270,
+    "torsoXRatio": 0.575
+  },
+  {
+    "id": "Heroes/marina_evoA",
+    "source": "source/sheets/marina_evoA.png",
+    "prompt": "source/prompts/marina_evoA.json",
+    "height": 270,
+    "torsoXRatio": 0.525
+  },
+  {
+    "id": "Heroes/marina_evoA_cast",
+    "source": "source/sheets/marina_evoA_cast.png",
+    "prompt": "source/prompts/marina_evoA_cast.json",
+    "height": 270,
+    "torsoXRatio": 0.525
+  },
+  {
+    "id": "Heroes/marina_evoB",
+    "source": "source/sheets/marina_evoB.png",
+    "prompt": "source/prompts/marina_evoB.json",
+    "height": 270,
+    "torsoXRatio": 0.56
+  },
+  {
+    "id": "Heroes/ignis_attack",
+    "source": "source/sheets/ignis_attack.png",
+    "prompt": "source/prompts/ignis_attack.json",
+    "height": 270,
+    "torsoXRatio": 0.5
+  },
+  {
+    "id": "Heroes/terra_attack",
+    "source": "source/sheets/terra_attack.png",
+    "prompt": "source/prompts/terra_attack.json",
+    "height": 270,
+    "torsoXRatio": 0.555
+  },
+  {
+    "id": "Heroes/terra_evoA_attack",
+    "source": "source/sheets/terra_evoA_attack.png",
+    "prompt": "source/prompts/terra_evoA_attack.json",
+    "height": 270,
+    "torsoXRatio": 0.59
+  },
+  {
+    "id": "Heroes/sylph_attack",
+    "source": "source/sheets/sylph_attack.png",
+    "prompt": "source/prompts/sylph_attack.json",
+    "height": 270,
+    "torsoXRatio": 0.475
+  },
+  {
+    "id": "Heroes/marina_attack",
+    "source": "source/sheets/marina_attack.png",
+    "prompt": "source/prompts/marina_attack.json",
+    "height": 270,
+    "torsoXRatio": 0.5
+  },
+  {
+    "id": "Heroes/marina_evoA_attack",
+    "source": "source/sheets/marina_evoA_attack.png",
+    "prompt": "source/prompts/marina_evoA_attack.json",
+    "height": 270,
+    "torsoXRatio": 0.5
+  },
+  {
+    "id": "Heroes/cinder_idle",
+    "source": "source/sheets/cinder_idle.png",
+    "prompt": "source/prompts/cinder_idle.json",
+    "height": 245,
+    "dx": 0,
+    "torsoXRatio": 0.45
+  },
+  {
+    "id": "Heroes/cinder_cast",
+    "source": "source/sheets/cinder_cast.png",
+    "prompt": "source/prompts/cinder_cast.json",
+    "height": 270,
+    "torsoXRatio": 0.57
+  },
+  {
+    "id": "Heroes/cinder_downed",
+    "source": "source/sheets/cinder_downed.png",
+    "prompt": "source/prompts/cinder_downed.json",
+    "height": 175,
+    "torsoXRatio": 0.55
+  },
+  {
+    "id": "Heroes/cinder_evoB",
+    "source": "source/sheets/cinder_evoB.png",
+    "prompt": "source/prompts/cinder_evoB.json",
+    "height": 270,
+    "torsoXRatio": 0.55
+  },
+  {
+    "id": "Portraits/cinder",
+    "source": "source/sheets/cinder_portrait.png",
+    "prompt": "source/prompts/cinder_portrait.json",
+    "height": 270,
+    "crop": [
+      350,
+      0,
+      1100,
+      750
+    ]
+  },
+  {
+    "id": "Heroes/volt_idle",
+    "source": "source/sheets/volt_idle.png",
+    "prompt": "source/prompts/volt_idle.json",
+    "height": 285,
+    "dx": -8,
+    "torsoXRatio": 0.56
+  },
+  {
+    "id": "Heroes/cinder_attack",
+    "source": "source/sheets/cinder_attack.png",
+    "prompt": "source/prompts/cinder_attack.json",
+    "height": 270,
+    "torsoXRatio": 0.5
+  },
+  {
+    "id": "Heroes/sylph_evoA_cast",
+    "source": "source/sheets/sylph_evoA_cast.png",
+    "prompt": "source/prompts/sylph_evoA_cast.json",
+    "height": 270,
+    "torsoXRatio": 0.6
+  },
+  {
+    "id": "Heroes/marina_evoB_cast",
+    "source": "source/sheets/marina_evoB_cast.png",
+    "prompt": "source/prompts/marina_evoB_cast.json",
+    "height": 270,
+    "torsoXRatio": 0.56
+  },
+  {
+    "id": "Heroes/ignis_evoA_attack",
+    "source": "source/sheets/ignis_evoA_attack.png",
+    "prompt": "source/prompts/ignis_evoA_attack.json",
+    "height": 270,
+    "torsoXRatio": 0.49
+  },
+  {
+    "id": "Heroes/terra_evoB_attack",
+    "source": "source/sheets/terra_evoB_attack.png",
+    "prompt": "source/prompts/terra_evoB_attack.json",
+    "height": 245,
+    "torsoXRatio": 0.49
+  },
+  {
+    "id": "Heroes/cinder_evoA",
+    "source": "source/sheets/cinder_evoA.png",
+    "prompt": "source/prompts/cinder_evoA.json",
+    "height": 245,
+    "torsoXRatio": 0.52
+  },
+  {
+    "id": "Heroes/volt_cast",
+    "source": "source/sheets/volt_cast.png",
+    "prompt": "source/prompts/volt_cast.json",
+    "height": 270,
+    "torsoXRatio": 0.535
+  },
+  {
+    "id": "Heroes/volt_downed",
+    "source": "source/sheets/volt_downed.png",
+    "prompt": "source/prompts/volt_downed.json",
+    "height": 175,
+    "torsoXRatio": 0.56
+  },
+  {
+    "id": "Heroes/freya_idle",
+    "source": "source/sheets/freya_idle.png",
+    "prompt": "source/prompts/freya_idle.json",
+    "height": 270,
+    "torsoXRatio": 0.61
+  },
+  {
+    "id": "Heroes/cinder_evoB_attack",
+    "source": "source/sheets/cinder_evoB_attack.png",
+    "prompt": "source/prompts/cinder_evoB_attack.json",
+    "height": 245,
+    "torsoXRatio": 0.5
+  },
+  {
+    "id": "Heroes/sylph_evoB_cast",
+    "source": "source/sheets/sylph_evoB_cast.png",
+    "prompt": "source/prompts/sylph_evoB_cast.json",
+    "height": 270,
+    "torsoXRatio": 0.575
+  },
+  {
+    "id": "Heroes/ignis_evoB_attack",
+    "source": "source/sheets/ignis_evoB_attack.png",
+    "prompt": "source/prompts/ignis_evoB_attack.json",
+    "height": 270,
+    "torsoXRatio": 0.55
+  },
+  {
+    "id": "Heroes/sylph_evoA_attack",
+    "source": "source/sheets/sylph_evoA_attack.png",
+    "prompt": "source/prompts/sylph_evoA_attack.json",
+    "height": 270,
+    "torsoXRatio": 0.575
+  },
+  {
+    "id": "Heroes/marina_evoB_attack",
+    "source": "source/sheets/marina_evoB_attack.png",
+    "prompt": "source/prompts/marina_evoB_attack.json",
+    "height": 270,
+    "torsoXRatio": 0.525
+  },
+  {
+    "id": "Heroes/cinder_evoB_cast",
+    "source": "source/sheets/cinder_evoB_cast.png",
+    "prompt": "source/prompts/cinder_evoB_cast.json",
+    "height": 270,
+    "torsoXRatio": 0.59
+  },
+  {
+    "id": "Heroes/volt_evoA",
+    "source": "source/sheets/volt_evoA.png",
+    "prompt": "source/prompts/volt_evoA.json",
+    "height": 270,
+    "torsoXRatio": 0.565
+  },
+  {
+    "id": "Heroes/volt_evoB",
+    "source": "source/sheets/volt_evoB.png",
+    "prompt": "source/prompts/volt_evoB.json",
+    "height": 270,
+    "torsoXRatio": 0.55
+  },
+  {
+    "id": "Heroes/freya_cast",
+    "source": "source/sheets/freya_cast.png",
+    "prompt": "source/prompts/freya_cast.json",
+    "height": 270,
+    "torsoXRatio": 0.625
+  },
+  {
+    "id": "Heroes/volt_attack",
+    "source": "source/sheets/volt_attack.png",
+    "prompt": "source/prompts/volt_attack.json",
+    "height": 270,
+    "torsoXRatio": 0.525
+  },
+  {
+    "id": "Heroes/freya_downed",
+    "source": "source/sheets/freya_downed.png",
+    "prompt": "source/prompts/freya_downed.json",
+    "height": 175,
+    "torsoXRatio": 0.645
+  },
+  {
+    "id": "Heroes/sylph_evoB_attack",
+    "source": "source/sheets/sylph_evoB_attack.png",
+    "prompt": "source/prompts/sylph_evoB_attack.json",
+    "height": 270,
+    "torsoXRatio": 0.55
+  },
+  {
+    "id": "Heroes/cinder_evoA_cast",
+    "source": "source/sheets/cinder_evoA_cast.png",
+    "prompt": "source/prompts/cinder_evoA_cast.json",
+    "height": 270,
+    "torsoXRatio": 0.545
+  },
+  {
+    "id": "Heroes/volt_evoA_cast",
+    "source": "source/sheets/volt_evoA_cast.png",
+    "prompt": "source/prompts/volt_evoA_cast.json",
+    "height": 270,
+    "torsoXRatio": 0.56
+  },
+  {
+    "id": "Heroes/volt_evoB_cast",
+    "source": "source/sheets/volt_evoB_cast.png",
+    "prompt": "source/prompts/volt_evoB_cast.json",
+    "height": 270,
+    "torsoXRatio": 0.56
+  },
+  {
+    "id": "Portraits/volt",
+    "source": "source/sheets/volt_portrait.png",
+    "prompt": "source/prompts/volt_portrait.json",
+    "height": 270
+  },
+  {
+    "id": "Heroes/freya_evoA",
+    "source": "source/sheets/freya_evoA.png",
+    "prompt": "source/prompts/freya_evoA.json",
+    "height": 270,
+    "torsoXRatio": 0.63
+  },
+  {
+    "id": "Heroes/freya_evoA_cast",
+    "source": "source/sheets/freya_evoA_cast.png",
+    "prompt": "source/prompts/freya_evoA_cast.json",
+    "height": 270,
+    "torsoXRatio": 0.63
+  },
+  {
+    "id": "Heroes/freya_evoB",
+    "source": "source/sheets/freya_evoB.png",
+    "prompt": "source/prompts/freya_evoB.json",
+    "height": 270,
+    "torsoXRatio": 0.625
+  },
+  {
+    "id": "Heroes/freya_evoB_cast",
+    "source": "source/sheets/freya_evoB_cast.png",
+    "prompt": "source/prompts/freya_evoB_cast.json",
+    "height": 270,
+    "torsoXRatio": 0.625
+  },
+  {
+    "id": "Portraits/freya",
+    "source": "source/sheets/freya_portrait.png",
+    "prompt": "source/prompts/freya_portrait.json",
+    "height": 270,
+    "crop": [
+      150,
+      0,
+      1050,
+      900
+    ]
+  },
+  {
+    "id": "Heroes/cinder_evoA_attack",
+    "source": "source/sheets/cinder_evoA_attack.png",
+    "prompt": "source/prompts/cinder_evoA_attack.json",
+    "height": 245,
+    "torsoXRatio": 0.52
+  },
+  {
+    "id": "Heroes/volt_evoA_attack",
+    "source": "source/sheets/volt_evoA_attack.png",
+    "prompt": "source/prompts/volt_evoA_attack.json",
+    "height": 270,
+    "torsoXRatio": 0.56
+  },
+  {
+    "id": "Heroes/volt_evoB_attack",
+    "source": "source/sheets/volt_evoB_attack.png",
+    "prompt": "source/prompts/volt_evoB_attack.json",
+    "height": 270,
+    "torsoXRatio": 0.525
+  },
+  {
+    "id": "Heroes/freya_attack",
+    "source": "source/sheets/freya_attack.png",
+    "prompt": "source/prompts/freya_attack.json",
+    "height": 270,
+    "torsoXRatio": 0.525
+  },
+  {
+    "id": "Heroes/freya_evoA_attack",
+    "source": "source/sheets/freya_evoA_attack.png",
+    "prompt": "source/prompts/freya_evoA_attack.json",
+    "height": 270,
+    "torsoXRatio": 0.55
+  },
+  {
+    "id": "Heroes/freya_evoB_attack",
+    "source": "source/sheets/freya_evoB_attack.png",
+    "prompt": "source/prompts/freya_evoB_attack.json",
+    "height": 270,
+    "torsoXRatio": 0.55
+  }
+]

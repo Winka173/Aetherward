@@ -39,7 +39,8 @@ namespace Aetherward.Tests
             yield return WaitFor(() => GameRoot.Instance.Current == AppScreen.Battle, 10f);
             RunController rc = App.Run;
             Assert.AreEqual(RunPhase.Prepare, rc.State.Phase);
-            Assert.IsTrue(rc.PlaceHero(rc.State.Heroes[0].Uid, 5), "placement command works in play mode");
+            rc.State.Stance = Aetherward.Sim.Combat.PartyStance.Balanced;
+            rc.State.Formation = Aetherward.Sim.Combat.PartyFormation.Split;
 
             var battle = Object.FindObjectOfType<BattleController>();
             Assert.IsNotNull(battle);

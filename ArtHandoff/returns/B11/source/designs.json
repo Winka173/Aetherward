@@ -1,0 +1,50 @@
+{
+  "siegebreaker_golem": {
+    "name": "Siegebreaker Golem",
+    "design": "Mini-boss: a towering siege golem of sanctum stone bound with iron bands, a battering-ram arm, glowing armour seams that close at 50% (armour phase). Tell: ram arm drawn back, seams flaring. Attack: charge slam impact."
+  },
+  "ignaroth": {
+    "name": "Ignaroth, the Ember Tyrant",
+    "design": "Ashen Horde: the Ember Tyrant, a horned magma-giant with cooling basalt crust over molten flesh, a crown of volcanic spikes, vents on the back that glow. Tell: arms raised, vents erupting light. Attack: fists into the ground."
+  },
+  "vaelith": {
+    "name": "Vaelith, the Storm Tyrant",
+    "design": "Stormspire: the Storm Tyrant (she), a winged tyrant in copper-feathered armour, a crown of lightning, a storm spear. Tell: spear raised, lightning gathering. Attack: spear thrust down."
+  },
+  "mirrath": {
+    "name": "Mirrath, the Mirror Queen",
+    "design": "Arcane Fractures: the Mirror Queen, a queen whose body is half mirror-shards, a fractured mirror halo, a sceptre of magenta glass. Tell: arms spread, mirrors aligning. Attack: sceptre flash."
+  },
+  "aetherion": {
+    "name": "Aetherion, the Fallen Crystal",
+    "design": "Arcane Fractures: the Fallen Crystal - a dark mirror of the player's Crystal: a corrupted crystal colossus with a fractured core, floating broken facets, crystal arms. Tell: facets drawing in. Attack: arms thrown open."
+  },
+  "thornmother": {
+    "name": "Thornmother",
+    "design": "Corrupted Wilds: an ancient treant matriarch with a crown of thorns and blossoms of sick green, roots for a lower body, a cradle of thorns. Tell: roots lifting. Attack: thorn arms lashing."
+  },
+  "ironclad_warlord": {
+    "name": "Ironclad Warlord",
+    "design": "Iron Legion: a heavily armoured warlord in layered riveted plate with a great war banner on the back and a siege hammer. Tell: hammer raised. Attack: hammer down."
+  },
+  "ashen_matriarch": {
+    "name": "Ashen Matriarch",
+    "design": "Ashen Horde: brood mother of the imps, a hunched cinder giantess with a smouldering cocoon-like abdomen and ember-eyed imps clinging to her. Tell: arms raised, abdomen glowing. Attack: claws forward."
+  },
+  "nyxhollow": {
+    "name": "Nyxhollow, the Hungering Void",
+    "design": "Voidborn: the Hungering Void, a huge maw-creature of void flesh with star-holes, many-jointed arms and a ring of void eyes. Tell: maw opening, void light inside. Attack: lunging bite."
+  },
+  "seraphyne": {
+    "name": "Seraphyne, Queen of Winter",
+    "design": "Frozen Covenant: the Queen of Winter, tall and regal, an ice-spire crown, a gown that becomes glacier at the hem, a frost sceptre, floating snow. Tell: sceptre raised, frost gathering. Attack: sceptre pointed down."
+  },
+  "gravemaw": {
+    "name": "Gravemaw, the Siege Titan",
+    "design": "Iron Legion: the Siege Titan, a colossal armoured titan with a gaping maw-like vent in the chest and mortar barrels on the shoulders, rust and soot. Tell: shoulders braced, barrels glowing. Attack: recoil after the volley."
+  },
+  "rift_warden": {
+    "name": "The Rift Warden",
+    "design": "Final boss: the sanctum's ancient guardian statue animated and corrupted by the rift; basalt/obsidian plate, a broken halo of floating rift-crystal shards, a massive glaive held diagonally, a crimson-violet chest core behind cracked plates, a tattered stone-grey cloak. Tell: glaive raised high, halo shards flaring. Attack: glaive slammed down toward +X."
+  }
+}

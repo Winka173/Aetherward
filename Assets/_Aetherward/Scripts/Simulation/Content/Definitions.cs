@@ -98,6 +98,13 @@ namespace Aetherward.Sim.Content
         public string DescKey;
     }
 
+    public sealed class UltimateDef
+    {
+        public string Kind;
+        public float Seconds = 32f, Radius = 3f, Power = 2.8f, Stun, Heal, Shield;
+        public int Hits = 1;
+    }
+
     public sealed class HeroDef
     {
         public string Id;
@@ -111,6 +118,7 @@ namespace Aetherward.Sim.Content
         public bool Melee;
         public AttackDef Basic;
         public SkillDef Skill;
+        public UltimateDef Ultimate;
         public string PassiveKind;
         public ParamBag PassiveParams = new ParamBag();
         public string PassiveNameKey;

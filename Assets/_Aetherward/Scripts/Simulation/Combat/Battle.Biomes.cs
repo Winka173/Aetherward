@@ -10,6 +10,23 @@ namespace Aetherward.Sim.Combat
         private float[] _hazardTimers;
         private Pcg32 _hazardRng;
 
+        private void UpdateAreaTraits()
+        {
+            foreach (HeroUnit hero in Heroes)
+            {
+                hero.Buffs.RemoveAll(b => b.Source != null && b.Source.StartsWith("area:"));
+                if (!hero.Alive) continue;
+                foreach (AreaTraitDef area in Biome.AreaTraits)
+                {
+                    if (Vec2.Distance(hero.Pos, area.Pos) > area.Radius) continue;
+                    foreach (EffectOp op in area.Effects)
+                        if (op.Op == "stat") hero.Buffs.Add(new TimedBuff { Stat = op.Stat,
+                            Percent = op.Percent ? op.Value : 0f, Flat = op.Percent ? 0f : op.Value,
+                            Remaining = 1f, Source = "area:" + area.Id });
+                }
+            }
+        }
+
         private void SetupBiome()
         {
             _hazardTimers = new float[Biome.Hazards.Count];
@@ -64,7 +81,7 @@ namespace Aetherward.Sim.Combat
                 int start = _hazardRng.Range(0, hz.Points.Count);
                 for (int k = 0; k < hz.Count && k < hz.Points.Count; k++)
                 {
-                    Vec2 p = hz.Points[(start + k * 2) % hz.Points.Count];
+                    Vec2 p = hz.Points[(start + k) % hz.Points.Count];
                     AddStrike(new DelayedStrike
                     {
                         Kind = StrikeKind.Hazard,

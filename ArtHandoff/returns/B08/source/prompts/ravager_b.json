@@ -1,0 +1,16 @@
+{
+  "id": "Enemies/ravager_b",
+  "character": "ravager",
+  "height": 205,
+  "width": 235,
+  "bottom": 236,
+  "raw": "C:\\Users\\Winka\\.codex\\generated_images\\01a159d8-948e-7791-af53-743787b45395\\exec-4324af9c-f766-483b-ad91-0157b82faf80.png",
+  "prompt": "Dark Mythic Fantasy, painterly stylized 2.5D; orthographic 38.3-degree elevation, three-quarter front body turned 25 degrees toward screen-right. Key upper-left-front #ffe9d0, rim back-right #9fe8ff, ambient #16233a. Controlled broad brush planes, coloured local-hue dark edges without black outlines. Use case: stylized-concept. Production isolated transparent enemy sprite. Requested 1536x1536 high resolution, one character only. Image 1 is this character identity; preserve EXACT face, costume, palette, anatomy and props. Remaining B01 images are style-family only. Dangerous ELITE horned brute, wide shoulders, crown of rift-crystal horns, heavy spiked sanctum iron armour, huge serrated cleaver, crimson accent rim plus cool directional rim. Wider and more dangerous than juggernaut, massive armour slabs. POSE: Walk PASSING pose: make a modest leg-cycle change from identity contact pose, same torso, back, head, costume, proportions and upper body placement; silhouette IoU >=0.6. Palette charcoal #2a2c31, ash #625c55, oxblood #6b2734, basalt edge #1d1f24. Broad deliberate brush planes with clear material separation. Strong lit key planes and cool #9fe8ff back-right rim 2–3 px at final 256 export, mean contour luminance >=0.30 so unit separates from dark basalt 0.16. Entire character visible with generous transparent margins; torso centred at x50%, facing screen-right +X. Brute silhouette 200–215 high and >=200 wide on final 256 canvas, extremely broad shoulders. Feet contact same ground baseline. Transparent background, no floor, no shadow, no backdrop, no text or numbers. No detached projectile, beam, explosion, ground effect or excess glow. Small focus/weapon glow contained close to body only. Keep all props within canvas. Do not copy reference transparency RGB rays.",
+  "references": [
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B08/source/sheets/ravager_a.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Enemies/grunt_a.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Enemies/juggernaut_a.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Enemies/hexcaster_a.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Enemies/storm_harpy_a.png"
+  ]
+}

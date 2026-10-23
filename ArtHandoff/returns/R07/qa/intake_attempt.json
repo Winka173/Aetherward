@@ -1,0 +1,20 @@
+{
+  "batch": "R07",
+  "intake": {
+    "status": "blocked",
+    "exitCode": 1,
+    "blockingProblems": null,
+    "error": "FileNotFoundError: ArtHandoff/requests/R07/INPUT_MANIFEST.json",
+    "log": "qa/intake_attempt.log"
+  },
+  "preview": {
+    "status": "blocked",
+    "exitCode": 1,
+    "error": "FileNotFoundError: ArtHandoff/requests/R07/INPUT_MANIFEST.json",
+    "log": "qa/preview_attempt.log"
+  },
+  "artChecks": {
+    "status": "not_run",
+    "reason": "No image was produced."
+  }
+}

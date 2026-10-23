@@ -1,0 +1,1193 @@
+[
+  {
+    "id": "Heroes/terra_evoA",
+    "bounds": [
+      56,
+      118,
+      317,
+      372
+    ],
+    "mode": "RGBA",
+    "size": [
+      400,
+      400
+    ],
+    "masterSize": [
+      800,
+      800
+    ],
+    "issues": [],
+    "edgeLuminance": 0.31691924935477167,
+    "footRow": 371
+  },
+  {
+    "id": "Heroes/terra_evoA_cast",
+    "bounds": [
+      41,
+      119,
+      341,
+      372
+    ],
+    "mode": "RGBA",
+    "size": [
+      400,
+      400
+    ],
+    "masterSize": [
+      800,
+      800
+    ],
+    "issues": [],
+    "edgeLuminance": 0.3394385121012101,
+    "footRow": 371
+  },
+  {
+    "id": "Heroes/terra_evoB",
+    "bounds": [
+      41,
+      130,
+      297,
+      372
+    ],
+    "mode": "RGBA",
+    "size": [
+      400,
+      400
+    ],
+    "masterSize": [
+      800,
+      800
+    ],
+    "issues": [],
+    "edgeLuminance": 0.33760327211254687,
+    "footRow": 371
+  },
+  {
+    "id": "Heroes/terra_evoB_cast",
+    "bounds": [
+      42,
+      103,
+      318,
+      372
+    ],
+    "mode": "RGBA",
+    "size": [
+      400,
+      400
+    ],
+    "masterSize": [
+      800,
+      800
+    ],
+    "issues": [],
+    "edgeLuminance": 0.389493709909442,
+    "footRow": 371
+  },
+  {
+    "id": "Heroes/sylph_evoA",
+    "bounds": [
+      45,
+      103,
+      310,
+      372
+    ],
+    "mode": "RGBA",
+    "size": [
+      400,
+      400
+    ],
+    "masterSize": [
+      800,
+      800
+    ],
+    "issues": [],
+    "edgeLuminance": 0.328835364763233,
+    "footRow": 371
+  },
+  {
+    "id": "Heroes/sylph_evoA_cast",
+    "bounds": [
+      41,
+      105,
+      306,
+      372
+    ],
+    "mode": "RGBA",
+    "size": [
+      400,
+      400
+    ],
+    "masterSize": [
+      800,
+      800
+    ],
+    "issues": [],
+    "edgeLuminance": 0.4088205559529351,
+    "footRow": 371
+  },
+  {
+    "id": "Heroes/sylph_evoB",
+    "bounds": [
+      85,
+      103,
+      279,
+      372
+    ],
+    "mode": "RGBA",
+    "size": [
+      400,
+      400
+    ],
+    "masterSize": [
+      800,
+      800
+    ],
+    "issues": [],
+    "edgeLuminance": 0.32036155999082355,
+    "footRow": 371
+  },
+  {
+    "id": "Heroes/sylph_evoB_cast",
+    "bounds": [
+      62,
+      103,
+      311,
+      372
+    ],
+    "mode": "RGBA",
+    "size": [
+      400,
+      400
+    ],
+    "masterSize": [
+      800,
+      800
+    ],
+    "issues": [],
+    "edgeLuminance": 0.3720983414874654,
+    "footRow": 371
+  },
+  {
+    "id": "Heroes/marina_evoA",
+    "bounds": [
+      84,
+      103,
+      306,
+      372
+    ],
+    "mode": "RGBA",
+    "size": [
+      400,
+      400
+    ],
+    "masterSize": [
+      800,
+      800
+    ],
+    "issues": [],
+    "edgeLuminance": 0.5483320588235294,
+    "footRow": 371
+  },
+  {
+    "id": "Heroes/marina_evoA_cast",
+    "bounds": [
+      62,
+      103,
+      327,
+      372
+    ],
+    "mode": "RGBA",
+    "size": [
+      400,
+      400
+    ],
+    "masterSize": [
+      800,
+      800
+    ],
+    "issues": [],
+    "edgeLuminance": 0.5631583318396838,
+    "footRow": 371
+  },
+  {
+    "id": "Heroes/marina_evoB",
+    "bounds": [
+      86,
+      103,
+      310,
+      372
+    ],
+    "mode": "RGBA",
+    "size": [
+      400,
+      400
+    ],
+    "masterSize": [
+      800,
+      800
+    ],
+    "issues": [],
+    "edgeLuminance": 0.5167457376834491,
+    "footRow": 371
+  },
+  {
+    "id": "Heroes/marina_evoB_cast",
+    "bounds": [
+      55,
+      103,
+      322,
+      372
+    ],
+    "mode": "RGBA",
+    "size": [
+      400,
+      400
+    ],
+    "masterSize": [
+      800,
+      800
+    ],
+    "issues": [],
+    "edgeLuminance": 0.5015618026221138,
+    "footRow": 371
+  },
+  {
+    "id": "Heroes/ignis_attack",
+    "bounds": [
+      50,
+      103,
+      358,
+      372
+    ],
+    "mode": "RGBA",
+    "size": [
+      400,
+      400
+    ],
+    "masterSize": [
+      800,
+      800
+    ],
+    "issues": [],
+    "edgeLuminance": 0.3293859797100825,
+    "footRow": 371
+  },
+  {
+    "id": "Heroes/ignis_evoA_attack",
+    "bounds": [
+      55,
+      103,
+      358,
+      372
+    ],
+    "mode": "RGBA",
+    "size": [
+      400,
+      400
+    ],
+    "masterSize": [
+      800,
+      800
+    ],
+    "issues": [],
+    "edgeLuminance": 0.2894838754649659,
+    "footRow": 371
+  },
+  {
+    "id": "Heroes/ignis_evoB_attack",
+    "bounds": [
+      41,
+      125,
+      333,
+      372
+    ],
+    "mode": "RGBA",
+    "size": [
+      400,
+      400
+    ],
+    "masterSize": [
+      800,
+      800
+    ],
+    "issues": [],
+    "edgeLuminance": 0.5500926716053337,
+    "footRow": 371
+  },
+  {
+    "id": "Heroes/terra_attack",
+    "bounds": [
+      41,
+      131,
+      344,
+      372
+    ],
+    "mode": "RGBA",
+    "size": [
+      400,
+      400
+    ],
+    "masterSize": [
+      800,
+      800
+    ],
+    "issues": [],
+    "edgeLuminance": 0.41924734113037965,
+    "footRow": 371
+  },
+  {
+    "id": "Heroes/terra_evoA_attack",
+    "bounds": [
+      41,
+      134,
+      315,
+      372
+    ],
+    "mode": "RGBA",
+    "size": [
+      400,
+      400
+    ],
+    "masterSize": [
+      800,
+      800
+    ],
+    "issues": [],
+    "edgeLuminance": 0.34514781795832583,
+    "footRow": 371
+  },
+  {
+    "id": "Heroes/terra_evoB_attack",
+    "bounds": [
+      54,
+      128,
+      358,
+      372
+    ],
+    "mode": "RGBA",
+    "size": [
+      400,
+      400
+    ],
+    "masterSize": [
+      800,
+      800
+    ],
+    "issues": [],
+    "edgeLuminance": 0.39518803813361686,
+    "footRow": 371
+  },
+  {
+    "id": "Heroes/sylph_attack",
+    "bounds": [
+      83,
+      103,
+      328,
+      372
+    ],
+    "mode": "RGBA",
+    "size": [
+      400,
+      400
+    ],
+    "masterSize": [
+      800,
+      800
+    ],
+    "issues": [],
+    "edgeLuminance": 0.2939088067244511,
+    "footRow": 371
+  },
+  {
+    "id": "Heroes/sylph_evoA_attack",
+    "bounds": [
+      45,
+      103,
+      318,
+      372
+    ],
+    "mode": "RGBA",
+    "size": [
+      400,
+      400
+    ],
+    "masterSize": [
+      800,
+      800
+    ],
+    "issues": [],
+    "edgeLuminance": 0.303798814308332,
+    "footRow": 371
+  },
+  {
+    "id": "Heroes/sylph_evoB_attack",
+    "bounds": [
+      73,
+      103,
+      309,
+      372
+    ],
+    "mode": "RGBA",
+    "size": [
+      400,
+      400
+    ],
+    "masterSize": [
+      800,
+      800
+    ],
+    "issues": [],
+    "edgeLuminance": 0.3519226323978499,
+    "footRow": 371
+  },
+  {
+    "id": "Heroes/marina_attack",
+    "bounds": [
+      46,
+      122,
+      358,
+      372
+    ],
+    "mode": "RGBA",
+    "size": [
+      400,
+      400
+    ],
+    "masterSize": [
+      800,
+      800
+    ],
+    "issues": [],
+    "edgeLuminance": 0.5249852648553646,
+    "footRow": 371
+  },
+  {
+    "id": "Heroes/marina_evoA_attack",
+    "bounds": [
+      59,
+      103,
+      352,
+      372
+    ],
+    "mode": "RGBA",
+    "size": [
+      400,
+      400
+    ],
+    "masterSize": [
+      800,
+      800
+    ],
+    "issues": [],
+    "edgeLuminance": 0.5878376542446673,
+    "footRow": 371
+  },
+  {
+    "id": "Heroes/marina_evoB_attack",
+    "bounds": [
+      41,
+      108,
+      346,
+      372
+    ],
+    "mode": "RGBA",
+    "size": [
+      400,
+      400
+    ],
+    "masterSize": [
+      800,
+      800
+    ],
+    "issues": [],
+    "edgeLuminance": 0.5600768700541846,
+    "footRow": 371
+  },
+  {
+    "id": "Heroes/cinder_idle",
+    "bounds": [
+      77,
+      136,
+      359,
+      372
+    ],
+    "mode": "RGBA",
+    "size": [
+      400,
+      400
+    ],
+    "masterSize": [
+      800,
+      800
+    ],
+    "issues": [],
+    "edgeLuminance": 0.32229602507383925,
+    "footRow": 371
+  },
+  {
+    "id": "Heroes/cinder_cast",
+    "bounds": [
+      50,
+      103,
+      297,
+      372
+    ],
+    "mode": "RGBA",
+    "size": [
+      400,
+      400
+    ],
+    "masterSize": [
+      800,
+      800
+    ],
+    "issues": [],
+    "edgeLuminance": 0.3063852180530274,
+    "footRow": 371
+  },
+  {
+    "id": "Heroes/cinder_downed",
+    "bounds": [
+      83,
+      199,
+      298,
+      372
+    ],
+    "mode": "RGBA",
+    "size": [
+      400,
+      400
+    ],
+    "masterSize": [
+      800,
+      800
+    ],
+    "issues": [],
+    "edgeLuminance": 0.2840776478376852,
+    "footRow": 371
+  },
+  {
+    "id": "Heroes/cinder_evoA",
+    "bounds": [
+      42,
+      133,
+      347,
+      372
+    ],
+    "mode": "RGBA",
+    "size": [
+      400,
+      400
+    ],
+    "masterSize": [
+      800,
+      800
+    ],
+    "issues": [],
+    "edgeLuminance": 0.32220153717527616,
+    "footRow": 371
+  },
+  {
+    "id": "Heroes/cinder_evoA_cast",
+    "bounds": [
+      44,
+      103,
+      334,
+      372
+    ],
+    "mode": "RGBA",
+    "size": [
+      400,
+      400
+    ],
+    "masterSize": [
+      800,
+      800
+    ],
+    "issues": [],
+    "edgeLuminance": 0.28566816708497345,
+    "footRow": 371
+  },
+  {
+    "id": "Heroes/cinder_evoB",
+    "bounds": [
+      41,
+      106,
+      336,
+      372
+    ],
+    "mode": "RGBA",
+    "size": [
+      400,
+      400
+    ],
+    "masterSize": [
+      800,
+      800
+    ],
+    "issues": [],
+    "edgeLuminance": 0.30404041476601695,
+    "footRow": 371
+  },
+  {
+    "id": "Heroes/cinder_evoB_cast",
+    "bounds": [
+      43,
+      103,
+      309,
+      372
+    ],
+    "mode": "RGBA",
+    "size": [
+      400,
+      400
+    ],
+    "masterSize": [
+      800,
+      800
+    ],
+    "issues": [],
+    "edgeLuminance": 0.3494812510485477,
+    "footRow": 371
+  },
+  {
+    "id": "Portraits/cinder",
+    "bounds": [
+      0,
+      0,
+      192,
+      192
+    ],
+    "mode": "RGBA",
+    "size": [
+      192,
+      192
+    ],
+    "masterSize": [
+      384,
+      384
+    ],
+    "issues": []
+  },
+  {
+    "id": "Heroes/volt_idle",
+    "bounds": [
+      65,
+      88,
+      317,
+      372
+    ],
+    "mode": "RGBA",
+    "size": [
+      400,
+      400
+    ],
+    "masterSize": [
+      800,
+      800
+    ],
+    "issues": [],
+    "edgeLuminance": 0.3496508139335634,
+    "footRow": 371
+  },
+  {
+    "id": "Heroes/volt_cast",
+    "bounds": [
+      65,
+      103,
+      327,
+      373
+    ],
+    "mode": "RGBA",
+    "size": [
+      400,
+      400
+    ],
+    "masterSize": [
+      800,
+      800
+    ],
+    "issues": [],
+    "edgeLuminance": 0.395546719227565,
+    "footRow": 372
+  },
+  {
+    "id": "Heroes/volt_downed",
+    "bounds": [
+      90,
+      198,
+      286,
+      372
+    ],
+    "mode": "RGBA",
+    "size": [
+      400,
+      400
+    ],
+    "masterSize": [
+      800,
+      800
+    ],
+    "issues": [],
+    "edgeLuminance": 0.36817579834976644,
+    "footRow": 371
+  },
+  {
+    "id": "Heroes/volt_evoA",
+    "bounds": [
+      61,
+      103,
+      306,
+      372
+    ],
+    "mode": "RGBA",
+    "size": [
+      400,
+      400
+    ],
+    "masterSize": [
+      800,
+      800
+    ],
+    "issues": [],
+    "edgeLuminance": 0.37163604936382877,
+    "footRow": 371
+  },
+  {
+    "id": "Heroes/volt_evoA_cast",
+    "bounds": [
+      51,
+      103,
+      318,
+      372
+    ],
+    "mode": "RGBA",
+    "size": [
+      400,
+      400
+    ],
+    "masterSize": [
+      800,
+      800
+    ],
+    "issues": [],
+    "edgeLuminance": 0.3366973741531058,
+    "footRow": 371
+  },
+  {
+    "id": "Heroes/volt_evoB",
+    "bounds": [
+      67,
+      103,
+      315,
+      372
+    ],
+    "mode": "RGBA",
+    "size": [
+      400,
+      400
+    ],
+    "masterSize": [
+      800,
+      800
+    ],
+    "issues": [],
+    "edgeLuminance": 0.3256719874829032,
+    "footRow": 371
+  },
+  {
+    "id": "Heroes/volt_evoB_cast",
+    "bounds": [
+      59,
+      103,
+      312,
+      372
+    ],
+    "mode": "RGBA",
+    "size": [
+      400,
+      400
+    ],
+    "masterSize": [
+      800,
+      800
+    ],
+    "issues": [],
+    "edgeLuminance": 0.34049151395489863,
+    "footRow": 371
+  },
+  {
+    "id": "Portraits/volt",
+    "bounds": [
+      0,
+      0,
+      192,
+      192
+    ],
+    "mode": "RGBA",
+    "size": [
+      192,
+      192
+    ],
+    "masterSize": [
+      384,
+      384
+    ],
+    "issues": []
+  },
+  {
+    "id": "Heroes/freya_idle",
+    "bounds": [
+      42,
+      129,
+      299,
+      372
+    ],
+    "mode": "RGBA",
+    "size": [
+      400,
+      400
+    ],
+    "masterSize": [
+      800,
+      800
+    ],
+    "issues": [],
+    "edgeLuminance": 0.578805918108178,
+    "footRow": 371
+  },
+  {
+    "id": "Heroes/freya_cast",
+    "bounds": [
+      42,
+      126,
+      295,
+      372
+    ],
+    "mode": "RGBA",
+    "size": [
+      400,
+      400
+    ],
+    "masterSize": [
+      800,
+      800
+    ],
+    "issues": [],
+    "edgeLuminance": 0.5844793864409232,
+    "footRow": 371
+  },
+  {
+    "id": "Heroes/freya_downed",
+    "bounds": [
+      61,
+      198,
+      278,
+      372
+    ],
+    "mode": "RGBA",
+    "size": [
+      400,
+      400
+    ],
+    "masterSize": [
+      800,
+      800
+    ],
+    "issues": [],
+    "edgeLuminance": 0.6661050098915683,
+    "footRow": 371
+  },
+  {
+    "id": "Heroes/freya_evoA",
+    "bounds": [
+      42,
+      134,
+      293,
+      372
+    ],
+    "mode": "RGBA",
+    "size": [
+      400,
+      400
+    ],
+    "masterSize": [
+      800,
+      800
+    ],
+    "issues": [],
+    "edgeLuminance": 0.5614481655357353,
+    "footRow": 371
+  },
+  {
+    "id": "Heroes/freya_evoA_cast",
+    "bounds": [
+      42,
+      127,
+      294,
+      372
+    ],
+    "mode": "RGBA",
+    "size": [
+      400,
+      400
+    ],
+    "masterSize": [
+      800,
+      800
+    ],
+    "issues": [],
+    "edgeLuminance": 0.5571929357013311,
+    "footRow": 371
+  },
+  {
+    "id": "Heroes/freya_evoB",
+    "bounds": [
+      42,
+      120,
+      292,
+      372
+    ],
+    "mode": "RGBA",
+    "size": [
+      400,
+      400
+    ],
+    "masterSize": [
+      800,
+      800
+    ],
+    "issues": [],
+    "edgeLuminance": 0.6516839917028148,
+    "footRow": 371
+  },
+  {
+    "id": "Heroes/freya_evoB_cast",
+    "bounds": [
+      41,
+      121,
+      299,
+      372
+    ],
+    "mode": "RGBA",
+    "size": [
+      400,
+      400
+    ],
+    "masterSize": [
+      800,
+      800
+    ],
+    "issues": [],
+    "edgeLuminance": 0.6413309959169733,
+    "footRow": 371
+  },
+  {
+    "id": "Portraits/freya",
+    "bounds": [
+      0,
+      0,
+      192,
+      192
+    ],
+    "mode": "RGBA",
+    "size": [
+      192,
+      192
+    ],
+    "masterSize": [
+      384,
+      384
+    ],
+    "issues": []
+  },
+  {
+    "id": "Heroes/cinder_attack",
+    "bounds": [
+      46,
+      118,
+      358,
+      372
+    ],
+    "mode": "RGBA",
+    "size": [
+      400,
+      400
+    ],
+    "masterSize": [
+      800,
+      800
+    ],
+    "issues": [],
+    "edgeLuminance": 0.3054892004768364,
+    "footRow": 371
+  },
+  {
+    "id": "Heroes/cinder_evoA_attack",
+    "bounds": [
+      42,
+      130,
+      353,
+      372
+    ],
+    "mode": "RGBA",
+    "size": [
+      400,
+      400
+    ],
+    "masterSize": [
+      800,
+      800
+    ],
+    "issues": [],
+    "edgeLuminance": 0.2930212857525351,
+    "footRow": 371
+  },
+  {
+    "id": "Heroes/cinder_evoB_attack",
+    "bounds": [
+      47,
+      130,
+      359,
+      372
+    ],
+    "mode": "RGBA",
+    "size": [
+      400,
+      400
+    ],
+    "masterSize": [
+      800,
+      800
+    ],
+    "issues": [],
+    "edgeLuminance": 0.3092680313171205,
+    "footRow": 371
+  },
+  {
+    "id": "Heroes/volt_attack",
+    "bounds": [
+      67,
+      103,
+      325,
+      372
+    ],
+    "mode": "RGBA",
+    "size": [
+      400,
+      400
+    ],
+    "masterSize": [
+      800,
+      800
+    ],
+    "issues": [],
+    "edgeLuminance": 0.376987368199148,
+    "footRow": 371
+  },
+  {
+    "id": "Heroes/volt_evoA_attack",
+    "bounds": [
+      55,
+      103,
+      314,
+      372
+    ],
+    "mode": "RGBA",
+    "size": [
+      400,
+      400
+    ],
+    "masterSize": [
+      800,
+      800
+    ],
+    "issues": [],
+    "edgeLuminance": 0.3453352210088009,
+    "footRow": 371
+  },
+  {
+    "id": "Heroes/volt_evoB_attack",
+    "bounds": [
+      65,
+      103,
+      327,
+      372
+    ],
+    "mode": "RGBA",
+    "size": [
+      400,
+      400
+    ],
+    "masterSize": [
+      800,
+      800
+    ],
+    "issues": [],
+    "edgeLuminance": 0.34318944943387175,
+    "footRow": 371
+  },
+  {
+    "id": "Heroes/freya_attack",
+    "bounds": [
+      44,
+      104,
+      343,
+      372
+    ],
+    "mode": "RGBA",
+    "size": [
+      400,
+      400
+    ],
+    "masterSize": [
+      800,
+      800
+    ],
+    "issues": [],
+    "edgeLuminance": 0.59512307457594,
+    "footRow": 371
+  },
+  {
+    "id": "Heroes/freya_evoA_attack",
+    "bounds": [
+      42,
+      126,
+      329,
+      372
+    ],
+    "mode": "RGBA",
+    "size": [
+      400,
+      400
+    ],
+    "masterSize": [
+      800,
+      800
+    ],
+    "issues": [],
+    "edgeLuminance": 0.6222953876839502,
+    "footRow": 371
+  },
+  {
+    "id": "Heroes/freya_evoB_attack",
+    "bounds": [
+      41,
+      105,
+      334,
+      372
+    ],
+    "mode": "RGBA",
+    "size": [
+      400,
+      400
+    ],
+    "masterSize": [
+      800,
+      800
+    ],
+    "issues": [],
+    "edgeLuminance": 0.6442284688945346,
+    "footRow": 371
+  }
+]

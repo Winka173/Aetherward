@@ -1,0 +1,12 @@
+{
+  "observedBeforeRevisionExports": "2026-10-20",
+  "note": "The BattleController.cs change was present when R1 began. The earlier run documented Services.cs; current external worktree state differs. R1 writes are confined to this return folder.",
+  "trackedStatus": [
+    " M .gitignore",
+    " M Tools/ArtPipeline/ap.py",
+    " M Tools/ArtPipeline/blender/sanctum_env.py",
+    " M Tools/ArtPipeline/build.py",
+    " M Tools/ArtPipeline/fetch_polyhaven.py",
+    " M Tools/ArtPipeline/handoff.py"
+  ]
+}

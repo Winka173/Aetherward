@@ -1,0 +1,1454 @@
+{
+  "batch": "B11",
+  "generatedBy": "Tools/ArtPipeline/handoff.py request",
+  "camera": null,
+  "groups": [
+    {
+      "id": "bosses",
+      "title": "Bosses",
+      "priority": "P1",
+      "required": true,
+      "assets": [
+        {
+          "id": "Enemies/siegebreaker_golem_a",
+          "livePath": "Assets/_Aetherward/Resources/Art/Enemies/siegebreaker_golem_a.png",
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGBA",
+          "ppu": 160,
+          "pivot": [
+            0.5,
+            0.05078125
+          ],
+          "border": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "worldSize": [
+            3.2,
+            3.2
+          ],
+          "guid": "645b4a5eba000a1dc4c97954366a1596",
+          "codeRefs": [],
+          "footRowFromTop": 486,
+          "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/siegebreaker_golem_a.png",
+          "guide": "ArtHandoff/requests/B11/references/guides/unit__Enemies__siegebreaker_golem_a.png"
+        },
+        {
+          "id": "Enemies/siegebreaker_golem_b",
+          "livePath": "Assets/_Aetherward/Resources/Art/Enemies/siegebreaker_golem_b.png",
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGBA",
+          "ppu": 160,
+          "pivot": [
+            0.5,
+            0.05078125
+          ],
+          "border": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "worldSize": [
+            3.2,
+            3.2
+          ],
+          "guid": "1020fa5212f1cf0ba7e66a639cd2767b",
+          "codeRefs": [],
+          "footRowFromTop": 486,
+          "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/siegebreaker_golem_b.png",
+          "guide": "ArtHandoff/requests/B11/references/guides/unit__Enemies__siegebreaker_golem_b.png"
+        },
+        {
+          "id": "Enemies/ignaroth_a",
+          "livePath": "Assets/_Aetherward/Resources/Art/Enemies/ignaroth_a.png",
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGBA",
+          "ppu": 160,
+          "pivot": [
+            0.5,
+            0.05078125
+          ],
+          "border": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "worldSize": [
+            3.2,
+            3.2
+          ],
+          "guid": "79e98e9f6718fce77607d0edc2bd22f8",
+          "codeRefs": [
+            "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.Ui.cs:349",
+            "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:127",
+            "Assets/_Aetherward/Scripts/Unity/Menu/MenuController.cs:336"
+          ],
+          "footRowFromTop": 486,
+          "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/ignaroth_a.png",
+          "guide": "ArtHandoff/requests/B11/references/guides/unit__Enemies__ignaroth_a.png"
+        },
+        {
+          "id": "Enemies/ignaroth_b",
+          "livePath": "Assets/_Aetherward/Resources/Art/Enemies/ignaroth_b.png",
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGBA",
+          "ppu": 160,
+          "pivot": [
+            0.5,
+            0.05078125
+          ],
+          "border": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "worldSize": [
+            3.2,
+            3.2
+          ],
+          "guid": "ba08ab8fe0861a3cb5e60e01312436b0",
+          "codeRefs": [
+            "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:128"
+          ],
+          "footRowFromTop": 486,
+          "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/ignaroth_b.png",
+          "guide": "ArtHandoff/requests/B11/references/guides/unit__Enemies__ignaroth_b.png"
+        },
+        {
+          "id": "Enemies/vaelith_a",
+          "livePath": "Assets/_Aetherward/Resources/Art/Enemies/vaelith_a.png",
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGBA",
+          "ppu": 160,
+          "pivot": [
+            0.5,
+            0.05078125
+          ],
+          "border": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "worldSize": [
+            3.2,
+            3.2
+          ],
+          "guid": "90007bfb3acf00d9dbc7a77c9f60ea3c",
+          "codeRefs": [
+            "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.Ui.cs:349",
+            "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:127",
+            "Assets/_Aetherward/Scripts/Unity/Menu/MenuController.cs:336"
+          ],
+          "footRowFromTop": 486,
+          "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/vaelith_a.png",
+          "guide": "ArtHandoff/requests/B11/references/guides/unit__Enemies__vaelith_a.png"
+        },
+        {
+          "id": "Enemies/vaelith_b",
+          "livePath": "Assets/_Aetherward/Resources/Art/Enemies/vaelith_b.png",
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGBA",
+          "ppu": 160,
+          "pivot": [
+            0.5,
+            0.05078125
+          ],
+          "border": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "worldSize": [
+            3.2,
+            3.2
+          ],
+          "guid": "cbaa231e53aec09eda50bfbf2b212e86",
+          "codeRefs": [
+            "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:128"
+          ],
+          "footRowFromTop": 486,
+          "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/vaelith_b.png",
+          "guide": "ArtHandoff/requests/B11/references/guides/unit__Enemies__vaelith_b.png"
+        },
+        {
+          "id": "Enemies/mirrath_a",
+          "livePath": "Assets/_Aetherward/Resources/Art/Enemies/mirrath_a.png",
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGBA",
+          "ppu": 160,
+          "pivot": [
+            0.5,
+            0.05078125
+          ],
+          "border": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "worldSize": [
+            3.2,
+            3.2
+          ],
+          "guid": "20126a1c843003e47690db30653e5298",
+          "codeRefs": [
+            "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.Ui.cs:349",
+            "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:127",
+            "Assets/_Aetherward/Scripts/Unity/Menu/MenuController.cs:336"
+          ],
+          "footRowFromTop": 486,
+          "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/mirrath_a.png",
+          "guide": "ArtHandoff/requests/B11/references/guides/unit__Enemies__mirrath_a.png"
+        },
+        {
+          "id": "Enemies/mirrath_b",
+          "livePath": "Assets/_Aetherward/Resources/Art/Enemies/mirrath_b.png",
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGBA",
+          "ppu": 160,
+          "pivot": [
+            0.5,
+            0.05078125
+          ],
+          "border": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "worldSize": [
+            3.2,
+            3.2
+          ],
+          "guid": "fea4c7094c2c6451ed16bbfd73400da7",
+          "codeRefs": [
+            "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:128"
+          ],
+          "footRowFromTop": 486,
+          "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/mirrath_b.png",
+          "guide": "ArtHandoff/requests/B11/references/guides/unit__Enemies__mirrath_b.png"
+        },
+        {
+          "id": "Enemies/aetherion_a",
+          "livePath": "Assets/_Aetherward/Resources/Art/Enemies/aetherion_a.png",
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGBA",
+          "ppu": 160,
+          "pivot": [
+            0.5,
+            0.05078125
+          ],
+          "border": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "worldSize": [
+            3.2,
+            3.2
+          ],
+          "guid": "3222358c05f11a9b95005d240ec9e46e",
+          "codeRefs": [
+            "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.Ui.cs:349",
+            "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:127",
+            "Assets/_Aetherward/Scripts/Unity/Menu/MenuController.cs:336"
+          ],
+          "footRowFromTop": 486,
+          "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/aetherion_a.png",
+          "guide": "ArtHandoff/requests/B11/references/guides/unit__Enemies__aetherion_a.png"
+        },
+        {
+          "id": "Enemies/aetherion_b",
+          "livePath": "Assets/_Aetherward/Resources/Art/Enemies/aetherion_b.png",
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGBA",
+          "ppu": 160,
+          "pivot": [
+            0.5,
+            0.05078125
+          ],
+          "border": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "worldSize": [
+            3.2,
+            3.2
+          ],
+          "guid": "34c7394b9776a1bebb8765eccd353cbd",
+          "codeRefs": [
+            "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:128"
+          ],
+          "footRowFromTop": 486,
+          "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/aetherion_b.png",
+          "guide": "ArtHandoff/requests/B11/references/guides/unit__Enemies__aetherion_b.png"
+        },
+        {
+          "id": "Enemies/thornmother_a",
+          "livePath": "Assets/_Aetherward/Resources/Art/Enemies/thornmother_a.png",
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGBA",
+          "ppu": 160,
+          "pivot": [
+            0.5,
+            0.05078125
+          ],
+          "border": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "worldSize": [
+            3.2,
+            3.2
+          ],
+          "guid": "192eef1c2921cbb876e0a6a80ed3476d",
+          "codeRefs": [
+            "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.Ui.cs:349",
+            "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:127",
+            "Assets/_Aetherward/Scripts/Unity/Menu/MenuController.cs:336"
+          ],
+          "footRowFromTop": 486,
+          "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/thornmother_a.png",
+          "guide": "ArtHandoff/requests/B11/references/guides/unit__Enemies__thornmother_a.png"
+        },
+        {
+          "id": "Enemies/thornmother_b",
+          "livePath": "Assets/_Aetherward/Resources/Art/Enemies/thornmother_b.png",
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGBA",
+          "ppu": 160,
+          "pivot": [
+            0.5,
+            0.05078125
+          ],
+          "border": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "worldSize": [
+            3.2,
+            3.2
+          ],
+          "guid": "19d8a8a8f585ba43139130a24ccb281b",
+          "codeRefs": [
+            "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:128"
+          ],
+          "footRowFromTop": 486,
+          "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/thornmother_b.png",
+          "guide": "ArtHandoff/requests/B11/references/guides/unit__Enemies__thornmother_b.png"
+        },
+        {
+          "id": "Enemies/ironclad_warlord_a",
+          "livePath": "Assets/_Aetherward/Resources/Art/Enemies/ironclad_warlord_a.png",
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGBA",
+          "ppu": 160,
+          "pivot": [
+            0.5,
+            0.05078125
+          ],
+          "border": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "worldSize": [
+            3.2,
+            3.2
+          ],
+          "guid": "8255c22a0b3e4018ad4b5feafe294800",
+          "codeRefs": [],
+          "footRowFromTop": 486,
+          "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/ironclad_warlord_a.png",
+          "guide": "ArtHandoff/requests/B11/references/guides/unit__Enemies__ironclad_warlord_a.png"
+        },
+        {
+          "id": "Enemies/ironclad_warlord_b",
+          "livePath": "Assets/_Aetherward/Resources/Art/Enemies/ironclad_warlord_b.png",
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGBA",
+          "ppu": 160,
+          "pivot": [
+            0.5,
+            0.05078125
+          ],
+          "border": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "worldSize": [
+            3.2,
+            3.2
+          ],
+          "guid": "db787b1011e3865948235781e06dc0fa",
+          "codeRefs": [],
+          "footRowFromTop": 486,
+          "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/ironclad_warlord_b.png",
+          "guide": "ArtHandoff/requests/B11/references/guides/unit__Enemies__ironclad_warlord_b.png"
+        },
+        {
+          "id": "Enemies/ashen_matriarch_a",
+          "livePath": "Assets/_Aetherward/Resources/Art/Enemies/ashen_matriarch_a.png",
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGBA",
+          "ppu": 160,
+          "pivot": [
+            0.5,
+            0.05078125
+          ],
+          "border": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "worldSize": [
+            3.2,
+            3.2
+          ],
+          "guid": "9b7af293207b857d6b60dd4d7ef7d28b",
+          "codeRefs": [],
+          "footRowFromTop": 486,
+          "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/ashen_matriarch_a.png",
+          "guide": "ArtHandoff/requests/B11/references/guides/unit__Enemies__ashen_matriarch_a.png"
+        },
+        {
+          "id": "Enemies/ashen_matriarch_b",
+          "livePath": "Assets/_Aetherward/Resources/Art/Enemies/ashen_matriarch_b.png",
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGBA",
+          "ppu": 160,
+          "pivot": [
+            0.5,
+            0.05078125
+          ],
+          "border": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "worldSize": [
+            3.2,
+            3.2
+          ],
+          "guid": "2d82a5a72f48fadd3e9c2961441622d3",
+          "codeRefs": [],
+          "footRowFromTop": 486,
+          "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/ashen_matriarch_b.png",
+          "guide": "ArtHandoff/requests/B11/references/guides/unit__Enemies__ashen_matriarch_b.png"
+        },
+        {
+          "id": "Enemies/nyxhollow_a",
+          "livePath": "Assets/_Aetherward/Resources/Art/Enemies/nyxhollow_a.png",
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGBA",
+          "ppu": 160,
+          "pivot": [
+            0.5,
+            0.05078125
+          ],
+          "border": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "worldSize": [
+            3.2,
+            3.2
+          ],
+          "guid": "e479559718883c4235d76268420a0d07",
+          "codeRefs": [
+            "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.Ui.cs:349",
+            "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:127",
+            "Assets/_Aetherward/Scripts/Unity/Menu/MenuController.cs:336"
+          ],
+          "footRowFromTop": 486,
+          "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/nyxhollow_a.png",
+          "guide": "ArtHandoff/requests/B11/references/guides/unit__Enemies__nyxhollow_a.png"
+        },
+        {
+          "id": "Enemies/nyxhollow_b",
+          "livePath": "Assets/_Aetherward/Resources/Art/Enemies/nyxhollow_b.png",
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGBA",
+          "ppu": 160,
+          "pivot": [
+            0.5,
+            0.05078125
+          ],
+          "border": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "worldSize": [
+            3.2,
+            3.2
+          ],
+          "guid": "0cca70a1180b85ff387cc86d9ba4d0f2",
+          "codeRefs": [
+            "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:128"
+          ],
+          "footRowFromTop": 486,
+          "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/nyxhollow_b.png",
+          "guide": "ArtHandoff/requests/B11/references/guides/unit__Enemies__nyxhollow_b.png"
+        },
+        {
+          "id": "Enemies/seraphyne_a",
+          "livePath": "Assets/_Aetherward/Resources/Art/Enemies/seraphyne_a.png",
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGBA",
+          "ppu": 160,
+          "pivot": [
+            0.5,
+            0.05078125
+          ],
+          "border": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "worldSize": [
+            3.2,
+            3.2
+          ],
+          "guid": "80f96abd511b0fb69ce3bc6c64fec498",
+          "codeRefs": [
+            "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.Ui.cs:349",
+            "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:127",
+            "Assets/_Aetherward/Scripts/Unity/Menu/MenuController.cs:336"
+          ],
+          "footRowFromTop": 486,
+          "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/seraphyne_a.png",
+          "guide": "ArtHandoff/requests/B11/references/guides/unit__Enemies__seraphyne_a.png"
+        },
+        {
+          "id": "Enemies/seraphyne_b",
+          "livePath": "Assets/_Aetherward/Resources/Art/Enemies/seraphyne_b.png",
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGBA",
+          "ppu": 160,
+          "pivot": [
+            0.5,
+            0.05078125
+          ],
+          "border": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "worldSize": [
+            3.2,
+            3.2
+          ],
+          "guid": "2e44f6843c00be639612da426bd04a5f",
+          "codeRefs": [
+            "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:128"
+          ],
+          "footRowFromTop": 486,
+          "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/seraphyne_b.png",
+          "guide": "ArtHandoff/requests/B11/references/guides/unit__Enemies__seraphyne_b.png"
+        },
+        {
+          "id": "Enemies/gravemaw_a",
+          "livePath": "Assets/_Aetherward/Resources/Art/Enemies/gravemaw_a.png",
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGBA",
+          "ppu": 160,
+          "pivot": [
+            0.5,
+            0.05078125
+          ],
+          "border": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "worldSize": [
+            3.2,
+            3.2
+          ],
+          "guid": "875f145adc38d5c2de661517b421a3f7",
+          "codeRefs": [
+            "Assets/_Aetherward/Scripts/Unity/Battle/BattleController.Ui.cs:349",
+            "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:127",
+            "Assets/_Aetherward/Scripts/Unity/Menu/MenuController.cs:336"
+          ],
+          "footRowFromTop": 486,
+          "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/gravemaw_a.png",
+          "guide": "ArtHandoff/requests/B11/references/guides/unit__Enemies__gravemaw_a.png"
+        },
+        {
+          "id": "Enemies/gravemaw_b",
+          "livePath": "Assets/_Aetherward/Resources/Art/Enemies/gravemaw_b.png",
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGBA",
+          "ppu": 160,
+          "pivot": [
+            0.5,
+            0.05078125
+          ],
+          "border": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "worldSize": [
+            3.2,
+            3.2
+          ],
+          "guid": "eea24690330a424dc80f7392d2577376",
+          "codeRefs": [
+            "Assets/_Aetherward/Scripts/Unity/Battle/WorldViews.cs:128"
+          ],
+          "footRowFromTop": 486,
+          "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/gravemaw_b.png",
+          "guide": "ArtHandoff/requests/B11/references/guides/unit__Enemies__gravemaw_b.png"
+        },
+        {
+          "id": "Enemies/siegebreaker_golem_attack",
+          "livePath": "Assets/_Aetherward/Resources/Art/Enemies/siegebreaker_golem_attack.png",
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGBA",
+          "ppu": 160,
+          "pivot": [
+            0.5,
+            0.05078125
+          ],
+          "border": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "worldSize": [
+            3.2,
+            3.2
+          ],
+          "guid": null,
+          "codeRefs": [],
+          "footRowFromTop": 486,
+          "new": true,
+          "like": "Enemies/siegebreaker_golem_a",
+          "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/siegebreaker_golem_a.png",
+          "guide": "ArtHandoff/requests/B11/references/guides/unit__Enemies__siegebreaker_golem_attack.png"
+        },
+        {
+          "id": "Enemies/siegebreaker_golem_tell",
+          "livePath": "Assets/_Aetherward/Resources/Art/Enemies/siegebreaker_golem_tell.png",
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGBA",
+          "ppu": 160,
+          "pivot": [
+            0.5,
+            0.05078125
+          ],
+          "border": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "worldSize": [
+            3.2,
+            3.2
+          ],
+          "guid": null,
+          "codeRefs": [],
+          "footRowFromTop": 486,
+          "new": true,
+          "like": "Enemies/siegebreaker_golem_a",
+          "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/siegebreaker_golem_a.png",
+          "guide": "ArtHandoff/requests/B11/references/guides/unit__Enemies__siegebreaker_golem_tell.png"
+        },
+        {
+          "id": "Enemies/ignaroth_attack",
+          "livePath": "Assets/_Aetherward/Resources/Art/Enemies/ignaroth_attack.png",
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGBA",
+          "ppu": 160,
+          "pivot": [
+            0.5,
+            0.05078125
+          ],
+          "border": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "worldSize": [
+            3.2,
+            3.2
+          ],
+          "guid": null,
+          "codeRefs": [],
+          "footRowFromTop": 486,
+          "new": true,
+          "like": "Enemies/ignaroth_a",
+          "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/ignaroth_a.png",
+          "guide": "ArtHandoff/requests/B11/references/guides/unit__Enemies__ignaroth_attack.png"
+        },
+        {
+          "id": "Enemies/ignaroth_tell",
+          "livePath": "Assets/_Aetherward/Resources/Art/Enemies/ignaroth_tell.png",
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGBA",
+          "ppu": 160,
+          "pivot": [
+            0.5,
+            0.05078125
+          ],
+          "border": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "worldSize": [
+            3.2,
+            3.2
+          ],
+          "guid": null,
+          "codeRefs": [],
+          "footRowFromTop": 486,
+          "new": true,
+          "like": "Enemies/ignaroth_a",
+          "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/ignaroth_a.png",
+          "guide": "ArtHandoff/requests/B11/references/guides/unit__Enemies__ignaroth_tell.png"
+        },
+        {
+          "id": "Enemies/vaelith_attack",
+          "livePath": "Assets/_Aetherward/Resources/Art/Enemies/vaelith_attack.png",
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGBA",
+          "ppu": 160,
+          "pivot": [
+            0.5,
+            0.05078125
+          ],
+          "border": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "worldSize": [
+            3.2,
+            3.2
+          ],
+          "guid": null,
+          "codeRefs": [],
+          "footRowFromTop": 486,
+          "new": true,
+          "like": "Enemies/vaelith_a",
+          "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/vaelith_a.png",
+          "guide": "ArtHandoff/requests/B11/references/guides/unit__Enemies__vaelith_attack.png"
+        },
+        {
+          "id": "Enemies/vaelith_tell",
+          "livePath": "Assets/_Aetherward/Resources/Art/Enemies/vaelith_tell.png",
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGBA",
+          "ppu": 160,
+          "pivot": [
+            0.5,
+            0.05078125
+          ],
+          "border": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "worldSize": [
+            3.2,
+            3.2
+          ],
+          "guid": null,
+          "codeRefs": [],
+          "footRowFromTop": 486,
+          "new": true,
+          "like": "Enemies/vaelith_a",
+          "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/vaelith_a.png",
+          "guide": "ArtHandoff/requests/B11/references/guides/unit__Enemies__vaelith_tell.png"
+        },
+        {
+          "id": "Enemies/mirrath_attack",
+          "livePath": "Assets/_Aetherward/Resources/Art/Enemies/mirrath_attack.png",
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGBA",
+          "ppu": 160,
+          "pivot": [
+            0.5,
+            0.05078125
+          ],
+          "border": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "worldSize": [
+            3.2,
+            3.2
+          ],
+          "guid": null,
+          "codeRefs": [],
+          "footRowFromTop": 486,
+          "new": true,
+          "like": "Enemies/mirrath_a",
+          "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/mirrath_a.png",
+          "guide": "ArtHandoff/requests/B11/references/guides/unit__Enemies__mirrath_attack.png"
+        },
+        {
+          "id": "Enemies/mirrath_tell",
+          "livePath": "Assets/_Aetherward/Resources/Art/Enemies/mirrath_tell.png",
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGBA",
+          "ppu": 160,
+          "pivot": [
+            0.5,
+            0.05078125
+          ],
+          "border": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "worldSize": [
+            3.2,
+            3.2
+          ],
+          "guid": null,
+          "codeRefs": [],
+          "footRowFromTop": 486,
+          "new": true,
+          "like": "Enemies/mirrath_a",
+          "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/mirrath_a.png",
+          "guide": "ArtHandoff/requests/B11/references/guides/unit__Enemies__mirrath_tell.png"
+        },
+        {
+          "id": "Enemies/aetherion_attack",
+          "livePath": "Assets/_Aetherward/Resources/Art/Enemies/aetherion_attack.png",
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGBA",
+          "ppu": 160,
+          "pivot": [
+            0.5,
+            0.05078125
+          ],
+          "border": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "worldSize": [
+            3.2,
+            3.2
+          ],
+          "guid": null,
+          "codeRefs": [],
+          "footRowFromTop": 486,
+          "new": true,
+          "like": "Enemies/aetherion_a",
+          "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/aetherion_a.png",
+          "guide": "ArtHandoff/requests/B11/references/guides/unit__Enemies__aetherion_attack.png"
+        },
+        {
+          "id": "Enemies/aetherion_tell",
+          "livePath": "Assets/_Aetherward/Resources/Art/Enemies/aetherion_tell.png",
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGBA",
+          "ppu": 160,
+          "pivot": [
+            0.5,
+            0.05078125
+          ],
+          "border": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "worldSize": [
+            3.2,
+            3.2
+          ],
+          "guid": null,
+          "codeRefs": [],
+          "footRowFromTop": 486,
+          "new": true,
+          "like": "Enemies/aetherion_a",
+          "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/aetherion_a.png",
+          "guide": "ArtHandoff/requests/B11/references/guides/unit__Enemies__aetherion_tell.png"
+        },
+        {
+          "id": "Enemies/thornmother_attack",
+          "livePath": "Assets/_Aetherward/Resources/Art/Enemies/thornmother_attack.png",
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGBA",
+          "ppu": 160,
+          "pivot": [
+            0.5,
+            0.05078125
+          ],
+          "border": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "worldSize": [
+            3.2,
+            3.2
+          ],
+          "guid": null,
+          "codeRefs": [],
+          "footRowFromTop": 486,
+          "new": true,
+          "like": "Enemies/thornmother_a",
+          "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/thornmother_a.png",
+          "guide": "ArtHandoff/requests/B11/references/guides/unit__Enemies__thornmother_attack.png"
+        },
+        {
+          "id": "Enemies/thornmother_tell",
+          "livePath": "Assets/_Aetherward/Resources/Art/Enemies/thornmother_tell.png",
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGBA",
+          "ppu": 160,
+          "pivot": [
+            0.5,
+            0.05078125
+          ],
+          "border": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "worldSize": [
+            3.2,
+            3.2
+          ],
+          "guid": null,
+          "codeRefs": [],
+          "footRowFromTop": 486,
+          "new": true,
+          "like": "Enemies/thornmother_a",
+          "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/thornmother_a.png",
+          "guide": "ArtHandoff/requests/B11/references/guides/unit__Enemies__thornmother_tell.png"
+        },
+        {
+          "id": "Enemies/ironclad_warlord_attack",
+          "livePath": "Assets/_Aetherward/Resources/Art/Enemies/ironclad_warlord_attack.png",
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGBA",
+          "ppu": 160,
+          "pivot": [
+            0.5,
+            0.05078125
+          ],
+          "border": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "worldSize": [
+            3.2,
+            3.2
+          ],
+          "guid": null,
+          "codeRefs": [],
+          "footRowFromTop": 486,
+          "new": true,
+          "like": "Enemies/ironclad_warlord_a",
+          "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/ironclad_warlord_a.png",
+          "guide": "ArtHandoff/requests/B11/references/guides/unit__Enemies__ironclad_warlord_attack.png"
+        },
+        {
+          "id": "Enemies/ironclad_warlord_tell",
+          "livePath": "Assets/_Aetherward/Resources/Art/Enemies/ironclad_warlord_tell.png",
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGBA",
+          "ppu": 160,
+          "pivot": [
+            0.5,
+            0.05078125
+          ],
+          "border": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "worldSize": [
+            3.2,
+            3.2
+          ],
+          "guid": null,
+          "codeRefs": [],
+          "footRowFromTop": 486,
+          "new": true,
+          "like": "Enemies/ironclad_warlord_a",
+          "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/ironclad_warlord_a.png",
+          "guide": "ArtHandoff/requests/B11/references/guides/unit__Enemies__ironclad_warlord_tell.png"
+        },
+        {
+          "id": "Enemies/ashen_matriarch_attack",
+          "livePath": "Assets/_Aetherward/Resources/Art/Enemies/ashen_matriarch_attack.png",
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGBA",
+          "ppu": 160,
+          "pivot": [
+            0.5,
+            0.05078125
+          ],
+          "border": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "worldSize": [
+            3.2,
+            3.2
+          ],
+          "guid": null,
+          "codeRefs": [],
+          "footRowFromTop": 486,
+          "new": true,
+          "like": "Enemies/ashen_matriarch_a",
+          "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/ashen_matriarch_a.png",
+          "guide": "ArtHandoff/requests/B11/references/guides/unit__Enemies__ashen_matriarch_attack.png"
+        },
+        {
+          "id": "Enemies/ashen_matriarch_tell",
+          "livePath": "Assets/_Aetherward/Resources/Art/Enemies/ashen_matriarch_tell.png",
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGBA",
+          "ppu": 160,
+          "pivot": [
+            0.5,
+            0.05078125
+          ],
+          "border": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "worldSize": [
+            3.2,
+            3.2
+          ],
+          "guid": null,
+          "codeRefs": [],
+          "footRowFromTop": 486,
+          "new": true,
+          "like": "Enemies/ashen_matriarch_a",
+          "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/ashen_matriarch_a.png",
+          "guide": "ArtHandoff/requests/B11/references/guides/unit__Enemies__ashen_matriarch_tell.png"
+        },
+        {
+          "id": "Enemies/nyxhollow_attack",
+          "livePath": "Assets/_Aetherward/Resources/Art/Enemies/nyxhollow_attack.png",
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGBA",
+          "ppu": 160,
+          "pivot": [
+            0.5,
+            0.05078125
+          ],
+          "border": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "worldSize": [
+            3.2,
+            3.2
+          ],
+          "guid": null,
+          "codeRefs": [],
+          "footRowFromTop": 486,
+          "new": true,
+          "like": "Enemies/nyxhollow_a",
+          "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/nyxhollow_a.png",
+          "guide": "ArtHandoff/requests/B11/references/guides/unit__Enemies__nyxhollow_attack.png"
+        },
+        {
+          "id": "Enemies/nyxhollow_tell",
+          "livePath": "Assets/_Aetherward/Resources/Art/Enemies/nyxhollow_tell.png",
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGBA",
+          "ppu": 160,
+          "pivot": [
+            0.5,
+            0.05078125
+          ],
+          "border": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "worldSize": [
+            3.2,
+            3.2
+          ],
+          "guid": null,
+          "codeRefs": [],
+          "footRowFromTop": 486,
+          "new": true,
+          "like": "Enemies/nyxhollow_a",
+          "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/nyxhollow_a.png",
+          "guide": "ArtHandoff/requests/B11/references/guides/unit__Enemies__nyxhollow_tell.png"
+        },
+        {
+          "id": "Enemies/seraphyne_attack",
+          "livePath": "Assets/_Aetherward/Resources/Art/Enemies/seraphyne_attack.png",
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGBA",
+          "ppu": 160,
+          "pivot": [
+            0.5,
+            0.05078125
+          ],
+          "border": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "worldSize": [
+            3.2,
+            3.2
+          ],
+          "guid": null,
+          "codeRefs": [],
+          "footRowFromTop": 486,
+          "new": true,
+          "like": "Enemies/seraphyne_a",
+          "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/seraphyne_a.png",
+          "guide": "ArtHandoff/requests/B11/references/guides/unit__Enemies__seraphyne_attack.png"
+        },
+        {
+          "id": "Enemies/seraphyne_tell",
+          "livePath": "Assets/_Aetherward/Resources/Art/Enemies/seraphyne_tell.png",
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGBA",
+          "ppu": 160,
+          "pivot": [
+            0.5,
+            0.05078125
+          ],
+          "border": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "worldSize": [
+            3.2,
+            3.2
+          ],
+          "guid": null,
+          "codeRefs": [],
+          "footRowFromTop": 486,
+          "new": true,
+          "like": "Enemies/seraphyne_a",
+          "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/seraphyne_a.png",
+          "guide": "ArtHandoff/requests/B11/references/guides/unit__Enemies__seraphyne_tell.png"
+        },
+        {
+          "id": "Enemies/gravemaw_attack",
+          "livePath": "Assets/_Aetherward/Resources/Art/Enemies/gravemaw_attack.png",
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGBA",
+          "ppu": 160,
+          "pivot": [
+            0.5,
+            0.05078125
+          ],
+          "border": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "worldSize": [
+            3.2,
+            3.2
+          ],
+          "guid": null,
+          "codeRefs": [],
+          "footRowFromTop": 486,
+          "new": true,
+          "like": "Enemies/gravemaw_a",
+          "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/gravemaw_a.png",
+          "guide": "ArtHandoff/requests/B11/references/guides/unit__Enemies__gravemaw_attack.png"
+        },
+        {
+          "id": "Enemies/gravemaw_tell",
+          "livePath": "Assets/_Aetherward/Resources/Art/Enemies/gravemaw_tell.png",
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGBA",
+          "ppu": 160,
+          "pivot": [
+            0.5,
+            0.05078125
+          ],
+          "border": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "worldSize": [
+            3.2,
+            3.2
+          ],
+          "guid": null,
+          "codeRefs": [],
+          "footRowFromTop": 486,
+          "new": true,
+          "like": "Enemies/gravemaw_a",
+          "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/gravemaw_a.png",
+          "guide": "ArtHandoff/requests/B11/references/guides/unit__Enemies__gravemaw_tell.png"
+        }
+      ]
+    },
+    {
+      "id": "warden",
+      "title": "Rift Warden tell/attack",
+      "priority": "P1",
+      "required": true,
+      "assets": [
+        {
+          "id": "Enemies/rift_warden_attack",
+          "livePath": "Assets/_Aetherward/Resources/Art/Enemies/rift_warden_attack.png",
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGBA",
+          "ppu": 160,
+          "pivot": [
+            0.5,
+            0.05078125
+          ],
+          "border": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "worldSize": [
+            3.2,
+            3.2
+          ],
+          "guid": null,
+          "codeRefs": [],
+          "footRowFromTop": 486,
+          "new": true,
+          "like": "Enemies/rift_warden_a",
+          "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/rift_warden_a.png",
+          "guide": "ArtHandoff/requests/B11/references/guides/unit__Enemies__rift_warden_attack.png"
+        },
+        {
+          "id": "Enemies/rift_warden_tell",
+          "livePath": "Assets/_Aetherward/Resources/Art/Enemies/rift_warden_tell.png",
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGBA",
+          "ppu": 160,
+          "pivot": [
+            0.5,
+            0.05078125
+          ],
+          "border": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "worldSize": [
+            3.2,
+            3.2
+          ],
+          "guid": null,
+          "codeRefs": [],
+          "footRowFromTop": 486,
+          "new": true,
+          "like": "Enemies/rift_warden_a",
+          "currentReference": "Assets/_Aetherward/Resources/Art/Enemies/rift_warden_a.png",
+          "guide": "ArtHandoff/requests/B11/references/guides/unit__Enemies__rift_warden_tell.png"
+        }
+      ]
+    }
+  ],
+  "assetCount": 46
+}

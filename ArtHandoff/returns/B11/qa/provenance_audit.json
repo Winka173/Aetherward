@@ -1,0 +1,968 @@
+[
+  {
+    "id": "Enemies/siegebreaker_golem_a",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "masterSize": [
+      1024,
+      1024
+    ],
+    "exportSize": [
+      512,
+      512
+    ],
+    "sRGB": 0,
+    "nativeScale": 0.7427055702917772,
+    "source": "source/sheets/siegebreaker_golem_a.png",
+    "rawBorderOpaqueCount": 0,
+    "defringeVerified": true,
+    "registeredTorsoX": 256.18
+  },
+  {
+    "id": "Enemies/siegebreaker_golem_b",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "masterSize": [
+      1024,
+      1024
+    ],
+    "exportSize": [
+      512,
+      512
+    ],
+    "sRGB": 0,
+    "nativeScale": 0.7427055702917772,
+    "source": "source/sheets/siegebreaker_golem_b.png",
+    "rawBorderOpaqueCount": 0,
+    "defringeVerified": true,
+    "registeredTorsoX": 256.07
+  },
+  {
+    "id": "Enemies/ignaroth_a",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "masterSize": [
+      1024,
+      1024
+    ],
+    "exportSize": [
+      512,
+      512
+    ],
+    "sRGB": 0,
+    "nativeScale": 0.7216494845360825,
+    "source": "source/sheets/ignaroth_a.png",
+    "rawBorderOpaqueCount": 0,
+    "defringeVerified": true,
+    "registeredTorsoX": 255.76
+  },
+  {
+    "id": "Enemies/ignaroth_b",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "masterSize": [
+      1024,
+      1024
+    ],
+    "exportSize": [
+      512,
+      512
+    ],
+    "sRGB": 0,
+    "nativeScale": 0.7132667617689016,
+    "source": "source/sheets/ignaroth_b.png",
+    "rawBorderOpaqueCount": 0,
+    "defringeVerified": true,
+    "registeredTorsoX": 258.07
+  },
+  {
+    "id": "Enemies/vaelith_a",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "masterSize": [
+      1024,
+      1024
+    ],
+    "exportSize": [
+      512,
+      512
+    ],
+    "sRGB": 0,
+    "nativeScale": 0.7094594594594594,
+    "source": "source/sheets/vaelith_a.png",
+    "rawBorderOpaqueCount": 0,
+    "defringeVerified": true,
+    "registeredTorsoX": 255.84
+  },
+  {
+    "id": "Enemies/vaelith_b",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "masterSize": [
+      1024,
+      1024
+    ],
+    "exportSize": [
+      512,
+      512
+    ],
+    "sRGB": 0,
+    "nativeScale": 0.6906077348066298,
+    "source": "source/sheets/vaelith_b.png",
+    "rawBorderOpaqueCount": 0,
+    "defringeVerified": true,
+    "registeredTorsoX": 258.04
+  },
+  {
+    "id": "Enemies/mirrath_a",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "masterSize": [
+      1024,
+      1024
+    ],
+    "exportSize": [
+      512,
+      512
+    ],
+    "sRGB": 0,
+    "nativeScale": 0.6934812760055479,
+    "source": "source/sheets/mirrath_a.png",
+    "rawBorderOpaqueCount": 0,
+    "defringeVerified": true,
+    "registeredTorsoX": 258.04
+  },
+  {
+    "id": "Enemies/mirrath_b",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "masterSize": [
+      1024,
+      1024
+    ],
+    "exportSize": [
+      512,
+      512
+    ],
+    "sRGB": 0,
+    "nativeScale": 0.6802721088435374,
+    "source": "source/sheets/mirrath_b.png",
+    "rawBorderOpaqueCount": 0,
+    "defringeVerified": true,
+    "registeredTorsoX": 258.02
+  },
+  {
+    "id": "Enemies/aetherion_a",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "masterSize": [
+      1024,
+      1024
+    ],
+    "exportSize": [
+      512,
+      512
+    ],
+    "sRGB": 0,
+    "nativeScale": 0.6947890818858561,
+    "source": "source/sheets/aetherion_a_v2.png",
+    "rawBorderOpaqueCount": 0,
+    "defringeVerified": true,
+    "registeredTorsoX": 256.09
+  },
+  {
+    "id": "Enemies/aetherion_b",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "masterSize": [
+      1024,
+      1024
+    ],
+    "exportSize": [
+      512,
+      512
+    ],
+    "sRGB": 0,
+    "nativeScale": 0.6947890818858561,
+    "source": "source/sheets/aetherion_b.png",
+    "rawBorderOpaqueCount": 0,
+    "defringeVerified": true,
+    "registeredTorsoX": 256.17
+  },
+  {
+    "id": "Enemies/thornmother_a",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "masterSize": [
+      1024,
+      1024
+    ],
+    "exportSize": [
+      512,
+      512
+    ],
+    "sRGB": 0,
+    "nativeScale": 0.684931506849315,
+    "source": "source/sheets/thornmother_a.png",
+    "rawBorderOpaqueCount": 0,
+    "defringeVerified": true,
+    "registeredTorsoX": 258.03
+  },
+  {
+    "id": "Enemies/thornmother_b",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "masterSize": [
+      1024,
+      1024
+    ],
+    "exportSize": [
+      512,
+      512
+    ],
+    "sRGB": 0,
+    "nativeScale": 0.684931506849315,
+    "source": "source/sheets/thornmother_b.png",
+    "rawBorderOpaqueCount": 0,
+    "defringeVerified": true,
+    "registeredTorsoX": 255.78
+  },
+  {
+    "id": "Enemies/ironclad_warlord_a",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "masterSize": [
+      1024,
+      1024
+    ],
+    "exportSize": [
+      512,
+      512
+    ],
+    "sRGB": 0,
+    "nativeScale": 0.6967854039965248,
+    "source": "source/sheets/ironclad_warlord_a_v2.png",
+    "rawBorderOpaqueCount": 0,
+    "defringeVerified": true,
+    "registeredTorsoX": 256.23
+  },
+  {
+    "id": "Enemies/ironclad_warlord_b",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "masterSize": [
+      1024,
+      1024
+    ],
+    "exportSize": [
+      512,
+      512
+    ],
+    "sRGB": 0,
+    "nativeScale": 0.6967854039965248,
+    "source": "source/sheets/ironclad_warlord_b.png",
+    "rawBorderOpaqueCount": 0,
+    "defringeVerified": true,
+    "registeredTorsoX": 256.12
+  },
+  {
+    "id": "Enemies/ashen_matriarch_a",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "masterSize": [
+      1024,
+      1024
+    ],
+    "exportSize": [
+      512,
+      512
+    ],
+    "sRGB": 0,
+    "nativeScale": 0.7407407407407407,
+    "source": "source/sheets/ashen_matriarch_a.png",
+    "rawBorderOpaqueCount": 0,
+    "defringeVerified": true,
+    "registeredTorsoX": 256.11
+  },
+  {
+    "id": "Enemies/ashen_matriarch_b",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "masterSize": [
+      1024,
+      1024
+    ],
+    "exportSize": [
+      512,
+      512
+    ],
+    "sRGB": 0,
+    "nativeScale": 0.7309941520467836,
+    "source": "source/sheets/ashen_matriarch_b.png",
+    "rawBorderOpaqueCount": 0,
+    "defringeVerified": true,
+    "registeredTorsoX": 258.1
+  },
+  {
+    "id": "Enemies/nyxhollow_a",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "masterSize": [
+      1024,
+      1024
+    ],
+    "exportSize": [
+      512,
+      512
+    ],
+    "sRGB": 0,
+    "nativeScale": 0.7407407407407407,
+    "source": "source/sheets/nyxhollow_a.png",
+    "rawBorderOpaqueCount": 0,
+    "defringeVerified": true,
+    "registeredTorsoX": 257.61
+  },
+  {
+    "id": "Enemies/nyxhollow_b",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "masterSize": [
+      1024,
+      1024
+    ],
+    "exportSize": [
+      512,
+      512
+    ],
+    "sRGB": 0,
+    "nativeScale": 0.7246376811594203,
+    "source": "source/sheets/nyxhollow_b.png",
+    "rawBorderOpaqueCount": 0,
+    "defringeVerified": true,
+    "registeredTorsoX": 258.09
+  },
+  {
+    "id": "Enemies/seraphyne_a",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "masterSize": [
+      1024,
+      1024
+    ],
+    "exportSize": [
+      512,
+      512
+    ],
+    "sRGB": 0,
+    "nativeScale": 0.7260155574762316,
+    "source": "source/sheets/seraphyne_a.png",
+    "rawBorderOpaqueCount": 0,
+    "defringeVerified": true,
+    "registeredTorsoX": 256.07
+  },
+  {
+    "id": "Enemies/seraphyne_b",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "masterSize": [
+      1024,
+      1024
+    ],
+    "exportSize": [
+      512,
+      512
+    ],
+    "sRGB": 0,
+    "nativeScale": 0.7142857142857143,
+    "source": "source/sheets/seraphyne_b.png",
+    "rawBorderOpaqueCount": 0,
+    "defringeVerified": true,
+    "registeredTorsoX": 258.07
+  },
+  {
+    "id": "Enemies/gravemaw_a",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "masterSize": [
+      1024,
+      1024
+    ],
+    "exportSize": [
+      512,
+      512
+    ],
+    "sRGB": 0,
+    "nativeScale": 0.7420494699646644,
+    "source": "source/sheets/gravemaw_a.png",
+    "rawBorderOpaqueCount": 0,
+    "defringeVerified": true,
+    "registeredTorsoX": 255.84
+  },
+  {
+    "id": "Enemies/gravemaw_b",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "masterSize": [
+      1024,
+      1024
+    ],
+    "exportSize": [
+      512,
+      512
+    ],
+    "sRGB": 0,
+    "nativeScale": 0.7420494699646644,
+    "source": "source/sheets/gravemaw_b.png",
+    "rawBorderOpaqueCount": 0,
+    "defringeVerified": true,
+    "registeredTorsoX": 256.23
+  },
+  {
+    "id": "Enemies/siegebreaker_golem_attack",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "masterSize": [
+      1024,
+      1024
+    ],
+    "exportSize": [
+      512,
+      512
+    ],
+    "sRGB": 0,
+    "nativeScale": 0.7711538461538462,
+    "source": "source/sheets/siegebreaker_golem_attack_v2.png",
+    "rawBorderOpaqueCount": 0,
+    "defringeVerified": true,
+    "registeredTorsoX": 255.76
+  },
+  {
+    "id": "Enemies/siegebreaker_golem_tell",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "masterSize": [
+      1024,
+      1024
+    ],
+    "exportSize": [
+      512,
+      512
+    ],
+    "sRGB": 0,
+    "nativeScale": 0.7092198581560284,
+    "source": "source/sheets/siegebreaker_golem_tell.png",
+    "rawBorderOpaqueCount": 0,
+    "defringeVerified": true,
+    "registeredTorsoX": 258.06
+  },
+  {
+    "id": "Enemies/ignaroth_attack",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "masterSize": [
+      1024,
+      1024
+    ],
+    "exportSize": [
+      512,
+      512
+    ],
+    "sRGB": 0,
+    "nativeScale": 0.7194244604316546,
+    "source": "source/sheets/ignaroth_attack.png",
+    "rawBorderOpaqueCount": 0,
+    "defringeVerified": true,
+    "registeredTorsoX": 258.08
+  },
+  {
+    "id": "Enemies/ignaroth_tell",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "masterSize": [
+      1024,
+      1024
+    ],
+    "exportSize": [
+      512,
+      512
+    ],
+    "sRGB": 0,
+    "nativeScale": 0.7216494845360825,
+    "source": "source/sheets/ignaroth_tell.png",
+    "rawBorderOpaqueCount": 0,
+    "defringeVerified": true,
+    "registeredTorsoX": 256.06
+  },
+  {
+    "id": "Enemies/vaelith_attack",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "masterSize": [
+      1024,
+      1024
+    ],
+    "exportSize": [
+      512,
+      512
+    ],
+    "sRGB": 0,
+    "nativeScale": 0.7094594594594594,
+    "source": "source/sheets/vaelith_attack.png",
+    "rawBorderOpaqueCount": 0,
+    "defringeVerified": true,
+    "registeredTorsoX": 256.01
+  },
+  {
+    "id": "Enemies/vaelith_tell",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "masterSize": [
+      1024,
+      1024
+    ],
+    "exportSize": [
+      512,
+      512
+    ],
+    "sRGB": 0,
+    "nativeScale": 0.7094594594594594,
+    "source": "source/sheets/vaelith_tell.png",
+    "rawBorderOpaqueCount": 0,
+    "defringeVerified": true,
+    "registeredTorsoX": 256.05
+  },
+  {
+    "id": "Enemies/mirrath_attack",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "masterSize": [
+      1024,
+      1024
+    ],
+    "exportSize": [
+      512,
+      512
+    ],
+    "sRGB": 0,
+    "nativeScale": 0.7154326494201606,
+    "source": "source/sheets/mirrath_attack_v2.png",
+    "rawBorderOpaqueCount": 0,
+    "defringeVerified": true,
+    "registeredTorsoX": 254.81
+  },
+  {
+    "id": "Enemies/mirrath_tell",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "masterSize": [
+      1024,
+      1024
+    ],
+    "exportSize": [
+      512,
+      512
+    ],
+    "sRGB": 0,
+    "nativeScale": 0.6934812760055479,
+    "source": "source/sheets/mirrath_tell.png",
+    "rawBorderOpaqueCount": 0,
+    "defringeVerified": true,
+    "registeredTorsoX": 257.0
+  },
+  {
+    "id": "Enemies/aetherion_attack",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "masterSize": [
+      1024,
+      1024
+    ],
+    "exportSize": [
+      512,
+      512
+    ],
+    "sRGB": 0,
+    "nativeScale": 0.7141585040071238,
+    "source": "source/sheets/aetherion_attack.png",
+    "rawBorderOpaqueCount": 0,
+    "defringeVerified": true,
+    "registeredTorsoX": 255.89
+  },
+  {
+    "id": "Enemies/aetherion_tell",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "masterSize": [
+      1024,
+      1024
+    ],
+    "exportSize": [
+      512,
+      512
+    ],
+    "sRGB": 0,
+    "nativeScale": 0.6947890818858561,
+    "source": "source/sheets/aetherion_tell.png",
+    "rawBorderOpaqueCount": 0,
+    "defringeVerified": true,
+    "registeredTorsoX": 255.89
+  },
+  {
+    "id": "Enemies/thornmother_attack",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "masterSize": [
+      1024,
+      1024
+    ],
+    "exportSize": [
+      512,
+      512
+    ],
+    "sRGB": 0,
+    "nativeScale": 0.6949740034662045,
+    "source": "source/sheets/thornmother_attack.png",
+    "rawBorderOpaqueCount": 0,
+    "defringeVerified": true,
+    "registeredTorsoX": 255.95
+  },
+  {
+    "id": "Enemies/thornmother_tell",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "masterSize": [
+      1024,
+      1024
+    ],
+    "exportSize": [
+      512,
+      512
+    ],
+    "sRGB": 0,
+    "nativeScale": 0.684931506849315,
+    "source": "source/sheets/thornmother_tell.png",
+    "rawBorderOpaqueCount": 0,
+    "defringeVerified": true,
+    "registeredTorsoX": 256.66
+  },
+  {
+    "id": "Enemies/ironclad_warlord_attack",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "masterSize": [
+      1024,
+      1024
+    ],
+    "exportSize": [
+      512,
+      512
+    ],
+    "sRGB": 0,
+    "nativeScale": 0.684931506849315,
+    "source": "source/sheets/ironclad_warlord_attack.png",
+    "rawBorderOpaqueCount": 0,
+    "defringeVerified": true,
+    "registeredTorsoX": 258.03
+  },
+  {
+    "id": "Enemies/ironclad_warlord_tell",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "masterSize": [
+      1024,
+      1024
+    ],
+    "exportSize": [
+      512,
+      512
+    ],
+    "sRGB": 0,
+    "nativeScale": 0.6963788300835655,
+    "source": "source/sheets/ironclad_warlord_tell.png",
+    "rawBorderOpaqueCount": 0,
+    "defringeVerified": true,
+    "registeredTorsoX": 258.04
+  },
+  {
+    "id": "Enemies/ashen_matriarch_attack",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "masterSize": [
+      1024,
+      1024
+    ],
+    "exportSize": [
+      512,
+      512
+    ],
+    "sRGB": 0,
+    "nativeScale": 0.7609108159392789,
+    "source": "source/sheets/ashen_matriarch_attack.png",
+    "rawBorderOpaqueCount": 0,
+    "defringeVerified": true,
+    "registeredTorsoX": 255.99
+  },
+  {
+    "id": "Enemies/ashen_matriarch_tell",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "masterSize": [
+      1024,
+      1024
+    ],
+    "exportSize": [
+      512,
+      512
+    ],
+    "sRGB": 0,
+    "nativeScale": 0.7363770250368189,
+    "source": "source/sheets/ashen_matriarch_tell.png",
+    "rawBorderOpaqueCount": 0,
+    "defringeVerified": true,
+    "registeredTorsoX": 258.1
+  },
+  {
+    "id": "Enemies/nyxhollow_attack",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "masterSize": [
+      1024,
+      1024
+    ],
+    "exportSize": [
+      512,
+      512
+    ],
+    "sRGB": 0,
+    "nativeScale": 0.7488328664799253,
+    "source": "source/sheets/nyxhollow_attack.png",
+    "rawBorderOpaqueCount": 0,
+    "defringeVerified": true,
+    "registeredTorsoX": 256.11
+  },
+  {
+    "id": "Enemies/nyxhollow_tell",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "masterSize": [
+      1024,
+      1024
+    ],
+    "exportSize": [
+      512,
+      512
+    ],
+    "sRGB": 0,
+    "nativeScale": 0.7363770250368189,
+    "source": "source/sheets/nyxhollow_tell.png",
+    "rawBorderOpaqueCount": 0,
+    "defringeVerified": true,
+    "registeredTorsoX": 258.1
+  },
+  {
+    "id": "Enemies/seraphyne_attack",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "masterSize": [
+      1024,
+      1024
+    ],
+    "exportSize": [
+      512,
+      512
+    ],
+    "sRGB": 0,
+    "nativeScale": 0.6963788300835655,
+    "source": "source/sheets/seraphyne_attack.png",
+    "rawBorderOpaqueCount": 0,
+    "defringeVerified": true,
+    "registeredTorsoX": 258.04
+  },
+  {
+    "id": "Enemies/seraphyne_tell",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "masterSize": [
+      1024,
+      1024
+    ],
+    "exportSize": [
+      512,
+      512
+    ],
+    "sRGB": 0,
+    "nativeScale": 0.6993006993006993,
+    "source": "source/sheets/seraphyne_tell.png",
+    "rawBorderOpaqueCount": 0,
+    "defringeVerified": true,
+    "registeredTorsoX": 258.05
+  },
+  {
+    "id": "Enemies/gravemaw_attack",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "masterSize": [
+      1024,
+      1024
+    ],
+    "exportSize": [
+      512,
+      512
+    ],
+    "sRGB": 0,
+    "nativeScale": 0.7420494699646644,
+    "source": "source/sheets/gravemaw_attack.png",
+    "rawBorderOpaqueCount": 0,
+    "defringeVerified": true,
+    "registeredTorsoX": 256.05
+  },
+  {
+    "id": "Enemies/gravemaw_tell",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "masterSize": [
+      1024,
+      1024
+    ],
+    "exportSize": [
+      512,
+      512
+    ],
+    "sRGB": 0,
+    "nativeScale": 0.7420494699646644,
+    "source": "source/sheets/gravemaw_tell.png",
+    "rawBorderOpaqueCount": 0,
+    "defringeVerified": true,
+    "registeredTorsoX": 256.02
+  },
+  {
+    "id": "Enemies/rift_warden_attack",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "masterSize": [
+      1024,
+      1024
+    ],
+    "exportSize": [
+      512,
+      512
+    ],
+    "sRGB": 0,
+    "nativeScale": 0.7779578606158833,
+    "source": "source/sheets/rift_warden_attack.png",
+    "rawBorderOpaqueCount": 0,
+    "defringeVerified": true,
+    "registeredTorsoX": 255.83
+  },
+  {
+    "id": "Enemies/rift_warden_tell",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "masterSize": [
+      1024,
+      1024
+    ],
+    "exportSize": [
+      512,
+      512
+    ],
+    "sRGB": 0,
+    "nativeScale": 0.7361963190184049,
+    "source": "source/sheets/rift_warden_tell.png",
+    "rawBorderOpaqueCount": 0,
+    "defringeVerified": true,
+    "registeredTorsoX": 255.9
+  }
+]

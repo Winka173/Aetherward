@@ -1,0 +1,4 @@
+{
+  "name": "vfx_glow_v2",
+  "prompt": "Use case: stylized-concept. Single production VFX soft WHITE NEUTRAL RADIAL GLOW sprite, transparent1024square. A smooth hand-painted AIRBRUSH-LIKE luminous mist disc fading from pale white centre to zero alpha at edge, with one very faint FOUR-POINT cross flare through centre. Spherically radial, centred, diffuse soft glow, no solid objects. Purewhite RGB, greyscale transparency structure only. NO spiral, rings, glyphs, runes, swirls, flames, fountains, sparkles, ground plane or perspective. This is an additive-looking cast light, not a magic sigil. Extremely simple soft brush-energy. Generous transparent margins. No text. No background matte. Two-dimensional radial light mask."
+}

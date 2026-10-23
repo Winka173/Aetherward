@@ -1,0 +1,1700 @@
+[
+  {
+    "id": "Heroes/tidal_idle",
+    "size": [
+      400,
+      400
+    ],
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bbox": [
+      61,
+      95,
+      333,
+      372
+    ],
+    "edgeLuminance": 0.43969493744964583,
+    "masterSize": [
+      800,
+      800
+    ],
+    "footRow": 371,
+    "iconBoundsPass": true,
+    "edgePass": true
+  },
+  {
+    "id": "Heroes/tidal_cast",
+    "size": [
+      400,
+      400
+    ],
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bbox": [
+      83,
+      83,
+      312,
+      372
+    ],
+    "edgeLuminance": 0.45409520539888554,
+    "masterSize": [
+      800,
+      800
+    ],
+    "footRow": 371,
+    "iconBoundsPass": true,
+    "edgePass": true
+  },
+  {
+    "id": "Heroes/tidal_downed",
+    "size": [
+      400,
+      400
+    ],
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bbox": [
+      41,
+      185,
+      301,
+      372
+    ],
+    "edgeLuminance": 0.37724512749561123,
+    "masterSize": [
+      800,
+      800
+    ],
+    "footRow": 371,
+    "iconBoundsPass": true,
+    "edgePass": true
+  },
+  {
+    "id": "Heroes/tidal_evoA",
+    "size": [
+      400,
+      400
+    ],
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bbox": [
+      70,
+      122,
+      313,
+      372
+    ],
+    "edgeLuminance": 0.42453697981107874,
+    "masterSize": [
+      800,
+      800
+    ],
+    "footRow": 371,
+    "iconBoundsPass": true,
+    "edgePass": true
+  },
+  {
+    "id": "Heroes/tidal_evoA_cast",
+    "size": [
+      400,
+      400
+    ],
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bbox": [
+      40,
+      99,
+      307,
+      372
+    ],
+    "edgeLuminance": 0.42405396660783307,
+    "masterSize": [
+      800,
+      800
+    ],
+    "footRow": 371,
+    "iconBoundsPass": true,
+    "edgePass": true
+  },
+  {
+    "id": "Heroes/tidal_evoB",
+    "size": [
+      400,
+      400
+    ],
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bbox": [
+      93,
+      122,
+      304,
+      372
+    ],
+    "edgeLuminance": 0.5459942652850243,
+    "masterSize": [
+      800,
+      800
+    ],
+    "footRow": 371,
+    "iconBoundsPass": true,
+    "edgePass": true
+  },
+  {
+    "id": "Heroes/tidal_evoB_cast",
+    "size": [
+      400,
+      400
+    ],
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bbox": [
+      97,
+      124,
+      279,
+      372
+    ],
+    "edgeLuminance": 0.5514282731771915,
+    "masterSize": [
+      800,
+      800
+    ],
+    "footRow": 371,
+    "iconBoundsPass": true,
+    "edgePass": true
+  },
+  {
+    "id": "Portraits/tidal",
+    "size": [
+      192,
+      192
+    ],
+    "mode": "RGBA",
+    "alphaRange": [
+      198,
+      255
+    ],
+    "bbox": [
+      0,
+      0,
+      192,
+      192
+    ],
+    "edgeLuminance": 0.09570256596465747,
+    "masterSize": [
+      384,
+      384
+    ]
+  },
+  {
+    "id": "Heroes/raiden_idle",
+    "size": [
+      400,
+      400
+    ],
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bbox": [
+      61,
+      118,
+      329,
+      372
+    ],
+    "edgeLuminance": 0.3470225018769515,
+    "masterSize": [
+      800,
+      800
+    ],
+    "footRow": 371,
+    "iconBoundsPass": true,
+    "edgePass": true
+  },
+  {
+    "id": "Heroes/raiden_cast",
+    "size": [
+      400,
+      400
+    ],
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bbox": [
+      72,
+      109,
+      295,
+      372
+    ],
+    "edgeLuminance": 0.3288737235558479,
+    "masterSize": [
+      800,
+      800
+    ],
+    "footRow": 371,
+    "iconBoundsPass": true,
+    "edgePass": true
+  },
+  {
+    "id": "Heroes/raiden_downed",
+    "size": [
+      400,
+      400
+    ],
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bbox": [
+      56,
+      200,
+      269,
+      372
+    ],
+    "edgeLuminance": 0.3444171119825708,
+    "masterSize": [
+      800,
+      800
+    ],
+    "footRow": 371,
+    "iconBoundsPass": true,
+    "edgePass": true
+  },
+  {
+    "id": "Heroes/raiden_evoA",
+    "size": [
+      400,
+      400
+    ],
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bbox": [
+      57,
+      125,
+      327,
+      372
+    ],
+    "edgeLuminance": 0.3276124042024951,
+    "masterSize": [
+      800,
+      800
+    ],
+    "footRow": 371,
+    "iconBoundsPass": true,
+    "edgePass": true
+  },
+  {
+    "id": "Heroes/raiden_evoA_cast",
+    "size": [
+      400,
+      400
+    ],
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bbox": [
+      76,
+      100,
+      264,
+      372
+    ],
+    "edgeLuminance": 0.33955817230416835,
+    "masterSize": [
+      800,
+      800
+    ],
+    "footRow": 371,
+    "iconBoundsPass": true,
+    "edgePass": true
+  },
+  {
+    "id": "Heroes/raiden_evoB",
+    "size": [
+      400,
+      400
+    ],
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bbox": [
+      57,
+      129,
+      325,
+      372
+    ],
+    "edgeLuminance": 0.35384287727119357,
+    "masterSize": [
+      800,
+      800
+    ],
+    "footRow": 371,
+    "iconBoundsPass": true,
+    "edgePass": true
+  },
+  {
+    "id": "Heroes/raiden_evoB_cast",
+    "size": [
+      400,
+      400
+    ],
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bbox": [
+      40,
+      93,
+      328,
+      372
+    ],
+    "edgeLuminance": 0.346413481277367,
+    "masterSize": [
+      800,
+      800
+    ],
+    "footRow": 371,
+    "iconBoundsPass": true,
+    "edgePass": true
+  },
+  {
+    "id": "Portraits/raiden",
+    "size": [
+      192,
+      192
+    ],
+    "mode": "RGBA",
+    "alphaRange": [
+      198,
+      255
+    ],
+    "bbox": [
+      0,
+      0,
+      192,
+      192
+    ],
+    "edgeLuminance": 0.1231992879620984,
+    "masterSize": [
+      384,
+      384
+    ]
+  },
+  {
+    "id": "Heroes/glacius_idle",
+    "size": [
+      400,
+      400
+    ],
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bbox": [
+      73,
+      100,
+      325,
+      372
+    ],
+    "edgeLuminance": 0.5830155692190669,
+    "masterSize": [
+      800,
+      800
+    ],
+    "footRow": 371,
+    "iconBoundsPass": true,
+    "edgePass": true
+  },
+  {
+    "id": "Heroes/glacius_cast",
+    "size": [
+      400,
+      400
+    ],
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bbox": [
+      69,
+      109,
+      346,
+      372
+    ],
+    "edgeLuminance": 0.6491527655733301,
+    "masterSize": [
+      800,
+      800
+    ],
+    "footRow": 371,
+    "iconBoundsPass": true,
+    "edgePass": true
+  },
+  {
+    "id": "Heroes/glacius_downed",
+    "size": [
+      400,
+      400
+    ],
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bbox": [
+      93,
+      207,
+      293,
+      372
+    ],
+    "edgeLuminance": 0.5774690756010585,
+    "masterSize": [
+      800,
+      800
+    ],
+    "footRow": 371,
+    "iconBoundsPass": true,
+    "edgePass": true
+  },
+  {
+    "id": "Heroes/glacius_evoA",
+    "size": [
+      400,
+      400
+    ],
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bbox": [
+      48,
+      101,
+      326,
+      372
+    ],
+    "edgeLuminance": 0.5694430314184427,
+    "masterSize": [
+      800,
+      800
+    ],
+    "footRow": 371,
+    "iconBoundsPass": true,
+    "edgePass": true
+  },
+  {
+    "id": "Heroes/glacius_evoA_cast",
+    "size": [
+      400,
+      400
+    ],
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bbox": [
+      41,
+      107,
+      317,
+      372
+    ],
+    "edgeLuminance": 0.6128107672528805,
+    "masterSize": [
+      800,
+      800
+    ],
+    "footRow": 371,
+    "iconBoundsPass": true,
+    "edgePass": true
+  },
+  {
+    "id": "Heroes/glacius_evoB",
+    "size": [
+      400,
+      400
+    ],
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bbox": [
+      48,
+      87,
+      320,
+      372
+    ],
+    "edgeLuminance": 0.5500891165769414,
+    "masterSize": [
+      800,
+      800
+    ],
+    "footRow": 371,
+    "iconBoundsPass": true,
+    "edgePass": true
+  },
+  {
+    "id": "Heroes/glacius_evoB_cast",
+    "size": [
+      400,
+      400
+    ],
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bbox": [
+      59,
+      89,
+      300,
+      372
+    ],
+    "edgeLuminance": 0.539570189501377,
+    "masterSize": [
+      800,
+      800
+    ],
+    "footRow": 371,
+    "iconBoundsPass": true,
+    "edgePass": true
+  },
+  {
+    "id": "Portraits/glacius",
+    "size": [
+      192,
+      192
+    ],
+    "mode": "RGBA",
+    "alphaRange": [
+      198,
+      255
+    ],
+    "bbox": [
+      0,
+      0,
+      192,
+      192
+    ],
+    "edgeLuminance": 0.1328201877788152,
+    "masterSize": [
+      384,
+      384
+    ]
+  },
+  {
+    "id": "Heroes/zephyr_idle",
+    "size": [
+      400,
+      400
+    ],
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bbox": [
+      75,
+      117,
+      303,
+      372
+    ],
+    "edgeLuminance": 0.5044881214148127,
+    "masterSize": [
+      800,
+      800
+    ],
+    "footRow": 371,
+    "iconBoundsPass": true,
+    "edgePass": true
+  },
+  {
+    "id": "Heroes/zephyr_cast",
+    "size": [
+      400,
+      400
+    ],
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bbox": [
+      79,
+      93,
+      325,
+      372
+    ],
+    "edgeLuminance": 0.5245972846932784,
+    "masterSize": [
+      800,
+      800
+    ],
+    "footRow": 371,
+    "iconBoundsPass": true,
+    "edgePass": true
+  },
+  {
+    "id": "Heroes/zephyr_downed",
+    "size": [
+      400,
+      400
+    ],
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bbox": [
+      85,
+      210,
+      292,
+      372
+    ],
+    "edgeLuminance": 0.3945418160284248,
+    "masterSize": [
+      800,
+      800
+    ],
+    "footRow": 371,
+    "iconBoundsPass": true,
+    "edgePass": true
+  },
+  {
+    "id": "Heroes/zephyr_evoA",
+    "size": [
+      400,
+      400
+    ],
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bbox": [
+      60,
+      117,
+      315,
+      372
+    ],
+    "edgeLuminance": 0.501046028854351,
+    "masterSize": [
+      800,
+      800
+    ],
+    "footRow": 371,
+    "iconBoundsPass": true,
+    "edgePass": true
+  },
+  {
+    "id": "Heroes/zephyr_evoA_cast",
+    "size": [
+      400,
+      400
+    ],
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bbox": [
+      41,
+      95,
+      318,
+      372
+    ],
+    "edgeLuminance": 0.5021535413886322,
+    "masterSize": [
+      800,
+      800
+    ],
+    "footRow": 371,
+    "iconBoundsPass": true,
+    "edgePass": true
+  },
+  {
+    "id": "Heroes/zephyr_evoB",
+    "size": [
+      400,
+      400
+    ],
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bbox": [
+      89,
+      112,
+      300,
+      372
+    ],
+    "edgeLuminance": 0.4681536945952267,
+    "masterSize": [
+      800,
+      800
+    ],
+    "footRow": 371,
+    "iconBoundsPass": true,
+    "edgePass": true
+  },
+  {
+    "id": "Heroes/zephyr_evoB_cast",
+    "size": [
+      400,
+      400
+    ],
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bbox": [
+      87,
+      107,
+      292,
+      372
+    ],
+    "edgeLuminance": 0.4966439561448176,
+    "masterSize": [
+      800,
+      800
+    ],
+    "footRow": 371,
+    "iconBoundsPass": true,
+    "edgePass": true
+  },
+  {
+    "id": "Portraits/zephyr",
+    "size": [
+      192,
+      192
+    ],
+    "mode": "RGBA",
+    "alphaRange": [
+      198,
+      255
+    ],
+    "bbox": [
+      0,
+      0,
+      192,
+      192
+    ],
+    "edgeLuminance": 0.10174036137911954,
+    "masterSize": [
+      384,
+      384
+    ]
+  },
+  {
+    "id": "Heroes/magnus_idle",
+    "size": [
+      400,
+      400
+    ],
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bbox": [
+      86,
+      125,
+      312,
+      372
+    ],
+    "edgeLuminance": 0.3577441534411739,
+    "masterSize": [
+      800,
+      800
+    ],
+    "footRow": 371,
+    "iconBoundsPass": true,
+    "edgePass": true
+  },
+  {
+    "id": "Heroes/magnus_cast",
+    "size": [
+      400,
+      400
+    ],
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bbox": [
+      70,
+      96,
+      316,
+      372
+    ],
+    "edgeLuminance": 0.45102501309251347,
+    "masterSize": [
+      800,
+      800
+    ],
+    "footRow": 371,
+    "iconBoundsPass": true,
+    "edgePass": true
+  },
+  {
+    "id": "Heroes/magnus_downed",
+    "size": [
+      400,
+      400
+    ],
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bbox": [
+      87,
+      207,
+      285,
+      372
+    ],
+    "edgeLuminance": 0.39730319958969507,
+    "masterSize": [
+      800,
+      800
+    ],
+    "footRow": 371,
+    "iconBoundsPass": true,
+    "edgePass": true
+  },
+  {
+    "id": "Heroes/magnus_evoA",
+    "size": [
+      400,
+      400
+    ],
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bbox": [
+      83,
+      126,
+      318,
+      372
+    ],
+    "edgeLuminance": 0.3753391554412919,
+    "masterSize": [
+      800,
+      800
+    ],
+    "footRow": 371,
+    "iconBoundsPass": true,
+    "edgePass": true
+  },
+  {
+    "id": "Heroes/magnus_evoA_cast",
+    "size": [
+      400,
+      400
+    ],
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bbox": [
+      70,
+      91,
+      305,
+      372
+    ],
+    "edgeLuminance": 0.3775969686067115,
+    "masterSize": [
+      800,
+      800
+    ],
+    "footRow": 371,
+    "iconBoundsPass": true,
+    "edgePass": true
+  },
+  {
+    "id": "Heroes/magnus_evoB",
+    "size": [
+      400,
+      400
+    ],
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bbox": [
+      76,
+      125,
+      317,
+      372
+    ],
+    "edgeLuminance": 0.3700810823352963,
+    "masterSize": [
+      800,
+      800
+    ],
+    "footRow": 371,
+    "iconBoundsPass": true,
+    "edgePass": true
+  },
+  {
+    "id": "Heroes/magnus_evoB_cast",
+    "size": [
+      400,
+      400
+    ],
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bbox": [
+      75,
+      108,
+      292,
+      372
+    ],
+    "edgeLuminance": 0.38365454883915295,
+    "masterSize": [
+      800,
+      800
+    ],
+    "footRow": 371,
+    "iconBoundsPass": true,
+    "edgePass": true
+  },
+  {
+    "id": "Portraits/magnus",
+    "size": [
+      192,
+      192
+    ],
+    "mode": "RGBA",
+    "alphaRange": [
+      198,
+      255
+    ],
+    "bbox": [
+      0,
+      0,
+      192,
+      192
+    ],
+    "edgeLuminance": 0.19985266728913784,
+    "masterSize": [
+      384,
+      384
+    ]
+  },
+  {
+    "id": "Heroes/seren_idle",
+    "size": [
+      400,
+      400
+    ],
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bbox": [
+      91,
+      106,
+      298,
+      372
+    ],
+    "edgeLuminance": 0.5043239857196403,
+    "masterSize": [
+      800,
+      800
+    ],
+    "footRow": 371,
+    "iconBoundsPass": true,
+    "edgePass": true
+  },
+  {
+    "id": "Heroes/seren_cast",
+    "size": [
+      400,
+      400
+    ],
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bbox": [
+      80,
+      96,
+      313,
+      372
+    ],
+    "edgeLuminance": 0.5032054062785241,
+    "masterSize": [
+      800,
+      800
+    ],
+    "footRow": 371,
+    "iconBoundsPass": true,
+    "edgePass": true
+  },
+  {
+    "id": "Heroes/seren_downed",
+    "size": [
+      400,
+      400
+    ],
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bbox": [
+      86,
+      202,
+      297,
+      372
+    ],
+    "edgeLuminance": 0.48426604193192424,
+    "masterSize": [
+      800,
+      800
+    ],
+    "footRow": 371,
+    "iconBoundsPass": true,
+    "edgePass": true
+  },
+  {
+    "id": "Heroes/seren_evoA",
+    "size": [
+      400,
+      400
+    ],
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bbox": [
+      84,
+      104,
+      301,
+      372
+    ],
+    "edgeLuminance": 0.6596603413788962,
+    "masterSize": [
+      800,
+      800
+    ],
+    "footRow": 371,
+    "iconBoundsPass": true,
+    "edgePass": true
+  },
+  {
+    "id": "Heroes/seren_evoA_cast",
+    "size": [
+      400,
+      400
+    ],
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bbox": [
+      74,
+      107,
+      297,
+      372
+    ],
+    "edgeLuminance": 0.5982158548128064,
+    "masterSize": [
+      800,
+      800
+    ],
+    "footRow": 371,
+    "iconBoundsPass": true,
+    "edgePass": true
+  },
+  {
+    "id": "Heroes/seren_evoB",
+    "size": [
+      400,
+      400
+    ],
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bbox": [
+      111,
+      83,
+      299,
+      372
+    ],
+    "edgeLuminance": 0.5062268092051718,
+    "masterSize": [
+      800,
+      800
+    ],
+    "footRow": 371,
+    "iconBoundsPass": true,
+    "edgePass": true
+  },
+  {
+    "id": "Heroes/seren_evoB_cast",
+    "size": [
+      400,
+      400
+    ],
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bbox": [
+      77,
+      83,
+      324,
+      372
+    ],
+    "edgeLuminance": 0.5346913917426125,
+    "masterSize": [
+      800,
+      800
+    ],
+    "footRow": 371,
+    "iconBoundsPass": true,
+    "edgePass": true
+  },
+  {
+    "id": "Portraits/seren",
+    "size": [
+      192,
+      192
+    ],
+    "mode": "RGBA",
+    "alphaRange": [
+      198,
+      255
+    ],
+    "bbox": [
+      0,
+      0,
+      192,
+      192
+    ],
+    "edgeLuminance": 0.09724377701697962,
+    "masterSize": [
+      384,
+      384
+    ]
+  },
+  {
+    "id": "Heroes/tidal_attack",
+    "size": [
+      400,
+      400
+    ],
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bbox": [
+      64,
+      107,
+      360,
+      372
+    ],
+    "edgeLuminance": 0.45995557212420707,
+    "masterSize": [
+      800,
+      800
+    ],
+    "footRow": 371,
+    "iconBoundsPass": true,
+    "edgePass": true
+  },
+  {
+    "id": "Heroes/tidal_evoA_attack",
+    "size": [
+      400,
+      400
+    ],
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bbox": [
+      45,
+      169,
+      360,
+      372
+    ],
+    "edgeLuminance": 0.41054123234296397,
+    "masterSize": [
+      800,
+      800
+    ],
+    "footRow": 371,
+    "iconBoundsPass": true,
+    "edgePass": true
+  },
+  {
+    "id": "Heroes/tidal_evoB_attack",
+    "size": [
+      400,
+      400
+    ],
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bbox": [
+      96,
+      135,
+      296,
+      372
+    ],
+    "edgeLuminance": 0.5271334763265206,
+    "masterSize": [
+      800,
+      800
+    ],
+    "footRow": 371,
+    "iconBoundsPass": true,
+    "edgePass": true
+  },
+  {
+    "id": "Heroes/raiden_attack",
+    "size": [
+      400,
+      400
+    ],
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bbox": [
+      45,
+      171,
+      358,
+      372
+    ],
+    "edgeLuminance": 0.3579780199199796,
+    "masterSize": [
+      800,
+      800
+    ],
+    "footRow": 371,
+    "iconBoundsPass": true,
+    "edgePass": true
+  },
+  {
+    "id": "Heroes/raiden_evoA_attack",
+    "size": [
+      400,
+      400
+    ],
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bbox": [
+      60,
+      140,
+      356,
+      372
+    ],
+    "edgeLuminance": 0.3484679127641893,
+    "masterSize": [
+      800,
+      800
+    ],
+    "footRow": 371,
+    "iconBoundsPass": true,
+    "edgePass": true
+  },
+  {
+    "id": "Heroes/raiden_evoB_attack",
+    "size": [
+      400,
+      400
+    ],
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bbox": [
+      46,
+      183,
+      360,
+      372
+    ],
+    "edgeLuminance": 0.3551198656226996,
+    "masterSize": [
+      800,
+      800
+    ],
+    "footRow": 371,
+    "iconBoundsPass": true,
+    "edgePass": true
+  },
+  {
+    "id": "Heroes/glacius_attack",
+    "size": [
+      400,
+      400
+    ],
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bbox": [
+      55,
+      120,
+      360,
+      372
+    ],
+    "edgeLuminance": 0.6582362111560212,
+    "masterSize": [
+      800,
+      800
+    ],
+    "footRow": 371,
+    "iconBoundsPass": true,
+    "edgePass": true
+  },
+  {
+    "id": "Heroes/glacius_evoA_attack",
+    "size": [
+      400,
+      400
+    ],
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bbox": [
+      46,
+      154,
+      360,
+      372
+    ],
+    "edgeLuminance": 0.6002210684166138,
+    "masterSize": [
+      800,
+      800
+    ],
+    "footRow": 371,
+    "iconBoundsPass": true,
+    "edgePass": true
+  },
+  {
+    "id": "Heroes/glacius_evoB_attack",
+    "size": [
+      400,
+      400
+    ],
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bbox": [
+      69,
+      144,
+      338,
+      372
+    ],
+    "edgeLuminance": 0.5446102162378045,
+    "masterSize": [
+      800,
+      800
+    ],
+    "footRow": 371,
+    "iconBoundsPass": true,
+    "edgePass": true
+  },
+  {
+    "id": "Heroes/zephyr_attack",
+    "size": [
+      400,
+      400
+    ],
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bbox": [
+      59,
+      111,
+      360,
+      372
+    ],
+    "edgeLuminance": 0.4458523790307271,
+    "masterSize": [
+      800,
+      800
+    ],
+    "footRow": 371,
+    "iconBoundsPass": true,
+    "edgePass": true
+  },
+  {
+    "id": "Heroes/zephyr_evoA_attack",
+    "size": [
+      400,
+      400
+    ],
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bbox": [
+      45,
+      153,
+      360,
+      372
+    ],
+    "edgeLuminance": 0.48641022797878625,
+    "masterSize": [
+      800,
+      800
+    ],
+    "footRow": 371,
+    "iconBoundsPass": true,
+    "edgePass": true
+  },
+  {
+    "id": "Heroes/zephyr_evoB_attack",
+    "size": [
+      400,
+      400
+    ],
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bbox": [
+      107,
+      114,
+      326,
+      372
+    ],
+    "edgeLuminance": 0.44083613742335964,
+    "masterSize": [
+      800,
+      800
+    ],
+    "footRow": 371,
+    "iconBoundsPass": true,
+    "edgePass": true
+  },
+  {
+    "id": "Heroes/magnus_attack",
+    "size": [
+      400,
+      400
+    ],
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bbox": [
+      73,
+      126,
+      338,
+      372
+    ],
+    "edgeLuminance": 0.4385905309179473,
+    "masterSize": [
+      800,
+      800
+    ],
+    "footRow": 371,
+    "iconBoundsPass": true,
+    "edgePass": true
+  },
+  {
+    "id": "Heroes/magnus_evoA_attack",
+    "size": [
+      400,
+      400
+    ],
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bbox": [
+      75,
+      153,
+      348,
+      372
+    ],
+    "edgeLuminance": 0.3776239002903914,
+    "masterSize": [
+      800,
+      800
+    ],
+    "footRow": 371,
+    "iconBoundsPass": true,
+    "edgePass": true
+  },
+  {
+    "id": "Heroes/magnus_evoB_attack",
+    "size": [
+      400,
+      400
+    ],
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bbox": [
+      45,
+      161,
+      360,
+      372
+    ],
+    "edgeLuminance": 0.38503898340363807,
+    "masterSize": [
+      800,
+      800
+    ],
+    "footRow": 371,
+    "iconBoundsPass": true,
+    "edgePass": true
+  },
+  {
+    "id": "Heroes/seren_attack",
+    "size": [
+      400,
+      400
+    ],
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bbox": [
+      45,
+      126,
+      359,
+      372
+    ],
+    "edgeLuminance": 0.540989574800759,
+    "masterSize": [
+      800,
+      800
+    ],
+    "footRow": 371,
+    "iconBoundsPass": true,
+    "edgePass": true
+  },
+  {
+    "id": "Heroes/seren_evoA_attack",
+    "size": [
+      400,
+      400
+    ],
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bbox": [
+      47,
+      107,
+      358,
+      372
+    ],
+    "edgeLuminance": 0.6208762518172796,
+    "masterSize": [
+      800,
+      800
+    ],
+    "footRow": 371,
+    "iconBoundsPass": true,
+    "edgePass": true
+  },
+  {
+    "id": "Heroes/seren_evoB_attack",
+    "size": [
+      400,
+      400
+    ],
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bbox": [
+      40,
+      83,
+      332,
+      372
+    ],
+    "edgeLuminance": 0.5456954318488529,
+    "masterSize": [
+      800,
+      800
+    ],
+    "footRow": 371,
+    "iconBoundsPass": true,
+    "edgePass": true
+  }
+]

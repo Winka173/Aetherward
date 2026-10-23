@@ -1,0 +1,10 @@
+{
+  "prompt": "Dark Mythic Fantasy, painterly stylized 2.5D; orthographic 38.3-degree elevation, three-quarter front body turned 25 degrees toward screen-right. Key upper-left-front #ffe9d0, rim back-right #9fe8ff, ambient #16233a. Controlled broad brush planes, coloured local-hue dark edges without black outlines.\nUse case: precise-object-edit. Image 1 is the edit target, a crystal colossus boss. Remove the entire long glaive/spear and all shaft/blade pieces from its hands. Replace the grip with empty massive crystal claw-like fists carried low, organically attached crystal forearms. This boss carries NO detached weapon, staff, spear, blade, handle or other prop. Preserve the faceless fractured crystal head, corrupted magenta fractured core, shoulder facet arrangement, floating broken facets, small crystal legs and the smoky violet-blue/crystal materials. The body is a nonhuman crystal formation, no metal, cloth, flesh or manufactured armor. Other images are B01 painterly light/material/style references only; do not copy their weapons. One full single character walk-contact identity stance, turned toward screen-right, torso centered, feet level. Compact full silhouette with all facets inside ample transparent margins, character height 84%, width <=85%. Strong directional cyan back-right rim and warm lit planes, edge luminance >=0.27 on dark basalt. Actual transparent background. No floor, ground glow, shadow, beam, projectile, explosion, text or scenery. Generate at least1536 square native, intended for1024 master and512export.",
+  "referenced_image_paths": [
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B11/source/sheets/aetherion_a.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Enemies/rift_warden_a.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Enemies/rift_warden_b.png",
+    "C:/Users/Winka/Projects/Aetherward/ArtHandoff/returns/B01/exports/Art/Enemies/grunt_a.png"
+  ],
+  "transparent_background": true
+}

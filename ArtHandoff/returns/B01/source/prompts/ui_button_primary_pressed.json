@@ -1,0 +1,4 @@
+{
+  "name": "ui_button_primary_pressed",
+  "prompt": "Use case: stylized-concept. Dark Mythic Fantasy, painterly stylized 2.5D; orthographic 38.3-degree elevation, three-quarter front body turned 25 degrees toward screen-right. Key upper-left-front #ffe9d0, rim back-right #9fe8ff, ambient #16233a. Controlled broad brush planes, coloured local-hue dark edges without black outlines. Edit supplied normal button production master. Preserve EXACT same frontal rectangle outline, bevel widths, corner rivets, bronze/slate material identity, border36px at192x96 export, 2:1 canvas, no lettering. Keep full border inside frame and transparency outside. No new ornaments or gem. This must remain same9-slice button family. PRESSED state: inset darker warm amber inner plate, top inner shadow slightly deeper, visual plate shifted DOWN exactly2exportpixels (8masterpixels at4x) while keeping frame registered. Do not add new shapes."
+}

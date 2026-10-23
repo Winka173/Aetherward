@@ -145,6 +145,13 @@ namespace Aetherward.Game
             string passiveText = l.PassiveText(passiveParams, passiveKey);
             Ui.Label(x + 30, yy, w - 60, 140, passiveText, 24, Ui.White);
             yy += Ui.TextHeight(passiveText, 24, w - 60) + 14;
+            if (def.Ultimate != null)
+            {
+                string text = l.Get("label.ultimate") + ": " + l.Get("hero." + def.Id + ".ultimate.name") + " — " + l.Get("hero." + def.Id + ".ultimate.desc");
+                float uh = Ui.TextHeight(text, 20, w - 60);
+                Ui.Label(x + 30, yy, w - 60, uh, text, 20, Ui.Gold);
+                yy += uh + 12;
+            }
             string trait = TraitText(traitId);
             if (trait != null)
             {
@@ -167,7 +174,7 @@ namespace Aetherward.Game
             if (evolutionId == null && yy < y + h - 90)
             {
                 Ui.Label(x + 30, yy, w - 60, 40, l.Get("codex.evolutions"), 24, Ui.Muted, TextAnchor.UpperLeft, true);
-                string evos = string.Join("  ·  ", new List<string>(def.Evolutions).ConvertAll(e => l.Get("evo." + e + ".name")));
+                string evos = string.Join("  Â·  ", new List<string>(def.Evolutions).ConvertAll(e => l.Get("evo." + e + ".name")));
                 Ui.Label(x + 30, yy + 34, w - 60, 40, evos, 24, Ui.White);
             }
         }

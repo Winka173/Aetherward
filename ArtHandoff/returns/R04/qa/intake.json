@@ -1,0 +1,13 @@
+{
+  "batch": "R04",
+  "status": "blocked",
+  "generatedBy": "Codex blocker record; standard handoff.py failed before creating its report",
+  "delivered": 2,
+  "blockedImageAssets": 0,
+  "blocking": [
+    "Missing ArtHandoff/requests/R04/INPUT_MANIFEST.json"
+  ],
+  "standardToolResult": null,
+  "zeroBlockingConfirmed": false,
+  "log": "qa/standard_intake.log"
+}

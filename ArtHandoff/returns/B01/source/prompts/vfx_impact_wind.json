@@ -1,0 +1,4 @@
+{
+  "name": "vfx_impact_wind",
+  "prompt": "Use case: stylized-concept. Dark Mythic Fantasy, painterly stylized 2.5D; orthographic 38.3-degree elevation, three-quarter front body turned 25 degrees toward screen-right. Key upper-left-front #ffe9d0, rim back-right #9fe8ff, ambient #16233a. Controlled broad brush planes, coloured local-hue dark edges without black outlines. Production single 2D fantasy VFX sprite, render at least1024x1024 (four-times256 export), broad controlled PAINTERLY ENERGY, full effect wholly inside canvas with8%transparent margins. Small painterly teal #5fe8c8 crescent gust slashes in an open spiral, open transparent centre alpha<=60%, airy tapered brush strokes. No text/numbers/floor/shadow; truly transparent background, no dark background matte. Ground decals override camera: top-down circular geometry. No character/weapon unless arrow requested."
+}
